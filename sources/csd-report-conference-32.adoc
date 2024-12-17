@@ -54,7 +54,7 @@ CalConnect drafts in IETF WG Last Call or AD Review:
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[Time Zone Data Distribution Service]
 * https://datatracker.ietf.org/doc/draft-ietf-calext-rscale/[Non-Gregorian Recurrence Rules in iCalendar (RSCALE)]
 
-CalConnect drafts accepted by IETF Working Groups as WG Drafts"
+CalConnect drafts accepted by IETF Working Groups as WG Drafts:
 
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[CalDAV: Timezones by Reference]
 * https://datatracker.ietf.org/doc/draft-daboo-calendar-availability/[Calendar Availability (VAVAILABILITY)]
