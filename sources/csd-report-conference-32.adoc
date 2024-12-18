@@ -191,7 +191,7 @@ TC RESOURCE is dormant, waiting on its drafts to begin progression at the IETF.
 
 === TC SHARING
 
-The base specifications for webdav resource sharing and webdav notifications have been published to the IETF"
+The base specifications for webdav resource sharing and webdav notifications have been published to the IETF:
 https://tools.ietf.org/doc/html/draft-pot-webdav-resource-sharing[WebDAV Resource Sharing]
 and WebDAV Notifications. Work will now begin on CalDAV Calendar Sharing and CardDAV Address Book Sharing. The calendar sharing
 specification should be relatively straight-forward. Some unanswered questions remain regarding address book sharing of Collections vs.
@@ -233,7 +233,7 @@ Reference draft has been accepted as a working group draft.
 
 *CalConnect XXXIII*: May 18-22, 2015, 1and1, Bucharest, Romania +
 *CalConnect XXXIV*: September 28 - October 2, 2015, Gershon Janssen, Amsterdam, The Netherlands +
-*CalConnect XXXV*: January 25-29, 2015, AOL, Palo Alto, California
+*CalConnect XXXV*: January 25-29, 2016, AOL, Palo Alto, California
 
 The general format of the CalConnect week is: +
 Monday morning through Wednesday noon, CalConnect Interoperability Test Event +
