@@ -42,9 +42,11 @@ This document was prepared by Technical Committee _{technical-committee}_.
 
 == Report
 
-The Calconnect interoperability event was hosted by Ribose and OGCIO at Cyberport in Hong Kong on April 18 and 19, 2016.
+The Calconnect interoperability event was hosted by Ribose and OGCIO at Cyberport in
+Hong Kong on April 18 and 19, 2016.
 
-The event at HongKong continued our move to a more forum like approach, combining testing of new and standard calendar features with a number of in-depth discussions.
+The event at HongKong continued our move to a more forum like approach, combining
+testing of new and standard calendar features with a number of in-depth discussions.
 
 The following organizations were attending
 
@@ -57,9 +59,12 @@ The following organizations were attending
 * Ribose
 * Spherical Cow Group
 
-A major topic for this event - as for the last one - is trying to make iMip more reliable. In some cases it is the representation of the data which is the issue, other times it is incorrect handling of iTip.
+A major topic for this event - as for the last one - is trying to make iMip more
+reliable. In some cases it is the representation of the data which is the issue,
+other times it is incorrect handling of iTip.
 
-Another topic which keeps coming back is dealing with differing interpretations of the iCalendar specification regarding recurrences.
+Another topic which keeps coming back is dealing with differing interpretations of
+the iCalendar specification regarding recurrences.
 
 == Discussions and issues raised
 
@@ -67,38 +72,45 @@ During discussions a number of issues were raised. These included:
 
 === Timezones
 
-Do servers handle timezone definition changes - e.g. recalculate recurrences based on new timezone: the answer is usually not.
+Do servers handle timezone definition changes - e.g. recalculate recurrences based on
+new timezone: the answer is usually not.
 
 === VJOURNAL
 
 There was a proposal for adding an additional status to indicate "ARCHIVED"
 
-Suggested alternatives: use different collection, or perhaps a structured category (this is also backwards-compatible, as opposed to a new status)
+Suggested alternatives: use different collection, or perhaps a structured category
+(this is also backwards-compatible, as opposed to a new status)
 
-There is also a lack of rich text support - but that's also true for events and tasks - this should also be addressed - see "Styled-Description" in https://www.ietf.org/archive/id/draft-douglass-calendar-extension-04.txt
+There is also a lack of rich text support - but that's also true for events and tasks
+- this should also be addressed - see "Styled-Description" in
+https://www.ietf.org/archive/id/draft-douglass-calendar-extension-04.txt
 
 The general feeling is that JOURNAL is not heavily used.
 
 === Managed attachments
 
-Problem: we cannot add an attachment right away together with an event with managed attachments - we would have to first add an event, than once it synced and we know the uid we can add an attachment.
+Problem: we cannot add an attachment right away together with an event with managed
+attachments - we would have to first add an event, than once it synced and we know
+the uid we can add an attachment.
 
 === Support for wiping devices (Raised by Marten from dmfs)
 
 Do we need a special operation?
 
-The way to go is to use per-device passwords (or OAuth to get device-specific markers) and return empty collections on the first sync.
+The way to go is to use per-device passwords (or OAuth to get device-specific
+markers) and return empty collections on the first sync.
 
-This last point led to a discussion on client authentication and whether we could perhaps support open connect. See
+This last point led to a discussion on client authentication and whether we could
+perhaps support open connect. See
 
 * https://tools.ietf.org/html/rfc7591
 * http://openid.net/connect/
 
-
 == New API discussion
 
 There is a new format proposal
-    https://github.com/CalConnect/API/blob/master/CalendarEvent.mdwn
+https://github.com/CalConnect/API/blob/master/CalendarEvent.mdwn
 
 Some of the api issues that were discussed were
 
@@ -106,7 +118,10 @@ Some of the api issues that were discussed were
 
 * Alerts and defaults support, have a separate field for defaults
 
-* isAcknowledged - as currently is it would cause gradual expansion of alerts on the instances; solution: make isAcknowledged store not boolean but the last recurrence instance for which the alert was acknowledged, and only store it on the base range, not on the instances (unless the instance has override alerts).
+* isAcknowledged - as currently is it would cause gradual expansion of alerts on the
+instances; solution: make isAcknowledged store not boolean but the last recurrence
+instance for which the alert was acknowledged, and only store it on the base range,
+not on the instances (unless the instance has override alerts).
 
 * Attachments
 
@@ -114,15 +129,19 @@ Some of the api issues that were discussed were
 
 * Custom properties representation
 
-** Should we use a special prefix (like the X-)? The problem is that once use of a property is widespread enough a property's custom name is "cut in stone", since everyone's using it.
+** Should we use a special prefix (like the X-)? The problem is that once use of a
+property is widespread enough a property's custom name is "cut in stone", since
+everyone's using it.
 
 ** Maybe a special string namespace/registry with easy way of claiming?
 
 ** URLs (with domain names)?
 
-On recurrences there was a discussion on the idea of excluding certain instances based on another event(s)
+On recurrences there was a discussion on the idea of excluding certain instances
+based on another event(s)
 
-The start and end timezones are expressed through locations: first one corresponds to start, last - to end. The event timezone is independent.
+The start and end timezones are expressed through locations: first one corresponds to
+start, last - to end. The event timezone is independent.
 
 == Issues found during testing
 
@@ -130,11 +149,13 @@ These included:
 
 Missing timezones in ICS for single events.
 
-When the recurrence rule doesn't match the first start then some services silently move the first start to the first actual occurrence (which seems reasonable)
+When the recurrence rule doesn't match the first start then some services silently
+move the first start to the first actual occurrence (which seems reasonable)
 
 Moving a recurring instance into a different day did not work correctly.
 
-Timezone customization is not set for events (at least recurring) sent through iMIP (although the timezone is saved).
+Timezone customization is not set for events (at least recurring) sent through iMIP
+(although the timezone is saved).
 
 Some clients were mishandling sequence numbers
 
@@ -145,7 +166,8 @@ Create a recurring event in the future, save and send invitations
 * "Update Calendar" set a response, e.g. Maybe
 * Result: the response is discarded as outdated
 
-Some servers don't send invitations for past events even when the user is explicitly asked whether to send or not and says yes.
+Some servers don't send invitations for past events even when the user is explicitly
+asked whether to send or not and says yes.
 
 There were problems with autodiscovery
 
@@ -158,11 +180,13 @@ Some issues discovered and questions about Android clients:
 ** bad recurrence expansions
 ** empty recurring events (when all instances are cancelled)
 
-Client iMip bug: invitations to single instances of a recurring event are not handled properly
+Client iMip bug: invitations to single instances of a recurring event are not handled
+properly
 
 Server iMip bug:
-Have a recurring event with one exception moved, then invite an attendee - the invitation only contains the series but not the exception
+Have a recurring event with one exception moved, then invite an attendee - the
+invitation only contains the series but not the exception
 
-An interesting fact was noted: for recurring events where the recurrence doesn't match the start date - between Apple, FastMail, Google and Open-Xchange these are all expanded differently (3 different behaviors).
-
-
+An interesting fact was noted: for recurring events where the recurrence doesn't
+match the start date - between Apple, FastMail, Google and Open-Xchange these are all
+expanded differently (3 different behaviors).

@@ -44,7 +44,8 @@ This document was prepared by Technical Committee _{technical-committee}_.
 
 The event was hosted by Jorte in Tokyo, Japan, June 4-8, 2018
 
-In attendance for this interoperability event and developers forum were representatives from
+In attendance for this interoperability event and developers forum were
+representatives from
 
 * Spherical Cow Group
 * FastMail
@@ -52,15 +53,27 @@ In attendance for this interoperability event and developers forum were represen
 * Ribose
 * Jorte
 
+Despite that small attendance we were all kept busy on a number of issues which
+required discussion and implementation.
 
-Despite that small attendance we were all kept busy on a number of issues which required discussion and implementation.
+Vpoll was being worked on by Robert Stepanek of FastMail in preparation for a
+presentation and demonstration in the conference.
 
-Vpoll was being worked on by Robert Stepanek of FastMail in preparation for a presentation and demonstration in the conference.
+We had further discussions on the new JSCalendar specification Robert is working on.
+As the specification nears completion there are some remaining issues. The
+description property and localization, client-side alarm handling amd
+attendee-specific sequencing. As ever there were discussions about various aspects of
+recurrences.
 
-We had further discussions on the new JSCalendar specification Robert is working on. As the specification nears completion there are some remaining issues. The description property and localization, client-side alarm handling amd attendee-specific sequencing. As ever there were discussions about various aspects of recurrences.
+The new server side subscriptions specification was discussed and the Open-Xchange
+members carried out a preliminary implementation of the specification. This
+specification allows DAV clients to POST subscription requests to the server which
+then manages the synchronization of the data. Open-Xchange proposed some additions be
+added: a "refresh now" option for clients and persisting and signaling account errors
+to clients. These most likely will be added to the final specification.
 
-The new server side subscriptions specification was discussed and the Open-Xchange members carried out a preliminary implementation of the specification. This specification allows DAV clients to POST subscription requests to the server which then manages the synchronization of the data. Open-Xchange proposed some additions be added: a "refresh now" option for clients and persisting and signaling account errors to clients. These most likely will be added to the final specification.
+We talked about the progress being made with the VObject and VCard work in
+preparation for presentations later in the week.
 
-We talked about the progress being made with the VObject and VCard work in preparation for presentations later in the week.
-
-Apart from the larger issues above these meetings provided the opportunity for face-to-face in depth discussion on various topics.
+Apart from the larger issues above these meetings provided the opportunity for
+face-to-face in depth discussion on various topics.
