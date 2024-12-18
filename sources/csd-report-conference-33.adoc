@@ -5,8 +5,8 @@
 :doctype: administrative
 :edition: 1
 :status: published
-:revdate: 015-02-18
-:published-date: 015-02-18
+:revdate: 2015-02-18
+:published-date: 2015-02-18
 :technical-committee: CHAIRS
 :mn-document-class: csd
 :mn-output-extensions: xml,html,pdf,rxl
@@ -75,16 +75,16 @@ ultimately be progressed to become RFCs
 * Report on CalConnect Conference XXXII in San Jose, California
 * Report on Interoperability Test Event XXXII
 
-=== CalConnect Drafts Published as RFCs by the IETF:
+=== CalConnect Drafts Published as RFCs by the IETF
 
 * RFC 7529, https://tools.ietf.org/doc/html/rfc7529[Non-Gregorian Recurrence Rules in iCalendar (RSCALE)].
 
-=== CalConnect Drafts in IETF Last Call or AD Review:
+=== CalConnect Drafts in IETF Last Call or AD Review
 
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-service/[Time Zone Data Distribution Service]
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[CalDAV: Timezones by Reference]
 
-=== CalConnect Drafts Accepted by IETF Working Groups as WG Drafts:
+=== CalConnect Drafts Accepted by IETF Working Groups as WG Drafts
 
 * https://datatracker.ietf.org/doc/draft-daboo-calendar-availability/[Calendar Availability (VAVAILABILITY)]
 * https://datatracker.ietf.org/doc/draft-daboo-icalendar-extensions/[New Properties for iCalendar]

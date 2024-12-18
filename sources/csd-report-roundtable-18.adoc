@@ -1,0 +1,184 @@
+= Report on Roundtable XVIII, May 26-28, 2010
+:docnumber: 1005
+:copyright-year: 2010
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2010-06-02
+:published-date: 2010-06-02
+:technical-committee: CHAIRS
+:mn-document-class: csd
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+Roundtable XVIII took place on May 26-28 2010, hosted by Carnegie Mellon University in
+Pittsburgh, Pennsylvania. The event was attended by 27 people from 18 organizations, including
+one observer. The CalConnect Interoperability Test Events were held immediately prior to the
+Roundtable on May 24-26. Eight members and 15 people participated in the regular and Mobile
+Calendaring IOP Test Events. As some people attended both an IOP Test Event and the
+Roundtable, the total count of participants for the week was 34.
+
+The Mobile Calendar IOP Test Event featured ActiveSync testing, and six member organizations
+participated; three organizations participated in the "regular" IOP Test Event. Reports on the IOP
+Test Events will be published as soon as information has been delivered from all participants.
+
+The Roundtable was dedicated to technical committee sessions, and informal discussions and
+networking, with an all-hands Plenary meeting as the last item on Friday afternoon. The Technical
+Committee sessions were as usual organized sequentially, without competing parallel sessions, as
+is our standard practice to allow all attendees who wished to be involved in the discussions of each
+Technical Committee the opportunity to do so.
+
+== Special Events
+
+Dr. Steven Lee, Professor and Head of the School of Architecture at Carnegie Mellon University,
+gave a talk on his view of calendaring and the current challenges he faces in two roles: as Head of
+a department that schedules many campus events, and as the IT person for a small business, his
+architecture practice. Dr. Lee invited interested participants on a tour of the 
+http://www.cmu.edu/homepage/innovation/2007/spring/intelligent-workplace.shtml[Intelligent Workplace]
+project at CMU on Friday morning.
+
+== Documents Published since Last Roundtable
+
+* TC IOPTEST has published the public and internal IOP Test Event Reports from February
+* TC RESOURCE has published its Schema for representing calendaring and scheduling
+resources
+* TC XMLhas updated xCal - the XML format for iCalendar to Version 4
+* TC XML has released Cal-WS Web Services API for calendaring and scheduling for Public
+Review and Comment
+
+=== Internet Calendar Subscription Ad Hoc
+
+The Internet Calendar Subscription Ad Hoc was
+established to investigate the creation and promotion of a single icon and method to be used on
+websites to indicate a calendar available for subscription or download. The Ad Hoc reports
+significant progress in understanding and addressing the issue, and the Plenary recommended the
+formation of a Technical Committee to carry on the work.
+
+=== TC CALDAV
+
+TC CALDAV discussed the status of the revision to RFC 2447 (iMIP) and the
+progression of the draft on Collection Synchronization in WebDAV ("WebDAV Sync") which has
+occupied much of the TC's time over the last few months. The TC also held an open discussion on
+the Calendar Alarm Extensions for CalDAV, a Internet Draft on which the TC has been working.
+
+=== TC EVENTPUB
+
+TC EVENTPUB has been working on its LINK (formerly Reference) property
+extension to iCalendar, and expects to publish and submit it as an Internet Draft by the end of
+June.
+
+=== TC FREEBUSY
+
+TC FREEBUSY is continuing to work on consensus or poll scheduling, and is
+developing a specification extending iCalendar and iTIP for VPOLL. CalDAV and iSchedule
+implications and how VPOLL items would be stored on a server were also discussed.
+
+=== TC IOPTEST
+
+TC IOPTEST reported on the IOP test events just completed (elsewhere in this
+report). There is interest in conducting iSchedule and CardDAV testing at the October regular IOP
+Test Event, and Timezone Service testing at the February 2011 event.
+
+=== TC iSCHEDULE
+
+TC iSCHEDULE presented an overview of the second iSchedule Internet
+Draft. The TC has settled on DKIM as the mechanism for authentication and authorization in
+iSchedule, and a DNS mechanism to support delegation of iSchedule authority to another server.
+The next draft of iSchedule is close to publication.
+
+=== TC MOBILE
+
+TC MOBILE reported on its very successful Mobile Calendaring IOP Test Event
+focused on ActiveSync testing, in which six member organizations participated (also see below
+under IOP Test Events). The TC will produce a summary of the test event with the goal of using
+that document to promote testing to other vendors who were not present. The TC will also
+enhance the testing suite by adding more detail as well as example calendar data to streamline the
+testing process. Outreach efforts will continue.
+
+=== TC RESOURCE
+
+TC RESOURCE briefly presented comments on its just-published Schema for
+representing calendaring and scheduling resources, which has been submitted to the IETF as an
+Internet Draft, and discussed the implementation of the additional information in the DAV
+protocols.
+
+=== TC TIMEZONE
+
+TC TIMEZONE gave a brief presentation of the Timezone Service and
+Timezone Data Format drafts which are nearly ready for publication and submission as Internet
+Drafts. The TC also discussed some major issues going forward such as maintaining Timezone
+data, Timezone identifier format and the implications of Mr. Olson's retirement on the supply of
+Timezone data.
+
+=== TC USECASE
+
+TC USECASE discussed the Glossary revision and RFC 3283 (Guide to Internet
+Calendaring). The TC expects to complete the Glossary revision project by the next Roundtable.
+The intent is to ignore RFC 3283 as obsolete and remove references to it except for a statement of
+its lack of relevance. The revised Glossary will be made available on the CalConnect website in
+HTML format to allow search engine and other search retrievals.
+
+=== TC XML
+
+TC XML reviewed the status of xCal - the XML format for iCalendar document which
+has been updated several times since its initial publication. Most of the session was devoted to
+review of the Cal-WS Web Services API for calendaring and scheduling document now out for
+Public Review and Comments. This specification will become a substantial part of the OASIS WS
+CALENDAR standard, and the TC discussed alternative approaches to making the document
+available to OASIS upon publication. Preferred are submitting the material directly, to be
+incorporated in WS CALENDAR, or arranging for OASIS to publish the material as a standard
+which can then be normatively referenced by WS CALENDAR. This should be resolved with
+OASIS hopefully by the end of the Public Review period in mid-June. Key to the approach will be
+ensuring harmonization between CalConnect and OASIS for the future evolution of Cal-WS.
+
+== CalConnect Interoperability Test Event
+
+Participants in the "regular" IOP test event included Apple, EMClient (Icewarp), and Genentech.
+Additionally Oracle, both Beehive and the Oracle Sun Server, Zimbra, and PeopleCube expressed
+interest in remote testing. The Mobile Calendaring IOP Test Event, focused on ActiveSync,
+included Icewarp, MailSite, Microsoft, Nokia, Notify Technology, and Synchronica. Results from
+the events will be posted at Past IOP Reports as soon as they are collated and prepared.
+
+== Future Events
+
+* CalConnect XIX: October 4-8 2010, IBM/Lotus, Littleton MA
+* CalConnect XX: January 31 - February 4, 2011, TBD
+* CalConnect XXI: May 23-27 or June 6-10, 2011, TBD
+* CalConnect XXII: October 3-7. 2011, Kerio Technologies, Plzen, Czech Republic
+
+The format of the CalConnect week is:
+
+* Monday morning through Wednesday noon, C.I.T.E. (CalConnect Interoperability Test Event)
+* Wednesday noon through Friday afternoon, Roundtable (presentations, TC sessions, BOFs,
+networking, Plenary).

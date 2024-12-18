@@ -1,0 +1,160 @@
+= Report on Roundtable XVI, October 7-9 2009
+:docnumber: 0910
+:copyright-year: 2009
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2009-10-19
+:published-date: 2009-10-19
+:technical-committee: CHAIRS
+:mn-document-class: csd
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+Roundtable XVI took place on October 7-9 2009, hosted by Apple in Cupertino, California. The
+event was attended by 35 people from 19 members. The CalConnect Interoperability Test Event
+(CITE) was held immediately prior to the Roundtable on October 5-7. Five organizations and 13
+people participated in the regular test event, performing interoperability testing between their
+calendaring and scheduling implementations; one observer was present. A report on the CITE will
+be published as soon as information has been delivered from all participants.
+
+The Roundtable was dedicated to technical committee sessions, and informal discussions and
+networking, with an all-hands Plenary meeting as the last item on Friday afternoon. The Technical
+Committee sessions were as usual organized sequentially, without competing parallel sessions, as
+is our standard practice to allow all attendees who wished to be involved in the discussions of each
+Technical Committee the opportunity to do so.
+
+== Special Events
+
+A short (2 hour) Meet the Apple Engineers session was held on Tuesday afternoon, prior to the
+official Wednesday start of Roundtable XVI. It was was open to all Roundtable registrants, and
+was attended by over 30 people. The Q&A session with engineers from Apple's iCal Client, iCal
+Server, and iPhone Calendar teams was extremely collegial and frank.
+
+== Update on Technical Committees and Initiatives
+
+=== TC CALDAV
+
+TC CALDAV acknowledged the publication of RFC 5545 (iCalendar) and RFC
+5689 (Extended MKCOL) and provided a status update on different Internet Drafts relevant to
+CalDAV. Open discussions were held on CalDAV Extensions including calendar alarms, calendar
+attachments, calendar push notifications, shared calendars, and WebDAV synchronization.
+
+=== TC EVENTPUB
+
+TC EVENTPUB will be reactivated with participants from three new members
+and with a new Chair.
+
+=== TC FREEBUSY
+
+TC FREEBUSY discussed work on a proposal for support of consensus
+scheduling, that is, the polling for a meeting time suitable for all or most attendees, and will be
+working on a data format that can be carried in schedulng messages.
+
+=== TC IOPTEST
+
+TC IOPTEST reported on the IOP test event just completed (elsewhere in this
+report). Initial testing for CardDAV and Timezone Service are expected to begin in February, with
+initial iSchedule testing either in February or at the June event.
+
+=== TC iSCHEDULE
+
+TC iSCHEDULE discussed the progress on the protocol and reviewed
+methods of deploying the iSchedule protocol in various scenarios. Open discussions were held on
+well-known URIs, attachment support, migration issues, and tracing of iSchedule requests.
+
+=== TC MOBILE
+
+TC MOBILE presented a summary of the outreach, vision and calendar
+questionnaire discussions that have taken place in the TC over the last few months, and surveyed
+customer members present about their experiences with mobile calendaring to better inform the
+direction of the TC. Ongoing work will include more outreach attempts, and a look at device
+certification possibilities
+
+=== TC RESOURCE
+
+TC RESOURCE summarized the work of the TC to date, determining
+attributes to better define a resource that can be standardized and thus ease client server
+intoerperability in resource discovery. The TC also discussed the draft being developed for LDAP
+and VCARD mapping for resource attributes.
+
+=== TC TIMEZONE
+
+TC TIMEZONE presented work to date on its draft RFCs on a Timezone
+Registry, a Timezone Service protocol, and the Timezone Data XML format. The TC expects to
+publish these documents in the next several weeks.
+
+=== TC USECASE
+
+TC USECASE discused current work with Non-Institutional/Non-
+Enterprise/Free-Range users (NINEFR) and their usecases. The Glossary Revision which is
+underway was briefly reviewed.
+
+=== TC XML
+
+TC XML has revised its Charter to accommodate n ew work at the behest of NIST, the
+National Institute of Standards and Technology, in response to the 
+http://www.nist.gov/smartgrid/[NIST Smart Grid Interoperability Standards Project].
+This work includes an update to the iCalendar-to-XML
+Protocol, and the development of an abstract calendaring API which will allow multiple protocol
+bindings, one of which will be a web services protocol.
+
+== CalConnect Interoperability Test Event
+
+Participants in the IOP test event included Apple, Kerio, PeopleCube, Rensselaer Polytechnic
+Institute (Bedework), and Sun. In addition to regular, Sun tested a preliminary version of a
+CalDAV client for the Symbian OS which they will be contributing to Symbian R3. Results from
+the event will be posted at Past IOP Reports as soon as they are collated and prepared.
+
+== Other News from Roundtable Test Event
+
+CalConnect has decided to hold a full CalConnect week including an Inteorperability Test Event
+and Roundtable in Europe in the next two years, probably in 2011. European members will be
+solicited for hosting proposals.
+
+CalConnect is implementing a new public mailing list for Calendar Developers. Information about
+this list can be found at Calendar Developers Mailing List.
+
+== Future Events
+
+* CALCONNECT XVII: February 1-5, 2010, hosted by the University of California, Irvine, in
+Irvine, Californa
+* CALCONNECT XVIII: May 31 - June 4, 2010, host TBD but probably East Coast
+* CALCONNECT XIX: October 4-8 2010, host TBD but probably East Coast
+
+The format of the CalConnect week is:
+
+* Monday morning through Wednesday noon, C.I.T.E. (CalConnect Interoperability Test Event)
+* Wednesday noon through Friday afternoon, Roundtable (presentations, TC sessions, BOFs,
+networking, Plenary).
