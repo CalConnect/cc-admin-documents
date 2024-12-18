@@ -73,20 +73,20 @@ Thursday.
 Much of the work in CalConnect is focused on specifications to become internet draft submissions to the IETF and ultimately be
 progressed to become RFCs (Proposed Standards), rather than be directly published by CalConnect itself.
 
-=== Published Documents:
+=== Published Documents
 
 * Report on CalConnect Conference XXX
 * Report on Interoperability Test Event XXX
 * 7 Things You Should Know About the Abstract Calendaring API
 * Updated Starter List of CalDAV and CardDAV Standards and Specifications
 
-=== CalConnect Internet Drafts Adopted for Progression via IETF Working Groups:
+=== CalConnect Internet Drafts Adopted for Progression via IETF Working Groups
 
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[CalDAV: Timezones by Reference]
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[Time Zone Data Distribution Service]
 * https://datatracker.ietf.org/doc/draft-ietf-calext-rscale[Non-Gregorian Recurrence Rules in iCalendar]
 
-=== Updated Internet Drafts and Published RFCs:
+=== Updated Internet Drafts and Published RFCs
 
 * http://tools.ietf.org/html/rfc7265[jCal: The JSON Format for iCalendar] (RFC 7265)
 * https://datatracker.ietf.org/doc/draft-douglass-ical-relations/[Support for iCalendar Relationships]

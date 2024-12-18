@@ -1,0 +1,84 @@
+= Report on Roundtable I, 23-24 September 2004
+:docnumber: 0404
+:copyright-year: 2004
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2004-09-24
+:published-date: 2004-09-24
+:technical-committee: CHAIRS
+:mn-document-class: csd
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Report
+
+The first Roundtable sponsored by the Consortium took place on 23-24 September, 2004, hosted
+by Oracle Corporation in Montreal. This event was not restricted to Consortium members. It was
+an invitational "Open Roundtable on the Future of Interoperable Calendaring and Scheduling" and
+the invitation was sent out to a variety of individuals and organizations involved in Calendaring
+and Scheduling as vendors, customers, standards participants, etc.
+
+Twenty-three individuals from fourteen organizations attended the Roundtable. The discussion
+was oriented towards three general areas:
+
+* Do we agree on a problem statement?
+* Are we willing to work together to address the problem(s)?
+* How do we want to go about undertaking this work?
+
+At the end of the two days, the participants had broadly agreed on a common definition of the
+problem in terms of what had to be done to move forward with interoperable Calendaring and
+Scheduling, and had jointly agreed to work together to address the problems. The group adopted
+the following informal "charter" as a synthesis of their discussions:
+
+[quote]
+"WE" will come together to develop use cases, in concert with the users of calendaring products,
+to shape the technical requirements and critical input to help shape the work taking place in at
+least CalDAV, CALSIFY, UMA and other calendaring areas. Areas of focus will be calendar
+interoperability and a definition of a minimum implementation of same. We will also focus on
+testing and evaluation of interoperability. Attention will be paid to the promotion and evangelism
+of calendaring standards, capabilities and interop.
+
+The Roundtable agreed to work within the Consortium structure to accomplish its work, and
+established a timetable for participating organizations to commit to and join the Consortium. Plans
+for initial technical committees, and a general timetable for carrying out the work, were also
+agreed.
+
+Represented at the Roundtable were Apple, Duke University, Isamet, IBM Lotus, the Mozilla
+Foundation, Nokia, Novell, Oracle, OSAF (Open Source Applications Foundation), Stata Labs,
+UC Berkeley, University of Washington, Yahoo!, and the Calendaring and Scheduling
+Consortium.
+
+The critical mass of organizations joining the Consortium in the following months, both those who
+had participated in the September Roundtable and others, enabled the Consortium to make its
+public launch announcement on December 14, 2004, and to move forward with plans for its next
+Roundtable in January 2005.
