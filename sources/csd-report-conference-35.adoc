@@ -14,7 +14,7 @@
 :data-uri-image:
 :imagesdir: images/conference-35
 
-.Foreword
+== Introduction
 
 CalConnect Conference XXXV took place on January 13-15, 2016, hosted by AOL in
 Palo Alto, California. The CalConnect Conference was attended by 21 people from 12
@@ -33,34 +33,34 @@ _Much of the ongoing work in CalConnect is focused on specifications to become
 internet draft submissions to the IETF and ultimately be progressed to become RFCs
 (Proposed Standards), rather than be directly published by CalConnect itself._
 
-Published documents:
+=== Published Documents
 
 * Report on CalConnect Conference XXXIV in Amsterdam, The Netherlands
 * Report on Interoperability Test Event XXXIV
 
-CalConnect drafts in IETF Editor Queue to be published as RFCs:
+=== CalConnect Drafts in IETF Editor Queue to be Published as RFCs
 
 * Time Zone Data Distribution Service
 * CalDAV: Timezones by Reference
 
-CalConnect drafts in progress at IETF Working Groups
+=== CalConnect Drafts in Progress at IETF Working Groups
 
 * https://datatracker.ietf.org/doc/draft-ietf-calext-availability/[Calendar Availability (VAVAILABILITY)]
 * New Properties for iCalendar
 
-CalConnect drafts pending adoption by IETF working groups
+=== CalConnect Drafts Pending Adoption by IETF Working Groups
 
 * DAV Server Information Object
 * Task Extensions to iCalendar
 
-New and Updated CalConnect drafts submitted to the IETF
+=== New and Updated CalConnect Drafts Submitted to the IETF
 
 * https://tools.ietf.org/html/draft-menderico-v-event-uri-00[v-event URI: An URI scheme for events]
 * https://www.apple.com/[WebDAV: User Notifications]
 * https://tools.ietf.org/html/draft-pot-webdav-resource-sharing-03[WebDAV Resource Sharing]
 * https://tools.ietf.org/html/draft-pot-caldav-sharing-00[CalDAV Calendar Sharing]
 
-== Technical committee work and initiatives going forward
+== Technical Committee Work and Initiatives Going Forward
 
 === TC API
 
@@ -138,22 +138,23 @@ Dormant pending draft progression at IETF
 Dormant pending publication of drafts as RFCs. The TC may reactivate thereafter to
 consider promotion of implementations of the TZ data distribution service.
 
-== PLENARY DECISIONS
+== Plenary Decisions
 
 TC IMIP will be established to pursue improving interoperability with iMIP and
 enhancing the user experience, as extending iSchedule for general usage has proven
 improbable due to the “identity crisis”.
 
-== FUTURE EVENTS
+== Future Events
 
-*CalConnect XXXVI*: April 18-22, 2016, Ribose/OGCIO, Hong Kong +
-*CalConnect XXXVII*: September 12-16 2016, SmoothSync, Dresden, Germany +
-*CalConnect XXXVIII*: Winter 2017 TBD +
-*CalConnect XXXIX*: May 2017, Tandem, Seattle, Washington
+* CalConnect XXXVI: April 18-22, 2016, Ribose/OGCIO, Hong Kong
+* CalConnect XXXVII: September 12-16 2016, SmoothSync, Dresden, Germany
+* CalConnect XXXVIII: Winter 2017 TBD
+* CalConnect XXXIX: May 2017, Tandem, Seattle, Washington
 
-The general format of the CalConnect week is: +
-Monday morning through Wednesday noon, CalConnect Interoperability Test Event +
-Wednesday noon through Friday afternoon, CalConnect Conference (presentations, TC
+The general format of the CalConnect Week is:
+
+* Monday morning through Wednesday noon, CalConnect Interoperability Test Event
+* Wednesday noon through Friday afternoon, CalConnect Conference (presentations, TC
 sessions, BOFs, networking, Plenary)
 
 == Pictures from CalConnect XXXV

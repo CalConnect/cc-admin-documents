@@ -14,7 +14,7 @@
 :data-uri-image:
 :imagesdir: images/conference-31
 
-.Foreword
+== Introduction
 
 _Following CalConnect XXIX in February, the term "Roundtable" was replaced by "Conference" or
 "CalConnect Conference"._
@@ -33,7 +33,7 @@ as is our standard practice, to allow all attendees who wished to be involved in
 Technical Committee the opportunity to do so. The Conference finished with the CalConnect Plenary
 Session on Friday afternoon.
 
-== Special events
+== Special Events
 
 Two Workshops were held on Thursday morning and Friday morning: Groups Scheduling and Sharing
 and History and Comment Feeds in iCalendar. A Birds of a Feather session on developing a unified
@@ -41,25 +41,25 @@ Calendaring & Scheduling Architecture was also held on Friday. A retrospective p
 Veterans' Administration Health Care Workshop held at CalConnect XXX in May was also offered on
 Thursday.
 
-== Documents since last roundtable
+== Documents since Last Roundtable
 
 _Much of the work in CalConnect is focused on specifications to become internet draft submissions to the IETF and ultimately be
 progressed to become RFCs (Proposed Standards), rather than be directly published by CalConnect itself._
 
-Published documents:
+=== Published Documents:
 
 * Report on CalConnect Conference XXX
 * Report on Interoperability Test Event XXX
 * 7 Things You Should Know About the Abstract Calendaring API
 * Updated Starter List of CalDAV and CardDAV Standards and Specifications
 
-CalConnect internet drafts adopted for progression via IETF Working Groups:
+=== CalConnect Internet Drafts Adopted for Progression via IETF Working Groups:
 
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[CalDAV: Timezones by Reference]
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[Time Zone Data Distribution Service]
 * https://datatracker.ietf.org/doc/draft-ietf-calext-rscale[Non-Gregorian Recurrence Rules in iCalendar]
 
-Updated internet drafts and published RFCs:
+=== Updated Internet Drafts and Published RFCs:
 
 * http://tools.ietf.org/html/rfc7265[jCal: The JSON Format for iCalendar] (RFC 7265)
 * https://datatracker.ietf.org/doc/draft-douglass-ical-relations/[Support for iCalendar Relationships]
@@ -67,7 +67,7 @@ Updated internet drafts and published RFCs:
 * http://tools.ietf.org/html/draft-daboo-icalendar-extensions[New Properties for iCalendar]
 * https://datatracker.ietf.org/doc/draft-murchison-webdav-prefer/[Use of the Prefer Header Field in Web Distributed Authoring and Versioning (WebDAV)]
 
-== Update on technical committee work and initiatives including bofs and workshops
+== Update on Technical Committee Work and Initiatives Including BOFs and Workshops
 
 === BOF on Calendaring & Scheduling Architecture
 
@@ -228,7 +228,7 @@ drafts in the IETF for progression to become RFCs:
 https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[Time Zone Data Distribution Service]
 and https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[CalDAV: Timezones by Reference].
 
-=== Workshop on Groups attendees and sharing
+=== Workshop on Groups Attendees and Sharing
 
 Reviewed proposals for server-side support. Attendees approach involved client-driven model, decided
 right approach was for server to make decisions on expansions. Same would apply to sharing as well. Still
@@ -236,7 +236,7 @@ open questions as to how it would work, at this time decided to continue discuss
 once it finishes current work, and discuss again at next conference either at another workshop or as part
 of TC CALDAV.
 
-=== Workshop on History and comments streams in iCalendar data
+=== Workshop on History and Comments Streams in iCalendar Data
 
 Discussed general use cases; reached a general agreement on the need to address this in particular TC
 TASKS has a requirement. Approaches using external feeds through existing protocols, links to photo
@@ -246,7 +246,7 @@ have time before January to get into the topic in depth, and will return to it a
 meantime, TC TASKS will evaluate whether VJOURNAl is sufficient for its needs and the requirement can
 be met that way.
 
-== PLENARY DECISIONS
+== Plenary Decisions
 
 The offer from Gershon Janssen to host the Autumn 2015 event in Amsterdam, The Netherlands was
 confirmed.
@@ -254,17 +254,18 @@ confirmed.
 A Planning Committee will be formed for CalConnect's Tenth Anniversary meeting, CalConnect XXXII, in
 January 2015.
 
-== FUTURE EVENTS
+== Future Events
 
-*CalConnect XXXII*: January 26-30, 2015, Kerio Technologies, San Jose, California +
-*CalConnect XXXIII*: Spring, 2015, TBD +
-*CalConnect XXXIV*: Autumn, 2015, Gershon Janssen, Amsterdam, The Netherlands 
+* CalConnect XXXII: January 26-30, 2015, Kerio Technologies, San Jose, California
+* CalConnect XXXIII: Spring, 2015, TBD
+* CalConnect XXXIV: Autumn, 2015, Gershon Janssen, Amsterdam, The Netherlands 
 
-The general format of the CalConnect week is: +
-Monday morning through Wednesday noon, CalConnect Interoperability Test Event +
-Wednesday noon through Friday afternoon, CalConnect Conference (presentations, TC sessions,
-BOFs, networking, Plenary) +
-The format for European events is to move TC sessions to the afternoon and offer symposia and
+The general format of the CalConnect week is:
+
+* Monday morning through Wednesday noon, CalConnect Interoperability Test Event
+* Wednesday noon through Friday afternoon, CalConnect Conference (presentations, TC sessions,
+BOFs, networking, Plenary)
+* The format for European events is to move TC sessions to the afternoon and offer symposia and
 BOFs during Thursday and Friday mornings, and continue through Friday afternoon.
 
 == Pictures from CalConnect XXXI

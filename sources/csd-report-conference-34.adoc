@@ -14,7 +14,7 @@
 :data-uri-image:
 :imagesdir: images/conference-34
 
-.Foreword
+== Introduction
 
 CalConnect Conference XXXIV took place on September 30 - October 2, 2015, hosted by Gershon Janssen in Amsterdam, The Netherlands.
 The CalConnect Conference was attended by 30 people from 17 members and one non-member observer. The Interoperability Test Event
@@ -27,31 +27,31 @@ part of a conference TC session were moved to earlier in the week, during the In
 CalConnect Plenary Session on Friday afternoon. The Conference agenda, with notes on the discussion topics, may be found at CalConnect
 XXXIV Schedule.
 
-== Documents since last conference
+== Documents since Last Conference
 
 _Much of the ongoing work in CalConnect is focused on specifications to become internet draft submissions to the IETF and ultimately be progressed to become RFCs
 (Proposed Standards), rather than be directly published by CalConnect itself._
 
-Published documents:
+=== Published Documents
 
 * Report on CalConnect Conference XXXIII in Bucharest, Romania
 * Report on Interoperability Test Event XXXIII
 
-CalConnect drafts published as RFCs by the IETF:
+=== CalConnect Drafts Published as RFCs by the IETF
 
 * RFC 7529, https://tools.ietf.org/doc/html/rfc7529[Non-Gregorian Recurrence Rules in iCalendar (RSCALE)].
 
-CalConnect drafts in IETF Editor Queue to be published as RFCs:
+=== CalConnect Drafts in IETF Editor Queue to be Published as RFCs:
 
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-service/[Time Zone Data Distribution Service]
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref//[CalDAV: Timezones by Reference]
 
-CalConnect drafts in progress at IETF Working Groups:
+=== CalConnect Drafts in Progress at IETF Working Groups:
 
 * https://datatracker.ietf.org/doc/draft-ietf-calext-availability/[Calendar Availability (VAVAILABILITY)]
 * https://datatracker.ietf.org/doc/draft-ietf-calext-extensions/[New Properties for iCalendar]
 
-Updated CalConnect drafts pending adoption by IETF working groups:
+=== Updated CalConnect Drafts Pending Adoption by IETF Working Groups:
 
 * https://datatracker.ietf.org/doc/draft-douglass-server-info/[DAV Server Information Object]
 * https://datatracker.ietf.org/doc/draft-apthorp-ical-tasks/[Task Extensions to iCalendar]
@@ -59,7 +59,7 @@ Updated CalConnect drafts pending adoption by IETF working groups:
 _Please note that CalConnect documents at the IETF are mentioned only if their status has changed or they have been updated since the last
 CalConnect event_
 
-== Update on technical committee work and initiatives
+== Update on Technical Committee Work and Initiatives
 
 === TC API
 
@@ -145,15 +145,16 @@ The TC is on hold pending the progression of its two drafts at the IETF, both of
 Editor Queue pending publications as RFCs. The TC will reactivate to discuss the promotion of the Timezone Data Distribution Service and
 its incorporation into production systems.
 
-== FUTURE EVENTS
+== Future Events
 
-*CalConnect XXXV*: January 25-29, 2016, AOL, Palo Alto, California +
-*CalConnect XXXVI*: April 18-22, 2016, Ribose/OGCIO, Hong Kong
+* CalConnect XXXV: January 25-29, 2016, AOL, Palo Alto, California
+* CalConnect XXXVI: April 18-22, 2016, Ribose/OGCIO, Hong Kong
 
-The general format of the CalConnect week is: +
-Monday morning through Wednesday noon, CalConnect Interoperability Test Event +
-Wednesday noon through Friday afternoon, CalConnect Conference (presentations, TC sessions, BOFs, networking, Plenary) +
-The format for European events is to move TC sessions to the afternoon, offer symposia and BOFs during Thursday and Friday mornings,
+The general format of the CalConnect week is:
+
+* Monday morning through Wednesday noon, CalConnect Interoperability Test Event
+* Wednesday noon through Friday afternoon, CalConnect Conference (presentations, TC sessions, BOFs, networking, Plenary)
+* The format for European events is to move TC sessions to the afternoon, offer symposia and BOFs during Thursday and Friday mornings,
 and continue through Friday afternoon.
 
 == Pictures from CalConnect XXXIV
