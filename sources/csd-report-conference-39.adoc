@@ -43,11 +43,11 @@ This document was prepared by Technical Committee _{technical-committee}_.
 
 == Introduction
 
-CalConnect XXXIX took place on June 12-16, 2017, hosted by Tandem in Seattle, Washington.  The CalConnect Test Event (Monday,  Tuesday, and Wednesday morning) and Conference (Wednesday afternoon, Thursday and Friday) were held at Tandem’s headquarters at Galvanize in Seattle.
+CalConnect XXXIX took place on June 12-16, 2017, hosted by Tandem in Seattle, Washington. The CalConnect Test Event (Monday, Tuesday, and Wednesday morning) and Conference (Wednesday afternoon, Thursday and Friday) were held at Tandem’s headquarters at Galvanize in Seattle.
 
-The CalConnect Conference was attended by 16 people from 9 members plus a representative from the IETF.  The Test Event/Developers Forum had 8 participants from 5 members and was largely devoted to the forum rather than specific testing.
+The CalConnect Conference was attended by 16 people from 9 members plus a representative from the IETF. The Test Event/Developers Forum had 8 participants from 5 members and was largely devoted to the forum rather than specific testing.
 
-The Conference focussed on strategic and possible work items in addition to ongoing work, and finished with the CalConnect Plenary Session on Friday afternoon.  The Conference agenda with notes on the discussion topics may be found at CalConnect XXXIX Conference Schedule.
+The Conference focussed on strategic and possible work items in addition to ongoing work, and finished with the CalConnect Plenary Session on Friday afternoon. The Conference agenda with notes on the discussion topics may be found at https://www.calconnect.org/events/calconnect-xxxix-june-12-16-2017%23conference-schedule[CalConnect XXXIX Conference Schedule].
 
 == Status of documents since last conference
 
@@ -92,13 +92,11 @@ Specifications in progress and not yet published are generally resident on GitHu
 * Calendar Subscription Upgrades
 * JSCalendar: A JSON representation of calendar data
 
-
 == Technical Committee and Related Work
-
 
 === TC API
 
-Robert Stepanek is the new Chair of TC API.  Work on iCalendar is complete; work on Tasks has begun.  Holding on contacts for TC VCARD to move forward.
+Robert Stepanek is the new Chair of TC API. Work on iCalendar is complete; work on Tasks has begun. Holding on contacts for TC VCARD to move forward.
 
 === TC AUTODISCOVERY
 
@@ -106,11 +104,11 @@ Draft update in progress
 
 === TC CALENDAR
 
-VPATCH and VINSTANCE are mature enough to begin implementation and testing.  Work continues on the VALARM Extensions draft.
+VPATCH and VINSTANCE are mature enough to begin implementation and testing. Work continues on the VALARM Extensions draft.
 
 === TC DEVGUIDE
 
-New content includes bootstrapping, vCard information.  Improved content: link section dates and times information.  Looking for assistance to edit selected Wikipedia entries related to CalConnect.
+New content includes bootstrapping, vCard information. Improved content: link section dates and times information. Looking for assistance to edit selected Wikipedia entries related to CalConnect.
 
 === TC IOPTEST
 
@@ -119,7 +117,6 @@ See separate report on Test Event at CalConnect XXXIX.
 === TC PUSH
 
 Draft has been submitted to the IETF.
-
 
 === TC SHARING
 
@@ -131,39 +128,34 @@ Brief report on the status of the work.
 
 === TC VCARD
 
-Several presentations on status in TC VCARD and progress at the ISO/TC 211 meeting in Stockholm earlier this month.  TC 211/WG 7 has accepted a proposal from CalConnect TC VCARD to submit a New Work Item Proposal on a machine-readable address profile data format.
+Several presentations on status in TC VCARD and progress at the ISO/TC 211 meeting in Stockholm earlier this month. TC 211/WG 7 has accepted a proposal from CalConnect TC VCARD to submit a New Work Item Proposal on a machine-readable address profile data format.
 
 === ICAL4J
 
-Building a CalConnect version of iCal4J merging 1&1 and SCG implementations.  Ultimate goal is to merge it with the original version from Ben Fortuna when new standards supported by this version have been published.
+Building a CalConnect version of iCal4J merging 1&1 and SCG implementations. Ultimate goal is to merge it with the original version from Ben Fortuna when new standards supported by this version have been published.
 
 === Calendar Spam
 
-Feedback from M3WAAG Thursday.  Discussion about subscription/content providers also being affected.  Also discussed whether it is possible or desirable to establish a liaison with M3WAAG.
-
+Feedback from M3WAAG Thursday. Discussion about subscription/content providers also being affected. Also discussed whether it is possible or desirable to establish a liaison with M3WAAG.
 
 == TC Directions for Period to CalConnect XL
 
-TC API:  Create initial version of draft for standard, follow up on tasks
+TC API: Create initial version of draft for standard, follow up on tasks
 
 TC CALENDAR: Convert Managed Attachments to informational RFC, reshape VALARM extensions, finish calendar Relations, look at Task Extensions, continue VPATCH work
 
 TC DEVGUIDE: Feedback button, new content, wikipedia updates
 
-TC PUSH:  Finish up Push specification
+TC PUSH: Finish up Push specification
 
 TC SHARING: Subscription update draft will include time rate queries, use delete, header templating.
 
-TC TESTER:  Increase tests, decide how to maintain
-
-
+TC TESTER: Increase tests, decide how to maintain
 
 == Plenary Decisions
 
 * Jorte’s offer to host CalConnect XLII (June, 2018) in Tokyo, Japan was approved.
 * 1&1’s offer to host CalConnect XXLIII (September, 2018) in Karlsruhe, Germany was approved.
-
-
 
 == Future Events
 
@@ -171,7 +163,6 @@ TC TESTER:  Increase tests, decide how to maintain
 * CalConnect XLI - Winter, 2018 - TBD
 * CalConnect XLII - June 4-8, 2018 - Jorte, Tokyo, Japan
 * CalConnect XLIII - September, 2018 - 1&1, Karlsruhe, Germany
-
 
 The general format of the CalConnect Week is:
 
@@ -187,14 +178,20 @@ Specific dates were set for CalConnect XLI and CalConnect XLIII (see below).
 
 Pictures courtesy of Thomas Schäfer, 1&1
 
-[cols="a,a"]
+[%unnumbered,cols="a,a"]
 |===
 
-|image::img_6848-17.jpg[]
-|image::img_6859-19.jpg[]
-|image::img_6872-21.jpg[]
-|image::img_6876-25.jpg[]
-|image::img_6890-23.jpg[]
-|image::img_7252-27.jpg[]
+| [%unnumbered]
+image::img_6848-17.jpg[]
+| [%unnumbered]
+image::img_6859-19.jpg[]
+| [%unnumbered]
+image::img_6872-21.jpg[]
+| [%unnumbered]
+image::img_6876-25.jpg[]
+| [%unnumbered]
+image::img_6890-23.jpg[]
+| [%unnumbered]
+image::img_7252-27.jpg[]
 
 |===

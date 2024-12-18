@@ -15,9 +15,36 @@
 :imagesdir: images/conference-30
 
 .Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
 
-_Following CalConnect XXIX in February, the term "Roundtable" was replaced by "Conference"
-or "CalConnect Conference"._
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+NOTE: Following CalConnect XXIX in February, the term "Roundtable" was replaced by "Conference"
+or "CalConnect Conference".
 
 CalConnect Conference XXX took place on February 5-7, 2014, hosted by AOL in Dulles,
 Virginia. The CalConnect Conference was attended by 28 people from 12 members and 8 nonmembers
@@ -35,12 +62,13 @@ practice, to allow all attendees who wished to be involved in the discussions of
 Committee the opportunity to do so. The Conference finished with the CalConnect Plenary
 Session on Friday afternoon.
 
-== Special events
+== Special Events
 
 A public Workshop on the Veterans Administration Scheduling System Challenge was held
 Wednesday afternoon and was attended by 47 people, 21 of whom came for the workshop alone.
 Most Conference participants were present for the Workshop as well. A separate report on the
-workshop can be found at http://www.calconnect.org/vachallengeworkshopreport.shtml[VA Scheduling System Workshop Report].
+workshop can be found at
+http://www.calconnect.org/vachallengeworkshopreport.shtml[VA Scheduling System Workshop Report].
 
 A BoF on CalConnect and the IETF was held Thursday afternoon with the two Application Area
 ADs from the IETF attending Thursday morning and through the BoF. The goal of the BoF was to
@@ -48,19 +76,19 @@ explore ways to better integrate IETF and CalConnect processes and allow for smo
 progression of drafts through the IETF once submitted. A formal liaison between the IETF and
 CalConnect was suggested and will be explored.
 
-== Documents since last roundtable
+== Documents since Last Roundtable
 
-_Much of the work in CalConnect is focused on specifications to become internet draft submissions to the IETF and
-ultimately be progressed to become RFCs (Proposed Standards), rather than be directly published by CalConnect itself._
+Much of the work in CalConnect is focused on specifications to become internet draft submissions to the IETF and
+ultimately be progressed to become RFCs (Proposed Standards), rather than be directly published by CalConnect itself.
 
-Published documents:
+=== Published Documents
 
 * Report on Roundtable XXIX
 * Report on Interoperability Test Event XXIX
 * 7 Things You Should Know About PUSH
 * Starter List of CalDAV and CardDAV Standards and Specifications
 
-Updated internet drafts and published RFCs:
+=== Updated Internet Drafts and Published RFCs
 
 * https://tools.ietf.org/html/rfc7265[jCal: The JSON Format for iCalendar] (RFC 7265)
 * https://tools.ietf.org/html/draft-daboo-icalendar-rscale/[Non-Gregorian Recurrence Rules in iCalendar]
@@ -69,7 +97,7 @@ Updated internet drafts and published RFCs:
 * https://tools.ietf.org/html/draft-daboo-caldav-extensions[Collected Extensions to CalDAV]
 * https://www.ietf.org/html/draft-daboo-caldav-timezone/[CalDAV: Timezones by Reference]
 
-== Update on technical committee work and initiatives including bofs and workshops
+== Update on Technical Committee Work and Initiatives Including BOFs and Workshops
 
 === CALSCALE Ad Hoc
 
@@ -154,7 +182,8 @@ state of the internet drafts (below) and are waiting for the first batch to prog
 modifications to the drafts may be required to handle issues raised in other TCs, especially
 handling of referenced vCard data. The CONFERENCE property removed from one of the drafts
 is now becoming of interest so we will have one or more EVENTPUB calls in the near future to
-discuss adding it again. The current EVENTPUB drafts referenced above are https://tools.ietf.org/html/draft-douglass-calendar-extension/[Event Publication Extensions to iCalendar]
+discuss adding it again. The current EVENTPUB drafts referenced above are
+https://tools.ietf.org/html/draft-douglass-calendar-extension/[Event Publication Extensions to iCalendar]
 and https://tools.ietf.org/html/draft-daboo-icalendar-extensions[New Properties for iCalendar].
 
 === TC FREEBUSY
@@ -174,7 +203,8 @@ uncovered, and some fixed. Three servers tested and eventually demonstrated a co
 VPOLL and iSCHEDULE (see the TC FREEBUSY entry above). The complete VPOLL and
 subsequent meeting request sequence worked; there are still some issues with freebusy lookup.
 Also conducted some testing go CalDAV scheduling and CardDAV sharing. The event report may
-be found at https://www.calconnect.org/events/event-reports#ioptestevents[CalConnect Interoperability Test Event Reports].
+be found at
+https://www.calconnect.org/events/event-reports#ioptestevents[CalConnect Interoperability Test Event Reports].
 
 === TC ISCHEDULE
 
@@ -236,7 +266,7 @@ tractable sections such as recurrences in prescription meds. Hopefully we will h
 one or more members with a business objective who see that CalConnect is where to realize that
 objective.
 
-== PLENARY DECISIONS
+== Plenary Decisions
 
 The Federated Shared Calendars (FSC) Ad Hoc Committee and the CONTACTS Provisional
 Committee will begin the process to establish themselves as full Technical Committees.
@@ -244,17 +274,17 @@ Committee will begin the process to establish themselves as full Technical Commi
 The offer from Youcanbook.me to host the Autumn 2014 event in Bedford, England was
 confirmed.
 
-== FUTURE EVENTS
+== Future Events
 
-*CalConnect XXXI*: September 29 - October 3, 2014, Youcanbookme, Bedford, England +
-*CalConnect XXXII*: January 26-30, 2015, Kerio Technologies, San Jose, California +
-*CalConnect XXXIII*: Spring, 2015, TBD +
-*CalConnect XXXIV*: Autumn, 2015, Amsterdam, The Netherlands (tentative)
+* CalConnect XXXI: September 29 - October 3, 2014, Youcanbookme, Bedford, England
+* CalConnect XXXII: January 26-30, 2015, Kerio Technologies, San Jose, California
+* CalConnect XXXIII: Spring, 2015, TBD
+* CalConnect XXXIV: Autumn, 2015, Amsterdam, The Netherlands (tentative)
 
 The general format of the CalConnect week is:
 
-Monday morning through Wednesday noon, CalConnect Interoperability Test Event +
-Wednesday noon through Friday afternoon, CalConnect Conference (presentations, TC sessions,
-BOFs, networking, Plenary) +
-The format for European events is to move TC sessions to the afternoon and offer symposia and
+* Monday morning through Wednesday noon, CalConnect Interoperability Test Event
+* Wednesday noon through Friday afternoon, CalConnect Conference (presentations, TC sessions,
+BOFs, networking, Plenary)
+* The format for European events is to move TC sessions to the afternoon and offer symposia and
 BOFs during Thursday and Friday mornings.

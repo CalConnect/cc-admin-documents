@@ -47,7 +47,7 @@ CalConnect XLIII took place September 24-27, 2018, hosted by 1&1 in Karlsruhe, G
 
 This conference was a one-time experiment with a new conference format, technical and conference tracks alternating each day, and a single fee rather than the previous separate fees for the test event and conference. It was also a 4-day event, Monday through Thursday, rather than the 5 days that the previous format required to attend both the test event and the conference. The new format was based on recommendations from a working group set up by the CalConnect Board at the beginning of the year, to examine the current formats and make recommendations for future changes.
 
-The Conference focussed on strategic and possible work items in addition to ongoing work, and finished with the CalConnect Plenary Session prior to lunch on Thursday. Thursday afternoon was open time for working sessions. The schedule was rearranged during the week based on input from participants. The final Conference agenda with notes on the discussion topics may be found at CalConnect XLIII Conference Schedule.
+The Conference focussed on strategic and possible work items in addition to ongoing work, and finished with the CalConnect Plenary Session prior to lunch on Thursday. Thursday afternoon was open time for working sessions. The schedule was rearranged during the week based on input from participants. The final Conference agenda with notes on the discussion topics may be found at https://www.calconnect.org/events/calconnect-xliii-september-2018#conference-schedule[CalConnect XLIII Conference Schedule].
 
 == Status of Documents Since Last Conference
 
@@ -89,7 +89,6 @@ CalConnect has established formal Category A Liaisons with the following ISO Com
 * ISO JTC 1 SC 27
 * ISO TC 37
 
-
 == General Status and Items
 
 An Adhoc Committee on the EU Time proposal to discontinue Summer Time has been created to submit an Advisory Report to the EU. We anticipate holding a workshop on this subject at CalConnect XLIV in February 2019.
@@ -104,8 +103,6 @@ CalConnect is planning to resume its practice of self-publishing standards, whic
 Feedback was obtained on the new conference format being tried at this event (as a one-time trial) as noted above. In general the format is well thought of, several adjustments were made to the schedule as the week progressed.
 
 Formal testing was not done as part of the program at this event, although individuals are welcome to test as desired during the course of the meeting.
-
-
 
 == Future Work
 
@@ -169,7 +166,6 @@ Recommendation to Board of Directors to approve the new CalConnect Standards Dir
 
 TC DATETIME and TC LOCALIZATION approved; co-chairs at to develop Charters and submit to TCC.
 
-
 == Confirmed Future Events
 
 * Google will host CalConnect XLIV on February 4-8, 2019, in Zürich, Switzerland.
@@ -182,15 +178,21 @@ Philadelphia.
 
 Pictures courtesy of Thomas Schäfer, 1&1
 
-[cols="a,a"]
+[%unnumbered,cols="a,a"]
 |===
 
-|image::img_1888-59.jpg[]
-|image::img_1892-61.jpg[]
-|image::img_1919-63.jpg[]
-|image::img_1930-65.jpg[]
-|image::img_7653-57.jpg[]
-|image::IMG_7980-29.jpg[]
+| [%unnumbered]
+image::img_1888-59.jpg[]
+| [%unnumbered]
+image::img_1892-61.jpg[]
+| [%unnumbered]
+image::img_1919-63.jpg[]
+| [%unnumbered]
+image::img_1930-65.jpg[]
+| [%unnumbered]
+image::img_7653-57.jpg[]
+| [%unnumbered]
+image::IMG_7980-29.jpg[]
 
 |===
 

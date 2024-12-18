@@ -14,6 +14,33 @@
 :data-uri-image:
 :imagesdir: images/conference-32
 
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
 == Introduction
 
 CalConnect Conference XXXII took place on January 28-30, 2015, hosted by Kerio Technologies in San Jose, California. The CalConnect
@@ -41,27 +68,27 @@ time and time zones. More about the Tenth Anniversary Celebration may be found a
 
 == Documents since Last Conference
 
-_Much of the ongoing work in CalConnect is focused on specifications to become internet draft submissions to the IETF and ultimately be progressed to become RFCs (Proposed
-Standards), rather than be directly published by CalConnect itself._
+Much of the ongoing work in CalConnect is focused on specifications to become internet draft submissions to the IETF and ultimately be progressed to become RFCs (Proposed
+Standards), rather than be directly published by CalConnect itself.
 
 === Published Documents
 
 * Report on CalConnect Conference XXXI in Bedford, United Kingdom
 * Report on Interoperability Test Event XXXI
 
-=== CalConnect Drafts in IETF WG Last Call or AD Review:
+=== CalConnect Drafts in IETF WG Last Call or AD Review
 
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[Time Zone Data Distribution Service]
 * https://datatracker.ietf.org/doc/draft-ietf-calext-rscale/[Non-Gregorian Recurrence Rules in iCalendar (RSCALE)]
 
-=== CalConnect Drafts Accepted by IETF Working Groups as WG Drafts:
+=== CalConnect Drafts Accepted by IETF Working Groups as WG Drafts
 
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[CalDAV: Timezones by Reference]
 * https://datatracker.ietf.org/doc/draft-daboo-calendar-availability/[Calendar Availability (VAVAILABILITY)]
 * https://datatracker.ietf.org/doc/draft-daboo-icalendar-extensions/[New Properties for iCalendar]
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[CalDAV: Timezones by Reference]
 
-=== Updated Internet Drafts at IETF not yet Adopted by a Working Group:
+=== Updated Internet Drafts at IETF not yet Adopted by a Working Group
 
 * https://datatracker.ietf.org/doc/draft-douglass-ical-relations/[Improved Support for iCalendar Relations]
 * https://datatracker.ietf.org/doc/draft-york-vpoll/[VPOLL: Consensus Scheduling Component for iCalendar]
@@ -237,6 +264,7 @@ Reference draft has been accepted as a working group draft.
 * CalConnect XXXV: January 25-29, 2016, AOL, Palo Alto, California
 
 The general format of the CalConnect week is:
+
 * Monday morning through Wednesday noon, CalConnect Interoperability Test Event
 * Wednesday noon through Friday afternoon, CalConnect Conference (presentations, TC sessions, BOFs, networking, Plenary)
 * The format for European events is to move TC sessions to the afternoon, offer symposia and BOFs during Thursday and Friday mornings,

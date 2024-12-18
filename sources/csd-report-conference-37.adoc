@@ -43,44 +43,44 @@ This document was prepared by Technical Committee _{technical-committee}_.
 
 == Introduction
 
-CalConnect XXXVII took place on September 14-16, 2016, hosted by dmfs in Dresden, Germany.  The CalConnect Test Event (Monday,  Tuesday, and Wednesday morning) and Conference (Wednesday afternoon, Thursday and Friday) were held at Schloss Eckberg on the Elbe River.
+CalConnect XXXVII took place on September 14-16, 2016, hosted by dmfs in Dresden, Germany. The CalConnect Test Event (Monday, Tuesday, and Wednesday morning) and Conference (Wednesday afternoon, Thursday and Friday) were held at Schloss Eckberg on the Elbe River.
 
-The CalConnect Conference was attended by 22 people from 10 members,  plus 3 observers and a representative from the IETF.  The Test Event had 12 participants from 7 members.
+The CalConnect Conference was attended by 22 people from 10 members, plus 3 observers and a representative from the IETF. The Test Event had 12 participants from 7 members.
 
-The Conference focussed on strategic and possible work items in addition to ongoing work, and finished with the CalConnect Plenary Session on Friday afternoon.  The Conference agenda with notes on the discussion topics may be found at CalConnect XXXVII Conference Schedule.
-== Status of Documents Since Last Conference
+The Conference focussed on strategic and possible work items in addition to ongoing work, and finished with the CalConnect Plenary Session on Friday afternoon. The Conference agenda with notes on the discussion topics may be found at https://www.calconnect.org/events/calconnect-xxxvii-september-12-16-2016#conference-schedule[CalConnect XXXVII Conference Schedule].
+
+== Status of Documents since Last Conference
 
 Much of the ongoing work in CalConnect is focused on specifications to become internet draft submissions to the IETF and ultimately be progressed to publication as RFCs (Proposed Standards), rather than directly published by CalConnect itself.
 
-
 === Published Documents
+
 * Report on CalConnect Conference XXXVI in Hong Kong
 * Report on Interoperability Test Event XXXVI
 
-
 === CalConnect Specifications Published as RFCs
+
 * RFC 7953 Calendar Availability (VAVAILABILITY)
 * RFC ???? New Properties for iCalendar (publication imminent)
 
-
-
 === CalConnect Drafts accepted by CALEXT WG at IETF for progression
+
 * Event Publishing Extensions to iCalendar
 * Improved Support for iCalendar Relationships
 * CalDAV Managed Attachments
 
 === New and Updated CalConnect Drafts at the IETF
+
 * WebDAV User Notifications
 * WebDAV Resource Sharing
-* CalDAV  Calendar Sharing
+* CalDAV Calendar Sharing
 * CardDAV Address Book Sharing
-
 
 == Technical Committee Work and Initiatives Going Forward
 
 === TC API
 
-Working on a new key/value based data model.  Much of the work is done and the remainder will continue.   Next steps are implementations, find a suitable name for the API. document the iCalendar/JSON Format, develop specification and submit to IETF.
+Working on a new key/value based data model. Much of the work is done and the remainder will continue. Next steps are implementations, find a suitable name for the API. document the iCalendar/JSON Format, develop specification and submit to IETF.
 
 === TC AUTODISCOVERY
 
@@ -94,7 +94,7 @@ Interest in either expanding TC Charter or initiating a new TC to cover broader 
 
 === TC DEVGUIDE
 
-Significant additions during Test Event including porting the independent CalDAV and CardDAV Implementations websites to the Developer’s Guide.  Will continue to push for external contributions and additional content.   Interest in documenting libraries such as ical4j and libical in the Developer’s Guide.
+Significant additions during Test Event including porting the independent CalDAV and CardDAV Implementations websites to the Developer’s Guide. Will continue to push for external contributions and additional content. Interest in documenting libraries such as ical4j and libical in the Developer’s Guide.
 
 === TC EVENTPUB
 
@@ -110,17 +110,17 @@ To be merged into TC SHARING.
 
 === TC IMIP
 
-Documenting best practices on how iTIP over e-Mail (iMIP) should be structured to match existing practice; developing server feature matrix.  Expect to put best practices in DEVGUIDE.
+Documenting best practices on how iTIP over e-Mail (iMIP) should be structured to match existing practice; developing server feature matrix. Expect to put best practices in DEVGUIDE.
 
 === TC IOPTEST
 
-Conducted Interoperability Testing and Developer’s Forum event at CalConnect XXXVII.  (Interoperability Test Event has been rebranded as Test Event and Developers’ Forum; significant technical discussions now taking place during the forum.)
+Conducted Interoperability Testing and Developer’s Forum event at CalConnect XXXVII. (Interoperability Test Event has been rebranded as Test Event and Developers’ Forum; significant technical discussions now taking place during the forum.)
 
-Lots of work on CalDAV Tester “Wrapper” developed by Ralf Becker; decided to initiate new TC TESTER specifically to carry this tool forward to provide a black box test of standard appliances, improve server testing.  In particular lack of clients at test events make this tool extremely valuable, potentially provides equivalent to reference implementation.
+Lots of work on CalDAV Tester “Wrapper” developed by Ralf Becker; decided to initiate new TC TESTER specifically to carry this tool forward to provide a black box test of standard appliances, improve server testing. In particular lack of clients at test events make this tool extremely valuable, potentially provides equivalent to reference implementation.
 
 === TC ISCHEDULE
 
-Definite interest in moving forward with the draft at the IETF.  “Identify Problem” will not apply for most likely users including large organizations.
+Definite interest in moving forward with the draft at the IETF. “Identify Problem” will not apply for most likely users including large organizations.
 
 === TC PUSH
 
@@ -132,9 +132,7 @@ Dormant pending resource drafts adoption at IETF into a working group.
 
 === TC SHARING
 
-Reviewed four drafts, some question as to where in IETF is best place to progress as.  Drafts are essentially ready to move forward when adopted.  Next steps are subscription models and federated sharing.
-
-
+Reviewed four drafts, some question as to where in IETF is best place to progress as. Drafts are essentially ready to move forward when adopted. Next steps are subscription models and federated sharing.
 
 === TC TASKS
 
@@ -142,20 +140,16 @@ Dormant pending adoption of draft by IETF WG
 
 === PC-QR
 
-Formed at CalConnect XXXVI to explore interest in expanding vCard to contain visual data, support non-North American address formats.  Will become TC VCARD.
-
+Formed at CalConnect XXXVI to explore interest in expanding vCard to contain visual data, support non-North American address formats. Will become TC VCARD.
 
 === PC-SEC
 
-Formed at CalConnect XXXVI to examine security issues with calendaring data and explore possible ways forward.  Will continue as PC until next event.
-
+Formed at CalConnect XXXVI to examine security issues with calendaring data and explore possible ways forward. Will continue as PC until next event.
 
 == Plenary Decisions
 
 * TC TESTER to be created to carry forward work on CalDAV Tester
 * TC VCARD to be created to move forward with PC QR issues
-
-
 
 == Future Events
 
@@ -175,13 +169,27 @@ Pictures courtesy of Thomas Schäfer, 1&1
 [cols="a,a"]
 |===
 
-|image::Conference-sketch-45.jpg[]
-|image::Developers-Forum-Sketch-43.jpg[]
-|image::Group-picture-41.jpg[]
-|image::Meeting-Room-35.jpg[]
-|image::Schloss-Eckberg-31.jpg[]
-|image::Signage-33.jpg[]
-|image::Thursday-dinner-menu-39.jpg[]
-|image::Welcome-reception-37.jpg[]
+| [%unnumbered]
+.Schloss Eckberg
+image::Schloss-Eckberg-31.jpg[]
+| [%unnumbered]
+.Hotel and Meeting Venue
+image::Signage-33.jpg[]
+| [%unnumbered]
+.Meeting Room
+image::Meeting-Room-35.jpg[]
+| [%unnumbered]
+.Welcome Reception
+image::Welcome-reception-37.jpg[]
+| [%unnumbered]
+.Conference Dinner Menu
+image::Thursday-dinner-menu-39.jpg[]
+| [%unnumbered]
+.Group Picture
+image::Group-picture-41.jpg[]
+| [%unnumbered]
+image::Conference-sketch-45.jpg[]
+| [%unnumbered]
+image::Developers-Forum-Sketch-43.jpg[]
 
 |===

@@ -14,6 +14,33 @@
 :data-uri-image:
 :imagesdir: images/conference-34
 
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
 == Introduction
 
 CalConnect Conference XXXIV took place on September 30 - October 2, 2015, hosted by Gershon Janssen in Amsterdam, The Netherlands.
@@ -29,8 +56,8 @@ XXXIV Schedule.
 
 == Documents since Last Conference
 
-_Much of the ongoing work in CalConnect is focused on specifications to become internet draft submissions to the IETF and ultimately be progressed to become RFCs
-(Proposed Standards), rather than be directly published by CalConnect itself._
+Much of the ongoing work in CalConnect is focused on specifications to become internet draft submissions to the IETF and ultimately be progressed to become RFCs
+(Proposed Standards), rather than be directly published by CalConnect itself.
 
 === Published Documents
 
@@ -41,23 +68,23 @@ _Much of the ongoing work in CalConnect is focused on specifications to become i
 
 * RFC 7529, https://tools.ietf.org/doc/html/rfc7529[Non-Gregorian Recurrence Rules in iCalendar (RSCALE)].
 
-=== CalConnect Drafts in IETF Editor Queue to be Published as RFCs:
+=== CalConnect Drafts in IETF Editor Queue to be Published as RFCs
 
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-service/[Time Zone Data Distribution Service]
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref//[CalDAV: Timezones by Reference]
 
-=== CalConnect Drafts in Progress at IETF Working Groups:
+=== CalConnect Drafts in Progress at IETF Working Groups
 
 * https://datatracker.ietf.org/doc/draft-ietf-calext-availability/[Calendar Availability (VAVAILABILITY)]
 * https://datatracker.ietf.org/doc/draft-ietf-calext-extensions/[New Properties for iCalendar]
 
-=== Updated CalConnect Drafts Pending Adoption by IETF Working Groups:
+=== Updated CalConnect Drafts Pending Adoption by IETF Working Groups
 
 * https://datatracker.ietf.org/doc/draft-douglass-server-info/[DAV Server Information Object]
 * https://datatracker.ietf.org/doc/draft-apthorp-ical-tasks/[Task Extensions to iCalendar]
 
-_Please note that CalConnect documents at the IETF are mentioned only if their status has changed or they have been updated since the last
-CalConnect event_
+NOTE: Please note that CalConnect documents at the IETF are mentioned only if their status has changed or they have been updated since the last
+CalConnect event
 
 == Update on Technical Committee Work and Initiatives
 
