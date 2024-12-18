@@ -78,8 +78,10 @@ CalConnect was suggested and will be explored.
 
 == Documents since Last Roundtable
 
-Much of the work in CalConnect is focused on specifications to become internet draft submissions to the IETF and
-ultimately be progressed to become RFCs (Proposed Standards), rather than be directly published by CalConnect itself.
+Much of the work in CalConnect is focused on specifications to become internet draft
+submissions to the IETF and
+ultimately be progressed to become RFCs (Proposed Standards), rather than be directly
+published by CalConnect itself.
 
 === Published Documents
 
