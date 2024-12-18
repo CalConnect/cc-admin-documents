@@ -43,13 +43,21 @@ This document was prepared by Technical Committee _{technical-committee}_.
 
 == Introduction
 
-CalConnect XLV took place June 3-6, 2019, hosted by You Can Book Me in Bedford, United Kingdom. The conference was held on Google’s premises, and was attended by a total of 13 people from 7 member organizations, plus attendees to a joint virtual working group session with the IETF CALEXT working group. Friday morning, June 7, was also available as a working session for attendees.
+CalConnect XLV took place June 3-6, 2019, hosted by You Can Book Me in Bedford, United Kingdom.
+The conference was held on Google’s premises, and was attended by a total of 13 people from 7
+member organizations, plus attendees to a joint virtual working group session with the IETF CALEXT
+working group. Friday morning, June 7, was also available as a working session for attendees.
 
-The Conference focused on strategic and possible work items in addition to ongoing work, and finished with the CalConnect Plenary Session on Thursday. The schedule was rearranged during the week based on input from participants. The final pre-event Conference agenda with notes on the discussion topics may be found at https://www.calconnect.org/events/calconnect-xlv-june-3-7-2019#conference-schedule[CalConnect XLV Conference Schedule].
+The Conference focused on strategic and possible work items in addition to ongoing work, and
+finished with the CalConnect Plenary Session on Thursday. The schedule was rearranged during the
+week based on input from participants. The final pre-event Conference agenda with notes on the
+discussion topics may be found at
+https://www.calconnect.org/events/calconnect-xlv-june-3-7-2019#conference-schedule[CalConnect XLV Conference Schedule].
 
 == Status of documents since last conference
 
-Specifications in progress and not yet published are generally resident on GitHub either in our public or private areas.
+Specifications in progress and not yet published are generally resident on GitHub either in our
+public or private areas.
 
 === Documents at CalConnect
 
@@ -112,7 +120,8 @@ Specifications in progress and not yet published are generally resident on GitHu
 CalConnect has formal reciprocal membership liaisons with M3AAWG
 and OASIS and a strong working relationship with the IETF.
 
-CalConnect has established formal Category A Liaisons with the ITU, and with the following ISO Committees:
+CalConnect has established formal Category A Liaisons with the ITU, and with the following ISO
+Committees:
 
 * ISO/IEC JTC 1/SC 27 IT Security Techniques
 * ISO/PC 317 Consumer protection: privacy by design for consumer goods and services
@@ -127,33 +136,45 @@ CalConnect has established formal Category A Liaisons with the ITU, and with the
 
 == General status and items from Conference XLV
 
-The Ad Hoc Committee on Rich Text (in Calendar events) formed at CalConnect XLIV completed its work and disbanded prior to CalConnect XLV.
+The Ad Hoc Committee on Rich Text (in Calendar events) formed at CalConnect XLIV completed its
+work and disbanded prior to CalConnect XLV.
 
 A provisional Charter for a new TC USECASE was developed and will be completed this summer.
 
-The Charter for TC LOCALIZATION is nearly complete and should be reviewed and adopted in the near future.
+The Charter for TC LOCALIZATION is nearly complete and should be reviewed and adopted in the near
+future.
 
-CalConnect has approved as revised the IPR and Copyright policies and will formally adopt them following this event.
+CalConnect has approved as revised the IPR and Copyright policies and will formally adopt them
+following this event.
 
 Feedback on the new conference format is very positive and we will continue with this model.
 
-TC PUSH has been reactivated to support movement of the specifications; the draft(s) will be updated and resubmitted.
+TC PUSH has been reactivated to support movement of the specifications; the draft(s) will be
+updated and resubmitted.
 
 TC-AUTODISCOVERY has been reactivated. A new draft will be published following the work on TC-PUSH.
 
 == Detailed Session Notes
 
-CalConnect Member Representatives should refer to the CalConnect XLV Conference Notes in the Conferences/CalConnect XLV folder on the CalConnect Document Repository for detailed session notes and information.
+CalConnect Member Representatives should refer to the CalConnect XLV Conference Notes in the
+Conferences/CalConnect XLV folder on the CalConnect Document Repository for detailed session notes
+and information.
 
 == Plenary meeting
 
-CalConnect will hold two rather than three events in 2020: a spring event in April and an autumn event in late September/early October. Several participants noted that this would definitely help planning for an attending CalConnect events going forward.
+CalConnect will hold two rather than three events in 2020: a spring event in April and an autumn
+event in late September/early October. Several participants noted that this would definitely help
+planning for an attending CalConnect events going forward.
 
-Strong interest in using Zoom in place of regular conference calls for committee calls; will try with TCC and TC-DEVGUIDE calls following the event.
+Strong interest in using Zoom in place of regular conference calls for committee calls; will try
+with TCC and TC-DEVGUIDE calls following the event.
 
-Joint Working Group meeting with IETF CALEXT was successful. Plan to do another in conjunction with CalConnect XLVI in October. Also plan on doing Working Group meeting with ISO/TC 154 working group.
+Joint Working Group meeting with IETF CALEXT was successful. Plan to do another in conjunction
+with CalConnect XLVI in October. Also plan on doing Working Group meeting with ISO/TC 154 working
+group.
 
-Recommend referring to ourselves as “CalConnect” and not always add “The Calendaring and Scheduling Consortium” as the latter doesn’t reflect our full scope and future interests.
+Recommend referring to ourselves as “CalConnect” and not always add “The Calendaring and
+Scheduling Consortium” as the latter doesn’t reflect our full scope and future interests.
 
 == Confirmed Future Events
 

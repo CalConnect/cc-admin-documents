@@ -43,25 +43,35 @@ This document was prepared by Technical Committee _{technical-committee}_.
 
 == Introduction
 
-CalConnect XXXVI took place on April 18-22, 2016, hosted by Ribose and OGCIO in Hong Kong, as part of a larger event, the Hong Kong 2016 ITFEST. In addition to our regular conference and test event, we held a seminar at Hong Kong University, and a Public Day at the Hong Kong Convention Center on Wednesday. The CalConnect Test Event (Monday and Tuesday) and Conference (Thursday and Friday) were held at the Cyberport, about 20 minutes from central Hong Kong.
+CalConnect XXXVI took place on April 18-22, 2016, hosted by Ribose and OGCIO in Hong Kong,
+as part of a larger event, the Hong Kong 2016 ITFEST. In addition to our regular conference
+and test event, we held a seminar at Hong Kong University, and a Public Day at the
+Hong Kong Convention Center on Wednesday. The CalConnect Test Event (Monday and
+Tuesday) and Conference (Thursday and Friday) were held at the Cyberport, about 20
+minutes from central Hong Kong.
 
-The CalConnect Conference was attended by 22 people from 15 members, plus 7 observers. The Test Event was held on April 18-19, 2016, and had 13 participants from 9 members, plus 2 observers.
+The CalConnect Conference was attended by 22 people from 15 members, plus 7
+observers. The Test Event was held on April 18-19, 2016, and had 13 participants from
+9 members, plus 2 observers.
 
-The Conference focussed on strategic and possible work items more than ongoing work, in accordance with our new format, and finished with the CalConnect Plenary Session on Friday afternoon. The Conference agenda with notes on the discussion topics may be found at CalConnect XXXVI Conference Schedule.
+The Conference focussed on strategic and possible work items more than ongoing work,
+in accordance with our new format, and finished with the CalConnect Plenary Session
+on Friday afternoon. The Conference agenda with notes on the discussion topics may be
+found at CalConnect XXXVI Conference Schedule.
 
 == Status of documents since last conference
 
-Much of the ongoing work in CalConnect is focused on specifications to become internet draft submissions to the IEETF and ultimately be progressed to publication as RFCs (Proposed Standards), rather than directly published by CalConnect itself.
+Much of the ongoing work in CalConnect is focused on specifications to become
+internet draft submissions to the IEETF and ultimately be progressed to publication
+as RFCs (Proposed Standards), rather than directly published by CalConnect itself.
 
 === Published Documents
 * Report on CalConnect Conference XXXV in Palo Alto, California
 * Report on Interoperability Test Event XXXV
 
-
 === CalConnect Specifications Published as RFCs
 * RFC 7808 Time Zone Data Distribution Service
 * RFC 7809 CalDAV: Time Zones By Reference
-
 
 === CalConnect Drafts completed IETF WG Last Call
 * New Properties for iCalendar
@@ -73,12 +83,12 @@ Much of the ongoing work in CalConnect is focused on specifications to become in
 * WebDAV Resource Sharing
 * CalCOnnect Calendar Sharing
 
-
 == Technical Committee Work and Initiatives Going Forward
 
 === TC API
 
-Working on a new key/value based data model. Much of the work is done and the remainder will continue.
+Working on a new key/value based data model. Much of the work is done and the
+remainder will continue.
 
 === TC AUTODISCOVERY
 
@@ -86,9 +96,11 @@ Will be reactivated to consider authorization issues.
 
 === TC CALDAV
 
-* Created initial draft of STRUCTURED-DATA iCalendar property - allows schema-based data to be included with an event/task
+* Created initial draft of STRUCTURED-DATA iCalendar property - allows schema-based
+data to be included with an event/task
 
-* Created rough draft for scoped attendee parameters - allows control of which parameter(s) are sent in scheduling messages - initial draft in progress
+* Created rough draft for scoped attendee parameters - allows control of which
+parameter(s) are sent in scheduling messages - initial draft in progress
 
 * Working on iCalendar-based patch/diff format - initial draft in progress
 
@@ -99,7 +111,9 @@ DEVGUIDE has been styled to fit with he CalConnect web site in appearance.
 
 === TC EVENTPUB
 
-Reviewed DMOZ directory service as source of categorization but it doesn’t provide all the needed info. Will continue with editing approach of providing a web service to search and retrieve categories, but not invent something ourselves.
+Reviewed DMOZ directory service as source of categorization but it doesn’t provide
+all the needed info. Will continue with editing approach of providing a web service
+to search and retrieve categories, but not invent something ourselves.
 
 === TC FREEBUSY
 
@@ -111,15 +125,18 @@ To be merged into TC SHARING.
 
 === TC IMIP
 
-Investigating how/why particular MIME formats are used by vendors, in particular application/ics content-type.
+Investigating how/why particular MIME formats are used by vendors, in particular
+application/ics content-type.
 
 === TC IOPTEST
 
-Conducted Interoperability Testing at CalConnect XXXVI. Looking at rebranding the test event as Developer’s Forum.
+Conducted Interoperability Testing at CalConnect XXXVI. Looking at rebranding the
+test event as Developer’s Forum.
 
 === TC ISCHEDULE
 
-Dormant. Specification is essentially complete but pending on other specs at the IETF which have a higher priority.
+Dormant. Specification is essentially complete but pending on other specs at the IETF
+which have a higher priority.
 
 === TC PUSH
 
@@ -131,7 +148,10 @@ Dormant
 
 === TC SHARING
 
-Specifications completed over the last few weeks. Need to get some implementations and do some testing. New CalDAV tester tests would help. TC-Sharing will take on the work of coming up with a subscription model. How to upgrade subscriptions to something more efficient than periodic polling of an ics file.
+Specifications completed over the last few weeks. Need to get some implementations
+and do some testing. New CalDAV tester tests would help. TC-Sharing will take on the
+work of coming up with a subscription model. How to upgrade subscriptions to
+something more efficient than periodic polling of an ics file.
 
 === TC TASKS
 
@@ -143,25 +163,32 @@ RFCs 7808 and 7809 published. Closed by decision of CalConnect Plenary XXXVI.
 
 == Special Events
 
-On Tuesday evening, CalConnect offered a 2-hour seminar at Hong Kong University. On Wednesday, CalConnect held an all-day Public Day as part of the Hong Kong 2016 ITFEST, at the Hong Kong Convention Centre. More about these events may be found at https://www.calconnect.org/events/calconnect-public-day-hong-kong-it-fest[Public Day]
+On Tuesday evening, CalConnect offered a 2-hour seminar at Hong Kong University. On
+Wednesday, CalConnect held an all-day Public Day as part of the Hong Kong 2016
+ITFEST, at the Hong Kong Convention Centre. More about these events may be found at
+https://www.calconnect.org/events/calconnect-public-day-hong-kong-it-fest[Public Day]
 and https://www.calconnect.org/events/calconnect-seminar-hong-kong-university[Seminar].
 
 == Plenary Decisions
 
-* Developer’s Guide announcement to be done after How to Contribute and Introduction sections added
+* Developer’s Guide announcement to be done after How to Contribute and Introduction
+sections added
 
-* Rebrand Interoperability Test Event as Developer’s Forum to reflect model of both testing and in-depth technical discussions
+* Rebrand Interoperability Test Event as Developer’s Forum to reflect model of both
+testing and in-depth technical discussions
 
 * Close TC TIMEZONE
 
-* Provisional Committees PC QR (QRCODE include vCard info) and PC SEC (Security and Encryption) established, to report out at CalConnect XXXVII
+* Provisional Committees PC QR (QRCODE include vCard info) and PC SEC (Security and
+Encryption) established, to report out at CalConnect XXXVII
 
 * TC AUTODISCOVERY will be reactivated
 
 == Future Events
 
 * CalConnect XXXVII: September 12-16, 2016 - dmfs, Dresden, Germany
-* CalConnect XXXVIII: February 13-17, 2017 - University of California, Irvine, California
+* CalConnect XXXVIII: February 13-17, 2017 - University of California, Irvine,
+California
 * CalConnect XXXIX: May 2017 - Tandem, Seattle, Washington
 * CalConnect XXXX - Autumn 2017 - TBD
 
