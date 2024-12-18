@@ -1,0 +1,103 @@
+= Report on Interoperability Test Event XXIX, February 3-5, 2014
+:docnumber: 1402
+:copyright-year: 2014
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2014-02-28
+:published-date: 2014-02-28
+:technical-committee: IOPTEST
+:mn-document-class: csd
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Report
+
+The interoperability test event at CalConnect XXIX, hosted by Mozilla, San Francisco, California
+took place on Monday February 3 through Wednesday morning February 5.
+
+There were 11 members participating onsite represented by 20 individuals; two members
+participated remotely. Participating were:
+
+* AOL - CalDAV Scheduling
+* Apple - iCloud, iCal Client, Calendar Server
+* BusyMac - remote testing
+* CMU - CalDav Scheduling, timezone service, jCal/xCal, test suite (load testing)
+* Marten Gajda - remote testing - sync-collection CalDAV & CardDAV, managed
+attachments, PUSH notification
+* Milton.io - general testing, CardDAV with clients
+* Mozilla - Firefox OS/CalDAV
+* Oracle - CalDAV Scheduling, iMIP, CardDAV
+* Ribose - CalDAV access and scheduling, CalDAV sharing, CalDAV Tester
+* RPI - VPOLL - test suite - sharing and notifications
+* Softly Software - Basic CalDAV and iCalendar
+* University of Wisconsin - mostly observing
+* Yahoo! - CardDAV, CalDAV
+
+As usual there was a lot of testing of basic CalDAV features. Some client applications are
+developing CalDAV support and there are some newer server implementations that need to test.
+
+As we did at the last event we had a session led by Cyrus Daboo describing the CalDAV test suite
+and updates he had recently made to address some issues raised. Newer issues are related to using
+the test suite in an automated test environment and defining a subset of the tests which check the
+basic functions of CalDAV and CalDAV scheduling. The full test suite checks out many obscure
+issues, often related to recurrences. The session helped get some of the server implementors
+successfully running the test suite. It is expected that we will do more work on developing this
+suite during the next event.
+
+There was some more testing of the timezone server specification which has had some minor
+updates since the last interoperability test event. This resulted in some further changes to the
+specification. A new feature of the specification is the ability to request and deliver truncated
+timezone specifications, allowing for much smaller sets of data to be transferred. There was some
+testing of this feature and some minor fixes resulted.
+
+There was some further testing of the new JSON jCal and JCard specifications and some parsing
+problems were resolved - mostly in recurrence rules.
+
+Some of the client developers tested some of the more awkward calendar issues such as uploads of
+medium to large sets of data which revealed problems in a number of server implementations.
+
+The tests revealed many issues relating to the parsing and delivering of iCalendar data which are
+difficult to spot in production systems, such as:
+
+* Incorrect escaping of GEO values causing server exceptions
+* Clients generating invalid end dates and server not handling them correctly
+* Events with attendees but no ORGANIZER
+* Failures during calendar creation due to unsupported properties
+
+The testing and resulting fixes generally result in more robust systems that react better to invalid
+data being presented - as well as, we hope, less invalid data.
+
+Some of the new clients were able to test against a range of the servers available and reassure
+themselves that the clients were able to deal with most of the basic CalDAV features.
+
+Mike Douglass, CalConnect Interoperability Test Manager

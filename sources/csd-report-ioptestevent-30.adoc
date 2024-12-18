@@ -1,0 +1,91 @@
+= Report on Interoperability Test Event XXX, May 19-21, 2014
+:docnumber: 1404
+:copyright-year: 2014
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2014-06-09
+:published-date: 2014-06-09
+:technical-committee: IOPTEST
+:mn-document-class: csd
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Report
+
+The interoperability test event at CalConnect XXX, hosted by AOL in Dulles, Virginia took place
+on Monday May 19 through Wednesday noon May 21.
+
+There were 8 members and one non-member participating onsite represented by 12 individuals. In
+addition two members participated remotely. Participating organizations and primary testing
+interests were:
+
+* 1and1 - basic CalDAV testing
+* AOL - Calendar sharing, basic caldav and carddav
+* Apple - iCloud, iCal Client, Calendar Server - VPOLL and iSchedule
+* BusyMac - CardDAV Sharing, SCHEDULE-AGENT=CLIENT, General CalDAV and
+* CardDAV client compatibility testing with multiple servers
+* CMU - VPOLL and iSchedule
+* fruux - SabreDAV
+* Marten Gajda - CalDAVSync and CardDAVsyncGeneral CalDAV & CardDAV, service
+discovery
+* Mozilla - Firefox OS/CalDAV basic features for laptop and phone
+* Ribose (remote)
+* RPI - Bedework iSchedule and VPOLL
+* Zimbra (remote)
+
+Once again there was the usual testing of basic CalDAV features. Some client applications are
+developing CalDAV support and there are newer server implementations that need to test. Most
+errors found are minor and were generally fixed during testing.
+
+Three of the server implementations (Apple, CMU and RPI/Bedework) worked on setting up a
+demonstration of a combination of VPOLL, iSchedule and jCal. All used a javascript client which
+communicates with the server using CalDAV and the new jCal calendar representation. Each
+server communicated with the other server(s) via iSchedule. There were changes to all servers as a
+result and there was a successful demonstration of all 3 servers working together as part of the TC
+FREEBUSY session on Thursday.
+
+Some of the later features of DAV and CalDAV were tested:
+
+* Sharing - more clients and servers are developing support for this feature. Issues such as the
+interaction with supported component sets were discovered and fixed. There has been more
+interest lately in address-book sharing and there was some testing in this area
+* Synch - more testing of this feature as clients and servers add support
+* Scheduling - general testing of this - some servers and clients are adding support
+
+The testing was fairly intensive after the initial pairing off of clients and servers. Once again the
+result is enhanced interoperability across many systems.
+
+Many thanks to AOL for hosting this event. The configuration of the room and networks was
+trouble-free allowing all participants to make an immediate start.
+
+Mike Douglass, CalConnect Interoperability Test Manager
