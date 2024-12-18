@@ -55,9 +55,10 @@ testing.
 
 The Conference focussed on strategic and possible work items in addition to ongoing
 work, and finished with the CalConnect Plenary Session on Friday afternoon. The
-Conference agenda with notes on the discussion topics may be found at CalConnect
-XL Conference Schedule.
-== Status of documents since last conference
+Conference agenda with notes on the discussion topics may be found at
+https://www.calconnect.org/events/calconnect-xl-september-25-29-2017#conference-schedule[CalConnect XL Conference Schedule].
+
+== Status of Documents since Last Conference
 
 Much of the ongoing work in CalConnect is focused on specifications to become
 internet draft submissions to the IETF and ultimately be progressed to publication as
@@ -84,7 +85,7 @@ in our public or private areas.
 * Calendar Subscription Upgrades
 * JSCalendar: A JSON representation of calendar data
 
-== General status and announcements
+== General Status and Announcements
 
 Ronald Tse of Ribose was elected the sixth CalConnect Director, and was appointed
 Director, External Relationships.
@@ -93,7 +94,7 @@ CalConnect has established a formal Category A Liaison with ISO/TC 211 and is
 exploring a similar liaison with ISO/TC 154. We are also exploring a joint liaison with
 M3AAWG.
 
-== Status of technical committee and related work; plans for future work
+== Status of Technical Committee and Related Work; Plans for Future Work
 
 === TC API
 
@@ -144,21 +145,21 @@ Several presentations on status in TC VCARD and progress at ISO/TC 211. TC VCARD
 is working on the New Work Item Proposal on a machine-readable address profile data
 format for TC 211 and expects to submit it soon, perhaps by the next TC 211 Plenary.
 
-=== BOF sessions
+=== BOF Sessions
 
 Birds of a Feather sessions were held on security and on streaming for iCalendar data.
 
 Work will continue on a security model starting from VCARD security, via mailing list
 and slack. Proposed an initial call for an Ad Hoc on Streaming.
 
-== Plenary meeting
+== Plenary Meeting
 
 Oath (combined AOL and Yahoo) will host the Winter 2018 CalConnect XLI in
 Sunnyvale, California.
 
 Specific dates were set for CalConnect XLI and CalConnect XLIII (see below).
 
-== Future events
+== Future Events
 
 * CalConnect XLI - January 28 - February 2, 2018 - Oath, Sunnyvale, California
 * CalConnect XLII - June 4-8, 2018 - Jorte, Tokyo, Japan
@@ -174,14 +175,19 @@ The general format of the CalConnect Week is:
 
 Pictures courtesy of Thomas Schäfer, 1&1
 
-[cols="a,a"]
+[%unnumbered,cols="a,a"]
 |===
 
-2+|image::img_7795-29.jpg[]
+2+| [%unnumbered]
+image::img_7795-29.jpg[]
 
-|image::22092477_10155728420429347_1097884688_o-37.jpg[]
-|image::img_7821-31.jpg[]
-|image::img_7827-33.jpg[]
-|image::img_7830-35.jpg[]
+| [%unnumbered]
+image::22092477_10155728420429347_1097884688_o-37.jpg[]
+| [%unnumbered]
+image::img_7821-31.jpg[]
+| [%unnumbered]
+image::img_7827-33.jpg[]
+| [%unnumbered]
+image::img_7830-35.jpg[]
 
 |===

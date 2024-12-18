@@ -55,10 +55,10 @@ rather than specific testing.
 
 The Conference focussed on strategic and possible work items in addition to ongoing
 work, and finished with the CalConnect Plenary Session on Friday afternoon. The
-Conference agenda with notes on the discussion topics may be found at CalConnect
-XLI Conference Schedule.
+Conference agenda with notes on the discussion topics may be found at
+https://www.calconnect.org/events/calconnect-xli-winter-2018#conference-schedule[CalConnect XLI Conference Schedule].
 
-== Status of documents since last conference
+== Status of Documents Since Last Conference
 
 Much of the ongoing work in CalConnect is focused on specifications to become
 internet draft submissions to the IEETF and ultimately be progressed to publication as
@@ -86,8 +86,7 @@ in our public or private areas.
 * The Time Zone Data Distribution Service (TZDIST) Geolocate Extension
 * The Time Zone Information Format (TZif)
 
-
-== General status and items
+== General Status and Items
 
 CalConnect has established a formal Category A Liaison with ISO/TC 154 and is
 exploring a similar liaison with ISO/TC 46. We have also established a reciprocal
@@ -106,7 +105,7 @@ is not fit for the purpose.
 Will initiate a new TC CALSPAM to work on calendar spam best practices, a joint effort
 with M3AAWG.
 
-== FUTURE WORK
+== Future Work
 
 === Ad Hoc on Streaming
 
@@ -162,41 +161,41 @@ Brief report on the status of the work.
 Maintain liaison with ISO TC 211, progress work
 
 
-== Plenary meeting
+== Plenary Meeting
 
 * Jorte will host CalConnect XLII on June 4-8, 2018, in Tokyo, Japan.
-
 * 1&1 will host CalConnect XLIII on September 24-28, 2018, in Karlsruhe, Germany.
-
 * A request for volunteers to host Winter 2019 and beyond was issued.
 
-== Future events
+== Future Events
 
 * CalConnect XLII - June 4-8, 2018 - Jorte, Tokyo, Japan
-
 * CalConnect XLIII - September 24-28, 2018 - 1&1, Karlsruhe, Germany
 
 The general format of the CalConnect Week has been as below. This will be modified
 significantly for Tokyo and an entirely new format brought in for Karlsruhe in
 September.
 
-Monday morning through Wednesday noon, Test Event and Developer’s Forum
+* Monday morning through Wednesday noon, Test Event and Developer’s Forum
 (testing, tech discussions)
-
-Wednesday noon through Friday afternoon, Conference
+* Wednesday noon through Friday afternoon, Conference
 
 == Pictures from CalConnect XLI
 
 Pictures courtesy of Thomas Schäfer, 1&1, and Gary Schwartz.
 
-[cols="a,a"]
+[%unnumbered,cols="a,a"]
 |===
 
-2+|image::img_9074-31.jpg[]
-|image::img_9073-35.jpg[]
-|image::img_9077-41.jpg[]
-|image::img_9102-33.jpg[]
-|image::Yahoo-Hallway-1-37.jpg[]
+2+| [%unnumbered]
+image::img_9074-31.jpg[]
+| [%unnumbered]
+image::img_9073-35.jpg[]
+| [%unnumbered]
+image::img_9077-41.jpg[]
+| [%unnumbered]
+image::img_9102-33.jpg[]
+| [%unnumbered]
+image::Yahoo-Hallway-1-37.jpg[]
 
 |===
-

@@ -14,10 +14,37 @@
 :data-uri-image:
 :imagesdir: images/conference-31
 
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
 == Introduction
 
-_Following CalConnect XXIX in February, the term "Roundtable" was replaced by "Conference" or
-"CalConnect Conference"._
+NOTE: Following CalConnect XXIX in February, the term "Roundtable" was replaced by "Conference" or
+"CalConnect Conference".
 
 CalConnect Conference XXXI took place on October 1-3, 2014, hosted by Youcanbook.me in Bedford,
 United Kingdom.. The CalConnect Conference was attended by 19 people from 13 members. The
@@ -43,8 +70,8 @@ Thursday.
 
 == Documents since Last Roundtable
 
-_Much of the work in CalConnect is focused on specifications to become internet draft submissions to the IETF and ultimately be
-progressed to become RFCs (Proposed Standards), rather than be directly published by CalConnect itself._
+Much of the work in CalConnect is focused on specifications to become internet draft submissions to the IETF and ultimately be
+progressed to become RFCs (Proposed Standards), rather than be directly published by CalConnect itself.
 
 === Published Documents:
 

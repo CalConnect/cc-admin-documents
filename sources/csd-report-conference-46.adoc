@@ -1,0 +1,262 @@
+= Report on CalConnect Conference XLVI, October 7-10 2019
+:docnumber: 1903
+:copyright-year: 2019
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2019-11-07
+:published-date: 2019-11-07
+:technical-committee: CHAIRS
+:docfile: csd-report-conference-46.adoc
+:mn-document-class: csd
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:toc:
+:stem:
+:imagesdir: images/conference-46
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+
+:sectnums!:
+== Introduction
+
+CalConnect XLVI took place October 7-10, 2019, hosted by Fastmail in Philadelphia,
+Pennsylvania. The conference was held on Fastmail’s premises, and was attended by
+a total of 10 people from 7 member organizations, plus 7 attendees to joint virtual
+working group sessions with the IETF CALEXT working group and with ISO/TC 154/
+WG 5. attendees.
+The Conference focused on strategic and possible work items in addition to ongoing
+work, and finished with the CalConnect Plenary Session on Thursday. The schedule
+was rearranged during the week based on input from participants. The final pre-event
+Conference agenda with notes on the discussion topics may be found at https://www.calconnect.org/events/calconnect-xlvi-october-7-11-2019#conference-schedule[CalConnect XLVI Conference Schedule].
+
+
+:sectnums:
+== Status of Documents since Last Conference
+
+This is the status of documents as of June 2019 as more recent information was not
+available when this report was prepared. There are no substantial changes at this point.
+
+Specifications in progress and not yet published are generally resident on GitHub either
+in our public or private areas.
+
+=== Documents at CalConnect
+
+==== Published
+
+* CC/DIR 1005:2019 Guidelines for the implementation of the CalConnect Patent
+Policy
+* CC/R 18003:2019 Calendar operator practices - Guidelines to protect against
+calendar abuse (TC CALSPAM)
+* CC/DIR 10001:2019 CalConnect Directive: Standardization and publication
+* CC/DIR 10002:2019 CalConnect Directive: Standard document requirements
+* CC/DIR 10003:2018 CalConnect Directive: Patent policy
+
+==== Committee Drafts
+
+* CC/CD 51003 Series in iCalendar
+* CC/CD 51004 iCalendar Relationships
+* CC/CD 51005 Calendar Subscription Upgrades
+* CC/CD 51006 Consensus scheduling - iCalendar vPoll component
+
+=== Documents at ISO
+
+* ISO/CC 19160-1 “Addressing — Digital addresses” in working draft at ISO/TC 211
+* ISO/CC 34000 “Date and time — Concepts and vocabulary” is under NWIP
+
+=== Documents at the IETF
+
+==== Published as Informational RFC
+
+* CalDAV Managed Attachments RFC 8607
+
+==== Drafts in Final Review
+
+* Event Publishing Extensions to iCalendar (TC CALENDAR)
+
+==== Drafts in CALEXT Working Group Last Call
+
+* Improved Support for iCalendar Relationships (TC CALENDAR
+* JSCalendar: A JSON representation of Calendar data
+
+==== Assigned to CALEXT WG
+
+* CalDAV extension for scheduling controls
+* VLARM Extensions for iCalendar
+* Calendar Subscription Upgrades
+
+==== Pending Assignment to CALEXT WG
+
+* VPOLL: Consensus Scheduling Component for iCalendar
+* Support for Series in iCalendar
+
+== CalConnect Liaisons as of October 2019
+
+CalConnect has formal reciprocal membership liaisons with M3AAWG and OASIS, a
+strong working relationship with the IETF, and an External Cooperation Agreement with
+the ITU-T.
+
+CalConnect has established formal Category A Liaisons with the following ISO
+Committees:
+
+* ISO/IEC JTC 1/SC 27 IT Security Techniques
+* ISO/PC 317 Consumer protection: privacy by design for consumer goods and
+services
+* ISO/TC 37 Language and terminology
+* ISO/TC 37/SC 4 Language resource management
+* ISO/TC 37/SC 5 Translation, interpreting and related technology
+* ISO/TC 46 Information and documentation
+* ISO/TC 46/SC 4 Technical interoperability
+* ISO/TC 46/SC 9 Identification and description
+* ISO/TC 154 Processes, data elements and documents in commerce, industry and
+administration
+* ISO/TC 211 Geographic information/Geomatics
+
+== General Status and Items from Conference XLIV
+
+=== TC-API
+
+Work on JSCalendar and related JSxxx documents is progressing very well. Work on
+contact-related stuff in TC 211 and vCard has to be kept aligned and moving forward,,
+probably via JSContacts. See references under other TCs to JMAP and JSCalendar/
+Contacts/etc.
+
+=== TC-AUTODISCOVERY
+
+Register MIME-type so a config could be email/etc and opening the attachment
+triggers the client(s) to be configured. Others are very interested in the work.
+
+=== TC-CALENDAR
+
+Scheduling on Shared Calendars: We believe that Apple use Calendar User Proxy
+(calendar-proxy capability) for handling secretary mode. Team sharing mode simply
+acts on behalf of the principal associated with that instance of the calendar
+
+JMAP Calendars: Several edits to be made based on discussions.
+
+VPOLL: Update draft using PARTICIPANT component rather than VVOTER component.
+Split BASIC mode specific bits into their own section describing BASIC mode. Publish
+this draft ASAP unless we think we can add new poll mode(s) quickly.
+
+Second poll mode would be SIGNUP mode where a bunch of tasks need to be
+handled and voters choose 1 or more that they are willing to complete (e.g. preparing
+for and/or bringing items for a dinner party)
+
+Third poll mode would be the case of asking dentist office (or hairdresser or automotive
+garage) for available time slots for a procedure
+
+Server-side subscriptions: Compare/contrast current draft with Apple telemetry.
+
+VALARM Extensions: Add RELATED-TO back in. Add text on security considerations
+of proximity alarms.
+
+=== TC-DATETIME
+
+Working on developing a relative date/time notation based on ISO grammar.
+Also would like to come up with a way to tag date/time values with calendar system,
+time system, and time zone id. Working on human representation. Decide to create
+proposals for ISO/TC 154 plenary.
+
+=== TC-LOCALIZATION
+
+Writing conversion system codes. Moving forward, will be the third pillar of the trio of
+ISO 639 (language codes), ISO 15924 (script codes) and ISO 24229 (writing conversion
+system codes). Romanization of Cantonese will be re-balloted for participation. Name
+model proceeding in ISO/TC 37 pending ballot. Will accelerate solicitation/completion
+of cultural profiles
+
+=== TC-PUSH
+
+Ask Chair to do the split of the draft and update with RFC 8030 references where
+needed. Interest in writing a server implementations, but is there any realistic chance of
+more client support? Need someone to review authentication/security. Align with
+Open-Xchange work on IMAP WebPush.
+
+=== TC-USECASE
+
+Define ‘client’ early in charter. Deal with interoperability issues - more work on caldav
+tester. Links to client libraries..
+
+There was some discussion on incentives (reduced participant fee) for Open Source
+developers at Zürich conference. Also an interesting point regarding to try draw
+audience from the scientific community (e.g., inviting for scientific/industry paper
+submissions related to CalConnect topics)
+Decided to rename TC to TC-CLIENT
+
+=== TC-VCARD
+
+JSContacts: Discussion about how best to do localizations. 2 different approaches.
+This will probably be hashed out in IETF JMAP WG once accepted
+
+No support for non-Westernized addresses yet. Specification of Groups needs more
+work
+
+Document models: Lightweight document model for Markdown, AsciiDoc, RTF as
+interchangeable rich text’
+
+Location vCard: Metadata for a location. vCard already contains “kind: location”, and
+defined STRUCTURED-LOCATION in resource vCard work.
+
+TC VCARD agreed to take over the joint work of OGC, ECCMA, W3C and ISO’s work
+on POI (point of interest) and develop with them as partners
+
+Enumerate use cases for industries: maps, navigation, travel, theme parks
+
+Will define method of place identification, including ISO 19155 (place identifier),
+ECCMA/OGC NLI (ECCMA 1 standard)
+
+Find additional collaborators: IATA, UN (for LOCODE).
+
+Standardized profile and digital addresses proceeding.
+
+== Joint Working Group Calls
+
+The joint working group calls with IETF CALEXT and ISO/TC 154/WG 5 went very well.
+
+== Plenary Meeting
+
+CalConnect will hold two rather than three events in 2020: a spring event in April and
+an autumn event in late September/early October.
+
+Interest in being involved in creating the scheduling agenda for future events; we plan
+to distribute the calls to meeting for Event Planning to the general calconnect-l mailing
+list and post event reports etc. on that list as well to try and get additional and early
+involvement, beginning with Event Planning calls in November for CalConnect XLVII.
+
+== Confirmed Future Events
+
+* Cronofy will host CalConnect XLVII on April 20-24, 2020 in Nottingham, United
+Kingdom.
+* CalConnect XLVIII will be in Autumn 2020, host, location and exact dates TBD.
+
+== Pictures from CalConnect XLVI
+
+There were no pictures available from CalConnect XLVI.

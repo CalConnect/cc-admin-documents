@@ -174,10 +174,11 @@ The general format of the CalConnect Week is:
 
 Pictures courtesy of Thomas Schäfer, 1&1
 
-[cols="a,a"]
+[%unnumbered,cols="a,a"]
 |===
 
-| .Cyberport
+| [%unnumbered]
+.Cyberport
 image::20160418_185556-17.jpg[]
 | [%unnumbered]
 image::20160420_141647-25.jpg[]
