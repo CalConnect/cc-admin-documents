@@ -14,7 +14,7 @@
 :data-uri-image:
 :imagesdir: images/conference-33
 
-.Foreword
+== Introduction
 
 CalConnect Conference XXXIII took place on May 20-22, 2015, hosted by 1&1 in Buchares, Romania. The CalConnect Conference was
 attended by 21 people from 9 members, and two non-member observers. The Interoperability Test Event was held immediately prior to the
@@ -28,43 +28,43 @@ part of a conference TC session were moved to earlier in the week, during the In
 CalConnect Plenary Session on Friday afternoon. The Conference agenda, with notes on the discussion topics, may be found at CalConnect
 XXXIII Schedule.
 
-== Documents since last conference
+== Documents since Last Conference
 
 _Much of the ongoing work in CalConnect is focused on specifications to become internet draft submissions to the IETF and ultimately be progressed to become RFCs
 (Proposed Standards), rather than be directly published by CalConnect itself._
 
-Published documents:
+=== Published Documents
 
 * Report on CalConnect Conference XXXII in San Jose, California
 * Report on Interoperability Test Event XXXII
 
-CalConnect drafts published as RFCs by the IETF:
+=== CalConnect Drafts Published as RFCs by the IETF:
 
 * RFC 7529, https://tools.ietf.org/doc/html/rfc7529[Non-Gregorian Recurrence Rules in iCalendar (RSCALE)].
 
-CalConnect drafts in IETF Last Call or AD Review:
+=== CalConnect Drafts in IETF Last Call or AD Review:
 
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-service/[Time Zone Data Distribution Service]
 * https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[CalDAV: Timezones by Reference]
 
-CalConnect drafts accepted by IETF Working Groups as WG Drafts:
+=== CalConnect Drafts Accepted by IETF Working Groups as WG Drafts:
 
 * https://datatracker.ietf.org/doc/draft-daboo-calendar-availability/[Calendar Availability (VAVAILABILITY)]
 * https://datatracker.ietf.org/doc/draft-daboo-icalendar-extensions/[New Properties for iCalendar]
 
-Updated internet drafts at IETF not yet adopted by a working group:
+=== Updated Internet Drafts at IETF not yet Adopted by a Working Group
 
 * https://datatracker.ietf.org/doc/draft-douglass-ical-relations/[Improved Support for iCalendar Relations]
 * https://datatracker.ietf.org/doc/draft-york-vpoll/[VPOLL: Consensus Scheduling Component for iCalendar]
 
-CalConnect drafts newly submitted to the IETF
+=== CalConnect Drafts Newly Submitted to the IETF
 
 * https://datatracker.ietf.org/doc/draft-douglass-server-info/[DAV Server Information Object]
 * https://datatracker.ietf.org/doc/draft-apthorp-ical-tasks/[Task Extensions to iCalendar]
 * https://datatracker.ietf.org/doc/draft-pot-webdav-notifications/[WebDAV User Notifications]
 * https://datatracker.ietf.org/doc/draft-pot-webdav-resource-sharing/[WebDAV Resource Sharing]
 
-== Update on technical committee work and initiatives
+== Update on Technical Committee Work and Initiatives
 
 === CALSCALE Ad Hoc
 
@@ -194,18 +194,19 @@ and https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[CalD
 The Time Zone Data Distribution Service draft is now in last call, and the Time Zones by Reference
 draft has completed working group last call.
 
-== PLENARY DECISIONS
+== Plenary Decisions
 
-== FUTURE EVENTS
+== Future Events
 
-*CalConnect XXXIV*: September 28 - October 2, 2015, Gershon Janssen, Amsterdam, The Netherlands +
-*CalConnect XXXV*: January 25-29, 2016, AOL, Palo Alto, California +
-*CalConnect XXXVI*: Spring 2015, TBA
+* CalConnect XXXIV: September 28 - October 2, 2015, Gershon Janssen, Amsterdam, The Netherlands
+* CalConnect XXXV: January 25-29, 2016, AOL, Palo Alto, California
+* CalConnect XXXVI: Spring 2015, TBA
 
-The general format of the CalConnect week is: +
-Monday morning through Wednesday noon, CalConnect Interoperability Test Event +
-Wednesday noon through Friday afternoon, CalConnect Conference (presentations, TC sessions, BOFs, networking, Plenary) +
-The format for European events is to move TC sessions to the afternoon, offer symposia and BOFs during Thursday and Friday mornings,
+The general format of the CalConnect week is:
+
+* Monday morning through Wednesday noon, CalConnect Interoperability Test Event
+* Wednesday noon through Friday afternoon, CalConnect Conference (presentations, TC sessions, BOFs, networking, Plenary)
+* The format for European events is to move TC sessions to the afternoon, offer symposia and BOFs during Thursday and Friday mornings,
 and continue through Friday afternoon.
 
 == Pictures from CalConnect XXXIII
