@@ -8,7 +8,7 @@
 :revdate: 2012-06-01
 :published-date: 2012-06-01
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -70,12 +70,11 @@ February and last October, and it was decided to form a Technical Committee to w
 
 == Documents since Last Roundtable
 
-Public Review Documents:
+=== Public Review Documents
 
 * CalWS-SOAP SOAP Web Services Protocol for Calendaring
 
-Updated IETF Drafts and Proposed Standards related to CalConnect (includes updates to
-published CalConnect documents):
+=== Updated IETF Drafts and Proposed Standards related to CalConnect (includes updates to published CalConnect documents)
 
 * https://tools.ietf.org/html/draft-desruisseaux-caldav-sched-12
 * https://www.ietf.org/rfc/rfc6578.txt

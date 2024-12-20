@@ -8,7 +8,7 @@
 :revdate: 2018-10-23
 :published-date: 2018-10-23
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -44,7 +44,7 @@ This document was prepared by Technical Committee _{technical-committee}_.
 == Introduction
 
 CalConnect XLIII took place September 24-27, 2018, hosted by 1&1 in Karlsruhe, Germany. The
-conference was held on 1&1’s premises. The conference was attended by a total of 20 people from 10
+conference was held on 1&1's premises. The conference was attended by a total of 20 people from 10
 member organizations.
 
 This conference was a one-time experiment with a new conference format, technical and conference
@@ -89,7 +89,7 @@ public or private areas.
 
 === CalConnect Drafts in Progress at TZDIST-BIS Working Group at IETF
 
-* The Time Zone Data Distribution Service (TZDIST) Geolocate Extension  
+* The Time Zone Data Distribution Service (TZDIST) Geolocate Extension
 
 == Calconnect Liaisons
 
@@ -112,7 +112,7 @@ an Advisory Report to the EU. We anticipate holding a workshop on this subject a
 in February 2019.
 
 TC DATETIME has been created to further CalConnect work on date and time formats and related
-issues, and to provide a “home” for our liaison with ISO TC 211 and ISO TC 154 and the drafts on
+issues, and to provide a "home" for our liaison with ISO TC 211 and ISO TC 154 and the drafts on
 ISO 8601-1 and 8601-2 on date and time formats and recurrences. Also timezone data model and how
 to announce TZ changes (management standard?)
 
@@ -120,7 +120,7 @@ TC LOCALIZATION has been created to further CalConnect work on localization of c
 schedule event information and related work such as address formats,
 and to provide a home for our liaison with ISO TC 37 in the area of naming and addressing.
 
-CalConnect is planning to resume its practice of self-publishing standards, which hasn’t been done
+CalConnect is planning to resume its practice of self-publishing standards, which hasn't been done
 for some time as much of its work has focused on extensions to existing IETF specifications (many
 of which were also developed by CalConnect). To further this work, new CalConnect Standards
 Directives have been written to bring our document requirement and progression and publishing
@@ -208,7 +208,7 @@ TC DATETIME and TC LOCALIZATION approved; co-chairs at to develop Charters and s
 
 == Confirmed Future Events
 
-* Google will host CalConnect XLIV on February 4-8, 2019, in Zürich, Switzerland.
+* Google will host CalConnect XLIV on February 4-8, 2019, in Zürich, Switzerland.
 * You Can Book Me (YCBM) will host CalConnect XLV on June 3-7, 2019 in Bedford,
 England.
 * Possible interest by FastMail in hosting CalConnect XLVI in Autumn 2019 in
@@ -216,7 +216,7 @@ Philadelphia.
 
 == Pictures from Calconnect XLIII
 
-Pictures courtesy of Thomas Schäfer, 1&1
+Pictures courtesy of Thomas Schäfer, 1&1
 
 [%unnumbered,cols="a,a"]
 |===

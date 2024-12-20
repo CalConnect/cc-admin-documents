@@ -8,7 +8,7 @@
 :revdate: 2018-03-02
 :published-date: 2018-03-02
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -46,7 +46,7 @@ This document was prepared by Technical Committee _{technical-committee}_.
 CalConnect XLI took place January 31 - February 2, 2018, hosted by Oath in
 Sunnyvale, California. The CalConnect Test Event (Monday, Tuesday, and Wednesday
 morning) and Conference (Wednesday afternoon, Thursday and Friday) were held at
-Oath’s Sunnyvale campus.
+Oath's Sunnyvale campus.
 
 The CalConnect Conference was attended by 19 people from 11 members, plus two
 CalConnect Directors for a total of 21 The Test Event/Developers Forum had 7
@@ -176,7 +176,7 @@ The general format of the CalConnect Week has been as below. This will be modifi
 significantly for Tokyo and an entirely new format brought in for Karlsruhe in
 September.
 
-* Monday morning through Wednesday noon, Test Event and Developer’s Forum
+* Monday morning through Wednesday noon, Test Event and Developer's Forum
 (testing, tech discussions)
 * Wednesday noon through Friday afternoon, Conference
 

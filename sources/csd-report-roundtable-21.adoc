@@ -8,7 +8,7 @@
 :revdate: 2011-06-20
 :published-date: 2011-06-20
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -81,8 +81,7 @@ CalConnect has replaced the internal Interoperability Test Event Report with an 
 CalConnect has replaced the public Interoperability Test Report with a section on the Test Event in
 the CalConnect _Minutes_ newsletter publised after each event.
 
-=== Updated IETF Drafts Related to CalConnect (includes updates to published CalConnect
-documents)
+=== Updated IETF Drafts Related to CalConnect (includes updates to published CalConnect documents)
 
 * http://tools.ietf.org/html/draft-daboo-webdav-sync
 * http://tools.ietf.org/html/draft-cal-resource-schema

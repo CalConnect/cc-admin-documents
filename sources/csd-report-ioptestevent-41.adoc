@@ -8,7 +8,7 @@
 :revdate: 2018-03-02
 :published-date: 2018-03-02
 :technical-committee: IOPTEST
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:

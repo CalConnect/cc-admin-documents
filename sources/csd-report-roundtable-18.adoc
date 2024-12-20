@@ -8,7 +8,7 @@
 :revdate: 2010-06-02
 :published-date: 2010-06-02
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -76,6 +76,8 @@ resources
 * TC XMLhas updated xCal - the XML format for iCalendar to Version 4
 * TC XML has released Cal-WS Web Services API for calendaring and scheduling for Public
 Review and Comment
+
+== Update on Technical Committee Work and Initiatives
 
 === Internet Calendar Subscription Ad Hoc
 

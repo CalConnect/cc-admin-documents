@@ -8,7 +8,7 @@
 :revdate: 2016-05-31
 :published-date: 2016-05-31
 :technical-committee: IOPTEST
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -109,8 +109,7 @@ perhaps support open connect. See
 
 == New API discussion
 
-There is a new format proposal
-https://github.com/CalConnect/API/blob/master/CalendarEvent.mdwn
+There is a new format proposal: https://github.com/CalConnect/API/blob/master/CalendarEvent.mdwn
 
 Some of the api issues that were discussed were
 

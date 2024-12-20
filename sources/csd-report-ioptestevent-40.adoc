@@ -8,7 +8,7 @@
 :revdate: 2017-11-20
 :published-date: 2017-11-20
 :technical-committee: IOPTEST
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -67,7 +67,7 @@ the standard (events v tasks) as against a single all encompassing draft.
 This led on to a discussion of the contacts api and the desire to come up with a format for
 contacts that is based on the JSCalendar work. One idea is to define a common data model for
 contacts, independent from data format and exchange protocols. Robert and Peter will share
-the current work documents to see what’s the overlap.
+the current work documents to see what's the overlap.
 
 Additionally Peter has been working on a GraphQL-based contacts API. The intent is to propose
 this as a standard at some point.

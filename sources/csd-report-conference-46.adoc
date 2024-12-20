@@ -8,8 +8,7 @@
 :revdate: 2019-11-07
 :published-date: 2019-11-07
 :technical-committee: CHAIRS
-:docfile: csd-report-conference-46.adoc
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -49,7 +48,7 @@ This document was prepared by Technical Committee _{technical-committee}_.
 == Introduction
 
 CalConnect XLVI took place October 7-10, 2019, hosted by Fastmail in Philadelphia,
-Pennsylvania. The conference was held on Fastmail’s premises, and was attended by
+Pennsylvania. The conference was held on Fastmail's premises, and was attended by
 a total of 10 people from 7 member organizations, plus 7 attendees to joint virtual
 working group sessions with the IETF CALEXT working group and with ISO/TC 154/
 WG 5. attendees.
@@ -89,8 +88,8 @@ calendar abuse (TC CALSPAM)
 
 === Documents at ISO
 
-* ISO/CC 19160-1 “Addressing — Digital addresses” in working draft at ISO/TC 211
-* ISO/CC 34000 “Date and time — Concepts and vocabulary” is under NWIP
+* ISO/CC 19160-1 "Addressing -- Digital addresses" in working draft at ISO/TC 211
+* ISO/CC 34000 "Date and time -- Concepts and vocabulary" is under NWIP
 
 === Documents at the IETF
 
@@ -202,7 +201,7 @@ Open-Xchange work on IMAP WebPush.
 
 === TC-USECASE
 
-Define ‘client’ early in charter. Deal with interoperability issues - more work on caldav
+Define 'client' early in charter. Deal with interoperability issues - more work on caldav
 tester. Links to client libraries..
 
 There was some discussion on incentives (reduced participant fee) for Open Source
@@ -220,12 +219,12 @@ No support for non-Westernized addresses yet. Specification of Groups needs more
 work
 
 Document models: Lightweight document model for Markdown, AsciiDoc, RTF as
-interchangeable rich text’
+interchangeable rich text'
 
-Location vCard: Metadata for a location. vCard already contains “kind: location”, and
+Location vCard: Metadata for a location. vCard already contains "kind: location", and
 defined STRUCTURED-LOCATION in resource vCard work.
 
-TC VCARD agreed to take over the joint work of OGC, ECCMA, W3C and ISO’s work
+TC VCARD agreed to take over the joint work of OGC, ECCMA, W3C and ISO's work
 on POI (point of interest) and develop with them as partners
 
 Enumerate use cases for industries: maps, navigation, travel, theme parks

@@ -8,7 +8,7 @@
 :revdate: 2012-10-18
 :published-date: 2012-10-18
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -75,12 +75,11 @@ Calendar including internal and external APIs.
 
 == Documents since Last Roundtable
 
-Public Review Documents:
+=== Public Review Documents
 
 * CalWS-SOAP SOAP Web Services Protocol for Calendaring
 
-Updated IETF Drafts and Proposed Standards (published RFCs) related to CalConnect (includes updates
-to published CalConnect documents):
+=== Updated IETF Drafts and Proposed Standards (published RFCs) related to CalConnect (includes updates to published CalConnect documents)
 
 NOTE: The majority of specification work in CalConnect is necessarily focused on work to become internet draft
 submissions to the IETF and ultimpately be progressed to become RFCs (Proposed Standards), rather

@@ -8,7 +8,7 @@
 :revdate: 2016-05-11
 :published-date: 2016-05-11
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -111,7 +111,7 @@ DEVGUIDE has been styled to fit with he CalConnect web site in appearance.
 
 === TC EVENTPUB
 
-Reviewed DMOZ directory service as source of categorization but it doesn’t provide
+Reviewed DMOZ directory service as source of categorization but it doesn't provide
 all the needed info. Will continue with editing approach of providing a web service
 to search and retrieve categories, but not invent something ourselves.
 
@@ -131,7 +131,7 @@ application/ics content-type.
 === TC IOPTEST
 
 Conducted Interoperability Testing at CalConnect XXXVI. Looking at rebranding the
-test event as Developer’s Forum.
+test event as Developer's Forum.
 
 === TC ISCHEDULE
 
@@ -171,10 +171,10 @@ and https://www.calconnect.org/events/calconnect-seminar-hong-kong-university[Se
 
 == Plenary Decisions
 
-* Developer’s Guide announcement to be done after How to Contribute and Introduction
+* Developer's Guide announcement to be done after How to Contribute and Introduction
 sections added
 
-* Rebrand Interoperability Test Event as Developer’s Forum to reflect model of both
+* Rebrand Interoperability Test Event as Developer's Forum to reflect model of both
 testing and in-depth technical discussions
 
 * Close TC TIMEZONE
@@ -194,7 +194,7 @@ California
 
 The general format of the CalConnect Week is:
 
-* Monday morning through Wednesday noon, Developer’s Forum (testing, tech discussions)
+* Monday morning through Wednesday noon, Developer's Forum (testing, tech discussions)
 * Wednesday noon through Friday afternoon, Conference
 
 == Pictures from CalConnect XXXVI
@@ -204,22 +204,35 @@ Pictures courtesy of Thomas Schäfer, 1&1
 [%unnumbered,cols="a,a"]
 |===
 
-| [%unnumbered]
+2+| [%unnumbered]
 .Cyberport
-image::20160418_185556-17.jpg[]
+====
+[%unnumbered]
+image::DSCN1245-19.jpg[width=20%]
+
+[%unnumbered]
+image::DSCN1312-21.jpg[width=20%]
+
+[%unnumbered]
+image::DSCN1316-15.jpg[width=22%]
+
+[%unnumbered]
+image::20160418_185556-17.jpg[width=25%]
+====
+2+| [%unnumbered]
+.Public Day
+====
+[%unnumbered]
+image::DSCN1273-23.jpg[width=20%]
+
+[%unnumbered]
+image::20160420_141647-25.jpg[width=20%]
+====
 | [%unnumbered]
-image::20160420_141647-25.jpg[]
+.Conference Dinner
+image::20160421_205610-27.jpg[width=18%]
 | [%unnumbered]
-image::20160421_205610-27.jpg[]
-| [%unnumbered]
-image::DSCN1245-19.jpg[]
-| .Public Day
-image::DSCN1273-23.jpg[]
-| [%unnumbered]
-image::DSCN1312-21.jpg[]
-| .Conference Dinner
-image::DSCN1316-15.jpg[]
-| .Saturday Tour
-image::IMG_7980-29.jpg[]
+.Saturday Tour
+image::IMG_7980-29.jpg[width=18%]
 
 |===

@@ -8,7 +8,7 @@
 :revdate: 2019-07-10
 :published-date: 2019-07-10
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -44,7 +44,7 @@ This document was prepared by Technical Committee _{technical-committee}_.
 == Introduction
 
 CalConnect XLV took place June 3-6, 2019, hosted by You Can Book Me in Bedford, United Kingdom.
-The conference was held on Google’s premises, and was attended by a total of 13 people from 7
+The conference was held on Google's premises, and was attended by a total of 13 people from 7
 member organizations, plus attendees to a joint virtual working group session with the IETF CALEXT
 working group. Friday morning, June 7, was also available as a working session for attendees.
 
@@ -85,9 +85,9 @@ public or private areas.
 
 ==== Documents at ISO
 
-* ISO/CC 19160-1 “Addressing — Digital addresses” in working draft at ISO/TC 211
+* ISO/CC 19160-1 "Addressing -- Digital addresses" in working draft at ISO/TC 211
 
-* ISO/CC 34000 “Date and time — Concepts and vocabulary” is under NWIP
+* ISO/CC 34000 "Date and time -- Concepts and vocabulary" is under NWIP
 
 === Documents at the IETF
 
@@ -173,8 +173,8 @@ Joint Working Group meeting with IETF CALEXT was successful. Plan to do another 
 with CalConnect XLVI in October. Also plan on doing Working Group meeting with ISO/TC 154 working
 group.
 
-Recommend referring to ourselves as “CalConnect” and not always add “The Calendaring and
-Scheduling Consortium” as the latter doesn’t reflect our full scope and future interests.
+Recommend referring to ourselves as "CalConnect" and not always add "The Calendaring and
+Scheduling Consortium" as the latter doesn't reflect our full scope and future interests.
 
 == Confirmed Future Events
 

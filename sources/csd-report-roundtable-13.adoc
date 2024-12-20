@@ -8,7 +8,7 @@
 :revdate: 2008-10-10
 :published-date: 2008-10-10
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -145,7 +145,7 @@ Prague, and November 10 in London.
 * CalConnect will host an open Timezone Workshop on Tuesday, February 3, during the
 CalConnect XIV week in Redmond.
 
-== Future Meetings
+== Future Events
 
 * Mobile IOP Test Event: November 4-6, 2008, at Kerio Technologies, Plzen, Czech Republic.
 * Meet CalConnect introductory event: November 7 (Prague) and November 10 (London), 2008.

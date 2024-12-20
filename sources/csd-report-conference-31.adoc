@@ -8,7 +8,7 @@
 :revdate: 2014-10-16
 :published-date: 2014-10-16
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -180,7 +180,7 @@ TC also offered a quick demo of a VPOLL client.
 TC FSC (Federated Shared Calendars) was formed from the FSC Ad Hoc Committee following
 CalConnect XXX. The TC presented the current design for federated shared calendars. There was a lot of
 discussion of enhancing subscribed calendar behavior versus using CalDAV, with the consensus moving
-towards a more CalDAV-like approach via links to upgrade subscriptions directly into CalDAV – used in
+towards a more CalDAV-like approach via links to upgrade subscriptions directly into CalDAV -- used in
 either a server-to-server or client-to-server mode. Ultimately we will use TC-API work for the sharing
 protocol. The nature of invites (iCalendar or XML) still needs to be decided. We are leaning towards a
 more generic TC SHARING type of sharing mode.
@@ -190,7 +190,7 @@ more generic TC SHARING type of sharing mode.
 A busy and productive session. As always much testing of various CalDAV features. Some new implicit
 scheduling implementations testing against clients. Two participants were trying to get VPOLL up and
 running across multiple servers but ran into some implementation issues and eventually ran out of time.
-TC IOPTEST will start building a list of areas to test next time immediately – starting early may help to
+TC IOPTEST will start building a list of areas to test next time immediately -- starting early may help to
 provide some specific implementation goals. Will be building this in the TESTING-NOTES etherpad.
 Finally we hope to have PUSH implementations for testing in January. The event report may be found at
 https://www.calconnect.org/events/event-reports#ioptestevents[CalConnect Interoperability Test Event Reports] once completed.

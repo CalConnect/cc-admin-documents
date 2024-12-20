@@ -8,7 +8,7 @@
 :revdate: 2009-02-06
 :published-date: 2009-02-06
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -79,11 +79,11 @@ XML
 * The Freebusy Read URL draft proposed RFC from TC FREEBUSY
 * The draft RESOURCE proposed RFC from TC EVENTPUB
 
-The Calendar Standards Roadmap, which originally came out of TC-CalDAV, was enthusiastically
+The [underline]#Calendar Standards Roadmap#, which originally came out of TC-CalDAV, was enthusiastically
 discussed at this Roundtable, spawning work in new areas by several TC's. This discussion is
 hopefully just the beginning of a longer, engaging conversation.
 
-Calonnect and the World Wide Calendar: This brainstorming session for everyone attending the
+[underline]#Calonnect and the World Wide Calendar#: This brainstorming session for everyone attending the
 Roundtable was designed to get people's heads up and have them look at the larger picture. We
 looked at calendaring issues beyond the institutions and corporations most of us represent.
 Interoperability on a world wide scale will begin to happen when soccer moms (or football
