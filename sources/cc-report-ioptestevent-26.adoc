@@ -1,0 +1,108 @@
+= Report on Interoperability Test Event XXVI, January 28-30, 2013
+:docnumber: 1303
+:copyright-year: 2013
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2013-02-20
+:published-date: 2013-02-20
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Report
+
+NOTE: Incorporates material formerly distributed via the CalConnect _Minutes_ newsletter, now
+discontinued.
+
+The Interoperability Test Event at CalConnect XXVI took place on January 28-30, 2013, hosted
+by Oracle in Santa Clara, California. Nineteen people from 9 members were present onsite,
+including 2 from Europe, 1 from India, and 1 from New Zealand. In addition 2 members
+participated remotely.
+
+The interoperability testing sessions once again were busy and successful. Participants in person at
+the event and their particular testing interests were:
+
+* Andrew McMillan (primarily aCal, some DAViCal)
+* AOL (basic CardDAV and CalDAV functionality)
+* Apple (CalDAV server testing iSchedule and IOS)
+* Carnegie Mellon University (CMU testing iSchedule)
+* Google (calendar auto-schedule, collection synchronization)
+* Mozilla (basic CalDAV support in FirefoxOS, jCal being returned from CalDAV servers,
+help with any jCal related interoperability)
+* Oracle (test suite)
+* Bedework (Rensselaer Polytechnic testing iSchedule)
+* Yahoo! (CalDAV and CardDAV testing related to basic sync)
+
+There were two external participants:
+
+* Marten Gajda (basic CalDAV and CardDAV operation)
+* Ralf Becker (testing iSchedule)
+
+As always many attendees were testing the basic and scheduling functions of CalDAV. Some were
+working on new CalDAV implementations, others were dealing with known interoperability issues
+or bringing their server up to date with the specifications. At least one production server was
+updated as a result of the testing.
+
+A group of participants spent most of their time working on iSchedule. This protocol allows
+scheduling of meetings across domains and includes service discovery and a security model based
+on DKIM. This time there was a new DKIM canonicalization to test. The test was successful with
+events and freebusy being transferred in both directions. Most problems encountered were related
+to the non-standard disposition of the servers and self-signed certificates. There are now at least
+four implementations up to the latest draft which are capable of working with each other.
+
+There was some work in getting the Apple CalDAV test and performance suites running against
+servers. The test suite is invaluable for discovering basic CalDAV problems but requires some
+configuration to handle the server details. The developer was present to help get this running.
+
+A new timezone service draft specification has been released which switches from an XML based
+protocol to JSON. At least one server tested updating its data against the Bedework timezone
+server and a version of aCal successfully retrieved timezones from the Bedework server.
+
+A useful feature of the sessions was the occasional informal discussions which involved most of
+the participants. This time we covered some of the detailed issues related to calendar sharing and
+notifications.
+
+In future events we hope to be testing at least the following:
+
+* The usual CalDAV testing
+* More iSchedule
+* Implementations of the CalWS protocols being developed in conjunction with OASIS
+* Different representations of calendar data such as JSON and XML
+* Calendar sharing
+* Notifications
+* Managed attachments
+
+Additionally we are investigating the possibility of bringing a portable virtual network which will
+provide a more standard setup for servers in regard to ports and certificates and allow participants
+to test without significant changes to their network settings.

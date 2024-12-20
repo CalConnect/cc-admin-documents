@@ -1,0 +1,106 @@
+= Report on Interoperability Test Event XXVIII, September 23-25, 2013
+:docnumber: 1307
+:copyright-year: 2013
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2013-10-24
+:published-date: 2013-10-24
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Report
+
+The interoperability test event at CalConnect XXVIII, hosted by DHL, Prague, Czech Republic
+took place on Monday September 23 through Wednesday morning September 25.
+
+There were 10 members participating and 1 non-member represented by 14 individuals onsite; one
+member tested remotely. Participating were:
+
+* Andrew McMillan - mostly aCal
+* Apple - Prefer, JSON, new VTODO/TC-Tasks stuff, CalDAV Tester tweaks
+* BusyMac (BusyCal) - managed attachments, timezones by reference, general compatibility
+* fruux (SabreDav) - Calendar-auto-schedule and jCal
+* Marten Gajda - basic CalDAV and CardDAV operation
+* Oracle - tasks, timezones, iMIP
+* Softly Software (WhenIsGood/YouCanBookMe) - primarily Google Calendar APIs
+* Stylite - eGroupware data synchronization and managed attachments
+* RPI (Bedework) - iSchedule, CalDAV, VPOLL, JSON
+* Mozilla (Lightning) - jCal, jCard
+* Zimbra - CalDAV and iMIP server-server
+
+A major area of interest was testing the new jCal specification (and jCard). The development
+version of Mozilla Lightning has support for jCal and was tested against a number of CalDAV
+server implementations. This tested not only the representation but the CalDAV extensions to
+handle different formats. Add, Modify, Delete and Freebusy requests worked well with most
+servers.
+
+Cyrus Daboo headed a session in which he demonstrated setup and use of Apple's CalDAV tester.
+This tester sends sequences of requests to the server and analyzes the responses and the resulting
+state of the server. It offers many test suites which test from the most basic of CalDAV interactions
+through to complex recurrences and scheduling of meetings. It is very configurable, and will work
+to some extent with any CalDAV server. The testing at the event revealed a few changes that
+would be useful.
+
+Managed attachments is a new CalDAV feature. A number of servers and clients have
+implementations and there was a certain amount of testing. This triggered some further discussion
+about the specification.
+
+The TIMEZONE Technical Committee committee has been looking at the possibility of dropping
+the timezone specification from the iCalendar data (i.e. "timezones by reference"). The advantage
+is a significant reduction in data size. It appears that most implementations ignore the specification
+sent to them. A number of us tested the effects of dropping the specification, both on clients and
+servers. We did this as part of testing the new CalDAV extensions which allow clients and servers
+to indicate whether or not they need or will send the timezone. The tests were mostly successful in
+that there was no apparent differences in behavior. There was one case of a validation error.
+
+There was some VPOLL testing which included testing of a javascript client for consensus
+scheduling. This client revealed some issues in the use of cross-domain requests with CalDAV and
+may result in some renewed interest in a RESTful API.
+
+As usual, we had a certain amount of testing of basic calendaring including CalDAV and iMIP.
+There was some further testing of the PREFER header and alarms. Some long standing issues with
+working with Google were resolved for one of the attendees and turned out to be a stray CR/LF in
+RRULEs.
+
+As usual there was a significant amount of discussion taking place reinforcing the view that these
+events are not just for testing but for reaching a better understanding of protocols and their
+implementations. These discussions can also lead to changes to specifications and are a useful
+adjunct to the usual technical committee calls.
+
+For the next session in February we expect to be testing many of these features again. We expect
+more implementations of jCal, VPOLL and managed attachments. There is also likely to be some
+testing of notifications and sharing.
+
+Mike Douglass, CalConnect Interoperability Test Manager

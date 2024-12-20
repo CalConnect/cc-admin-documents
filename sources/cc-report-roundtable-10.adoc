@@ -1,0 +1,172 @@
+= Report on Roundtable X, September 19-21 2007
+:docnumber: 0713
+:copyright-year: 2007
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2007-09-21
+:published-date: 2007-09-21
+:technical-committee: CHAIRS
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+Roundtable X and the accompanying IOP Test Event took place September 17-21, hosted by The
+Massachusetts Institute of Technology, in Cambridge, Massachusetts. The event was attended by
+43 representatives from 31 organizations, including representatives from three observers
+(organizations attending a Roundtable to see if they wish to join).
+
+The CalConnect Interoperability Test Event (C.I.T.E.) was held immediately prior to the
+Roundtable, running Monday noon through Wednesday noon, September 17-19. Nine (9)
+organizations participated in this event, performing interoperability testing between their
+calendaring and scheduling implementations. A report on the IOP Test Event will be published as
+soon as possible.
+
+In conjunction with this Roundtable, CalConnect hosted a one-day open vCard Workshop on
+Tuesday, September 18th. The vCard Workshop was attended by about 20 people. A report on the
+workshop together with presentations and other materials may be found at vCard Workshop
+Report.
+
+Roundtable X, attended by 43 representatives from 35 organizations, including 4 observers ran
+Wednesday afternoon, all day Thursday, and Friday morning. Wednesday afternoon began with a
+Technology Preview demonstrating live interoperability in the areas of CalDAV Scheduling,
+Server-Server, and Free/Busy URL between multiple dissimilar clients and servers. The majority
+of the Roundtable was dedicated to technical committee sessions, BOFs, and informal discussions
+and networking, with an all-hands Plenary meeting as the last item on Friday morning. The
+Technical Committee sessions were organized sequentially, without competing parallel sessions, to
+allow all attendees who wished to be involved in the discussions of a Technical Committee the
+opportunity to do so.
+
+== Update on Technical Committees and Initiatives
+
+Work Products since Roundtable IX:
+
+* TC CALDAV has published CalDAV Scheduling Requirements.
+* TC MOBILE has published the Mobile Calendar Interoperability Test Suite.
+* The DST Ad Hoc Committee has published CalConnect EDST Reflections and
+Recommendations, reviewing how the industry dealt with the early DST conversions in
+March, and with recommendations both for the November 4 reversion from Daylight
+Savings Time, and for the future of DST and timezone management.
+
+=== TC CALDAV
+
+TC CALDAV reported on its work to date including its recently-published
+CalDAV Scheduling Requirements paper. Discussions covered new and continuing work in
+several areas of potential extensions to the CalDAV specification, including Roles, Access
+Control, Alarm Management and other scheduling extensions.
+
+=== TC EVENTPUB
+
+TC EVENTPUB reviewed the current state of the VVENUE proposal,
+generating a great deal of discussion concerning possible intersections between VVENUE and the
+potential work on vCard. The TC also reviewed the current status of work on the "eventmap"
+event sharing proposal.
+
+=== TC FREEBUSY
+
+TC FREEBUSY reviewed work since the last Roundtable, especially work on
+Free/Busy URL and in preparing for the Technology Previews of CalDAV Scheduling, serverserver,
+and Free/Busy URL. Going forward the TC will continue work on Free/Busy URL and on
+Free/Busy discussions with external entities.
+
+=== TC IOPTEST
+
+TC IOPTEST reported on the IOP test event just completed, and discussed early
+plans to implement an issue-tracking mechanism and to work with TC MOBILE on planning for a
+Mobile Interoperability Test Event.
+
+=== TC MOBILE
+
+TC MOBILE presented and reviewed its recently-published Mobile Calendar
+Interoperability Test Suite, and discussed plans for an initial Mobile Interoperability Test Event,
+including liaison activities with the OMA/DS group. The TC may also participate in establishing
+interoperability testing for vCard if the Consortium goes forward in this area, as vCard is already
+reflected in the Mobile IOP test suite.
+
+=== TC REALTIME
+
+TC REALTIME has been reactivated since Roundtable IX, and has been
+meeting alternately with TC FREEBUSY to work on the VAVAILABILITY proposal and the
+Technology Previews at this Roundtable. Going forward the TC will work on the REALTIME
+messaging protocol, Discovery, and Authentication and Authorization.
+
+=== TC TIMEZONE
+
+TC TIMEZONE was reactivated to consider the DST Ad Hoc recommendations and work on a
+formal Timezone Registry proposal and a proposal for a Timezone Service Protocol. The TC
+presented the conceptual work to date for the registry and service proposals.
+
+=== TC USECASE
+
+The TC presented its in-progress work on Resources generating a lengthy
+discussion on the subject. The TC has also undertaken a study of recurrence features in mobile
+device support for TC MOBILE.
+
+=== Daylight Saving Time Ad Hoc
+
+The DST Ad Hoc published CalConnect EDST Reflections and
+Recommendations just prior to this Roundtable, and gave a short discussion of the paper and its
+recommendations. The Ad Hoc will remain instantiated until it is apparent whether additional
+information gathering and delivery will be needed in preparation for the November 4 reversion to
+standard time.
+
+=== CalConnect Interoperability Test Event
+
+Participants in the IOP test event
+included Apple, IBM, Kerio, Marware, Mozilla, Open Connector Groupware,OSAF, Oracle, and
+RPI (Bedework), Results from the event will be posted at Past IOP Reports as soon as they are
+collated and prepared.
+
+=== BOFS
+
+BOF topics included XML for iCalendar representation, VVENUE and VALARM follow
+
+=== New Initiatives
+
+* The Consortium plans to initiate a TC in the area of XML representation of iCalendar data;
+a draft charter will be prepared shortly after the Roundtable.
+* The Consortium will initiate a TC in the area of a vCard Revision if the resources can be
+found. A draft charter will be circulated via the public vcard-workshop-l mailing list.
+
+== Future Meetings
+
+* ROUNDTABLE XI: February 4-8, 2008, at Sun Microsystems, San Francisco Bay Area,
+California.
+* ROUNDTABLE XII: June 2-6, 2008, at the University of Wisconsin, Madison, Wisconsin.
+* ROUNDTABLE XIII: October 6-10, 2008, host and location to be determined.
+
+The format of the CalConnect week is:
+
+* Monday noon through Wednesday noon, C.I.T.E. (CalConnect Interoperability Test Event)
+* Wednesday noon through Friday noon, Roundtable (TC sessions, BOFs, networking, Plenary).

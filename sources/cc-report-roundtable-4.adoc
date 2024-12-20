@@ -1,0 +1,111 @@
+= Report on Roundtable IV, 13-15 September 2005
+:docnumber: 0513
+:copyright-year: 2005
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2005-09-15
+:published-date: 2005-09-15
+:technical-committee: CHAIRS
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+Roundtable IV took place on 13-15 September, 2005, hosted by the Open Souce Applications
+Foundation in San Francisco, California. The event was attended by 43 representatives from
+seventeen Consortium members and four observers. The Roundtable event consisted of two days
+of Technical Committee meetings, and an all-hands plenary meeting of the membership and
+attendees. The first two days, a CalConnect Interoperability Event was held in parallel with the
+Technical Committee meetings. The Technical Committee sessions were organized sequentially, to
+allow all attendees who wished to be involved in the discussions of a Technical Committee the
+opportunity to do so.
+
+== Update on Initiatives
+
+*Published documents*: The Consortium has published the Results of the Recurrence
+Questionnaire, the Results of the Timezone Questionnaire, and the CalDAV Use Cases document.
+The Min-IOP Use Cases Document, Timezone Recommendations, Timezone Registry/Resource
+Recommendations, Calendaring Glossary and others are in preparation.
+
+*TC-CALSIFY* was disbanded as its function was duplicated by the TC-CHAIRS coordination
+committee.
+
+*TC-REALTIME* will be rechartered and will act as a research TC to look at a variety of serverserver
+issues and determine whether specific work needs to be undertaken in the area.
+
+*TC-AUTHENTICATE* (calendaring authentication and authorization) and *TC-MOBILE*
+(calendaring on mobile devices) were chartered at this Roundtable.
+
+*External Communications*: The Consortium will be announcing an RSS feed for Calendaring
+issues and announcements in the next several weeks.
+
+== Calconnect Interoperability Event
+
+Participants in the CalConnect Interoperability Event included EVDB, IBM, Isamet, Mozilla,
+Novell, Oracle, OSAF, RPI (Rensselaer Polytechnic Institute) and Sun Microsystems. Results
+from the CalConnect Interoperability Event are posted at Past CalConnect Interoperability Event
+Reports.
+
+== Technical Committees
+
+All Calconnect Technical Committees met during the course of the Roundtable to review their
+status and work to date with the entire set of attendees and to progress their work with the large
+input from the Roundtable. Of particular note:
+
+TC-CALDAV has made its CalDAV test script available on the Consortium website (under
+"Resources").
+
+TC-EVENTPUB will complete its survey at the end of September. TC members are investigating
+ways to extend iCalendar function in the area of location and are looking at alternatives including
+vCard.
+
+TC-IOPTEST is accumulating a set of specific iCalendar and related test scripts with the plan to
+develop them, in addition to other purpose-developed material, into a test suite.
+
+TC-RECURR intends to have results and recommendations by the next Consortium Roundtable,
+and make them available to the IETF CALSIFY working group at the November IETF meeting.
+
+TC-TIMEZONE has completed its questionnaire on Timezone implementations and is developing
+a recommendations document on the results of the questionnaire, and another document on the
+subject of a Timezone Registry and a Timezone Resource.
+
+== Future Meetings
+
+The next meeting (Roundtable V) will take place 09-12 January, 2006, hosted by Novell in Provo,
+Utah. Starting with this meeting, the CalConnect Interoperability Event will be conducted prior to
+the beginning of the Roundtable. Specifically the IOP event will begin on on Monday the 9th, and
+continue on Tuesday morning the 10th, followed by the Roundtable from Tuesday afternoon
+through Thursday afternoon. (Participants found that trying to do both the CalConnect
+Interoperability Event and the Roundtable TC sessions in parallel weren't working very well.) The
+following meeting (Roundtable VI) will be held in mid-May; a host has not yet been established.

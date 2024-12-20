@@ -1,0 +1,107 @@
+= Report on Roundtable XXII, October 5-7, 2011
+:docnumber: 1106
+:copyright-year: 2011
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2011-11-07
+:published-date: 2011-11-07
+:technical-committee: CHAIRS
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+Roundtable XXII took place on October 5-7, 2011, hosted by Kerio Technologies in Prague,
+Czech Republic. The event was attended by 22 people from 14 organizations. The CalConnect
+Interoperability Test Event was held immediately prior to the Roundtable on October 3-5. Fifteen
+people from 8 organizations were present onsite. plus one remotely.
+
+The Roundtable was dedicated to technical committee sessions, and informal discussions and
+networking, with an all-hands Plenary meeting as the last item on Friday afternoon. The Technical
+Committee sessions were as usual organized sequentially, without competing parallel sessions, as
+is our standard practice to allow all attendees who wished to be involved in the discussions of each
+Technical Committee the opportunity to do so.
+
+== Special Events
+
+The Roundtable was structured with all regular TC sessions occurring in the afternoon to facilitate
+remote participation via GotoMeeting for individuals in North America. Thursday and Friday
+mornings were used for special symposia and workshops:
+
+* The Evolution of Internet Calendaring and Scheduling
+* Integrating Internet Calendaring Standards into products and services
+* Workshop on Tasks (VTODOs)
+* BOF: CalConnect Internationally - next steps
+* BOF: Autodiscovery
+
+The host session was chaired by Pavel Suk of Kerio, and focused ways to drive adoption of
+CalDAV and CardDAV on mobile devices by simplifying provisioning and other techniques to
+reduce complexity for end users.
+
+== Documents Updated since Last Roundtable
+
+=== Updated IETF Drafts related to CalConnect (includes updates to published CalConnect documents)
+
+* http://tools.ietf.org/html/rfc6321
+* http://www.rfc-editor.org/rfc/rfc6350.txt
+* http://www.rfc-editor.org/rfc/rfc6351.txt
+* http://www.rfc-editor.org/rfc/rfc6352.txt
+* http://tools.ietf.org/html/draft-daboo-icalendar-extensions
+* http://tools.ietf.org/html/draft-daboo-valarm-extensions/
+* http://tools.ietf.org/html/draft-desruisseaux-caldav-sched
+* http://tools.ietf.org/html/draft-daboo-webdav-sync
+* http://tools.ietf.org/html/draft-cal-resource-schema
+* http://tools.ietf.org/html/draft-daboo-webdav-sync/
+* http://tools.ietf.org/html/draft-douglass-timezone-service/
+
+CalConnect has replaced the internal Interoperability Test Event Report with an internal wiki, and
+the public Interoperability Test Report with a section on the Test Event in the CalConnect _Minutes_
+newsletter publised after each event.
+
+== Update on Technical Committee Work and Initiatives
+
+Roundtable session summaries and activities and a report on the Interoperability Test Event may
+be found at http://calconnect.org/minutes/CalConnect%20Minutes%20Nov2011.pdf.
+
+== Future Events
+
+* CalConnect XXIII: January 30 - February 3, 2012, Apple Inc., Cupertino, California
+* CalConnect XXIV: May 21-25, 2012, Patricia Egen Consulting, Chattanooga, Tennessee
+* CalConnect XXV: October 1-5, 2012, TBD
+
+The general format of the CalConnect week is:
+
+* Monday morning through Wednesday noon, CalConnect Interoperability Test Event
+* Wednesday noon through Friday afternoon, CalConnect Roundtable (presentations, TC sessions,
+BOFs, networking, Plenary)

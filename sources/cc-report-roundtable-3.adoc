@@ -1,0 +1,120 @@
+= Report on Roundtable III, 1-3 June 2005
+:docnumber: 0512
+:copyright-year: 2005
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2005-06-03
+:published-date: 2005-06-03
+:technical-committee: CHAIRS
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+The second formal event of The Calendaring and Scheduling Consortium took place on 1-3 June,
+2005, hosted by Duke University Durham, North Carolina. The event was attended by
+representatives of seventeen Consortium members. The Roundtable event consisted of two days of
+Technical Committee meetings, and an all-hands plenary meeting of the membership and
+attendees. The first two days, a CalConnect Interoperability Eventt was held in parallel with the
+Technical Committee meetings. The Technical Committee sessions were organized sequentially, to
+allow all attendees who wished to be involved in the discussions of a Technical Committee the
+opportunity to do so, and there was definitely "drift" between TC sessions and those participating
+in the CalConnect Interoperability Event.
+
+== Update on Initiatives
+
+*Glossary Project*: The Calendaring Glossary should be ready for initial publication on the
+Consortium website within the next few weeks; it is currently in Last Call within the Consortium.
+
+*Recurrence Questionnaire*: The results of the Recurrence Questionnaire conducted by TCRECURR
+on the internet will be posted publicly to the Consortium website as soon as the results
+document completes Final Call within the Consortium.
+
+*TC-REALTIME* has been on hold pending the completion of other work, and will begin its work
+in mid to late June.
+
+*TC-MIN-IOP* was disbanded and folded into TC-IOPTEST.
+
+*External Communications*: The Consortium will be announcing an RSS feed for Calendaring
+issues and announcements in the next several weeks.
+
+*New initiatives*: The Consortium is considering initiating work in three new areas, if there is
+sufficient interest among existing and new members and if resources are available to work in these
+areas:
+
+* Calendar user address discovery and calendar server discovery
+* Cross domain security and access control
+* Todos for project management
+
+== Calconnect Interoperability Event
+
+Participants in the CalConnect Interoperability Event included Isamet, Mozilla, Novell, Oracle,
+and Rensselaer Politechnic Institute. The CalConnect Interoperability Event was focused on
+CalDAV testing and tested three CalDAV servers and four clients with very positive results. The
+results of the CalConnect Interoperability Event should be available soon and will be posted on
+the Consortium website and delivered to the IETF.
+
+== Technical Committees
+
+All Calconnect Technical Committees met during the course of the Roundtable to review their
+status and work to date with the entire set of attendees and to progress their work with the large
+input from the Roundtable. Of particular note:
+
+TC-CALDAV has made its CalDAV test script available on the Consortium website (under
+"Resources").
+
+TC-CALSIFY has been re-chartered more explicitly as a coordination effort between Consortium
+Technical Committees and the incipient IETF CALISFY working group. The intent is to feed
+information to the working group as rapidly as possible and ensure that TC work being done for
+consumption by the working group meets the needs of the WG.
+
+TC-EVENTPUB is developing a survey on Event Publication, which will be distributed as widely
+as possible, and may require some level of publicity to draw attention to it.
+
+TC-IOPTEST has taken on the tasks associate with the former TC-MIN-IOP to determine the
+"minimum interoperability subset" for iCalendar. This is in addition to TC-IOPTEST's charter to
+plan for, develop and formalize the Consortium's CalConnect Interoperability Event testing.
+
+TC-RECURR is planning a second questionnaire to delve more deeply into some specific
+recurrence issues identified by the first questionnaire. The Committee intends to have results and
+recommendations by the next Consortium Roundtable, and make them available to the IETF
+CALSIFY working group before the November IETF meeting.
+
+TC-TIMEZONE is conducting a questionnaire on Timezone implementations as part
+
+== Future Meetings
+
+The next meeting (Roundtable IV) will take place 13-15 September in San Francisco, hosted by
+the Open Source Applications Foundation. The following meeting (Roundtable V) will take place
+in mid-January in Provo, Utah, hosted by Novell, Inc.

@@ -1,0 +1,228 @@
+= Report on CalConnect Conference XXXIV, September 30 - October 2, 2015
+:docnumber: 1506
+:copyright-year: 2015
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2015-10-23
+:published-date: 2015-10-23
+:technical-committee: CHAIRS
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:imagesdir: images/conference-34
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+CalConnect Conference XXXIV took place on September 30 - October 2, 2015, hosted by Gershon
+Janssen in Amsterdam, The Netherlands.
+The CalConnect Conference was attended by 30 people from 17 members and one non-member observer.
+The Interoperability Test Event
+was held immediately prior to the Conference on September 28-30, 2015, and had 13 participants
+onsite from 10 members.
+
+At this Conference we again used our redesigned CalConnect Conference format, originally tried at
+the January 2015 Conference, to provide
+sessions of broader interest. Instead of our usual Technical Committee sessions, workshops and
+BOFs, several sessions on broader topics
+and at a higher level were offered, with the intent of providing more value to our participants.
+Some of the very detailed discussions formerly
+part of a conference TC session were moved to earlier in the week, during the Interoperability
+Test Event. The Conference finished with the
+CalConnect Plenary Session on Friday afternoon. The Conference agenda, with notes on the
+discussion topics, may be found at CalConnect XXXIV Schedule.
+
+== Documents since Last Conference
+
+Much of the ongoing work in CalConnect is focused on specifications to become internet draft
+submissions to the IETF and ultimately be progressed to become RFCs
+(Proposed Standards), rather than be directly published by CalConnect itself.
+
+=== Published Documents
+
+* Report on CalConnect Conference XXXIII in Bucharest, Romania
+* Report on Interoperability Test Event XXXIII
+
+=== CalConnect Drafts Published as RFCs by the IETF
+
+* RFC 7529, https://tools.ietf.org/doc/html/rfc7529[Non-Gregorian Recurrence Rules in iCalendar (RSCALE)].
+
+=== CalConnect Drafts in IETF Editor Queue to be Published as RFCs
+
+* https://datatracker.ietf.org/doc/draft-ietf-tzdist-service/[Time Zone Data Distribution Service]
+* https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref//[CalDAV: Timezones by Reference]
+
+=== CalConnect Drafts in Progress at IETF Working Groups
+
+* https://datatracker.ietf.org/doc/draft-ietf-calext-availability/[Calendar Availability (VAVAILABILITY)]
+* https://datatracker.ietf.org/doc/draft-ietf-calext-extensions/[New Properties for iCalendar]
+
+=== Updated CalConnect Drafts Pending Adoption by IETF Working Groups
+
+* https://datatracker.ietf.org/doc/draft-douglass-server-info/[DAV Server Information Object]
+* https://datatracker.ietf.org/doc/draft-apthorp-ical-tasks/[Task Extensions to iCalendar]
+
+NOTE: Please note that CalConnect documents at the IETF are mentioned only if their status has
+changed or they have been updated since the last CalConnect event
+
+== Update on Technical Committee Work and Initiatives
+
+=== TC API
+
+Discussed various API formats and attempted to come to an agreement on how a such API would look.
+The group is split on using a slightly
+more stream based API like JMAP and using a REST based API. Possible formats for the data exchange
+are JMAP and HAL among others.
+Now comparing various data formats already in use (Caligrah vs JMAP vs iCalendar vs Microsoft) to
+detect similarities. During the next
+period the TC will develop the "simple" JSON data model specification and look at models for
+scheduling and recurrences.
+
+=== TC CALDAV
+
+Focused mainly on server-info-document
+https://datatracker.ietf.org/doc/draft-douglass-server-info/[DAV Server Information Object]
+and we seem to be getting close to something that is fully baked.
+Format has been solid for a while. We now have a mechanism for the client to detect a change in
+the server-info-token via HTTP responses.
+Ken has uploaded his server capabilities spreadsheet for our GitHub repository as a staring point
+for accumulating this info from our
+members/vendors. During the next months the server-info document will be finalized. The TC will
+work on the server/client features matrix
+and integration with DEVGUIDE. The icalendar-patch draft will be reviewed.
+
+=== TC DEVGUIDE
+
+Talked about the format of the guide, agreed on using gollum wiki and set it up with the new
+CalConnect github account. Some initial content
+has been added. During the next months the TC will work on "examples" content, formatting and
+layout, and X-properties descriptions.
+
+=== TC EVENTPUB
+
+The TC completed work on the QRCODE/Data URI proposal and a draft specification is being
+developed, to be submitted to the IETF when ready.
+
+=== TC FREEBUSY
+
+Mostly on hold as we try to get other specifications through the IETF. VAVAILABILITY is ready and
+VPOLL needs more work but is
+implementable, much interest from the SmartGrid and from LegalXML. Had some discussions on other
+poll modes, in particular signup (for social calendaring). Task assignment is also on the list.
+
+=== TC FSC
+
+TC FSC (Federated Shared Calendars) reviewed the invite process taking into consideration that
+federated sharing involves not just
+calendars but at least contacts and possibly more. The issue of security is becoming more
+important and there is more interest in end-to-end
+signing and encryption. This obviously has implications for server side services that need access
+to the content to function - for example
+scheduling and alarms. The issue of key escrow was raised - in some circumstances (companies and
+their employees) it is a requirement
+that the employer has a copy of the keys. This would allow encryption services to run with server
+side decryption. Planning to hold joint calls
+with TC ISCHEDULE as we are talkking about some of the same issues.
+
+=== TC IOPTEST
+
+The TC planned for and conducted the interop testing event at CalConnect XXXIV, reported on at
+https://www.calconnect.org/events/event-reports#ioptestevents[CalConnect Interoperability Test Event Reports].
+The TC will now begin planning for the testing at CalConnect XXXV in January.
+
+=== TC ISCHEDULE
+
+TC ISCHEDULE is waiting for the IETF TZDIST working group to conclude, then propose rechartering
+it to deal with the iSchedule draft. Joint
+calls between TC ISCHEDULE and TC FSC will be initiated as the two TCs are dealing with some of
+the same issues.
+
+=== TC PUSH
+
+We clarified a few open issues with the protocol and discussed how to proceed with the submission
+to the IETF. The TC is also waiting for more implementations to begin more extensive testing.
+
+=== TC RESOURCE
+
+TC RESOURCE is dormant, waiting on its drafts to begin progression at the IETF.
+
+=== TC SHARING
+
+The base specifications for webdav resource sharing and webdav notifications have been published to the IETF: https://tools.ietf.org/doc/html/draft-pot-webdav-resource-sharing[WebDAV Resource Sharing]
+and
+https://tools.ietf.org/html/draft-pot-webdav-notifications[WebDAV Notifications].
+The TC has been working on getting an implementation ready to go, and the first two specs have
+been partially
+implemented. Working through this allowed us to find a number of issues with the spec, so we've
+published new drafts. We added a
+{DAV:}share-mode property and removed the {DAV:}resourcetype semantics.
+
+=== TC TASKS
+
+The Task Extensions draft has been updated, and the TC is looking at some form of tasks taxonomy.
+
+* https://datatracker.ietf.org/doc/draft-apthorp-ical-tasks/[Task Extensions to iCalendar]
+* https://datatracker.ietf.org/doc/draft-douglass-ical-relations/[Improved Support for iCalendar Relations]
+
+=== TC TIMEZONE
+
+The TC is on hold pending the progression of its two drafts at the IETF, both of which have
+completed IETF Last Call and are now in the
+Editor Queue pending publications as RFCs. The TC will reactivate to discuss the promotion of the
+Timezone Data Distribution Service and its incorporation into production systems.
+
+== Future Events
+
+* CalConnect XXXV: January 25-29, 2016, AOL, Palo Alto, California
+* CalConnect XXXVI: April 18-22, 2016, Ribose/OGCIO, Hong Kong
+
+The general format of the CalConnect week is:
+
+* Monday morning through Wednesday noon, CalConnect Interoperability Test Event
+* Wednesday noon through Friday afternoon, CalConnect Conference (presentations, TC sessions,
+BOFs, networking, Plenary)
+* The format for European events is to move TC sessions to the afternoon, offer symposia and BOFs
+during Thursday and Friday mornings, and continue through Friday afternoon.
+
+== Pictures from CalConnect XXXIV
+
+.The Rosarium in Amsterdam, venue for CalConnect XXXIV
+image::img01.png[]
+
+.Just prior to opening CalConnect XXXIV on Wednesday
+image::img02.png[]
+
+.TC DEVGUIDE presentation at CalConnect XXXIV
+image::img03.png[]
+
+.Panel discussion Wednesday afternoon at CalConnect XXIV
+image::img04.png[]

@@ -1,0 +1,119 @@
+= Report on Interoperability Test Event XXVII, June 3-5, 2013
+:docnumber: 1305
+:copyright-year: 2013
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2013-07-10
+:published-date: 2013-07-10
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Report
+
+The interoperability test event at Calconnect XXVII, hosted by The University of Wisconsin,
+Madison, Wisconsin took place on Monday June 3rd through Wednesday morning June 5th.
+
+There were 6 organizations participating and 1 observing represented by 13 attendees. Those
+participating were:
+
+* AOL - mostly CalDAV related
+* Apple - mostly CalDAV and VPOLL
+* RPI with Bedework testing VPOLL support
+* Andrew MacMillan mainly aCal
+* Carnegie Mellon University - CalDAV and iSchedule
+* Mozilla - FirefoxOS
+
+Our host, the University of Wisconsin, weres present as observers.
+
+All of the participants have CalDAV working to a greater or lesser extent and some of the focus is
+shifting to the newer extensions to CalDAV such as calendar sharing and notifications. While these
+specifications have not yet been finalized and published as standards they are sufficiently
+interesting and valuable that vendors and developers want to work on them now - perhaps
+influencing the final standardized form of the features.
+
+CalDAV calendar sharing allows CalDAV users to share their calendar collections with other users
+on the system and notifications provide a mechanism for informing clients of changes to
+collections and invitations to share collections.
+
+VPOLL is a new calendaring specification which standardizes data for consensus scheduling
+(voting on alternatives) - the type of service provided by Doodle and others. VPOLL will allow
+these external services to interact with calendaring systems in a more standardized manner and
+also enables the support of such services within existing systems. So far there are implementations
+working on CalDAV servers which distribute the VPOLL component to voters and handle the
+responses.
+
+Some of the participants worked on getting the Apple test suite (which tests mostly CalDAV
+conformance) and the Apple performance test suite (which emulates the load caused by existing
+clients) running against their own servers.
+
+There was also some testing which revealed issues with timezones - mostly related to the
+particular aliases being used. This has some implications for the provision of aliases by timezone
+servers.
+
+A newer feature of the event is the planned discussion sessions - putting aside time to discuss
+features at a level interesting to developers.
+
+Calendar sharing is one such feature which kept reappearing at different times throughout the
+testing session and into the round table.
+
+Calendar user addresses was another issue which caused much discussion, which also spilled over
+into the Roundtable. Service suppliers are concerned about the issues raised by the use of a single
+identifier, usually an email address, for services not supported at that email domain. When sending
+invitations to attendees it is not clear where the invitation should go and the fallback of using
+email is not altogether satisfactory. This topic has significant implications for iSchedule.
+
+We also had some discussions on the form of the interoperability test event itself and will be
+discussing this leading up to the next event in Prague this fall. At the very least we expect that we
+will spend more time at the start of the event, and perhaps each morning, discussing participants
+needs and pairing them up with other participants to help get them off to a fast productive start.
+
+The technical discussions which took place reinforced our understanding that these events are
+valuable, not just for the opportunity to test servers, clients and libraries but also for the
+opportunity for extended discussions on implementation details with those who are further down
+the development path or running deployed features.
+
+In future events we hope to be testing at least the following:
+
+* The usual CalDAV testing
+* More iSchedule
+* Implementations of the CalWS protocols being developed in conjunction with OASIS
+* Different representations of calendar data such as JSON and XML
+* Calendar sharing
+* Notifications
+* Managed attachments
+* VPOLL
+* Basic iCalendar/iTIIP/iMIP as needed
+
+Mike Douglass, CalConnect Interoperability Test Manager
