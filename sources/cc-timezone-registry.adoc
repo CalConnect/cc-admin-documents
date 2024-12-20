@@ -1,0 +1,250 @@
+= Timezone Registry and Service Recommendations
+:docnumber:
+:copyright-year: 2006
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2006-04-17
+:published-date: 2006-04-17
+:technical-committee: TIMEZONE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Simon Vaillancourt
+:affiliation: Oracle Corporation
+:role: editor
+:email: simon.vaillancourt@oracle.com
+
+== Introduction
+
+This document contains technical recommendations on implementing a time zone registry
+and a time zone service.
+
+Why are standardized time zones needed?
+
+* For improved interoperability: Calendar applications need to have a reliable list of
+time zones and their associated rules in order to avoid the following common
+problems:
+** Consuming unknown time zones.
+** Consuming known time zones with identical TZIDs but different rule.
+* Calendar applications need to have means of updating time zones and all affected
+data (i.e.: Previously created recurring meetings.) in an efficient and correct manner.
+* Having standardized time zones would open the door to using time zones by
+reference rather than by value (Sending only the time zone id rather than the whole
+time zone with its rules). This could potentially help applications where bandwidth
+usage is important such as mobile devices.
+* Any other non-iCalendar products having to deal with time zones could also benefit
+from it (Operating systems, java...).
+
+== Time zone registry
+
+=== Implementation recommendations for a time zone registry
+
+[recommendation]
+====
+[specification]
+--
+The registry should contain both the name and the rules of the time zones. Storing only
+the names of the time zones or the names of the rule would mean having some other sort
+of registry to map these names to meaningful values.
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+Leveraging what already exists in terms of time zone database should be seriously
+considered in order to speed up the process of establishing the time zone registry
+standard. As of now, the Olson Database seems to be the most widely used "source of
+truth" in the software world.
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+Adding a version per time zone is not seen as a requirement because time zone changes
+usually occur in the future which means that past events will remain the same even if a
+new rule is added to an existing time zone. A time stamp should be sufficient for most
+use cases.
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+Final implementation should be done using a standardized process, the new time zone
+registry should be coordinated by IANA.
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+Updates of the registry could be done through: RFC, informational RFC,
+appointed/elected committee/individual who approves updates to the list.
+--
+====
+
+== Time zone service
+
+=== Implementation recommendations for a time zone service
+
+[recommendation]
+====
+[specification]
+--
+The time zone should be in a VTIMEZONE format as defined in RFC 2445.
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+The time zone service should be build on top of a known platform such as: HTTP,
+CalDAV, DNS, or ITIP.
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+The time zone service should be able to return only modified time zones; given the last
+time the time zone were fetched from the service and/or a list of TZID-TimeStamp, return
+the time zones that have changed.
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+The time zone service should be able to return a time zone based on a supplied alias;
+given an OS based time zone name, return the corresponding VTIMEZONE object. For
+example: The windows time zone name:"(GMT -05:00) Eastern Time (US & Canada)"
+would return the VTIMEZONE Object with the TZID: "/IANA/America/New_York".
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+The time zone service should be able to return a time zone based on a supplied TZID.
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+The time zone service should be able to return a time zone based on a VTIMEZONE
+object (Closest match). The "closest match" feature would be useful for consuming
+iCalendar objects originating from applications that don't have any time zone service
+knowledge.
+--
+====
+
+== Incremental implementation proposal
+
+Implementing a standardized time zone registry and service is no easy task. Here is a
+tentative proposal on how it could be done incrementally by leveraging what already
+exists. This is just describing how it could be done and is by no means set in stone.
+
+=== Milestone 1: Publish the registry file
+
+[recommendation]
+====
+[specification]
+--
+A group (Let's call it the TZ Group) agrees to generate a VTIMEZONE object file every
+time a new TZDB (Olson database) file is released we'll cal that file the "TZ registry file".
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+The TZ Group registers a domain name to host the TZ Group web site. This site is to be
+used for the distribution of the newest "TZ registry file".
+--
+====
+
+=== Milestone 2: Define and setup the time zone service
+
+[recommendation]
+====
+[specification]
+--
+A new RFC is written using CalDAV as a base protocol, that draft would describe how to
+search based on time zone ids, how to retrieve all time zones, how to return only time
+zones whose time stamp has changed...
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+Current implementers of CalDAV servers and clients implement their first iteration of the
+new draft.
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+The RFC draft becomes an official standard.
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+Implementers release their applications.
+--
+====
+
+=== Milestone 3: Formalizing the registry
+
+[recommendation]
+====
+[specification]
+--
+The TZ Group takes steps to standardize the way the "TZ registry file" is generated and
+distributed.
+--
+====
+
+[recommendation]
+====
+[specification]
+--
+Another RFC is created to define and setup the IANA time zone registry.
+--
+====
+
+[bibliography]
+== References
+
+* [[[tz-draft,1]]], Time zone registry draft http://ietfreport.isoc.org/idref/draft-royer-timezone-registry/
+
+* [[[tz-database,2]]], Time zone database http://www.twinsun.com/tz/tz-link.htm
+
+* [[[windows-tz,3]]], Windows time zones to TZID mapping http://unicode.org/cldr/data/diff/supplemental/supplemental.html - windows___tzid
+
+* [[[caldav,4]]], CalDAV Draft http://ietfreport.isoc.org/idref/draft-dusseault-caldav/
+RFC 2445 http://www.ietf.org/rfc/rfc2445.txt
+
+* [[[tz-problems,5]]], Time zone problems and recommendations document http://www.calconnect.org/publications/icalendartimezoneproblemsandrecommendationsv1.0.pdf
