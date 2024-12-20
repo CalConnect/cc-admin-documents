@@ -1,0 +1,149 @@
+= Workshop on the Veterans Administration Scheduling System Challenge, CalConnect XXX, Dulles, Virginia, May 21 2014
+:docnumber: 1403
+:copyright-year: 2014
+:language: en
+:doctype: administrative
+:edition: 1.1
+:status: published
+:revdate: 2014-06-01
+:published-date: 2014-06-01
+:technical-committee: CHAIRS
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+CalConnect sponsored an open half-day workshop on the Veterans Administration Scheduling System
+Challenge on Wednesday afternoon 21 May 2014 as part of CalConnect XXX, hosted by AOL in Dulles,
+Virginia. Registered attendance for the event was 47, of which 26 came for the workshop; a few also
+registered for part of the Conference taking place on Thursday and Friday. The preliminary agenda and
+notes about the panelists may be found at VA Scheduling System Workshop.
+
+== Why we convened this workshop
+
+In late 2012, The U.S. Veterans Administration announced a "prize contest" to "...encourage creation of
+systems that help Veterans make appointments to receive outpatient and ambulatory care from the
+Veterans Health Administration" and ultimately "...to replace the current Medical Scheduling Package
+(MSP) with a scheduling product which is a standards-based, modular, extensible and scalable...".
+Recently, when the winning proposals were announced, we decided to use the VA Scheduling Contest as
+a jump point to explore the importance of open calendaring and scheduling standards with respect to
+Healthcare IT.
+
+CalConnect's goal for the workshop, and especially the Panel Discussion, was to engage our
+membership with the panelists and other attendees in a discussion of Health Care scheduling needs and
+requirement in the context of calendaring and scheduling standards and interoperability. We hoped to
+learn at a functional level what Health Care has today in Calendaring and Scheduling, what it needs in the
+Calendaring and Scheduling standards and specifications that it does not have today, and what its needs
+will be tomorrow.
+
+In turn, from the discussion we hoped would come better understanding, an initial insight as to what areas
+of the calendaring and scheduling work we are undertaking were relevant to Health Care, and how they
+may need to be changed or extended to better address the needs of the Health Care community.
+
+== Meeting Summary
+
+=== Part 1 - Presentations
+
+Gary Schwartz, CalConnect President: Welcome and Contextualizing the Workshop
+
+Wes Turner, OSEHRA: Introduction to VistA and OSEHRA's role in the VA Scheduling Contest
+
+Dr. William Smith, MedRed, and Ryan Lehman, BT Global Services: Health eTime Solution for the VA
+21st Century Medical Scheduling Contest together with a Video of Health e-Time.
+
+Doug Golub, MediSked: Scheduling for Home and Community-based Services
+
+=== Part 2 - Panel Discussions
+
+The panel was moderated by Scott Mace, Senior Editor-Technology at HealthLeaders Media and a
+Director of CalConnect, and included:
+
+* Toby Considine (TC9)
+* William Cox (Cox Software Architects)
+* Doug Golub (MediSked)
+* Mike Henderson (OSEHRA)
+* Ken Rubin (HP Enterprise Services)
+* Wilfredo Sánchez Vega (CalConnect)
+* Dr. William Smith (MedRed)
+
+== Attending and Participating Organizations
+
+Participants and attendees for the Workshop came from the following organizations and companies
+
+* 1and1{blank}footnote:ccp[CalConnect Participant]
+* Accenture Federal Services
+* AOL{blank}footnote:ccp[]
+* Apple{blank}footnote:ccp[]
+* BT Global Services
+* BusyMac{blank}footnote:ccp[]
+* Carnegie Mellon University{blank}footnote:ccp[]
+* Cox Software Architects LLC
+* Department of Veterans Affairs
+* DSS Inc.
+* fruux GMBH{blank}footnote:ccp[]
+* Google{blank}footnote:ccp[]
+* HealthLeaders Media
+* HP Enterprise Services
+* Marten Gajda{blank}footnote:ccp[]
+* Leidos
+* MedicaSoft LLC
+* MediSked
+* MedRed
+* Mozilla{blank}footnote:ccp[]
+* OSEHRA
+* PriceWaterhouseCoopers
+* Rensselaer Polytechnic Institute{blank}footnote:ccp[]
+* SchedJoules{blank}footnote:ccp[]
+* Systems Made Simple
+* TC9
+* TimeTrade Systems{blank}footnote:ccp[]
+* Univesity of California, Berkeley{blank}footnote:ccp[]
+
+== Mailing List for Workshop Attendees
+
+Following the Panel Discussion, CalConnect offered to arrange a limited-life mailing list for everyone who
+attended the workshop to be able to interact. The e-mails of everyone registered for the workshop have
+been entered into the list; anyone who is not interested in being on the list may remove themselves or
+send Dave Thewlis a request to be removed. We anticipate the mailing list will be shut down by the end of
+the summer unless there is some need to keep it available.
+
+== Conclusions and Thanks
+
+Although it is too early to identify specific areas for collaboration and work, it is clear that CalConnect's
+work in scheduling, in particular the applicability of some of the protocols we are developing such as
+VPOLL and VAVAILABILITY to such needs as machine-to-machine scheduling, are extremely pertinent,
+and as our understanding increases we look forward to making these tools more usable and available to
+the Health Care community. Of course, involvement by interested members of the Health Care community
+in this work will be essential both for understanding and resources and we invite members of that Health
+Care community to get involved with us.
+
+CalConnect thanks all of the participants in the workshop and everyone who worked to make it a success.
