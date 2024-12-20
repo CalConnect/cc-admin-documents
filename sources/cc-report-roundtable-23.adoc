@@ -1,0 +1,98 @@
+= Report on Roundtable XXIII, February 1-3, 2012
+:docnumber: 1201
+:copyright-year: 2012
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2012-02-15
+:published-date: 2012-02-15
+:technical-committee: CHAIRS
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+Roundtable XXIII took place on February 1-3, 2012, hosted by Apple in Cupertino, California.
+The event was attended by 35 people from 16 organizations. The CalConnect Interoperability Test
+Event was held immediately prior to the Roundtable on January 30 - February 1. Twenty-one
+people from 8 organizations were present onsite, including representatives from five different
+areas in Apple.
+
+The Roundtable was dedicated to technical committee sessions, and informal discussions and
+networking, with an all-hands Plenary meeting as the last item on Friday afternoon. The Technical
+Committee sessions were as usual organized sequentially, without competing parallel sessions, as
+is our standard practice to allow all attendees who wished to be involved in the discussions of each
+Technical Committee the opportunity to do so.
+
+== Special Events
+
+Two "implementation" BOFS were held during the Interoperability Test Event on Monday and
+Tuesday afternoons:
+
+* Update versus replacement of calendar and contact data
+* Auto-discovery and account provisioning
+
+We expect the findings and output from the BOFs to inform future work in CalConnect, either in
+the context of one or more existing Technical Committees or in possibly forming new Technical
+Committees. The host session was chaired by Wilfredo Sánchez of Apple, and discussed the
+adoption and implementation of open standards in Apple's calendaring products.
+
+== Documents Updated since Last Roundtable
+
+=== Updated IETF Drafts related to CalConnect (includes updates to published CalConnect documents)
+
+* http://tools.ietf.org/html/draft-daboo-webdav-sync
+* http://tools.ietf.org/html/draft-cal-resource-schema
+* http://tools.ietf.org/html/draft-douglass-timezone-service/
+
+CalConnect has replaced the internal Interoperability Test Event Report with an internal wiki, and
+the public Interoperability Test Report with a section on the Test Event in the CalConnect _Minutes_
+newsletter publised after each event.
+
+== Update on Technical Committee Work and Initiatives
+
+Roundtable session summaries and activities and a report on the Interoperability Test Event may
+be found at http://calconnect.org/minutes/CalConnect%20Minutes%20Feb2012.pdf.
+
+== Future Events
+
+* CalConnect XXIV: May 21-25, 2012, Patricia Egen Consulting, Chattanooga, Tennessee
+* CalConnect XXV: October 1-5, 2012, Google, Zurich, Switzerland
+* CalConnect XXVI: January 28 - February 1, 2013, TBD
+* CalConnect XXVII: June 3-7, 2012, University of Wisconsin, Madison, Wisconsin
+
+The general format of the CalConnect week is:
+
+* Monday morning through Wednesday noon, CalConnect Interoperability Test Event
+* Wednesday noon through Friday afternoon, CalConnect Roundtable (presentations, TC sessions,
+BOFs, networking, Plenary)

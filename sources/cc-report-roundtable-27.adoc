@@ -1,0 +1,266 @@
+= Report on Roundtable XXVII, June 5-7, 2013
+:docnumber: 1304
+:copyright-year: 2013
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2013-07-08
+:published-date: 2013-07-08
+:technical-committee: CHAIRS
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+Roundtable XXVII took place on June 5-7, 2013, hosted by the University of Wisconsin in
+Madison, Wisconsin. The Roundtable was attended by 22 people from 13 members, including 3
+new members. The CalConnect Interoperability Test Event was held immediately prior to the
+Roundtable on June 3-5, and had 13 participants from 7 members. In total, 28 people attended
+some portion of the week, including three from Europe and one from New Zealand.
+
+The Roundtable was dedicated to technical committee sessions, and informal discussions and
+networking, with an all-hands Plenary meeting as the last item on Friday afternoon. The Technical
+Committee sessions were as usual organized sequentially, without competing parallel sessions, as
+is our standard practice to allow all attendees who wished to be involved in the discussions of each
+Technical Committee the opportunity to do so.
+
+== Special Events
+
+Two special BOFs were held on Wednesday, June 5. Wednesday morning a BOF on Federated
+Shared Calendars was held; the timing permitted both Interoperability Test Event and Roundtable
+participants to attend. Wednesday afternoon was a BOF on Travel Itineraries. CalConnect will
+form an Ad Hoc Group on the former later this summer, and will host a public workshop on Travel
+Itineraries at the Prague meeting in September.
+
+== Documents since Last Roundtable
+
+Much of the work in CalConnect is necessarily focused on specifications to become internet draft submissions to the
+IETF and ultimately be progressed to become RFCs (Proposed Standards), rather than be directly published by
+CalConnect itself.
+
+=== Published documents
+
+* 7 Things You Should Know About Tasks
+* Report on Roundtable XXVI
+* Report on Interoperability Test Event XXVI
+
+=== New Internet Drafts Submitted to IETF
+
+* https://datatracker.ietf.org/doc/draft-daboo-icalendar-rscale/[Non-Gregorian Recurrence Rules in iCalendar]
+
+=== Updated Internet Drafts and Published RFCs
+
+* https://datatracker.ietf.org/doc/draft-daboo-aggregated-service-discovery/[Aggregated Service Discovery]
+* https://tools.ietf.org/html/draft-douglass-calendar-extension/[Event Publishing Extensions to iCalendar]
+* https://tools.ietf.org/html/draft-desruisseaux-ischedule/[Internet Calendar Scheduling Protocol (iSchedule)]
+* https://tools.ietf.org/html/draft-kewisch-et-al-icalendar-in-json/[jCal: The JSON format for iCalendar]
+* https://datatracker.ietf.org/doc/rfc8144/[Use of the Prefer Header Field in Web Distributed Authoring and Versioning (WebDAV)]
+* https://tools.ietf.org/html/draft-douglass-timezone-service/[Timezone Service Protocol]
+* https://datatracker.ietf.org/doc/draft-cal-resource-vcard/[vCard representation of resources]
+* https://datatracker.ietf.org/doc/rfc7095/[jCard: The JSON format for vCard] (now an IETF WG draft)
+
+== Update on Technical Committee Work and Initiatives
+
+=== CALSCALE-ADHOC
+
+Presented a problem statement and our proposed approach. The draft is now at the IETF:
+https://datatracker.ietf.org/doc/draft-daboo-icalendar-rscale/[Non-Gregorian Recurrence Rules in iCalendar].
+There was a discussion on RPATTERN vs RRULE, "L"
+suffix vs BYLEAPMONTH. The outcomes were:
+
+. Give a call to all calendar services and clients to fail if they encounter unfamiliar term in
+RRULE
+. Verify that no major client interprets RSCALE as a wrong recurrence (in Gregorian)
+. Try to stick with RRULE and "L" suffix, pending discussion @IETF
+. Keep discussion on calsify@ietf
+. Have a one-off call after the Roundtable to determine further courses of action
+
+=== TC AUTODISCOVERY
+
+The draft has been updated to use JSON
+https://datatracker.ietf.org/doc/draft-daboo-aggregated-service-discovery/[Aggregated Service Discovery].
+Most of the presentation
+was on TC goals and motivation so there were no technical updates during the roundtable. For the
+next few months the activity will take place mainly on the IETF where we expect discussion
+mostly about what we have now versus WebFinger.
+
+=== TC CALDAV
+
+After a status update on the pending IETF drafts, we discussed the remaining open issues on two
+of them: managed attachment and prefer header. We then had an open discussion on calendar
+sharing and calendar searching.
+
+=== TC EVENTPUB
+
+The first part of the session was a review of the extensions specification and the properties and
+parameters defined there. Since the last round table we've defined a new GROUP parameter to
+allow grouping of related properties. This has expected uses outside of event publication - in
+particular tasks. The PARTICIPANT property has now been renamed to ASSOCIATE. There were
+suggestions about the role of ASSOCIATE and how it relates to ATTENDEE. There are no iTIP
+semantics for ASSOCIATE so no broadcasting of data to potentially very large numbers of users.
+The specification was resubmitted at the beginning of the week and needs some review and then
+trying to move it on to the next stage in the IETF.
+
+We also talked (again) about sharing and subscriptions. Of particular interest in event publication
+is the ability to register for a specific event. Related to that is the ability to signify interest in
+selected events or tasks and have those appear in the users calendar client and for that user to
+receive notifications of changes. Bedework implements a special collection type in which such
+events appear.
+
+=== TC FREEBUSY
+
+We reviewed the current work of the committee and the VPOLL specification, and additionally
+discussed "office hours" and "reverse scheduling" as examples of ways that VPOLL (and
+VAVAILABILITY) may be used for innovative ways of scheduling.
+
+=== TC IOPTEST
+
+12 attendees representing 5 organizations (with 1 observing) tested and developed features in the
+areas of CalDAV, VPOLL, WebDAV Sync, Calendar Sharing and Timezones. Some attendees also
+spent time working with the Apple test suite and the Apple performance suite. We spent some time
+discussing various issues at the technical level, including VPOLL, issues with locating a service
+when all we have is the CUA, etc.
+
+We also discussed how CalConnect can better organize the sessions to get newer attendees rapidly
+paired up with each other for testing. We will talk about this more on some of the upcoming TC
+calls but the approach will probably be to allocate n hour or so at the very start to discuss the
+testers' needs and who can help them resolve their outstanding issues.
+
+There has also been some discussion on finding a way to emphasize the value of these (test event
+discussion) sessions as a forum for developers which involves more than testing clients and
+servers. The various BOFs have been a step along that path.
+
+=== TC ISCHEDULE
+
+Presented a status update on the iSchedule draft, and discussed the possible disconnect between
+email provider and calendar provider and how this affects the iSchedule work flow.
+
+=== TC RESOURCE
+
+Presented the work done so far by the committee and the drafts produced. Discussed searching and
+finding the right resource for scheduling. The conclusion was that we need to define something for
+easy search for scheduling based on certain user-provided criteria, not limited to resources.
+
+=== TC TASKS
+
+Good progress since last roundtable in areas of:
+
+* STATUS / PARTSTAT with new status values and parameters
+* ORGANIZATION and other roles
+* Task Definitions -- identification of the task type
+* Task Relationships with recommendations for new RELTYPE values and a new parameter
+(GAP)
+
+After the roundtable report the key discussion points were on:
+
+* Requirements for notifications in relation to calendar sharing
+* Relationships
+* The use of a RELATED-ID for identifying projects
+* Clarification on project management RELTYPES and DEPENDS-ON as a back pointer
+
+Next steps will focus on consolidating what we have so far in to drafts and developing the other
+areas in scope for the TC:
+
+* Task specific data
+* Task assignments
+* Deadlines / alarms / escalations
+* Resulting API / Protocol changes
+
+=== TC TIMEZONE
+
+We presented the current state of the timezone work. We have a draft (expired) at the IETF which
+represents the current state of the servers. This is ready for last call so we should progress it
+through the IETF. Additional work, which does not require spec changes, would be to add a new
+content type related to the current zoneinfo format. This may encourage OS vendors to use a
+timezone service. We talked about ways we might accelerate the dissemination of data. Some OS
+providers already track the data and provide system updates. If they use a timezone service maybe
+they could become a more timely source of data. We also talked about delivering timezones by
+reference, that is drop the timezone component from icalendar files and see what clients do. It
+appears they generally ignore the data anyway - as do servers. Aliases is another topic and we
+need to build up a good set of aliases that we can use in our servers. Unicode Consortium has a list
+that we can probably extract.
+
+=== TC USECASE
+
+Presented recommendations to attending members for actions CalConnect can take regarding
+CalConnect visibility and membership activity:
+
+* Establish a regular presentation on "State of the User Experience"
+* Fold UseCase into USIG
+* Establish a regular, non-structured RoundTable session dedicated to, or focused-on, a user
+constituency problem, issue, or topic
+* Establish a focus on Social Media and online methods as a means of outreach and raising
+CalConnect visibility
+
+Voice votes taken during the TC-WrapUp session were supportive for all four recommendations.
+
+=== TC XML
+
+We had a short session in which we brought people up to date:
+
+* The xCal spec is unchanged and no further issues reported
+* CalWS-SOAP and REST are now official OASIS standards. Both will be worked on to
+* handle the other features available in CalDAV - synch, vpoll etc.
+* jCal and jCard are progressing well and ready for last call in the IETF
+
+We need to work on implementations and some testing of jCal and jCard. We talked briefly about
+where TC-XML is headed. Possibly some role as liaison but maybe there are no more 'XML'
+issues to resolve.
+
+== Plenary Decisions
+
+CalConnect accepts an offer from http://www.aol.com[AOL] to host the Spring 2014 2013 CalConnect event at their
+center in Dulles, Virginia, the week of May 19-23, 2014.
+
+CalConnect plans to hold workshops on Federated Shared Calendars and Travel Itineraries at the
+September, 2013 CalConnect event in Prague. The Travel Itineraries workshop will be open to the
+public by registration.
+
+CalConnect will develop ways to make it easier for new members and participants to become
+familiar with and involved in the Roundtables, Interoperability Test Events, and the technical
+work.
+
+== Future Events
+
+* CalConnect XXVIII: September 23-27, 2013, DHL Express, Prague, Czech Republic
+* CalConnect XIX: Winter, 2014, TBD
+* CalConnect XXX: May 19-23, 2014, AOL, Dulles, Virginia
+
+The general format of the CalConnect week is:
+
+* Monday morning through Wednesday noon, CalConnect Interoperability Test Event
+* Wednesday noon through Friday afternoon, CalConnect Roundtable (presentations, TC sessions,
+BOFs, networking, Plenary)
+
+This format has been altered for the two (so far) European CalConnect events to move all TC
+sessions to the afternoon and offer symposia and BOFs during Thursday and Friday mornings.

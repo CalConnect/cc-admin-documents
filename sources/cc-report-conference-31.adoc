@@ -1,0 +1,304 @@
+= Report on CalConnect Conference XXXI, October 1-3, 2014
+:docnumber: 1406
+:copyright-year: 2014
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2014-10-16
+:published-date: 2014-10-16
+:technical-committee: CHAIRS
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:imagesdir: images/conference-31
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+NOTE: Following CalConnect XXIX in February, the term "Roundtable" was replaced by "Conference" or
+"CalConnect Conference".
+
+CalConnect Conference XXXI took place on October 1-3, 2014, hosted by Youcanbook.me in Bedford,
+United Kingdom.. The CalConnect Conference was attended by 19 people from 13 members. The
+Interoperability Test Event was held immediately prior to the Conference on September 29 - October 1,
+February 3-5, and had 15 participants onsite from 9 members; an additional 4 people from 3 members
+attended the test event remotely. In total, 21 people from 13 organizations attended some portion of the
+week.
+
+The Conference consisted primarily of technical committee sessions, workshops and BOFs. In addition a
+live demonstration of work under development was offered, plus a BoF (Birds of a Feather Session) and
+two Workshops. The sessions were as usual organized sequentially without competing parallel sessions,
+as is our standard practice, to allow all attendees who wished to be involved in the discussions of each
+Technical Committee the opportunity to do so. The Conference finished with the CalConnect Plenary
+Session on Friday afternoon.
+
+== Special Events
+
+Two Workshops were held on Thursday morning and Friday morning: Groups Scheduling and Sharing
+and History and Comment Feeds in iCalendar. A Birds of a Feather session on developing a unified
+Calendaring & Scheduling Architecture was also held on Friday. A retrospective presentation on the
+Veterans' Administration Health Care Workshop held at CalConnect XXX in May was also offered on
+Thursday.
+
+== Documents since Last Roundtable
+
+Much of the work in CalConnect is focused on specifications to become internet draft submissions to the IETF and ultimately be
+progressed to become RFCs (Proposed Standards), rather than be directly published by CalConnect itself.
+
+=== Published Documents
+
+* Report on CalConnect Conference XXX
+* Report on Interoperability Test Event XXX
+* 7 Things You Should Know About the Abstract Calendaring API
+* Updated Starter List of CalDAV and CardDAV Standards and Specifications
+
+=== CalConnect Internet Drafts Adopted for Progression via IETF Working Groups
+
+* https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[CalDAV: Timezones by Reference]
+* https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[Time Zone Data Distribution Service]
+* https://datatracker.ietf.org/doc/draft-ietf-calext-rscale[Non-Gregorian Recurrence Rules in iCalendar]
+
+=== Updated Internet Drafts and Published RFCs
+
+* http://tools.ietf.org/html/rfc7265[jCal: The JSON Format for iCalendar] (RFC 7265)
+* https://datatracker.ietf.org/doc/draft-douglass-ical-relations/[Support for iCalendar Relationships]
+* https://datatracker.ietf.org/doc/draft-york-vpoll/[VPOLL: Consensus Scheduling Component for iCalendar]
+* http://tools.ietf.org/html/draft-daboo-icalendar-extensions[New Properties for iCalendar]
+* https://datatracker.ietf.org/doc/draft-murchison-webdav-prefer/[Use of the Prefer Header Field in Web Distributed Authoring and Versioning (WebDAV)]
+
+== Update on Technical Committee Work and Initiatives Including BOFs and Workshops
+
+=== BOF on Calendaring & Scheduling Architecture
+
+The BOF discussed whether Tasks and Events are different concepts or simply the same thing with
+different details. Tasks can but don't have to be time-based; Events might not have a start or end date
+especially with VAVAILABILITY/VPOLL. Our architecture document should start with the model rather
+than from the user perspective; an interactive diagram would be nice to avoid a too-rich diagram. The
+architecture is currently under the auspices of TC API.
+
+=== CALSCALE Ad Hoc
+
+No session was held at the conference. The Ad Hoc is on hold pending progression of the RSCALE draft
+now adopted as a
+https://datatracker.ietf.org/doc/draft-ietf-calext-rscale/[CALEXT Working Group]
+draft in the IETF for progression to become an RFC:
+https://datatracker.ietf.org/doc/draft-ietf-calext-rscale/[Non-Gregorian Recurrence Rules in iCalendar].
+
+=== ITINERARY Ad Hoc
+
+No session was held at the conference. The goal is to improve the user experience with itinerary info from
+travel sites by extending iCalendar to incorporated needed information; however, we need input from
+travel industry experts on what is needed. The Ad Hoc continues to look for experts to inform the work.
+
+=== TC API
+
+The TC offered an overview of work since the last conference, including data objects, relations and
+operations. Details about the REST API we have been discussing were reviewed, and fruux gave a demo
+on their REST API. YCBM (Youcanbook.me) provided a demo on Calligraph, a tool they have developed
+to federate multiple calendar sources.
+
+=== TC AUTODISCOVERY
+
+No TC session was held at this conference. The TC has produced an initial draft of a mechanism for
+multiple service discovery via a single protocol for client setup and submitted to the IETF:
+https://datatracker.ietf.org/doc/draft-daboo-aggregated-service-discovery/[Aggregated Service Discovery]. We are waiting for an opportunity to move this forward at the IETF.
+
+=== TC CALDAV
+
+Several topics were discussed in the session.
+
+* Server-Info document: The basic outline was presented and discussed. A discussion of where the
+document should "live" ensued. The consensus is to define a WebDAV property and also use a Link
+header in the OPTIONS response. Another discussion was about whether to include "constant"
+properties. The TC will research current client PROPFINDs and then see what is best, but probably
+scope it as close as possible to the impacted resources.
+
+* Scheduling Drafts: The basic outline of a solution was presented and discussed. The overall feeling
+was to initially move forward with the approach for new drafts only. The TC will do more work on
+how best to handle the "lost update" problem when creating drafts from existing resources.
+
+* Calendar Principal Searching: All agreed that DAV:principal-property-search is too structured and
+something better is needed. The TC will look into whether the existing report can be augmented with
+a custom property or a new report should be created (e.g. standardizing the calendarserverprincipal-
+search report).
+
+* Discussion of the status of WebDAV Prefer Draft and whether return=representation should be
+allowed on a precondition failure. The consensus was that it should be allowed to eliminate the need
+for the client to fetch the new resource in a separate request. The draft will be refreshed, reviewed
+and submitted to IETF.
+
+* Discussion on use of patch/diffs for client updates and whether ETag, Schedule-Tag is sufficient for
+that. The TC will investigate formalizing a diff format for CalDAV with a preference for a JSON-based
+solution.
+
+=== TC EVENTPUB
+
+TC EVENTPUB summarized the state of its current drafts; the TC has been dormant as we wait for the
+backlog of drafts before the IETF to clear. There was some discussion about the new CONFERENCE
+property and colors. The current EVENTPUB drafts referenced above are
+http://tools.ietf.org/html/draft-douglass-calendar-extension/[Event Publication Extensions to iCalendar]
+and https://datatracker.ietf.org/doc/html/draft-daboo-icalendar-extensions[New Properties for iCalendar].
+
+=== TC FREEBUSY
+
+The TC reviewed the draft specification: https://tools.ietf.org/html/draft-york-vpoll-00[VPOLL: Consensus Scheduling Component for iCalendar] and
+the BASIC poll mode, then presented some of the thoughts we have had in the TC and also in TC TASKS
+about a new task assignment poll mode. We also talked about signup modes which could support
+informal event planning, and discussed the possible use of VPOLL for simple resource management. The
+TC also offered a quick demo of a VPOLL client.
+
+=== TC FSC
+
+TC FSC (Federated Shared Calendars) was formed from the FSC Ad Hoc Committee following
+CalConnect XXX. The TC presented the current design for federated shared calendars. There was a lot of
+discussion of enhancing subscribed calendar behavior versus using CalDAV, with the consensus moving
+towards a more CalDAV-like approach via links to upgrade subscriptions directly into CalDAV -- used in
+either a server-to-server or client-to-server mode. Ultimately we will use TC-API work for the sharing
+protocol. The nature of invites (iCalendar or XML) still needs to be decided. We are leaning towards a
+more generic TC SHARING type of sharing mode.
+
+=== TC IOPTEST
+
+A busy and productive session. As always much testing of various CalDAV features. Some new implicit
+scheduling implementations testing against clients. Two participants were trying to get VPOLL up and
+running across multiple servers but ran into some implementation issues and eventually ran out of time.
+TC IOPTEST will start building a list of areas to test next time immediately -- starting early may help to
+provide some specific implementation goals. Will be building this in the TESTING-NOTES etherpad.
+Finally we hope to have PUSH implementations for testing in January. The event report may be found at
+https://www.calconnect.org/events/event-reports#ioptestevents[CalConnect Interoperability Test Event Reports] once completed.
+
+=== TC ISCHEDULE
+
+The proposed solution to the "identity crisis" problem was presented; namely webfinger, SCHEDULE-TO
+URI and SCHEDULE-ADDRESS property parameter. Lots of discussion about using SCHEDULEADDRESS
+as opposed to setting the routing address as the value of the property. Major pushback for
+changing the property value is that it may break existing clients which don't understand SCHEDULE-TO
+URIs. The session ended without a clear consensus. The TC will investigate how clients will handle the
+property value being changed. This will probably wait on IETF to start a Working Group to progress the
+iSchedule draft, and we will leave it as as open issue in the draft.
+
+=== TC PUSH
+
+We presented the latest output of the TC, including the new architecture, discovery of push-transports and
+a push protocol. There was a discussion about who defines what a topic is. Clients might want to be able
+to define in more detail what they are interested in. We might add that as an extension later on. Also, we
+briefly discussed the option to use an asynchronous call to the gateway-select URL and return an id the
+client can use to check if the subscription is still valid. Finally, we discussed how to proceed in the matter
+of the IETF webpush working group. There was consensus in that we should contact the WG and let them
+know about our use cases and our work.
+
+=== TC RESOURCE
+
+A presentation on the resource schema work so far was followed by a discussion of resource schemas for
+building management, etc. We need to look at ways to integrate or provide APIs for information relevant
+to the calendaring and scheduling world. Information in the structured location draft as to how to provide it
+so it is always available for users. The TC is now waiting on its drafts to begin progression at the IETF so
+will be dormant unless an issue comes up that must be addressed by the TC.
+
+=== TC SHARING
+
+This TC was formed from the Contacts Sharing Provisional Committee following CalConnect XXX. The
+TC presented a plan for the 4 specifications we'd like to release. There were lots of discussions around
+semantics and general approach, such as:
+
+. Dropping UID from xml bodies
+. CardDAV sharing collections. Is there only one sharee collection per sharer.
+. Attaching principal information to notifications.
+. Per-user and global properties for iCalendar. What should be the default?
+. Requiring vCard 4.
+. Sharing draft collections.
+
+No strong decisions have been made, will have to pick those up during the post-event TC calls going
+forward.
+
+=== TC TASKS
+
+We discussed work done over the last few months: history/comments use cases, task assignment and
+VPOLL, and changes to relationships draft. We had a detailed discussion on the use of RELATED-TO,
+RELID/REFID, CATEGORIES. We decided we would use a URI value for REFID. We decided we needed
+a new property for "formal" categories. We will continue to discuss the need for an event type registry.
+Next up we will work on finishing the drafts, ongoing VPOLL work, and time planning.
+
+=== TC TIMEZONE
+
+No session was held at the conference. The TC is on hold pending the progression of its two drafts now
+adopted as https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[TZDIST Working Group]
+drafts in the IETF for progression to become RFCs:
+https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[Time Zone Data Distribution Service]
+and https://datatracker.ietf.org/doc/draft-ietf-tzdist-caldav-timezone-ref/[CalDAV: Timezones by Reference].
+
+=== Workshop on Groups Attendees and Sharing
+
+Reviewed proposals for server-side support. Attendees approach involved client-driven model, decided
+right approach was for server to make decisions on expansions. Same would apply to sharing as well. Still
+open questions as to how it would work, at this time decided to continue discussions within TC CALDAV
+once it finishes current work, and discuss again at next conference either at another workshop or as part
+of TC CALDAV.
+
+=== Workshop on History and Comments Streams in iCalendar Data
+
+Discussed general use cases; reached a general agreement on the need to address this in particular TC
+TASKS has a requirement. Approaches using external feeds through existing protocols, links to photo
+stream sites, etc.. The CONFERENCE property in EVENTPUB was driven by Google's interest in a PUT
+to Google Hangout. Also discussed TC TASKS requirement by using VJOURNAL. Decision: we don't
+have time before January to get into the topic in depth, and will return to it at the January event. In the
+meantime, TC TASKS will evaluate whether VJOURNAl is sufficient for its needs and the requirement can
+be met that way.
+
+== Plenary Decisions
+
+The offer from Gershon Janssen to host the Autumn 2015 event in Amsterdam, The Netherlands was
+confirmed.
+
+A Planning Committee will be formed for CalConnect's Tenth Anniversary meeting, CalConnect XXXII, in
+January 2015.
+
+== Future Events
+
+* CalConnect XXXII: January 26-30, 2015, Kerio Technologies, San Jose, California
+* CalConnect XXXIII: Spring, 2015, TBD
+* CalConnect XXXIV: Autumn, 2015, Gershon Janssen, Amsterdam, The Netherlands 
+
+The general format of the CalConnect week is:
+
+* Monday morning through Wednesday noon, CalConnect Interoperability Test Event
+* Wednesday noon through Friday afternoon, CalConnect Conference (presentations, TC sessions,
+BOFs, networking, Plenary)
+* The format for European events is to move TC sessions to the afternoon and offer symposia and
+BOFs during Thursday and Friday mornings, and continue through Friday afternoon.
+
+== Pictures from CalConnect XXXI
+
+.Photograph courtesy of Graham Wilson, www.grahamphotographer.co.uk
+image::img01.png[]
+
+.The interoperability test event at http://www.thehigginsbedford.org.uk/[The Higgins], with attendent Sarcophagus
+image::img02.png[]

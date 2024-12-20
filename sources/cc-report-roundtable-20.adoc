@@ -1,0 +1,92 @@
+= Report on Roundtable XX, February 9-11, 2011
+:docnumber: 1103
+:copyright-year: 2011
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2011-03-16
+:published-date: 2011-03-16
+:technical-committee: CHAIRS
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+Roundtable XX took place on February 9-11, 2011, hosted by the University of California,
+Berkeley, in Berkeley, California. The event was attended by 30 people from 17 organizations.
+The CalConnect Interoperability Test Event was held immediately prior to the Roundtable on
+February 7-9. Thirteen people from 6 organizations were present onsite, and 3 organizations and 3
+people partipated remotely.
+
+The Roundtable was dedicated to technical committee sessions, and informal discussions and
+networking, with an all-hands Plenary meeting as the last item on Friday afternoon. The Technical
+Committee sessions were as usual organized sequentially, without competing parallel sessions, as
+is our standard practice to allow all attendees who wished to be involved in the discussions of each
+Technical Committee the opportunity to do so.
+
+== Special Events
+
+Shel Waggener, Associate Vice Chancellor and CIO of the University of California, Berkeley,
+gave a presentation on Calendaring at a Public University which was very well received and
+focused in part on future issues already being discussed in the Consortium.
+
+== Documents Published or Updated since Last Roundtable
+
+=== Published Documents
+
+* TC EVENTPUB - http://www.calconnect.org/CD1101%20Eventpub%20iCalendar%20Extensions.shtml[Event Publishing Extensions to iCalendar]
+* TC IOPTEST - https://www.calconnect.org/pubdocs/CD1014%20October%202010%20CalConnect%20Interoperability%20Test%20Event%20Report%20V1.0.pdf[Public IOP Test Event Report for CalConnect XIX]
+
+=== Updated IETF Drafts (related to CalConnect)
+
+* http://tools.ietf.org/html/draft-daboo-srv-caldav
+* http://tools.ietf.org/html/draft-daboo-webdav-sync
+* http://tools.ietf.org/html/draft-cal-resource-schema
+* http://tools.ietf.org/html/draft-daboo-et-al-icalendar-in-xml
+
+== Update on Technical Committee Work and Initiatives
+
+RoundTable session summaries and activities may be found at
+http://calconnect.org/minutes/CalConnect%20Minutes%20Feb2011.pdf.
+
+== Future Events
+
+* CalConnect XXI: May 23-27, 2011, NASA Ames, Mountain View, CA
+* CalConnect XXII: October 3-7, 2011, Kerio Technologies, Czech Republic
+* CalConnect XXIII: February 6-10, 2012, TBD
+
+The format of the CalConnect week is:
+
+* Monday morning through Wednesday noon, C.I.T.E. (CalConnect Interoperability Test Event)
+* Wednesday noon through Friday afternoon, Roundtable (presentations, TC sessions, BOFs,
+networking, Plenary).

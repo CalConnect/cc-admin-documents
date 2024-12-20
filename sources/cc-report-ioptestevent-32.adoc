@@ -1,0 +1,110 @@
+= Report on Interoperability Test Event XXXII, January 26-28, 2015
+:docnumber: 1502
+:copyright-year: 2015
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2015-02-18
+:published-date: 2015-02-18
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Report
+
+The interoperability test event at CalConnect XXXII, hosted by Kerio Technologies in San Jose,
+California took place on Monday January 26 through Wednesday noon January 28.
+
+There were 13 members and 1 non-member participating onsite represented by 24 individuals.
+Participating entities were:
+
+* 1and1
+* AOL
+* Apple
+* BusyMac
+* CMU
+* fruux
+* Google
+* Kerio Technologies
+* Microsoft
+* Novell
+* Oracle
+* RPI (Bedework)
+* SmoothSync
+* Zimbra
+
+This included a good range of participants, with some mature client and server implementations
+and new clients and servers.
+
+As usual there was a significant amount of testing basic features of CalDAV, and this time there
+was increased interest in testing CardDAV. The topics tested included
+
+* General CalDAV and CalDAV scheduling
+* Basic CardDav
+* auto discovery
+* sharing of calendars and contacts
+* Server information document
+* server test suite
+* iTip and iMip
+* extended-mkcol support
+* VAVAILABILITY
+* RSCALE - enable recurrences in different calendar scales
+* VPOLL
+* TZdist - the timezone distribution protocol
+* Timezones by reference
+* iSchedule
+* jCal
+* Push Notifications
+
+A number of server implementors worked on getting the CalDAV Tester test suite running. This
+suite tests most of the features of CalDAV and CardDAV.
+
+Three of the attendees tested implementations of VPOLL, a new standard for consensus
+scheduling, both clients and servers and were later able to demonstrate three servers and clients
+interacting through iSchedule. All three clients use javascript CalDAV implementations and the
+jCal (iCalendar in JSON) format.
+
+There was a significant amount of testing iMip between Exchange and various other servers and
+clients. A number of issues were identified which may lead to better interoperability in the future.
+
+Once again we featured a number of discussions on various topics. These discussions may take
+place in the main room if sufficient attendees are interested or as smaller breakout sessions and
+usually cover lower-level protocol and implementation issues. Topics covered this time included:
+
+* managed attachments
+* the new push notification specification
+* delivering events through other means - e.g qrcodes
+* iMip and how to improve it
+* open source issues
+
+Mike Douglass, CalConnect Interoperability Test Manager
