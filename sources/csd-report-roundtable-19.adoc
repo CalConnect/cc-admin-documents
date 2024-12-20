@@ -8,7 +8,7 @@
 :revdate: 2010-10-20
 :published-date: 2010-10-20
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -76,6 +76,8 @@ session with members of the IBM/Lotus engineering team.
 * http://tools.ietf.org/html/draft-daboo-webdav-sync-04
 * http://tools.ietf.org/html/draft-cal-resource-schema-02
 * http://tools.ietf.org/html/draft-daboo-et-al-icalendar-in-xml-07
+
+== Update on Technical Committee Work and Initiatives
 
 === TC DSI
 

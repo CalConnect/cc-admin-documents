@@ -8,7 +8,7 @@
 :revdate: 2017-10-23
 :published-date: 2017-10-23
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -167,7 +167,7 @@ Specific dates were set for CalConnect XLI and CalConnect XLIII (see below).
 
 The general format of the CalConnect Week is:
 
-* Monday morning through Wednesday noon, Test Event and Developer’s Forum
+* Monday morning through Wednesday noon, Test Event and Developer's Forum
 (testing, tech discussions)
 * Wednesday noon through Friday afternoon, Conference
 

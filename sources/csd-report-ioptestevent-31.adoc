@@ -8,7 +8,7 @@
 :revdate: 2014-10-31
 :published-date: 2014-10-31
 :technical-committee: IOPTEST
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -74,7 +74,7 @@ demonstration with multiple servers by CalConnect XXXII.
 The testing was fairly intensive after the initial pairing off. Testers were busy throughout the
 event.
 
-Once again we had some BOF sessions – this time we discussed the issues around task assignment
+Once again we had some BOF sessions -- this time we discussed the issues around task assignment
 in VPOLL and providing server information to clients as a fetchable document. These discussions,
 usually at the developer and implementor level, have become a valuable part of the experience.
 

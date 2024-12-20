@@ -8,7 +8,7 @@
 :revdate: 2009-10-19
 :published-date: 2009-10-19
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -137,7 +137,7 @@ Institute (Bedework), and Sun. In addition to regular, Sun tested a preliminary 
 CalDAV client for the Symbian OS which they will be contributing to Symbian R3. Results from
 the event will be posted at Past IOP Reports as soon as they are collated and prepared.
 
-== Other News from Roundtable Test Event
+== Other News from Roundtable XVI
 
 CalConnect has decided to hold a full CalConnect week including an Inteorperability Test Event
 and Roundtable in Europe in the next two years, probably in 2011. European members will be

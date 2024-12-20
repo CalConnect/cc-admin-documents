@@ -8,7 +8,7 @@
 :revdate: 2011-11-07
 :published-date: 2011-11-07
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -71,8 +71,7 @@ reduce complexity for end users.
 
 == Documents Updated since Last Roundtable
 
-Updated IETF Drafts related to CalConnect (includes updates to published CalConnect
-documents):
+=== Updated IETF Drafts related to CalConnect (includes updates to published CalConnect documents)
 
 * http://tools.ietf.org/html/rfc6321
 * http://www.rfc-editor.org/rfc/rfc6350.txt

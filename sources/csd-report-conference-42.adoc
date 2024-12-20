@@ -8,7 +8,7 @@
 :revdate: 2018-06-25
 :published-date: 2018-06-25
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -46,7 +46,7 @@ This document was prepared by Technical Committee _{technical-committee}_.
 CalConnect XLII took place June 4-8, 2018, hosted by Jorte in Tokyo, Japan. The Developers Forum
 (Monday, Tuesday, and Wednesday morning), Data Event Summit with JEDC (the Japan Data Event
 Committee) (Wednesday afternoon), and Conference (late Wednesday afternoon, Thursday and Friday)
-were held at Jorte’s offices in Tokyo or in conference rooms in the same building.
+were held at Jorte's offices in Tokyo or in conference rooms in the same building.
 
 The CalConnect Conference was attended by a total of 12 people from 8 members. The Developers
 Forum had 7 participants from 4 members and was largely devoted to the forum rather than specific
@@ -58,7 +58,7 @@ https://www.calconnect.org/events/.calconnect-xlii-june-04-08-2018#conference-sc
 
 The Data Event Summit was attended by a total of 26 people, all CalConnect participants for the
 conference plus 15 people from JEDC, and featured presentations from two government agencies,
-Sharp, and our hosts. The primary focus was Japan’s efforts to ensure open data is available from
+Sharp, and our hosts. The primary focus was Japan's efforts to ensure open data is available from
 their local governments (about 1800) in a common data format, and our encouragement for them to
 adopt the international calendaring and scheduling standards, which would require some
 enhancements and joint work between us.
@@ -123,7 +123,7 @@ devleopment of the specification.
 TC IOPTEST was closed as its function has been subsumed into the Event Planning committee and
 process.
 
-CalConnect is planning to resume its practice of self-publishing standards, which hasn’t been done
+CalConnect is planning to resume its practice of self-publishing standards, which hasn't been done
 for some time as much of its work has focused on extensions to existing IETF specifications (many
 of which were also developed by CalConnect). A new Ad Hoc on Publishing has been set up to review
 the obsolete processes and establish new ones. CalConnect also intends to begin co-publishing some
@@ -132,7 +132,7 @@ documents with other organizations with which we have liaisons.
 The TC CHAIRS committee has been renamed the Technical Coordination Commitee to better reflect the
 role and responsibilities of this group.
 
-A new work area has been proposed on “Party Crashing” - event invitations can be forwarded to
+A new work area has been proposed on "Party Crashing" - event invitations can be forwarded to
 uninvited persons who then can spoof the the systems to gain an invitation.
 
 The work on CALSPAM has proposed a new work item on establishing a mechanism whereby users can
@@ -158,7 +158,7 @@ Pending; Draft update in progress
 === TC CALENDAR
 
 * Response tokens for Party Crashing (NWI proposal from Google)
-* CALSPAM’s proposal for storing information about how events ended up in iCalendar.
+* CALSPAM's proposal for storing information about how events ended up in iCalendar.
 
 === TC DEVGUIDE
 
@@ -190,7 +190,7 @@ Maintain liaison with ISO TC 211, progress work
 == Plenary Meeting - Confirmed Future Events
 
 * 1&1 will host CalConnect XLIII on September 24-28, 2018, in Karlsruhe, Germany.
-* Google will host CalConnect XLIV on February 4-8, 2019, in Zürich, Switzerland.
+* Google will host CalConnect XLIV on February 4-8, 2019, in Zürich, Switzerland.
 * You Can Book Me (YCBM) will host CalConnect XLV on June 307, 2019 in Bedford,
 England.
 

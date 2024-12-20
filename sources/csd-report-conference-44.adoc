@@ -8,8 +8,7 @@
 :revdate: 2019-03-07T00:00:00Z
 :published-date: 2019-03-07T00:00:00Z
 :technical-committee: CHAIRS
-:docfile: csd-report-conference-44.adoc
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -51,14 +50,14 @@ This document was prepared by Technical Committee _{technical-committee}_.
 CalConnect XLIV took place February 5-8, 2019, hosted by Google in
 Zürich, Switzerland. A Time Zone Workshop was held Tuesday
 afternoon during the conference. The conference was held on
-Google’s premises, and was attended by a total of 31 people from 11
+Google's premises, and was attended by a total of 31 people from 11
 member organizations, and 5 external invitations to the workshop.
 
 This conference was organized along the guidelines from the
 previous conference in Karlsruhe; however, separate technical and
 general tracks were eliminated. Instead sessions were identified by
 session type. A single fee for the entire four-day conference was
-charged. Additionally, we schedule a “codefest” for Monday, 4
+charged. Additionally, we schedule a "codefest" for Monday, 4
 February, with open attendance.
 
 The Conference focused on strategic and possible work items in
@@ -93,8 +92,8 @@ Specifications in progress and not yet published are generally resident on GitHu
 
 === Documents at ISO
 
-* ISO/CC 19160-1 “Addressing — Digital addresses” in working draft at ISO/TC 211
-* ISO/CC 34000 “Date and time — Concepts and vocabulary” is under
+* ISO/CC 19160-1 "Addressing -- Digital addresses" in working draft at ISO/TC 211
+* ISO/CC 34000 "Date and time -- Concepts and vocabulary" is under
 NWIP ballot at ISO/TC 154, ballot opened Feb 4 will end on April 29.
 
 === Documents at the IETF

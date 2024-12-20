@@ -8,7 +8,7 @@
 :revdate: 2006-09-29
 :published-date: 2006-09-29
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:

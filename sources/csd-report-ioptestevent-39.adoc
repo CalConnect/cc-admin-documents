@@ -8,7 +8,7 @@
 :revdate: 2017-07-21
 :published-date: 2017-07-21
 :technical-committee: IOPTEST
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -73,7 +73,7 @@ OPTIONS request.
 
 We spent some time discussing various aspects of VCARD. There was a lot to be
 discussed around the exact meaning of the UID. The wording of the specifications
-suggest that it is associated with the actual entity — i.e. a human or a resource.
+suggest that it is associated with the actual entity -- i.e. a human or a resource.
 Many of us thought that it should really be tied to a particular representation of
 that entity. Associated with that was the issue of who or what should merge cards
 that appear to represent the same entity. A number of us felt that no merge should be

@@ -8,7 +8,7 @@
 :revdate: 2017-07-18
 :published-date: 2017-07-18
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -45,7 +45,7 @@ This document was prepared by Technical Committee _{technical-committee}_.
 
 CalConnect XXXIX took place on June 12-16, 2017, hosted by Tandem in Seattle, Washington. The
 CalConnect Test Event (Monday, Tuesday, and Wednesday morning) and Conference (Wednesday
-afternoon, Thursday and Friday) were held at Tandem’s headquarters at Galvanize in Seattle.
+afternoon, Thursday and Friday) were held at Tandem's headquarters at Galvanize in Seattle.
 
 The CalConnect Conference was attended by 16 people from 9 members plus a representative from the
 IETF. The Test Event/Developers Forum had 8 participants from 5 members and was largely devoted to
@@ -87,20 +87,6 @@ public or private areas.
 
 === New and Updated CalConnect Drafts at the IETF
 * Push Discovery and Notification Dispatch Protocol (TC CALENDAR)
-
-=== CalConnect Drafts in CALEXT Working Group Last Call at IETF
-
-* Event Publishing Extensions to iCalendar (TC CALENDAR)
-
-=== CalConnect Drafts in Progressing at CALEXT Working Group at IETF
-
-* Improved Support for iCalendar Relationships (TC CALENDAR
-
-=== New and Updated CalConnect Drafts at the IETF
-
-* Push Discovery and Notification Dispatch Protocol (TC CALENDAR)
-* Calendar Subscription Upgrades
-* JSCalendar: A JSON representation of calendar data
 
 == Technical Committee and Related Work
 
@@ -173,8 +159,8 @@ TC TESTER: Increase tests, decide how to maintain
 
 == Plenary Decisions
 
-* Jorte’s offer to host CalConnect XLII (June, 2018) in Tokyo, Japan was approved.
-* 1&1’s offer to host CalConnect XXLIII (September, 2018) in Karlsruhe, Germany was approved.
+* Jorte's offer to host CalConnect XLII (June, 2018) in Tokyo, Japan was approved.
+* 1&1's offer to host CalConnect XXLIII (September, 2018) in Karlsruhe, Germany was approved.
 
 == Future Events
 
@@ -185,7 +171,7 @@ TC TESTER: Increase tests, decide how to maintain
 
 The general format of the CalConnect Week is:
 
-* Monday morning through Wednesday noon, Test Event and Developer’s Forum (testing, tech
+* Monday morning through Wednesday noon, Test Event and Developer's Forum (testing, tech
 discussions)
 * Wednesday noon through Friday afternoon, Conference
 

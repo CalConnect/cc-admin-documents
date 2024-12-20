@@ -8,7 +8,7 @@
 :revdate: 2013-02-20
 :published-date: 2013-02-20
 :technical-committee: IOPTEST
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -42,7 +42,7 @@ This document was prepared by Technical Committee _{technical-committee}_.
 
 == Report
 
-NOTE: Incorporates material formerly distributed via the CalConnect Minutes newsletter, now
+NOTE: Incorporates material formerly distributed via the CalConnect _Minutes_ newsletter, now
 discontinued.
 
 The Interoperability Test Event at CalConnect XXVI took place on January 28-30, 2013, hosted

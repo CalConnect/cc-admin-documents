@@ -8,7 +8,7 @@
 :revdate: 2017-03-08
 :published-date: 2017-03-08
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -130,8 +130,8 @@ Closed and merged into TC CALENDAR.
 
 === TC IOPTEST
 
-Conducted Interoperability Testing and Developer’s Forum event at CalConnect XXXVIII.
-(Interoperability Test Event has been rebranded as Test Event and Developers’ Forum; significant
+Conducted Interoperability Testing and Developer's Forum event at CalConnect XXXVIII.
+(Interoperability Test Event has been rebranded as Test Event and Developers' Forum; significant
 technical discussions now taking place during the forum.) See separate report on Test Event at
 CalConnect XXXVIII.
 
@@ -179,7 +179,7 @@ be short-lived.
 
 The general format of the CalConnect Week is:
 
-* Monday morning through Wednesday noon, Developer’s Forum (testing, tech discussions)
+* Monday morning through Wednesday noon, Developer's Forum (testing, tech discussions)
 * Wednesday noon through Friday afternoon, Conference
 
 == Pictures from CalConnect XXXVIII

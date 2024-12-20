@@ -8,7 +8,7 @@
 :revdate: 2016-09-30
 :published-date: 2016-09-30
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -106,9 +106,9 @@ CalDAV-specific.
 === TC DEVGUIDE
 
 Significant additions during Test Event including porting the independent CalDAV and CardDAV
-Implementations websites to the Developer’s Guide. Will continue to push for external
+Implementations websites to the Developer's Guide. Will continue to push for external
 contributions and additional content. Interest in documenting libraries such as ical4j and libical
-in the Developer’s Guide.
+in the Developer's Guide.
 
 === TC EVENTPUB
 
@@ -129,18 +129,18 @@ practice; developing server feature matrix. Expect to put best practices in DEVG
 
 === TC IOPTEST
 
-Conducted Interoperability Testing and Developer’s Forum event at CalConnect XXXVII.
-(Interoperability Test Event has been rebranded as Test Event and Developers’ Forum; significant
+Conducted Interoperability Testing and Developer's Forum event at CalConnect XXXVII.
+(Interoperability Test Event has been rebranded as Test Event and Developers' Forum; significant
 technical discussions now taking place during the forum.)
 
-Lots of work on CalDAV Tester “Wrapper” developed by Ralf Becker; decided to initiate new TC
+Lots of work on CalDAV Tester "Wrapper" developed by Ralf Becker; decided to initiate new TC
 TESTER specifically to carry this tool forward to provide a black box test of standard appliances,
 improve server testing. In particular lack of clients at test events make this tool extremely
 valuable, potentially provides equivalent to reference implementation.
 
 === TC ISCHEDULE
 
-Definite interest in moving forward with the draft at the IETF. “Identify Problem” will not apply
+Definite interest in moving forward with the draft at the IETF. "Identify Problem" will not apply
 for most likely users including large organizations.
 
 === TC PUSH
@@ -184,14 +184,14 @@ ways forward. Will continue as PC until next event.
 
 The general format of the CalConnect Week is:
 
-* Monday morning through Wednesday noon, Developer’s Forum (testing, tech discussions)
+* Monday morning through Wednesday noon, Developer's Forum (testing, tech discussions)
 * Wednesday noon through Friday afternoon, Conference
 
 == Pictures from CalConnect XXXVII
 
 Pictures courtesy of Thomas Schäfer, 1&1
 
-[cols="a,a"]
+[%unnumbered,cols="a,a"]
 |===
 
 | [%unnumbered]

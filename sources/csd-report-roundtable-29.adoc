@@ -8,7 +8,7 @@
 :revdate: 2014-02-26
 :published-date: 2014-02-26
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -102,7 +102,7 @@ CalConnect on an Abstract API for Calendaring and Scheduling. The Ad Hoc recomme
 forming a Technical Committee and had produced a draft charter, an outline of an abstract API
 and some milestones, in addition to a draft Architecture for Calendaring and Scheduling.
 Deliverables are expected to be a well specified abstract API and a simple instantiation of that API
-– probably some sort of RESTful web api. Instantiation of the follow-on TC will occur shortly
+-- probably some sort of RESTful web api. Instantiation of the follow-on TC will occur shortly
 after the conference.
 
 === CALSCALE Ad Hoc

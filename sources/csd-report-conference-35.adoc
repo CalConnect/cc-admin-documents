@@ -8,7 +8,7 @@
 :revdate: 2016-02-03
 :published-date: 2016-02-03
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -169,7 +169,7 @@ consider promotion of implementations of the TZ data distribution service.
 
 TC IMIP will be established to pursue improving interoperability with iMIP and
 enhancing the user experience, as extending iSchedule for general usage has proven
-improbable due to the “identity crisis”.
+improbable due to the "identity crisis".
 
 == Future Events
 

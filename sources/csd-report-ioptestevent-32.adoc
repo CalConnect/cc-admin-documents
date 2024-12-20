@@ -1,4 +1,4 @@
-= Report on Interoperability Test Event XXXII, January 26-28,2015
+= Report on Interoperability Test Event XXXII, January 26-28, 2015
 :docnumber: 1502
 :copyright-year: 2015
 :language: en
@@ -8,7 +8,7 @@
 :revdate: 2015-02-18
 :published-date: 2015-02-18
 :technical-committee: IOPTEST
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:

@@ -8,7 +8,7 @@
 :revdate: 2013-07-08
 :published-date: 2013-07-08
 :technical-committee: CHAIRS
-:mn-document-class: csd
+:mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
@@ -177,7 +177,7 @@ Good progress since last roundtable in areas of:
 
 * STATUS / PARTSTAT with new status values and parameters
 * ORGANIZATION and other roles
-* Task Definitions – identification of the task type
+* Task Definitions -- identification of the task type
 * Task Relationships with recommendations for new RELTYPE values and a new parameter
 (GAP)
 
