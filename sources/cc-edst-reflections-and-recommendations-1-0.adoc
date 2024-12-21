@@ -1,14 +1,14 @@
 = CalConnect EDST Reflections and Recommendations
-:docnumber: 
+:docnumber: 0707
 :copyright-year: 2007
 ::copyright-holder: The Calendaring and Scheduling Consortium
 :language: en
-:doctype: administrative
+:doctype: advisory
 :edition: 1
 :status: published
-:revdate: 2014-09-14
-:published-date: 2014-09-14
-:technical-committee: DST Ad Hoc
+:revdate: 2007-09-14
+:published-date: 2007-09-14
+:technical-committee: DST ADHOC
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
@@ -21,6 +21,38 @@
 :role_2: editor
 
 .Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global
+non-profit organization with the aim to facilitate interoperability of
+collaborative technologies and tools through open standards.
+
+CalConnect works closely with international and regional partners,
+of which the full list is available on our website
+(https://www.calconnect.org/about/liaisons-and-relationships).
+
+The procedures used to develop this document and those intended for its
+further maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different
+types of CalConnect documents should be noted. This document was drafted in
+accordance with the editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be
+held responsible for identifying any or all such patent rights. Details
+of any patent rights identified during the development of the document
+will be provided in the Introduction.
+
+////
+TODO: re-enable when we finish the IPR policy
+and/or on the CalConnect list of patent
+declarations received (see www.calconnect.com/patents).
+////
+
+Any trade name used in this document is information given for the
+convenience of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee
+_{technical-committee}_.
 
 This document reviews the impact of implementation of
 Extended Daylight Savings Time, which moved the beginning of
@@ -29,7 +61,7 @@ technology industry and in particular calendaring and
 scheduling systems, and recommendations for what the
 industry should do about timezones going forward.
 
-This document is a followon to the advisories and compendium
+This document is a follow-on to the advisories and compendium
 of fixes which CalConnect collected and published prior to
 March 11, 2007.
 

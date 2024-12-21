@@ -1,5 +1,5 @@
 = CalDav Scheduling Requirements
-:docnumber: 
+:docnumber: 0703
 :copyright-year: 2007
 ::copyright-holder: The Calendaring and Scheduling Consortium
 :language: en
