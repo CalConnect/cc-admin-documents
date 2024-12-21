@@ -7,7 +7,7 @@
 :status: published
 :revdate: 2007-02-02
 :published-date: 2007-02-02
-:technical-committee: CHAIRS
+:technical-committee: CALCONNECT
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:

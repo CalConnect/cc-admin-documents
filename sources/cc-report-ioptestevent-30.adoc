@@ -7,7 +7,7 @@
 :status: published
 :revdate: 2014-06-09
 :published-date: 2014-06-09
-:technical-committee: CHAIRS
+:technical-committee: IOPTEST
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:

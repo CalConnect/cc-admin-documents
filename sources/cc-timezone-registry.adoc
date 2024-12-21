@@ -1,5 +1,5 @@
 = Timezone Registry and Service Recommendations
-:docnumber:
+:docnumber: 0606
 :copyright-year: 2006
 :language: en
 :doctype: administrative
