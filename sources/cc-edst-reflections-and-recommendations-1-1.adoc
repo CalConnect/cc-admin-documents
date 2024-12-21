@@ -1,7 +1,7 @@
 = CalConnect EDST Reflections and Recommendations
 :docnumber: 0707
 :copyright-year: 2007
-::copyright-holder: The Calendaring and Scheduling Consortium
+:copyright-holder: The Calendaring and Scheduling Consortium
 :language: en
 :doctype: advisory
 :edition: 1.1

@@ -1,7 +1,7 @@
 = CalDav Scheduling Requirements
 :docnumber: 0703
 :copyright-year: 2007
-::copyright-holder: The Calendaring and Scheduling Consortium
+:copyright-holder: The Calendaring and Scheduling Consortium
 :language: en
 :doctype: administrative
 :edition: 1.1
