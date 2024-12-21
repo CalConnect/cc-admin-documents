@@ -1,0 +1,296 @@
+= Calendaring and Scheduling Glossary of Terms
+:docnumber: 1102
+:copyright-year: 2006
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2006-10-12
+:published-date: 2006-10-12
+:technical-committee: USECASE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Jeff McCullough
+:affiliation: University of California at Berkeley
+:role: editor
+
+== Introduction
+
+This is Version 1.0 of the Glossary of Calendaring and Scheduling terms. It is a "living" document that will
+change over time as we add new terminology and enhance or improve upon existing terms.
+
+The document came about in an effort to compile, in one location, a common set of terminology with
+respect to calendaring and scheduling applications and standards. The document incorporates
+terminology already existing in calendaring standards such as RFC2445, RFC2446 and RFC2447as well
+as input from members of the Calendaring and Scheduling Consortium (CalConnect).
+
+Some glossary terms may not appear in published standards today. These are common calendaring
+terms that are included so that everyone refers to components in the same manner.
+As new standards evolve, the glossary will serve as a resource for those creating documents so that all
+the standards share a common set of terms.
+
+Calendaring and scheduling implementers will be able to utilize the glossary to assist them as they read
+and decipher calendaring standards. Calendaring and scheduling users will be able to use the glossary
+to help them better understand the terminology deployed by applications written using calendaring
+standards.
+
+Kindly forward any terms that should be added to the glossary to the Calendaring and Scheduling
+Consortium (calconnect.org) for approval and inclusion in the document.
+
+[heading=terms and definitions]
+== Glossary of Calendaring and Scheduling Terms
+
+=== Access control
+A mechanism to grant or deny privileges (Create, Read, Update, Delete) on calendars,
+events, tasks or journal entries to other calendar users.
+
+=== Access Control List
+A set or list of privileges, granted or denied to other calendar users, that define
+access control to a particular calendar, event, task or journal entry.
+
+=== Alarm
+A reminder notification for an event or a task. An example, alarms, may be used to define a
+reminder for a pending event or an overdue task. Times may be relative or predetermined.
+
+=== Attendee
+Participant of a calendar event or task. A participant can be the chair of a calendar event or
+task. That person's participation may be required or optional.
+
+=== CalDAV
+A standard protocol to allow calendaring and scheduling via extensions to the WebDAV
+protocol. Defined by two specifications, the first specifies a calendar access
+protocol that allows Calendar
+User Agents to access and manage calendar data in a calendar store accessible via a
+calendar service.
+The second specification defines how Calendar User Agents perform scheduling operations via a
+calendar service. The two drafts for these protocols can be found at http://ietf.osafoundation.org/caldav/.
+
+=== Calendar
+A collection of events, tasks, journal entries, etc. Examples include a person's or group's
+schedule, resource availability, and event listings.
+
+=== Calendar Access Rights
+A set of rules defining who may perform what operations, such as reading or
+writing information, on a given calendar.
+See also {{Access Control List}}.
+
+[.source]
+<<rfc3283>>
+
+=== Calendar Object
+A collection of components containing calendaring and scheduling information.
+
+=== Calendar Service
+A server application that provides calendar user agents access to calendar stores.
+
+=== Calendar Store (CS)
+A data repository that may contain several calendars as well as properties and
+components of those calendars.
+
+=== Calendar User (CU)
+A person that accesses their calendar information.
+
+=== Calendar User Agent (CUA)
+. Software with which the calendar user communicates with a calendar
+service or local calendar store to access calendar information.
+. Software that gathers calendar data on the Calendar User's behalf.
+
+=== CalConnect
+The Calendaring and Scheduling Consortium consisting of vendors and user groups
+interested in promoting and improving calendaring and scheduling standards and
+interoperability.
+
+=== Component
+A piece of calendar data such as an event, a task or an alarm. Information about
+components is stored as properties of those components.
+
+[.source]
+<<rfc3283>>
+
+=== Counter
+A counter-proposal sent by a participant to an event or task organizer to suggest a change to
+the event or task such as the scheduled date/time, list of participants, etc.
+
+=== Daylight Saving Time (DST)
+The period of the year in which the local time is adjusted forward, most
+commonly by one hour.
+
+=== Delegate
+A calendar user who has been assigned to participate in an event or task in place of one of the
+attendees in that event or task. An example of a delegate is a team member sent to a
+particular meeting as a substitute for one of his or her colleagues.
+
+=== Delegator
+A calendar user who has assigned his or her participation in an event or task to another
+calendar user. An example of a delegator is a busy executive who sends an employee to a meeting in his
+or her place.
+
+=== Designate
+A calendar user authorized to act on behalf of another calendar user. An example of a
+designate is an assistant who schedules meetings for his or her superior.
+
+=== Event
+A calendar object that is commonly used to represent things that mark time or use time.
+Examples include meetings, appointments, anniversaries, start times, arrival times, closing times.
+
+=== Freebusy
+A list of free and busy periods for a particular calendar user or resource. Primarily used for
+scheduling resources or meetings with other people. Time periods may be marked as
+busy, free, busy-unavailable
+(sometimes referred to as out of office) and busy-tentative.
+
+=== iCal
+
+The name of Apple Computer, Inc's calendar client. Often used as the abbreviation of
+the iCalendar standard.
+
+=== iCalendar
+The Internet Calendaring and Scheduling Core Object Specification. An IETF standard (RFC
+2445) for a text representation of calendar data. Scheduling operations are specified in RFC 2446.
+
+=== IETF (The Internet Engineering Task Force)
+An International community organization that develops and
+maintains the architecture of the worldwide Internet. The IETF issues standards known as RFCs (Request
+For Comments), several of which pertain to calendaring and scheduling.
+
+=== Instance
+A single occurrence in a recurring event.
+
+=== iMIP (iCalendar Message-Based Interoperability Protocol)
+An IETF standard (RFC 2447) for
+encapsulating iCalendar data in email messages.
+
+=== Invite
+A request to attend a calendar event sent as structured iCalendar data. Invitations can be used to
+schedule both calendar users and resources.
+
+=== Journal entry
+A note associated with a date stored with other iCalendar data, e.g. a call log.
+
+=== Local Calendar Store
+A calendar store (CS) that is on the same device as the calendar user agent
+(CUA).
+
+[.source]
+<<rfc3283>>
+
+=== MIME
+An acronym for Multipurpose Internet Mail Extensions, a specification for formatting non-ASCII
+messages, including iCalendar data, graphics, audio and video, so that they can be sent over the
+Internet. MIME is supported by email clients and web browsers.
+
+=== Negotiation
+
+Dee {{Scheduling}}
+
+=== Notification
+An alert sent to a calendar user. Examples include alerts for new calendar items, changes to
+existing items, or reminders about existing items. Notification methods include: sound from the computer,
+visual feedback on the computer, email, paging, voicemail and telephone call.
+
+=== Organizer
+A calendar user who creates a calendar item.
+
+=== Priority
+A level of importance and/or urgency calendar users can apply to Tasks and Events.
+
+=== Property
+A description of some element of a component, such as a start time, title or location. Properties
+can have parameters associated with them to modify or add to their meaning.
+
+=== Publish
+To make calendar information, such as freebusy time, available to a select group or
+to the public.
+
+=== Recurring
+An event or task that happens more than once either with a regular interval (ex. daily, weekly,
+monthly) that can be expressed by a rule or with an explicit series of dates/times.
+
+=== Reminder
+
+See {{Notification}}.
+
+=== Remote Store
+A calendar store that is not on the same machine/device as the calendar user agent
+
+=== Repeating
+See {{Recurring}}.
+
+=== Resource
+Shared equipment, materials, or facilities that can scheduled for use by calendar users.
+Examples include: conference rooms, computers, audio visual equipment, and vehicles.
+
+=== RFC (Request for comments)
+IETF and other standards bodies use RFCs to define Internet standards.
+They document most of the protocols, mechanisms, procedures and best practices in use
+on the Internet.
+
+=== RSVP
+A request for status updates sent by the organizer for event invitations or tasks.
+
+=== Schedule
+See {{Calendar}}.
+
+=== Scheduling
+The exchange of request/invitations and responses between organizers and attendees of
+scheduled events, tasks or journal entries.
+
+=== Standard Time
+Originally developed as a consistent time system for the railroads using Greenwich
+Mean Time (GMT) (see {{UTC}} below). {{Time zone,Time zones}} (see below) and DST shifts are based upon standard
+time.
+
+=== Task
+A calendar object that is commonly used to represent work items.
+
+=== Text/calendar
+The MIME content type for encoding iCalendar objects. Example usage includes: email,
+web pages.
+
+=== Time zone
+Areas of the Earth that have adopted the same local time. Time zones are generally centered
+on meridians of a longitude, that is a multiple of stem:[15 "unitsml(deg)"], thus
+making neighboring time zones one hour apart.
+However, the one hour separation is not universal and the shapes of time zones can be quite irregular
+because they usually follow the boundaries of states, countries or other administrative areas. Time zones
+are calendar components that define the time of an event relative to {{UTC}} (see below).
+
+=== To-do
+See {{Task}}.
+
+=== Transparency
+A property of an event that defines whether it will appear free or busy in free/busy time
+searches.
+
+=== UTC
+Coordinated Universal Time, abbreviated UTC. Also Zulu Time (alphabetized listing of time zones).
+UTC is designated to be at zero longitude, also Greenwich mean time (GMT). Is the basis for all local time
+offsets. Offsets are either positive or negative. An example is UTC-8 (Pacific Standard Time).
+
+Some iCalendar examples:
+
+* DTSTART:19970714T133000 ;Local time
+* DTSTART:19970714T173000Z ;UTC time
+* DTSTART;TZID=US-Eastern:19970714T133000 ;Local time and time zone reference
+
+=== vCalendar
+A text representation of calendar and scheduling data created by the Versit consortium. The
+iCalendar specification is based on the work of vCalendar.
+
+=== xCal
+Representing calendar data in XML which corresponds closely to the iCalendar
+standard. There is no current standard.
+
+[bibliography]
+== References
+
+* [[[caldav,1]]], CalDAV -- http://ietf.osafoundation.org/caldav/
+
+* [[[ietf,2]]], IETF -- http://www.ietf.org
+
+* [[[rfc,3]]], RFCs - http://www.ietf.org/rfc.html
+
+* [[[rfc3283,hidden(RFC 3283)]]]
