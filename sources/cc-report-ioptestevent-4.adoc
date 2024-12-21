@@ -1,0 +1,247 @@
+= July 2004 CalConnect Interoperability Test Report
+:docnumber: 0403
+:copyright-year: 2004
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2004-07-30
+:published-date: 2004-07-30
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Report
+
+=== Participants
+
+* Dave Thewlis - Calendaring and Scheduling Consortium
+* Pat Egen - IETF Co-chair and Calendaring and Scheduling Consortium
+* Nathaniel S. Borenstein, IBM
+* Chris Stoner -- IBM
+* Keith MacDonald -- Oracle
+* Simon Vaillancourt -- Oracle
+* Jeff McCullough -- University of California at Berkeley - our host
+
+=== Products Tested
+
+* Lotus Notes 7
+* Oracle Collaboration Suite
+
+=== General Summary
+
+During our testing event at UC Berkeley two vendors participated. This was the fourth in a
+series of interoperability testing events for RFC 2445, 2446, and 2447. The first two were
+"onsite" events and the third was a "virtual" event with testing occurring via conference calls and
+email testing.
+
+At the last three testing events, the testing done was more at a vendor to vendor level rather than
+at a pure IETF "RFC Conformance" level. By Conformance testing, we mean identifying
+support for and testing explicit MUST/MUST NOT/SHOULD/SHOULD NOT/ and MAY
+requirements.
+
+In preparation for this interop event and to satisfy the requirement for RFC conformance testing,
+a matrix of all three RFC's was prepared and this was used as our driver for testing compliance.
+We, as a group, went through each and every item and validated whether the requirement was
+supported by each vendor. In most cases, where both vendors did not support a particular
+requirement, we still tested the action to validate this "non-support." From that perspective, this
+was probably the most productive interop of all the events.
+
+Since there were only two participants at this interop, we will need at least one more
+interoperability event to fully identify what needs to be removed from these drafts. Now that we
+have a complete set of matrices as well as test scenarios and scripts, we can fully define what
+works and doesn't work. I have included the notes from the other three events at the end of this
+document for comparison.
+
+This document will highlight the key findings from this exercise. The matrix spreadsheet with all
+items noted is attached to this report. The spreadsheet shows what is and is not supported by the
+two participants. Based on past interops, and discussions held at this meeting we have
+ascertained the following:
+
+* Most vendors are not doing Journals. It appears we can probably remove any VJOURNAL
+items from all drafts without significant ramifications.
+* Recurring and repeating meetings still have a bit of mystery and ambiguity associated with
+them. This was obvious during testing and is well documented and discussed on the various
+lists. We talked about the differences between recurring and repeating meetings and we look
+to see this discussed further on all the mailing lists.
+* VTODO's are not supported by either vendor and there were problems in past interops. This
+may be something that can be removed and added back as another draft that just pertains to
+VTODOs.
+
+The next page identifies the items that are supported by both vendors and the items not supported
+on the three drafts. Note - there are 201 specific items in RFC 2445, 74 items in RFC 2446, and
+14 items in RFC 2447. Any item not shown on the summary page means only one of the two
+vendors during this interoperability event supports that item.
+
+I created a table that counts the number of items supported and not supported by both vendors as
+well as a breakdown of how many of each item each vendor does or does not support. I also
+created a table that shows the specific items supported by both vendors and a table showing the
+specific items NOT supported by both vendors.
+
+In summary, we are farther along than we were during the first interop. But we have a ways to
+go. There was discussion at this interop about opening a new mailing list to work on
+simplification of these drafts in order to improve/enhance interoperability opportunities.
+
+The results for both vendors showed the following:
+
+[%unnumbered,options=header]
+|===
+| Draft | Items Supported | Items Not Supported
+| RFC 2445 | 114 | 26
+| RFC 2446 | 15 | 5
+| RFC 2447 | 8 | 5
+|===
+
+By Vendor, the numbers look like this:
+
+[%unnumbered,options=header]
+|===
+| Draft | Items Supported | Items Not Supported
+
+3+h| Vendor 1
+| RFC 2445 | 132 | 69
+| RFC 2446 | 35 | 39
+| RFC 2447 | 9 | 5
+
+3+h| Vendor 2
+| RFC 2445 | 137 | 64
+| RFC 2446 | 45 | 29
+| RFC 2447 | 8 | 6
+|===
+
+== Identification of Specific Items on the Drafts
+
+=== Items supported by BOTH vendors
+
+==== iCalendar - RFC 2445 - 114 items out of 201
+
+* 2.3 International Considerations
+* 4.1 Content Lines
+* 4.2 Property Parameters
+* 4.2.12 Participation Status
+* 4.2.19 Time Zone Identifier
+* 4.2.20 Value Data Types
+* 4.3.3 Calendar User Address
+* 4.3.5 Date-Time
+* 4.3.10 Recurrence Rule
+* 4.3.11 Text
+* 4.3.12 Time
+* 4.3.14 UTC Offset
+* 4.4 iCalendar Object
+* 4.6 Calendar Components
+* 4.6.1 Event Component
+* 4.6.2 To-do Component
+* 4.6.5 Time Zone Component
+* 4.7 Calendar Properties
+* 4.7.2 Method
+* 4.7.3 Product Identifier
+* 4.7.4 Version
+* 4.8.1.4 Comment
+* 4.8.1.5 Description
+* 4.8.1.6 Geographic Position
+* 4.8.1.7 Location
+* 4.8.1.10 Resources
+* 4.8.1.12 Summary
+* 4.8.2.1 Date/Time Completed
+* 4.8.2.2 Date/Time End
+* 4.8.2.4 Date/Time Start
+* 4.8.2.7 Time Transparency
+* 4.8.3.1 Time Zone Identifier
+* 4.8.3.2 Time Zone Name
+* 4.8.3.3 Time Zone Offset From
+* 4.8.3.4 Time Zone Offset To
+* 4.8.4.1 Attendee
+* 4.8.4.2 Contact
+* 4.8.4.3 Organizer
+* 4.8.4.4 Recurrence ID
+* 4.8.4.7 Unique Identifier
+* 4.8.5.1 Exception Date/Times
+* 4.8.5.4 Recurrence Rule
+* 4.8.6.1 Action
+* 4.8.7.2 Date/Time Stamp
+* 4.8.7.4 Sequence Number
+* 4.8.8.2 Request Status
+* 6 Recommended Practices
+
+==== iTIP - RFC 2446 - 15 items out of 74
+
+* 3.1 Common Component Restrictions
+* 3.2.2 VEVENT REQUEST
+* 3.2.2.1 Rescheduling an Event
+* 3.2.2.2 Updating or Reconfirmation of an Event
+* 3.2.3 VEVENT REPLY
+* 3.2.4 VEVENT ADD
+* 3.2.4 VEVENT CANCEL
+* 3.6 Status Replies
+* 3.7.2 Attendee Property Considerations
+* 5 Application Protocol Fallbacks
+
+==== iMIP - RFC 2447 - 8 items out of 14
+
+* 2.3 [RFC-822] Addresses
+* 2.4 Content Type (all)
+* 2.5 Content-Transfer-Encoding
+* 2.6 Content-Disposition
+
+=== Items NOT supported by BOTH vendors
+
+==== iCalendar - RFC 2445 - 26 of 201 items
+
+* 4.1.1 List and Field Separators
+* 4.2.6 Directory Entry Reference
+* 4.3.5 Date-Time
+* 4.3.9 Period of Time
+* 4.6.3 Journal Component
+* 4.6.5 Time Zone Component
+* 4.8.4.3 Organizer
+* 4.8.4.5 Related To
+* 4.8.6.3 Trigger
+* 4.8.7.4 Sequence Number
+
+==== iTIP - RFC 2446 - 5 of 74 items
+
+* 3.1 Common Component Restrictions
+* 3.2.2.6 Forwarding to An Uninvited CU
+* 3.3 Methods For VFREEBUSY Components
+* 3.3.2 VFREEBUSY REQUEST
+* 3.3.3 VFREEBUSY REPLY
+* 3.4.2.4 REQUEST Forwarded To An Uninvited Calendar User
+* 3.4.1 VTODO PUBLISH
+* 3.4.5 VTODO CANCEL
+* 3.4.6 VTODO REFRESH
+* 3.5.1 VJOURNAL PUBLISH
+* 3.5.2 VJOURNAL ADD
+* 3.5.3 VJOURNAL CANCEL
+* 3.7.2 Attendee Property Considerations
+
+==== iMIP - RFC 2447 - 6 of 16 items
+
+* Section 3 - security considerations
+
+<<<
+
+[align=center]
+*Previous interop results*
+
+<<<
+
+include::cc-report-ioptestevent-1.adoc[]
+
+<<<
+
+include::cc-report-ioptestevent-2.adoc[]
+
+<<<
+
+include::cc-report-ioptestevent-3.adoc[]

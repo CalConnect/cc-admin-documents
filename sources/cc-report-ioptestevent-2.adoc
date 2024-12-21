@@ -1,0 +1,334 @@
+== CalConnect II -- April, 2001
+
+IETF CALSCH Working Group Interoperability Testing . Held Wed. April 11, 2001 - Fri. April
+13, 2001 - 8:30 a.m. - 6:00 p.m.
+
+This second interop test was held at Stanford University in Palo Alto, CA . Stanford gratiously
+donated the use of their facilities and network in order to help further the movement of our
+standards. This interop focused on iCalendar, iTIP and iMIP. The testing matrix can be found
+on www.calsch.org.
+
+The first day Pat Egen, IETF CALSCH working group co-chair introduced everyone and
+established the ground rules as well as let everyone know the network logistics within Stanford
+and to her server at www.egenconsulting.com.
+
+=== Participants
+
+The participants were:
+
+* George Babics, Steltor: georgeb@steltor.com
+* Alan Davies, Steltor: aland@steltor.com
+* Tom Ransdell, Iris: transdell@iris.com
+* Anita Paci, Iris: apaci@iris.com
+* John Sun, Netscape: jsun@netscape.com
+* Malika Parekh, Netscape: malika@netscape.com
+* Pat Egen pregen@egenconsulting.com
+
+=== Products Tested
+
+Products and released tested:
+
+==== Steltor
+
+* CorporateTime Server 6.0 Alpha
+* CorporateTime Outlook Connector 3.0
+* CorporateTime Native Client 6.0 Alpha
+* CorporateTime iMIP/iTIP Alpha Helper Application
+
+==== Lotus/Iris
+
+* Lotus Domino and Notes Release RNext
+
+==== iPlanet
+
+* Calendar Server Version 5.next
+
+== General Summary
+
+These notes are "homogenized" - in other words, names of vendors have been removed so you
+can't tell who is who. Once the draft moves forward, we will post which vendor supports which
+component. For purposes of this document, I will call them Vendor 1, Vendor 2 and Vendor 3. I
+have also included a section with general notes as related by each vendor.
+
+=== Vendor 1 notes/results
+
+Overall there was good interoperability. In general the vendors were able to interoperate. They
+were able to invite, reply, reschedule, and cancel to single instance meetings. There was some
+problems with the timezones that were used in recurrence rules, as a result only minimal testing
+was done with events with multiple occurrences. Finally, even though Microsoft was not there,
+some interoperability was done with Outlook.
+
+[%unnumbered,options=header,headerrows=2]
+|===
+| 2+| Vendor 1 2+| Vendor 2 2+|Vendor 3
+| iTIP Methods | Send | Accept | Send | Accept | Send | Accept
+
+| Request (Single Instance Event) | yes | yes | yes | yes | yes | yes
+| Request (Multiple Instance Event without RRULE) | yes | yes | yes | yes | yes | yes
+| Request (Multiple Instance Event with RRULE) | yes | yes | no | no | no | yes
+| Reply | yes | yes | yes | yes | no | yes
+| Add | no | yes{blank}footnote:ut[untested] | no | yes{blank}footnote:ut[] | no | no
+| Cancel | yes | yes | yes | yes | yes | ?
+| Counter | no | yes{blank}footnote:ut[] | ? | ? | no | no
+| Decline-Counter | no | yes{blank}footnote:ut[] | ? | ? | no | no
+| Refresh | no | yes | yes | yes{blank}footnote:ut[] | no | no
+| Publish | no | yes{blank}footnote:ut[] | no | yes{blank}footnote:ut[] | no | yes
+
+7+| Components
+| VEVENT | yes | yes | yes | yes | yes | yes
+| VJOURNAL | no | no | no | no | no | no
+| VTODO | no | no | yes | yes{blank}footnote:ut[] | no | yes{blank}footnote:ut[]
+| VTIMEZONE | yes | yes | no | no | no | yes
+| VALARMS | no | yes{blank}footnote:ut[] | no | yes{blank}footnote:ut[] | no | no
+|===
+
+NOTE: "no" indicates that a vendor was unable to support a feature due to not implementing it,
+bugs, or due to misinterpretation of the RFCs
+
+==== Other Things That Worked
+
+* Vendor1 was able to invite using recurrence rules
+* Vendor2 was able to delegate
+* Vendor2 was able to send VTODOs
+
+What did not work:
+
+* Vendor 2 was unable to support more than one instance on the same day
+* No one supported sending floating time events
+* Vendor 2 did not support event durations less than fifteen minutes
+* Vendor 3 did not support slash format in rdates
+* Vendor 2 was unable to send a response if RSVP was false (point for future discussion about
+meaning of RSVP)
+* Vendor 3 did not escape any of their special characters
+* Some of Vendor 2's lines were longer than permitted in iCalendar
+
+=== Vendor 2 notes/results
+
+[%unnumbered,options=header]
+|===
+| iCalendar Method | Vendor 2 supported | Test with Vendor 1 | Test with Vendor 3
+| *Event Publish* | yes | not tested | not tested
+| _Event Publish_ | yes | not tested | not tested
+| Event Request | - | - | -
+| New Event | - | - | -
+| *non repeating* | yes | tested | tested
+| _non repeating_ | yes | tested | tested
+| *RRULE repeating no exceptions* | yes | tested | tested
+| _RRULE repeating no exceptions_ | yes | tested | tested
+| *RRULE with EXRULE* | will not create | not tested | not tested
+| _RRULE with EXRULE_ | yes | not tested | not tested
+| *RRULE with EXDATES* | will not create | not tested | not tested
+| _RRULE with EXDATES_ | yes | not tested | not tested
+| *RDATES repeating no exceptions* | yes | not tested | not tested
+| _RDATES repeating no exceptions_ | yes | not tested | not tested
+| *RDATES with EXRULE* | will not create | not tested | not tested
+| _RDATES with EXRULE_ | yes | not tested | not tested
+| *RDATES with EXDATES* | will not create | not tested | not tested
+| _RDATES with EXDATES_ | yes | not tested | not tested
+| *with attachment* | yes | not tested | not tested
+| _with attachment_ | yes | not tested | not tested
+| Broadcast | - | - | -
+| *non repeating* | yes | tested | not tested
+| _non repeating_ | yes | tested | ?
+| *RRULE repeating no exceptions* | yes | not tested | not tested
+| _RRULE repeating no exceptions_ | yes | not tested | not tested
+| *RRULE with EXRULE* | will not create | not tested | not tested
+| _RRULE with EXRULE_ | yes | not tested | not tested
+| *RRULE with EXDATES* | will not create | not tested | not tested
+| _RRULE with EXDATES_ | yes | not tested | not tested
+| *RDATES with no exceptions* | yes | not tested | not tested
+| _RDATES with no exceptions_ | yes | not tested | not tested
+| *RDATES with EXRULE* | will not create | not tested | not tested
+| _RDATES with EXRULE_ | yes | not tested | not tested
+| *RDATES with EXDATES* | will not create | not tested | not tested
+| _RDATES with EXDATES_ | yes | not tested | not tested
+| *with attachment* | yes | not tested | not tested
+| _with attachment_ | yes | not tested | not tested
+| Reschedule | - | - | -
+| *Non repeating* | yes | not tested | not tested
+| _Non repeating_ | yes | not tested | not tested
+| *Repeating all* | yes | not tested | not tested
+| _Repeating all_ | yes | not tested | not tested
+| *Individual event of repeat set* | yes | not tested | not tested
+| _Individual event of repeat set_ | yes | not tested | not tested
+| Update | - | - | -
+| *Non repeating* | yes | not tested | not tested
+| _Non repeating_ | yes | not tested | not tested
+| *Repeating all* | yes | not tested | not tested
+| _Repeating all_ | yes | not tested | not tested
+| *Individual event of repeat set* | yes | not tested | not tested
+| _Individual event of repeat set_ | yes | not tested | not tested
+| Event Reply | - | - | -
+| Accept | - | - | -
+| *Non repeating* | yes | tested | tested
+| _Non repeating_ | yes | tested | tested
+| *Repeating all* | yes | tested | tested
+| _Repeating all_ | yes | tested | tested
+| *Individual event from repeat set* | yes | not tested | not tested
+| _Individual event from repeat set_ | | not tested | not tested
+| Decline | - | - | -
+| *Non repeating* | yes | ? | ?
+| _Non repeating_ | yes | ? | ?
+| *Repeating all* | yes | ? | ?
+| _Repeating all_ | yes | ? | ?
+| *Individual event from repeat set* | yes | not tested | not tested
+| _Individual event from repeat set_ | yes | not tested | not tested
+| Delegate | - | - | -
+| *Non repeating* | yes | not tested | not tested
+| _Non repeating_ | yes | not tested | not tested
+| *Repeating all* | yes | not tested | not tested
+| _Repeating all_ | yes | not tested | not tested
+| *Individual event from repeat set* | yes | not tested | not tested
+| _Individual event from repeat set_ | yes | not tested | not tested
+| Event Refresh Request | - | - | -
+| *Non repeating* | yes | not tested | not tested
+| _Non repeating_ | yes | not tested | not tested
+| *Repeating all* | yes | not tested | not tested
+| _Repeating all_ | yes | not tested | not tested
+| Event Counter | - | - | -
+| *Non repeating* | yes | not tested | not tested
+| _Non repeating_ | yes | not tested | not tested
+| *Repeating all* | yes | not tested | not tested
+| _Repeating all_ | yes | not tested | not tested
+| *Individual event from repeat set* | yes | not tested | not tested
+| _Individual event from repeat set_ | yes | not tested | not tested
+| *Event DeclineCounter* | yes | not tested | not tested
+| _Event DeclineCounter_ | yes | not tested | not tested
+| *Event Add* | not supported | not tested | not tested
+| _Event Add_ | not supported | not tested | not tested
+| Event Cancel | - | - | -
+| *Cancel Non repeating* | yes | tested | tested
+| _Cancel Non repeating_ | yes | tested | tested
+| *Cancel Repeating all* | yes | tested | tested
+| _Cancel Repeating all_ | yes | tested | tested
+| *Cancel Individual event from repeat set* | yes | not tested | not tested
+| _Cancel Individual event from repeat set_ | yes | not tested | not tested
+| *Remove individual from non repeating* | yes | not tested | not tested
+| _Remove individual from non repeating_ | yes | not tested | not tested
+| *Remove individual from entire repeat set* | yes | not tested | not tested
+| _Remove individual from entire repeat set_ | yes | not tested | not tested
+| *Remove individual from individual event of RS* | yes | not tested | not tested
+| _Remove individual from individual event of RS_ | yes | not tested | not tested
+| *ToDo Publish* | yes | not tested | not tested
+| _ToDo Publish_ | yes | not tested | not tested
+| ToDo Request | - | - | -
+| New ToDo | - | - | -
+| *Non repeating* | yes | not tested | not tested
+| _Non repeating_ | yes | not tested | not tested
+| RRULE repeating no exceptions | yes | |
+| RRULE with EXRULE | will not create | |
+| RRULE with EXDATES | will not create | |
+| RDATE repeating no exceptions | yes | |
+| RDATES with EXRULE | will not create | |
+| RDATES with EXDATES | will not create | |
+| Reschedule | - | - | -
+| Non repeating | yes | |
+| Repeating all | yes | |
+| Individual event of repeat set | yes | |
+| Update | yes | |
+| ToDo Reply | - | - | -
+| Accept | - | - | -
+| Non repeating | yes | |
+| Repeating all | yes | |
+| Individual event from repeat set | yes | |
+| Decline | - | - | -
+| Non repeating | yes | |
+| Repeating all | yes | |
+| Individual event from repeat set | yes | |
+| ToDo Add | no | |
+| ToDo Cancel | - | - | -
+| Cancel Non repeating | yes | |
+| Cancel Repeating all | yes | |
+| Cancel Individual event from repeat set | yes | |
+| Remove individual from non repeating | yes | |
+| Remove individual from entire repeat set | yes | |
+| Remove individual from individual event of RS | yes | |
+| ToDo Refresh Request | yes | |
+| ToDo Counter | - | - | -
+| Non Repeating | yes | |
+| Repeating all | yes | |
+| Individual event from repeat set | yes | |
+| ToDo DeclineCounter | yes | |
+| FreeBusy Publish | not yet | |
+| FreeBusy Request | not yet | |
+| FreeBusy Reply | not yet | |
+| VJournal Publish | no planned support | |
+| VJournal Add | no planned support | |
+| VJournal Cancel | no planned support | |
+| Status Reply | not yet | |
+|===
+
+[NOTE]
+====
+*Sending*:: *in this font*;
+_Receiving_:: _in italics_.
+====
+
+Some issues found were UID problems and then in timezone problems.
+
+The only other interesting problem was distinguishing between removing a person and canceling.
+From my point of view we did not end up doing a lot of testing. I am including a table of what
+we support and what we tested. The table is not completed except for EVENTS
+
+Other Issues encountered while doing ICAL testing at CalConnect2.
+
+. Sent to a Bcc user via Location Doc: "Through xxxx Server/MIME format"; Person Doc:
+"Prefers MIME". The Bcc user receives an invitation with all of the Typical Workflow
+actions. Error: S/he should only have the "Add to Calendar" action.
+. Reschedule notices are not displaying invitee response actions.
+. Invitations from a French Vendor 3 client are received with no subject or date/time fields.
+. Cancellation notices being received as Updates from vendor 1. Upon opening notice, you get
+the correct pop-up indicating that the meeting has been cancelled and the entry is removed
+from the Calendar. However, the "Update Calendar" button is not hidden, and if you click on
+it it will recreate the entry.
+. Cancellation of a repeating meeting from Vendor 3 doesn't remove entries from Calendar.
+. Custom repeats from Vendor 3 (rdates) only display the first date in the "Repeat Options"
+dialog in invitee's Calendar entry.
+
+=== Vendor 3 Results
+
+Comments from Vendor 3.
+
+. Vendor 2 and Vendor 1 can retrieve EVENT REQUEST messages from Vendor 3
+Server - But they would prefer that the Vendor 3 IMIP messages come in the
+"multipart/mixed" MIME format. We have included this item in our bug list.
+. We tried to import a REPLY from the other vendors. We were able to import Vendor 2's
+REPLY . However, we could not import Vendor 1's REPLY messages. This was
+because they were inserting the Recurrence-ID in the event REPLY message even
+though it was a non-recurring VEVENT. Also, we had a bug in handling RSVP. We
+were saving the change in the RSVP value of the attendee, which caused a UI bug. (In
+our User Interface, the attendee was moved to an INFORM)
+. Vendor 1 and 2 can receive our recurring EVENT REQUEST invitations.
+. We can import Vendor 1 and 2's recurring REPLY messages. However, we get the same
+number of e-mails as instances (i.e. 60 replies (messages) to 1 recurring event)
+. We can import CANCEL messages from Vendor 1
+. Vendor 2 could not import our mail messages from a Spanish or French user. -- Vendor 1
+can display them OK using the Eudora mail program.
+. We can import a recurring REQUEST from Vendor 2
+. Vendor 4 created an event. They sent two REQUEST messages, sequence=0,
+sequence=1, the first one sent RECURRENCE-ID, the second one did not. This is
+Vendor 1's bug, and they may have fixed it.
+
+What about others:
+
+. No one implemented ADD.
+. No one tested COUNTER or DECLINECOUNTER
+
+The Vendor 3 team is working on fixing CalConnect-related bugs and will include the fixes in
+future releases.
+
+=== Chair Comments
+
+This interop compared to the first one was a world of difference. Many many more things
+worked and we were able to spend more time testing elements.
+
+While Vendor 2 shows a lot "Untested", after reading notes, I believe many of these items were
+indeed tested. We have developed a new testing form that will be used on the next interop test. I
+know one vendor felt we had not done enough testing - I think he really wanted to prove it all
+works. Well, most of it did! We still have a ways to go, but for the first time, everyone feels that
+we have made progress and there is a light at the end of the tunnel. The best part of the interop
+was the interactions between the attendees. That will help ongoing efforts tremendously.
+Everyone wants to do the next interop within the next 6-9 months. We don't want to wait too
+long now that we have momentum.
+
+By Patricia Egen
