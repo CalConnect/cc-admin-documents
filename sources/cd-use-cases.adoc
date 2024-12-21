@@ -1,0 +1,526 @@
+= CalDav Use Cases
+:docnumber: 0507
+:copyright-year: 2005
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2005-09-26
+:published-date: 2005-09-26
+:technical-committee: CALDAV
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Bernard Desruisseaux
+:affiliation: Oracle
+:role: editor
+
+.Foreword
+
+This document is one in a series of use case documents that the Calendaring and
+Scheduling Consortium is developing to help better define the needs of different
+calendaring and scheduling user groups. As such, this document provides a list of use
+cases for a calendar access protocol only. Other use case documents will cover
+different areas of calendaring and scheduling, and will be made available by the
+Consortium in the usual manner.
+
+While this list of use cases was developed to assist in the development of the CalDAV
+protocol, none of the use cases are specific to CalDAV, that is, this list of use
+cases should apply to any calendar access protocol. It is expected that this document
+will be used as a basis to further develop technical requirements for a calendar
+access protocol such as CalDAV.
+
+== Introduction
+
+This document provides a list of use cases that the members of the Calendaring and
+Scheduling Consortium believe should be covered by a calendar access protocol. While
+this list of use cases was developed to assist in the development of the CalDAV
+protocol, none of the use cases are specific to CalDAV, that is, this list of use
+cases should apply to any calendar access protocol. It is expected that this document
+will be used as a basis to further develop technical requirements for a calendar
+access protocol such as CalDAV.
+
+All the use cases involves any of the following actors:
+
+* Attendee: a user who is invited to a given calendar object;
+* Organizer: a user that act as the organizer of a given calendar object.
+* User: a user accessing or managing a calendar store;
+
+Unless stated otherwise, the actor in any use case could also be a user authorized to work on behalf of the actor specified in each use case.
+
+NOTE: The use cases only covers functionality related to events and tasks, that is, there are no use cases related to journal entries.
+
+== Terminology
+
+This document makes use of the following terms:
+
+=== Access Control List
+
+Set of all privileges granted or denied to any “security principal” on a given “calendar” or “calendar object”;
+
+=== Calendar
+
+Container of “calendar objects”;
+
+=== Calendar object
+
+Resource defining calendar components such as events and tasks;
+
+=== Security principal
+
+An actor or a group of actors that initiates calendar operations. Security principals may either be: (a) authenticated users, (b) unauthenticated users, (c) specific users, or (d) specific groups of security principals.
+
+== Calendar Access
+
+=== Create calendar object
+
+==== {blank}
+A user wants to create a new event/task in a given calendar.
+
+==== {blank}
+A user wants to mark a period of time as busy in a given calendar.
+
+=== Modify calendar object
+
+==== {blank}
+A user wants to create/delete one or multiple instances of an existing calendar object.
+
+==== {blank}
+A user wants to add/modify/delete information (e.g., summary, location, start time,
+status, access classification, list of attendees, participation status, attachment,
+etc.) for one or multiple instances of an existing calendar object.
+
+==== {blank}
+A user wants to create/delete an alarm for one or multiple instances of an existing
+calendar object.
+
+==== {blank}
+A user wants to modify the information (e.g., reminder lead time, etc.) of the alarms
+of one or multiple instances of an existing calendar object.
+
+==== {blank}
+A user wants to create/modify/delete an alarm on a calendar object, on which he has
+at least read access, in a way that the alarm will only apply to him, will only be
+visible to him and can only be modified or deleted by him (or deleted by the system
+if the associated calendar object has been deleted).
+
+==== {blank}
+A user wants to mark a calendar object, on which he has at least read access, to
+specify that it should impact his free busy time info.
+
+=== Delete calendar object
+
+==== {blank}
+A user wants to mark for deletion one or multiple instances of an existing event/task
+in a way that the information for the marked instances will be preserved.
+
+==== {blank}
+A user wants to unmark one or multiple instances of an existing event/task that are
+marked for deletion.
+
+==== {blank}
+A user wants to delete a calendar object.
+
+==== {blank}
+A user wants to delete one or multiple calendar objects based on search criteria
+(e.g., all events that occurred more than six months ago).
+
+==== {blank}
+A user wants to delete (permanently remove) all the calendar objects marked for
+deletion in his calendar.
+
+=== Query calendar object
+
+==== {blank}
+A user wants to find all the events or tasks in a given calendar.
+
+==== {blank}
+A user wants to find all the events in a given calendar that have an instance
+scheduled to overlap a given time period (e.g., a day, a week, a month, etc.).
+
+==== {blank}
+A user wants to find all the tasks in a given calendar that have an instance with a
+start date or due date included in a given time period (e.g., a day, a week, a month,
+etc.).
+
+==== {blank}
+A user wants to find all the tasks in a given calendar that have a pasted due date
+and that are not completed.
+
+==== {blank}
+A user wants to find all the events/tasks in a given calendar that have an instance
+with an alarm scheduled to trigger during a given time period (e.g., later today).
+
+==== {blank}
+A user wants to find all the events in a given calendar for which a particular user
+is the organizer.
+
+==== {blank}
+A user wants to find all the events in a given calendar for which he needs to respond
+to confirm his participation status.
+
+==== {blank}
+A user wants to find all the events in a given calendar for which a specific user was
+an attendee.
+
+==== {blank}
+A user wants to find all the events in a given calendar for which there are attendees
+that have not yet confirmed their participation status.
+
+==== {blank}
+A user wants to find all the events in a given calendar for which the summary or
+description or location contains a given sub-string (e.g., “Project ABC”).
+
+==== {blank}
+A user wants to find all the events/tasks in a given calendar that have a specific
+category.
+
+=== Synchronization
+
+==== {blank}
+A user wants to synchronize in an efficient matter the calendar objects in the cache
+of his calendar client application with the calendar objects currently stored in his
+calendar on the calendar server.
+
+==== {blank}
+A user wants to synchronize in an efficient matter the calendar objects, scheduled to
+overlap a given time period, in the cache of his calendar client application with the
+calendar objects currently stored in his calendar on the calendar server.
+
+=== Import/Export
+
+==== {blank}
+A user wants to import an entire calendar, or series of calendars, from another system.
+
+==== {blank}
+A user wants to export an entire calendar, or series of calendars, to another system.
+
+
+==== {blank}
+A user wants to export calendar objects that meet a certain set of restrictions
+(e.g., calendar objects with the category “Business”) from a calendar to another
+system.
+
+== Calendar Management
+
+=== Create calendar
+
+==== {blank}
+A user wants to create a calendar.
+
+=== Modify calendar
+
+==== {blank}
+A user wants to rename a calendar.
+
+==== {blank}
+A user wants to modify the description of a calendar.
+
+=== Delete calendar
+
+==== {blank}
+A user wants to delete a calendar.
+
+=== Find calendar
+
+==== {blank}
+A user would like to find the calendars of other users that may be visible to him.
+
+==== {blank}
+A user would like to find the calendars, of a given user, that may be visible to him.
+
+=== Copy and Move calendar
+
+==== {blank}
+A user would like to copy / move an entire calendar in a different location in a hierarchy.
+
+=== Copy and Move calendar objects between calendar
+
+==== {blank}
+A user wants to copy / move one or more calendar objects from one calendar to another
+calendar.
+
+== Scheduling
+
+=== Event and Task
+
+==== {blank}
+A user wants to submit an event / task announcement to one or more users.
+
+==== {blank}
+An organizer wants to invite one or multiple users to an event.
+
+==== {blank}
+An organizer wants to assign a task to one or more users.
+
+==== {blank}
+An attendee wants to respond to an event invitation / task assignment.
+
+==== {blank}
+An organizer wants to reschedule an existing event / task.
+
+==== {blank}
+An attendee of an existing event / task wants to request an updated description of
+the event / task from the organizer.
+
+==== {blank}
+An organizer wants to respond to the request of an attendee to get an updated
+description of an event / task.
+
+==== {blank}
+An organizer wants to change the organizer for an existing event / task.
+
+==== {blank}
+An organizer wants to update the status of attendees of an existing event / task,
+without rescheduling it.
+
+==== {blank}
+An organizer wants to update the details of an existing event / task, without
+rescheduling it.
+
+==== {blank}
+An organizer wants to reconfirm an existing event / task, without rescheduling it.
+
+==== {blank}
+An organizer wants to request an updated status from one or more attendees of an
+event / task.
+
+==== {blank}
+A user wants to delegate / re-assign an existing event / task to another user.
+
+==== {blank}
+A user wants to respond to an event / task delegation request.
+
+==== {blank}
+A user wants to forward an event / task to another uninvited user.
+
+==== {blank}
+An organizer wants to add one or more instances to an existing event / task.
+
+==== {blank}
+An organizer wants to send a cancellation notice for one or more instances of an
+existing event / task.
+
+==== {blank}
+An attendee of an existing event / task wants to send a counter proposal to the event
+/ task description (e.g., different start time) to the organizer.
+
+==== {blank}
+An organizer of an existing event / task wants to reject a counter proposal submitted
+by an attendee.
+
+=== Free/Busy
+
+==== {blank}
+A user wants to send busy time data to one or more users.
+
+==== {blank}
+A user wants to ask one or more users their busy time information (for a specific
+date and time interval or not).
+
+==== {blank}
+A user wants to respond to a busy time request of another user.
+
+== Access Control
+
+=== Access control for calendars
+
+==== {blank}
+A user wants to grant/deny to security principals the right to
+create/read/modify/delete calendars on his behalf.
+
+EDITOR: read and modify operations on calendars are limited to attributes of the 
+calendars themselves such as their name, description, creation date, etc.
+
+==== {blank}
+A user wants to know which security principals are granted/denied the right to
+create/read/modify/delete calendars on his behalf.
+
+==== {blank}
+A user wants to know whether he is granted/denied the right to
+create/read/modify/delete a given calendar.
+
+==== {blank}
+A user wants to know whether a given user is granted/denied the right to
+create/read/modify/delete one of his calendar.
+
+==== {blank}
+A user wants to grant/deny to security principals the right to read/modify the
+access control lists of his calendars.
+
+==== {blank}
+A user wants to know which security principals are granted/denied the right to
+read/modify the access control lists of his calendars.
+
+==== {blank}
+A user wants to know whether he is granted/denied the right to read/modify the access
+control list of a given calendar.
+
+==== {blank}
+A user wants to know the set of privileges that applies to him on a given calendar.
+
+=== Access control for calendar objects
+
+==== {blank}
+A user wants to grant/deny to security principals the right to create new events /
+tasks that meets a certain set of restrictions (e.g., events / tasks that are
+classified as confidential) in his calendar.
+
+==== {blank}
+A user wants to know which security principals are granted/denied the right to create
+new events / tasks that meet a certain set of restrictions (e.g., events / tasks that
+are classified as confidential) in his calendar.
+
+==== {blank}
+A user wants to know whether he is granted/denied the right to create new events /
+tasks that meet a certain set of restrictions (e.g., events / tasks that are
+classified as confidential) in a given calendar.
+
+==== {blank}
+A user wants to know whether a given user is granted/denied the right to create new
+events / tasks that meet a certain set of restrictions (e.g., events / tasks that are
+classified as confidential) in a given calendar.
+
+==== {blank}
+A user wants to grant/deny to the right to read/modify/delete a subset (or all) of
+his events / tasks (e.g., events / tasks classified as private) in his calendar.
+
+==== {blank}
+A user wants to know which security principals are granted/denied the right to
+read/modify/delete a subset (or all) of his events / tasks (e.g., events / tasks
+classified as private) in his calendar.
+
+==== {blank}
+A user wants to know whether he is granted/denied the right to read/modify/delete a
+subset (or all) of his events / tasks (e.g., events / tasks classified as private) in
+a given calendar.
+
+==== {blank}
+A user wants to know whether a given user is granted/denied the right to
+read/modify/delete a subset (or all) of his events / tasks (e.g., events / tasks
+classified as private) in a given calendar.
+
+==== {blank}
+A user wants to grant/deny to security principals the right to obtain free/busy
+information derived from a specific subset (or all) of the events (e.g., events
+classified as public) in a given calendar.
+
+==== {blank}
+A user wants to know which security principals are granted/denied the right to obtain
+free/busy information derived from a specific subset (or all) of the events (e.g.,
+events classified as public) in a given calendar.
+
+==== {blank}
+A user wants to know whether he is granted/denied the right to obtain free/busy
+information derived from a specific subset (or all) of the events (e.g., events
+classified as public) in a given calendar.
+
+==== {blank}
+A user wants to know whether a given user is granted/denied the right to obtain
+free/busy information derived from a specific subset (or all) of the events (e.g.,
+events classified as public) in a given calendar.
+
+==== {blank}
+A user wants to know the set of privileges that applies to him on a given event or
+tasks in a given calendar.
+
+==== {blank}
+A user wants to grant/deny to security principals the right to read/modify the access
+control lists of a subset (or all) of his events / tasks (e.g., events / tasks
+classified as private) in a given calendar.
+
+==== {blank}
+A user wants to know which security principals are granted/denied the right to
+read/modify the access control lists of a subset (or all) of his events / tasks
+(e.g., events / tasks classified as private) in a given calendar.
+
+==== {blank}
+A user wants to know whether he is granted/denied the right to read/modify the access
+control lists of a subset (or all) of events / tasks (e.g., events / tasks classified
+as private) in a given calendar.
+
+==== {blank}
+A user wants to know whether a given user is granted/denied the right to read/modify
+the access control lists of a subset (or all) of events / tasks (e.g., events / tasks
+classified as private) in a given calendar.
+
+=== Scheduling Access Control
+
+==== {blank}
+A user wants to grant/deny to security principals the right to invite him to events.
+
+==== {blank}
+A user wants to know which security principals are granted/denied the right to invite
+him to events.
+
+==== {blank}
+A user wants to know whether he is granted/denied the right to invite a given user to
+events.
+
+==== {blank}
+A user wants to grant/deny to security principals the right to assign him tasks.
+
+==== {blank}
+A user wants to know which security principals are granted/denied the right to assign
+him tasks.
+
+==== {blank}
+A user wants to know whether he is granted/denied the right to assign tasks to a
+given user.
+
+==== {blank}
+A user wants to grant/deny to security principals the right to reply to events /
+tasks that meet a certain set of restrictions (e.g., events / tasks that are
+classified as confidential) on his behalf.
+
+==== {blank}
+A user wants to know which security principals are granted/denied the right to reply
+to events / tasks that meet a certain set of restrictions (e.g., events / tasks that
+are classified as confidential) on his behalf.
+
+==== {blank}
+A user wants to know whether he is granted/denied the right to reply to events /
+tasks that meet a certain set of restrictions (e.g., events / tasks that are
+classified as confidential) on behalf of a given user.
+
+==== {blank}
+A user wants to grant/deny to security principals the right to send event invitations
+that meet a certain set of restrictions (e.g., events that are classified as
+confidential) on his behalf.
+
+==== {blank}
+A user wants to know which security principals are granted/denied the right to send
+event invitations that meet a certain set of restrictions (e.g., events that are
+classified as confidential) on his behalf.
+
+==== {blank}
+A user wants to know whether he is granted/denied the right to send event invitations
+that meet a certain set of restrictions (e.g., events that are classified as
+confidential) on behalf of a given user.
+
+==== {blank}
+A user wants to know whether a given user is granted/denied the right to send event
+invitations that meet a certain set of restrictions (e.g., events that are classified
+as confidential) on his behalf.
+
+==== {blank}
+A user wants to grant/deny to security principals the right to assign tasks that meet
+a certain set of restrictions (e.g., tasks that are classified as private) to other
+users on his behalf.
+
+==== {blank}
+A user wants to know which security principals are granted/denied the right to assign
+tasks that meet a certain set of restrictions (e.g., tasks that are classified as
+private) to other users on his behalf.
+
+==== {blank}
+A user wants to know whether he is granted/denied the right to assign tasks that meet
+a certain set of restrictions (e.g., tasks that are classified as private) to other
+users on behalf of a given user.
+
+==== {blank}
+A user wants to know whether a given user is granted/denied the right to assign tasks
+that meet a certain set of restrictions (e.g., tasks that are classified as private)
+to other users on his behalf.
