@@ -320,7 +320,7 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 [%unnumbered,options=header,headerrows=2]
 |===
 | RFC 2447 2+| iCalendar Message-Based Interoperability Protocol 2+|
-| Feature | Set | Requirement | Condition | V1 | V2
+| Feature Set | Requirement | Condition | V1 | V2
 | 2.2.1 Authorization | SHOULD | Implementations of iMIP SHOULD verify the authenticity of the creator of an iCalendar object before taking any action. The methods for doing this are presented later in this document. | Y | Y
 | 2.3 <<rfc822>> Addresses | MUST | The calendar address specified within the "ATTENDEE" property in an iCalendar object MUST be a fully qualified, <<rfc822>> address specification for the corresponding "Organizer" or "Attendee" of the "VEVENT" or "VTODO". | Y | Y
 | 2.3 <<rfc822>> Addresses | MUST | The addresses of "Organizers" or "Attendees" MUST be ascertained by opening the "text/calendar" MIME body part and examining the "ATTENDEE" and "ORGANIZER" properties. | Y | N
