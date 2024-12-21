@@ -1,0 +1,299 @@
+= September 2005 CalConnect Interoperability Test Report
+:docnumber: 0506
+:copyright-year: 2005
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2005-09-14
+:published-date: 2005-09-14
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Report
+
+This event is the seventh event testing calendar interoperability and is the fourth one sponsored by the
+Calendaring and Scheduling Consortium. The participants and the products and drafts they tested are
+as follows:
+
+[%unnumbered,cols=4]
+|===
+2+| VendorName | Products | Tested
+| EVDB | Dan Markham | EVDB Server | iCalendar
+| IBM | Bill Le | Lotus Notes 7 | iCalendar,iTIP,iMIP
+| Isamet | Cyrus Daboo | Mulberry | CALDAV, iCalendar
+| Mozilla | Dan Mosedale | Thunderbird | iCalendar
+| Novell | Dave Camp | Hula Server | CALDAV
+| Oracle | Simon Vaillancourt | Collaboration Suite | CALDAV, iCalendar
+.3+| OSAF | Grant Baillie | Chandler | CALDAV
+| Jeffrey Harris | Chandler | iCalendar
+| Brian | Cosmo | CALDAV
+| RPI | Mike Douglass | RPI Calendar Server | CALDAV
+.2+| Sun | Ciny Joy | Sun Calendar Server | iCalendar,iTIP,iMIP
+| May Ma | |
+|===
+
+Prior to the interop the participants had pre-work to review iCalendar streams, CALDAV scripts and to
+provide usernames and passwords to the interop list in order for us to attempt to get an earlier start on
+interop testing.
+
+=== CALDAV Testing
+
+Anyone testing CALDAV had a test script to run through. During the pre-testing, some items were
+found in the script that were corrected and put back on the Calconnect web server.
+
+As noted before, the CALDAV script was available for pre-testing as “Homework”. Some things that
+were found and fixed were the following:’
+
+One tester noted the following while testing the CALDAV script: these were useful tests of
+conformance. I guess there's almost an infinite number of incorrect forms of data but checking that the
+server enforces guid and uri uniqueness might be worthwhile. And I should add that having these tests
+available has been very useful.
+
+They also found the following testing the script prior to the interop. They tried creating a new account
+to run the scripts against and ran into another problem. The guid is supposed to be globally unique but
+isn't. As a first pass he tried changing line 104 to:
+
+T_UIDPREFIX="CalConnectCalDAVTest.${T_USERNAME1}."
+
+We should probably add a timestamp or something.
+
+The script developer replied with: The test is not supposed to be leaving any meetings it created when
+it's done, if it does you need to manually clean them up before re-running the test on any users.
+Additionally, the test does not support being run at the same time from 2 different users because of the
+UIDs. Your idea to add a timestamp is a good one but should only help in running the test from 2 users
+at the same time.
+
+The tester also found the following items which were fixed.
+
+The cleanup doesn't have an .ics suffix on the names. Is this to test the servers response to the "MAY"
+in calendaring and scheduling information may be suffixed by ".ics", Does the ".ics" form part of the
+name.
+
+The tester’s iCalendar parser is failing with the MAIL_TO value. All the RFC examples show mailto
+and rfc1738 only mentions mailto. This was fixed and the script updated.
+
+A new matrix was provided that has all the Musts/Shoulds/Mays and Must Nots/Should Nots listed for
+the CALDAV draft. Several of the participating vendors filled out this sheet and the results are
+included with this report.
+
+A CALDAV scenario testing spreadsheet was completed by all the participants and is a summary
+spreadsheet is included in this report.
+
+=== RFC2445, 2446, and 2447 Testing
+
+Several ics streams had been submitted prior to the interop and these were pointed to as part of the prework.
+The idea was that vendors could try out the streams to see how their products reacted. I’m not
+sure how much of that was done prior to the interop. However, several of the streams were tested at
+the actual interop.
+
+In addition, a Test scenario used at the last RFC interop was used to create examples. During the
+testing, it became apparent that it would be very helpful to have example ics streams next to each of
+the test scenarios.
+
+=== Specific Findings and observations
+
+The following are some key notes from the CALDAV and iCalendar, iMIP and iTIP .
+
+During testing of the icalendar scenarios, one vendor was able to:
+
+* PUBLISH and process an event to/from all vendors
+* send/receive from all vendors a single without attachments.
+* send all vendors a single with one attachment (bmp).
+* send all vendors a single with two attachments (txt and bmp).
+* send all vendors a single with AltReps of text in the description field.
+* send all vendors a single with AltReps of text in the comments dialog.
+* send all vendors a single with AltReps of text in the location field.
+* send all vendors a single with audio alarm.
+* send all vendors a single with display alarm.
+* send all vendors a single with email alarm.
+* send to vendors individually.
+* send to GROUP of vendors.
+* send all vendors a single Invite with an RnR.
+* send a single Invite with Chair role to all vendors.
+* send a single Invite with REQ-PARTICIPANT role to all vendors.
+* send a single Invite with OPT-PARTICIPANT role to all vendors.
+* send a single Invite with NEEDS-ACTION.
+* send an ACCEPTED out.
+* send a DECLINED out.
+* send a TENTATIVE out.
+* delegate an invite.
+* send with RSVP=TRUE
+* send with RSVP=FALSE
+* send out with DELEGATED-TO
+* send out with DELEGATED-FROM
+* send a single event with SENT-BY to all vendors
+* send with a CN.
+
+During testing of accepting and declining invitations, they sent a vendor a single event. The vendor
+accepts. The vendor then declines. The paired vendor does not support a request for a Refresh. They
+were not able to test delegation as no one present supported this.
+
+This was the second vendor’s first interop and several items on the scenarios were not tested. The
+items where they were successful in sending were:
+
+* Receipt of a published event from all vendors
+* Sending a published event to one vendor
+* Display only and email only alarms on Non-repeating events
+* Under Partstat they can handle Needs-Action, Accept, Decline and Tentative with two vendors.
+* They can send accept an invitation and reschedule of a meeting.
+* They can RSVP to one vendor but not to another.
+* They can send and receive chair, req-participant, opt-participant and non-participant on Roles.
+
+Specific issues we came across in testing one client:
+
+* URL quoting was badly broken (Having '@' in some of the calendar paths was very useful!).
+* ICALENDAR interoperability issues within the context of ical4j
+* Some code that tries to tell whether a resource exists on the server via HTTP OPTIONS. After
+twiddling it to try to get it to work on 5 different servers (and some non-CalDAV servers elsewhere),
+the tester decided to re-factor it to use PROPFIND where possible.
+* Finally, running through some CalDAV tests helped isolate display issues in vendor apps. This has
+nothing to do with interoperability per se, but it's a serendipitous side-effect!
+
+Some problems found (in all products):
+
+* ICAL: Escaping of some characters was not done properly. One vendor did not escape all CR in a
+description property.
+* ICAL: Some recurring meetings created by some products did not specify a time zone which is
+required by RFC2445. According to the draft, when used with a recurrence rule, the "DTSTART" and
+"DTEND" properties MUST be specified in local time and the appropriate set of "VTIMEZONE"
+calendar components MUST be included. For detail on the usage of the "VTIMEZONE" calendar
+component, see the "VTIMEZONE" calendar component definition. About local time - the date with
+local time form is simply a date-time value that does not contain the UTC designator nor does it
+reference a time zone.
+* CalDAV: If-None-Match and if-match precondition bugs. This is a bug on a caldav server where ifnone-
+match=* was not handled properly and a bug on a caldav client where if-none-mach=* was set
+when modifying an event.
+* CalDAV: Interop problems with one vendor’s WebDAV interface making it unable to create events
+on "strict" CalDAV servers. Their WebDAV interface does a lot of things when creating a file, the
+most problematic being the PUT of an empty file before doing the actual put of the real file. A
+CalDAV server enforcing the validity of the ics files being created will never accept that an empty ics
+file be created. Also it seems to be attempting to create some ".<filename>" hidden files without
+changing the file extension.
+* ICAL: EXDATE handling problems - Some vendors were not removing occurrences cancelled with
+exdate
+* ICAL: Handling problems with meetings without endtime or duration specified. Some vendors
+always expected to have either a DURATION or a DTEND in a VEVENT component. RFC2445
+clearly specifies that these are valid events. From the RFC, the description is: “Within the "VEVENT"
+calendar component, this property defines the start date and time for the event. The property is
+REQUIRED in "VEVENT" calendar components. Events can have a start date/time but no end
+date/time. In that case, the event does not take up any time.”
+* ICAL: Handling problems when VTIMEZONE defined after VEVENT components. A vendor
+couldn't import events where the VTIMEZONE component was defined after the VEVENT
+component which is a valid vcalendar object.
+* ICAL: Matching of recurrence-id to RDATEs problems. A vendor was not doing a proper "union"
+with rdates matching dates of a rule (The occurrences would appear as 2 occurrences instead of one.
+
+One vendor can receive our ical correctly, but they can't do a REPLY. This vendor sends us ical
+stream, but we never receive any ical stream. This is because they sent us a multi-event ical (an initial
+rule event plus an update event for same uid within single icalendar stream), which we don't
+understand and we don't handle it completely.
+
+One vendor sent an ical stream with no DTEND. We can parse it, but our client can't handle an event
+without enddatetime. This is in the schedule to enhance this issue for our next release.
+
+We can't handle EXDATEs correctly. In the schedule to fix for next release.
+
+One vendor has problems importing ics with Timezone id does not reference the Olson path.
+
+One vendor was busy with CalDAV and roundtable, so we couldn't do much interops in between.
+
+Another thing that we've run into in the Interop is that it's not entirely clear from at least cursory
+readings whether RRULEs are permitted to be in Zulu time.
+
+Events were created and modified with attendees not in one vendor’s calendar server, using mailto:<email
+address>. One vendor’s calendar server sent iTip messages to the attendees.
+
+Similarly users on other calendar servers invited another vendor’s calendar server Users or published
+events to the calendar server users by sending e-mail and ical data. The data received was imported.
+After importing the requested events, replies to events were sent from the Calendar Server via iTip
+messages to the organizer in appropriate cases.
+
+The main problem area for us was detected to be timezone and recurrence related. All other
+implemented feature testing went fine. We do not send VTIMEZONE information or timezone tags in
+a form specified by the standards in our iTip, making it hard for the consumers to interpret our rrules or
+recurrenceids right.
+
+Similarly we do not parse the timezone information provided in iTips we receive right, making
+consumption of others' iTips correctly, hard. We do not do a proper union of rdates and the dates got
+by expansion of rrule resulting in multiple instances of really the same instance at times.
+
+We do not interpret the iTip methods during import which results in attendee copy overwriting the
+organizer copy on an import.
+
+We do not send extra rdates if any when sending out iTip. That is, we send only the rrule.
+
+=== Participant General Comments
+
+The following are various notes and reports from the participants. The wording has been changed to
+remove identification of products where possible.
+
+This was my first interop (of any kind), so I wasn't quite sure what to expect. What I found was a
+pretty intense combination of testing, debugging and writing code. It was definitely good to fire off
+questions at server authors, and, if something turned out to be a problem on their side, be able to
+proceed after they had fixed it.
+
+It was also clear that several vendors were arriving with pretty recent implementations of some
+CalDAV features, so it was good to feel that we were all helping one another shake out some of the
+corner cases.
+
+One client started out being a pure WebDAV client, and CalDAV support is being added afterward. As
+a result, we worked better against servers that are WebDAV-oriented. Testing against the more
+calendar-based servers turned up useful bugs.
+
+This interop was a very interesting experience and the additional participants helped in finding more
+interoperability problems.
+
+The experience was again very valuable but at times it was difficult to tell what was going on. I think
+the arrangement for next time will address a lot of that. Ensuring everyone can devote a stretch of time
+without being dragged out will help. I don't know if we can timetable tests or encourage people to be
+clearer about which server they are testing against. By it's very nature it's somewhat intensive and
+that's a large part of its value but if more vendors take part it might become a little uncontrolled.
+
+I think encouraging server developers to make the server available ahead of time - say for the week
+preceding - and encouraging the client people to run through the tests - would weed out some of the
+simpler bugs. It might also bring to mind some topics for discussion ahead of time.
+
+One vendor was able to test its CalDAV desktop client, web client and server with other servers and
+clients at the interop. Overall we found interoperability to be good. In a couple of situations there were
+areas where servers had not yet implemented functionality, but in several cases they were able to make
+modifications and get those working during the interop. Other minor issues were fixed during the
+course of the interop.
+
+=== Summary
+
+This was the largest interop event we’ve had testing calendar specifications. Several vendors got an
+excellent opportunity to see how their products worked with other applications. The more we can test,
+the more we can find, fix, enhance, and simplify. One of the products from this event will be the RFC
+matrix which we will provide to the CALSIFY working group at the IETF. It shows what components
+are supported and not supported by three vendors today. This should prove helpful in their mission to
+come up with RFC’s that will better interoperate.
+
+In addition, based on comments made by attendees and the manager’s analysis of what transpired, we
+will make modifications to how we handle the interop testing itself. As we add more participants, we
+will have to make the interop a bit more structured in order to ensure we test each and every product
+implementation. Pre-defining user-ids prior to the interop this time helped. We will need to ensure
+that server implementations can be accessed prior to the interop as well. This may pose a problem to
+those who bring servers with them to interops, but we’ll work around those situations on a company by
+company basis.
+
+More vendors at this interop also meant more extensive testing of CALDAV. Most vendors are still in
+the development stages, but the number of vendors supporting CALDAV is growing, so we expect the
+number of attendees at future interops to increase. In summary, it was a good event.
+
+Respectively submitted,
+
+Patricia Egen +
+Interop Manager
