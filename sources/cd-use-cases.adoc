@@ -42,27 +42,26 @@ cases should apply to any calendar access protocol. It is expected that this doc
 will be used as a basis to further develop technical requirements for a calendar
 access protocol such as CalDAV.
 
-All the use cases involves any of the following actors:
+All the use cases involves any of the following _actors_:
 
-* Attendee: a user who is invited to a given calendar object;
-* Organizer: a user that act as the organizer of a given calendar object.
-* User: a user accessing or managing a calendar store;
+* *Attendee*: a user who is invited to a given calendar object;
+* *Organizer*: a user that act as the organizer of a given calendar object.
+* *User*: a user accessing or managing a calendar store;
 
 Unless stated otherwise, the actor in any use case could also be a user authorized to work on behalf of the actor specified in each use case.
 
 NOTE: The use cases only covers functionality related to events and tasks, that is, there are no use cases related to journal entries.
 
+[heading=terms and definitions]
 == Terminology
-
-This document makes use of the following terms:
 
 === Access Control List
 
-Set of all privileges granted or denied to any “security principal” on a given “calendar” or “calendar object”;
+Set of all privileges granted or denied to any "security principal" on a given "calendar" or "calendar object";
 
 === Calendar
 
-Container of “calendar objects”;
+Container of "calendar objects";
 
 === Calendar object
 
@@ -171,7 +170,7 @@ that have not yet confirmed their participation status.
 
 ==== {blank}
 A user wants to find all the events in a given calendar for which the summary or
-description or location contains a given sub-string (e.g., “Project ABC”).
+description or location contains a given sub-string (e.g., "Project ABC").
 
 ==== {blank}
 A user wants to find all the events/tasks in a given calendar that have a specific
@@ -200,7 +199,7 @@ A user wants to export an entire calendar, or series of calendars, to another sy
 
 ==== {blank}
 A user wants to export calendar objects that meet a certain set of restrictions
-(e.g., calendar objects with the category “Business”) from a calendar to another
+(e.g., calendar objects with the category "Business") from a calendar to another
 system.
 
 == Calendar Management
