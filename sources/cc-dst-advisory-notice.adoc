@@ -1,0 +1,210 @@
+= DST Advisory Notice
+:docnumber: 0514
+:copyright-year: 2005
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: advisory
+:edition: 1
+:status: published
+:revdate: 2005-06-29
+:published-date: 2005-16-29
+:technical-committee: DST ADHOC
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:imagesdir: images/overview-0508
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+H.R. 6: Energy Policy Act of 2005, which recently passed the US
+House of Representatives, contains an 'energy saving' provision
+which may have broad impact on users of existing Calendaring and
+Scheduling systems and manufacturers of software that support
+calendaring and scheduling functions. This document explains the
+impact and our concerns.
+
+== Energy Bill
+
+=== What the bill says
+
+H.R. 6: Energy Policy Act of 2005, which recently passed the US
+House of Representatives, contains an 'energy saving' provision
+regarding Daylight Savings Time (DST). It calls for a change in start
+and end dates of DST observed in the United States, with the new
+DST period stretching from March to November. This change would
+take effect in March 2006 if the House language prevails over Senate
+language, which does not contain the extension.
+
+=== Our Concerns
+
+Members of the Calendaring and Scheduling Consortium,
+comprising both product vendors and end-user groups, are
+concerned about the proposed timing of this change.
+
+It's not a matter of whether the proposal is right or wrong. It's a
+matter of practicality. The Consortium hopes that the bill will not go
+forward with the current language on daylight savings time. We
+suggest a simple delay of the effective date to insure that calendaring
+and scheduling vendors and consumers have ample time to prepare
+for the changes. Without surveying a reasonable number of affected
+parties, we cannot offer an 'ideal' effective date, but would be
+pleased to offer whatever information and expertise we have
+available.
+
+=== What its impact is
+
+If this legislation is approved, software and hardware calendaring
+and scheduling products based on the iCalendar standard will need
+to be changed. Users of such products--universities, companies of all
+sizes, and many other types of organizations--as well as their
+suppliers will face a major challenge:
+
+* How can vendors efficiently issue "patches" to the problem in
+so short a time? Additionally, how could their customers--with
+millions of end users--deploy those fixes in so short a time?
+* As a corollary, how can organizations in the U.S. that depend
+on such products make the necessary changes and remain
+synchronized with colleagues outside of the US?
+
+To complicate matters, this generally affects any calendaring and
+scheduling product whether or not it's based on the iCalendar
+standard. Anything that keeps a calendar, including cell phones, is
+potentially affected. Many embedded environmental systems such as
+building management systems, time-lock control, work-shift and
+time clocks, may also be affected.
+
+It is also not clear whether other countries that currently share the
+same timezone and DST definitions as the US will adopt the new
+definitions at the same time, or stay with the current ones. This has
+serious impact for cross-border commerce as for two months in the
+year, regions of the US will have a local time one hour different than
+similar regions in other countries.
+
+== What iCalendar has to do to adapt
+
+=== DST
+
+Daylight Savings Time (DST), sometimes called 'Summer Time', is
+the period during the course of a year in which a particular
+geopolitical region advances its local time by one hour compared to
+the standard time for that region (as determined by its 'timezone').
+The goal is to better match hours of work and school to real daylight
+hours during the course of a day, for better productivity and
+potential energy savings.
+
+For a more complete description and a history of DST, see
+http://en.wikipedia.org/wiki/Daylight_savings_time.
+
+=== iCalendar's dependency on DST
+
+The Internet Calendaring and Scheduling Core Object Specification,
+or iCalendar, is an Internet Engineering Task Force (IETF) proposed
+standard defined in the document RFC2445
+(http://www.ietf.org/rfc/rfc2445.txt) and further described in a guide to
+calendaring RFC3283 (http://www.ietf.org/rfc/rfc3283.txt). In addition,
+specifications also exist that describe how iCalendar can be used for
+scheduling between multiple parties (RFC2446
+(http://www.ietf.org/rfc/rfc2446.txt) and RFC 2447
+(http://www.ietf.org/rfc/rfc2447.txt)).
+
+iCalendar describes a data format to encapsulate calendaring data
+such as events and tasks which can be passed between different
+systems in an interoperable way. As part of this, timezone
+information is also required in order to allow times to be specified
+relative to a particular locality. To that end iCalendar defines a
+'VTIMEZONE' object that encapsulates timezone information. These
+objects provide for both 'STANDARD' and 'DAYLIGHT' subcomponents
+that can be used to represent the standard timezone
+offset, as well as the timezone offset when DST is in effect. In
+addition, these sub-components also specify, via a set of rules or a list
+of explicit dates, the dates and times at which DST starts and ends.
+Typically rules are used, and those specify the DST changes from
+some point in the past, into the future for an indeterminate amount of
+time.
+
+=== Changes need to iCalendar Products
+
+If this legislation goes forward, the following changes will need to
+take place:
+
+. Any iCalendar product that currently uses timezone
+information will have to have their timezone 'definitions'
+updated to reflect the new start and end periods for DST. This
+affects both calendaring servers and clients, including desktop
+and mobile clients.
+** In the case of servers, this may be a simple process of
+upgrading timezone definitions.
+** In the case of clients, either an automated or manual
+upgrade of the timezone definitions will be required, subject
+to the other issues described below. This process will have to
+take place on ALL systems using iCalendar -- potentially tens
+or hundreds of millions of users.
+** This change is not just limited to US systems -- anyone
+outside the US that needs to do business with the US or
+travel to the US will need their definitions updated.
+. Given that the legislation proposes this change taking effect in
+March 2006, it is quite likely that there are already schedules of
+events defined for the period when DST is extended. The
+question arises as to how these existing events should be
+adjusted.
+. Typically there are two ways in which timezone definitions are
+enumerated.
++
+--
+.. [[case-a]]Using the naming scheme defined in the 'Olsen' timezone
+database (ftp://elsie.nci.nih.gov/pub/). This splits the
+timezone name into two parts: a region (typically a
+continent) and a city. For example: 'America/New_York',
+'America/Montreal', 'Europe/London'.
+.. [[case-b]]Using the colloquial timezone name, e.g. 'Eastern',
+'Central', 'GMT'.
+
+For <<case-a>>, updating timezone definitions is a matter of
+identifying which cities are in the US and changing just those
+definitions. If other countries (e.g. Canada) choose not to adopt
+the same changes, then the definitions for cities in Canada
+could remain the same. i.e. 'America/New_York' would be
+changed and 'America/Montreal' would be unchanged.
+
+For <<case-b>> the situation is more complex if other countries do
+not adopt the changes. In that case the existing definitions
+would need to be split into separate items to reflect the
+different timezone rules in each region -- using Canada as an
+example again: 'US-Eastern' and 'Canada-Eastern'. Any
+upgrade process to existing systems would have to determine
+whether an event that currently uses the 'Eastern' definition
+should be assigned 'US-Eastern' or 'Canada-Eastern'. It may
+not be possible to automatically determine that in all cases and
+explicit human intervention may be required.
+--
+. The Calendaring and Scheduling consortium recently carried
+out a survey on timezone support in calendar products. One
+conclusion from that is that a number of products convert local
+time information with a supplied timezone into UTC (the
+'standard' time reference) as a simplification. As a result of this,
+timezone information is effectively lost. Such products will
+need to determine how to do any adjustment of the UTC times
+based on the proposed DST changes.
+
+== Contact
+
+The Calendaring and Scheduling Consortium is composed of ten
+universities, seven corporations, two foundations, and one research
+facility. More information is available at www.calconnect.org.
+
+For further information or to discuss these issues, contact Dave
+Thewlis, Executive Director: dave.thewlis@calconnect.org
+
+1550 Dena Drive +
+McKinleyville, CA 95519 +
+(707) 840 9391 +
+www.calconnect.org
