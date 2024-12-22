@@ -1,0 +1,368 @@
+= Overview of The Calendaring and Scheduling Consortium
+:docnumber: 0508
+:copyright-year: 2005
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2005-10-11
+:published-date: 2005-10-11
+:technical-committee: CALCONNECT
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:imagesdir: images/overview-0508
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks
+and Disclaimer of Warranty for External (Public) Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== What is CalConnect?
+
+. A Partnership
+** Between Calendaring & Scheduling Vendors and Customers
+
+. Mission
+** To provide a general understanding of, promote, and provide mechanisms so that 
+Calendaring and Scheduling methodologies, tools and applications
+can enter the mainstream of computing
+
+. Not a standards development organization
+** Promotes development and adoption of standards
+** Influence SDOs and vendors
+
+== Why a Consortium?
+
+A focused environment to
+
+* Re-energize Calendaring and Scheduling
+* Provide a forum to discuss the direction for
+standards and implementations
+* Validate the existing standards
+* Provide interoperability testing
+* Drive requirements for changes to existing
+standards, new and complementary standards
+back into IETF, other bodies
+* Promote standards and technologies to the vendor
+and user communities
+
+== How did it evolve?
+
+[%unnumbered]
+image::img01.png[]
+
+== Goals of the Consortium
+
+* Promote Calendaring & Scheduling
+* Help drive the evolution of open standards
+for Calendaring & Scheduling (iCalendar,
+iMIP, iTIP, CalDAV)
+* Conduct interoperability testing
+* Collegial partnership between all members
+to achieve Consortium mission and goals
+* Develop a shared vision for the Calendaring
+& Scheduling community
+
+== Goals and Activities of the Consortium
+
+. Promote Calendaring & Scheduling
+** Press releases
+** Media publications
+** Trade shows
+** Op ed pieces, articles and white papers
+** Trade shows and speaking opportunities
+** Regular Roundtables for members
+
+. Interoperability testing and certification
+** Periodic interoperability testing events
+** Promotional events and publicity to announce
+successful completion of testing
+** Analyze results and report findings to IETF or
+other relevant standards bodies on correctness
+and completeness of standards
+** Develop and implement independent test suites
+for interoperability conformance tests
+** Potential to eventually certify applications for
+interoperability and conformance to Calendaring
+& Scheduling standards
+
+. Promote design and deployment of
+standards and implementations
+** Feedback on existing standards on correctness
+and completeness
+** Requirements assessment and development for
+extensions to existing standards or new,
+complementary standards
+** Study and report needs of user community at
+large for standards and products
+
+. Promote collaboration among members
+** Promote inter-member collaboration to improve
+interoperability
+** Promote inter-member collaboration on
+instruction and training
+** Support inter-member efforts to define new
+areas for Calendaring and Scheduling
+
+. Support common goals of members
+** Member forum to establish and promote common
+goals for Calendaring and Scheduling products
+** Establish common messages of member
+community as basis for promotional materials and
+publicity on Calendaring and Scheduling
+** Possible annual conference
+
+. Develop a shared vision for the Calendaring
+and Scheduling community
+** Seek broad representation from vendors, academia,
+customers and the open source community
+** Sponsor roundtable discussions, online forums
+
+== Events
+
+. Interops (Interoperability Testing)
+** Participation open to members and non-members (significant discount
+for members)
+** Two day event usually co-located with Roundtable
+** Results published to relevant standards org
+** Public version on Consortium website
+
+. Roundtables
+** “All hands” plenary meeting of membership
+** Three per year midway between IETF meetings
+*** help to drive each other
+** Held in conjunction with Interops
+** Technical committee working meetings
+** Steering Committee meeting
+** Review and status of technical committees
+** Consensus on direction, next steps of Consortium
+
+. Workshops
+** First workshop tentatively planed for 1Q2006
+** Public workshop or invitational depending on goal & topic
+** Open to non-Consortium members
+** Could be co-hosted with Roundtable or independent event
+
+. Annual Conference
+** Need is still under evaluation
+** Would offer technology and product overviews, tutorials and classes,
+demonstrations and vendor offerings
+** Public conference with member discounts
+** Could be co-hosted or co-located with another organization or
+outsourced to a providing organization
+
+== Organizational Structure
+
+[%unnumbered]
+image::img02.png[]
+
+== Steering Committee
+
+. Membership
+** Initially, Founding Members of the Consortium
+** Will expand to include at least one of each membership
+category
+
+. Operations
+** Monthly teleconference
+** Meetings at Roundtables or other activities if needed
+Governance
+** Chair chosen by Steering Committee members
+** Chair participates in Board of Directors meetings
+
+. Activities
+** Overall technical direction
+** Management of Technical Committees
+** Consortium program elements
+** Advice to the Board of Directors
+
+== Technical Committees
+
+. Membership
+** Individual TC members provided by Member Organizations
+. Operations
+** Determined by TC Chair and TC membership
+** TC Chair provides regular status to Steering Committee
+. Governance
+** Any Consortium member may propose new work
+** Charter, scope and deliverables identified in the proposal
+** Chair confirmed by SC
+** Committee terminates when chartered work is complete
+. Operational policies
+** In-progress work confidential to Consortium members only
+** Completed work published and freely available on
+Consortium web site
+** No proprietary information discussed
+
+=== AUTHENTICATE
+
+Identify & recommend
+authentication and
+authorization solutions
+for Calendaring data
+exchange
+
+=== CalDAV
+
+Define problems
+CalConnect wishes to
+solve with extensions to
+WebDAV; assist IETF
+with development of
+CalDAV Specification
+
+=== EVENTPUB
+
+Define event publishing
+& establish differences
+from regular
+calendaring and
+scheduling
+
+=== IOPTEST
+
+Support interoperability
+testing for all technical
+committees, develop
+test suites & reference
+implementation, publish
+interop results
+
+=== MOBILE
+
+Define issues for mobile
+support of standards-based
+Calendaring and
+recommend extensions
+to standards for mobile
+support
+
+=== REALTIME
+
+Clarify issues involved
+with real-time server-to-server
+calendaring and
+scheduling issues &
+provide
+recommendations
+
+=== RECURR
+
+Review problems in
+current alternative
+approaches towards
+handling recurrences &
+recommend a preferred
+approach or guidelines
+
+=== TIMEZONE
+
+Identify requirements for
+& a strategy to establish a
+global timezone reference
+available to CalDAV &
+other calendaring and
+scheduling server
+implementations
+
+=== USECASE
+
+Develop sets of real
+world use cases that
+can be used to validate
+identified functionality &
+testing scenarios for
+existing & future C&S
+implementations
+
+== Intellectual Property Rights
+
+. Consortium policy
+** Members will not introduce or share proprietary or
+encumbered information in the course of
+participating in consortium activities
+. Resolution of ambiguous situations
+** Reasonable compliance with IETF policy on IPR
+*** “Section 10” of IETF RFC2026, Internet Standards Process
+*** http://www.ietf.org/IESG/Section10.txt
+
+== Membership
+
+. Eligibility
+** Any company, institution or individual who
+*** supports the goals of the Consortium
+*** agrees to abide by its rules
+*** submits the proper membership application
+*** pays the appropriate membership fee
+. Fees
+** Published on the Consortium web site
+** Based on membership category
+** Due annually upon anniversary of joining the
+Consortium
+. Categories
+** Commercial Vendor
+*** >$100 million annual revenue
+*** $10-100 million annual revenue
+*** >$10 million annual revenue
+** Customer Organizations/Companies
+** Non-Profit Organizations
+** Open Source Organizations
+** Academic Institutions
+** Standards Setting Organizations
+** Individuals
+. Benefits
+** Voice in achieving Consortium objectives
+*** Propose new work
+*** Engage in one or more Technical Committees
+*** Influence direction of TCs and Steering Committee
+*** Participate in technical governance
+** Recognition and publicity
+*** Listing on Consortium web site
+*** Opportunity for recognition in Consortium PR initiatives
+** Reduced rate for Interop events
+** Opportunity to host Roundtable or Interop events
+** Help create true interoperable Calendaring &
+Scheduling
+
+=== Founding Members
+
+[%unnumbered]
+image::img03.png[]
+
+=== Recent Members
+
+* Carnegie Mellon
+* Dartmouth
+* Rensselaer Polytechnic
+* CSU Fresno
+* IBM
+* Trumba
+* 2 Individual Members
+
+== Status
+
+[%unnumbered]
+image::img04.png[]
+
+== More Info; How to Get Involved
+
+. Website: http://www.calconnect.org
+. Contact us: info@calconnect.org
+. Attend the next Roundtable as an observer: January 10-12, Provo, Utah
+. For more information:
++
+--
+Dave Thewlis, Executive Director +
+The Calendaring and Scheduling Consortium +
+4390 Chaffin Lane +
+McKinleyville, CA 95519-8028 +
+Voice: +1 707 840 9391 +
+FAX: +1 415 946 3454 +
+Mobile: +1 707 498 2238 +
+Email: Dave.Thewlis@calconnect.org
+--
