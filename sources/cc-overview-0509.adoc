@@ -1,0 +1,145 @@
+= EDUCAUSE 2005 Overview of The Calendaring and Scheduling Consortium
+:docnumber: 0509
+:copyright-year: 2005
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2005-10-11
+:published-date: 2005-10-11
+:technical-committee: CALCONNECT
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks
+and Disclaimer of Warranty for External (Public) Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Goals of the Consortium
+
+. Promote Calendaring & Scheduling via a
+partnership between Vendors and
+Customers
+. Help drive the evolution of open standards
+for Calendaring & Scheduling (iCalendar,
+iMIP, iTIP, CalDAV)
+. Conduct interoperability testing
+. Develop a shared vision for the Calendaring
+& Scheduling community
+
+== Academic Members
+
+* Carnegie Mellon University
+* California State University Fresno
+* Dartmouth College
+* Duke University
+* Harvard ASCS
+* Massachusetts Institute of Technology
+* NASA Jet Propulsion Laboratory (Cal Tech)
+* Rensselaer Polytechnic Institute
+* Stanford University
+* University of California Berkeley
+* University of Washington
+* University of Wisconsin
+
+== Vendors and Open Source Implementers
+
+* EVDB
+* IBM
+* Meeting Maker
+* Mozilla Foundation
+* Novell
+* Open Source Applications Foundation
+* Oracle
+* Symbian
+* Trumba
+* Yahoo!
+
+If your vendor isn’t listed here, ask them why!
+
+== Technical Committees
+
+=== AUTHENTICATE
+
+Better HTTP
+authentication
+in CalDAV.
+
+=== CalDAV
+
+Calendar access
+use cases and
+problems.
+
+=== EVENTPUB
+
+Event
+publishing.
+
+=== IOPTEST
+
+Interoperability
+testing &
+reporting.
+Test suites.
+
+=== MOBILE
+
+Issues for
+mobile devices.
+
+=== REALTIME
+
+Calendaring
+across
+organizational
+boundaries.
+
+=== RECURR
+
+Handling of
+recurrences.
+
+=== TIMEZONE
+
+Issues with
+timezone
+support. Define
+timezone
+registry.
+
+=== USECASE
+
+Real world use
+cases to be
+solved.
+
+== Events
+
+. Interops (Interoperability Testing)
+** Participation open to members and non-members
+(significant discount for members)
+** Two day event usually co-located with Roundtable
+** Results published to relevant standards org
+** Public version on Consortium website
+. Roundtables
+** Three per year midway between IETF meetings
+** Held in conjunction with Interops
+** Technical committee working meetings
+** Review and status of technical committees
+** “All hands” plenary meeting of membership
+** Consensus on direction, next steps of Consortium
+
+== How to Get Involved
+
+. Website: http://www.calconnect.org
+. Contact us: info@calconnect.org
+. Attend the next Roundtable as an observer: January 10-12, Provo, Utah
+. Flyers with more information and business cards available at the front
+. This presentation: http://www.calconnect.org/presentations/educause2005.ppt
