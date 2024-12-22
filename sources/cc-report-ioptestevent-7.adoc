@@ -54,8 +54,8 @@ interop testing.
 Anyone testing CALDAV had a test script to run through. During the pre-testing, some items were
 found in the script that were corrected and put back on the Calconnect web server.
 
-As noted before, the CALDAV script was available for pre-testing as “Homework”. Some things that
-were found and fixed were the following:’
+As noted before, the CALDAV script was available for pre-testing as "Homework". Some things that
+were found and fixed were the following:'
 
 One tester noted the following while testing the CALDAV script: these were useful tests of
 conformance. I guess there's almost an infinite number of incorrect forms of data but checking that the
@@ -82,7 +82,7 @@ The cleanup doesn't have an .ics suffix on the names. Is this to test the server
 in calendaring and scheduling information may be suffixed by ".ics", Does the ".ics" form part of the
 name.
 
-The tester’s iCalendar parser is failing with the MAIL_TO value. All the RFC examples show mailto
+The tester's iCalendar parser is failing with the MAIL_TO value. All the RFC examples show mailto
 and rfc1738 only mentions mailto. This was fixed and the script updated.
 
 A new matrix was provided that has all the Musts/Shoulds/Mays and Must Nots/Should Nots listed for
@@ -95,7 +95,7 @@ spreadsheet is included in this report.
 === RFC2445, 2446, and 2447 Testing
 
 Several ics streams had been submitted prior to the interop and these were pointed to as part of the prework.
-The idea was that vendors could try out the streams to see how their products reacted. I’m not
+The idea was that vendors could try out the streams to see how their products reacted. I'm not
 sure how much of that was done prior to the interop. However, several of the streams were tested at
 the actual interop.
 
@@ -141,7 +141,7 @@ During testing of accepting and declining invitations, they sent a vendor a sing
 accepts. The vendor then declines. The paired vendor does not support a request for a Refresh. They
 were not able to test delegation as no one present supported this.
 
-This was the second vendor’s first interop and several items on the scenarios were not tested. The
+This was the second vendor's first interop and several items on the scenarios were not tested. The
 items where they were successful in sending were:
 
 * Receipt of a published event from all vendors
@@ -176,7 +176,7 @@ reference a time zone.
 * CalDAV: If-None-Match and if-match precondition bugs. This is a bug on a caldav server where ifnone-
 match=* was not handled properly and a bug on a caldav client where if-none-mach=* was set
 when modifying an event.
-* CalDAV: Interop problems with one vendor’s WebDAV interface making it unable to create events
+* CalDAV: Interop problems with one vendor's WebDAV interface making it unable to create events
 on "strict" CalDAV servers. Their WebDAV interface does a lot of things when creating a file, the
 most problematic being the PUT of an empty file before doing the actual put of the real file. A
 CalDAV server enforcing the validity of the ics files being created will never accept that an empty ics
@@ -186,10 +186,10 @@ changing the file extension.
 exdate
 * ICAL: Handling problems with meetings without endtime or duration specified. Some vendors
 always expected to have either a DURATION or a DTEND in a VEVENT component. RFC2445
-clearly specifies that these are valid events. From the RFC, the description is: “Within the "VEVENT"
+clearly specifies that these are valid events. From the RFC, the description is: "Within the "VEVENT"
 calendar component, this property defines the start date and time for the event. The property is
 REQUIRED in "VEVENT" calendar components. Events can have a start date/time but no end
-date/time. In that case, the event does not take up any time.”
+date/time. In that case, the event does not take up any time."
 * ICAL: Handling problems when VTIMEZONE defined after VEVENT components. A vendor
 couldn't import events where the VTIMEZONE component was defined after the VEVENT
 component which is a valid vcalendar object.
@@ -213,10 +213,10 @@ One vendor was busy with CalDAV and roundtable, so we couldn't do much interops 
 Another thing that we've run into in the Interop is that it's not entirely clear from at least cursory
 readings whether RRULEs are permitted to be in Zulu time.
 
-Events were created and modified with attendees not in one vendor’s calendar server, using mailto:<email
-address>. One vendor’s calendar server sent iTip messages to the attendees.
+Events were created and modified with attendees not in one vendor's calendar server, using mailto:<email
+address>. One vendor's calendar server sent iTip messages to the attendees.
 
-Similarly users on other calendar servers invited another vendor’s calendar server Users or published
+Similarly users on other calendar servers invited another vendor's calendar server Users or published
 events to the calendar server users by sending e-mail and ical data. The data received was imported.
 After importing the requested events, replies to events were sent from the Calendar Server via iTip
 messages to the organizer in appropriate cases.
@@ -274,19 +274,19 @@ course of the interop.
 
 === Summary
 
-This was the largest interop event we’ve had testing calendar specifications. Several vendors got an
+This was the largest interop event we've had testing calendar specifications. Several vendors got an
 excellent opportunity to see how their products worked with other applications. The more we can test,
 the more we can find, fix, enhance, and simplify. One of the products from this event will be the RFC
 matrix which we will provide to the CALSIFY working group at the IETF. It shows what components
 are supported and not supported by three vendors today. This should prove helpful in their mission to
-come up with RFC’s that will better interoperate.
+come up with RFC's that will better interoperate.
 
-In addition, based on comments made by attendees and the manager’s analysis of what transpired, we
+In addition, based on comments made by attendees and the manager's analysis of what transpired, we
 will make modifications to how we handle the interop testing itself. As we add more participants, we
 will have to make the interop a bit more structured in order to ensure we test each and every product
 implementation. Pre-defining user-ids prior to the interop this time helped. We will need to ensure
 that server implementations can be accessed prior to the interop as well. This may pose a problem to
-those who bring servers with them to interops, but we’ll work around those situations on a company by
+those who bring servers with them to interops, but we'll work around those situations on a company by
 company basis.
 
 More vendors at this interop also meant more extensive testing of CALDAV. Most vendors are still in

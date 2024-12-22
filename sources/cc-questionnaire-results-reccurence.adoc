@@ -27,7 +27,7 @@ The Recurrence Technical Committee of CalConnect (The Calendaring and Scheduling
 Consortium) has collected specific
 information on how C&S implementations have, or have not, implemented the Recurrence
 Rules of RFCs 2445 and 2446, iCalendar
-and iTIP. This document is part of the committee’s work to compile actual usage
+and iTIP. This document is part of the committee's work to compile actual usage
 information and interoperability issues.
 
 The Recurrence Committee recently collected information in the form of a Recurrence
@@ -158,7 +158,7 @@ only wanted to update just the body field, but ical does not give us the
 information to know that we only intended to change body for just this
 instance.
 
-Vendor has a bit of iTIP implementation, enough to accept/reject invitations, but that’s it.
+Vendor has a bit of iTIP implementation, enough to accept/reject invitations, but that's it.
 
 === Rules and Rdates
 
@@ -168,7 +168,7 @@ The iCalendar Recurrence rule section is very elaborate. I'm not aware of any pr
 conforms to it fully. Specifically, most products recognize only one RRULE and the others are ignored.
 
 There is more than one way to specify recurrences. For example, we can specify a daily event as a
-FREQ=WEEKLY event with weekday = su, mo…sa or as a FREQ=DAILY. It is relatively easy to
+FREQ=WEEKLY event with weekday = su, mo...sa or as a FREQ=DAILY. It is relatively easy to
 implement a recurrence engine to generate events using the rules, but we find it hard to recognize
 it as a daily event to be displayed in User Interface.
 

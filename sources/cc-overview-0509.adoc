@@ -61,7 +61,7 @@ iMIP, iTIP, CalDAV)
 * Trumba
 * Yahoo!
 
-If your vendor isn’t listed here, ask them why!
+If your vendor isn't listed here, ask them why!
 
 == Technical Committees
 
@@ -133,7 +133,7 @@ solved.
 ** Held in conjunction with Interops
 ** Technical committee working meetings
 ** Review and status of technical committees
-** “All hands” plenary meeting of membership
+** "All hands" plenary meeting of membership
 ** Consensus on direction, next steps of Consortium
 
 == How to Get Involved

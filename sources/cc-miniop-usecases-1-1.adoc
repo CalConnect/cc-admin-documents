@@ -32,7 +32,7 @@ the use cases for minimum interoperability of calendaring and
 scheduling. Minimum interoperability is the basic level of functionality
 our collective experience tells us is necessary to have a useful
 system. We realize that in some cases it may be more than is
-currently offered by “basic” calendaring and scheduling applications.
+currently offered by "basic" calendaring and scheduling applications.
 
 == Introduction
 
@@ -40,7 +40,7 @@ This document was created by the Use Case Technical Committee of the Calendaring
 and Scheduling Consortium. The document defines the use cases for minimum
 interoperability of calendaring and scheduling. Minimum interoperability is the basic level
 of functionality our collective experience tells us is necessary to have a useful system.
-We realize that in some cases it may be more than is currently offered by “basic”
+We realize that in some cases it may be more than is currently offered by "basic"
 calendaring and scheduling applications.
 
 Areas covered are:
@@ -56,8 +56,8 @@ Please send any changes or corrections to the document editor.
 [heading=terms and definitions]
 == Definitions
 
-The definitions below are taken from the “Calendaring and Scheduling Glossary of
-Terms” from CalConnect.
+The definitions below are taken from the "Calendaring and Scheduling Glossary of
+Terms" from CalConnect.
 
 === Alarm
 
@@ -208,7 +208,7 @@ follow the boundaries of states, countries or other administrative areas.
 An organizer wants to invite attendees to a meeting on a single date
 
 [example]
-Let’s play tennis next Wednesday.
+Let's play tennis next Wednesday.
 
 ==== Events with no end time
 
@@ -470,7 +470,7 @@ the schedules of all the participants to determine when there are no
 conflicts.
 
 [example]
-Joe is wants to ask Sam a quick question. Joe looks at Sam’s
+Joe is wants to ask Sam a quick question. Joe looks at Sam's
 calendar to determine if he might be available.
 
 [example]
@@ -481,7 +481,7 @@ She may need to view the details of meetings to determine this correctly.
 [example]
 Your spouse wants to see if you can pickup the kids. They
 may notice that you have something else scheduled or that you already
-have marked it on your schedule. They don’t necessarily want to add
+have marked it on your schedule. They don't necessarily want to add
 anything to your schedule.
 
 ==== Recurrence
@@ -535,7 +535,7 @@ recurring meeting with following date/times:
 04/28/05:: 0900-1000
 04/29/05:: 0900-1000
 
-Chair reschedules a single instance’s (Tuesday’s) time portion +1 hr, so
+Chair reschedules a single instance's (Tuesday's) time portion +1 hr, so
 from 1000-1100 on Tuesday April 26, 2005. This should yield a recurring
 meeting with following date/times:
 

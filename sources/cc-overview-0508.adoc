@@ -133,7 +133,7 @@ for members)
 ** Public version on Consortium website
 
 . Roundtables
-** “All hands” plenary meeting of membership
+** "All hands" plenary meeting of membership
 ** Three per year midway between IETF meetings
 *** help to drive each other
 ** Held in conjunction with Interops
@@ -288,7 +288,7 @@ encumbered information in the course of
 participating in consortium activities
 . Resolution of ambiguous situations
 ** Reasonable compliance with IETF policy on IPR
-*** “Section 10” of IETF RFC2026, Internet Standards Process
+*** "Section 10" of IETF RFC2026, Internet Standards Process
 *** http://www.ietf.org/IESG/Section10.txt
 
 == Membership
