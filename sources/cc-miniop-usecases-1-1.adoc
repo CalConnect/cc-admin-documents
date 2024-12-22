@@ -1,0 +1,695 @@
+= Min-IOP (Minimum Interoperable Subset) Use Cases
+:docnumber: 0601
+:copyright-year: 2006
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1.1
+:status: published
+:revdate: 2006-01-24
+:published-date: 2006-01-24
+:technical-committee: USECASE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Jeff McCullouch
+:affiliation: UC Berkeley
+:role: editor
+:toclevels: 4
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+This document was created by the Use Case Technical Committee of
+the Calendaring and Scheduling Consortium. The document defines
+the use cases for minimum interoperability of calendaring and
+scheduling. Minimum interoperability is the basic level of functionality
+our collective experience tells us is necessary to have a useful
+system. We realize that in some cases it may be more than is
+currently offered by “basic” calendaring and scheduling applications.
+
+== Introduction
+
+This document was created by the Use Case Technical Committee of the Calendaring
+and Scheduling Consortium. The document defines the use cases for minimum
+interoperability of calendaring and scheduling. Minimum interoperability is the basic level
+of functionality our collective experience tells us is necessary to have a useful system.
+We realize that in some cases it may be more than is currently offered by “basic”
+calendaring and scheduling applications.
+
+Areas covered are:
+
+. Setting up regularly scheduled events
+. Scheduling with people in other time zones.
+. Scheduling while traveling to other time zones.
+. Scheduling and Negotiating meetings with others
+. Announcing events
+
+Please send any changes or corrections to the document editor.
+
+[heading=terms and definitions]
+== Definitions
+
+The definitions below are taken from the “Calendaring and Scheduling Glossary of
+Terms” from CalConnect.
+
+=== Alarm
+
+A reminder for an event or a to-do. Alarms may be used to define a reminder for
+a pending event or an overdue to-do.
+
+=== Calendar
+
+A collection of events, to-dos, journal entries, etc. A calendar could be the
+content of a person or resource's agenda; it could also be a collection of data serving a
+more specialized need. Calendars are the basic storage containers for calendaring
+information.
+
+[.source]
+<<rfc3283>>
+
+=== Calendar User (CU)
+
+An entity (often a human) that accesses calendar information.
+
+[.source]
+<<rfc3283>>
+
+=== Calendaring
+
+An application domain that covers systems that allow the interchange,
+access and management of calendar data.
+
+=== Calconnect
+
+The Calendaring and Scheduling Consortium consisting of vendors and
+user groups interested in promoting and improving calendaring and scheduling
+standards and interoperability.
+
+=== Coordinated Universal Time (UTC)
+
+An atomic realization of Universal Time (UT) or
+Greenwich Mean Time, the astronomical basis for civil time. Time zones around the
+world are expressed as positive and negative offsets from UT. UTC differs by an integral
+number of seconds from International Atomic Time (TAI), as measured by atomic clocks
+and a fractional number of seconds from UT.
+
+[.source]
+<<wiki>>
+
+=== Counter
+
+A counter-proposal request a participant may send to an event or task
+organizer to suggest a change to the event or task such as the scheduled date/time, list
+of participants, etc.
+
+=== Daylight Savings Time (DST)
+
+The period of the year in which the local time of a
+particular time zone is adjusted forward, most commonly by one hour, to account for the
+additional hours of daylight during summer months.
+
+=== Event
+
+A calendar object that usually takes up time on an individual calendar. Events
+are commonly used to represent meetings, appointments, anniversaries, and day
+events.
+
+=== Free time search
+
+(Bounded) Common free time.
+This is typically a search generated
+by an application to show time on a calendar that is available or open.
+
+=== Freebusy
+
+A database and/or listing of times when a potential attendee or resource is
+free or busy. Used when scheduling calendar events.
+
+=== iCalendar
+
+The Internet Calendaring and Scheduling Core Object Specification. An
+IETF standard (RFC 2445) for a text representation of calendar data.
+
+=== Instance
+
+When used with recurrences, an instance refers to an item in the set of
+recurring items.
+
+=== Invite
+
+To request the attendance of someone to a calendar event.
+
+=== Negotiation
+
+Resource conflict resolution. Negotiation is the process of resolving
+conflicts either programmatically or via direct communication with the participants and
+invitees of meetings and events.
+
+=== Notification
+
+. The action of making known, an intimation, a notice.
+. Reminder or alarm sent when any resource or parties interested in the resource need an indicator
+that some attention is required. Possible notification methods include email, paging,
+audible signal at the computer, visual indicator at the computer, voice mail, telephone.
+
+=== Organizer
+
+The originator of a calendar event typically involving more than one
+attendee.
+
+=== Publish
+
+Make known publicly calendar information such as freebusy times.
+
+=== Recurring
+
+Happening more than once over a specified interval, such as weekly,
+monthly, daily, etc. See {{Repeating}}.
+
+=== Repeating
+
+An event that happens more than once. You might want an event to occur
+on a regular basis. To do this you schedule a repeating event. Any changes you make to
+the event can automatically be made to all occurrences of the event. If necessary,
+changes can be made to individual events without affecting the others. For example, if
+you need to attend a weekly meeting, you can schedule a repeating event on your
+calendar. Using another example, if you want to schedule a five day vacation, schedule
+an all-day event that repeats daily for a total of five times. If you have to cancel one of
+the days, delete the one day without deleting the whole event.
+
+=== Reminders
+
+See {{Notification}}.
+
+=== Time zone
+
+Areas of the Earth that have adopted the same local time. Time zones are
+generally centered on meridians of a longitude, that is a multiple of stem:[15 "unitsml(deg)"], thus making
+neighboring time zones one hour apart. However, the one hour separation is not
+universal and the shapes of time zones can be quite irregular because they usually
+follow the boundaries of states, countries or other administrative areas.
+
+[.source]
+<<wiki>>
+
+== Use Cases
+
+=== General Calendaring
+
+==== Basic invitation
+
+An organizer wants to invite attendees to a meeting on a single date
+
+[example]
+Let’s play tennis next Wednesday.
+
+==== Events with no end time
+
+An organizer wants to setup an event with only a start time where there is no
+end time or the end time is unknown.
+
+[example]
+At 2 pm I need to take my pills.
+
+[example]
+Party at my house starting at 6:30 pm.
+
+[example]
+Rolling Stones, Red Rocks Ampitheatre, 12/14/05, 7:00 pm
+
+[example]
+Leave at 3:30 pm to go pickup the kids.
+
+[example]
+A reminder that I need to turn in a project report at 3pm
+
+==== Alarms/Reminders
+
+A calendar user wants to set a personal alarm or reminder for an upcoming
+event with a specified lead time, and for the alarm or reminder to be triggered at
+the appropriate time.
+
+[example]
+I want to be reminded 5 minutes before a meeting starts.
+
+=== Basic Recurrence (Intervals)
+
+For the basic recurrence intervals below, a calendar user/organizer may wish to
+create meetings/events that are unbounded, i.e. no clear end date. Some examples
+include birthdays, anniversaries, staff meetings. While different implementations may
+or may not allow creation of these types of meetings/events, the unboundedness
+should be retained when the meeting/event is transferred between systems.
+
+==== Every Nth Interval
+
+An organizer wants to invite attendees to a meeting that repeats on a regular
+interval (hourly, daily, weekly, monthly, yearly).
+
+[example]
+Class is on Tue/Thu of each week
+
+[example]
+Every Wednesday we have a meeting
+
+[example]
+Every year on July 4^th^
+
+[example]
+Every 3 Sundays play poker
+
+[example]
+Every 4 hours take a 15 min break
+
+==== Day of week/month
+
+An organizer wants to invite attendees to a meeting on a day of the Nth
+week/month.
+
+[example]
+Every 3^rd^ Tuesday of the month go to the beach
+
+[example]
+The last Friday in November is black Friday
+
+==== Nth date of month
+
+An organizer wants to invite attendees to a meeting on the Nth date of a month
+or year.
+
+[example]
+Pay bills on the 15^th^ of the month.
+
+[example]
+Pay day is the last day of the month.
+
+[example]
+Annual report due by end of February every year.
+
+==== Custom list of dates
+
+An organizer wants to invite attendees to a meeting with a custom list of
+days/dates.
+
+[example]
+The dates for a lecture series: Tuesday this week,
+Wednesday next week, & Friday the following week.
+
+==== Basic combinations
+
+An organizer wants to invite attendees to a meeting that includes dates from a
+combination of regular intervals.
+
+[example]
+The 2^nd^ Sunday every 3 months for a small church that only
+has communion every 3 months.
+
+[example]
+The 1^st^ day of every other month
+
+==== Exceptions
+
+An organizer wants to invite attendees to a meeting that includes dates from a
+regular interval with an exception.
+
+[example]
+Last Friday every month except November
+
+[example]
+Meeting on Mondays January through March except for
+Monday holidays.
+
+[example]
+Moving a meeting. We have a status meeting every Monday
+except next Monday is Labor Day, so we'll have to move that meeting to
+Tuesday.
+
+[example]
+Meeting every 5 weeks on Thursday plus next Wednesday.
+
+=== Basic Time Zone
+
+==== Meetings across time zones
+
+===== Repeating meeting involving multiple time zones
+
+An organizer wants to schedule a repeating meeting (phone/video
+conference) with people working in many different time zones. Note: some
+time zones have fifteen or thirty minute offsets rather than the more
+standard one hour offset. Also some people may be in time zones currently
+in daylight savings time, while others may not.
+
+[example]
+A product manager wants to schedule several video conferences for 9am
+GMT0BST in a multi-national corporation across 10 time zones. One
+participant is in Chatham, New Zealand which has 12 hours, 45 minutes
+time zone offset from UTC.
+
+===== Events with begin and end times in different time zones
+
+An airline reservation system is used to book a flight which leaves at
+1:10 pm PST from San Francisco, and arrives at 9:43 pm EST in New
+York, NY (5 hours 33 mins flying time) or one that leaves at 1:45 pm from
+Sydney, Australia and arrives in San Francisco, CA at 10:05 am PST(13
+hours 20 mins flying time). An ICS file is sent to user to add to their
+calendar.
+
+==== Meetings involving daylight savings time
+
+===== Monthly meetings
+
+An organizer wants to create a monthly meeting between February and
+August with participants in United States, Germany and Japan. (Japan
+does not have daylight savings time).
+
+===== Shift work
+
+An organizer wants to create a schedule where the end time is fixed and
+the schedule crosses a daylight savings time change.
+
+[example]
+For hospital staff the shifts are normally 8 hours long. When
+there is a daylight savings time change, one of the shifts will be longer or
+shorter depending on the direction of the time change.
+
+===== Flight schedules
+
+An organizer wants to create a schedule where the duration is fixed and
+the schedule crosses a daylight savings time change.
+
+[example]
+Flight schedules are dependent on the actual flight duration.
+The arrival time will need to be shifted across a daylight savings time
+change.
+
+===== Changes in Daylight Saving Time definitions
+
+An organizer creates a meeting with a person in a different time zone
+where the government may change the dates for daylight savings time
+each year, and the time zone definition is changed after the meeting
+creation time.
+
+[example]
+Israel moves their DST time changes each year.
+
+[example]
+Brazil once moved their DST time change to accommodate
+the arrival of the Pope.
+
+=== Scheduling
+
+==== Inviting attendees
+
+===== Invitations for users on and external to your server
+
+An organizer wants to send out an invitation to people that are both within
+and external to their calendar server.
+
+===== Track responses
+
+An organizer wants to track responses or view the attendee list for their
+meeting invitation for both intra and external participants.
+
+===== Modify a meeting
+
+An organizer wants to modify the meeting, and have those changes
+reflected on all invitees calendars. (Start time, duration, date, location,
+invitees, body)
+
+===== Modify a meeting with an alert
+
+An organizer wants to modify the meeting, and let the participants know
+about the change. (Start time, duration, date, location, invitees, body)
+
+===== Cancel a meeting
+
+An organizer wants to cancel a meeting.
+
+==== Responding
+
+===== Accept an invitation
+
+An attendee wants to accept/decline a meeting invitation. They may wish to
+change their status later.
+
+===== Counter a non-repeating meeting
+
+An attendee wants to counter a non-repeating invitation.
+
+[example]
+Joe creates a meeting and invites Mary. Mary can't make it at
+the time Joe selected, and counters the meeting, offering a time 3 hours
+later in the day. Joe accepts the counter and the meeting is rescheduled to
+3 hours later in the day.
+
+===== View attendance list
+
+An attendee wants to view the attendee list and/or acceptance of other
+attendees
+
+[example]
+Joe wants to come to a proposed meeting only if the right
+people are attending, so Joe needs to see who is invited and who has
+accepted.
+
+==== Free/Busy Time
+
+===== View free/busy time of another user
+
+A calendar user wants to allow another calendar user to see their calendar.
+
+[example]
+While organizing a meeting, the organizer wants to view all
+the schedules of all the participants to determine when there are no
+conflicts.
+
+[example]
+Joe is wants to ask Sam a quick question. Joe looks at Sam’s
+calendar to determine if he might be available.
+
+[example]
+Samantha is analyzing how much time is spent on various
+projects. She looks at staff member calendars, and adds the time spent.
+She may need to view the details of meetings to determine this correctly.
+
+[example]
+Your spouse wants to see if you can pickup the kids. They
+may notice that you have something else scheduled or that you already
+have marked it on your schedule. They don’t necessarily want to add
+anything to your schedule.
+
+==== Recurrence
+
+Similar to basic recurrence, changes to unbounded, repeating meetings/events
+should retain their unboundedness when a change is made to one or all
+instances of the meeting/event.
+
+===== Change all instances
+
+An organizer wants to change all of the instances of a repeating meeting to
+another date/time.
+
+[example]
+====
+Chair sends recurring meeting to invitee that starts Monday April 11, 2005
+and repeats every day for 5 days from 0900-1000. This should yield a
+recurring meeting with following date/times:
+
+04/11/05:: 0900-1000
+04/12/05:: 0900-1000
+04/13/05:: 0900-1000
+04/14/05:: 0900-1000
+04/15/05:: 0900-1000
+
+Chair reschedules time portion for all instances of the recurring meeting +1
+hour, so from 1000-1100. This should yield a recurring meeting with
+following date/times:
+
+04/11/05:: 1000-1100
+04/12/05:: 1000-1100
+04/13/05:: 1000-1100
+04/14/05:: 1000-1100
+04/15/05:: 1000-1100
+====
+
+===== Change one instance
+
+An organizer wants to change one instance of a repeating meeting to
+another date/time.
+
+[example]
+====
+Chair sends recurring meeting to invitee that starts Monday April 25, 2005
+and repeats everyday for 5 days from 0900-1000. This should yield a
+recurring meeting with following date/times:
+
+04/25/05:: 0900-1000
+04/26/05:: 0900-1000
+04/27/05:: 0900-1000
+04/28/05:: 0900-1000
+04/29/05:: 0900-1000
+
+Chair reschedules a single instance’s (Tuesday’s) time portion +1 hr, so
+from 1000-1100 on Tuesday April 26, 2005. This should yield a recurring
+meeting with following date/times:
+
+04/25/05:: 0900-1000
+04/26/05:: 1000-1100
+04/27/05:: 0900-1000
+04/28/05:: 0900-1000
+04/29/05:: 0900-1000
+====
+
+[example]
+Chair sends monthly recurring staff meeting held on first Tuesday of the
+month to staff members. The first meeting is Tuesday, February 7, 2006.
+The meetings will continue indefinitely into the future. Normally the location
+for the meeting is fixed, but needs to be changed for the June meeting.
+Chair changes the location, and resends the invitation.
+
+===== Extending a series
+
+An organizer creates a repeating meeting for some day of the week, then
+later needs to add another meeting to the series on the same day of the
+week.
+
+[example]
+====
+Chair sends recurring meeting to invitee that starts Wednesday April 27,
+2005 and repeats every Wednesday for the next 5 weeks from 0900-1000.
+This should yield a recurring meeting with following date/times:
+
+04/27/05:: 0900-1000
+05/04/05:: 0900-1000
+05/11/05:: 0900-1000
+05/18/05:: 0900-1000
+05/25/05:: 0900-1000
+
+Chair extends the series of meetings to six weeks by adding a single
+instance, Wednesday June 1, 2005. All other attributes are the same. This
+should yield a recurring meeting with following date/times:
+
+04/27/05:: 0900-1000
+05/04/05:: 0900-1000
+05/11/05:: 0900-1000
+05/18/05:: 0900-1000
+05/25/05:: 0900-1000
+06/01/05:: 0900-1000
+====
+
+===== Adding an extra date that is an exception to a series
+
+An organizer creates a repeating meeting for some day of the week, then
+later needs to add another meeting to the series on a different day of the
+week.
+
+[example]
+====
+Chair sends recurring meeting to invitee that starts Wednesday April 27,
+2005 and repeats every Wednesday for the next 5 weeks from 0900-1000.
+This should yield a recurring meeting with following date/times:
+
+04/27/05:: 0900-1000
+05/04/05:: 0900-1000
+05/11/05:: 0900-1000
+05/18/05:: 0900-1000
+05/25/05:: 0900-1000
+
+Chair adds a single instance, Tuesday May 31, 2005. This should yield a
+recurring meeting with following date/times:
+
+04/27/05:: 0900-1000
+05/04/05:: 0900-1000
+05/11/05:: 0900-1000
+05/18/05:: 0900-1000
+05/25/05:: 0900-1000
+05/31/05:: 0900-1000
+====
+
+===== Change the body of all instances
+
+An organizer wants to change the body of all the instances of a repeating
+meeting.
+
+[example]
+====
+Chair sends recurring meeting to invitee that starts Monday April 18, 2005
+and repeats everyday for 5 days from 0900-1000. This should yield a
+recurring meeting with following date/times:
+
+04/18/05:: 0900-1000
+04/19/05:: 0900-1000
+04/20/05:: 0900-1000
+04/21/05:: 0900-1000
+04/22/05:: 0900-1000
+
+Chair sends an update to the body part for all instances of the recurring
+meeting to add a rough agenda format to the description field.
+====
+
+===== Change the body of one instance
+
+An organizer wants to change the body of one of the instances of a
+repeating meeting.
+
+[example]
+Chair needs to make changes to individual meeting agendas
+before each meeting.
+
+===== Add/Remove attendee to/from all instances
+
+An organizer wants to add/remove an attendee to all the instances of a
+repeating meeting
+
+===== Add/Remove attendee to/from one instance
+
+An organizer wants to add/remove an attendee to/from one of the
+instances of a repeating meeting
+
+===== This and future
+
+An organizer wants to change all dates/times for a meeting from now until
+the end of the interval.
+
+[example]
+Joe creates a five day repeating meeting (M-F) and invites some people.
+Later, while trying to get a room, Joe needs to reschedule Weds and All
+Future to be an hour later in the day.
+
+[example]
+Susan created a repeating staff meeting on the first Monday of the month
+two months ago. She wants to change the meeting to be the first Tuesday
+of the month from now onward.
+
+==== Time Zone
+
+===== Repeating Meeting across time zones with reschedule
+
+An organizer has scheduled a repeating meeting (phone/video conference)
+with people working in many different time zones and wants to change the
+time of one of the meetings.
+
+[example]
+====
+A product manager wants to schedule several video conferences for 9am
+GMT0BST on Tuesdays in a multi-national corporation across 10 time
+zones. One participant is in Chatham, New Zealand which has 12 hours,
+45 minutes time zone offset from UTC. The third in the series needs to be
+changed to Wednesday to accommodate two of the participants.
+
+NOTE: For this to work properly, the dates must be stored with time zone
+format)
+====
+
+[bibliography]
+== {blank}
+
+* [[[rfc3283,hidden(RFC 3283)]]]
+
+* [[[wiki,hidden(Wikipedia)]]], https://www.wikipedia.org/
