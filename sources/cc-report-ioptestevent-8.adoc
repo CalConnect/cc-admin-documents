@@ -78,7 +78,7 @@ and decompile into components.
 
 The purpose of this test event was to test CALDAV clients and servers and iCalendar
 implementations. Exhibit A are the test scenarios used for iCalendar testing. All products tested
-during this event are “not shipping application.” Therefore, in this pubic document, we do not
+during this event are "not shipping application." Therefore, in this pubic document, we do not
 explicitly name products or note how each product works. Comments are general and generic.
 To help differentiate notes, we have named the participants as Vendor one, Vendor two, Vendor
 three, Vendor four, Vendor five, Vendor six and Vendor 7.
@@ -125,34 +125,34 @@ Vendor two reported the following items:
 clients to publish and subscribe to calendars via Webdav.
 * Calendar objects from Vendor three were successfully published and subscribed to their
 calendars via Webdav. Webdav connectivity worked quite well.
-* They noted that they were not able to map Vendor one’s TZID’s to their timezones.
+* They noted that they were not able to map Vendor one's TZID's to their timezones.
 * In this case, timezones were interpreted in UTC.
-* Their floating dates and all day events imported correctly into another vendor’s product.
-* They also successfully mapped the other vendor’s timezones to their internal timezones.
+* Their floating dates and all day events imported correctly into another vendor's product.
+* They also successfully mapped the other vendor's timezones to their internal timezones.
 * Their application did not correctly import private event status (CLASS:PRIVATE). This
 has since been fixed.
-* Vendor four noted that importing their ics object into Vendor two’s application worked
+* Vendor four noted that importing their ics object into Vendor two's application worked
 well. Currently Vendor four does not support recurrence or timezones.
 * Importing one time event ics objects from Vendor five worked correctly. The sample
 recurring event instance provided from Vendor five included multiple DTSTART
 properties which is not valid and could not be imported. Importing their recurring events
-into Vendor five’s application worked for the most part. Import of a rescheduled
+into Vendor five's application worked for the most part. Import of a rescheduled
 occurrence of a recurring event left the original date in addition to the new date/time in
-Vendor five’s application.
-* When importing Vendor six’s ics files, timezone ID’s were not correctly mapped to their
+Vendor five's application.
+* When importing Vendor six's ics files, timezone ID's were not correctly mapped to their
 timezones. They had to implement enhanced mapping logic. Imported recurrence
 samples worked very well with all rescheduled events importing properly. Export of
-Vendor six’s client recurring event did not import correctly. The master event included
+Vendor six's client recurring event did not import correctly. The master event included
 only RDATE objects to specify recurrence set and did not include an RRULE which is
 not currently supported by Vendor two.
 * Vendor seven provided four sample ics files which all successfully imported. Examples
 included multiple timezones, all day events and recurrence. Vendor two exports include
 a custom attribute in the VTIMEZONE component which caused issues when importing
-into Vendor seven’s application. These should be ignored.
+into Vendor seven's application. These should be ignored.
 
 Vendor seven reported the following items:
 
-* A couple of bugs relating to Vendor eight’s handling of recurring events and EXDATEs.
+* A couple of bugs relating to Vendor eight's handling of recurring events and EXDATEs.
 * An issue where they were PROPPATCH'ing calendar collections (to set their display
 names). However, not all servers support this, and they need to ignore returned errors in
 this case.
@@ -167,7 +167,7 @@ VTIMEZONE).
 * Some of the other vendors noticed that they are exporting events in UTC timezone
 incorrectly.
 * A couple of bugs in their subscription to http: ics URLs were uncovered.
-* There were initially some problems with Vendor five’s client that turned out to be a result
+* There were initially some problems with Vendor five's client that turned out to be a result
 of client and server having implemented different versions of the CalDAV spec.
 * Vendor five updated their calendar-query REPORTs to match the latest spec, but was
 unable to retrieve events from our application. This was tracked down to being an
@@ -187,14 +187,14 @@ where problems were found.
 ICS file attachments that were then imported. Therefore there was not a lot of Accept and
 Decline testing done. Delegate, Counter and Reschedule was not tested with any vendors.
 * They felt it was very helpful and they are busy working on the problems they found.
-* They noted that their CALDAV implementation has problems with “@” in URLs. It also
-isn’t happy with PUT not returning an ETAG.
-* Their CALDAV application had problems with Vendor six’s Auto-added organizer.
-* Vendor eight doesn’t add a “calendar-access” DAV header.
+* They noted that their CALDAV implementation has problems with "@" in URLs. It also
+isn't happy with PUT not returning an ETAG.
+* Their CALDAV application had problems with Vendor six's Auto-added organizer.
+* Vendor eight doesn't add a "calendar-access" DAV header.
 
 == Summary
 
-Once again, this was a good event. We tried a new approach for testing – instead of trying to
+Once again, this was a good event. We tried a new approach for testing -- instead of trying to
 work through any bugs, we decided to continue testing all items that we could and only go back
 to fix bugs if they were holding up continuing with testing. This turned out to be a good
 approach and we were able to get the majority of vendor products tested.

@@ -119,7 +119,7 @@ How should a client / server handle a new time zone?
 ===== {blank}
 If a client /server model is used, the server should have a means of updating
 the time zone list. This can be accomplished in many different ways such as
-keeping a checksum of the “current” time zone list; when that list changes on
+keeping a checksum of the "current" time zone list; when that list changes on
 the server, clients simply re-download their local copies.
 
 ===== {blank}
@@ -162,7 +162,7 @@ set of rules to the supplied one.
 At this point, these problems can occur:
 
 ==== {blank}
-If the application cannot add “unmatchable” time zones to its internal list, even a perfectly
+If the application cannot add "unmatchable" time zones to its internal list, even a perfectly
 valid VTIMEZONE can be rejected.
 
 ===== {blank}
@@ -170,8 +170,8 @@ The meeting could be converted to UTC using the provided time zone, take
 note that this solution is less than ideal since time zone information is lost.
 
 ==== {blank}
-If the application has in its internal list a TZID “America/New_York”, and receives a
-VTIMEZONE with a TZID “America/New_York” with a different definition than its internal
+If the application has in its internal list a TZID "America/New_York", and receives a
+VTIMEZONE with a TZID "America/New_York" with a different definition than its internal
 one, the server may react unpredictably.
 
 ===== {blank}
@@ -187,7 +187,7 @@ zones can become quite problematic:
 
 * Since time zone ids are often shown to users, the time zone list could
 become quite large and confusing over time.
-* The need to “preserve” the original consumed time zone can also look
+* The need to "preserve" the original consumed time zone can also look
 like a bad idea when a time zone rule changes; meetings that have yet to
 occur will most likely need to be updated with the new time zone rule.
 
@@ -196,17 +196,17 @@ occur will most likely need to be updated with the new time zone rule.
 ==== How should client applications present a choice of time zones to users?
 
 ===== {blank}
-Use TZDATA database (a.k.a. Olson Database, “America/New_York”)
+Use TZDATA database (a.k.a. Olson Database, "America/New_York")
 names.
 
 ===== {blank}
-Use a GMT Offset scheme (“GMT+2, Cairo”…).
+Use a GMT Offset scheme ("GMT+2, Cairo"...).
 
 ===== {blank}
-Use common name presentation (EST5EDT, PST8PDT…).
+Use common name presentation (EST5EDT, PST8PDT...).
 
 ===== {blank}
-Additionally, a “clickable” world map is often used.
+Additionally, a "clickable" world map is often used.
 
 ==== Where should a client application get its supported time zone list?
 
@@ -219,7 +219,7 @@ Use standardized registry.
 ==== How can a client application map the Operating System time zone to the calendar server time zone?
 
 ===== {blank}
-Time zone registry with “aliases” could be used. The mapping of OS time
+Time zone registry with "aliases" could be used. The mapping of OS time
 zone to a standardized time zone database could be provided by OS
 Vendors or by a third party. For the long term, platform vendors should
 ideally start using data coming from a standardized registry.
@@ -227,9 +227,9 @@ ideally start using data coming from a standardized registry.
 ==== How often should a client update its time zone definition
 
 ===== {blank}
-Clients can compare a checksum of its time zone list against the server’s
-checksum, if it’s different; the client refreshes its time zone list with the
-server’s time zone list.
+Clients can compare a checksum of its time zone list against the server's
+checksum, if it's different; the client refreshes its time zone list with the
+server's time zone list.
 
 ===== {blank}
 By doing periodic checks on the server.

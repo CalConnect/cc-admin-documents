@@ -33,7 +33,7 @@ questionnaires will be used to help define requirements and
 recommendations for calendaring & scheduling products.
 
 This particular document summarizes the results of the
-Timezone Technical Committee’s questionnaire on Timezone
+Timezone Technical Committee's questionnaire on Timezone
 support in iCalendar products. Other questionnaire summary
 documents will cover different areas of calendaring and
 scheduling, and will be made available by the Consortium.
@@ -75,11 +75,11 @@ were in place to eventually do so.
 
 The results of the questionnaire are tabulated below.
 
-A number of questions required a “yes”, “no”, “other” response. Products that
-did not support timezones at all (answered “no” to all such questions) were
-moved into the “other” column. The percentage totals were calculated from the
-number of “yes” answers compared to the total of “yes” and “no” answers. The
-“other” value was excluded from the percentage. In other words, the percentage
+A number of questions required a "yes", "no", "other" response. Products that
+did not support timezones at all (answered "no" to all such questions) were
+moved into the "other" column. The percentage totals were calculated from the
+number of "yes" answers compared to the total of "yes" and "no" answers. The
+"other" value was excluded from the percentage. In other words, the percentage
 represents the amount of support for timezones by those who have made some
 attempt to support it.
 
@@ -89,7 +89,7 @@ result received.
 [%landscape]
 <<<
 
-==== Questionnaire Results (Questions 1 – 4)
+==== Questionnaire Results (Questions 1 -- 4)
 
 [%unnumbered,options=header,headerrows=2,cols=10]
 |===
@@ -179,17 +179,17 @@ without its extensive set of examples. iTIP needs a similar suite of examples, t
 
 Support for the basic VTIMEZONE component and properties seemed to be
 fairly complete, with most vendors both consuming and producing such
-components. Note that “producing” a VTIMEZONE component usually means
+components. Note that "producing" a VTIMEZONE component usually means
 copying a component out of a standard library provided in the product. We are
 not aware of any iCalendar products that generate VTIMEZONE components
 on-the-fly from some other data source.
 
 It was clear that a number of products prefer to operate in UTC and will
-“downgrade” DATE-TIME values to UTC if a timezone was included.
+"downgrade" DATE-TIME values to UTC if a timezone was included.
 
 Most products include a built-in set of timezone definitions, ranging in number
 from 50 to 380. These came from a variety of different sources, including the
-Olsen timezone database, timezone information built into OS’s (e.g. Windows),
+Olsen timezone database, timezone information built into OS's (e.g. Windows),
 those provided with other environments (Java). The naming of these components
 usually followed the scheme of the original data source. In one case a private
 namespace was used for timezone names.
@@ -201,8 +201,8 @@ Only 1/4 of products were able to adjust future events, tasks etc when a
 timezone definition changed.
 
 About 2/3 products would take in timezone definitions from outside sources. A
-number of products would attempt to match an “external” definition to the builtin
-ones and substitute any matching built-in definition in place of the “external”
+number of products would attempt to match an "external" definition to the builtin
+ones and substitute any matching built-in definition in place of the "external"
 one.
 
 ==== Timezone Registry
