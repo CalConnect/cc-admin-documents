@@ -1,0 +1,301 @@
+= iCalendar Timezone Problems and Recommendations
+:docnumber: 0602
+:copyright-year: 2006
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2006-01-24
+:published-date: 2006-01-24
+:technical-committee: TIMEZONE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Simon Vaillancourt
+:affiliation: Oracle Corporation
+:role: editor
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+This document was created by the TIMEZONE Technical Committee
+of the Calendaring and Scheduling Consortium. It contains
+information about common time zone implementation issues and
+recommendations on how to resolve these issues. We first justify the
+need for time zones, then we identify time zone implementation
+problems, and then offer some guidelines and recommendations.
+Take note that the listed recommendations often describe what
+vendors are currently doing to solve the problems.
+
+== Introduction
+
+This document contains information about common time zone implementation issues and
+recommendations on how to resolve these issues. We first justify the need for time zones,
+then we identify time zone implementation problems, and then offer some guidelines and
+recommendations. Take note that the listed recommendations often describe what
+vendors are currently doing to solve the problems.
+
+== Why do we need time zones?
+
+This section contains emails gathered on various mailing lists (e.g.:
+ietfcalsify@osafoundation.org, tc-timezone-l@calconnect.org...) and a summary of
+discussions between Calendaring and Scheduling Consortium members.
+
+=== Why should time zone information be preserved in a VCALENDAR object rather than converting to UTC?
+
+==== {blank}
+Recurring events that occur on both sides of a daylight savings time change need the
+appropriate time zone information to ensure they happen at the correct local time.
+
+==== {blank}
+Keeping the time zone information during the whole life of the event is important because
+it allows the events to be adjusted if a change to the time zone rules occurs.
+
+==== {blank}
+Interoperability with well-established products is a requirement for most calendar
+applications. Anything that those products support will most likely have to be supported
+by the majority of standards-based calendar applications, so we should keep time zones
+in the standard, clarifying them if needed instead of removing them entirely.
+
+==== {blank}
+It gives more context information about the meeting creation that can be used in the
+future if the meeting times have to be adjusted.
+
+==== {blank}
+Because the day of the week corresponding to a local time and a UTC time may be
+different, recurrence rules cannot reliably be expanded using only UTC time.
+
+[example]
+A meeting occurring every first Monday of the month at 0:30 CEST would be
+22:30 every Sunday in UTC. Since the first Sunday of the month is not always occurring
+just before the first Monday of the month, converting that event to UTC would not expand
+that rule correctly.
+
+=== Should a VCALENDAR object contain whole VTIMEZONE objects or reference to a time zone?
+
+Here are some arguments for having a whole VTIMEZONE object inside a
+VCALENDAR object instead of just a reference to an external time zone definition:
+
+==== {blank}
+Including the VTIMEZONE data in the VCALENDAR object makes the entity self
+contained and very portable.
+
+==== {blank}
+An application with only offline viewing capabilities does not have to worry about keeping
+a time zone database if all the VCALENDAR objects contain the necessary time zone
+information.
+
+== Identified implementation problems and recommendations
+
+Implementing a standards-compliant calendar client or server that supports time zones
+correctly is not an easy task. This section describes some common implementation
+problems and recommendations in italics.
+
+=== General time zone issues
+
+==== {blank}
+How should a client / server react towards existing meetings when a time zone rule
+changes? For example, if DST changes for a time zone, should the existing meetings
+created in that time zone be adjusted to the new rules or should they remain the same
+and let the changes be applied only to newly created events?
+
+===== {blank}
+In most cases, meetings created using a time zone should use the new time
+zone definition so that effected recurrences reflect the time zone change
+(Example: Lunch at noon every day). Cases where the timing has to be fixed
+should be created in UTC (Example: Enter a few digits on a terminal every
+108 minutes), which has no dependency on time zone rules.
+
+==== {blank}
+How should a client / server handle a new time zone?
+
+===== {blank}
+If a client /server model is used, the server should have a means of updating
+the time zone list. This can be accomplished in many different ways such as
+keeping a checksum of the “current” time zone list; when that list changes on
+the server, clients simply re-download their local copies.
+
+===== {blank}
+If a PIM client is used (no server), a patch could be issued updating its time
+zone list.
+
+==== {blank}
+How should a client / server handle a time zone fork? (For example: if DST changes in
+the US only and not in Canada and meetings were created using an EST5EDT time
+zone). This could create two new time zones EST5EDT_CA for Canada and
+EST5EDT_US for the US (and deprecating EST5EDT).
+
+===== {blank}
+The GEO property might be used to detect which of the new time zones
+every meeting belongs in.
+
+===== {blank}
+The LOCATION property can also be used to detect the appropriate time
+zone for the meetings.
+
+===== {blank}
+If no information in the calendar object can be used to detect the appropriate
+new time zone, a default choice could be used based on where the majority
+of the meetings usually occur.
+
+=== Consuming time zones
+
+Quite often, applications have a list of time zones stored internally or in a non-standard
+registry, and when a meeting is created with a time zone, the application will:
+
+. Try to match the supplied time zone with its internal representation. This match
+can be accomplished by using any of these techniques:
+** Have an algorithm pick an internal time zone with the closest corresponding
+set of rules to the supplied one.
+** Try to match the TZID with its internal counterpart.
+. If no match can be found the application will do one of these:
+** Return an error.
+** Add the new time zone to its internal time zone list.
+
+At this point, these problems can occur:
+
+==== {blank}
+If the application cannot add “unmatchable” time zones to its internal list, even a perfectly
+valid VTIMEZONE can be rejected.
+
+===== {blank}
+The meeting could be converted to UTC using the provided time zone, take
+note that this solution is less than ideal since time zone information is lost.
+
+==== {blank}
+If the application has in its internal list a TZID “America/New_York”, and receives a
+VTIMEZONE with a TZID “America/New_York” with a different definition than its internal
+one, the server may react unpredictably.
+
+===== {blank}
+If using a time zone registry the time zone definition of the registry should be
+the one used.
+
+===== {blank}
+If using an internal time zone list that can be changed, a versioning of the
+TZID could be used allowing different versions of the same TZIDs to be kept.
+This would allow applications to have events using different time zones with
+the same TZID. Take note however that consuming and preserving all time
+zones can become quite problematic:
+
+* Since time zone ids are often shown to users, the time zone list could
+become quite large and confusing over time.
+* The need to “preserve” the original consumed time zone can also look
+like a bad idea when a time zone rule changes; meetings that have yet to
+occur will most likely need to be updated with the new time zone rule.
+
+=== Client application time zone issues
+
+==== How should client applications present a choice of time zones to users?
+
+===== {blank}
+Use TZDATA database (a.k.a. Olson Database, “America/New_York”)
+names.
+
+===== {blank}
+Use a GMT Offset scheme (“GMT+2, Cairo”…).
+
+===== {blank}
+Use common name presentation (EST5EDT, PST8PDT…).
+
+===== {blank}
+Additionally, a “clickable” world map is often used.
+
+==== Where should a client application get its supported time zone list?
+
+===== {blank}
+Use TZDATA database (a.k.a. Olson Database).
+
+===== {blank}
+Use standardized registry.
+
+==== How can a client application map the Operating System time zone to the calendar server time zone?
+
+===== {blank}
+Time zone registry with “aliases” could be used. The mapping of OS time
+zone to a standardized time zone database could be provided by OS
+Vendors or by a third party. For the long term, platform vendors should
+ideally start using data coming from a standardized registry.
+
+==== How often should a client update its time zone definition
+
+===== {blank}
+Clients can compare a checksum of its time zone list against the server’s
+checksum, if it’s different; the client refreshes its time zone list with the
+server’s time zone list.
+
+===== {blank}
+By doing periodic checks on the server.
+
+===== {blank}
+Using a push mechanism notifying the client that a time zone has been
+updated. Possibly by adding a new ITIP method.
+
+=== Time zone registry and service issues
+
+==== Why do we need a time zone registry and service?
+
+===== {blank}
+A time zone registry would be useful in producing a standardized list of time
+zones.
+
+===== {blank}
+A time zone service protocol would be useful in defining how time zones
+should be retrieved and in what format.
+
+===== {blank}
+A time zone registry and service would promote interoperability.
+
+===== {blank}
+A time zone registry and service would solve the problems encountered
+when trying to consume time zones.
+
+===== {blank}
+A time zone service means having centralized time zone definitions that are
+easy to update.
+
+===== {blank}
+A time zone registry and service could open the door for time zones being
+sent by reference (Useful for mobile devices and other bandwidth limited
+platforms).
+
+==== How should a time zone registry be implemented?
+
+===== {blank}
+By using an IANA registry to store time zone data with a standardized
+naming scheme.
+
+==== How should a time zone service be implemented?
+
+===== {blank}
+By defining a standardized way to retrieve the IANA registered time zones
+(i.e.: VTIMEZONE objects accessible through an extension of CalDAV, DNS,
+HTTP....).
+
+==== Who should be responsible for updating it, how can it be trusted?
+
+===== {blank}
+Updates could be done through: RFC, informational RFC, appointed/elected
+committee/individual who approves updates to the list.
+
+[bibliography]
+== References
+
+* [[[tz,1]]], Time zone registry draft http://www.ietf.org/internet-drafts/draft-royer-timezone-registry-02.txt
+
+* [[[wtz,2]]], Windows time zones to TZID mapping http://unicode.org/cldr/data/diff/supplemental/supplemental.html#windows___tzid
+
+* [[[cd,3]]], CalDAV Draft http://ietfreport.isoc.org/all-ids/draft-dusseault-caldav-08.txt
+
+* [[[rfc2445,RFC 2445]]]
+
+* [[[rfc2446,RFC 2446]]]
+
+* [[[tzdb,6]]], TZ Database (Olson) http://www.twinsun.com/tz/tz-link.htm
