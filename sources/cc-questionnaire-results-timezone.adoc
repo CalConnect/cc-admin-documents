@@ -1,0 +1,376 @@
+= Report on TIMEZONE Questionnaire Results
+:docnumber: 0510
+:copyright-year: 2005
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2005-10-03
+:published-date: 2005-10-03
+:technical-committee: TIMEZONE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Cyrus Daboo
+:role: editor
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+This document is one in a series of documents summarizing the
+results of questionnaires that the Calendaring and Scheduling
+Consortium has conducted to help better understand the
+requirements, problems and needs for calendaring and
+scheduling solutions. It is expected that the results of these
+questionnaires will be used to help define requirements and
+recommendations for calendaring & scheduling products.
+
+This particular document summarizes the results of the
+Timezone Technical Committee’s questionnaire on Timezone
+support in iCalendar products. Other questionnaire summary
+documents will cover different areas of calendaring and
+scheduling, and will be made available by the Consortium.
+
+== Report on Timezone Questionnaire Results
+
+=== Introduction
+
+The Timezone Technical Committee of the Calendaring & Scheduling
+Consortium (http://www.calconnect.org) developed a questionnaire about
+timezone usage in iCalendar products. The goal of this questionnaire was to
+determine how and to what extent timezones are being used, with a view to
+using those results to aid in the development of recommendations on how to
+improve timezone support in iCalendar.
+
+A number of responses were received, and summary and conclusions drawn
+from these results. This document presents a summary of the results and brief
+conclusions based on those results.
+
+Whilst each vendor submitted their own results, the summary presented here is
+an aggregate of those results, and has any information that could identify
+vendors removed.
+
+=== Summary of individual responses
+
+A total of 19 responses were received from a total of 17 vendors over a period of
+about 1 month. The products covered by these responses include clients (both
+desktop and web-based), servers and libraries (which are used by different
+clients and servers). Both commercial and open source vendors are represented.
+Many responses were based on currently shipping products, and some were
+based on products currently under development.
+
+Of these products, a total of 7 did not implement timezone support at all, either
+because it was not relevant (e.g. timezone was left as a presentation issue for
+clients) or because the feature had not currently been implemented, but plans
+were in place to eventually do so.
+
+=== Results
+
+The results of the questionnaire are tabulated below.
+
+A number of questions required a “yes”, “no”, “other” response. Products that
+did not support timezones at all (answered “no” to all such questions) were
+moved into the “other” column. The percentage totals were calculated from the
+number of “yes” answers compared to the total of “yes” and “no” answers. The
+“other” value was excluded from the percentage. In other words, the percentage
+represents the amount of support for timezones by those who have made some
+attempt to support it.
+
+Descriptive answers and comments in the table below are summaries of each
+result received.
+
+[%landscape]
+<<<
+
+==== Questionnaire Results (Questions 1 – 4)
+
+[%unnumbered,options=header,headerrows=2,cols=10]
+|===
+.2+| Question .2+| Description 8+| Answers
+| CONSUME(y) | CONSUME(n) | CONSUME(o) | *CONSUME %* | PRODUCE(y) | PRODUCE(n) | PRODUCE(o) | *PRODUCE*
+| h| Components supported: 8+|
+
+| Q1 | VTIMEZONE | 12 | 0 | 7 | *100%* | 11 | 1 | 7 | *92%*
+| Q1.1 | STANDARD | 12 | 0 | 7 | *100%* | 11 | 1 | 7 | *92%*
+| Q1.2 | DAYLIGHT | 12 | 0 | 7 | *100%* | 11 | 1 | 7 | *92%*
+| h| Properties supported: 8+|
+| h| In VTIMEZONE 8+|
+| Q2.1 | TZID | 11 | 1 | 7 | *92%* | 11 | 1 | 7 | *92%*
+| Q2.2 | LAST-MODIFIED | 6 | 6 | 7 | *50%* | 6 | 6 | 7 | *50%*
+| Q2.3 | TZURL | 5 | 7 | 7 | *42%* | 2 | 10 | 7 | *17%*
+| Q2.4 | XPROP | 5 | 7 | 7 | *42%* | 1 | 11 | 7 | *8%*
+| h| In STANDARD 8+|
+| Q3.1 | DTSTART | 11 | 1 | 7 | *92%* | 10 | 2 | 7 | *83%*
+| Q3.2 | TZOFFSETTO | 12 | 0 | 7 | *100%* | 11 | 1 | 7 | *92%*
+| Q3.3 | TZOFFSETFROM | 12 | 0 | 7 | *100%* | 11 | 1 | 7 | *92%*
+| Q3.4 | COMMENT | 5 | 7 | 7 | *42%* | 4 | 8 | 7 | *33%*
+| Q3.5 | RDATE | 8 | 4 | 7 | *67%* | 5 | 7 | 7 | *42%*
+| Q3.6 | RRULE | 12 | 0 | 7 | *100%* | 10 | 2 | 7 | *83%*
+| Q3.7 | TZNAME | 6 | 6 | 7 | *50%* | 8 | 4 | 7 | *67%*
+| Q3.8 | XPROP | 6 | 6 | 7 | *50%* | 2 | 10 | 7 | *17%*
+| h| In DAYLIGHT 8+|
+| Q4.1 | DTSTART | 11 | 1 | 7 | *92%* | 10 | 2 | 7 | *83%*
+| Q4.2 | TZOFFSETTO | 12 | 0 | 7 | *100%* | 11 | 1 | 7 | *92%*
+| Q4.3 | TZOFFSETFROM | 12 | 0 | 7 | *100%* | 11 | 1 | 7 | *92%*
+| Q4.4 | COMMENT | 6 | 6 | 7 | *50%* | 5 | 7 | 7 | *42%*
+| Q4.5 | RDATE | 8 | 4 | 7 | *67%* | 5 | 7 | 7 | *42%*
+| Q4.6 | RRULE | 12 | 0 | 7 | *100%* | 10 | 2 | 7 | *83%*
+| Q4.7 | TZNAME | 6 | 6 | 7 | *50%* | 8 | 4 | 7 | *67%*
+| Q4.8 | XPROP | 6 | 6 | 7 | *50%* | 2 | 10 | 7 | *17%*
+|===
+
+[%portrait]
+<<<
+
+==== Questionnaire Results (Questions 5 onwards)
+
+[%unnumbered,options=header,cols=6]
+|===
+| Question | Description 3+| Answers |
+| h| General: | (y) | (n) | (o) | %
+| Q5 | Do you always send DATE-TIME values with a timezone? | 9 | 9 | 1 | *47%*
+| Q6 | Do you always send DATE-TIME values in UTC or floating? | 9 | 5 | 5 | *47%*
+| Q7 | Do you provide a standard set of timezones built-in to your product? | 16 | 3 | 0 | *84%*
+| Q8 | Where did you get your timezone definitions? 3+| Most come from Olsen. Some from Windows. Others from Java. |
+| Q9 | How many timezone definitions do you have? 3+| Varies from about 50 to about 380 |
+| Q10 | Do you have a special naming scheme for TZIDs, and if so what is it? 3+| Olsen naming e.g. America/New_York. Windows naming. Tzid: URI. Tzid with vendor prefix. |
+| Q11 | Do you provide a mechanism for updating built-in timezones? | 5 | 9 | 1 | *33%*
+| Q12 | Do you adjust future times to account for timezone definition changes? | 2 | 3 | 3 | *25%*
+| Q13 | Do you accept and use timezone definitions from imported iCalendar data? | 10 | 5 | 1 | *63%*
+| Q14 | Do you attempt to merge timezone definitions with the same TZID when importing iCalendar data? 3+| Some do, some don't (about 50%). Also: "We match it to our internal list by ID first and then by rule". |
+| Q15 | When exporting timezones in iCalendar data (either to a file or via iTIP) do you send the entire timezone definition or just the set of dates needed for coverage of the event? 3+| Those that do it export the entire timezone definition. |
+| Q16 | Would you use timezone definitions from a standard timezone registry if one were created? | 11 | 2 | 4 | *65%*
+| Q17 | What problems would be involved in changing a timezone definition if DST was changed at some point in the future? 3+| Most would need to get new definitions and update with automatically or manually. There was some concern about how the new definitions would look (e.g. some could not support more than one STANDARD or DAYLIGHT component). |
+| C1 | Comments on specific answers (include Q number for cross-reference to original question): 3+| |
+| C2 | Comments on the format and ease of use of this questionnaire: 3+| Most liked email (though some wanted text/plain and not text/html). A few preferred web-based. One wanted MS Word file. |
+| C3 | Are there any additional questions we should be asking, and if so what are they? 3+| Should have asked: Do any applications support multiple STANDARD and DAYLIGHT components? Should have asked: how do you treat 'foreign' TZIDs (e.g. map to own internal TZID etc)? Would like TZID on RRULE to simplify some problems.Should have asked: are timezones used on simple non-recurring events, or only recurring events? |
+|===
+
+==== Other Comments
+
+RFCs tend to describe the expected behaviour, but leave the implementations up to
+the authors. This is understandable, but when all the developers have to reinvent the
+processing algorithms you get flaky results. I notice that the experience with TCP and
+DNS, for example, has led to RFCs that are increasingly specific in giving guidance to
+implementors.
+
+This is the main reason I haven't implemented VTIMEZONE yet. With the exception of
+RRULE (see comment below), most of the rest of iCalendar is a fairly straight forward
+task of writing a codec for the data structures. Everything I need to know is in the
+RFCs. If there was a description of how to implement VTIMEZONE, I would have done
+it.
+
+I strongly suggest that the calconnect group go to greater effort to offer
+implementation guidance to further interop. This could include pseudo-code processing
+models, warnings about problems and corner cases to look out for, and should
+particularly involve test suites. RRULE, for example, would be unimplementable
+without its extensive set of examples. iTIP needs a similar suite of examples, too.
+
+=== Conclusions
+
+==== Basic Timezone Support
+
+Support for the basic VTIMEZONE component and properties seemed to be
+fairly complete, with most vendors both consuming and producing such
+components. Note that “producing” a VTIMEZONE component usually means
+copying a component out of a standard library provided in the product. We are
+not aware of any iCalendar products that generate VTIMEZONE components
+on-the-fly from some other data source.
+
+It was clear that a number of products prefer to operate in UTC and will
+“downgrade” DATE-TIME values to UTC if a timezone was included.
+
+Most products include a built-in set of timezone definitions, ranging in number
+from 50 to 380. These came from a variety of different sources, including the
+Olsen timezone database, timezone information built into OS’s (e.g. Windows),
+those provided with other environments (Java). The naming of these components
+usually followed the scheme of the original data source. In one case a private
+namespace was used for timezone names.
+
+Only 1/3 of products provide a way to update the built-in timezone via some
+automated process.
+
+Only 1/4 of products were able to adjust future events, tasks etc when a
+timezone definition changed.
+
+About 2/3 products would take in timezone definitions from outside sources. A
+number of products would attempt to match an “external” definition to the builtin
+ones and substitute any matching built-in definition in place of the “external”
+one.
+
+==== Timezone Registry
+
+About 2/3 of respondents said they would use a standard timezone registry if
+one were available. However, given the wide variety of timezone naming
+schemes for built-in timezones, its not clear how long it would take for products
+to adopt any registry scheme if it were to become available.
+
+==== Other Comments
+
+One issue that was raised and not answered, was whether products are capable
+of handling multiple STANDARD and DAYLIGHT components in a single
+VTIMEZONE. That is important for dealing with timezone definition changes.
+
+==== Future Work
+
+The Timezone Technical Committee is using the results of this questionnaire to
+formulate its recommendations document that will be made available by the
+Consortium.
+
+[appendix]
+== The questionnaire as sent via email
+
+Questionnaire on Timezones in iCalendar
+
+
+=== Introduction
+
+This questionnaire is being used to determine support for iCalendar
+(RFC2445) timezone support. The specific sections in RFC2445 that
+are being queried are:
+
+* 4.6.5 Time Zone Component
+* 4.8.2.4 Date/Time Start
+* 4.8.3 Time Zone Component Properties +
+( and sub-sections )
+* 4.8.5.3 Recurrence Date/Times
+* 4.8.5.4 Recurrence Rule
+* 4.8.7.3 Last Modified
+* 4.8.8.1 Non-standard Properties
+
+These may involve reference to other sections.
+
+=== How to answer
+
+Please copy the text from the '-------' divider below to the end of
+this message into a new message and address it to: +
+questionnaire@calconnect.org
+
+=== To fill it out
+
+For 'y/n/o':
+
+* 'y' means yes
+* 'n' means no
+* 'o' means other or not applicable
+
+Delete two letters to leave the one for your answer.
+
+If you have specific comments you can add about your answers,
+please do so at the end and reference the question number to which
+the comment applies.
+
+For \______\______\_________: enter text for the answer.
+
+=== Product Details
+
+P1:: Product/Implementation Name:
+
+\______\______\_________
+
+.Components supported
+|===
+| | Consume | Produce
+| Q1: VTIMEZONE | y/n/o | y/n/o
+| Q1.1: STANDARD | y/n/o | y/n/o
+| Q1.2: DAYLIGHT | y/n/o | y/n/o
+|===
+
+.Properties supported
+|===
+3+h| In VTIMEZONE
+| | Consume | Produce
+| Q2.1: TZID | y/n/o | y/n/o
+| Q2.2: LAST-MODIFIED | y/n/o | y/n/o
+| Q2.3: TZURL | y/n/o | y/n/o
+| Q2.4: XPROP | y/n/o | y/n/o
+3+h| In STANDARD
+| | Consume | Produce
+| Q3.1: DTSTART | y/n/o | y/n/o
+| Q3.2: TZOFFSETTO | y/n/o | y/n/o
+| Q3.3: TZOFFSETFROM | y/n/o | y/n/o
+| Q3.4: COMMENT | y/n/o | y/n/o
+| Q3.5: RDATE | y/n/o | y/n/o
+| Q3.6: RRULE | y/n/o | y/n/o
+| Q3.7: TZNAME | y/n/o | y/n/o
+| Q3.8: XPROP | y/n/o | y/n/o
+3+h| In DAYLIGHT
+| | Consume | Produce
+| Q4.1: DTSTART | y/n/o | y/n/o
+| Q4.2: TZOFFSETTO | y/n/o | y/n/o
+| Q4.3: TZOFFSETFROM | y/n/o | y/n/o
+| Q4.4: COMMENT | y/n/o | y/n/o
+| Q4.5: RDATE | y/n/o | y/n/o
+| Q4.6: RRULE | y/n/o | y/n/o
+| Q4.7: TZNAME | y/n/o | y/n/o
+| Q4.8: XPROP | y/n/o | y/n/o
+|===
+
+=== General
+
+[pseudocode%unnumbered]
+====
+Q5: Do you always send DATE-TIME values with a timezone? y/n/o
+
+Q6: Do you always send DATE-TIME values in UTC or floating? y/n/o
+
+Q7: Do you provide a standard set of timezones built-in to your product? y/n/o
+
+if yes to Q7, then
+{
+  Q8: Where did you get your timezone definitions?
+
+  \______\______\_________
+
+  Q9: How many timezone definitions do you have?
+
+  \______\______\_________
+
+  Q10: Do you have a special naming scheme for TZIDs, and if so what is it?
+
+  \______\______\_________
+
+  Q11: Do you provide a mechanism for updating built-in timezones? y/n/o
+
+  if yes to Q11, then
+  {
+    Q12: Do you adjust future times to account for timezone definition changes? y/n/o
+  }
+}
+
+Q13: Do you accept and use timezone definitions from imported iCalendar data? y/n/o
+
+if yes to Q13, then
+{
+  Q14: Do you attempt to merge timezone definitions with the same TZID when importing iCalendar data? y/n/o
+}
+
+Q15: When exporting timezones in iCalendar data (either to a file or via iTIP) do you send the entire timezone definition or just the set of dates needed for coverage of the event?
+
+\______\______\_________
+
+Q16: Would you use timezone definitions from a standard timezone registry if one were created? y/n/o
+
+Q17: What problems would be involved in changing a timezone definition if DST was changed at some point in the future?
+
+\______\______\_________
+
+C1: Comments on specific answers (include Q number for cross-reference to original question):
+
+\______\______\_________
+
+C2: Comments on the format and ease of use of this questionnaire:
+
+\______\______\_________
+
+C3: Are there any additional questions we should be asking, and if so what are they?
+
+\______\______\_________
+====
