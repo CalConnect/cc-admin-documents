@@ -14,8 +14,6 @@
 :local-cache-only:
 :data-uri-image:
 :imagesdir: images/briefing-0605
-:city: Vancouver
-:region: British Colombia
 :toclevels: 1
 
 .Foreword
