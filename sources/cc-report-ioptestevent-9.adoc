@@ -1,0 +1,172 @@
+= May 2006 CalConnect Interoperability Test Report
+:docnumber: 0607
+:copyright-year: 2007
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1.1
+:status: published
+:revdate: 2007-06-12
+:published-date: 2007-06-12
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Patricia Egen
+:role: author
+:fullname_2: Simon Vaillancourt
+:role_2: author
+:fullname_3: Chuck Norris
+:role_3: author
+:fullname_4: Mike Douglass
+:role_4: author
+:fullname_5: Patricia Egen
+:affiliation_5: CalConnect
+:role_5: editor
+:contributor-position_5: IOP Test Manager
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+This document contains notes and results from the May 2006 calendar interoperability test event
+held at the IBM/Lotus complex in Boston, MA. The basic purpose of the event was to start
+testing Free Busy, which has recently been added to the CALDAV specification. In addition,
+there was continued testing of iCalendar events by the Eventful organization.
+
+The chart below shows the attendees, their organization and the products they were testing.
+
+=== Attendees
+
+[%unnumbered,options=header]
+|===
+| Attendees | Organization | Products
+| Chuck Norris | EVDB | CALDAV server
+| Simon Vaillancourt | Oracle | Oracle CALDAV server
+| Jeffrey Harris | OSAF | Chandler and Cosmo
+| Mike Douglass | RPI | Bedework CALDAV Server
+| Dan Gurney | IBM | Lotus Notes (mostly an observer)
+|===
+
+== General Comments
+
+Free Busy is a very recent addition to CALDAV. As such, there are only a few clients that are
+available for testing interoperability. The following is what was tested: Three CALDAV
+servers, One CALDAV client and absorbing Recurrence rules (RFC 2445 and RFC 2447).
+
+=== Vendor 1 Testing
+
+Using a sample Free Busy demo client, Vendor 1 tested the CalDAV servers. The demo
+application is designed to show how to connect to different CALDAV servers to do free busy,
+acting like a small client. The following chart shows how this client worked against various
+CALDAV servers.
+
+[cols=5,options=header,cols="^,^,^,^,<"]
+.Free Busy Report Chart
+|===
+| Vendor1 | Vendor2 | Vendor3 | 7 | Free Busy Reports
+| N | N | N | Setup a| Create a new calendar and populate it with the following
+for one week:
+
+Event on Monday, 9 am - 11 am, recurs every day for
+five times +
+Event on Monday, 12 pm - 1 pm, status tentative +
+Event on Monday, 2 pm - 3 pm, status cancelled +
+Event on Tuesday, 11 am - 12 pm +
+Event on Tuesday, 2 pm - 4 pm, recurs every day for four times +
+Event on Tuesday, 3 pm - 5 pm +
+Event on Wednesday, 11 am - 12 pm, status tentative +
+Event on Wednesday, 3 pm - 5 pm, status tentative +
+Event on Thursday, 11 am - 12 pm, status cancelled +
+Event on Thursday, 3 pm - 5 pm, status cancelled
+| P | | P | 7.1 | Run a free-busy report for the entire week.
+| P | | P | 7.1.1 | Verify two FREEBUSY periods for Monday, the second is BUSY-TENTATIVE.
+| P | | P | 7.1.2 | Verify two FREEBUSY periods for Tuesday.
+| P | | P | 7.1.3 | Verify four FREEBUSY periods for Wednesday, second and fourth are BUSY-TENTATIVE and one hour long.
+| P | | P | 7.1.4 | Verify two FREEBUSY periods for Thursday.
+| P | | P | 7.1.5 | Verify two FREEBUSY periods for Friday.
+|===
+
+=== Vendor 4 Testing
+
+Since the Vendor 4 organization joined the interoperability testing events after several other
+organizations had done their testing, they were very happy to exchange iCalendar objects to send
+to their server. Several attendees sent objects to help them test their iCalendar support, in
+particular recurring events. They found issues when absorbing iCalendar recurrence events.
+These will be useful in helping them streamline their software.
+
+=== Vendor 3 Testing
+
+Vendor 3 noted that the Vendor2 server sent items that caused issues on the Vendor 3 server.
+They resolved several of them onsite and uncovered a few more problems that they will work on
+later. Vendor 3 uses write content. They noted that we may want to prevent users from updating
+Calendar structures based on role. It should be that they can create events but not collections.
+
+=== Vendor 2 testing
+
+Vendor 2 tested their brand new support for free busy in their client. Rather than work on the
+test scenarios, since their product is brand new, they spent time fixing bugs involving
+subscription to other servers in their client. What they did determine, though, is that the testing
+they did do did work with all three servers for timed events of whatever status. All-day events
+didn't work on Vendor1 with the way their server serializes them. Vendor 1 will work on fixing
+that. It was noted while testing their version that sub collections are not supported by Vendor1
+and Vendor 3. Therefore, they had to do some work on read write capabilities. By the next
+Interop they will do current user privilege sets. This is needed for Access Control. Generally
+speaking, freebusy works. Vendor 2 suggests that next time we should test infinite depth, or
+"rollup", freebusy reports, if anybody other than Vendor 2 supports them.
+
+== Summary
+
+As usual, the interoperability testing revealed problems with servers that no one knew about.
+These were resolved quickly in many cases or will be resolved when the attendees get back to
+their respective facilities. It is always better to test something before it goes production and that
+is one of the things we can provide – a safe, non-public forum and environment for testing
+software interoperability.
+
+Since this was, again as stated above, early in the Free Busy on CALDAV cycle, it was not as
+busy an interop as past events. However, it was a productive one, provided valuable feedback
+and helped the developers improve their products. In summary, the Vendor 3 and Vendor 1
+servers can do free busy. The Vendor 2 client is a work in progress and is well on it’s way.
+
+Vendor 3 spent part of time on Free busy query items and found their “usual bugs.”
+Vendor 1 spent most of the time on their Free Busy demo and their server. They also worked on
+a known problem with embryonic ACLs.
+
+Vendor 2 found that their Free Busy broadly works.
+
+Vendor 4 said they came in with something brand new and fragile and wanted to bounce their
+software off real world scenarios. This is an example of exactly what an Interoperability event
+should be – testing code that is not only complete but in development as well. It’s better to know
+that something is not working as expected before committing an extensive amount of time in
+development. Vendor 4 found the event very valuable.
+
+The next CalConnect Interoperability Testing Event (CITE) will spend more time focusing on
+Free Busy.
+
+== The Future
+
+Some time was spent discussing the mobile space so we are starting a dialog on testing mobile
+devices and iCalendar, CALDAV, etc. This year is first year there are multiple phones with ical
+parsers. We will need to look for definitions of test cases. We will look at announcing early that
+we are embarking on this space to gather potential participants.
+
+One of our first items will be to look at basic ical data and determine whether it gets rendered
+correctly on a certain number of devices. We will also need to look at transport mechanisms.
+Pat will work with Symbian who volunteered to help come up with test scenarios. The aim is to
+start the interop testing at the January meeting.
+
+By September MIT might have ical export function from event calendar and will be interested in
+testing with clients. CMU might be interested in testing also.
+
+My thanks to everyone who furnished their notes and results.
+
+Respectfully submitted, +
+Pat Egen. +
+Interoperability Event Manager
