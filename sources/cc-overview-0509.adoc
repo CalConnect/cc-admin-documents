@@ -13,6 +13,7 @@
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 :data-uri-image:
+:toclevels: 1
 
 .Foreword
 
