@@ -62,7 +62,7 @@ encourages their active participation.
 
 The Open Group is a vendor- and technology-neutral
 consortium, whose vision of Boundaryless
-Information Flow™ will enable access to integrated
+Information Flow(TM) will enable access to integrated
 information within and between enterprises based on
 open standards and global interoperability.
 
@@ -176,10 +176,10 @@ A number of "connector" servers or services, at the edge of
 the network, to interface to systems which do not support
 CalDAV.
 
-.Architectural Overview – “From the Clouds”
+.Architectural Overview -- "From the Clouds"
 image::img01.png[width=120%]
 
-.Architectural View – “From the Clouds”
+.Architectural View -- "From the Clouds"
 image::img02.png[]
 
 == How we did it
@@ -188,7 +188,7 @@ image::img02.png[]
 technical committee
 * Modified code from the open source
 Bedework calendar
-* “Connector” code contributed by IBM,
+* "Connector" code contributed by IBM,
 Boeing, and TimeBridge
 * Cooperative and collegial development and
 testing among calendar developers
@@ -215,8 +215,8 @@ comprehensive, interoperable, global calendaring solution.
 
 * Enlightened self interest and open standards are a
 powerful combination
-* Even calendar developers who claim they use “open
-calendar standards” may have non-conforming
+* Even calendar developers who claim they use "open
+calendar standards" may have non-conforming
 implementations.
 * Open APIs are good. Widely adopted open standards
 are better.
@@ -233,12 +233,12 @@ adroitly sidestepping:
 ** Enfranchising additional calendaring systems
 * Migrate this solution to use the richer
 functionality of the still developing "Scheduling
-Extensions to CalDAV“ specifications.
+Extensions to CalDAV" specifications.
 * Encourage wider participation among calendar
 developers and calendar users
 
 [appendix,obligation=informative]
-== Open Group Demo – July 18, 2006
+== Open Group Demo -- July 18, 2006
 
 Accessed FREEBUSY information from:
 

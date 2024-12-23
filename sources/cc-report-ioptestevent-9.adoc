@@ -127,15 +127,15 @@ speaking, freebusy works. Vendor 2 suggests that next time we should test infini
 As usual, the interoperability testing revealed problems with servers that no one knew about.
 These were resolved quickly in many cases or will be resolved when the attendees get back to
 their respective facilities. It is always better to test something before it goes production and that
-is one of the things we can provide – a safe, non-public forum and environment for testing
+is one of the things we can provide -- a safe, non-public forum and environment for testing
 software interoperability.
 
 Since this was, again as stated above, early in the Free Busy on CALDAV cycle, it was not as
 busy an interop as past events. However, it was a productive one, provided valuable feedback
 and helped the developers improve their products. In summary, the Vendor 3 and Vendor 1
-servers can do free busy. The Vendor 2 client is a work in progress and is well on it’s way.
+servers can do free busy. The Vendor 2 client is a work in progress and is well on it's way.
 
-Vendor 3 spent part of time on Free busy query items and found their “usual bugs.”
+Vendor 3 spent part of time on Free busy query items and found their "usual bugs."
 Vendor 1 spent most of the time on their Free Busy demo and their server. They also worked on
 a known problem with embryonic ACLs.
 
@@ -143,7 +143,7 @@ Vendor 2 found that their Free Busy broadly works.
 
 Vendor 4 said they came in with something brand new and fragile and wanted to bounce their
 software off real world scenarios. This is an example of exactly what an Interoperability event
-should be – testing code that is not only complete but in development as well. It’s better to know
+should be -- testing code that is not only complete but in development as well. It's better to know
 that something is not working as expected before committing an extensive amount of time in
 development. Vendor 4 found the event very valuable.
 
