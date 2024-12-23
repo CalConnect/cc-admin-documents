@@ -27,11 +27,11 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
 === What is the Consortium
 
-* “Provide a general understanding of,
+* "Provide a general understanding of,
 promote, and provide mechanisms so that
 Calendaring and Scheduling methodologies,
 tools and applications can enter the
-mainstream of computing”
+mainstream of computing"
 * A Nonprofit Mutual Benefit Association
 incorporated in the State of California
 * Granted 501(&#x200c;c)6 tax-exempt status by the
@@ -159,7 +159,7 @@ for members)
 ** Results presented at relevant standards organization meetings
 ** Public version on Consortium website
 . Roundtables
-** “All hands” plenary meeting of membership
+** "All hands" plenary meeting of membership
 ** Three per year midway between IETF meetings
 *** help to drive each other
 ** Held in conjunction with Interoperability Testing Events
@@ -292,10 +292,10 @@ it (Operating systems, java...).
 What do we want (or not) in a time zone registry?
 
 * TZID and Rules should both be in a registry.
-* Re-use what’s already there (TZ Database).
+* Re-use what's already there (TZ Database).
 * Versioning is not necessary, since time zone
 changes occur in the future; existing events
-shouldn’t be affected by a new time zone. A
+shouldn't be affected by a new time zone. A
 timestamp on each time zone should be
 sufficient to cover most use cases.
 * Final implementation should be done using a
@@ -358,8 +358,8 @@ Results to be presented at Roundtable VI.
 
 === Vision for mobile calendaring
 
-We are creating a ‘Vision for interoperable
-calendaring on mobile devices’
+We are creating a 'Vision for interoperable
+calendaring on mobile devices'
 
 * This document will describe how use cases
 desired by users can be implemented using open
@@ -381,7 +381,7 @@ May Round Table meeting. We would like for this
 session to be a half day mobile calendaring
 workshop.
 
-== What’s Next?
+== What's Next?
 
 === Looking for Feedback
 
