@@ -1,0 +1,890 @@
+= Report on Mobile Calendaring Questionnaire V2 Results
+:docnumber: 0609
+:copyright-year: 2006
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2006-07-24
+:published-date: 2006-07-24
+:technical-committee: MOBILE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Chris Dudding
+:affiliation: Symbian Ltd
+:role: editor
+:imagesdir: images/questionnaire-0609
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+The Mobile Technical Committee of the Calendaring & Scheduling Consortium
+(http://www.calconnect.org) developed a questionnaire about mobile devices currently being
+used, their capabilities, and the extent of their support for calendaring applications.
+
+The goal of this questionnaire was to determine how and to what extent Calendaring is being
+used on mobile devices, with a view to using those results to aid in the development of
+recommendations on how to address any problem areas.
+
+A number of responses were received to the online questionnaire, and a summary and brief
+conclusion of these results is presented, along with the raw results themselves.
+
+Respondents to the questionnaire answered based on the capabilities of their device. The results
+show an aggregate of these results.
+
+== Questionnaire Background
+
+The questionnaire was answered by 60 respondents, which covered 14 different device
+manufacturers and 40 different devices. Most of the devices were high-end mobile devices
+released in the last few years. The respondents come from a spread of localities, with 40% of
+respondents from America and 38% from the UK.
+
+The questionnaire consists of 53 questions. The bulk of the questions required a "yes", "no" or
+"don't know" response. 15 of the questions were text based. Some questions allowed the user
+to respond with more than one response (e.g. from a pick list).
+The percentage totals for most questions were calculated from the number of answers compared
+to the total of all possible answers (typically "yes", "no" or "don't know").
+
+Where the answers are mutually exclusive the total answer percentages add up to 100% (with +/-
+1% for rounding errors). For questions where multiple responses are possible the percentages
+still show the answer compared to the total of all possible answers, but the total percentage will
+not be 100%.
+
+== Summary of Results
+
+=== Section 1 -- General Information
+
+* There is a good spread of respondent's geographic location (though lacking input from
+Japanese and South Korean users).
+* Good spread of devices -- reasonably representative of (smart) phones for the sample
+though generally Palm is much over-represented and Samsung especially is much underrepresented.
+* 30% of respondents intend to replace their device soon. This is similar to the yearly
+replacement average for US/Europe.
+* Balance in usage business / personal use of devices is 50/50
+* A quarter of respondents do not travel. Northern hemisphere continents (Europe, Asia, N
+America) are all travelled to by a large majority of respondents.
+* 18% of respondents travelling to Asia (given only 3% are in Asia) is high
+* Of the 28% who do not know if their devices would work out of their primary location, not
+all are the 27% who do not travel with their device. 8% of these do travel with their
+device
+* A large range of primary desktop Calendar applications is used. Slightly surprising there
+are not more respondents using Outlook (17%).
+
+=== Section 2 -- General Device Capabilities
+
+* High percentage of "high end" devices in survey, which is supported by a large
+percentage of devices having QWERTY keyboards (37%).
+* Large amount of perception involved in respondents ranking their devices as low, mid or
+high range. The same device is often ranked differently by different respondents
+* Large amount of perception involved in respondents describing the screen size. The
+same device is often ranked differently by different respondents
+* Only 12% of respondents thought their screen "small".
+* 32% have run out of space or memory. This is obviously dependent on phone usage.
+The results seem to show this is more prevalent on the lower spec phones. However,
+this is encountered on the higher end devices too.
+
+=== Section 3 -- Access to Calendar Information
+
+* 95% of respondents normally use their device's Calendar application
+* Large number (83%) of devices can run third party apps but 37% don't know if there are
+third party calendar apps or not
+* 10% use a third party application of their phone
+* 43% don't know if they can use a web based calendar. 47% know they can on their
+device
+* But no respondents normally use web based calendaring on their device
+* Respondent / questionnaire confusion over: How to respond to whether they use the
+Calendar to View, Edit or View and Edit their data
+* 87% of respondents use their device's Calendar application at least once a day
+* Almost half of respondents say the experience of using the device's calendar application
+is worse than their desktop application. There is some very negative feedback in this
+area.
+* However 20% said it was better than their desktop application
+
+=== Section 4 -- Calendar Application
+
+* The sophistication of repeat rules seems to be subjective, however some devices don't
+support any repeat rules and some devices don't support "second Tuesday in month"
+type repeats typically simple (MS Outlook type) functionality seems to be supported
+* No-one said alarms can't be created on their entries
+* 67% can't invite other people to events - only 18% can. Implies almost all phones don't
+support Group Scheduling. Indeed, some of the devices that claim to support this only
+support it in a limited way (e.g. Nokia 9500, 9300)
+* ToDos widely supported (83%)
+* 67% use Data Sync out of the 87% of phones that support Sync
+* Numerous different suggestions for Sync improvement
+* Most affecting current behaviour -- duplicating entries, slow, poor (or no) interoperability
+with desktop apps, poor support for recurrence and no support for syncing multiple
+calendars.
+* Automatic sync also requested (e.g. over BT)
+* Much comment on Data Sync being a limitation for the device:
+* 30% saying it was the main thing they wanted to do that they currently couldn't do
+* 93% of respondents only have one Calendar on their device
+* 58% would like to overlay different calendars on top of the existing one
+* Respondents wish to be notified of events with functionality (sounds, alerts, vibrate) that
+are currently available on their devices.
+
+=== Section 5 -- Calendar Date and Timezone Support
+
+* Only 42% of respondents say their device knows what the timezone is automatically.
+Though some of the replies (compared with the devices in question) are not correct
+* Only 7% of respondents say their device allows timezones to be set on events other than
+the current timezone
+* Despite the fact that only 28% of respondents don't visit other timezones (*) 32% don't
+know if their device adjusts the events for the local timezone. 47% of respondents say
+their device does do this
+
+=== Section 6 -- Security
+
+* 53% of respondents are concerned about security
+* 77% say their calendar content is confidential (business or personal) -- surprisingly high,
+but the only other choice was "non-confidential public data"
+* However, 55% did not respond on what security features they would like.
+** 13% wanted SSL and/or encrypted data
+** 12% wanted Password protection at phone or application level
+** 7% wanted biometric security
+
+=== Section 7 -- What would you like to do with your mobile calendar?
+
+On aggregate, Free / Busy time viewing is rated as the most important use case (of five)
+
+On aggregate, Adding events downloaded from mobile browser second most important -- this is
+more important to respondents than basic Group Scheduling. However, in a straight listing
+respondents also ranked this the joint least most important use case
+
+=== Areas of ignorance for the respondents
+
+* The existence of third party calendars for the device (37% don't know)
+* If web calendars can be used on the device (43% don't know)
+* If timezones can be set on events other than the current timezone (47% don't know)
+* How good the documentation/manual is (27% don't know)
+
+== Results
+
+=== Section 1 - General Information
+
+==== Q1.1. Who is your device manufacturer?
+
+Nokia:: 35%
+Palm:: 23%
+Sony Ericsson:: 13%
+HTC:: 7%
+Motorola:: 3%
+Panasonic:: 3%
+Siemens:: 3%
+HP:: 2%
+Kyocera:: 2%
+Samsung:: 2%
+RIM:: 2%
+Apple:: 2%
+Audiovox:: 2%
+Dell:: 2%
+
+==== Q1.2. What model is your device?
+
+Results not summarised
+
+==== Q1.3. Who is your service provider?
+
+Vodafone:: 30%
+Cingular:: 17%
+T-Mobile:: 7%
+Fido:: 7%
+O2:: 7%
+Verizon:: 5%
+Sprint:: 5%
+Orange:: 3%
+Hutch:: 3%
+AT&T:: 2%
+Telus:: 2%
+Virgin Mobile:: 2%
+Elisa:: 2%
+Other:: 10%
+
+==== Q1.4. How long have you had this device? (years)
+
+The average was 1.5 years. 25% of responses were under 1 year.
+
+==== Q1.5. Do you intend to replace it soon?
+
+Yes:: 30%
+No:: 43%
+Don't know:: 27%
+
+==== Q1.6. How would you rate the documentation/manual that came with the device?
+
+Good:: 22%
+Average:: 47%
+Poor:: 5%
+Don't know:: 27%
+
+==== Q1.7. What is the primary use of this device?
+
+Business:: 51%
+Personal:: 47%
+Other:: 2%
+
+==== Q1.8. What is the primary desktop calendar application that you use?
+
+Lotus Notes:: 27%
+Oracle Calendar:: 20%
+Microsoft Outlook:: 17%
+Mac iCal:: 12%
+Meeting Maker:: 7%
+Mozilla Sunbird:: 5%
+Other:: 13%
+
+==== Q1.9. What type of organization do you work in?
+
+Business:: 30%
+Mobile software vendor:: 30%
+Education:: 28%
+Other:: 7%
+Government:: 3%
+Mobile device manufacturer:: 2%
+
+==== Q1.10. What is your primary geographic location?
+
+USA:: 40%
+UK:: 38%
+Canada:: 10%
+India:: 3%
+Other:: 3%
+UAE:: 2%
+Finland:: 2%
+Anguilla:: 2%
+
+==== Q1.11. Which other geographic locations do you travel to?
+
+Europe:: 43%
+N America:: 28%
+None:: 27%
+Asia:: 18%
+Australasia:: 5%
+S America:: 2%
+
+==== Q1.12. Does your service provider provide support outside your primary geographic location?
+
+Yes:: 63%
+No:: 8%
+Don't know:: 28%
+
+=== Section 2 - General Device Capabilities
+
+==== Q2.1. How would you describe the capabilities of this device as a whole?
+
+High-end:: 60%
+Mid-range:: 37%
+Low-end:: 3%
+
+==== Q2.2. What size screen does it have?
+
+Large:: 28%
+Medium:: 57%
+Small:: 12%
+Unspecified:: 3%
+
+==== Q2.3. What type of keypad does it have?
+
+Phone:: 48%
+Qwerty:: 37%
+Other:: 15%
+
+==== Q2.4. Have you found that you run out of storage space or memory for your data and applications?
+
+Yes:: 32%
+No:: 68%
+
+==== Q2.5. Does it allow third-party applications to be used?
+
+Yes:: 83%
+No:: 10%
+Don't know:: 7%
+
+==== Q2.6. What are the standard set of applications on the device?
+
+Results not summarised
+
+==== Q2.7. What are its multimedia capabilities?
+
+Camera:: 87%
+Audio Player:: 65%
+
+NOTE: Summary of main responses.
+
+==== Q2.8. Which multimedia capabilities do you actually use?
+
+Camera:: 67%
+Play Audio:: 38%
+
+NOTE: Summary of main responses.
+
+==== Q2.9. Which multimedia capabilities would you like to have?
+
+Better Music Player:: 35%
+Better Video:: 33%
+Better Camera:: 33%
+VOIP:: 5%
+
+=== Section 3 - Access to Calendar Information
+
+==== Q3.1. Does the device have a built-in calendar application?
+
+Yes:: 98%
+No:: 0%
+Don't know:: 2%
+
+==== Q3.2. Are there third-party calendar applications for the device?
+
+Yes:: 53%
+No:: 10%
+Don't know:: 37%
+
+==== Q3.3. Can you use a web-based calendar with this device?
+
+Yes:: 47%
+No:: 10%
+Don't know:: 43%
+
+==== Q3.4. Do you normally use any calendaring applications on this device?
+
+Yes:: 95%
+No:: 3%
+Don't know:: 2%
+
+==== Q3.5. Do you normally use a web-based calendar on this device?
+
+Yes:: 0%
+No:: 93%
+Don't know:: 7%
+
+==== Q3.6. Do you use the calendar feature to just view a calendar or to also edit it (e.g. create new events)?
+
+View & Edit:: 43%
+Edit:: 33%
+View:: 23%
+
+==== Q3.7. How often do you use the calendar feature on this device?
+
+Several times a day:: 62%
+Once a day:: 25%
+Once a week:: 5%
+Not very often:: 5%
+Only when travelling:: 3%
+
+==== Q3.8. Do you use the built-in or a third-party application?
+
+Built-in:: 90%
+Third party:: 10%
+
+==== Q3.9. How would you compare the experience of using the calendar application on this device with using one on a desktop computer?
+
+Worse:: 48%
+Similar:: 13%
+Better:: 20%
+Other:: 19%
+
+=== Section 4 - Calendar Application
+
+==== Q4.1. Does it support creation of recurring events?
+
+Yes:: 68%
+No:: 18%
+Don't know:: 13%
+
+==== Q4.2. How sophisticated is the recurrence capability?
+
+Result not summarised
+
+==== Q4.3. Does it support creation of alarms on events?
+
+Yes:: 92%
+No:: 0%
+Don't know:: 8%
+
+==== Q4.4. Would you like to receive notification of your desktop calendar alarms on your mobile device?
+
+Yes:: 75%
+No:: 22%
+Don't know:: 3%
+
+==== Q4.5. How would you like your mobile device to notify you about events?
+
+Sound:: 70%
+Vibrate:: 32%
+Pop-up:: 21%
+SMS/Email:: 8%
+
+==== Q4.6. Can you invite other people to events?
+
+Yes:: 18%
+No:: 67%
+Don't know:: 15%
+
+==== Q4.7. Does it support tasks/to-dos?
+
+Yes:: 83%
+No:: 8%
+Don't know:: 8%
+
+==== Q4.8. Does the device support synchronization of your phone and desktop calendar?
+
+Yes:: 87%
+No:: 5%
+Don't know:: 8%
+
+==== Q4.9. Do you use the synchronization support?
+
+Yes:: 67%
+No:: 32%
+Don't know:: 2%
+
+==== Q4.10. How would you improve the synchronization support with your desktop calendar?
+
+Interop with desktop apps:: 12%
+Recurrence issues:: 10%
+Automatic Sync (BT):: 8%
+Speed:: 5%
+Multiple Calendars:: 5%
+Duplicates:: 5%
+No Response:: 30%
+
+==== Q4.11. How many different calendars do you have on your mobile device?
+
+1 calendar:: 93%
+2 calendars:: 3%
+3 calendars:: 2%
+
+==== Q4.12. Would you like the ability to overlay other calendars on top of your existing events?
+
+Yes:: 58%
+No:: 22%
+Don't know:: 20%
+
+=== Section 5 - Calendar Date and Timezone Support
+
+==== Q5.1. Does the device itself know what the correct time is automatically?
+
+Result not available
+
+==== Q5.2. Does the device itself know what timezone it is in automatically?
+
+Yes:: 42%
+No:: 48%
+Don't know:: 10%
+
+==== Q5.3. Can you configure the device timezone manually?
+
+Yes:: 77%
+No:: 10%
+Don't know:: 12%
+
+==== Q5.4 Does the calendar application adjust the displayed time of events based on the local time and timezone information
+
+Yes:: 47%
+No:: 22%
+Don't know:: 32%
+
+==== Q5.5. Does the calendar application allow timezones on event times to be set different from the devices own timezone?
+
+Yes:: 7%
+No:: 47%
+Don't know:: 47%
+
+=== Section 6 - Security
+
+==== Q6.1. Are you concerned about the security of the calendar data stored on the device?
+
+Yes:: 53%
+No:: 47%
+
+==== Q6.2. How sensitive is the calendar data stored on the device?
+
+Confidential - personal:: 45%
+Non-confidential:: 33%
+Confidential - business:: 22%
+
+==== Q6.3. Are there any security features you would like to have on your mobile device?
+
+No Response:: 55%
+SSL/Encryption:: 13%
+Password control:: 12%
+No:: 8%
+Biometric lock:: 7%
+
+=== Section 7 - What would you like to do with your mobile calendar?
+
+==== Q7.1 What would you like to be able to do with your device that you cannot do right now?
+
+Improve Sync:: 30% (of which use Web Sync) 12%
+Group Scheduling:: 12%
+GUI issues:: 10%
+Timezone support:: 7%
+View Others Calendars:: 7%
+No Response:: 37%
+
+==== Q7.2 Please rank these mobile calendaring use cases in order of importance to you
+
+Overall result - most to least important:
+
+* Sharing a calendar with colleague or spouse to identify free and busy time
+* Adding calendar events to your calendar that have been downloaded from a mobile web
+browser
+* Book appointments with other people using your mobile device
+* Automatically arranging a meeting at a time convenient for meeting participants after they
+have agreed they want to meet
+* Accessing a public transport timetable on your mobile device that is relevant to your
+current location
+
+=== Section 8 - About this Questionnaire
+
+==== Q8. What do you think of this questionnaire?
+
+Ok to Good:: 38%
+No Response:: 33%
+Too Long/Detailed:: 8%
+Unclear:: 5%
+Other:: 15%
+
+=== Selected Answers to Text Questions
+
+==== Q3.9. How would you compare the experience of using the calendar application on this device with using one on a desktop computer?
+
+[quote]
+____
+Substantially less useful. Due to synchronization problems with my calendar server, the inability
+to edit/schedule events is a major issue. Also, the web-based calendar provided by our calendar
+server uses frames, which makes browsing from the ##### device very cumbersome.
+____
+
+Lots of comments on data entry and screen size
+
+[quote]
+____
+awkward to view some information, poor summary of information on phone, data input difficult,
+no group scheduling
+____
+
+==== Q4.10. How would you improve the synchronization support with your desktop calendar?
+
+[quote]
+____
+iCal supports multiple calendars (eg one for work, one for personal events etc..) - I wish the
+phone would support this too
+____
+
+[quote]
+____
+Make it faster and more reliable - syncing sometimes create multiple enteries of the same
+entries
+____
+
+[quote]
+____
+I would add support to subscribe to iCal URL's & update at hotsync time
+____
+
+[quote]
+____
+Works great!
+____
+
+[quote]
+____
+Support undo, show user the data being synced - I don't trust sync.
+____
+
+==== Q7.1 What would you like to be able to do with your device that you cannot do right now?
+
+[quote]
+____
+time zones on events. per-event alarm preferences (volume, etc). Share calendars (other
+people's). Filter by category. link an event to contacts. want more than 30 chars in Location field
+(or link to metadata). show more than just calendar events (todos, for example, or TV listings).
+transparent negotiation of meeting times
+____
+
+[quote]
+____
+Sync properly to Oracle Calendar and other calendars. View other people's calendars (not via
+web).
+____
+
+[quote]
+____
+push email and cal events. overlay calendars. access event calendars. better scheduling with
+corporate cal solution
+____
+
+[quote]
+____
+It would be nice to have multiple calendars to categorise different events, each with there own
+sync source. For example work calendar events and personal calendar events, one syncing from
+my a work syncML server, the other from my home pc.As mentioned earlier, the ability to apply a
+pass code for a calendar with sensitive data (i.e. work related events) would be essential.
+____
+
+[appendix]
+== CalConnect TC-MOBILE Questionnaire V2
+
+This questionnaire is designed to give the Calendaring & Scheduling
+Consortium's TC-MOBILE technical committee information about mobile devices
+currently being used, including specifics about the device capability as well as
+support for calendaring applications. The information provided in this form will be
+used to help guide the technical committees report on mobile calendaring. A
+summary of the results will be published by the Consortium through its usual
+process.
+
+Please fill out this form with as much information as possible. If you are not sure
+of any answers, just leave that field empty or select the "Don't Know"option.
+
+=== Personal Details (will not be included in published report)
+
+What is your name? \______\______\_________
+
+What is your email address? \______\______\_________
+
+What is your organization? \______\______\_________
+
+=== Section 1 General Information
+
+Q1.1. Who is your device manufacturer? \______\______\_________
+
+Q1.2. What model is your device? \______\______\_________
+
+Q1.3. Who is your service provider? \______\______\_________
+
+Q1.4. How long have you had this device? \______ years
+
+Q1.5. Do you intend to replace it soon?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q1.6. How would you rate the documentation/manual that came with the device?
+
+&#9675; Good &#9675; Average &#9675; Poor &#9675; Don't know
+
+Q1.7. What is the primary use of this device?
+
+&#9675; Personal &#9675; Business &#9675; Other
+
+Q1.8. What is the primary desktop calendar application that you use? \______\______\_________
+
+Q1.9. What type of organization do you work in? image:dropdown.png[]
+
+Q1.10. What is your primary geographic location? image:dropdown.png[]
+
+Q1.11. Which other geographic locations do you travel to? image:dropdown.png[]
+
+Q1.12. Does your service provider provide support outside your primary geographic location?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+=== Section 2 General Device Capabilities
+
+Q2.1. How would you describe the capabilities of this device as a whole?
+
+&#9675; Low-end &#9675; Mid-range &#9675; High-end &#9675; Don't know
+
+Q2.2. What size screen does it have?
+
+&#9675; Small &#9675; Medium &#9675; Large
+
+Q2.3. What type of keypad does it have?
+
+&#9675; Phone keys (0-9 etc) &#9675; Full qwerty &#9675; Other
+
+Q2.4. Have you found that you run out of storage space or memory for your data and applications?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q2.5. Does it allow third-party applications to be used?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q2.6. What are the standard set of applications on the device?
+
+\______\______\_________ +
+(e.g. Contacts, calendar, email, alarm, games)
+
+Q2.7. What are its multimedia capabilities?
+
+\______\______\_________ +
+(e.g. takes pictures, video playback)
+
+Q2.8. Which multimedia capabilities do you actually use?
+
+\______\______\_________ +
+(e.g. audio recording)
+
+Q2.9. Which multimedia capabilities would you like to have?
+
+\______\______\_________ +
+(e.g. digital music playback)
+
+=== Section 3 Access to Calendar Information
+
+Q3.1. Does the device have a built-in calendar application?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q3.2. Are there third-party calendar applications for the device?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q3.3. Can you use a web-based calendar with this device?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q3.4. Do you normally use any calendaring applications on this device?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q3.5. Do you normally use a web-based calendar on this device?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q3.6. Do you use the calendar feature to just view a calendar or to also edit it (e.g. create new events)?
+
+&#9675; View &#9675; Edit
+
+Q3.7. How often do you use the calendar feature on this device? image:dropdown.png[]
+
+Q3.8. Do you use the built-in or a third-party application?
+
+&#9675; Built-in &#9675; Third-party
+
+Q3.9. How would you compare the experience of using the calendar application on this device with using one on a desktop computer?
+
+\______\______\_________
+
+=== Section 4 Calendar Application
+
+Q4.1. Does it support creation of recurring events?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q4.2. How sophisticated is the recurrence capability?
+
+\______\______\_________ +
+(e.g. repeat daily, weekly, every n days etc.)
+
+Q4.3. Does it support creation of alarms on events?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q4.4. Would you like to receive notification of your desktop calendar alarms on your mobile device?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q4.5. How would you like your mobile device to notify you about events?
+
+\______\______\_________ +
+(e.g. play a sound, set-up a phone call etc.)
+
+Q4.6. Can you invite other people to events?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q4.7. Does it support tasks/to-dos?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q4.8. Does the device support synchronization of your phone and desktop calendar?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q4.9. Do you use the synchronization support?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q4.10. How would you improve the synchronization support with your desktop calendar?
+
+\______\______\_________
+
+Q4.11. How many different calendars do you have on your mobile device? image:dropdown.png[]
+
+Q4.12. Would you like the ability to overlay other calendars on top of your existing events?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+=== Section 5 Calendar Date and Timezone Support
+
+Q5.1. Does the device itself know what the correct time is automatically?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q5.2. Does the device itself know what timezone it is in automatically?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q5.3. Can you configure the device timezone manually?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q5.4 Does the calendar application adjust the displayed time of events based on the local time and timezone information
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q5.5. Does the calendar application allow timezones on event times to be set different from the devices own timezone?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+=== Section 6 Security
+
+Q6.1. Are you concerned about the security of the calendar data stored on the device?
+
+&#9675; Yes &#9675; No &#9675; Don't know
+
+Q6.2. How sensitive is the calendar data stored on the device? image:dropdown.png[]
+
+Q6.3. Are there any security features you would like to have on your mobile device?
+
+\______\______\_________
+
+=== Section 7 What would you like to do with your mobile calendar?
+
+Q7.1 What would you like to be able to do with your device that you cannot do right now?
+
+[%unnumbered]
+image::textblock.png[]
+
+Q7.2 Please rank these mobile calendaring use cases in order of importance to you +
+(mark the most important use case as 1, second most important as 2,.... least important as 5)
+
+. Sharing a calendar with colleague or spouse to identify free and busy time. image:short-dropdown.png[]
+. Book appointments with other people using your mobile device (e.g. scheduling a
+follow-up meeting at the end of a meeting or making an appointment at the physican 
+and the event automatically being added to your mobile calendar). image:short-dropdown.png[]
+. Adding calendar events to your calendar that have been downloaded from a mobile web 
+browser (e.g. adding your favourite team's football matches or a list of public 
+holidays to your calendar). image:short-dropdown.png[]
+. Accessing a public transport timetable on your mobile device that is relevant to your
+current location (e.g. automatically downloading a timetable at bus stop or ticket 
+office). image:short-dropdown.png[]
+. Automatically arranging a meeting at a time convenient for meeting participants
+after they have agreed they want to meet. image:short-dropdown.png[]
+
+=== Section 8 About this Questionnaire
+
+Q8. What do you think of this questionnaire? (e.g. how long did it take to fill out, did you understand all the questions)
+
+[%unnumbered]
+image::textblock.png[]
+
+[%unnumbered,align=center]
+image::buttons.png[]
+
+NOTE: If you press "Submit Questionnaire " and *nothing happens*,
+please shorten your free-form answers. Some browsers enforce
+an arbitrary limit on the amount of data that can be submitted via
+this form.
