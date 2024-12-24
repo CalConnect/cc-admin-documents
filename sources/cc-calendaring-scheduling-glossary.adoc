@@ -1,5 +1,5 @@
 = Calendaring and Scheduling Glossary of Terms
-:docnumber: 1102
+:docnumber: 0610
 :copyright-year: 2006
 :copyright-holder: The Calendaring and Scheduling Consortium
 :language: en
