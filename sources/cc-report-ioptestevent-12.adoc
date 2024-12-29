@@ -1,0 +1,104 @@
+= May 2007 CalConnect Interoperability Test Report
+:docnumber: 0704
+:copyright-year: 2007
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1.2
+:status: published
+:revdate: 2007-08-10
+:published-date: 2007-08-10
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Patricia Egen
+:role: author
+:fullname_2: Mike Douglass
+:role_2: author
+:fullname_3: Cyrus Daboo
+:role_3: author
+:fullname_4: Daniel Boelzle
+:role_4: author
+:fullname_5: Tony Becker
+:role_5: author
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+This document contains notes and results from the May 2007 calendar interoperability event, sponsored
+by Boeing, held in Seattle Washington. The basic purpose of the event was to test CALDAV Free Busy
+and Scheduling and iCalendar iMIP and iTIP events.
+
+The chart below shows the attendees, their organization and the products they were testing.
+
+=== Attendees
+
+[%unnumbered,options=header]
+|===
+| Attendees | Organization | Products
+| Cyrus Daboo | Apple | Apple Client and CALDAV server
+| Michael Douglass | RPI | Bedework CALDAV Server
+| Daniel Boelzle | Mozilla | Lightning and Thunderbird Calendar clients
+| Tony Becker | Marware | Marware Calendar
+| Mikeal Rogers | OSAF | Cosmo CALDAV server and Chandler Client
+| Daniel Rauschenbach | Synchronica | CALDAV Server
+|===
+
+NOTE: Oracle was not present but provided external access to their CALDAV server for testing purposes.
+
+== General Comments
+
+The following applications and products were tested:
+
+* Four CALDAV servers - RPI, Oracle, Apple and OSAF (Cosmo)
+* Four CALDAV clients - OSAF (Chandler), Mozilla, Marware and Apple
+* iCalendar interoperability – Mozilla and Apple
+
+The focus of this event was Free Busy and Scheduling testing in CALDAV. As more and more clients are
+adding in the features, we are able to test more of the spec. During testing, bugs in code were found and
+noted. One of the benefits of interoperability testing is to stress test implementations in a controlled
+environment. Each product found situations where they need to go back and adjust their implementations
+in order to improve interoperability.
+
+Examples of what is tested:
+
+* Connection to all CALDAV servers from all clients.
+* Successfully publishing events
+* Publishing separate calendars
+* Handling of errors and authentication
+
+Examples of issues found are:
+
+* Serialization of all requests
+* Handling of Mkcalendar
+* Products not showing first instances
+* Not handling EXDATE=a,b,c
+* Fetching etags on non-existing resources when adding items
+* Error reporting
+* Weekly recurring event 4 times - Queries “in between” weeks return no results
+* Deleting recurring event with multiple overridden instances
+* UI handling of switching between recurring event with count (1.2) that do not update the recurrence field
+* Deleting some instances, then changing the whole event into an all-day daily recurring one failed (err
+500)
+* A server that seems to filter out a VALARM and doesn't write it.
+
+== Summary
+
+We continue to have good results testing CALDAV clients and servers. General comments again are that
+it is always good to have interops in person. The ability to stress test in a controlled, “safe” environment is
+a plus.
+
+The aim of the next interop is to test more CALDAV Scheduling features.
+
+Respectfully submitted, +
+Pat Egen, +
+Interoperability Event Manager
