@@ -1,0 +1,468 @@
+= Min-IOP (Minimum Interoperable Subset) Use Cases for Tasks (VTODO)
+:docnumber: 0701
+:copyright-year: 2007
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2007-04-19
+:published-date: 2007-04-19
+:technical-committee: USECASE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Jeff McCullouch
+:affiliation: UC Berkeley
+:role: editor
+:fullname: Guy Stalnaker
+:affiliation: University of Wisconsin
+:role: editor
+:fullname: Mimi Mugler
+:affiliation: UC Berkeley
+:role: editor
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+This document was created by the Use Case Technical
+Committee of the Calendaring and Scheduling Consortium and
+defines the use cases for minimum interoperablity for tasks
+support (VTODO) for calendaring and scheduling. Minimum
+interoperability is the basic level of functionality our collective
+experience tells us is necessary to have a useful system. We
+realize that in some cases it may be more than is currently
+offered by “basic” calendaring and scheduling applications.
+
+== Introduction
+
+This document was created by the USECASE Technical Committee of the Calendaring and
+Scheduling Consortium. The document defines the use cases for minimum interoperability of
+tasks within the calendaring and scheduling application domain. Minimum interoperability is the
+basic level of functionality our collective experience tells us is necessary to have a useful
+system. We realize that in some cases it may be more than is currently offered by “basic”
+calendaring and scheduling applications.
+
+A word about the use of 'task' versus 'todo'. In discussion it was determined that while RFC
+2445 uses only 'todo' and RFC 3283 uses task (once), and in fact RFC 2445 defines the
+VTODO component of an iCalendar object, common usage by vendors and users turns more to
+the term 'task' than 'todo' (cp. for example the entry in Wikipedia, in which the entry for todo
+refers to the entry for Time Management, which uses the term 'task'). This document defers to
+that common usage in the interest of clarity and, hopefully, usability.
+
+[.preface]
+== Methodology
+
+The set of properties determined to be the minimum set for interoperability was chosen via
+discussion at CalConnect's Roundtables VI and VII and in conference calls of the USECASE
+Technical Committee. Additional contributions were provided in an informal survey of properties
+that are built into existing software products that have Task management features, which
+formed a starting point for further winnowing of properties. The software products were not
+selected by any formal process, but were those available to which committee participants had
+access. However, we believe these to be a fair representation of the types of calendaring
+products currently in use. Eventually the USECASE Technical Committee decided that it was
+advisable to proceed by accepting those properties which were implemented by more than fifty
+percent (>50%) of the software surveyed as representing a minimum set for interoperability.
+
+The software applications are:
+
+* Palm OS
+* Oracle Calendar
+* Yahoo
+* Evolution
+* KDE Kontact
+* Mozilla Sunbird
+* Apple iCal
+* Microsoft Entourage
+* Microsoft Outlook
+* Lotus Notes
+
+[heading=terms and definitions]
+== Definitions
+
+The definitions below are taken from the "Calendaring and Scheduling Glossary of Terms,"
+version 1.0, October, 2006, from CalConnect. In accordance with previous comments, the term
+'task' has replaced 'todo' whereever 'todo' was found.
+
+=== Alarm
+
+A reminder for an event or a task. Alarms may be used to define a reminder for a
+pending event or an overdue task.
+
+=== Calendar
+
+A collection of events, tasks, journal entries, etc. A calendar could be the content of
+a person or resource's agenda; it could also be a collection of data serving a more specialized
+need. Calendars are the basic storage containers for calendaring information. 
+
+[.source]
+<<rfc3283>>
+
+=== Calendar User (CU)
+
+An entity (often a human) that accesses calendar information. 
+
+[.source]
+<<rfc3283>>
+
+=== Calendaring
+
+An application domain that covers systems that allow the interchange, access
+and management of calendar data.
+
+=== CalConnect
+
+The Calendaring and Scheduling Consortium consisting of vendors and user
+groups interested in promoting and improving calendaring and scheduling standards and
+interoperability.
+
+=== Component
+
+A piece of calendar data such as an event, a task, or an alarm. Information about
+components is stored as properties of those components.
+
+[.source]
+<<rfc3283>>
+
+=== Coordinated Universal Time (UTC)
+
+An atomic realization of Universal Time (UT) or Greenwich
+Mean Time, the astronomical basis for civil time. Time zones around the world are expressed as
+positive and negative offsets from UT. UTC differs by an integral number of seconds from
+International Atomic Time (TAI), as measured by atomic clocks and a fractional number of
+seconds from UT.
+
+[.source]
+<<wiki>>
+
+=== Counter
+
+A counter-proposal request a participant may send to an event or task organizer to
+suggest a change to the event or task such as the scheduled date/time, list of participants, etc.
+
+=== Daylight Saving Time (DST)
+
+The period of the year in which the local time of a particular time
+zone is adjusted forward, most commonly by one hour, to account for the additional hours of
+daylight during summer months.
+
+=== Event
+
+A calendar object that usually takes up time on an individual calendar. Events are
+commonly used to represent meetings, appointments, anniversaries, and day events.
+
+=== Free time search
+
+(Bounded) Common free time. This is typically a search generated by an
+application to show time on a calendar that is available or open.
+
+=== Freebusy
+
+A database and/or listing of times when a potential attendee or resource is free or
+busy. Used when scheduling calendar events.
+
+=== iCalendar
+
+The Internet Calendaring and Scheduling Core Object Specification. An IETF
+standard (RFC 2445) for a text representation of calendar data (VEVENT, VTODO, VALARM,
+etc.).
+
+=== Instance
+
+When used with recurrences, an instance refers to an item in the set of recurring
+items.
+
+=== Invite
+
+To request the attendance of someone to a calendar event.
+
+=== Negotiation
+
+Resource conflict resolution. Negotiation is the process of resolving conflicts either
+programmatically or via direct communication with the participants and invitees of meetings and
+events.
+
+=== Notification
+
+. The action of making known, an intimation, a notice.
+. Reminder or alarm sent
+when any resource or parties interested in the resource need an indicator that some attention is
+required. Possible notification methods include email, paging, audible signal at the computer,
+visual indicator at the computer, voice mail, telephone.
+
+=== Organizer
+
+The originator of a calendar event typically involving more than one attendee.
+
+=== Property
+
+A description of some element of an component, such as a start time, title, or
+location. Properties can have parameters associated with them to modify or add to their
+meaning.
+
+=== Publish
+
+Make known publicly calendar information such as freebusy times.
+
+=== Recurring
+
+Happening more than once over a specified interval, such as weekly, monthly, daily,
+etc. See {{Repeating}}.
+
+=== Repeating
+
+An event that happens more than once. You might want an event to occur on a
+regular basis. To do this you schedule a repeating event. Any changes you make to the event
+can automatically be made to all occurrences of the event. If necessary, changes can be made
+to individual events without affecting the others. For example, if you need to attend a weekly
+meeting, you can schedule a repeating event on your calendar. Using another example, if you
+want to schedule a five day vacation, schedule an all-day event that repeats daily for a total of
+five times. If you have to cancel one of the days, delete the one day without deleting the whole
+event.
+
+=== Reminders
+
+See {{Notification}}.
+
+=== Task
+
+A calendar object that is commonly used to represent work items.
+
+=== Text/calendar
+
+The MIME content type for encoding iCalendar objects. Example usage
+includes: email, web pages.
+
+=== Time zone
+
+Areas of the Earth that have adopted the same local time. Time zones are
+generally centered on meridians of a longitude, that is a multiple of stem:[15 "unitsml(deg)"], thus making
+neighboring time zones one hour apart. However, the one hour separation is not universal and
+the shapes of time zones can be quite irregular because they usually follow the boundaries of
+states, countries or other administrative areas. Time zones are calendar components that define
+the time of an event relative to UTC (see below).
+
+=== To-do
+
+See {{Task}}.
+
+== Properties Used
+
+We're using the following properties of a Task in this draft (iCalendar VTODO specification
+property name is in square brackets []):
+
+. Title [SUMMARY]
+. Priority [PRIORITY: iCalendar supports values 1-9]
+. Due/End Date [DTEND]
+. Access/Privacy [CLASS]
+. Notes/Details/Desc [DESCRIPTION]
+. Category [CATEGORIES]
+. Start Date [DTSTART]
+. Percent Completed [COMPLETED: iCalendar support values 0-100%]
+. Alarm/Reminder [VALARM]
+
+In the examples below, the Task property (as listed above) are indicated in square brackets []:
+
+. Explanatory text [property numbers]:
+
+[example]
+====
+. A calendar user wants to create a task that must be done by a particular date (but could be
+done sooner) [1,3]:
+====
+
+== Use Cases
+
+=== General Tasks
+
+==== Task can be done any time [1]
+
+[example]
+File reports.
+
+[example]
+Clean desk off.
+
+==== Task requires more description [1,5]
+
+[example]
+Pick up roast from Jacobsens [DESC - Brennans not the Jacobsens on Raymond
+Road].
+
+[example]
+Pick up mail from post office box [DESC - combination is AB - F - IJ].
+
+==== Task indicates that it was completed, (percentage 0-100%), NOTE: this is not a date string) [1,8]
+
+[example]
+Buy sister flowers for birthday [100%].
+
+=== Tasks have Due/End or Start Dates
+
+==== Task must be done by a particular date (but perhaps could be done sooner) [1,3]
+
+[example]
+File income taxes by April 15.
+
+[example]
+Deliver project scope to customer by March 1.
+
+[example]
+Give dog heartworm medicine on the 9th of the month.
+
+[example]
+Certificate for web server expires on the October 20, get new one to install by that
+date.
+
+==== Task cannot begin before a prior task concludes [1,2,3,7]
+
+[example]
+====
+Task 1 - Rewrite course schedule import code due to DST changes by January 22nd when
+classes start - priority 1.
+
+Task 2 - Begin work on event data update on January 23rd after course schedule rewrite is
+done.
+====
+
+[example]
+====
+Task 1 - Install Solaris patch updates on test machines by September 15th.
+
+Task 2 - After Solaris patched, patch Oracle OCAS system (which requires the Solaris patches),
+begin September 16th.
+====
+
+=== Tasks have limited/private or public/group access
+
+==== Task that can only be viewed by creator [1,3,4]
+
+[example]
+Take son to physical therapist for bum knee (private/personal).
+
+[example]
+Buy train ticket for trip to Portland (personal/private).
+
+[example]
+Vacation – Out of Town (Public)
+
+==== Task that can be viewed by a selected group of others [1,4]
+
+[example]
+Get figures together on revenue for 1st quarter for audit (Group).
+
+[example]
+Practice 1st 32 bars of dance program (Group).
+
+=== Prioritized Tasks
+
+==== Task is more important than other tasks [1,2,3]
+
+[example]
+Prepare performance review documents for manager before March 1st - priority 1.
+
+[example]
+Research resource usage for CalConnect presentation before January 31st - priority
+2.
+
+=== Task categorization
+
+==== Task categories indicate that multiple tasks are grouped, narrowly defined
+
+[example]
+====
+All tasks have category of 'Set up web application' [1,6]:
+
+Task 1 - Install apache 2 on test host ithilien.
+
+Task 2 - Install php5 on test host ithilien.
+
+Task 3 - Install perl5 on test host ithilien.
+
+Task 4 - Install tomcat on test host ithilien.
+
+Task 5 - Install ant on test host ithilien.
+
+Task 6 - Install latest Java5 SDK on test host ithilien.
+
+Task 7 - Install Oracle Java/SDK on test host ithilien.
+
+Task 8 - Configure cvs.
+
+Task 9 - Checkout web app code from cvs.
+
+Task 10 - Use ant and deploy code.
+
+Task 11 - Confirm application is functioning correctly.
+====
+
+[example]
+====
+All tasks have category of 'Party Preparation':
+
+Task 1 - Hire house cleaner for day before party.
+
+Task 2 - Order flowers one week before party.
+
+Task 3 - Order appetizers from deli one week before party.
+
+Task 4 - Contact caterers about dinner options and make decision.
+
+Task 5 - Send out invitations.
+
+Task 6 - Contact rental store about chairs and tables.
+
+Task 7 - Arrange babysitting for pets and kids (grandparents).
+====
+
+==== Task categories of a more general nature (broadly defined)
+
+[example]
+====
+Personal/Family tasks are differentiated by category from work-related tasks.
+
+Task 1 - Personal: Make appt. with counselor
+
+Task 2 - Work: Make sales calls.
+====
+
+[example]
+====
+Tasks belong to long-term or permanent categories related to job areas (e.g.,
+Calendaring, system administration, consulting)
+
+Task 1 - Calendaring: Attend calendaring conference
+
+Task 2 - System administration: patch OS
+
+Task 3 - Consulting: respond to client's question
+====
+
+=== Tasks use alarms
+
+NOTE: Alarms are tied to the Due/End Date/Start Date attributes as one would expect.
+
+[example]
+Take the garbage to the curb on Mondays, start time of 8am, with alarm (VALARM:
+Audio prompt, with a trigger of one hour before the start time) [1,3,7,9].
+
+[example]
+Give dog heartworm medicine on the 9th of the month, with alarm (VALARM: Email
+prompt, with a trigger of one day before due date) [1,3,7,9].
+
+[bibliography]
+== References
+
+* [[[rfc2445, RFC 2445]]]
+
+* [[[rfc3283, RFC 3283]]]
+
+* [[[cc-glossary, CC/R 0610]]]
+
+* [[[wiki,hidden(Wikipedia)]]], https://www.wikipedia.org/
