@@ -1,0 +1,442 @@
+= The Benefits of iCalendar for the Mobile Industry
+:docnumber: 0611
+:copyright-year: 2006
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2006-11-27
+:published-date: 2006-11-27
+:technical-committee: MOBILE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Chris Dudding
+:affiliation: Symbian Ltd
+:role: editor
+:fullname_2: Cyrus Daboo
+:affiliation_2: Apple
+:role_2: author
+:fullname_3: Chris Dudding
+:affiliation_3: Symbian
+:role_3: author
+:fullname_4: Mark Paterson
+:affiliation_4: Oracle
+:role_4: author
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Executive Summary
+
+The ability to share calendar information among different applications and
+across network boundaries has become an important business need, as a
+growing number of organizations look for ways to leverage their investments
+in collaborative applications.
+
+Since the 1990s, when email standards were developed to allow for access to
+messages on any server, from any device or browser, the same challenge
+has remained for calendar and scheduling applications: How can we ensure
+that meeting and task information can be accessed and managed from any
+application, anytime, anywhere?
+
+The goal is simple enough at a high level: Develop a standard data object for
+sharing calendar information over the Internet. iCalendar (RFC 2445) is a
+widely accepted format for calendar data representation, and is supported by
+several applications. However, vendors diverge in their interpretation of the
+standard’s format, leading to incomplete or unusable data being exchanged.
+Further complicating the issue is that iCalendar has not been widely adopted
+within certain application spaces. Although adopted by all major time
+management solution vendors, there has been reluctance within the mobile
+industry to migrate from vCalendar (iCalendar’s predecessor) based solutions
+and to fully embrace iCalendar.
+
+The Mobile Technical Committee (TC-MOBILE) of the Calendaring &
+Scheduling Consortium recently published the results of a mobile calendaring
+questionnaire. Of concern were answers related to calendar synchronization.
+Synchronization was one of the main things users did, but it was also singled
+out as one of the main things that did not work well yet. This can be attributed,
+in large part, to issues related to data object interoperability.
+
+Efforts to clarify and simplify aspects of iCalendar and investment in
+producing effective interoperability test suites hopefully can foster more
+reliable solutions, but this can only be achieved through the widespread
+adoption of iCalendar (RFC 2445) within all application spaces.
+
+== Introduction
+
+The vCalendar 1.0 specification defines a format for exchanging electronic
+calendaring and scheduling information between different applications and
+systems. It was developed by the Versit Consortium in September 1996.
+
+Ten years after publication, vCalendar has been adopted by a wide variety of
+consumer electronics and mobile devices, from mobile phones to digital music
+players. However, many products in this category have not adopted RFC2445
+(iCalendar) despite a high level of implementation by desktop applications and
+services.
+
+The iCalendar specification, introduced in 1998, was intended to improve the
+level of interoperability between dissimilar calendaring and scheduling
+applications and systems. iCalendar builds on the previous work of vCalendar
+1.0 and defines a MIME content type for exchanging calendar and scheduling
+information with support for operations such as requesting and replying to
+meeting events, to-dos or journal entries.
+
+Interoperability among devices and platforms is very important for mobile
+users. The Mobile Technical Committee of the Calendaring & Scheduling
+Consortium conducted a questionnaire of 60 mobile users about calendaring
+on mobile devices in April 2006. One of the key findings from the
+questionnaire was that user experience of synchronization was not good
+enough due to problems with reliability and interoperability with desktop
+applications. iCalendar provides a solution to these interoperability issues.
+
+In this paper:
+
+* We explain the differences between the vCalendar and iCalendar
+standards
+* We identify the advantages of wider usage of iCalendar
+* We describe on-going activities to improve calendar interoperability
+based on iCalendar
+
+== What is iCalendar?
+
+iCalendar provides a more precise specification of the calendar components
+defined in the vCalendar 1.0 specification (VEVENT, VTODO) and defines
+new calendar components for a journal entry (VJOURNAL), free and busy
+time information (VFREEBUSY), time zone specification (VTIMEZONE), and
+alarm definition (VALARM).
+
+The VJOURNAL component allows descriptive notes to be recorded for a
+particular calendar date. Only a few products implement this component
+currently.
+
+The grouping of properties in the VFREEBUSY component "describe either a
+request for free/busy time, describe a response to a request for free/busy time
+or describe a published set of busy time" (from RFC2445).
+
+The timezone specification provided by the VTIMEZONE component provides
+a more comprehensive replacement for the DAYLIGHT and TZ properties in
+vCalendar 1.0. It enables date and time information to be communicated in an
+unambiguous format.
+
+The definition of alarms is provided by the VALARM component. This
+component provides equivalent functionality to the AALARM, DALARM,
+MALARM, and PALARM vCalendar 1.0 properties.
+
+== What are the differences between vCalendar and iCalendar?
+
+The default character set for iCalendar is UTF-8 rather than ASCII. It is no
+longer possible to define a character set for an individual property; the same
+character set applies to the whole iCalendar object.
+
+iCalendar has a default encoding of 8-bit; compared to vCalendar’s default of
+7-bit. It is no longer necessary to indicate 8-bit content using property
+parameters. iCalendar data that needs to be transferred using protocols
+restricted to 7 bits should use a content transfer encoding such as Base64 or
+quoted-printable at the transport layer.
+
+There are new file type extensions of ICS and IFB for iCalendar core
+components and free/busy information components. vCalendar’s file type
+extension of VCS is not used for identification of iCalendar data.
+
+Property value data types such as date-time are specified in a more rigorous
+manner than in vCalendar; iCalendar also defines new property value data
+types such as ‘Calendar User Address’ to improve interoperability. iCalendar
+supports a more comprehensive set of property parameters to enable
+delegation of requests, alternative representations of data, and participant
+status. A full list of new property value data types and property value
+parameters is provided in the Appendix.
+
+iCalendar defines eighteen new properties to support specification of time
+zones, calendaring and scheduling operations such as a canceling a meeting,
+non-Gregorian calendar scales, and other calendar attributes. A full list is
+provided in the Appendix.
+
+iCalendar provides support for meeting requests/group scheduling with the
+new METHOD property. The scheduling protocol is a logical extension of
+iCalendar and is defined by RFC 2446 the iCalendar Transport-independent
+Interoperability Protocol (iTIP). There is no equivalent for vCalendar data.
+
+The new RECURRENCE-ID property allows individual calendar instances to
+be linked together and enables powerful recurrence/exception handling.
+
+iCalendar has proper support for time zones and can accurately represent
+entries in local time, UTC time and local time with a time zone specified. This
+is particularly important for repeating entries, which may span a daylight
+saving change. vCalendar alone cannot represent the same data correctly.
+
+iCalendar supports repeat rules with a frequency of seconds, minutes and
+hours. These kinds of repeat rules cannot be represented in vCalendar.
+
+In summary, the iCalendar specification is more detailed and more powerful;
+the iCalendar specification is 148 pages compared to vCalendar’s 47 pages.
+This means that there is less opportunity for implementers to misinterpret the
+specification’s calendar components and it is easier to develop conformance
+tests to verify a correct implementation of the standard.
+
+== What are the benefits of iCalendar?
+
+For consumers, adoption of iCalendar will result in improved interoperability
+among devices and platforms that will allow them to synchronize data easily
+among multiple devices and servers and see the same set of information
+wherever they look.
+
+The widespread adoption of iCalendar in all application spaces will result in a
+larger range of Calendar content available to consumers over the Internet.
+Further extensions to iCalendar will enable exchange of an even richer set of
+data. The consortium’s Event Publication Technical Committee (TCEVENTPUB)
+has developed the VVENUE proposal for representing venue
+related information (e.g. concert listings, museum admission prices, and
+driving directions). iCalendar-based solutions combined with ITIP (RFC 2446)
+will enable full fledged scheduling for consumers.
+
+Third party software and OMA Data Synchronization server vendors can
+increase customer satisfaction and reduce defects by using iCalendar due to
+the combination of needing to support only a single data object format and the
+more reliable representation of calendar data. The ongoing active
+development of the iCalendar standard provides implementers with a vehicle
+for promoting change.
+
+Mobile operating system vendors and device manufacturers will benefit from
+wider adoption of iCalendar. The improved interoperability with third party
+software and server implementations that can be achieved with iCalendar will
+result in less reported user defects. This in turn should result in reduced
+support costs. With an industry-wide push towards iCalendar, server vendors
+will be encouraged to support devices also claiming such support.
+
+For mobile operators, solutions that are more reliable will result in increased
+usage of calendar access and synchronization, which should show in
+increased data revenues. Using iCalendar and taking advantage of iCalendar
+content that is available on the Internet, a richer set of applications and value
+added premium services can result.
+
+The benefits of iCalendar continue to improve as ongoing work to clarify and
+simplify the standard continues in the IETF Calsify working group. While
+vCalendar can no longer evolve, iCalendar as a data object format continues
+to takes steps towards being the needed standard data object format.
+
+== Efforts underway to improve interoperability
+
+It is well understood that even if iCalendar were widely adopted throughout
+the industry, this alone would not solve the issue of interoperability that users
+experience today. Fortunately, there are ongoing efforts to help address
+issues of interoperability.
+
+The Calsify effort in the IETF is chartered to revise the core iCalendar
+specifications to fix any problems discovered over the years during
+interoperability testing. This effort involves not only fixing issues in the
+specifications, but also an analysis of areas where simplification may be
+required. The core documents RFC2445, RFC2246 and RFC2447 have new
+draft revisions available, and these are actively being worked on as of
+November 2006. It is expected that this work will complete in early 2007.
+
+The Calendaring & Scheduling Consortium is committed to helping bring
+about appropriate updates to the iCalendar specifications. As part of this
+effort, it has organized technical committees to study some of the more
+problematic areas such as recurrences and time zones.
+
+The consortium’s technical committees have published the following papers:
+
+* Time zone Registry & Service Recommendations
+* Time zone Problems & Recommendations
+* Recurrence Problems & Recommendations
+
+Fixing issues within the iCalendar specifications will certainly help, but many
+issues could be solved now through increased interoperability testing by
+vendors. Recognizing this fact, the MOBILE Technical Committee (TCMOBILE)
+of the Calendaring & Scheduling Consortium has begun working on
+a Mobile Calendaring Synchronization Test Suite that it hopes to publish by
+January 2007. This test suite will focus on the actual iCalendar payload and
+issues related to interpreting calendar data.
+
+Working with the Interoperability Testing Technical Committee (TCIOPTEST),
+also from the Calendaring & Scheduling Consortium, work is
+underway to host Calendaring Interoperability Tests Events (CITEs) where
+vendors will be able test their implementations using this new test suite.
+
+All of these efforts are directed at improving the iCalendar specifications and
+the usage of these specifications. Only through the widespread adoption of
+iCalendar can these efforts truly help address issues of interoperability.
+
+== Conclusion
+
+Mobile calendaring is something users want but it has to be something they
+can rely on. The mobile industry must overcome the current issues related to
+interoperability. The starting point for this is the widespread adoption of
+iCalendar.
+
+For more information on the efforts of the Calendaring & Scheduling
+Consortium, please visit http://www.calconnect.org/.
+
+[appendix]
+== {blank}
+
+[options=header]
+.New properties defined in iCalendar
+|===
+| Property Name | Section in RFC 2445
+| ACTION | 4.8.6.1
+| CALSCALE | 4.7.1
+| COMMENT | 4.8.1.4
+| CONTACT | 4.8.4.2
+| DTSTAMP | 4.8.7.2
+| DURATION | 4.8.2.5
+| FREEBUSY | 4.8.2.6
+| METHOD | 4.7.2
+| ORGANISER | 4.8.4.3
+| PERCENT-COMPLETE | 4.8.1.8
+| RECURRENCE-ID | 4.8.4.4
+| REPEAT | 4.8.6.2
+| REQUEST-STATUS | 4.8.8.2
+| TRIGGER | 4.8.6.3
+| TZID | 4.8.3.1
+| TZNAME | 4.8.3.2
+| TZOFFSETFROM | 4.8.3.3
+| TZOFFSETTO | 4.8.3.4
+| TZURL | 4.8.3.5
+|===
+
+[options=header]
+.New property value data types defined in iCalendar
+|===
+| Property Value Data Type | Section in RFC 2445
+| Boolean | 4.3.2
+| Calendar User Address | 4.3.3
+| Date | 4.3.4
+| Float | 4.3.7
+| Integer | 4.3.8
+| Period of Time | 4.3.9
+| Recurrence Rule | 4.3.10
+| Text | 4.3.11
+| Time | 4.3.11
+| UTC Offset | 4.3.14
+|===
+
+[options=header]
+.New property parameters defined in iCalendar
+|===
+| Property Parameter Name | Section in RFC 2445
+| ALTREP | 4.2.1
+| CN | 4.2.2
+| CUTYPE | 4.2.3
+| DELEGATED-FROM | 4.2.4
+| DELEGATED-TO | 4.2.5
+| DIR | 4.2.6
+| FMTTYPE | 4.2.8
+| FBTYPE | 4.2.9
+| MEMBER | 4.2.11
+| PARTSTAT | 4.2.12
+| RANGE | 4.2.13
+| RELATED | 4.2.14
+| RELTYPE | 4.2.15
+| RSVP | 4.2.17
+| SENT-BY | 4.2.18
+| TZID | 4.2.19
+|===
+
+[options=header]
+.Mapping between vCalendar and iCalendar properties
+|===
+| vCalendar property name | iCalendar property name | Section in RFC2445
+| DAYLIGHT | Replaced by VTIMEZONE component | 4.6.5
+| GEO | GEO | 4.8.1.6
+| PRODID | PRODID | 4.7.3
+| TZ | Replaced by VTIMEZONE component | 4.6.5
+| VERSION | VERSION | 4.7.4
+| ATTACH | ATTACH | 4.8.1.1
+| ATTENDEE | ATTENDEE | 4.8.4.1
+| AALARM | Replaced by VALARM component | 4.6.6
+| CATEGORIES | CATEGORIES | 4.8.1.2
+| CLASS | CLASS | 4.8.1.3
+| DCREATED | CREATED | 4.8.7.1
+| COMPLETED | COMPLETED | 4.8.2.1
+| DESCRIPTION | DESCRIPTION | 4.8.1.5
+| DALARM | Replaced by VALARM component | 4.6.6
+| DUE | DUE | 4.8.2.3
+| DTEND | DTEND | 4.8.2.2
+| EXDATE | EXDATE | 4.8.5.1
+| EXRULE | EXRULE | 4.8.5.2
+| LAST-MODIFIED | LAST-MODIFIED | 4.8.7.3
+| LOCATION | LOCATION | 4.8.1.7
+| MALARM | Replaced by VALARM component | 4.6.6
+| RNUM | No equivalent property, iCalendar RECUR property value type allows the number of occurrences to be specified |
+| PRIORITY | PRIORITY | 4.8.1.9
+| PALARM | Replaced by VALARM component | 4.6.6
+| RELATED-TO | RELATED-TO | 4.8.4.5
+| RDATE | RDATE | 4.8.5.3
+| RRULE | RRULE | 4.8.5.4
+| RESOURCES | RESOURCES | 4.8.1.10
+| SEQUENCE | SEQUENCE | 4.8.7.4
+| DTSTART | DTSTART | 4.8.2.4
+| STATUS | STATUS | 4.8.1.11
+| SUMMARY | SUMMARY | 4.8.1.12
+| TRANSP | TRANSP | 4.8.2.7
+| URL | URL | 4.8.4.6
+| UID | UID | 4.8.4.7
+| X- | X- | 4.8.8.1
+|===
+
+[heading=bibliography]
+== Resources
+
+[bibliography,normative=false]
+=== iCalendar Specifications
+
+* [[[rfc2445, RFC 2445]]]
+
+* [[[rfc2446, RFC 2446]]]
+
+* [[[rfc2447, RFC 2447]]]
+
+* [[[rfc3283, RFC 3283]]]
+
+[bibliography,normative=false]
+=== CalDAV Specifications
+
+* [[[cd-access,CALDAV-ACCESS]]], Calendaring Extensions to WebDAV.
+http://www.ietf.org/internet-drafts/draft-dusseault-caldav-14.txt.
+// EDITOR: Non-existing link, auto-fetching `IETF I-D draft-dusseault-caldav-14` fails. This should now be RFC 4791.
+
+* [[[cd-sched,CALDAV-SCHED]]], Scheduling Extensions to CalDAV
+http://www.ietf.org/internet-drafts/draft-desruisseaux-caldav-sched-02.txt.
+// EDITOR: Non-existing link, auto-fetching `IETF I-D draft-desruisseaux-caldav-sched-02` fails. This should now be RFC 6638.
+
+[bibliography,normative=false]
+=== Implementations
+
+* [[[libical,LIBICAL]]], libical C library. http://freshmeat.net/projects/libical.
+
+* [[[ical4j,ICAL4J]]], iCal4j Java library. http://ical4j.sourceforge.net.
+
+* [[[vobject,VOBJECT]]], VObject Python library. http://vobject.skyhouseconsulting.com.
+
+[bibliography,normative=false]
+=== iCalendar on the Web
+
+* [[[icalshare,ICALSHARE]]], Shared, searchable calendars. http://www.icalshare.com
+
+* [[[eventful,EVENTFUL]]], Local events. http://eventful.com
+
+[bibliography,normative=false]
+=== Efforts to improve Interoperability
+
+* [[[calsify,IETF CALSIFY]]], Charter for IETF iCalendar Simplification Working Group.
+http://www.ietf.org/html.charters/calsify-charter.html.
+
+* [[[cc-tz-registry,CC 0606]]]
+
+* [[[cc-tz-problems,CC/R 0602]]]
+
+* [[[cc-recurrence,CC/R 0604]]]
+
+[bibliography,normative=false]
+=== Calconnect Mobile Calendaring Questionnaire
+
+* [[[cc-mob-calendaring,CC/R 0609]]]
