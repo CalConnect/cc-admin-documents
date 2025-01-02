@@ -1499,7 +1499,7 @@ Perform a synchronization
 Repeat tests with the server side meetings being created by another person inviting the owner of the mobile device where by the organizer is in a completely different time zone then those being used in the test which has a different date for DST changes.
 | All instances of the repeating entry should display on the device.
 
-The times of ALL instances before and after the daylight savings date should be 10am.
+The times of *ALL* instances before and after the daylight savings date should be 10am.
 
 When tests are repeated meetings between when the organizer's Time zone switch to DST and when the invitee's Time zone switches should be offset by an hour (e.g. A 10am London meeting will normally be a 5am Montreal meeting but it will be at 6am after the province of Quebec switches to DST up until the point where British Summer Time kicks in at which point it will go back to being at 5am).
 
@@ -1531,7 +1531,7 @@ From the device, create a repeating daily entry that starts at 10am, with all fi
 Perform a synchronization
 | All instances of the repeating entry should display on the Server.
 
-The times of ALL instances before and after the daylight savings date should be 10am
+The times of *ALL* instances before and after the daylight savings date should be 10am
 |===
 
 == Part II - Task Tests
