@@ -51,11 +51,11 @@ The goal is simple enough at a high level: Develop a standard data object for
 sharing calendar information over the Internet. iCalendar (RFC 2445) is a
 widely accepted format for calendar data representation, and is supported by
 several applications. However, vendors diverge in their interpretation of the
-standard’s format, leading to incomplete or unusable data being exchanged.
+standard's format, leading to incomplete or unusable data being exchanged.
 Further complicating the issue is that iCalendar has not been widely adopted
 within certain application spaces. Although adopted by all major time
 management solution vendors, there has been reluctance within the mobile
-industry to migrate from vCalendar (iCalendar’s predecessor) based solutions
+industry to migrate from vCalendar (iCalendar's predecessor) based solutions
 and to fully embrace iCalendar.
 
 The Mobile Technical Committee (TC-MOBILE) of the Calendaring &
@@ -136,19 +136,19 @@ The default character set for iCalendar is UTF-8 rather than ASCII. It is no
 longer possible to define a character set for an individual property; the same
 character set applies to the whole iCalendar object.
 
-iCalendar has a default encoding of 8-bit; compared to vCalendar’s default of
+iCalendar has a default encoding of 8-bit; compared to vCalendar's default of
 7-bit. It is no longer necessary to indicate 8-bit content using property
 parameters. iCalendar data that needs to be transferred using protocols
 restricted to 7 bits should use a content transfer encoding such as Base64 or
 quoted-printable at the transport layer.
 
 There are new file type extensions of ICS and IFB for iCalendar core
-components and free/busy information components. vCalendar’s file type
+components and free/busy information components. vCalendar's file type
 extension of VCS is not used for identification of iCalendar data.
 
 Property value data types such as date-time are specified in a more rigorous
 manner than in vCalendar; iCalendar also defines new property value data
-types such as ‘Calendar User Address’ to improve interoperability. iCalendar
+types such as 'Calendar User Address' to improve interoperability. iCalendar
 supports a more comprehensive set of property parameters to enable
 delegation of requests, alternative representations of data, and participant
 status. A full list of new property value data types and property value
@@ -176,9 +176,9 @@ iCalendar supports repeat rules with a frequency of seconds, minutes and
 hours. These kinds of repeat rules cannot be represented in vCalendar.
 
 In summary, the iCalendar specification is more detailed and more powerful;
-the iCalendar specification is 148 pages compared to vCalendar’s 47 pages.
+the iCalendar specification is 148 pages compared to vCalendar's 47 pages.
 This means that there is less opportunity for implementers to misinterpret the
-specification’s calendar components and it is easier to develop conformance
+specification's calendar components and it is easier to develop conformance
 tests to verify a correct implementation of the standard.
 
 == What are the benefits of iCalendar?
@@ -191,7 +191,7 @@ wherever they look.
 The widespread adoption of iCalendar in all application spaces will result in a
 larger range of Calendar content available to consumers over the Internet.
 Further extensions to iCalendar will enable exchange of an even richer set of
-data. The consortium’s Event Publication Technical Committee (TCEVENTPUB)
+data. The consortium's Event Publication Technical Committee (TCEVENTPUB)
 has developed the VVENUE proposal for representing venue
 related information (e.g. concert listings, museum admission prices, and
 driving directions). iCalendar-based solutions combined with ITIP (RFC 2446)
@@ -242,7 +242,7 @@ about appropriate updates to the iCalendar specifications. As part of this
 effort, it has organized technical committees to study some of the more
 problematic areas such as recurrences and time zones.
 
-The consortium’s technical committees have published the following papers:
+The consortium's technical committees have published the following papers:
 
 * Time zone Registry & Service Recommendations
 * Time zone Problems & Recommendations

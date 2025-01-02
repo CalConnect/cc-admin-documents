@@ -31,13 +31,13 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
 The Mobile Technical Committee of the Calendaring and
 Scheduling Consortium created this document. It describes a
-test suite to assess a mobile device’s capability to synchronize
+test suite to assess a mobile device's capability to synchronize
 calendar data with a calendar store.
 
 == Introduction
 
-This document describes the test steps required to assess a mobile device’s capability to
-synchronize calendar data with a calendar store (referred to from now on as “the server”).
+This document describes the test steps required to assess a mobile device's capability to
+synchronize calendar data with a calendar store (referred to from now on as "the server").
 
 It is provided as a resource for implementers to help promote interoperability, but the successful
 execution of the test cases described herein should not be considered as any type of formal
@@ -279,9 +279,9 @@ http://www.openmobilealliance.org/release_program/vObject_v10.html
 | 4 August 2008 | 1.1 a| Added reference to 'Mobile Recurrence Interoperability
 Recommendations' paper
 
-Updated ‘Repeating Entries’ test cases to describe expected behavior for mobile devices and servers following the recommendations in the 'Mobile Recurrence Interoperability Recommendations' paper
+Updated 'Repeating Entries' test cases to describe expected behavior for mobile devices and servers following the recommendations in the 'Mobile Recurrence Interoperability Recommendations' paper
 
-Revised ‘Repeating Events and Recurrence Rules’ section in Appendix A
+Revised 'Repeating Events and Recurrence Rules' section in Appendix A
 |===
 
 == Part I -- Calendar Tests
@@ -727,7 +727,7 @@ Level 1 & 2 device: Appointment should be shown as a single recurrence set (e.g.
 image::img01.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -751,7 +751,7 @@ Level 1 & 2 device: Meeting should be shown as a single recurrence set (e.g. an 
 image::img02.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -775,7 +775,7 @@ Level 1 & 2 device: Appointment should be shown as a single recurrence set (e.g.
 image::img03.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -799,7 +799,7 @@ Level 1 & 2 device: Appointment should be shown as a single recurrence set (e.g.
 image::img04.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -825,7 +825,7 @@ Level 1 & 2 device: Appointment should be shown as a single recurrence set (e.g.
 image::img05.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -849,7 +849,7 @@ Level 1 & 2 device: Appointment should be shown as a single recurrence set (e.g.
 image::img06.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -874,7 +874,7 @@ Level 1 & 2 device: Appointment should be shown as a single recurrence set (e.g.
 image::img07.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -910,7 +910,7 @@ Level 1 & 2 device: Appointment should be shown as a single recurrence set (e.g.
 image::img08.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -936,7 +936,7 @@ Level 1 & 2 device: Appointment should be shown as a single recurrence set (e.g.
 image::img09.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -961,7 +961,7 @@ Level 1 & 2 device: Appointment should be shown as a single recurrence set (e.g.
 image::img10.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -988,7 +988,7 @@ Level 1 & 2 device: Appointment should be shown as a single recurrence set (e.g.
 image::img11.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -1013,7 +1013,7 @@ Level 1 & 2 device: Appointment should be shown as a single recurrence set (e.g.
 image::img12.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -1039,7 +1039,7 @@ Level 1 & 2 device: Appointment should be shown as a single recurrence set (e.g.
 image::img13.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -1065,7 +1065,7 @@ Level 2 device: Appointment should be shown as a single recurrence set (e.g. an 
 image::img14.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -1089,7 +1089,7 @@ Level 2 device: Appointment should be shown as a single recurrence set (e.g. an 
 image::img15.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -1112,7 +1112,7 @@ Level 2 device: Appointment should be shown as a single recurrence set (e.g. an 
 image::img16.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -1134,7 +1134,7 @@ Level 2 device: Appointment should be shown as a single recurrence set (e.g. an 
 image::img17.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -1153,7 +1153,7 @@ Level 2 device: Appointment should be shown as a single recurrence set (e.g. an 
 image::img18.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -1172,7 +1172,7 @@ Level 2 device: Appointment should be shown as a single recurrence set (e.g. an 
 image::img19.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -1197,7 +1197,7 @@ Level 1 & 2 device: Appointment should be shown as a single recurrence set (e.g.
 image::img20.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -1222,7 +1222,7 @@ Level 2 device: Appointment should be shown as a single recurrence set (e.g. an 
 image::img21.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -1253,7 +1253,7 @@ Level 2 device: Appointment should be shown as a single recurrence set (e.g. an 
 image::img22.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -1278,7 +1278,7 @@ Level 2 device: Appointment should be shown as a single recurrence set (e.g. an 
 image::img23.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 *:: Meeting not linked
 
@@ -1300,7 +1300,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img24.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.25 Create Daily Repeat (every other day, unbounded)
@@ -1323,7 +1323,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img25.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.26 Create Daily Repeat (every 7 days, unbounded)
@@ -1346,7 +1346,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img26.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.27 Create Weekly Repeat (every Wed, unbounded)
@@ -1369,7 +1369,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img27.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.28 Create Weekly repeat (Wed & Fri, unbounded)
@@ -1394,7 +1394,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img28.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.29 Create Fortnightly Repeat (unbounded)
@@ -1417,7 +1417,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img29.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.30 Create Monthly By Date Repeat (unbounded)
@@ -1440,7 +1440,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img30.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.31 Create Monthly By Day Repeat (first occurrence, bounded)
@@ -1475,7 +1475,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img31.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.32 Create Monthly By Day Repeat (n^th^ occurrences, bounded)
@@ -1500,7 +1500,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img32.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.33 Create Monthly By Day Repeat (last occurrence, bounded)
@@ -1524,7 +1524,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img33.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.34 Create Yearly Repeat (every year, unbounded)
@@ -1550,7 +1550,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img34.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.35 Create Yearly Repeat (every year for 5 years, bounded)
@@ -1574,7 +1574,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img35.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.36 Create Yearly Repeat (every 4 years, bounded)
@@ -1599,7 +1599,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img36.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.37 Create custom repeat (`RDATES` only)
@@ -1626,7 +1626,7 @@ Level 2 server: Appointment should be shown as a single recurrence set (e.g. an 
 image::img37.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.38 Create repeat combination
@@ -1651,7 +1651,7 @@ Level 2 server: Appointment should be shown as a single recurrence set (e.g. an 
 image::img38.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.39 Create repeating event plus custom repeat (`RRULE` + `RDATE`)
@@ -1674,7 +1674,7 @@ Level 2 server: Appointment should be shown as a single recurrence set (e.g. an 
 image::img39.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.40 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded)
@@ -1697,7 +1697,7 @@ Level 2 server: Appointment should be shown as a single recurrence set (e.g. an 
 image::img40.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.41 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded)
@@ -1717,7 +1717,7 @@ Level 2 server: Appointment should be shown as a single recurrence set (e.g. an 
 image::img41.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.42 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`)
@@ -1737,7 +1737,7 @@ Level 2 server: Appointment should be shown as a single recurrence set (e.g. an 
 image::img42.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.43 Modify anniversary
@@ -1761,7 +1761,7 @@ Level 1 & 2 server: Appointment should be shown as a single recurrence set (e.g.
 image::img43.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.44 Modify occurrences of repeating meeting
@@ -1785,7 +1785,7 @@ Level 2 server: Appointment should be shown as a single recurrence set (e.g. an 
 image::img44.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 
 h| 3.45 Delete recurring meeting
@@ -1809,7 +1809,7 @@ Level 2 server: Appointment should be shown as a single recurrence set (e.g. an 
 image::img45.png[]
 
 [%key]
-X:: Test can’t be performed
+X:: Test can't be performed
 &#x2713;:: Test should pass
 |===
 
@@ -2868,7 +2868,7 @@ commonly observed by users of calendar synchronization. Irregular recurrence pat
 modified instances of a recurrence set are a particular problem. These mismatches can have a
 serious impact as they can lead to corruption of a server-side calendar.
 
-There are two main causes for incorrect synchronization of repeating events – usage of
+There are two main causes for incorrect synchronization of repeating events -- usage of
 vCalendar and a lack of common understanding about recurrence capabilities. Devices often
 claim that they can support repeating meetings, but in reality can only support a very small subset
 of the repeating capabilities that iCalendar provides for. For example, devices will support deleted
@@ -2885,7 +2885,7 @@ A simplified summary of the levels for mobile devices are:
 . Device can handle recurrence rules
 . Device can handle recurrence rules with exceptions and extra dates
 
-For devices that don’t claim any sort of repeating support (level 0 devices) server-side
+For devices that don't claim any sort of repeating support (level 0 devices) server-side
 implementations should expand all repeating events and send simple single instance events for
 all instances within the synchronization range. The fact that the event is repeating should be
 maintained server-side and any modification done on the device side should not affect this. This

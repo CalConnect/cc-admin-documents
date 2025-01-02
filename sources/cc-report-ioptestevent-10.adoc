@@ -58,7 +58,7 @@ The chart below shows the attendees, their organization and the products they we
 | Mike Douglass | RPI | Bedework server
 | Cyrus Daboo | Apple | Apple server
 | Wilfredo Sanchez | Apple | Apple server
-| Red Dutta | Apple | Apple client – ical Version 3.0 (1118)
+| Red Dutta | Apple | Apple client -- ical Version 3.0 (1118)
 | Scott Adler | Apple | Apple client
 | Haley Allen | Apple | Apple client
 | Dan Mosedale | Mozilla | Sunbird / Lightening 0.3 Release Candidate
@@ -135,7 +135,7 @@ then making sure that everything still works. For example, have one vendor creat
 on their server with their client, then let our application read and modify the data, then see that it shows
 up correctly the receiving application.
 
-“Overall this was a great event, and we look forward to the next one.”
+"Overall this was a great event, and we look forward to the next one."
 
 === Second set of comments
 
@@ -176,7 +176,7 @@ up the next day. Nothing was reported.
 
 One vendors application converts individual to UTC time. They also move floating recurr to UTC. Syncing
 unlimited recurrence fails. It also adds Alarms to every event. We found that this application rewrites
-exceptions as RDates and Exdates. Another vendor’s handling of modifications loses non-time pieces of
+exceptions as RDates and Exdates. Another vendor's handling of modifications loses non-time pieces of
 these exceptions. All-day event creation fails on another vendors application. We also noted that
 another vendor does not send durations.
 
@@ -204,7 +204,7 @@ They tested their products against both servers. They also tested against anothe
 having stop time or no DTStart on timed event did cause some problems. They may need to put some
 kind of Note on events with no stop time or something like a ragged edge Icon on items with no end
 times. However, this may break scheduling with no end time. They also noted that the
-organizer object in one vendor’s application is an issue. Another vendor doesn’t allow the creator to
+organizer object in one vendor's application is an issue. Another vendor doesn't allow the creator to
 update the principle.
 
 === Seventh set of Comments
@@ -215,7 +215,7 @@ product. They are currently working on rewriting that support.
 One vendor ran across a problem with a recurrent event that proved to be an ical4j bug. This is now
 fixed.
 
-Another vendor’s application etags were broken and are now fixed.
+Another vendor's application etags were broken and are now fixed.
 
 We partially fixed a problem deleting calendars.
 
@@ -224,7 +224,7 @@ We partially fixed a problem deleting calendars.
 As usual, the interoperability testing revealed problems with servers that no one knew about. These were
 resolved quickly in many cases or will be resolved when the attendees get back to their respective
 facilities. It is always better to test something before it goes production and that is one of the things we
-can provide – a safe, non-public forum and environment for testing software interoperability.
+can provide -- a safe, non-public forum and environment for testing software interoperability.
 
 Issues that came out of the testing included principle support, attachments and calendar discovery.
 There needs to be something defined to better identify and discover calendar servers. In addition, there
@@ -241,7 +241,7 @@ Respectfully submitted, Pat Egen. Interoperability Event Manager
 == CalDAV Testing Matrix
 
 [options=header,headerrows=2,cols="^,<,^,^,^,^,^,^,^,^,^,^,^,^"]
-.6^th^ CalDAV Interop Testing Event – September 2006
+.6^th^ CalDAV Interop Testing Event -- September 2006
 |===
 | .2+| P = Pass / F = Fail / N = Not supported 3+| Server 1 3+| Server 2 3+| Server 3 3+| Server 4
 | | A | B | C | A | B | C | A | B | C | A | B | C
