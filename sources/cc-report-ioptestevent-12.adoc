@@ -61,7 +61,7 @@ The following applications and products were tested:
 
 * Four CALDAV servers - RPI, Oracle, Apple and OSAF (Cosmo)
 * Four CALDAV clients - OSAF (Chandler), Mozilla, Marware and Apple
-* iCalendar interoperability – Mozilla and Apple
+* iCalendar interoperability -- Mozilla and Apple
 
 The focus of this event was Free Busy and Scheduling testing in CALDAV. As more and more clients are
 adding in the features, we are able to test more of the spec. During testing, bugs in code were found and
@@ -84,7 +84,7 @@ Examples of issues found are:
 * Not handling EXDATE=a,b,c
 * Fetching etags on non-existing resources when adding items
 * Error reporting
-* Weekly recurring event 4 times - Queries “in between” weeks return no results
+* Weekly recurring event 4 times - Queries "in between" weeks return no results
 * Deleting recurring event with multiple overridden instances
 * UI handling of switching between recurring event with count (1.2) that do not update the recurrence field
 * Deleting some instances, then changing the whole event into an all-day daily recurring one failed (err
@@ -94,7 +94,7 @@ Examples of issues found are:
 == Summary
 
 We continue to have good results testing CALDAV clients and servers. General comments again are that
-it is always good to have interops in person. The ability to stress test in a controlled, “safe” environment is
+it is always good to have interops in person. The ability to stress test in a controlled, "safe" environment is
 a plus.
 
 The aim of the next interop is to test more CALDAV Scheduling features.

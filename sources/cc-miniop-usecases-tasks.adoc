@@ -38,7 +38,7 @@ support (VTODO) for calendaring and scheduling. Minimum
 interoperability is the basic level of functionality our collective
 experience tells us is necessary to have a useful system. We
 realize that in some cases it may be more than is currently
-offered by “basic” calendaring and scheduling applications.
+offered by "basic" calendaring and scheduling applications.
 
 == Introduction
 
@@ -46,7 +46,7 @@ This document was created by the USECASE Technical Committee of the Calendaring 
 Scheduling Consortium. The document defines the use cases for minimum interoperability of
 tasks within the calendaring and scheduling application domain. Minimum interoperability is the
 basic level of functionality our collective experience tells us is necessary to have a useful
-system. We realize that in some cases it may be more than is currently offered by “basic”
+system. We realize that in some cases it may be more than is currently offered by "basic"
 calendaring and scheduling applications.
 
 A word about the use of 'task' versus 'todo'. In discussion it was determined that while RFC
@@ -350,7 +350,7 @@ Take son to physical therapist for bum knee (private/personal).
 Buy train ticket for trip to Portland (personal/private).
 
 [example]
-Vacation – Out of Town (Public)
+Vacation -- Out of Town (Public)
 
 ==== Task that can be viewed by a selected group of others [1,4]
 
