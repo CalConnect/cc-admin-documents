@@ -1,0 +1,213 @@
+= February 2010 CalConnect Interoperability Test Report
+:docnumber: 1002
+:copyright-year: 2010
+:language: en
+:doctype: administrative
+:edition: 1.1
+:status: published
+:revdate: 2010-03-25
+:published-date: 2010-03-25
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Patricia Egen
+:role: author
+:fullname_2: Gordon Connelly
+:role_2: author
+:fullname_3: Cyrus Daboo
+:role_3: author
+:fullname_4: Libor Grafnetr
+:role_4: author
+:fullname_5: Ciny Joy
+:role_5: author
+:fullname_6: Arnaud Quillaud
+:role_6: author
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+The February CalConnect interoperability testing event was held at the UC Irvine campus in Orange
+County, California. Participants of the testing event used predetermined test scenarios. The EMClient
+group participated remotely from the Czech Republic. We utilized our Calconnect Jabber room and Wiki
+to enable the remote participation.
+
+The documents used in this testing event were the testing matrix for RFC4791 and in addition sync
+reports. Summaries and specific findings and issues found are noted in this document.
+
+A small amount of initial CardDAV testing was done this event as well. Not everyone supports this
+protocol yet, but those that did performed some testing.
+
+=== Participants
+
+.Participants
+|===
+| Organization | Participants | Versions Tested
+| Apple | Cyrus Daboo | iCal Server and client - OS X 10.6.1 +
+Apple iCal 4.0 (SnowLeopard)
+| EMClient | Libor Grafnetr | eMClient Caldav Client
+| PeopleCube | Kellie Hunter +
+Gordon Connelly | Meetingmaker V8.8
+| Sun | Chiu Chau +
+Arnaud Quillaud | Sun Java Calendar Server 7
+| Binary Tree | Cameron Stillion | Observer
+| CalConnect Reps | |
+| Interop Manager +
+Logistics | Pat Egen +
+Dave Thewlis |
+|===
+
+== General Comments and Findings
+
+Several servers tested against two CALDAV clients. In addition, there was CARDDAV client/server
+implementations tested as well.
+
+The focus of the CALDAV testing this session was WEBDAV sync reports The sync collection reports
+testing used the draft-daboo-webdav-sync-02 document as the key driver. Since this is the first time we
+are testing the sync reports, several issues were found and fixed.
+
+The following URL was provided to show the specific specification for delegates currently supported by
+Apple and Oracle :
+
+http://svn.calendarserver.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/caldavproxy.txt
+
+CardDAV testing concentrated on client interoperability with other servers. Several issues were fixed.
+
+Some problems noted were:
+
+* Problems with URL encoding in WebDAV responses or requests
+** problem with the interpretation of the "+" (plus) and " " (space) characters in collection names.
+The problem was fixed during the interop event.
+* Complex vCards not accepted by a CardDAV server or properties were lost - Specifically there
+was a problem with more than 3 TEL properties specified, which was rejected by a server.
+* Also TEL properties containing text were silently dropped. Several servers seemed to accept
+these vCards just fine.
+
+Missing implementation of ACL reports required by the standard
+
+Overall the servers seemed to lack support for various ACL REPORTs or properties. The specific set
+varied from server to server. This could be attributed to the lack of support for these features from the
+clients and the fact that most servers support only subset of the WebDAV ACL specification that is
+required for interoperability with the Apple iCal client.
+
+Testing in general found these issues:
+
+. Making multiple modifications to different instances of recurring patterns produced duplicate
+entries
+. Modifying recurring patterns when instances fall on a weekend are moved to the closest
+week day cause disconnect.
+. Cross server guest invitations could not be sent through third party clients.
+. Cross server delegate/proxy access issues.
+. Problems sending events.
+
+CalDAV Sync testing issues noted:
+
+* `SCHEDULE-STATUS` on ``ORGANIZER``'s copy is lost when attendee copy is updated as a
+consequence of a small change from organizer
+* `RSVP` not `RESET` on ``ATTENDEE``s copy when `ORGANIZER` is sending an update with same
+`PARTSTAT` but with `RSVP=TRUE`
+* `RSVP` not removed from `ATTENDEE` in the following scenario:
+* `ORG` invites `ATTENDEE` - `ATTENDEE` declines - `ORG` Sends an update with
+* `PARSTAT=DECLINED;RSVP=TRUE` and new `SUMMARY` - `ATTENDEE ACCEPTS` - `RSVP`
+not removed from `ORG` copy
+
+Some CardDAV testing found that `OPTION` or `PROPFIND` on `/davserver/dav/principals/` 
+returns 404
+
+The following matrices show some observations for CALDAV, CARDDAV and sync reports.
+
+[options=header,cols="a,a"]
+.CALDAV Testing Matrix
+|===
+| | Comments
+h| Event creation. |
+| Create new single-instance meeting titled "Meeting 1.4" with an alarm set to trigger 15 minutes prior to the schedule time of the meeting. | resolve lastack change for recurring
+h| Event retrieval |
+| calendar-query `REPORT` | used calendar-query for filtering by component type, but abandoned it since some servers impose item limits -> back to propfind.
+h| Free Busy Reports |
+| Create a new calendar and populate it with the following for one week:
+
+Event on Monday, 9 am - 11 am, recurs every day for five times +
+Event on Monday, 12 pm - 1 pm, status tentative +
+Event on Monday, 2 pm - 3 pm, status cancelled +
+Event on Tuesday, 11 am - 12 pm +
+Event on Tuesday, 2 pm - 4 pm, recurs every day for four times +
+Event on Tuesday, 3 pm - 5 pm +
+Event on Wednesday, 11 am - 12 pm, status tentative +
+Event on Wednesday, 3 pm - 5 pm, status tentative +
+Event on Thursday, 11 am - 12 pm, status cancelled +
+Event on Thursday, 3 pm - 5 pm, status cancelled | Freebusy only through freebusy URLs at the moment
+|===
+
+[%key]
+P:: Pass
+F:: Fail
+N:: Not supported
+
+[cols="a,a",options=header]
+.CARDDAV Testing Matrix
+|===
+| | Comments
+
+h| Card creation. |
+| Create a new Card called "Card.1.1" with the fullname "James Brown" |
+h| Card modification |
+| Add a City State to "Card.1.1" - "Cupertino, CA" |
+| Modify the full name of "Card.1.1" to "James D. Brown". |
+h| Card retrieval |
+| Perform a nickname lookup for "JamesD" |
+| Perform a full name lookup for "James D. Brown" |
+| Perform an email lookup for "jamesbrown@aol.com" |
+| Query server for an addressbook report |
+| Create an addressbook query report |
+| Perform a multi-get report for "……." (fill in what we should do here) | use multi-get report for address-book data property
+h| Card deletion |
+| Delete the card for "James D. Brown" |
+|===
+
+[%key]
+P:: Pass
+F:: Fail
+N:: Not supported
+
+[cols="a,<,<,<"]
+.Sync Collection Matrix
+|===
+| Synchronize existing collection containing an event | P | P | P
+| Resynchronize the same collection if no changes occured | P | P | P
+| Create an event in the collection, resynchronize | P | P | P
+| - server responded with sync-response element containing "201 Created" status for the item that was created by the client (draft -02) | * | * | *
+| - server responded with response element without a status (draft -03) | | |
+| Create an event in the collection from other client, resynchronize | P | | P
+| Create an event in the collection, delete it from other client, resynchronize | P | | P
+| - the server MUST respond with 404 status for the item that was deleted from the other client | | |
+| Create a collection with several events, delete it and recreate it from other client, resynchronize | P | | P
+| - server responded by sending multistatus response with 404 statuses for all previously existing resources | | | *
+| - server invalidated the synchronization token and refused the resynchronization request with 4xx error and valid-sync-token precondition | * | |
+|===
+
+[%key]
+P:: Pass
+F:: Fail
+N:: Not supported
+
+== Summary
+
+As we continue CalDAV testing, there is more and more evidence of improved functionality. This session
+focused on sync reports. Additional CardDAV testing occurred. The remote participation by one vendor
+appeared to work well. It is not a good substitute for in-person testing, but it was very helpful to the
+group.
+
+Our thanks to all participants and contributors to this document.
+
+Respectfully submitted by Pat Egen,
+CalConnect Interop Manager.
+
