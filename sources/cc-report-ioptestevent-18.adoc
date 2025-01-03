@@ -1,0 +1,1016 @@
+= November 2008 CalConnect Mobile Interoperability Test
+:docnumber: 0808
+:copyright-year: 2009
+:language: en
+:doctype: administrative
+:edition: 2
+:status: published
+:revdate: 2009-02-19
+:published-date: 2009-02-19
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Patricia Egen
+:role: author
+:fullname_2: Eremias Alexej
+:role_2: author
+:fullname_3: James Clarke
+:role_3: author
+:fullname_4: Chris Dudding
+:role_4: author
+:fullname_5: Beat Forster
+:role_5: author
+:fullname_6: Tomas Hnetila
+:role_6: author
+:fullname_7: Jakub Klos
+:role_7: author
+:fullname_8: Gregory Pekofsky
+:role_8: author
+:fullname_9: Milan Vojnovic
+:role_9: author
+:fullname_10: Lukas Zeller
+:role_10: author
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+The second CalConnect Mobile Calendaring interoperability event was held at the Kerio campus
+at Plzen, Czech Republic. This was also our first interoperability event held in Europe.
+Participants of the testing event used predetermined test scenarios. Rather than post the full
+scenarios in this document, they can be found on the CalConnect website at the following URL:
+http://www.calconnect.org/ioptesting.shtml.
+
+The testing scenarios used in this event were a subset of items found in the CalConnect Mobile
+Calendaring Test Suite. Summaries and specific findings and issues found are noted in this
+document. The items used in the subset are included in this document in <<appendix-A>>.
+
+=== Participants
+
+.Participants
+[options=header,cols="a,a,a"]
+|===
+| Organization | Participants | Versions Tested
+| Icewarp | Eremias Alexej +
+Jakub Klos +
+Milan Vojnovic | Icewarp Server v9.4
+| Kerio | Tomas Hnetila |
+| Oracle | Gregory Pekofsky | Oracle Beehive Server R1.4
+| Symbian | James Clarke +
+Chris Dudding | Symbian OS v9.5
+| Synthesis | Beat Forster +
+Lukas Zeller | Synthesis SyncML Server 3.2.0.10 +
+Synthesis SyncML Client for iPhone 3.2.x +
+Synthesis SyncML Client Test Suite 3.2.x
+| CalConnect Reps | |
+| Interop Manager | Pat Egen |
+| Logistics | Dave Thewlis |
+|===
+
+== Testing Results
+
+The following reflects general items noted during the testing. The subset used during testing was
+comprised of 111 scenarios of which 52 were classified as easy, 42 as medium and 17 as hard.
+During testing, 781 test responses were noted. The breakdown of the tests was as follows:
+
+Easy tests:: 210 passed, 33 failed, 1 was noted as “half pass” and 120 were skipped.
+Medium tests:: 138 passed, 29 failed, 3 “half passed” and 118 were skipped.
+Hard tests:: 31 passed, 17 failed, 1 “half passed” and 70 were skipped.
+
+Therefore, 49% of the tests passed, 11% failed, 39% were skipped and .06% half-passed.
+Considering the fact that only 27% of the tests performed were deemed “easy”, a 49% pass ratio
+is good, but not as good as the numbers could be.
+
+Lack of support on client or server applications was the primary reason tests failed. There were a
+few bugs noted. Occasional failures were because of differences in the level of support for
+vCalendar formats.
+
+== Testing Tables
+
+The following tables show results found during testing. The names of the testing pairs have been
+removed to provide a generic idea of findings.
+
+[cols=3,options=header]
+.Test Pair 1
+|===
+| Test ID | Status | Comments
+
+| 1.1 Create an Event with a Reminder | Pass | 
+| 1.2 Access Level and Priority | Pass | Passed, showing privacy status when syncing from server, then after removal of private and synced back, correct behaviour was seen on server. Could not test priority. Issue in vendor calendar test app with all day events - we believe this is the test app and not the calendar database engine.
+| 1.3 Special Characters From Server | Fail | Generally successful but failed on handling "&" -- was converted to the html entity "&amp;" and then not handled correctly.
+| 1.4 Multi-Byte Characters From Server | Fail | Chinese characters not shown correctly on web client and device
+| 1.5 Deletion | Pass |
+| 1.6 Create an Event with a Reminder | Pass |
+| 1.7 Access Level and Priority (can only be done if device supports setting an access level or priority) | Pass |
+| 1.8 Special Characters from Device | Pass | Special characters shown correctly. We were not able to test the euro symbol "€" on the Vendor calendar test app.
+| 1.9 Multi-Byte Characters from Device | | Couldn't test this.
+| 1.10 Deletion | Pass |
+| 2.1 Create all-day event in same time zone | Fail | Not handling the event as an all day event but instead treats it as an event from 12am to 12am the next day. Passed on recent Vendor-based products.
+| 2.2 Create all-day event to device in different time zone | Fail | Not handling the event as an all day event but instead treats it as an event from 12am to 12am the next day.
+| 2.3 Create a Single Instance All Day Event with Reminder | Fail | Not handling the event as an all day event but instead treats it as an event from 12am to 12am the next day.
+| 2.4 Create an anniversary all-day event | Fail | Not handling the event as an all day event but instead treats it as an event from 12am to 12am the next day. Saw an error on the Vendor test app. Not clear whether the event repeats.
+| 2.5 All-day event on last day of month & last day of year check | | Not run.
+| 2.6 Create a Single Instance Holiday with Reminder | | Not run.
+| 2.7 Update an all-day event on server and synchronize back to mobile device in same time zone | | Not run.
+| 2.8 Update an all-day event on server and synchronize back to a device in different time zone | | Not run.
+| 2.9 Create a Single Instance Multi-day Day Event | Fail | Same problem as above with the end of the event being treated as 12am on the following day.
+| 2.10 Remove Single Instance Meeting, Day Event, and Holiday | | Not run.
+| 2.11 Create an all-day event and synchronize to a server in same time zone | Fail |
+| 2.12 Create an all-day event and synchronize to a server in different time zone | Fail | Showed on the server as start and end time as 5am and not as an all day event (relating to the 5 hour timezone offset).
+| 2.13 Create a Single Instance All Day Event with Reminder | Fail | Did have the alarm but didn't display properly in the server.
+| 2.14 Create an anniversary all-day event | Fail | Displayed as having no duration (start and end time the same, 12am on the same day)
+| 2.15 Update an all-day event on mobile device and synchronize back to server in same time zone | | Not run.
+| 2.16 Update an all-day event on mobile device and synchronize back to a server in different time zone | | Not run.
+| 2.17 Create a Single Instance Multi-Day Day Event | | Not run.
+| 2.18 Remove Single Instance Meeting, Day Event, and Holiday | | Not run.
+| 3.1 Create Daily Repeat (every day, bounded) | Pass |
+| 3.2 Create Daily Repeat (every other day, unbounded) | Pass |
+| 3.3 Create Daily Repeat (every 7 days, unbounded) | Pass |
+| 3.4 Create Weekly Repeat (every Wed, unbounded) | Pass |
+| 3.5 Create Weekly repeat (Wed & Fri, unbounded) | Pass |
+| 3.6 Create Fortnightly Repeat (unbounded) | Pass |
+| 3.7 Create Monthly By Date Repeat (unbounded) | Pass |
+| 3.8 Create Monthly By Day Repeat (first occurrence, bounded) | Pass |
+| 3.9 Create Monthly By Day Repeat (nth occurrences, bounded) | Pass | Unable to create monthly by day repeat on 2nd and 3rd Sunday on server web client - so test case is not the same
+| 3.10 Create Monthly By Day Repeat (last occurrence, bounded) | | Unable to create last occurrence on server web client
+| 3.11 Create Yearly Repeat (every year, unbounded) | Pass |
+| 3.12 Create Yearly Repeat (every year for 5 years, bounded) | Pass |
+| 3.13 Create Yearly Repeat (every 4 years, bounded) | Pass |
+| 3.14 Create custom repeat (```RDATE``s` only) | | Not run. Unable to create on server web client
+| 3.15 Create repeat combination | | Not run. Unable to create on server web client
+| 3.16 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | | Not run. Unable to create on server web client
+| 3.17 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | | Not run. Unable to create on server web client
+| 3.18 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | | Not run. Unable to create on server web client
+| 3.19 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`) | | Not run. Unable to create on server web client
+| 3.20 Modify anniversary | Pass |
+| 3.21 Modify occurrences of repeating meeting | Fail | Issue with server web client update and handling of multiple exception dates
+| 3.22 Modify exceptions of repeating meeting | Pass | Test case description is wrong. Instead of modify exception it should be modify event
+| 3.23 Delete recurring meeting | Pass |
+| 3.24 Create Daily Repeat (every day, bounded) | Pass |
+| 3.25 Create Daily Repeat (every other day, unbounded) | Pass |
+| 3.26 Create Daily Repeat (every 7 days, unbounded) | Pass |
+| 3.27 Create Weekly Repeat (every Wed, unbounded) | Pass |
+| 3.28 Create Weekly repeat (Wed & Fri, unbounded) | | Not run. Unable to test due to defect in Vendor test user interface
+| 3.29 Create Fortnightly Repeat (unbounded) | Pass |
+| 3.30 Create Monthly By Date Repeat (unbounded) | Fail | Problem with interpretation of client repeat forever vCalendar (uses #0 to indicate repeat forever). Web mail bug??
+| 3.31 Create Monthly By Day Repeat (first occurrence, bounded) | | Not run. Unable to test due to defect in Vendor test user interface
+| 3.32 Create Monthly By Day Repeat (nth occurrences, bounded) | | Not run. Unable to test due to defect in Vendor test user interface
+| 3.33 Create Monthly By Day Repeat (last occurrence, bounded) | | Not run. Unable to test due to defect in Vendor test user interface
+| 3.34 Create Yearly Repeat (every year, unbounded) | Fail | Problem with interpretation of client repeat forever vCalendar (uses #0 to indicate repeat forever). Web mail bug??
+| 3.35 Create Yearly Repeat (every year for 5 years, bounded) | Pass |
+| 3.36 Create Yearly Repeat (every 4 years, bounded) | Pass |
+| 3.37 Create custom repeat (``RDATE``s only) | Fail | `RDATE` not supported by server
+| 3.38 Create repeat combination | | Not run. Unable to test due to defect in Vendor test user interface
+| 3.39 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | | Not run. Server does not support `RDATE`
+| 3.40 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | Pass |
+| 3.41 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | | Not run. Server does not support `RDATE`
+| 3.42 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`) | | Not run. Server does not support `RDATE`
+| 3.43 Modify anniversary | Pass |
+| 3.44 Modify occurrences of repeating meeting | Pass |
+| 3.45 Delete recurring meeting | Pass |
+| 4.1 Create Entry as owner with Attendees from Server | | Not run. Unable to test due to defect in Vendor test user interface
+| 4.2 Accept Entry as Invitee from Device | | Not run. Unable to test due to lack of support
+| 4.3 Create Entry as owner with Attendees from Device | | Not run. Unable to test due to lack of support
+| 5.1 Time Zones and Simple Meetings | Pass | Test case description has a defect as procedure doesn't match expected results
+| 5.2 Time Zones and Repeating Meetings | | Not run
+| 5.3 Time Zones and All-Day Events | | Not run
+| 5.4 Spring Daylight Savings Single Entries from Server | | Not run
+| 5.5 Spring Daylight Savings Repeating Entry from Server | | Not run.
+| 5.6 Autumn Daylight Savings Single Entries from Device | | Not run.
+| 5.7 Autumn Daylight Savings Recurring Entry from Device | | Not run.
+| 6.1 Create task | Pass | Passed. Test case failed with attachment added
+| 6.2 Task Access Level and Priority | | Not run.
+| 6.3 Create task with alarm | | Not run.
+| 6.4 Mark task as completed | | Not run.
+| 6.5 Special Characters From Server | | Not run.
+| 6.6 Multi-Byte Characters From Server | | Not run.
+| 6.7 Deletion | | Not run.
+| 6.8 Create task | | Not run.
+| 6.9 Task Access Level and Priority | | Not run.
+| 6.10 Create task with alarm | | Not run.
+| 6.11 Mark task as completed | | Not run.
+| 6.12 Special Characters From Device | | Not run.
+| 6.13 Multi-Byte Characters From Device | | Not run
+| 6.14 Deletion | | Not run.
+| 7.1 Create new contact with minimal fields from the server | Pass | Passed in general but some data was lost.
+| 7.2 Create new contact with minimal fields from the device | Pass | Passed in general but some data was lost.
+| 7.3 Special Characters | | Not run.
+| 7.4 Multi-Byte Characters | | Not run.
+| 7.5 Delete a contact from the server | | Not run.
+| 7.6 Delete a contact from the device | | Not run.
+| 8.1 Create new contact with addresses from the server | | Not run.
+| 8.2 Create new contact with addresses from the device | | Not run.
+| 9.1 Create new contact with telephone numbers from the server | | Not run.
+| 9.2 Create new contact with telephone numbers from the device | | Not run.
+| 10.1 Create new contact with emails from the server | | Not run.
+| 10.2 Create new contact with URLs/web page addresses from the server. | | Not run.
+| 10.3 Create new contact with emails from the device | | Not run.
+| 10.4 Create new contact with URLs/web page addresses from the device | | Not run.
+|===
+
+[cols="a,a,a",options=header]
+.Test Pair 2
+|===
+| Test ID | Status | Comments
+
+| 1.1 Create an Event with a Reminder | Pass |
+| 1.2 Access Level and Priority | | Not run. Calendar app does not support access level or priority.
+| 1.3 Special Characters From Server | Pass |
+| 1.4 Multi-Byte Characters From Server | Pass | However, app cannot display the multibyte characters correctly but the characters are preserved and given back to the server correctly after modifying the calendar entry.
+| 1.5 Deletion | Pass |
+| 1.6 Create an Event with a Reminder | Fail | The alarm/reminder did not work.
+| 1.7 Access Level and Priority (can only be done if device supports setting an access level or priority) | | Not run. Calendar app does not support access level or priority.
+| 1.8 Special Characters from Device | Pass |
+| 1.9 Multi-Byte Characters from Device | | Not run. Not able to enter multi-byte characters on the phone.
+| 1.10 Deletion | Pass |
+| 2.1 Create all-day event in same time zone | Pass |
+| 2.2 Create all-day event to device in different time zone | Pass |
+| 2.3 Create a Single Instance All Day Event with Reminder | Pass |
+| 2.4 Create an anniversary all-day event | Pass |
+| 2.5 All-day event on last day of month & last day of year check | Fail | Cannot see the repeat rule on the device.
+| 2.6 Create a Single Instance Holiday with Reminder | Pass |
+| 2.7 Update an all-day event on server and synchronize back to mobile device in same time zone | Pass |
+| 2.8 Update an all-day event on server and synchronize back to a device in different time zone | Pass |
+| 2.9 Create a Single Instance Multi-day Day Event | Pass |
+| 2.10 Remove Single Instance Meeting, Day Event, and Holiday | Fail | Server does not support exceptions
+| 2.11 Create an all-day event and synchronize to a server in same time zone | Pass |
+| 2.12 Create an all-day event and synchronize to a server in different time zone | Pass |
+| 2.13 Create a Single Instance All Day Event with Reminder | Fail | Could not see the reminder on the server.
+| 2.14 Create an anniversary all-day event | Pass |
+| 2.15 Update an all-day event on mobile device and synchronize back to server in same time zone | Pass |
+| 2.16 Update an all-day event on mobile device and synchronize back to a server in different time zone | Pass |
+| 2.17 Create a Single Instance Multi-Day Day Event | Pass |
+| 2.18 Remove Single Instance Meeting, Day Event, and Holiday | Fail | Server does not support exceptions
+| 3.1 Create Daily Repeat (every day, bounded) | Pass |
+| 3.2 Create Daily Repeat (every other day, unbounded) | Pass |
+| 3.3 Create Daily Repeat (every 7 days, unbounded) | Pass |
+| 3.4 Create Weekly Repeat (every Wed, unbounded) | Pass |
+| 3.5 Create Weekly repeat (Wed & Fri, unbounded) | Pass |
+| 3.6 Create Fortnightly Repeat (unbounded) | |
+| 3.7 Create Monthly By Date Repeat (unbounded) | |
+| 3.8 Create Monthly By Day Repeat (first occurrence, bounded) | |
+| 3.9 Create Monthly By Day Repeat (nth occurrences, bounded) | |
+| 3.10 Create Monthly By Day Repeat (last occurrence, bounded) | |
+| 3.11 Create Yearly Repeat (every year, unbounded) | |
+| 3.12 Create Yearly Repeat (every year for 5 years, bounded) | |
+| 3.13 Create Yearly Repeat (every 4 years, bounded) | |
+| 3.14 Create custom repeat (``RDATE``s only) | |
+| 3.15 Create repeat combination | |
+| 3.16 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | |
+| 3.17 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | |
+| 3.18 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | |
+| 3.19 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`) | |
+| 3.20 Modify anniversary | |
+| 3.21 Modify occurrences of repeating meeting | |
+| 3.22 Modify exceptions of repeating meeting | |
+| 3.23 Delete recurring meeting | |
+| 3.24 Create Daily Repeat (every day, bounded) | Pass |
+| 3.25 Create Daily Repeat (every other day, unbounded) | Pass |
+| 3.26 Create Daily Repeat (every 7 days, unbounded) | Pass |
+| 3.27 Create Weekly Repeat (every Wed, unbounded) | Pass |
+|===
+
+NOTE: No other testing was done after 3.27.
+
+[cols=3,options=header]
+.Test Pair 3
+|===
+| Test ID | Status | Comments
+| 1.1 Create an Event with a Reminder | Pass | 1.1 to 1.4 can be combined
+| 1.2 Access Level and Priority | Pass | device supported access level but it missing transp property from devinf
+| 1.3 Special Characters From Server | Pass | perhaps skip this test and go right to multibytes
+| 1.4 Multi-Byte Characters From Server | | client interface could display multibytes
+| 1.5 Deletion | Pass | 
+| 1.6 Create an Event with a Reminder | Pass |
+| 1.7 Access Level and Priority (can only be done if device supports setting an access level or priority) | Pass |
+| 1.8 Special Characters from Device | Pass |
+| 1.9 Multi-Byte Characters from Device | | client interface could not write multibytes
+| 1.10 Deletion | Pass |
+| 2.1 Create all-day event in same time zone | Pass | vendor day events have nothing to do with timezones
+| 2.2 Create all-day event to device in different time zone | |
+| 2.3 Create a Single Instance All Day Event with Reminder | | reminder is currently turned off for day events from server to device
+| 2.4 Create an anniversary all-day event | | server sends back single instance for recurrence, so not worth testing
+| 2.5 All-day event on last day of month & last day of year check | |
+| 2.6 Create a Single Instance Holiday with Reminder | Pass |
+| 2.7 Update an all-day event on server and synchronize back to mobile device in same time zone | Pass |
+| 2.8 Update an all-day event on server and synchronize back to a device in different time zone | | again timezone on day events are independent on server
+| 2.9 Create a Single Instance Multi-day Day Event | Pass |
+| 2.10 Remove Single Instance Meeting, Day Event, and Holiday | Pass | but client or server doesn't support a holiday flag so we assume this is a multi-day event
+| 2.11 Create an all-day event and synchronize to a server in same time zone | Pass |
+| 2.12 Create an all-day event and synchronize to a server in different time zone | Pass |
+| 2.13 Create a Single Instance All Day Event with Reminder | Pass | client sent alarm but server purposely does not save it on all day events
+| 2.14 Create an anniversary all-day event | Pass |
+| 2.15 Update an all-day event on mobile device and synchronize back to server in same time zone | Pass |
+| 2.16 Update an all-day event on mobile device and synchronize back to a server in different time zone | Pass |
+| 2.17 Create a Single Instance Multi-Day Day Event | Pass |
+| 2.18 Remove Single Instance Meeting, Day Event, and Holiday | Pass |
+| 3.1 Create Daily Repeat (every day, bounded) | | skip to 3.24 because server will not send recurrences to device
+| 3.2 Create Daily Repeat (every other day, unbounded) | |
+| 3.3 Create Daily Repeat (every 7 days, unbounded) | |
+| 3.4 Create Weekly Repeat (every Wed, unbounded) | |
+| 3.5 Create Weekly repeat (Wed & Fri, unbounded) | |
+| 3.6 Create Fortnightly Repeat (unbounded) | |
+| 3.7 Create Monthly By Date Repeat (unbounded) | |
+| 3.8 Create Monthly By Day Repeat (first occurrence, bounded) | |
+| 3.9 Create Monthly By Day Repeat (nth occurrences, bounded) | |
+| 3.10 Create Monthly By Day Repeat (last occurrence, bounded) | |
+| 3.11 Create Yearly Repeat (every year, unbounded) | |
+| 3.12 Create Yearly Repeat (every year for 5 years, bounded) | |
+| 3.13 Create Yearly Repeat (every 4 years, bounded) | |
+| 3.14 Create custom repeat (``RDATE``s only) | |
+| 3.15 Create repeat combination | |
+| 3.16 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | |
+| 3.17 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | |
+| 3.18 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | |
+| 3.19 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`) | |
+| 3.20 Modify anniversary | |
+| 3.21 Modify occurrences of repeating meeting | |
+| 3.22 Modify exceptions of repeating meeting | |
+| 3.23 Delete recurring meeting | |
+| 3.24 Create Daily Repeat (every day, bounded) | Pass | client note: for better recurrence support put until value as UTC as TZ and `DATETIME` are optional properties in vCal 1
+| 3.25 Create Daily Repeat (every other day, unbounded) | Pass | NOTE: we combined 3.24 to 3.36 into one big test
+| 3.26 Create Daily Repeat (every 7 days, unbounded) | Pass |
+| 3.27 Create Weekly Repeat (every Wed, unbounded) | Pass |
+| 3.28 Create Weekly repeat (Wed & Fri, unbounded) | | client does not support creating this type of recurrence
+| 3.29 Create Fortnightly Repeat (unbounded) | Pass |
+| 3.30 Create Monthly By Date Repeat (unbounded) | Pass |
+| 3.31 Create Monthly By Day Repeat (first occurrence, bounded) | Fail | client test app has a bug
+| 3.32 Create Monthly By Day Repeat (nth occurrences, bounded) | Fail | client test app has a bug
+| 3.33 Create Monthly By Day Repeat (last occurrence, bounded) | Fail | client test app has a bug
+| 3.34 Create Yearly Repeat (every year, unbounded) | Pass |
+| 3.35 Create Yearly Repeat (every year for 5 years, bounded) | Pass |
+| 3.36 Create Yearly Repeat (every 4 years, bounded) | Pass |
+| 3.37 Create custom repeat (``RDATE``s only) | Pass |
+| 3.38 Create repeat combination | | client ui cannot do this
+| 3.39 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | Pass |
+| 3.40 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | | CalConnect comment: skip this test and just do 3.42
+| 3.41 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | | CalConnect comment: if there is no `RRULE`, `EXDATE` cancels `RDATE`s, which is bad implementation, so really this test should be removed from the suite
+| 3.42 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`) | Pass |
+| 3.43 Modify anniversary | | server replaces recurrences on the device with single instances
+| 3.44 Modify occurrences of repeating meeting | Pass |
+| 3.45 Delete recurring meeting | Pass |
+| 4.1 Create Entry as owner with Attendees from Server | Pass |
+| 4.2 Accept Entry as Invitee from Device | |
+| 4.3 Create Entry as owner with Attendees from Device | | there is no direct way to do this with vCal 1
+| 5.1 Time Zones and Simple Meetings | Pass |
+| 5.2 Time Zones and Repeating Meetings | Pass |
+| 5.3 Time Zones and All-Day Events | Pass |
+| 5.4 Spring Daylight Savings Single Entries from Server | Pass |
+| 5.5 Spring Daylight Savings Repeating Entry from Server | Pass |
+| 5.6 Autumn Daylight Savings Single Entries from Device | Pass |
+| 5.7 Autumn Daylight Savings Recurring Entry from Device | Pass |
+| 6.1 Create task | Pass | we combined 6.1,6.2.6.3,6.5,6.6 into one sync
+| 6.2 Task Access Level and Priority | Pass |
+| 6.3 Create task with alarm | Pass |
+| 6.4 Mark task as completed | Pass |
+| 6.5 Special Characters From Server | Pass |
+| 6.6 Multi-Byte Characters From Server | | cannot view multi-bytes on client test interface
+| 6.7 Deletion | Pass | 
+| 6.8 Create task | Pass |
+| 6.9 Task Access Level and Priority | Pass |
+| 6.10 Create task with alarm | Pass |
+| 6.11 Mark task as completed | Pass |
+| 6.12 Special Characters From Device | | client test ui cannot write special characters
+| 6.13 Multi-Byte Characters From Device | | client test ui cannot write multi-bytes characters
+| 6.14 Deletion | Pass |
+| 7.1 Create new contact with minimal fields from the server | Pass | CalConnect note: get rid of empty vCard sync and combine the rest of the tests into one sync
+| 7.2 Create new contact with minimal fields from the device | Pass |
+| 7.3 Special Characters | Pass |
+| 7.4 Multi-Byte Characters | | device test ui cannot read or write this
+| 7.5 Delete a contact from the server | Pass |
+| 7.6 Delete a contact from the device | Pass |
+| 8.1 Create new contact with addresses from the server | Pass |
+| 8.2 Create new contact with addresses from the device | Pass |
+| 9.1 Create new contact with telephone numbers from the server | Pass |
+| 9.2 Create new contact with telephone numbers from the device | Pass |
+| 10.1 Create new contact with emails from the server | Pass |
+| 10.2 Create new contact with URLs/web page addresses from the server. | Pass |
+| 10.3 Create new contact with emails from the device | Pass |
+| 10.4 Create new contact with URLs/web page addresses from the device | Pass |
+|===
+
+[cols="a,a,a",options=header]
+.Test Pair 4
+|===
+| Test ID | Status | Comments
+| 1.1 Create an Event with a Reminder | Pass | Server sends extra \ escape when name starts with double quote
+| 1.2 Access Level and Priority | Pass |
+| 1.3 Special Characters From Server | Pass |
+| 1.4 Multi-Byte Characters From Server | | n/a, web UI is ISO8859-1
+| 1.5 Deletion | Pass |
+| 1.6 Create an Event with a Reminder | Pass |
+| 1.7 Access Level and Priority (can only be done if device supports setting an access level or priority) | Pass |
+| 1.8 Special Characters from Device | Pass |
+| 1.9 Multi-Byte Characters from Device | | n/a, both sides don't have UI for eastern fonts
+| 1.10 Deletion | Pass |
+| 2.1 Create all-day event in same time zone | | Passed except that device did not set the all-day flag (but period covered in calendar is correct)
+| 2.2 Create all-day event to device in different time zone | | Passed except that device did not set the all-day flag (but period covered in calendar is correct)
+| 2.3 Create a Single Instance All Day Event with Reminder | Fail | reminder did show at wrong time in client
+| 2.4 Create an anniversary all-day event | Pass | Tested with regular yearly recurrence (proprietary vCalendar extension property used by client to flag anniversaries)
+| 2.5 All-day event on last day of month & last day of year check | Pass |
+| 2.6 Create a Single Instance Holiday with Reminder | | n/a, both sides don't have special "holiday" entry type
+| 2.7 Update an all-day event on server and synchronize back to mobile device in same time zone | Pass |
+| 2.8 Update an all-day event on server and synchronize back to a device in different time zone | Pass |
+| 2.9 Create a Single Instance Multi-day Day Event | Pass | but definition of what an ALL-DAY event actually IS is different in the device (binds day to current device zone) and server (considers all-day floating, i.e. not moving when TZ changes)
+| 2.10 Remove Single Instance Meeting, Day Event, and Holiday | Pass |
+| 2.11 Create an all-day event and synchronize to a server in same time zone | Pass | but device fixes start and end in time (see comment fo 2.9)
+| 2.12 Create an all-day event and synchronize to a server in different time zone | Fail | see comment in 2.9 (comes out fixed in UTC-5 time, which is not all-day in GMT server time)
+| 2.13 Create a Single Instance All Day Event with Reminder | Pass |
+| 2.14 Create an anniversary all-day event | Pass | Anniversaries are in fact floating time, which is IMHO what all-day events should be as well
+| 2.15 Update an all-day event on mobile device and synchronize back to server in same time zone | Pass |
+| 2.16 Update an all-day event on mobile device and synchronize back to a server in different time zone | Pass | But generally: synchronizing modified anniversary back to device will make loose the anniversary status on the device (because it would need proprietary vCalendar extension property to remain anniversary)
+| 2.17 Create a Single Instance Multi-Day Day Event | | not run, because largely the same as 2.9
+| 2.18 Remove Single Instance Meeting, Day Event, and Holiday | Pass |
+| 3.1 Create Daily Repeat (every day, bounded) | Pass |
+| 3.2 Create Daily Repeat (every other day, unbounded) | Pass |
+| 3.3 Create Daily Repeat (every 7 days, unbounded) | Pass |
+| 3.4 Create Weekly Repeat (every Wed, unbounded) | Pass |
+| 3.5 Create Weekly repeat (Wed & Fri, unbounded) | Pass |
+| 3.6 Create Fortnightly Repeat (unbounded) | Pass |
+| 3.7 Create Monthly By Date Repeat (unbounded) | Pass |
+| 3.8 Create Monthly By Day Repeat (first occurrence, bounded) | Pass |
+| 3.9 Create Monthly By Day Repeat (nth occurrences, bounded) | Pass |
+| 3.10 Create Monthly By Day Repeat (last occurrence, bounded) | Pass |
+| 3.11 Create Yearly Repeat (every year, unbounded) | Pass |
+| 3.12 Create Yearly Repeat (every year for 5 years, bounded) | Pass |
+| 3.13 Create Yearly Repeat (every 4 years, bounded) | Pass |
+| 3.14 Create custom repeat (``RDATE``s only) | | n/a
+| 3.15 Create repeat combination | | n/a
+| 3.16 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | | n/a
+| 3.17 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | Pass |
+| 3.18 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | | n/a
+| 3.19 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`) | | n/a
+| 3.20 Modify anniversary | Pass | implicitly done above
+| 3.21 Modify occurrences of repeating meeting | Pass |
+| 3.22 Modify exceptions of repeating meeting | Pass | implicitly done above
+| 3.23 Delete recurring meeting | Pass |
+| 3.24 Create Daily Repeat (every day, bounded) | Pass |
+| 3.25 Create Daily Repeat (every other day, unbounded) | Pass |
+| 3.26 Create Daily Repeat (every 7 days, unbounded) | Pass |
+| 3.27 Create Weekly Repeat (every Wed, unbounded) | Pass |
+| 3.28 Create Weekly repeat (Wed & Fri, unbounded) | | n/a because of UI problem in client
+| 3.29 Create Fortnightly Repeat (unbounded) | Pass |
+| 3.30 Create Monthly By Date Repeat (unbounded) | Pass |
+| 3.31 Create Monthly By Day Repeat (first occurrence, bounded) | Pass |
+| 3.32 Create Monthly By Day Repeat (nth occurrences, bounded) | | n/a because of UI problem in client
+| 3.33 Create Monthly By Day Repeat (last occurrence, bounded) | Pass |
+| 3.34 Create Yearly Repeat (every year, unbounded) | Pass |
+| 3.35 Create Yearly Repeat (every year for 5 years, bounded) | Pass |
+| 3.36 Create Yearly Repeat (every 4 years, bounded) | Pass |
+| 3.37 Create custom repeat (``RDATE``s only) | | n/a
+| 3.38 Create repeat combination | | n/a
+| 3.39 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | | n/a
+| 3.40 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | Pass |
+| 3.41 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | | n/a
+| 3.42 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`) | | n/a
+| 3.43 Modify anniversary | Pass |
+| 3.44 Modify occurrences of repeating meeting | Pass | But we think test case is not very useful because this does not really test exceptions (it simply changes the recurrence end date) - we should have a case actually testing modifying exception details like time, summary, location.
+| 3.45 Delete recurring meeting | Pass |
+| 4.1 Create Entry as owner with Attendees from Server | | Test Session `TIMEOUT`
+| 4.2 Accept Entry as Invitee from Device | | Test Session `TIMEOUT`
+| 4.3 Create Entry as owner with Attendees from Device | Pass | Implicitly tested above
+| 5.1 Time Zones and Simple Meetings | | n/a
+| 5.2 Time Zones and Repeating Meetings | | n/a
+| 5.3 Time Zones and All-Day Events | | n/a
+| 5.4 Spring Daylight Savings Single Entries from Server | | Test Session `TIMEOUT`
+| 5.5 Spring Daylight Savings Repeating Entry from Server | | Test Session `TIMEOUT`
+| 5.6 Autumn Daylight Savings Single Entries from Device | | Test Session `TIMEOUT`
+| 5.7 Autumn Daylight Savings Recurring Entry | | Test Session `TIMEOUT` from Device
+| 6.1 Create task | Pass |
+| 6.2 Task Access Level and Priority | Pass |
+| 6.3 Create task with alarm | | `TIMEOUT` from here on
+|===
+
+NOTE: Tests after 6.3 were not performed.
+
+[cols="a,a,a",options=header]
+.Test Pair 5
+|===
+| Test ID | Status | Comments
+| 1.1 Create an Event with a Reminder | Pass |
+| 1.2 Access Level and Priority | Pass |
+| 1.3 Special Characters From Server | Pass |
+| 1.4 Multi-Byte Characters From Server | Pass |
+| 1.5 Deletion | Pass |
+| 1.6 Create an Event with a Reminder | Pass |
+| 1.7 Access Level and Priority (can only be done if device supports setting an access level or priority) | Pass |
+| 1.8 Special Characters from Device | Pass |
+| 1.9 Multi-Byte Characters from Device | Pass |
+| 1.10 Deletion | Pass |
+| 2.1 Create all-day event in same time zone | Pass |
+| 2.2 Create all-day event to device in different time zone | | no point in testing because both day event implementation do not involve timezones
+| 2.3 Create a Single Instance All Day Event with Reminder | | server does not support alarms on day events
+| 2.4 Create an anniversary all-day event | | anniversary flag not supported
+| 2.5 All-day event on last day of month & last day of year check | Pass |
+| 2.6 Create a Single Instance Holiday with Reminder | | holiday flag is not supported
+| 2.7 Update an all-day event on server and synchronize back to mobile device in same time zone | Pass |
+| 2.8 Update an all-day event on server and synchronize back to a device in different time zone | | device and server do not associate timezone with day events
+| 2.9 Create a Single Instance Multi-day Day Event | Pass |
+| 2.10 Remove Single Instance Meeting, Day Event, and Holiday | | device and server do not support holiday flag
+| 2.11 Create an all-day event and synchronize to a server in same time zone | Pass |
+| 2.12 Create an all-day event and synchronize to a server in different time zone | | device and server do not support holiday flag
+| 2.13 Create a Single Instance All Day Event with Reminder | | server does not support alarms on day events
+| 2.14 Create an anniversary all-day event | | device and server do not support anniversary flag
+| 2.15 Update an all-day event on mobile device and synchronize back to server in same time zone | Pass |
+| 2.16 Update an all-day event on mobile device and synchronize back to a server in different time zone | | device and server do not associate timezone with day events
+| 2.17 Create a Single Instance Multi-Day Day Event | |
+| 2.18 Remove Single Instance Meeting, Day Event, and Holiday | Pass |
+| 3.1 Create Daily Repeat (every day, bounded) | | server replaces recurrence on the device with single instance so we will skip to 3.24
+| 3.2 Create Daily Repeat (every other day, unbounded) | | see 3.1
+| 3.3 Create Daily Repeat (every 7 days, unbounded) | | see 3.1
+| 3.4 Create Weekly Repeat (every Wed, unbounded) | | see 3.1
+| 3.5 Create Weekly repeat (Wed & Fri, unbounded) | | see 3.1
+| 3.6 Create Fortnightly Repeat (unbounded) | | see 3.1
+| 3.7 Create Monthly By Date Repeat (unbounded) | | see 3.1
+| 3.8 Create Monthly By Day Repeat (first occurrence, bounded) | | see 3.1
+| 3.9 Create Monthly By Day Repeat (nth occurrences, bounded) | | see 3.1
+| 3.10 Create Monthly By Day Repeat (last occurrence, bounded) | | see 3.1
+| 3.11 Create Yearly Repeat (every year, unbounded) | | see 3.1
+| 3.12 Create Yearly Repeat (every year for 5 years, bounded) | | see 3.1
+| 3.13 Create Yearly Repeat (every 4 years, bounded) | | see 3.1
+| 3.14 Create custom repeat (``RDATE``s only) | | see 3.1
+| 3.15 Create repeat combination | | see 3.1
+| 3.16 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | | see 3.1
+| 3.17 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | | see 3.1
+| 3.18 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | | see 3.1
+| 3.19 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`) | | see 3.1
+| 3.20 Modify anniversary | | see 3.1
+| 3.21 Modify occurrences of repeating meeting | | see 3.1
+| 3.22 Modify exceptions of repeating meeting | | see 3.1
+| 3.23 Delete recurring meeting | | see 3.1
+| 3.24 Create Daily Repeat (every day, bounded) | Pass |
+| 3.25 Create Daily Repeat (every other day, unbounded) | Pass |
+| 3.26 Create Daily Repeat (every 7 days, unbounded) | Pass |
+| 3.27 Create Weekly Repeat (every Wed, unbounded) | Pass |
+| 3.28 Create Weekly repeat (Wed & Fri, unbounded) | Pass |
+| 3.29 Create Fortnightly Repeat (unbounded) | Pass |
+| 3.30 Create Monthly By Date Repeat (unbounded) | Pass |
+| 3.31 Create Monthly By Day Repeat (first occurrence, bounded) | Pass |
+| 3.32 Create Monthly By Day Repeat (nth occurrences, bounded) | | not possible on client
+| 3.33 Create Monthly By Day Repeat (last occurrence, bounded) | Pass |
+| 3.34 Create Yearly Repeat (every year, unbounded) | Pass |
+| 3.35 Create Yearly Repeat (every year for 5 years, bounded) | Pass |
+| 3.36 Create Yearly Repeat (every 4 years, bounded) | Pass |
+| 3.37 Create custom repeat (``RDATE``s only) | | client cannot send ``RDATE``s
+| 3.38 Create repeat combination | |
+| 3.39 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | | client cannot send ``RDATE``s
+| 3.40 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | Pass |
+| 3.41 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | | client cannot send ``RDATE``s
+| 3.42 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`) | | client cannot do ``RDATE``s
+| 3.43 Modify anniversary | | anniversary flag not supported
+| 3.44 Modify occurrences of repeating meeting | Pass |
+| 3.45 Delete recurring meeting | Pass |
+| 4.1 Create Entry as owner with Attendees from Server | Pass |
+| 4.2 Accept Entry as Invitee from Device | | there is no native way to do this
+| 4.3 Create Entry as owner with Attendees from Device | Pass |
+| 5.1 Time Zones and Simple Meetings | | currently only can sending floating
+| 5.2 Time Zones and Repeating Meetings | | currently only can sending floating
+| 5.3 Time Zones and All-Day Events | | currently only can sending floating
+| 5.4 Spring Daylight Savings Single Entries from Server | | currently only can sending floating
+| 5.5 Spring Daylight Savings Repeating Entry from Server | | currently only can sending floating
+| 5.6 Autumn Daylight Savings Single Entries from Device | | currently only can sending floating
+| 5.7 Autumn Daylight Savings Recurring Entry from Device | | currently only can sending floating
+| 6.1 Create task | Pass | 
+| 6.2 Task Access Level and Priority | Pass |
+| 6.3 Create task with alarm | Pass |
+| 6.4 Mark task as completed | Pass |
+| 6.5 Special Characters From Server | Pass |
+| 6.6 Multi-Byte Characters From Server | Pass |
+| 6.7 Deletion | Pass |
+| 6.8 Create task | Pass |
+| 6.9 Task Access Level and Priority | Pass |
+| 6.10 Create task with alarm | Pass |
+| 6.11 Mark task as completed | Pass |
+| 6.12 Special Characters From Device | Pass |
+| 6.13 Multi-Byte Characters From Device | Pass |
+| 6.14 Deletion | Pass |
+| 7.1 Create new contact with minimal fields from the server | Pass |
+| 7.2 Create new contact with minimal fields from the device | Pass |
+| 7.3 Special Characters | Pass |
+| 7.4 Multi-Byte Characters | Pass |
+| 7.5 Delete a contact from the server | Pass |
+| 7.6 Delete a contact from the device | Pass |
+| 8.1 Create new contact with addresses from the server | Pass |
+| 8.2 Create new contact with addresses from the device | Pass |
+| 9.1 Create new contact with telephone numbers from the server | Pass |
+| 9.2 Create new contact with telephone numbers from the device | Pass |
+| 10.1 Create new contact with emails from the server | Pass |
+| 10.2 Create new contact with URLs/web page addresses from the server. | Pass |
+| 10.3 Create new contact with emails from the device | Pass |
+| 10.4 Create new contact with URLs/web page addresses from the device | Pass |
+|===
+
+[cols="a,a,a",options=header]
+.Test Pair 6
+|===
+| Test ID | Status | Comments
+| 1.1 Create an Event with a Reminder | Fail | waiting for vAlarm to be added to devinf
+| 1.2 Access Level and Priority | Pass | access level not support by client
+| 1.3 Special Characters From Server | Pass |
+| 1.4 Multi-Byte Characters From Server | Pass |
+| 1.5 Deletion | Pass |
+| 1.6 Create an Event with a Reminder | Pass |
+| 1.7 Access Level and Priority (can only be done if device supports setting an access level or priority) | Pass | same as issue 1.1 with vAlarm
+| 1.8 Special Characters from Device | Pass |
+| 1.9 Multi-Byte Characters from Device | Pass |
+| 1.10 Deletion | Pass |
+| 2.1 Create all-day event in same time zone | Pass | client and server do not associate timezone with day events
+| 2.2 Create all-day event to device in different time zone | Pass |
+| 2.3 Create a Single Instance All Day Event with Reminder | Pass | same issue as 1.1, missing timezone
+| 2.4 Create an anniversary all-day event | Pass |
+| 2.5 All-day event on last day of month & last day of year check | Pass | device and server do not have direct property for this, so we just assumed that it was a yearly recurrence
+| 2.6 Create a Single Instance Holiday with Reminder | Pass | similarly, server and client do not directly support holiday, but we assumed this is a yearly recurrence with multiple days
+| 2.7 Update an all-day event on server and synchronize back to mobile device in same time zone | Pass |
+| 2.8 Update an all-day event on server and synchronize back to a device in different time zone | Fail | modify single day event to yearly from device failed on server
+| 2.9 Create a Single Instance Multi-day Day Event | Pass |
+| 2.10 Remove Single Instance Meeting, Day Event, and Holiday | |
+| 2.11 Create an all-day event and synchronize to a server in same time zone | Pass |
+| 2.12 Create an all-day event and synchronize to a server in different time zone | Pass |
+| 2.13 Create a Single Instance All Day Event with Reminder | Pass |
+| 2.14 Create an anniversary all-day event | Pass |
+| 2.15 Update an all-day event on mobile device and synchronize back to server in same time zone | Pass |
+| 2.16 Update an all-day event on mobile device and synchronize back to a server in different time zone | Pass |
+| 2.17 Create a Single Instance Multi-Day Day Event | Pass |
+| 2.18 Remove Single Instance Meeting, Day Event, and Holiday | Pass |
+| 3.1 Create Daily Repeat (every day, bounded) | | server replace recurrences with single meetings so these do not apply for 3.1 to 3.22
+| 3.2 Create Daily Repeat (every other day, unbounded) | |
+| 3.3 Create Daily Repeat (every 7 days, unbounded) | |
+| 3.4 Create Weekly Repeat (every Wed, unbounded) | |
+| 3.5 Create Weekly repeat (Wed & Fri, unbounded) | |
+| 3.6 Create Fortnightly Repeat (unbounded) | |
+| 3.7 Create Monthly By Date Repeat (unbounded) | |
+| 3.8 Create Monthly By Day Repeat (first occurrence, bounded) | |
+| 3.9 Create Monthly By Day Repeat (nth occurrences, bounded) | |
+| 3.10 Create Monthly By Day Repeat (last occurrence, bounded) | |
+| 3.11 Create Yearly Repeat (every year, unbounded) | |
+| 3.12 Create Yearly Repeat (every year for 5 years, bounded) | |
+| 3.13 Create Yearly Repeat (every 4 years, bounded) | |
+| 3.14 Create custom repeat (``RDATE``s only) | |
+| 3.15 Create repeat combination | |
+| 3.16 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | |
+| 3.17 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | |
+| 3.18 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | |
+| 3.19 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`) | |
+| 3.20 Modify anniversary | |
+| 3.21 Modify occurrences of repeating meeting | |
+| 3.22 Modify exceptions of repeating meeting | |
+| 3.23 Delete recurring meeting pass | |
+| 3.24 Create Daily Repeat (every day, bounded) | pass |
+| 3.25 Create Daily Repeat (every other day, unbounded) | pass |
+| 3.26 Create Daily Repeat (every 7 days, unbounded) | pass |
+| 3.27 Create Weekly Repeat (every Wed, unbounded) | pass |
+| 3.28 Create Weekly repeat (Wed & Fri, unbounded) | pass |
+| 3.29 Create Fortnightly Repeat (unbounded) | pass |
+| 3.30 Create Monthly By Date Repeat (unbounded) | pass |
+| 3.31 Create Monthly By Day Repeat (first occurrence, bounded) | pass | some tests can be run at the same time such as the next 3
+| 3.32 Create Monthly By Day Repeat (nth occurrences, bounded) | pass |
+| 3.33 Create Monthly By Day Repeat (last occurrence, bounded) | pass |
+| 3.34 Create Yearly Repeat (every year, unbounded) | pass |
+| 3.35 Create Yearly Repeat (every year for 5 years, bounded) | pass |
+| 3.36 Create Yearly Repeat (every 4 years, bounded) | pass |
+| 3.37 Create custom repeat (``RDATE``s only) | | device does not support ``RDATE``s or combination
+| 3.38 Create repeat combination | | 
+| 3.39 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | |
+| 3.40 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | pass |
+| 3.41 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | |
+| 3.42 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`) | |
+| 3.43 Modify anniversary | pass |
+| 3.44 Modify occurrences of repeating meeting | pass |
+| 3.45 Delete recurring meeting | pass |
+| 4.1 Create Entry as owner with Attendees from Server | pass | attendee parsing error on client … try again later
+| 4.2 Accept Entry as Invitee from Device | Pass | only via markup in subject
+| 4.3 Create Entry as owner with Attendees from Device | pass |
+| 5.1 Time Zones and Simple Meetings | pass |
+| 5.2 Time Zones and Repeating Meetings | pass |
+| 5.3 Time Zones and All-Day Events | pass |
+| 5.4 Spring Daylight Savings Single Entries from Server | pass |
+| 5.5 Spring Daylight Savings Repeating Entry from Server | pass |
+| 5.6 Autumn Daylight Savings Single Entries from Device | pass |
+| 5.7 Autumn Daylight Savings Recurring Entry from Device | pass |
+| 6.1 Create task | Fail | property status not sending in_process or cancelled, but it is receiving quite well
+| 6.2 Task Access Level and Priority | pass |
+| 6.3 Create task with alarm | | client+server do not support tasks with alarms
+| 6.4 Mark task as completed | pass |
+| 6.5 Special Characters From Server | pass |
+| 6.6 Multi-Byte Characters From Server | pass |
+| 6.7 Deletion | pass |
+| 6.8 Create task | pass |
+| 6.9 Task Access Level and Priority | pass |
+| 6.10 Create task with alarm | pass |
+| 6.11 Mark task as completed | pass |
+| 6.12 Special Characters From Device | pass |
+| 6.13 Multi-Byte Characters From Device | pass |
+| 6.14 Deletion | pass |
+| 7.1 Create new contact with minimal fields from the server | pass | `BDAY` not working on server
+| 7.2 Create new contact with minimal fields from the device | pass |
+| 7.3 Special Characters | pass |
+| 7.4 Multi-Byte Characters | pass |
+| 7.5 Delete a contact from the server | pass |
+| 7.6 Delete a contact from the device | pass |
+| 8.1 Create new contact with addresses from the server | pass | NOTE: `BDAY` property did not pass but it was not a test
+| 8.2 Create new contact with addresses from the device | pass | combined some of these into single test
+| 9.1 Create new contact with telephone numbers from the server | pass |
+| 9.2 Create new contact with telephone numbers from the device | pass |
+| 10.1 Create new contact with emails from the server | pass |
+| 10.2 Create new contact with URLs/web page addresses from the server. | pass |
+| 10.3 Create new contact with emails from the device | pass |
+| 10.4 Create new contact with URLs/web page addresses from the device | pass |
+|===
+
+[cols="a,a,a",options=header]
+.Test Pair 7
+|===
+| Test ID | Status | Comments
+
+| 1.1 Create an Event with a Reminder | Pass |
+| 1.2 Access Level and Priority | Pass |
+| 1.3 Special Characters From Server | Pass | tests only possible with `VCALENDAR1.0`, folding problems
+| 1.4 Multi-Byte Characters From Server | Pass | tests only possible with `VCALENDAR1.0`, folding problems
+| 1.5 Deletion | Fail | Server performs just slow sync
+| 1.6 Create an Event with a Reminder | Fail | Mix between 2.0 and 1.1 format causes problems
+| 1.7 Access Level and Priority (can only be done if device supports setting an access level or priority) | Pass |
+| 1.8 Special Characters from Device | Pass |
+| 1.9 Multi-Byte Characters from Device | Pass |
+| 1.10 Deletion | Fail | Server performs just slow sync and can't delete
+| 2.1 Create all-day event in same time zone | Fail | Mix between 2.0 and 1.1 format causes problems
+| 2.2 Create all-day event to device in different time zone | HalfPass | All-day is ok, but still mix
+| 2.3 Create a Single Instance All Day Event with Reminder | - |
+| 2.4 Create an anniversary all-day event | - | same as 2.1
+| 2.5 All-day event on last day of month & last day of year check | HalfPass | Mix between 2.0 and 1.1 format causes problems
+| 2.6 Create a Single Instance Holiday with Reminder | HalfPass | X-Label is Kerio specific
+| 2.7 Update an all-day event on server and synchronize back to mobile device in same time zone | Pass |
+| 2.8 Update an all-day event on server and synchronize back to a device in different time zone | Pass |
+| 2.9 Create a Single Instance Multi-day Day Event | HalfPass | Mix between 2.0 and 1.1 format causes problems
+| 2.10 Remove Single Instance Meeting, Day Event, and Holiday | Fail | Server performs just slow sync
+| 2.11 Create an all-day event and synchronize to a server in same time zone | Pass |
+| 2.12 Create an all-day event and synchronize to a server in different time zone | Pass |
+| 2.13 Create a Single Instance All Day Event with Reminder | Fail | Mix between 2.0 and 1.1 format causes problems
+| 2.14 Create an anniversary all-day event | Pass |
+| 2.15 Update an all-day event on mobile device and synchronize back to server in same time zone | Pass |
+| 2.16 Update an all-day event on mobile device and synchronize back to a server in different time zone | Pass |
+| 2.17 Create a Single Instance Multi-Day Day Event | Pass |
+| 2.18 Remove Single Instance Meeting, Day Event, and Holiday | Fail | Server performs just slow sync and can't delete
+| 3.1 Create Daily Repeat (every day, bounded) | Pass |
+| 3.2 Create Daily Repeat (every other day, unbounded) | Pass |
+| 3.3 Create Daily Repeat (every 7 days, unbounded) | Pass |
+| 3.4 Create Weekly Repeat (every Wed, unbounded) | Pass |
+| 3.5 Create Weekly repeat (Wed & Fri, unbounded) | Pass |
+| 3.6 Create Fortnightly Repeat (unbounded) | Pass |
+| 3.7 Create Monthly By Date Repeat (unbounded) | Pass |
+| 3.8 Create Monthly By Day Repeat (first occurrence, bounded) | Pass |
+| 3.9 Create Monthly By Day Repeat (nth occurrences, bounded) | - | only possible with more than one entry
+| 3.10 Create Monthly By Day Repeat (last occurrence, bounded) | Fail | Server will not send MP1 1-, but just MP1
+| 3.11 Create Yearly Repeat (every year, unbounded) | Fail | Server sends YM1 2 14 #0 instead of Y1 #0
+| 3.12 Create Yearly Repeat (every year for 5 years, bounded) | Fail | Server sends YM1 4 1 #5 instead of Y1#5
+| 3.13 Create Yearly Repeat (every 4 years, bounded) | - | only possible with more than one entry
+| 3.14 Create custom repeat (``RDATE``s only) | - | only possible with more than one entry
+| 3.15 Create repeat combination | FAIL | Client and Server do not support this
+| 3.16 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | Fail | Server can't support ``EXDATE``s with 1.1
+| 3.17 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | Fail  | Server can't support ``EXDATE``s with 1.1
+| 3.18 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | Fail | Server can't support ``EXDATE``s with 1.1
+| 3.19 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`) | Fail | Server can't support ``EXDATE``s with 1.1
+| 3.20 Modify anniversary | Pass |
+| 3.21 Modify occurrences of repeating meeting | Pass | Server sends recurrence end date in UTC
+| 3.22 Modify exceptions of repeating meeting | Fail | Server can't support ``EXDATE``s with 1.1
+| 3.23 Delete recurring meeting | Fail | Server performs just slow sync
+| 3.24 Create Daily Repeat (every day, bounded) | Pass |
+| 3.25 Create Daily Repeat (every other day, unbounded) | Pass |
+| 3.26 Create Daily Repeat (every 7 days, unbounded) | Pass |
+| 3.27 Create Weekly Repeat (every Wed, unbounded) | Pass |
+| 3.28 Create Weekly repeat (Wed & Fri, unbounded) | Pass |
+| 3.29 Create Fortnightly Repeat (unbounded) | Pass |
+| 3.30 Create Monthly By Date Repeat (unbounded) | Pass |
+| 3.31 Create Monthly By Day Repeat (first occurrence, bounded) | Pass |
+| 3.32 Create Monthly By Day Repeat (nth occurrences, bounded) | FAIL | Client and Server do not support this
+| 3.33 Create Monthly By Day Repeat (last occurrence, bounded) | Fail | Server can't recognize -1FR correctly
+| 3.34 Create Yearly Repeat (every year, unbounded) | Pass |
+| 3.35 Create Yearly Repeat (every year for 5 years, bounded) | Pass |
+| 3.36 Create Yearly Repeat (every 4 years, bounded) | Pass |
+| 3.37 Create custom repeat (``RDATE``s only) | - | only possible with more than one entry
+| 3.38 Create repeat combination | Fail | Client can't handle `BYMONTH` + `BYDAY` combinations
+| 3.39 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | Fail | Server can't support ``EXDATE``s with 1.1
+| 3.40 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | Fail | Server can't support ``EXDATE``s with 1.1
+| 3.41 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | Fail | Server can't support ``EXDATE``s with 1.1
+| 3.42 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`) | Fail | Server can't support ``EXDATE``s with 1.1
+| 3.43 Modify anniversary | HalfPass | Mix between 2.0 and 1.1 format causes problems
+| 3.44 Modify occurrences of repeating meeting | Pass |
+| 3.45 Delete recurring meeting | Fail | Server performs just slow sync and can't delete
+| 4.1 Create Entry as owner with Attendees from Server | Pass | Mix between 2.0 and 1.1 format workaround at client
+| 4.2 Accept Entry as Invitee from Device | Fail | Attendees ok, but Server does not accept status this way
+| 4.3 Create Entry as owner with Attendees from Device | Fail | Attendees ok, but Server does not accept status this way
+| 5.1 Time Zones and Simple Meetings | Fail | TZ recognition not appropriate
+| 5.2 Time Zones and Repeating Meetings | Fail | TZ recognition not appropriate
+| 5.3 Time Zones and All-Day Events | Fail | TZ recognition not appropriate
+| 5.4 Spring Daylight Savings Single Entries from Server | Fail | TZ recognition not appropriate
+| 5.5 Spring Daylight Savings Repeating Entry from Server | Fail | TZ recognition not appropriate
+| 5.6 Autumn Daylight Savings Single Entries from Device | Fail | TZ recognition not appropriate
+| 5.7 Autumn Daylight Savings Recurring Entry from Device | Fail | TZ recognition not appropriate
+| 6.1 Create task | Fail | Tasks not supported on server side
+| 6.2 Task Access Level and Priority | Fail | Tasks not supported on server side
+| 6.3 Create task with alarm | Fail | Tasks not supported on server side
+| 6.4 Mark task as completed | Fail | Tasks not supported on server side
+| 6.5 Special Characters From Server | Fail | Tasks not supported on server side
+| 6.6 Multi-Byte Characters From Server | Fail | Tasks not supported on server side
+| 6.7 Deletion | Fail | Tasks not supported on server side
+| 6.8 Create task | Fail | Tasks not supported on server side
+| 6.9 Task Access Level and Priority | Fail | Tasks not supported on server side
+| 6.10 Create task with alarm | Fail | Tasks not supported on server side
+| 6.11 Mark task as completed | Fail | Tasks not supported on server side
+| 6.12 Special Characters From Device | Fail | Tasks not supported on server side
+| 6.13 Multi-Byte Characters From Device | Fail | Tasks not supported on server side
+| 6.14 Deletion | Fail | Tasks not supported on server side
+| 7.1 Create new contact with minimal fields from the server | Pass |
+| 7.2 Create new contact with minimal fields from the device | Pass |
+| 7.3 Special Characters | Pass | tests only possible with VCARD2.1, folding problems
+| 7.4 Multi-Byte Characters | Pass |
+| 7.5 Delete a contact from the server | Fail | Server performs just slow sync and can't delete
+| 7.6 Delete a contact from the device | Fail | Server performs just slow sync and can't delete
+| 8.1 Create new contact with addresses from the server | Pass | tests only possible with `VCARD2.1`, folding problems
+| 8.2 Create new contact with addresses from the device | Fail | `ADDTL` (2nd) field will be removed on server
+| 9.1 Create new contact with telephone numbers from the server | Pass |
+| 9.2 Create new contact with telephone numbers from the device | Pass |
+| 10.1 Create new contact with emails from the server | Pass |
+| 10.2 Create new contact with URLs/web page addresses from the server. | Pass |
+| 10.3 Create new contact with emails from the device | Pass |
+| 10.4 Create new contact with URLs/web page addresses from the device | Pass |
+|===
+
+== Summary
+
+The first mobile event found the test suite had too many scenarios to test during one event.
+Therefore, this time we tested only a subset of the scenarios and this proved to be the right thing
+to do. Participants were able to get through all the scenarios and provide commentary. It was
+found that there were some things tested that appeared to be redundant. Gregory Pekofsky put
+together a document that provides suggestions on how to streamline the limited subset so we can
+better utilize our valuable testing time. His suggested are noted in Appendix B at the end of this
+document.
+
+As usual, participants found that sitting in a room together and doing live testing was extremely
+useful. The facilities were perfect and connectivity, always an issue when doing mobile testing,
+was excellent.
+
+We extend our thanks and appreciation to Kerio for providing with us with an excellent testing
+environment and very helpful and professional staff. We also thank the participants for their time
+in helping us further interoperability among mobile devices and calendaring.
+
+Respectfully submitted by Patricia Egen.
+
+[[appendix-A]]
+[appendix]
+== Testing Scenarios – Subset
+
+* 1.1 Create an Event with a Reminder
+* 1.2 Access Level and Priority
+* 1.3 Special Characters From Server
+* 1.4 Multi-Byte Characters From Server
+* 1.5 Deletion
+* 1.6 Create an Event with a Reminder
+* 1.7 Access Level and Priority (can only be done if device supports setting an access level or priority)
+* 1.8 Special Characters from Device
+* 1.9 Multi-Byte Characters from Device
+* 1.10 Deletion
+* 2.1 Create all-day event in same time zone
+* 2.2 Create all-day event to device in different time zone
+* 2.3 Create a Single Instance All Day Event with Reminder
+* 2.4 Create an anniversary all-day event
+* 2.5 All-day event on last day of month & last day of year check
+* 2.6 Create a Single Instance Holiday with Reminder
+* 2.7 Update an all-day event on server and synchronize back to mobile device in same time zone
+* 2.8 Update an all-day event on server and synchronize back to a device in different time zone
+* 2.9 Create a Single Instance Multi-day Day Event
+* 2.10 Remove Single Instance Meeting, Day Event, and Holiday
+* 2.11 Create an all-day event and synchronize to a server in same time zone
+* 2.12 Create an all-day event and synchronize to a server in different time zone
+* 2.13 Create a Single Instance All Day Event with Reminder
+* 2.14 Create an anniversary all-day event
+* 2.15 Update an all-day event on mobile device and synchronize back to server in same time zone
+* 2.16 Update an all-day event on mobile device and synchronize back to a server in different time zone
+* 2.17 Create a Single Instance Multi-Day Day Event
+* 2.18 Remove Single Instance Meeting, Day Event, and Holiday
+* 3.1 Create Daily Repeat (every day, bounded)
+* 3.2 Create Daily Repeat (every other day, unbounded)
+* 3.3 Create Daily Repeat (every 7 days, unbounded)
+* 3.4 Create Weekly Repeat (every Wed, unbounded)
+* 3.5 Create Weekly repeat (Wed & Fri, unbounded)
+* 3.6 Create Fortnightly Repeat (unbounded)
+* 3.7 Create Monthly By Date Repeat (unbounded)
+* 3.8 Create Monthly By Day Repeat (first occurrence, bounded)
+* 3.9 Create Monthly By Day Repeat (nth occurrences, bounded)
+* 3.10 Create Monthly By Day Repeat (last occurrence, bounded)
+* 3.11 Create Yearly Repeat (every year, unbounded)
+* 3.12 Create Yearly Repeat (every year for 5 years, bounded)
+* 3.13 Create Yearly Repeat (every 4 years, bounded)
+* 3.14 Create custom repeat (``RDATE``s only)
+* 3.15 Create repeat combination
+* 3.16 Create repeating event plus custom repeat (`RRULE` + `RDATE`)
+* 3.17 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded)
+* 3.18 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded)
+* 3.19 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`)
+* 3.20 Modify anniversary
+* 3.21 Modify occurrences of repeating meeting
+* 3.22 Modify exceptions of repeating meeting
+* 3.23 Delete recurring meeting
+* 3.24 Create Daily Repeat (every day, bounded)
+* 3.25 Create Daily Repeat (every other day, unbounded)
+* 3.26 Create Daily Repeat (every 7 days, unbounded)
+* 3.27 Create Weekly Repeat (every Wed, unbounded)
+* 3.28 Create Weekly repeat (Wed & Fri, unbounded)
+* 3.29 Create Fortnightly Repeat (unbounded)
+* 3.30 Create Monthly By Date Repeat (unbounded)
+* 3.31 Create Monthly By Day Repeat (first occurrence, bounded)
+* 3.32 Create Monthly By Day Repeat (nth occurrences, bounded)
+* 3.33 Create Monthly By Day Repeat (last occurrence, bounded)
+* 3.34 Create Yearly Repeat (every year, unbounded)
+* 3.35 Create Yearly Repeat (every year for 5 years, bounded)
+* 3.36 Create Yearly Repeat (every 4 years, bounded)
+* 3.37 Create custom repeat (``RDATE``s only)
+* 3.38 Create repeat combination
+* 3.39 Create repeating event plus custom repeat (`RRULE` + `RDATE`)
+* 3.40 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded)
+* 3.41 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded)
+* 3.42 Create repeating event plus custom repeat and exceptions (`RRULE`, `RDATE` & `EXDATE`)
+* 3.43 Modify anniversary
+* 3.44 Modify occurrences of repeating meeting
+* 3.45 Delete recurring meeting
+* 4.1 Create Entry as owner with Attendees from Server
+* 4.2 Accept Entry as Invitee from Device
+* 4.3 Create Entry as owner with Attendees from Device
+* 5.1 Time Zones and Simple Meetings
+* 5.2 Time Zones and Repeating Meetings
+* 5.3 Time Zones and All-Day Events
+* 5.4 Spring Daylight Savings Single Entries from Server
+* 5.5 Spring Daylight Savings Repeating Entry from Server
+* 5.6 Autumn Daylight Savings Single Entries from Device
+* 5.7 Autumn Daylight Savings Recurring Entry from Device
+* 6.1 Create task
+* 6.2 Task Access Level and Priority
+* 6.3 Create task with alarm
+* 6.4 Mark task as completed
+* 6.5 Special Characters From Server
+* 6.6 Multi-Byte Characters From Server
+* 6.7 Deletion
+* 6.8 Create task
+* 6.9 Task Access Level and Priority
+* 6.10 Create task with alarm
+* 6.11 Mark task as completed
+* 6.12 Special Characters From Device
+* 6.13 Multi-Byte Characters From Device
+* 6.14 Deletion
+* 7.1 Create new contact with minimal fields from the server
+* 7.2 Create new contact with minimal fields from the device
+* 7.3 Special Characters
+* 7.4 Multi-Byte Characters
+* 7.5 Delete a contact from the server
+* 7.6 Delete a contact from the device
+* 8.1 Create new contact with addresses from the server
+* 8.2 Create new contact with addresses from the device
+* 9.1 Create new contact with telephone numbers from the server
+* 9.2 Create new contact with telephone numbers from the device
+* 10.1 Create new contact with emails from the server
+* 10.2 Create new contact with URLs/web page addresses from the server.
+* 10.3 Create new contact with emails from the device
+* 10.4 Create new contact with URLs/web page addresses from the device
+
+[[appendix-B]]
+[appendix]
+== Suggested Test Case modifications
+
+[cols="a,a"]
+.Suggested Test Case modifications
+|===
+| 3.1 Create Daily Repeat (every day, bounded) | 3.1 to 3.19 can be combined into one sync titled with the name of the test
+| 3.24 Create Daily Repeat (every day, bounded) | 3.24 to 3.42 can be combined into one sync titled with the name of the test
+| 1.1 Create an Event with a Reminder | combine 1.1 to 1.4
+| 1.2 Access Level and Priority | combine 1.1 to 1.4
+| 1.3 Special Characters From Server | combine 1.1 to 1.4
+| 1.4 Multi-Byte Characters From Server | combine 1.1 to 1.4
+| 1.6 Create an Event with a Reminder | combine 1.6 to 1.9
+| 1.7 Access Level and Priority (can only be done if device supports setting an access level or priority) | combine 1.6 to 1.9
+| 1.8 Special Characters from Device | combine 1.6 to 1.9
+| 1.9 Multi-Byte Characters from Device | combine 1.6 to 1.9
+| 1.10 Deletion | combine 1.6 to 1.9
+| 2.1 Create all-day event in same time zone | combine 2.1 and 2.3
+| 2.3 Create a Single Instance All Day Event with Reminder | combine 2.1 and 2.3
+| 2.11 Create an all-day event and synchronize to a server in same time zone | combine 2.11 and 2.13
+| 2.13 Create a Single Instance All Day Event with Reminder | combine 2.11 and 2.13
+| 6.1 Create task | combine 6.1 to 6.6 into one sync
+| 6.8 Create task | combine 6.8 to 6.13 into one sync
+| 2.4 Create an anniversary all-day event | remove this as it is proprietary not apart of vCal
+| 2.6 Create a Single Instance Holiday with Reminder | remove this as it is proprietary not apart of vCal
+| 2.10 Remove Single Instance Meeting, Day Event, and Holiday | remove this as it is proprietary not apart of vCal
+| 2.14 Create an anniversary all-day event | remove this as it is proprietary not apart of vCal
+| 2.18 Remove Single Instance Meeting, Day Event, and Holiday | remove this as it is proprietary not apart of vCal
+| 3.20 Modify anniversary | remove this as it is proprietary not apart of vCal
+| 3.43 Modify anniversary | remove this as it is proprietary not apart of vCal
+| 7.1 Create new contact with minimal fields from the server | remove this simple case
+| 7.2 Create new contact with minimal fields from the device | remove this simple case
+| 7.3 Special Characters | The rest of the test can be combined
+|===

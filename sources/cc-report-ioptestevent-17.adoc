@@ -53,7 +53,7 @@ following URL: http://www.calconnect.org/ioptesting.shtml.
 The documents used in this testing event were the CalConnect CalDAV Matrix for Draft 08, in
 particular the scheduling section and an iCalendar, iMIP and iTIP testing matrix.
 
-== Participants
+=== Participants
 
 .Participants
 [options=header,cols="a,a,a"]
