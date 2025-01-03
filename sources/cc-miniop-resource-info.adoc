@@ -1,0 +1,447 @@
+= A Recommendation for Minimum Interoperability of Resource Information
+:docnumber: 0907
+:copyright-year: 2009
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2009-06-10
+:published-date: 2009-06-10
+:technical-committee: USECASE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Andrew Laurence
+:role: editor
+:email: atlauren@uci.edu
+:fullname_2: Mimi Mugler
+:role_2: editor
+:email_2: mmugler@berkeley.edu
+:fullname_3: Guy Stalnaker
+:role_3: editor
+:email_3: jstalnak@wisc.edu
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+[abstract]
+== Abstract
+
+This document is a recommendation from the CalConnect USECASE Technical Committee regarding the
+minimum interoperability of resources in the calendaring and scheduling domain.
+
+[.preface]
+== Disclaimer
+
+This document is by The Calendaring and Scheduling Consortium. Permission is granted to potential
+members to reproduce and distribute this presentation within the member organization so long as the
+presentation is not altered in any way and the Consortium is acknowledged as the originator.
+
+Please send any changes or corrections to the document editor(s).
+
+== Introduction
+
+This document was created by the USECASE Technical Committee of the Calendaring and Scheduling
+Consortium.The document presents a recommendation for enhancing inter-operability of resources within
+the calendaring and scheduling application domain. Minimum interoperability is the basic level of
+functionality our collective experience tells us is necessary to have a useful system. The thrust of this
+effort is to enable resource inter-operability such that, when a described event contains resources, the
+recipient of that event is able to make practical use of the described resources; ideally the recipient should
+be so enabled regardless of whether the recipient is within the same calendaring domain. The resulting
+recommendations rely in part upon adoption of standards revisions that are in draft as of this writing.
+
+== Methodology
+
+The set of properties determined to be the minimum set for interoperability was chosen via discussion at
+CalConnect Roundtables and in conference calls of the USECASE Technical Committee. We used a
+three-pronged process to inform our selection of properties.
+
+First, we conducted an informal survey of properties that are built into existing software products that
+feature manipulation of resources, which formed a starting point for further winnowing of properties. The
+software products were not selected by any formal process, but were those available to which committee
+participants had access. However, we believe these to be a fair representation of the types of calendaring,
+scheduling, and project management products currently in use. The software applications are:
+
+* Dotproject v.2x
+* GroupWise 7
+* Kplato
+* Lotus Domino 7
+* MeetingMaker 8.6
+* Microsoft Exchange 2007
+* Microsoft Project 2002
+* Oracle Calendar
+* Planner
+* TaskJuggler
+* Zimbra CS
+
+Secondly, we created a set of use cases and from them extracted a plausible set of properties for the
+resources in the use cases.
+
+Thirdly, during discussions we came to view resource interoperability as a case where a lack of structured
+data prevents transmission of useful information between systems. As we looked at attributes for calendar
+users, we observed a great degree of commonality between calendar user attributes, directory attributes,
+and vCard attributes. We also observed that implementations effectively repurpose user attributes for use
+by resources. Given this practical similarity between users and resources, we looked to vCard as a source
+for structured data that might aid interoperability in resources.
+
+The result was a table of properties showing how many products used the property and the percentage of
+the total number of product that did so. (See Appendices)
+
+== Observations
+
+We observe that these fields are present, in one form or another, in all three sets of attributes:
+
+* Resource Name
+* Address
+* Category
+* Email
+* Notes/Description
+* Organizational Unit
+* Telephone
+* Time Zone
+* URL
+
+== Discussion
+
+The core issue for resource interoperability is enabling resource information, when encapsulated in, or
+transmitted with, an iCalendar object, to be viewed and understood in a manner that is actionable for the
+recipient. If the resource is a location, the recipient should be able find it; if a projector, learn its
+connectors and resolutions; if a piece of transport equipment, learn its carrying capacity and any
+certifications required for its operation, etc. This goal requires either that sufficient resource data be
+encapsulated within an iCalendar object or that a reference may be resolved to its canonical source.
+
+Given these goals, our observations regarding the commonality of fields present in different recording
+systems, and the similarity between resource and user attributes, we looked to vCard as a mechanism for
+standardizing information for calendar resources. vCard and iCalendar have many similarities in their
+structured representation of localized data and data types, and they may prove highly compatible for
+resources as well as traditional users.
+
+The congruence between vCard and iCalendar, and the loci that provide the possibility on which our
+recommendation is based, are found in the attributes of the `ATTENDEE` iCalendar property (see
+Appendix for the relevant sections of the Calsify and vCard drafts):
+
+* We observe that an attribute of the `ATTENDEE` property is DIR. DIR is similar to vCard's
+`SOURCE` attribute in that both store a URI value that points to a directory entry.
+* We observe also that iCalendar `CUTYPE` and vCard `KIND` play similar roles, being the
+classification of records in order to differentiate standard users from other types (e.g. group,
+organization). If there were direct mapping between their possible values, it would be possible to
+standardize the representation of resource information in vCard objects.
+
+[pseudocode%unnumbered]
+----
+CUTYPE valuesKIND ValuesINDIVIDUAL*individual*GROUPgroupRESOURCE-ROOMUNKNOWN--
+orgx-namex-nameiana-tokeniana-token
+* indicates default value
+----
+
+We thus have a remarkable congruence between the current iCalendar specification for the attributes of an
+`ATTENDEE` and the two vCard properties `SOURCE` and `KIND`:
+
+[%unnumbered]
+|===
+|vCard
+|Source=URI
+|Kind=<value>
+|===
+
+We observe, but have not met, a pragmatic need for additional metadata pursuant to resources. We
+observe that implementations leave the ResourceName field as an open text string. Customers may or
+may not have tools to classify their resources according to classes of local import. (e.g., cart, projector,
+dolly, laptop). We believe this area is ripe for improvement, perhaps in a series of customer-extensible
+key/value pairs, with population thereof and sorting exposed in the calendar user agents. Ideally, this
+information could also be encapsulated within an iCalendar object and available to external recipients.
+
+== Recommendations
+
+If an event participant's vCard `SOURCE` is known, a calendaring system should populate the iCalendar
+`ATTENDEE` `DIR` field with that value. Calendar systems should enable the user to resolve and display
+the participant's (``ATTENDEE``'s) data, as enabled and published by the vCard `SOURCE`. We observe that
+this functionality is equally valid for users and resources.
+
+The potential values of iCalendar `CUTYPE` and vCard `KIND` should be the same in both standards. This
+direct mapping allows for increased use of vCard as a structured source for storing resource information.
+
+We propose the `CUTYPE`/`KIND` attributes for "room" classification encapsulate the broader "venue"
+concept, perhaps leveraging work in `VVENUE` as a template for potential schema.
+
+[appendix]
+== Attributes in Vendor Implementations
+
+This table shows just those properties used by two or more applications:
+
+AttributesNumber% UsageResource
+Name11100.0%Type981.8%Email654.5%Notes/Description654.5%Calendar436.4%Contact
+Information/Address/Phone/FAX/URL [7]654.5%Max Alloc Percent/Available436.4%Resource
+ID436.4%Capacity327.3%Hourly Rate/Cost/Use/Overtime436.4%Hourly
+Rate327.3%Initials327.3%Phone327.3%Working Hours327.3%Cost\Use218.2%External
+Address218.2%Organizational Unit218.2%Overtime Rate218.2%URL218.2%
+
+[appendix]
+== Attributes observed in use cases
+
+* accommodations (i.e., seating, tables, possible configurations)
+* address
+* audio input/outp<snort>ut connectors
+* audio/video cable connections
+* audio/video codec
+* capacity
+* cargo capacity (cu ft)
+* cargo capacity (weight)
+* case number
+* cases
+* category (business type)
+* certifications
+* chat/presentation/VOIP software
+* contact
+* contact (i.e., person designated as 'owner' - name, location, contact info)
+* contact info: offc #, cell #, fax #
+* contact * maintenance schedule[URL?]
+* contact (name, location, contact info)
+* date visited facility
+* destination address for records (URL, email addr, postal addr)
+* directions
+* discretion
+* driver
+* facility visited (hospital, urgent care, emergency room, doctor's office)
+* facility visited (police station)
+* if observation = yes, then observation room location
+* if type = tape, then tape type: small cassette, regular cassette
+* if type = tape, then transcriber name and location
+* if type = video, then tape size required
+* if type = video, then videographer name and location
+* individual id number
+* individual name
+* input connector types
+* IP address
+* lift capacity
+* Little room #and# projector are available.
+* location
+* location: address, city, state, zip
+* location (for pickup and return)
+* maintenance schedule[URL?]
+* manufacturer/model
+* microphone (built-in)
+* microphone type
+* name
+* observation yes/no, (i.e., room has observation via one-way glass to an adjacent room)
+* Operating System
+* Organization (hospital, employer, firm, business)
+* parking space [location?]
+* patient id number
+* patient name
+* personal assistant & contact info
+* phone
+* physical carrying ability
+* portable/fixed?
+* pre-use duration (time prior to event)
+* reason for request
+* recorder type: tape, digital, video
+* records format required (print, electronic)
+* requester address
+* requester contact info
+* requester name
+* resolution
+* role
+* seating capacity
+* software used
+* software version
+* sound capability
+* speakers
+* status (active/inactive?)
+* Supervisor/Manager (contact info)
+* support contact (i.e., for problems about use or issues with device - name, location, contct info)
+* support contact (name, location, contact info)
+* test date
+* test proxies (per ea: name, location, contact info)
+* test results analyists (per ea: name, location, contact info)
+* timezone
+
+[appendix]
+== Attributes in vCard 3.0
+
+* `BEGIN`
+* `VERSION`
+* `PRODID`
+* `FN`
+* `N`
+* `NICKNAME`
+* `PHOTO`
+* `BDAY`
+* `ADR`
+* `LABEL`
+* `TEL`
+* `EMAIL`
+* `MAILER`
+* `TZ`
+* `GEO`
+* `TITLE`
+* `ROLE`
+* `LOGO`
+* `AGENT`
+* `ORG`
+* `CATEGORIES`
+* `NOTE`
+* `REV`
+* `SORT-STRING`
+* `SOUND`
+* `UID`
+* `URL`
+* `CLASS`
+* `KEY`
+* `END`
+
+[appendix]
+== draft-ietf-calsify-rfc2445bis-08
+
+3.8.4.1. Attendee
+
+Property Name:: `ATTENDEE`
+
+Purpose:: This property defines an "Attendee" within a calendar component.
+
+Value Type:: `CAL-ADDRESS`
+
+Property Parameters:: IANA, non-standard, language, calendar user type, group or list membership,
+participation role, participation status, RSVP expectation, delegatee, delegator, sent by, common name or
+directory entry reference property parameters can be specified on this property.
+
+...
+
+Description:: This property MUST only be specified within calendar components to specify participants,
+non-participants and the chair of a group scheduled calendar entity. The property is specified within an
+"`EMAIL`" category of the "`VALARM`" calendar component to specify an email address that is to receive
+the email type of iCalendar alarm.
+
+3.2.6. Directory Entry Reference
+
+Parameter Name:: `DIR`
+
+Purpose:: To specify reference to a directory entry associated with the calendar user specified by the
+property.
+
+Format Definition:: This property parameter is defined by the following notation:
+`dirparam = "DIR" "=" DQUOTE uri DQUOTE`
+
+Description:: This parameter can be specified on properties with a `CAL-ADDRESS` value type. The
+parameter specifies a reference to the directory entry associated with the calendar user specified by the
+property. The parameter value is a URI. The URI parameter value MUST be specified in a quoted-string.
+
+[example]
+====
+[source%unnumbered]
+----
+ORGANIZER;DIR="ldap://example.com:6666/o=ABC%20Industries,c=US???(cn=Jim
+%20Dolittle)":mailto:jimdo@example.com
+----
+====
+
+3.2.3. Calendar User Type
+
+Parameter Name:: `CUTYPE`
+
+Purpose:: To specify the type of calendar user specified by the property.
+
+Format Definition:: This property parameter is defined by the following notation:
++
+--
+[source%unnumbered]
+----
+cutypeparam = "CUTYPE" "="
+("INDIVIDUAL" ; An individual
+/ "GROUP" ; A group of individuals
+/ "RESOURCE" ; A physical resource
+/ "ROOM" ; A room resource
+/ "UNKNOWN" ; Otherwise not known
+/ x-name ; Experimental type
+/ iana-token) ; Other IANA registered
+; type
+; Default is INDIVIDUAL
+----
+--
+
+Description:: This parameter can be specified on properties with a `CAL-ADDRESS` value type. The
+parameter identifies the type of calendar user specified by the property. If not specified on a property that
+allows this parameter, the default is `INDIVIDUAL`. Applications MUST treat x-name and iana-token
+value they don't recognized the same way as they would the `UNKNOWN` value.
+
+[example]
+====
+[source%unnumbered]
+----
+ATTENDEE;CUTYPE=GROUP:mailto:ietf-calsch@example.org
+----
+====
+
+[appendix]
+== draft-ietf-vcarddav-vcardrev-03
+
+7.1.3. SOURCE
+
+Purpose:: To identify the source of directory information contained in the content type.
+
+Value type:: uri
+
+Special notes:: The `SOURCE` property is used to provide the means by which applications knowledgeable
+in the given directory service protocol can obtain additional or more up-to-date information from the
+directory service. It contains a URI as defined in <<rfc3986>> and/or other information referencing the
+vCard to which the information pertains. When directory information is available from more than one
+source, the sending entity can pick what it considers to be the best source, or multiple `SOURCE`
+properties can be included.
+
+[example]
+====
+[source%unnumbered]
+----
+SOURCE:ldap://ldap.example.com/cn=Babs%20Jensen,%20o=Babsco,%20c=US
+SOURCE:http://directory.example.com/addressbooks/jdoe/Jean%20Dupont.vcf
+----
+====
+
+7.1.5. KIND
+
+Purpose:: To specify the kind of object the vCard represents.
+
+Value type:: A single text value.
+
+Special notes:: The value may be one of: "individual" for a single person, "group" for a group of people,
+"org" for an organization, an x-name or an iana-token. If this property is absent, "individual" MUST be
+assumed as default.
+
+[example]
+====
+This represents someone named Jane Doe working in the marketing department of the North American
+division of ABC Inc.
+
+[source%unnumbered]
+----
+BEGIN:VCARD
+VERSION:4.0
+KIND:individual
+FN:Jane Doe
+ORG:ABC\, Inc.;North American Division;Marketing
+END:VCARD
+----
+
+This represents the department itself, commonly known as ABC Marketing.
+
+[source%unnumbered]
+----
+BEGIN:VCARD
+VERSION:4.0
+KIND:org
+FN:ABC Marketing
+ORG:ABC\, Inc.;North American Division;Marketing
+END:VCARD
+----
+====
+
+[bibliography]
+== {blank}
+
+* [[[rfc3986, hidden(RFC 3986)]]]
