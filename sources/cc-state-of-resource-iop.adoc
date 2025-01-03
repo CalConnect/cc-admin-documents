@@ -1,0 +1,156 @@
+= State of Resource Interoperability for Calendaring, Groupware, and Project Management
+:docnumber: 0905
+:copyright-year: 2009
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2009-06-10
+:published-date: 2009-06-10
+:technical-committee: USECASE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Guy Stalnaker
+:role: editor
+:email: jstalnak@wisc.edu
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+This document is by The Calendaring and Scheduling Consortium. Permission is granted to potential members to
+reproduce and distribute this presentation within the member organization so long as the presentation is not
+altered in any way and the Consortium is acknowledged as the originator.
+
+Please send any changes or corrections to the document editor.
+
+== Introduction
+
+This document was created by the USECASE Technical Committee of the Calendaring and Scheduling
+Consortium. This document is a survey of the present state of resource interoperability for a representative
+sample of calendaring, groupware, and project management applications. "Interoperability of resources" within
+the domains surveyed is a level of functionality that allows the communication of resource information between
+applications that is humanly useful though not necessarily identical for both systems.
+
+The term resource is defined thus (taken from the "Calendaring and Scheduling Glossary of Terms," version 1.0,
+October, 2006, from CalConnect):
+
+Resource - Shared equipment, materials, or facilities that can be scheduled for use by calendar users.
+
+Examples include: conference rooms, computers, audio visual equipment, and vehicles.
+
+== Methodology
+
+This is an informal survey of properties that are built into existing software products that have resource use
+and/or management features. The software products were not selected by any formal process, but were those
+available to which committee participants had access. However, we believe these to be a fair representation of
+the types of calendaring products currently in use and they include several that are either established or are
+ascendant in the industry.
+
+The applications surveyed are selected from the domains of calendaring software, groupware, and project
+management software written for the Microsoft Windows, MacOSX, and Linux operating systems. They are:
+
+. Dotproject v2x (web-based open source)
+. Microsoft Project 2002 (Microsoft Windows)
+. Kplato (Linux)
+. Planner (Linux)
+. TaskJuggler (Linux)
+. OracleCalendar (MSWindows, MacOSX, Linux)
+. GroupWise 7 (MSWindows, MacOSX)
+. Lotus Domino 7 (MSWindows, MacOSX)
+. Microsoft Exchange 2007 (MSWindows)
+. MeetingMaker 8.6 (MSWindows, MacOSX)
+. ZimbraCS (web-based, MSWindows)
+
+We surveyed the applications and their administrative documentation to determine whether resources were a part
+of their product and what attributes were used for resources. This information was placed in a spreadsheet with
+an appropriate indicator of use to allow comparisons across the various applications. Using a grid made it easy to
+determine points of intersection where applications use the same or similar attributes.
+
+== Summary
+
+Resource interoperability is pragmatically impossible in the current state of applications. Only two attributes are
+found among 80% of the eleven applications, name and type, which provide very little information of a truly
+useful nature to recipients of any data from an external calendar system. We conclude that for such limited
+available attributes to be of value, useful information would have to be encoded in the name attribute itself (e.g.,
+"Rm3209CSS" would indicate room 3209 in the Computer Sciences and Statistics building, but users of that
+information would have to have external information, in either their head or in a directory of buildings etc., to
+know something more useful about the room).
+
+Across the eleven applications nearly fifty different attributes were used to define the constituent parts of a
+resource for the purposes of the applications. There are, however, only two attributes which are common among
+more than 80% the eleven applications surveyed and only an additional three more muster more than half of the
+eleven applications (and this only by using a broad definition of some attributes to collate then under one more
+general term, e.g., Contact Information included Address, Phone, FAX, and URL). These attributes with the
+percentages are listed in the following table.
+
+== Attributes
+
+[%unnumbered,cols=3,options=header]
+|===
+| Attributes | Number | Usage
+
+| ResourceName | 11 | 100.0%
+| Type | 9 | 81.8%
+| Email | 6 | 54.5%
+| Notes/Description | 6 | 54.5%
+| Calendar | 4 | 36.4%
+| ContactInformation/Address/Phone/FAX/URL [7] | 6 | 54.5%
+| MaxAllocPercent/Available | 4 | 36.4%
+| ResourceID | 4 | 36.4%
+| Capacity | 3 | 27.3%
+| Hourly Rate/Cost/Use/Overtime | 4 | 36.4%
+| Hourly Rate | 3 | 27.3%
+| Initials | 3 | 27.3%
+| Phone | 3 | 27.3%
+| WorkingHours | 3 | 27.3%
+| Cost\Use | 2 | 18.2%
+| External Address | 2 | 18.2%
+| Organizational Unit | 2 | 18.2%
+| Overtime Rate | 2 | 18.2%
+| URL | 2 | 18.2%
+| AccrueAt | 1 | 9.1%
+| Address | 1 | 9.1%
+| ApproverEmail | 1 | 9.1%
+| ApproverLang | 1 | 9.1%
+| Audio/Video Support | 1 | 9.1%
+| Available From | 1 | 9.1%
+| Available Until | 1 | 9.1%
+| Booking | 1 | 9.1%
+| Building/Site/Floor | 1 | 9.1%
+| CalendarStatus | 1 | 9.1%
+| Category | 1 | 9.1%
+| Code | 1 | 9.1%
+| DoubleBookable | 1 | 9.1%
+| Efficiency | 1 | 9.1%
+| FAX | 1 | 9.1%
+| Flags | 1 | 9.1%
+| GlobalAgendaViewing | 1 | 9.1%
+| JournalEntry | 1 | 9.1%
+| Limits | 1 | 9.1%
+| Lotus Instant Msg Srv | 1 | 9.1%
+| Material Label | 1 | 9.1%
+| Online Meeting Database | 1 | 9.1%
+| Owner Restrictions | 1 | 9.1%
+| ResourceID | 1 | 9.1%
+| Shared | 1 | 9.1%
+| ShortName | 1 | 9.1%
+| TimeZone | 1 | 9.1%
+| User-ID | 1 | 9.1%
+| Vacation | 1 | 9.1%
+| Visibility | 1 | 9.1%
+|===
+
+== Conclusion
+
+If interoperability for calendar data is a goal, and if calendar systems are used to manage resources however
+minimal or extensive, then the state of resource implementations conclusively indicates that resource
+interoperability is not presently pragmatically possible. It is reasonable to conclude that the various applications
+surveyed did not implement resource use with any view of sharing resource information with users outside the
+application.
