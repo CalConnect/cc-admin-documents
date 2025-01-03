@@ -1,0 +1,432 @@
+= October 2008 CalConnect Interoperability Test Report
+:docnumber: 0807
+:copyright-year: 2008
+:language: en
+:doctype: administrative
+:edition: 1.1
+:status: published
+:revdate: 2008-12-08
+:published-date: 2008-12-08
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Patricia Egen
+:role: author
+:fullname_2: Nate Barry
+:role_2: author
+:fullname_3: Cyrus Daboo
+:role_3: author
+:fullname_4: Mike Douglass
+:role_4: author
+:fullname_5: Firdosh Ghyara
+:role_5: author
+:fullname_6: Libor Grafnetr
+:role_6: author
+:fullname_7: Tomas Hnetila
+:role_7: author
+:fullname_8: Kellie Hunter
+:role_8: author
+:fullname_9: May Ma
+:role_9: author
+:fullname_10: Ross Peter Nelson
+:role_10: author
+:fullname_11: Morgen Sagen
+:role_11: author
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+The thirteenth Calconnect interoperability event was held at the Yahoo campus at Sunnyvale,
+California. Participants of the testing event used predetermined test scenarios. Rather than post
+the full test scenarios in this document, they can be found on the CalConnect website at the
+following URL: http://www.calconnect.org/ioptesting.shtml.
+
+The documents used in this testing event were the CalConnect CalDAV Matrix for Draft 08, in
+particular the scheduling section and an iCalendar, iMIP and iTIP testing matrix.
+
+== Participants
+
+.Participants
+[options=header,cols="a,a,a"]
+|===
+| Organization | Participants | Versions Tested
+| Apple | Cyrus Daboo +
+Wilfredo Sanchez +
+Haley Allen +
+Scott Adler | iCal Server and client - OS X 10.5.3 +
+iCal client 3.03
+| Google | Harish Venkataramani +
+Ross Nelson |
+| IBM | Nate Barry +
+Bruce Kahn| Lotus Domino and Notes 8.05
+| Kerio Technologies | Tomas Hnetila |
+| Microsoft | Firdosh Ghyara | Exchange 8.5 and Outlook 2007
+| PeopleCube | Kellie Hunter +
+Gordon Connelly | Meetingmaker V8.8
+| RPI (Bedework) | Mike Douglass | Bedework server 3.5
+| Scalix | Florian von Kurnatowski +
+Gren Elliot +
+Chris Olsen | 11.4.3 pre-release
+| Sun Microsystems | Arnaud Quillaud +
+May Ma +
+Karen Wu +
+Chengchen Zhou +
+Lakshmi Pavithra Pidatala |
+| Yahoo/Zimbra | John Holder | Zimbra Server pre 5.0.7
+| EM Client – Observer | | Comind CalDAV Client
+| CalConnect Reps | |
+| Interop Manager Logistics | Pat Egen +
+Dave Thewlis |
+|===
+
+== General comments and findings
+
+Eight CalDAV servers were tested against 4 CalDAV clients. iSchedule, a new specification was
+tested as well by several servers. Examples of what was tested by CalDAV servers and clients
+are:
+
+* CalDAV access
+* CalDAV scheduling
+* CalDAV free/busy
+* CalDAV Availability
+* CalDAV Delegation.
+
+In addition, two vendors tested their application’s support for iCalendar, iTIP and iMIP. There
+were several clients who were testing iCalendar, iMIP and iTIP against regular clients as well as
+against several CalDAV servers so the CalDAV servers could test how they handled iMIP
+requests.
+
+The following are general comments about what occurred and specific findings. Vendor names
+are not referenced. What is discussed are actual issues found so that developers of applications
+can recognize potential issues within their own products.
+
+== CalDAV Testing
+
+During CalDAV testing, the following things were noted:
+
+When creating a new single-instance meeting with an alarm set to trigger 15 minutes prior to the
+schedule time of the meeting, a server removed the alarm after several update operations.
+
+When modifying the location of the meeting a server did not preserve seconds on the override of
+the meeting.
+
+After modifying the title of the first instance of the recurring meeting a server did not support the
+overwrite.
+
+On the "Query all components and return ETag WebDAV property and all data" test, a CalDAV
+client did a query only for the etag, not the calendar data
+
+When creating a calendar-query REPORT, one server’s Reports are overridden in separate
+resources with the same url.
+
+After creating a new calendar in the current user's personal calendar space, one CalDAV server
+appends "1" to the name of the created folder.
+
+A CalDAV server verified an issue that makes it impossible to use alerts in one of the clients.
+Fixing the problem will require the server vendor to preserve non-standard properties specific to
+this client, so they do not have a complete resolution at the moment. A few other minor issues
+were also uncovered.
+
+This same server discovered that they were missing a CalDAV operation (options request, not
+currently invoked by any other client). They implemented a fix during the interop and verified that
+the basic scheduling features worked after adding support for the options request. They helped
+one of the clients testing iCalendar uncover an issue with regards to incrementing sequence
+numbers when canceling events.
+
+One CalDAV server noted that they found CalDAV implementations seems more mature than
+before. Items they noted were GUI and Usability issues in Availability settings in one of the
+clients. They noted incorrect server responses that caused problems with another client.
+
+A CalDAV server noted the following issues within their own application:
+
+* a problem with xmlns:D="DAV:"
+* another problem with DAV: in iSchedule response
+* Originator and Recipient address are swapped when a meeting reply was sent from a
+server over iSchedule
+* finally it works.
+
+Issues found with other clients and servers:
+
+* iMIP: iPhone doesn't recognize meeting invitation from a CalDAV server
+* A CalDAV client modified structure of MIME format on site
+* iMIP: when meeting is accepted in a server’s email, reply is sent to From: header address
+instead of Organizer's address.
+
+One CalDAV server noted that all Tomcat versions don’t work with large data amounts with
+CalDAV. They also noted that a client stored user credentials in the browser cache and even if
+the server deleted a calendar account and added it back it didn’t ask them to re-authenticate.
+Also, upon deletion, we had to clear the browser cache to clear user credentials. This happened
+on Internet Explorer and Firefox.
+
+A CalDAV server noted the following:
+
+Problems found:
+
+. If you use the wrong authentication for a valid Calendar, we give a 501 error. A more
+friendly response would be desirable.
+. If you add a daily recurrence with one of the clients with four instances and delete the
+third instance, you lose sight of the fourth instance too.
+. If you have a recurrence with an exception where the start of the recurrence specifies
+seconds, we generate a bad recurrence-id for the exception.
+. We were not preserving the value of RSVP in Meeting REQUESTs. i.e. we always
+assumed the value was TRUE.
+. Notes originated meetings were not visible to our CalDAV clients.
+. One server’s iMip Gateway originated messages are not recognized as meeting requests
+by us. We spotted an original issue that the Content-Type METHOD parameter was not
+being specified but we still had an issue with the final form of Mime structure that they
+intend to use.
+. Notes originated requests end up with blank DESCRIPTION in the iCalendar object and
+invalid ATTACH properties.
+
+Another server observed the following during testing of iSchedule.
+
+* From one server to another server, they got the invitation ok, and reply sent properly and
+the client was updated with the status
+* From one server to another an invitation doesn't show up on the client
+* From one server to another the invitation was received ok, and reply sent properly, and
+they could see status updated in the client
+* On another server to server, the invitation was received ok, and reply sent properly but
+the status was not updated on the client
+* From one server to another server, the invitation was ok, but reply can't be sent properly
+* From one server to another, the invitation was ok, but reply can't be sent properly
+
+One server noted:
+
+There were a number of fixes needed to new code - mostly in CalDAV scheduling - had a number
+of interactions with a server with problems at both ends.
+
+One server tested with a client and found it worked well enough with the new CalDAV scheduling
+draft.
+
+== iCalendar Testing
+
+Two vendors tested their applications against each other and other servers that would accept
+iCalendar objects. These were some of the findings. What is shown is the specific test and
+observations for each test.
+
+Send a meeting invitation
+
+* There is a problem with reading MIME messages sent from one of the servers.
+
+Accept a meeting invitation
+
+* Issue where Accepts are showing as Tentative (likely related to above mismatch
+bugs)
+* One vendor will investigate incorrect assumptions on name match
+* Acceptances do not reliably get delivered
+* The entire body shows in accept comments
+
+Cancel a Meeting Invitation
+
+* Not bumping the sequence on cancel
+* One vendor will consider not requiring SEQUENCE to be bumped
+* Updating the subject only - possibly related to sequence bump (retest)
+* Viewing the cancel causing duplicates
+
+Send an invite with Rich Text
+
+* Not honoring ALTREP or sending any rich text.
+* Displaying rich text in invite, not in calendar.
+* Putting HTML directly in description rather than in an ALTREP.
+
+Send an invite with attachments
+
+* Putting inline attachments that can’t be handled
+* Attachments show in mail only and not in calendar
+
+Update a meeting invitation
+
+* Bumping the sequence number and forcing another vendor to accept.
+
+Reschedule the original meeting invitation
+
+* Not clearing invitee status on reschedule
+
+Decline a meeting invitation
+
+* Not sending RSVP thus causing lost responses
+
+Create a meeting with required and optional Participants
+
+* Not correlating the message.
+* Showing CC users as To users, but without data loss
+
+Create a repeating monthly by date
+
+* Bug for monthly on first thurs until 1/2/09 - last instance missing
+* Not handling multiple by date entries
+
+Create a repeating monthly by day
+
+* Not working when multiple days are selected
+* Not implementing second day
+* Not handling multiple by day entries
+
+Create a repeating monthly event from end
+
+* Error with end of month iCalendar.
+* Writing bad iCalendar
+
+Create a repeating yearly
+
+* Not honoring `DTSTART` that doesn’t match `RRULE`. `DTEND` is also wrong (early).
+
+Create a repeating `RDATE` meeting
+
+* Not supporting or understanding `RRULE`
+* Not supporting ``RDATE``s
+
+Repeats with no end date
+
+* Sending a response for all even though it truncates the set to some finite value
+
+Repeat every other…
+
+* Failing for every other year
+
+Test until (daily)
+
+* Not including time on the date
+* Not showing last instance
+* Time on the until is not before the instance - still puts it on the calendar.
+
+Create a repeating daily invite
+
+* Duplicate entries upon acceptance (not reproducible)
+
+Update the invite (all instances)
+
+* Not supporting ``RDATE``s
+* Deleting the existing meeting (and invite) and recreating a new invite since it does not
+handle `RRULE` updates
+
+Reschedule the invite (all instances)
+
+* Showing as accepted despite not receiving an updated acceptance
+
+Cancel the invite (all instances)
+
+* Not bumping sequence - also ``RDATE``s
+* Not bumping sequence number on cancel
+
+Update one instance, then series
+
+* Not supporting series update (``RDATE``s?)
+* Fail when working on messages with multiple ``VEVENT``s
+* Not interpreted - Does One vendor need to put the `RDATE`?
+
+Cancel a single instance
+
+* Pass but last char of subject is truncated
+* Not interpreted - Does One vendor need to put the `RDATE`?
+* Doesn’t bump sequence
+* Does not bump sequence number on cancel
+* Only updating subject line - possibly related to a bug
+* Only updating subject line - possibly related to a bug
+
+Reschedule a single instance
+
+* Does not bump sequence number
+
+Update a single instance
+
+* Not interpreted - Does One vendor need to put the `RDATE`?
+
+Accept the updated single instance
+
+* Not handling exception instances
+
+Counter a single date
+
+* Could not correlate the message,
+
+Cancel this and all future instances
+
+* Not supporting ``RDATE``s
+* Bug preventing ``RDATE``s from working
+
+Reschedule meeting and all future instances
+
+* Not sending cancel when it splits, which causes duplicates
+
+Remove an attendee from a simple meeting
+
+* Does not bump sequence
+* Chair does not work
+
+Add an attendee to a series
+
+* Does not handle ``RDATE``s
+
+Create a meeting with Reminders - one for 5mins, one for 10 mins
+
+* Alarms are not preserved for anyone
+
+Items not supported by several applications:
+
+* Counter all dates
+* Counter for this and all future instances
+* Accept the counter for this and all future instances
+* Counter a meeting invitation
+* Counter a single date
+* Counter all dates
+* Accept a meeting invitation counter
+* Accept the countered single date
+
+A summary of significant interoperability issues is as follows:
+
+. Needs to handle ``VCALENDAR``s with multiple ``VEVENT``s - this results in very ugly
+behavior and result in severe data loss.
+. Needs to increment `SEQUENCE` on cancellations to comply with the standard to unblock
+cancellation tests.
+. Revisit handling of `RRULE` updates - current method does not lose data but is a very
+brute force method. Is there a better way?
+. ``RDATE``s are not supported: This causes severe data loss on some (rare) invites and also
+on multiple instance updates, which are very common.
+. Rich body content is not supported in either direction.
++
+--
+NOTE: Counterproposals now work!
+This was very exciting!
+--
+. Must fix the reliability of responses as these seem to intermittently not be sent (bug).
+. Fix bug with `RDATE` format. This should be working but is not. Fixing this will unblock a
+large number of tests.
+. Attachments and rich body content come in but do not make it to a calendar.
+. Counterproposals are not currently supported.
+. Not handling nested multipart/mixed MIME sections.
+. The MIME structure needs to be revisited to allow iCalendar data to be represented as
+workflow rather than as an attachment. This does not block tests but is ugly and
+annoying.
+. ``RDATE``s are not supported: This causes severe data loss on some (rare) invites and also
+on multiple instance updates, which are very common.
+. Counterproposals are not currently supported.
+. Meeting modifications to a single instance is not yet supported.
+. Intermittent problem where meetings get duplicated
+
+== Summary
+
+This meeting was our largest interoperability event to date. Eight CalDAV servers and 4 CalDAV
+clients were tested as well as iCalendar, iMIP and iTIP
+
+The most significant takeaway from this event was CalDAV clients were able to test with the
+majority of the servers. In the past, because things were often not finished or applications had
+issues, it was not possible to complete testing. The fact that one client was able to successfully
+test against 8 servers during a two day process shows tremendous progress. I look forward to
+the next set of testing to see how much improvement has been made, particularly with respect to
+CalDAV scheduling.
+
+With regards to iCalendar testing general interoperability worked far better than it has in the past
+and it is clear that strong interoperability efforts have been and are being made by many of the
+vendors present.
+
+Respectfully submitted by Pat Egen, CalConnect Interop Manager.
