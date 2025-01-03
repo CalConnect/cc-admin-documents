@@ -1,0 +1,471 @@
+= CalConnect Technical Preview - Roundtable XIII
+:docnumber: 0806
+:copyright-year: 2008
+:copyright-holder: The Calendaring and Scheduling Consortium
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2008-10-08
+:published-date: 2008-10-08
+:technical-committee: CALCONNECT
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:imagesdir: images
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks
+and Disclaimer of Warranty for External (Public) Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Note Well
+
+* This presentation reflects in-progress
+work and activities of CalConnect
+* CalConnect rules governing disclosure
+of such work applies
+* As always you can discuss this work
+freely within the CalConnect
+community
+* Outside of CalConnect:
+** You may discuss the preview and
+the work being done in general
+** Please do not identify the
+organizations and individuals that
+are participating
+** Please do not discuss specific details
+and be cautious about inferences
+
+== Introduction
+
+CalConnect members have produced a
+Technical Demonstration of key
+calendaring and scheduling
+technologies being developed by
+CalConnect.
+
+This serves as a technology “preview”
+only and does not in any way represent
+final protocols or products.
+
+Our goal is to solicit feedback from
+members and invited guests on the
+presentation itself as well as the
+technologies being demonstrated.
+
+We also hope to show how CalConnect
+is successfully achieving its goal of
+improving calendaring and scheduling
+standards.
+
+== Agenda
+
+* Introduction to CalConnect
+* Technical Previews
+** CalDAV Scheduling
+** iSchedule
+** Internet Freebusy
+* Conclusion
+* Q&A
+
+[%unnumbered]
+image::img01.png[]
+
+== Introduction to CalConnect
+
+=== What is CalConnect
+
+An information technology
+consortium focused on calendaring
+and scheduling that is a partnership
+between vendors and customers.
+
+[quote]
+Our vision of the future is not only
+interoperable calendaring, but ubiquitous
+interoperable calendaring. Calendaring
+should—and can—be as ubiquitous as
+electronic mail.
+
+=== Why do we need it?
+
+Our goals:
+
+* improve general understanding
+* promote the technologies
+* improve the technologies, in
+particular interoperability
+
+[quote]
+The driving premise behind the Consortium
+is that interoperability between calendaring
+programs and systems is essential to
+achieving the promise and future growth of
+calendaring.
+
+=== Current Membership
+
+[%unnumbered]
+image::img02.png[]
+
+=== Done so far?
+
+* Substantial input to the IETF on new
+versions of calendaring RFCs (e.g.,
+recurrences, timezones, and
+minimum interoperability subsets)
+* Work on CalDAV, CalDAV Scheduling,
+and extensions to CalDAV
+* Recommendations and guidance on
+Extended Daylight Savings Time
+* Timezone Registry and Service
+Recommendations
+* Mobile Calendaring white paper and
+Interoperability Test Suite
+* Mobile Calendaring Recurrence
+support
+* Surveys and use cases for calendaring
+events, tasks (``VTODO``s)
+* Calendaring Glossary
+* Calendar Administrator’s mailing list
+* Thirteen successful IOP test events
+between C&S implementations
+* First Mobile Calendaring IOP test
+event
+* Demo of Federated Freebusy data
+consolidation in 2006
+
+=== Ongoing work?
+
+* TC-CALDAV
+* TC-EVENTPUB
+* TC-FREEBUSY
+* TC-IOPTEST
+* TC-ISCHEDULE
+* TC-MOBILE
+* TC-TIMEZONE
+* TC-USECASE
+* TC-XML
+
+=== Where is it going?
+
+* Continue with core goals
+* Calendaring libraries/APIs to assist
+implementations
+* Calendaring as a platform (e.g. project
+management)
+* Types of calendaring infrastructures
+(e.g. enterprise, federation, services,
+ad hoc)
+* Expand participation in new areas
+** Vertical industry focus (e.g., mobile
+operators)
+** Government and private industry
+customer perspective
+** Overseas (Europe in short term,
+Asia after)
+
+== Technical Previews
+
+* Today we will demonstrate:
+** CalDAV Scheduling
+** iSchedule
+** Internet freebusy lookups using
+freebusy URLs
+* Each presentation will consist of:
+** Introductory slides
+** Live demonstration
+
+== CalDAV Scheduling -- How it works
+
+=== Introduction to CalDAV
+
+* RFC4791 defines the CalDAV Access
+protocol.
+* Built on core internet technologies
+
+[%unnumbered]
+image::img03.png[]
+
+.Multiple Users can Access and Share Calendars
+image::img04.png[]
+
+=== CalDAV Scheduling
+
+How it works:
+
+* Several users on one CalDAV server
+(any client) schedule with each
+other
+* One user is the “Organizer”, others
+are “Attendees”
+
+.One is the Organizer, others are Attendees
+image::img05.png[]
+
+There are two parts to scheduling:
+
+* Freebusy lookup
+* Sending invitations and receiving
+replies
+
+Freebusy results are returned
+immediately.
+
+Invitation replies are sent only after
+users inspect and accept or decline.
+
+Each user has an “Outbox” and an
+“Inbox”.
+The “Outbox” is used to trigger
+freebusy lookup.
+The “Inbox” is where invites or replies
+are delivered.
+Changes to events trigger scheduling.
+Clients monitor the “Inbox” for
+incoming scheduling messages.
+
+.Sequence of diagrams showing free-busy lookup.
+====
+.Organizer sends freebusy request to the server. Server calculates and returns freebusy data for attendees.
+image::img06.png[]
+
+.Organizer sees freebusy for everyone. Adjusts for free time for everyone.
+image::img07.png[]
+====
+
+.Sequence of diagrams showing invitations being sent out, replies returned.
+====
+.Organizer sends invite request to the server. Server copies the request into each attendees’ Inbox. Attendees see the invites when they next check the server.
+image::img08.png[]
+
+.Attendee replies to the server. Server copies the reply into the organizer’s Inbox. Organizer sees the reply when they next check the server.
+image::img09.png[]
+====
+
+==== Demonstration #1 -- Simple meeting between two people
+
+.Demo Participants
+image::img10.png[]
+
+==== Demonstration #2 -- Simple meeting between multiple people with different clients some CalDAV others using a CalDAV “connector”
+
+.Demo Participants
+image::img11.png[]
+
+== iSchedule -- How it works
+
+=== Basic Concept
+
+* Provides the ability for users on
+different calendaring systems to
+schedule meetings with each other
+* Instantaneous freebusy lookups
+* Invites, replies sent as “messages”
+with delivery status immediately
+returned
+
+=== Can’t this be done today?
+
+* But I can do scheduling with my
+colleagues today!
+* True, but only people on the same
+server as you, or via some other
+communication process such as email
+or telephone.
+
+=== Design of iSchedule
+
+* Built on core internet technologies
+* Can be used with any type of
+calendar store (does not depend on
+CalDAV)
+
+[%unnumbered]
+image::img12.png[]
+
+.Organizer and Attendees on different systems
+image::img13.png[]
+
+.Sequence of diagrams showing freebusy.
+====
+.Freebusy response comes back immediately
+image::img14.png[]
+
+.Organizer sees freebusy for everyone. Adjusts for free time for everyone.
+image::img15.png[]
+====
+
+.Sequence of diagrams showing invites and replies.
+====
+.Organizer sends invite request to their server. Server sends the invite to each attendee’s server. Attendees see the invites when they next check the server.
+image::img16.png[]
+
+.Attendees reply to their server. Server sends the reply to the organizer’s server. Organizer sees the reply when they next check the server.
+image::img17.png[]
+====
+
+=== iSchedule Demonstration
+
+==== Two calendar users in different domains
+
+.iSchedule Demo Setup
+image::img18.png[]
+
+==== Four calendar users in different domains
+
+.iSchedule Demo Setup
+image::img19.png[]
+
+== Freebusy URL
+
+=== What is Freebusy?
+
+* A list of free and busy periods for a
+particular calendar user or resource
+* Primarily used for scheduling
+resources or meetings with other
+people
+* Time periods may be marked as
+** busy
+** free
+** busy unavailable (“out of office”)
+** busy-tentative
+
+=== Expressing Freebusy time
+
+* Most commonly as a RFC 2445
+VFREEBUSY object
+** a request for freebusy time,
+** a response to a request, or
+** a published set of busy time
+
+=== Sharing Freebusy
+
+* CalDAV Scheduling
+* iTIP/iMIP (email)
+* iCalendar .ics file
+* Freebusy URL (FBURL)
+
+=== Why FBURL?
+
+* Freebusy is LCD scheduling
+* FBURL is LCD Freebusy (or could be)
+* Easy
+* Outlook supports a form of FBURL
+* The market says FBURL is desirable
+and useful
+** tungle.com, timebridge.com,
+timetomeet.info, doodle.ch
+* Potentially bridge the divide between
+enterprise calendaring and
+** calendar/scheduling augmenters
+** standalone calendaring clients (no
+server)
+
+=== What we have done
+
+* Standardize/Normalize
+* Parameters -URI template
+* Error reporting within the HTTP
+protocol
+* Allow for non-authenticated or weakly
+authenticated service
+* Keep it simple (in its simplest form)
+*Outlook compatibility
+* Extend?
+** Discovery
+** Authentication
+** Provisioning
+** VAVAILABILITY
+*** provide a grouping of available
+time information over a specific
+range of time.
+
+=== How it works
+
+* The “Read URL” is used to get
+freebusy data for a user
++
+--
+http://www.example.com/freebusy/user1@example.com?start=20070901T000000-0800
+
+http://www.example.com/freebusy/user1@example.com
+--
+* returns VFREEBUSY object
+* The “Publish URL” is used by a client to
+upload freebusy data for a user
++
+--
+http://www.example.com/freebusy/user1@example.com
+
+http://www.example.com/freebusy?user=user1@example.com&token=xcsfdgetdh
+--
+
+=== What we will show you
+
+* Basic form FBURL
+** lookups - no publishing
+** Accessing multiple servers from the
+same clients
+** Comparison with server-server
+lookups
+
+=== Freebusy URL Demonstration
+
+==== Several clients retrieving freebusy information
+
+.Freebusy Demo #1 Setup
+image::img20.png[]
+
+==== Freebusy aggregation information
+
+.Freebusy Demo #2 Setup
+image::img21.png[]
+
+== Conclusion
+
+=== Wrap-up
+
+* We have demonstrated how progress
+is being made with key scheduling
+technologies
+* As with a lot of CalConnect work this
+is a very interactive process with
+specifications and implementations
+being worked on together
+* This ultimately provides for a better
+specification and interoperability
+
+=== CalDAV Scheduling
+
+* A new CalDAV scheduling draft with
+implicit scheduling support was
+recently published and now we are
+heavily testing that
+* Hope to complete this by end-2008
+
+=== iSchedule
+
+* Demonstrated basic scheduling message
+processing
+* Key elements of iSchedule still need to be
+developed:
+** Discovery (use SRV records in DNS)
+** Security - need input from security
+experts as to what model(s) to use
+* Hope to complete this by mid 2009
+
+=== Freebusy URL
+
+* Freebusy is LCD scheduling
+* Freebusy is soft-core calendaring
+* It is what we settle for, not what we
+want
+* But...Free/Busy is very, very useful
+* CalConnect will continue to develop
+FBURL
