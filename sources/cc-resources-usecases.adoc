@@ -1,0 +1,247 @@
+= Use Cases for Resources
+:docnumber: 0906
+:copyright-year: 2009
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2009-06-10
+:published-date: 2009-06-10
+:technical-committee: USECASE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Andrew Laurence
+:role: editor
+:email: alaurence@ucirvine.edu
+:fullname_2: Mimi Mugler
+:role_2: editor
+:email_2: mmugler@berkeley.edu
+:fullname_3: Guy Stalnaker
+:role_3: editor
+:email_3: jstalnak@wisc.edu
+:fullname_4: Ciny Joy
+:role_4: editor
+:email_4: ciny.joy@sun.com
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+[abstract]
+== Abstract
+
+This document lists use cases that utilize resources within the calendaring and scheduling application domain.
+
+[.preface]
+== Statements and Disclaimer
+
+This document is by The Calendaring and Scheduling Consortium. Permission is granted to potential members to
+reproduce and distribute this presentation within the member organization so long as the presentation is not
+altered in any way and the Consortium is acknowledged as the originator.
+
+Please send any changes or corrections to the document editors.
+
+== Introduction
+
+This document was created by the USECASE Technical Committee of the Calendaring and Scheduling
+Consortium. The document lists use cases that utilize resources within the calendaring and scheduling
+application domain. We realize that some of the use cases presented may include workflow or ideas beyond
+what is offered by current calendaring and scheduling applications.
+
+== Methodology
+
+The USECASE Technical Committee regularly met in conference call to discuss the use of resources in the
+calendaring and scheduling domain. When we decided to draft resource use cases we each chose a perspective
+from which to view the use of resources. One of us chose the role of a social worker in the medical profess
+while another chose the role of social worker in the justice/social services field while another chose the
+perspective of a business man working on a construction project. Other perspectives were also chosen. The
+resulting use cases were then organized by number and a category supplied for each use case.
+
+The categories selected for the use case organization reflect a grouping of resources into sets differentiated by
+type. Each of these categories touches on an area discussed by the Technical Committee over the course of our
+deliberations about resources in calendaring.
+
+. Person – People can properly be thought of as resources, especially given the knowledge and skills they
+have which may be unique to them or to the position they hold (e.g., project manager for a particular
+project).
+. Location – Rooms and places are a particularly important resource category and are presently found in
+nearly every major calendaring and scheduling product.
+. Equipment – Things or objects which can be scheduled (e.g., projectors, laptops, vans).
+. Material – Things necessary for a meeting that must be reserved or checked out (e.g., documents,
+personnel files, records).
+. Role – The term 'role' is used to cover attributes common to a collective from among the resource
+categories which can be used to schedule one or more from among the collective (e.g., fork lifts with a
+particular lifting capacity, waitresses, waiters, front desk clerks).
+. Other – Schedulable 'things' not covered by the other five categories (e.g., a staff in/out calendar).
+
+== Use Cases
+
+[cols=3,options=header]
+.Use Cases
+|===
+| Use Case | Resource Category | Number
+
+| 1. Schedule the beginning of a pilot for a set of equipment. | Equipment | 1
+| 2. Reserve Test checking and analysis equipment for test materials. | Equipment | 1
+| 3. Schedule demo equipment including prep time of equipment (e.g. large computer disk storage arrays for customer data). | Equipment | 1
+| 4. Orders food and prepares coffee for the number of people who accept a lunch invitation with the client. | Person | 1
+| 5. Frances is expecting a large shipment of widgets. She needs a forklift with a lifting capacity from their fleet of forklifts to handle moving the shipment from the trucks to a storage area. She creates an event and adds Forklift indicating that it needs to be able to handle lifting two ton pallets. The Forklift fleet manager assigns Fred to drive the forklift on the specified day by adding him to the event along with the needed Forklift No.4. | Equipment, role | 2
+| 6. Reserve tape recorder for police interview in Interview Room C. | location, equipment | 2
+| 7. Reserve video recording for client X interview in Interview Room A. | location, equipment | 2
+| 8. Schedules work with employee skill set (e.g. bulldozer operator)? who brings the equipment. | person, equipment | 2
+| 9. Schedules work with employees and a mid-sized crane (resource). | person, equipment | 2
+| 10. Meeting with client X to discuss present state of situation. | person, location | 2
+| 11. Trip to prison M to visit incarcerated parent requires first a meeting with some agency G to determine fitness for visit (or provide information relevant to visit -- expected behavior, limitations, etc.). | person, location | 2
+| 12. Meeting with family counselor and client with their family. | Person, location | 2
+| 13. Meeting with Halfway House abuse shelter agent Calvin about short-term placement of client X's family. | Person, location | 2
+| 14. Add to Staff In/Out resource calendar absence from office that afternoon. | Person, other |
+| 15. Meeting with client's Attorney Cynthia about client X's family situation. | person, location | 2
+| 16. Setting up meeting/responding to meeting (off blackberry or in office) -- sales follow up -- lunch meeting. | person, location | 2
+| 17. Mtg with supervisor about Person X in Room A | person, location | 2
+| 18. Schedules meeting with colleagues. | person, location | 2
+| 19. Has name of person to schedule for meeting - needs telephone number > email address [e.g., Jim supplies pipes, but all you have is a telephone number -- how can one schedule a meeting with him?). | person, location | 2
+| 20. Receives invitation to meet client at another site (travel required before and after event). | person, location | 2
+| 21. Needs to schedule four drainage experts for a return field inspection, but two of them do not use calendar systems. | person, location | 2
+| 22. Five colleagues are invited to a half-day meeting at a satellite location. They are not familiar with the satellite office, and the invitation's location text is only parsable in local (satellite) parlance. In addition, they may either take private cars (and be reimbursed for mileage) or a company van. They must select a mode of transportation and secure usable directions. | person, location | 2
+| 23. Schedules meeting with sub-contractors. | person, location | 2
+| 24. Schedules meeting with client and engineer in main conference room at the office (location). | person, location | 2
+| 25. Meeting with District Attorney Dennis about potential charges against client X's parent regarding client X's situation. | person, location | 2
+| 26. Meeting with Halfway House abuse shelter agent Danielle about finding apartment for client X's family. | person, location | 2
+| 27. Meet with Kaiser (HMO - pays for treatment) representative and patient at Kaiser facility. (Kaiser has an online appointment system for clients). | person, location | 2
+| 28. Receives verbal invitation to meet seismic expert at specific location on-site. | person, location | 2
+| 29. Meeting with psychiatrist Ann to discuss client X testing results and request Ann conduct her own evaluations. | person, location | 2
+| 30. Schedules meeting with colleague, company car and noise measuring equipment (field equipment). | person, equipment | 3
+| 31. Reserve Testing Room D and Testing Equipment 001 for client X testing -- add Andrew to proxy test. | person, location, equipment | 3
+| 32. Jack creates meeting with John and Jan in Room 3209. Jack needs a teleconferencing system, to allow his offsite colleague to participate. There are three resources added to the meeting: the room, the teleconferencing system, and the room setup monitor. | person, location, equipment | 3
+| 33. Paul works in User Services and reserves Van No. 2 for use. He creates the meeting, inviting Pamela in the Department of Finance (who is their local IT staff) and Priscilla (who is the Dept. Finance office manager so she can alert the individuals who will have their day disrupted by the installation), and the resource "FleetPrep???" so the vehicle can be prepped for use. There are two resources added to the meeting: the Fleet vehicle, Van No. 2 and fleetPrep???. | person, location, equipment | 3
+| 34. Amy creates meeting with Andy and Ann (local), and Alan (remote) in Room 3213. She needs a teleconferencing system, and video projection system, and a laptop equipped with remote conferencing software to allow Alan (who is their off-site colleague) to make a presentation. There are four resources added to the meeting: the room, the teleconferencing system, the video projection system, and the room setup monitor. | person, location, equipment | 3
+| 35. Medical social worker sets up intake interview with prospective patient and his/her family. Appointment time and meeting room sent out with invitation. Resources needed are meeting room and patient's medical records. | person, location, materials | 3
+| 36. Meeting with Police Officer Benjamin about initial officer response to client situation; request police report materials. | person, location, materials | 3
+| 37. Meeting with psychiatrist Ann to discuss Ann's evaluations and potential medical recommendation for drug therapies for client X, if indicated; request testing results. | person, location, materials | 3
+| 38. Meeting with Doctor Bonnie about client medical exam regarding client's Emergency Room visit following situation; request medical records. | person, location, materials | 3
+| 39. Medical social worker needs to find temporary housing for a patient's family (husband and two children). She reviews availability of local hotel rooms and on-site family housing and picks one that is available and contains adequate beds and a kitchenette.| person, location | 3
+| 40. A medical social worker for the bone marrow transplant unit is told by one of the unit's doctors that a patient has not responded to treatment and is not expected to live. The medical social worker looks for a hospice in the patient's home region (he is from a different area than the hospital). Issues to consider in selecting a hospice are availability, philosophy (religion-based?) if any, cost, contract or other payment agreement with patient's health insurance company, and ability to provide care needed with patient's particular condition. | person, location | 3
+| 41. A case manager for the bone marrow transplant unit needs to arrange a hospital-to-hospital transfer for an incoming patient within a particular time frame. Medical transportation via ambulance is needed. Ambulance service is available from several private companies. Issues to consider in selecting an ambulance are availability, whether the ambulance company services the two hospitals, which ambulance companies have a contract with the patient's health insurance company, and what particular medical care will be needed by the patient during the transfer. | person, location | 3
+| 42. A patient in the bone marrow transplant unit is doing well after treatment and is ready to released to his home. For some period of time, he will need to have home care visits from a qualified medical professional. Considerations in scheduling will include level of assistance needed (RN, LVN, physician's assistant?), what health insurance will pay for, and what care is actually needed (change of dressings, IV insertion/maintenance, etc.). | person, location | 3
+| 43. Shift/Retail scheduling (3 out of 10 cooks in weekday shift, 4 out of 10 on weekends) | person, location, role | 3
+| 44. Gracie wants to host a party, but she knows that her husband's colleague W.C. drinks so much gin that he wears a special coat with hidden bottles, as people never have enough; as a gracious host, she wants him to feel comfortable enough that he'll leave his coat behind. As a responsible host, she also knows she'll need a car and driver to get W.C. home; the driver must be capable of wrangling a sizable adult male. | person, location, equipment | 4
+| 45. Andrew needs to schedule a meeting for 14 people from disparate organizations, with an on-projector presentation. The 'big' room is booked, but the 'little' room is available. The big room has an in-ceiling projector, but the little room requires bringing in a portable unit. Andrew knows from experience that the little room will work, with an alternate chair layout and if folks get cozy. He also knows of an alternate room, in another building and owned by an external organization, which can easily accommodate the crowd and provide a projector; the third room has the advantage of better signage and more available/convenient parking. Andrew needs to determine if the "big" room is actually being used? Can I bump them to a different location? Is the portable projector available? Is the external room available? | person, location, equipment | 4
+|===
+
+[heading=terms and definitions,source=glossary]
+== Glossary
+
+=== Calendar
+
+A collection of events, tasks, journal entries, etc. A calendar could be the content of a person or
+resource's agenda; it could also be a collection of data serving a more specialized need. Calendars are the basic
+storage containers for calendaring information.
+
+[.source]
+<<rfc3283>>
+
+=== Calendar User
+alt:[CU]
+
+An entity (often a human) that accesses calendar information.
+
+[.source]
+<<rfc3283>>
+
+=== Calendaring
+
+An application domain that covers systems that allow the interchange, access and management of
+calendar data.
+
+=== CalConnect
+
+The Calendaring and Scheduling Consortium consisting of vendors and user groups interested in
+promoting and improving calendaring and scheduling standards and interoperability.
+
+=== Component
+
+A piece of calendar data such as an event, a task, or an alarm. Information about components is
+stored as properties of those components.
+
+[.source]
+<<rfc3283>>
+
+=== Event
+
+A calendar object that usually takes up time on an individual calendar. Events are commonly used to
+represent meetings, appointments, anniversaries, and day events.
+
+=== Free time search
+
+(Bounded) common free time. This is typically a search generated by an application to show
+time on a calendar that is available or open.
+
+=== Freebusy
+
+A database and/or listing of times when a potential attendee or resource is free or busy. Used when
+scheduling calendar events.
+
+=== iCalendar
+
+The Internet Calendaring and Scheduling Core Object Specification. An IETF standard (RFC 2445)
+for a text representation of calendar data (`VEVENT`, `VTODO`, `VALARM`, etc.).
+
+=== Instance
+
+When used with recurrences, an instance refers to an item in the set of recurring items.
+
+=== Invite
+
+To request the attendance of someone to a calendar event.
+
+=== Negotiation
+
+Resource conflict resolution. Negotiation is the process of resolving conflicts either
+programmatically or via direct communication with the participants and invitees of meetings and events.
+
+=== Notification
+
+. The action of making known, an intimation, a notice.
+. Reminder or alarm sent when any
+resource or parties interested in the resource need an indicator that some attention is required. Possible
+notification methods include email, paging, audible signal at the computer, visual indicator at the computer,
+voice mail, telephone.
+
+=== Organizer
+
+The originator of a calendar event typically involving more than one attendee.
+
+=== Property
+
+A description of some element of an component, such as a start time, title, or location. Properties can
+have parameters associated with them to modify or add to their meaning.
+
+=== Publish
+
+Make known publicly calendar information such as freebusy times.
+
+=== Reminders
+
+See {{Notification}}.
+
+=== Task
+
+A calendar object that is commonly used to represent work items.
+
+=== Text/calendar
+
+The MIME content type for encoding iCalendar objects. Example usage includes: email, web
+pages.
+
+[bibliography]
+== {blank}
+
+* [[[rfc3283, hidden(RFC 3283)]]]
+
+* [[[glossary, hidden(CC/R 0610)]]]
