@@ -1,7 +1,6 @@
 = Min-IOP (Minimum Interoperable Subset) Use Cases for Tasks (VTODO)
 :docnumber: 0701
 :copyright-year: 2007
-:copyright-holder: The Calendaring and Scheduling Consortium
 :language: en
 :doctype: administrative
 :edition: 1
@@ -12,7 +11,6 @@
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
-:data-uri-image:
 :fullname: Jeff McCullouch
 :affiliation: UC Berkeley
 :role: editor

@@ -1,7 +1,6 @@
 = January 2005 CalConnect Interoperability Test Scenarios
 :docnumber: 0501
 :copyright-year: 2005
-:copyright-holder: The Calendaring and Scheduling Consortium
 :language: en
 :doctype: administrative
 :edition: 1
@@ -12,7 +11,7 @@
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
-:data-uri-image:
+
 
 .Foreword
 

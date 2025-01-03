@@ -11,7 +11,6 @@
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
-:data-uri-image:
 :fullname: Chris Dudding
 :role: editor
 :affiliation: Symbian Ltd

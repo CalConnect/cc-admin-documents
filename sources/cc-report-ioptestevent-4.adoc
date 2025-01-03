@@ -1,7 +1,6 @@
 = July 2004 CalConnect Interoperability Test Report
 :docnumber: 0403
 :copyright-year: 2004
-:copyright-holder: The Calendaring and Scheduling Consortium
 :language: en
 :doctype: administrative
 :edition: 1
@@ -12,7 +11,7 @@
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
-:data-uri-image:
+
 
 .Foreword
 

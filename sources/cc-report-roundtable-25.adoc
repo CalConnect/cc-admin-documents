@@ -11,7 +11,7 @@
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
-:data-uri-image:
+
 
 .Foreword
 The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit

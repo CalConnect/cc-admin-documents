@@ -1,7 +1,6 @@
 = Mobile Calendar Interoperability Test Suite
 :docnumber: 0706
 :copyright-year: 2008
-:copyright-holder: The Calendaring and Scheduling Consortium
 :language: en
 :doctype: administrative
 :edition: 1.1
@@ -12,7 +11,6 @@
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
-:data-uri-image:
 :fullname: Chris Dudding
 :affiliation: Symbian Ltd
 :role: editor

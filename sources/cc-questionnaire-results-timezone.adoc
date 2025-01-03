@@ -1,7 +1,6 @@
 = Report on TIMEZONE Questionnaire Results
 :docnumber: 0510
 :copyright-year: 2005
-:copyright-holder: The Calendaring and Scheduling Consortium
 :language: en
 :doctype: administrative
 :edition: 1
@@ -12,7 +11,6 @@
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
-:data-uri-image:
 :fullname: Cyrus Daboo
 :role: editor
 
