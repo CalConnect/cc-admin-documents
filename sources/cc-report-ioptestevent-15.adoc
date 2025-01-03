@@ -1,0 +1,356 @@
+= February 2008 CalConnect Mobile Interoperability Test Report
+:docnumber: 0803
+:copyright-year: 2008
+:language: en
+:doctype: administrative
+:edition: 2
+:status: published
+:revdate: 2008-04-09
+:published-date: 2008-04-09
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Patricia Egen
+:role: author
+:fullname_2: Mike Zhou
+:role_2: author
+:fullname_3: Tomas Hnetila
+:role_3: author
+:fullname_4: David Coulter
+:role_4: author
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+This was the first Mobile Calendar Interoperability testing event held by Calconnect. There was a
+predetermined set of objects to test. It was determined early one that the testing document was quite
+comprehensive and would never be completed in the two days we had for interop testing. Therefore, the
+testing parties elected to choose several items from each testing group for interoperability testing. You
+can find the full test suite at the following url: http://www.calconnect.org/ioptesting.shtml
+
+Two servers and one phone device were tested. For purposes of anonymity, the names of the vendors
+are not referenced in this document.
+
+== Server 1 - Test Results with device vendor
+
+*Part I – Calendar Tests*
+
+=== Events - Server to Device
+
+==== Create an Event with a Reminder
+
+OK except for:
+
+* Server to client alarm issue: Server created an alarm on device side regardless if server
+event has an alarm. This is the default behavior by design and alarms can be turned off
+by changing server configurations.
+* Truncation issue: On device modify the location only. When sync’d back to server, the
+location was restored with the long original value. The un-modified title was truncated on
+server. Seems to be a bug on server. Need more investigation.
+
+==== Access Level and Priority
+
+Device does not support priority.
+
+==== Special Characters From Server
+
+OK
+
+==== Multi-Byte Characters From Server
+
+OK
+
+==== Deletion
+
+OK
+
+=== Events - Device to Server
+
+`X-PHONEOWNER` issue in device vCalendar:
+
+Device in some cases put `X-PHONEOWNER` as one parameter of the attendee indicating that the
+attendee is the phone owner. `X-PHONEOWNER` doesn’t have a value and this breaks the server parser.
+Server should handle this.
+
+[source%unnumbered]
+----
+VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+UID:20080204T191415Z-405000-H2_Board
+SUMMARY;ENCODING=QUOTED-PRINTABLE;CHARSET=UTF-8:Special=20chars=20=C6=92
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE;CHARSET=UTF-8:=C2=A2=20=C2=A6=20&
+DTSTART:20080204T191200Z
+DTEND:20080204T194200Z
+X-EPOCAGENDAENTRYTYPE:APPOINTMENT
+CLASS:PUBLIC
+LOCATION;ENCODING=QUOTED-PRINTABLE;CHARSET=UTF-8:=C2=A9
+SEQUENCE:-1
+X-METHOD:NONE
+ATTENDEE;ROLE=ORGANIZER;STATUS=NEEDS ACTION;RSVP=NO;EXPECT=FYI;XPHONEOWNER:
+name@server.com
+LAST-MODIFIED:20080204T191415Z
+PRIORITY:0
+STATUS:CONFIRMED
+X-MOBILEOS-LUID:11
+END:VEVENT
+END:VCALENDAR
+----
+
+[source%unnumbered]
+----
+Exception=vendor.ocs.tm.icalendar.exception.ICalParseException: '=' expected after "XPHONEOWNER"(Parameter=X-PHONEOWNER)(Parameter in comp=VEVENT.prop=ATTENDEE)
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseSubComponent(VCalParser.java:232) 
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseSubComponent(VCalParser.java:203)
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseComponent(VCalParser.java:148)
+at vendor.ocs.protocols.oma.ds.connector.calendar.CalendarUtil.stringToVCalendar(CalendarUtil.java:225)
+at vendor.ocs.protocols.oma.ds.connector.calendar.EventsStore.initIncomingEvent(EventsStore.java:1399)
+at vendor.ocs.protocols.oma.ds.connector.calendar.EventsStore.addData(EventsStore.java:2259)
+at vendor.ocs.protocols.oma.ds.connector.calendar.EventsStoreConnector.applyClientDataOperationById(EventsStoreConnector.java:201)
+at vendor.ocs.protocols.oma.ds.connector.calendar.CalendarStoreConnector.applyClientDataOperationById(CalendarStoreConnector.java:129)
+at vendor.ocs.protocols.oma.ds.protocol.executor.AddExecutor.execute(AddExecutor.java:312)
+at vendor.ocs.protocols.oma.ds.protocol.executor.CmdExecutor.executeSubCommands(CmdExecutor.java:81)
+at vendor.ocs.protocols.oma.ds.protocol.executor.SyncExecutor.execute(SyncExecutor.java:214)
+at vendor.ocs.protocols.oma.ds.protocol.DsProtocolHandler.processMessage(DsProtocolHandler.java:720)
+at vendor.ocs.protocols.oma.RequestProcessor.processRequest(RequestProcessor.java:334)
+at vendor.ocs.protocols.oma.transport.servlet.OmaServlet.doPost(OmaServlet.java:103)
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:763)
+at javax.servlet.http.HttpServlet.service(HttpServlet.java:856)
+at com.evermind.server.http.ResourceFilterChain.doFilter(ResourceFilterChain.java:64)
+at vendor.security.jazn.oc4j.JAZNFilter$1.run(JAZNFilter.java:396)
+at java.security.AccessController.doPrivileged(Native Method)
+at javax.security.auth.Subject.doAs(Subject.java:396)
+at vendor.security.jazn.oc4j.JAZNFilter.doFilter(JAZNFilter.java:415)
+at com.evermind.server.http.ServletRequestDispatcher.invoke(ServletRequestDispatcher.java:621)
+at com.evermind.server.http.ServletRequestDispatcher.forwardInternal(ServletRequestDispatcher.java:368)
+at com.evermind.server.http.HttpRequestHandler.doProcessRequest(HttpRequestHandler.java:866)
+at com.evermind.server.http.HttpRequestHandler.processRequest(HttpRequestHandler.java:448)
+at com.evermind.server.http.AJPRequestHandler.run(AJPRequestHandler.java:302)
+at com.evermind.server.http.AJPRequestHandler.run(AJPRequestHandler.java:190)
+at vendor.oc4j.network.ServerSocketReadHandler$SafeRunnable.run(ServerSocketReadHandler.java:260)
+at com.evermind.util.ReleasableResourcePooledExecutor$MyWorker.run(ReleasableResourcePooledExecutor.java:303)
+at java.lang.Thread.run(Thread.java:595)
+Caused by: vendor.ocs.tm.icalendar.exception.ICalParseException: '=' expected after "XPHONEOWNER"(
+Parameter=X-PHONEOWNER)
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseParameters(VCalParser.java:407)
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseSubComponent(VCalParser.java:230)
+... 29 more
+Caused by: vendor.ocs.tm.icalendar.exception.ICalParseException: '=' expected after "XPHONEOWNER"(Parameter=X-PHONEOWNER)
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseParameters(VCalParser.java:407)
+at
+vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseSubComponent(VCalParser.java:230)
+... 29 more
+Caused by: vendor.ocs.tm.icalendar.exception.ICalParseException: '=' expected after "XPHONEOWNER"
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseParameters(VCalParser.java:379)
+... 30 more
+----
+
+==== Create an Event with a Reminder
+
+OK except for:
+
+* Client to Server alarm issue: Server didn’t create an alarm on server side regardless if
+device event has an alarm. Device did include alarm in the vCalendar, however importing
+the vCalendar to a calendaring client supporting vcalendar didn’t result in an alarm either.
+Need more investigation. Following is the vCalendar from device.
+
+[source%unnumbered]
+----
+VCALENDAR
+VERSION:1.0
+BEGIN:VEVENT
+UID:20080204T184223Z-263000-H2_Board
+SUMMARY:CalConnect Day 2
+DESCRIPTION:The Mike and Dave Show!
+DTSTART:20080205T160000Z
+DTEND:20080206T020000Z
+X-EPOCAGENDAENTRYTYPE:APPOINTMENT
+CLASS:PUBLIC
+LOCATION:Sun Microsystems
+SEQUENCE:-1
+X-METHOD:NONE
+AALARM;TYPE=X-EPOCSOUND:20080205T155000Z;;0;0x100048ac0x00000205
+LAST-MODIFIED:20080204T184223Z
+PRIORITY:0
+STATUS:CONFIRMED
+X-MOBILEOS-LUID:10
+END:VEVENT
+END:VCALENDAR
+----
+
+==== Access Level and Priority
+
+* can only be done if device supports setting an access level or priority
+* Device not supporting priority.
+
+==== Special Characters From Server
+
+OK
+
+==== Multi-Byte Characters From Server
+
+* Device can’t display the multi-byte characters (no font, normal). Chars were sent back to server
+correctly when modified.
+
+==== Deletion
+
+OK
+
+=== All Day Events - Server to Device
+
+==== Create all-day event in same time zone
+
+OK
+
+==== Create all-day event to device in different time zone
+
+OK
+
+==== Create a Single Instance All Day Event with Reminder
+
+OK except for truncation issue:
+
+* Sync server day event to device, title and location were truncated. Modify title on device and
+sync, event remains same on server and device change is rolled back. Modify location on device,
+changes are propagated to server but title is also truncated on server. Seems to be a bug on
+server. Need more investigation.
+
+==== Create an anniversary all-day event
+
+Recurrence issue: Server only sends one instance of the event to device. This was because that
+server splits the recurrence and only sends the instances within sync range to device.
+
+==== All-day event on last day of month & last day of year check
+
+OK
+
+==== Create a Single Instance Holiday with Reminder
+
+Not supported by device.
+
+==== Update an all-day event on server and synchronize back to mobile device in same time zone
+
+OK
+
+==== Update an all-day event on server and synchronize back to a device in different time zone
+
+OK
+
+==== Create a Single Instance Multi-day Day Event
+
+OK
+
+==== Remove Single Instance Meeting, Day Event, and Holiday
+
+OK
+
+=== All Day Events - Device to Server
+
+==== Create an all-day event and synchronize to a server in same time zone
+
+OK
+
+==== Create an all-day event and synchronize to a server in different time zone
+
+OK
+
+==== Create a Single Instance All Day Event with Reminder
+
+OK
+
+==== Create an anniversary all-day event
+
+OK
+
+==== Update an all-day event on mobile device and synchronize back to server in same time zone
+
+OK
+
+==== Update an all-day event on mobile device and synchronize back to a server in different time zone
+
+OK
+
+==== Create a Single Instance Multi-Day Day Event
+
+OK
+
+==== Remove Instance Meeting, Day Event, Holiday
+
+OK
+
+=== Repeating Entries
+
+This section was not tested extensively but the basics worked. The server splits the recurrence and only
+sends the instances within sync range to device.
+
+=== Scheduling
+
+==== Create Entry as owner with Attendees from Server
+
+OK except for:
+
+* Owner email wrong: owner email was name@vendor.com, however it was shown as
+name@othername.com. Seems to be server bug.
+* Owner email was not first on the attendee list. Need to find out whether it is server or client
+bug.
+* Client doesn’t support attendance status. Server should put the info into the meeting
+description as is done for Windows Mobile Smartphone.
+
+== Server 2 and device Testing Comments
+
+=== Device vendor comments
+
+An attempt was made to interoperate between the device and our servers but this proved to not be very
+fruitful at this event. The device vendor did advise the server vendor on the one defect found for their
+server: Phone was in different time zone from server. Created a contact on the phone with a birthday,
+adding birthday to the phone calendar. Synced to server. Contact on server had the birthday on the
+correct day but the calendar on the server had the birthday on the wrong day, due to time zone
+adjustment.
+
+Also, a mobile OS contacts (which was the area the device vendor was testing informally) do not match
+up to other servers' format for contact data (e.g.a calendaring client supporting vCalendar) especially
+where differentiations like Mobile (w) and Mobile (h) are concerned.
+
+=== Server 2 Testing Comments
+
+Mobile IOP test suite is very comprehensive. It is very difficult to do all tests.
+
+* week GSM signal at IOP place - difficult to test
+* new device is disabled by default in our Server. It was necessary to enable it.
+* DirectPUSH fails after couple of minutes with, it works fine with different device
+** we don't know yet if it is client or server issue
+* Birthday problem:
+.. create new Contact with birthday and let device to create event in your calendar
+.. synchronize it to server
+.. open Calendar in client (EST) which is in different timezone than mobile device (GMT)
+** Result: birthday is one day early
+*** we are not sure, if it is correct or not
+*** general question: how to present all day events in different timezones
+
+== Summary
+
+The first mobile interop testing was a success. We learned a couple of things. First, we need to ensure
+we are located in a facility that has good cell coverage. The room we occupied had occasional issues
+with cell phone coverage. The best approach would be to test rooms we will be utilizing prior to starting
+the event so we can ensure we have adequate coverage.
+
+The other thing we determined was the test scenario document has too many items to test in two days.
+We are not even sure we can test everything within three days. What was done this time was the
+vendors chose to test specific items from each group in an effort to try to cover as much as possible. For
+future testing, we may choose to break down the testing into specific areas. In other words, we may test
+section one during one event, section two during the next event, and so on. Or we may determine which
+items are the most critical to testing, and focus on them during the next events. This will be decided
+before the next Mobile interoperability test event is held.
+
+Our thanks to the participating vendors.
+
+Respectfully submitted by Pat Egen, CalConnect Interop Manager.
