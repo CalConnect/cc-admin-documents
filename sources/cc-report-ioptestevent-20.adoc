@@ -1,0 +1,355 @@
+= February 2009 CalConnect Interoperability Test Report
+:docnumber: 0902
+:copyright-year: 2009
+:language: en
+:doctype: administrative
+:edition: 2
+:status: published
+:revdate: 2009-04-14
+:published-date: 2009-04-14
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Patricia Egen
+:role: author
+:fullname_2: Nate Barry
+:role_2: author
+:fullname_3: Gordon Connelly
+:role_3: author
+:fullname_4: Cyrus Daboo
+:role_4: author
+:fullname_5: Jong Yoon Lee
+:role_5: author
+:fullname_6: Mu Zhang
+:role_6: author
+:fullname_7: Bruce Wiedemann
+:role_7: author
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+The February 2009 CalConnect interoperability testing event was held at the Microsoft campus at
+Redmond, Washington. Participants of the testing event used predetermined test scenarios. Rather than
+post the full scenarios in this document, they can be found on the CalConnect website at the following
+URL: http://www.calconnect.org/ioptesting.shtml.
+
+The documents used in this testing event were the CalConnect CalDAV Matrix for Draft 08, in particular
+the scheduling section and an iCalendar/iMIP/iTIP testing matrix. Summaries and specific findings and
+issues found are noted in this document.
+
+=== Participants
+
+[cols=3]
+.Participants
+|===
+| Organization | Participants | Versions Tested
+| Apple | Cyrus Daboo +
+Wilfredo Sanchez +
+John Drummond +
+Red Dutta | iCal Server and client - OS X 10.5.3 +
+iCal client 3.03
+| Entourage | Mu Zhang | Entourage EWS Beta (2008)
+| Google | Peter Colijn | Google CalDav server
+| IBM | Nate Barry | Lotus Domino 8.5/Lotus Notes 8.5
+| Microsoft | Bruce Wiedemann +
+Brian Bishop | Exchange 14 and Outlook 2007 w/Beta Service Pk
+| PeopleCube | Kellie Hunter +
+Gordon Connelly | Meetingmaker V8.8
+| Yahoo/Zimbar | Jong Yoon Lee | Zimbra Server pre 5.0.7
+| CalConnect Reps | |
+| Interop Manager +
+Logistics | Pat Egen +
+Dave Thewlis |
+|===
+
+== Participant Comments and Findings
+
+=== CALDAV Testing
+
+==== Vendor 1
+
+Vendor 1 tested both client and server products. On the server side we tested CalDAV client interactions
+as well as iMIP scheduling out from the server. Various issues were found and fixed.
+
+On the client side, CalDAV server testing was done and various issues discussed. The client also did
+iMIP testing with other clients and a few issues were found, and follow-ups after the event have
+happened.
+
+==== Vendor 2
+
+Vendor 2 was happy to test with some new server/clients. We did the basic client to client iCalendar
+testing. We do see some issues with different clients. It is good we’ve discussed with each product
+vendor and we’ve understood all the root causes of the issues.
+
+General issues:
+
+. Sequence number: Different design on sequence number in Cancellation or update caused
+the update or cancellation not recognized well.
+. Cancellations are not recognized by different clients due to varied reasons
+. `RDATE` issue. Vendor 2 doesn’t support `RDATE`.
+
+=== Detailed Results
+
+==== Vendor 1
+
+Issues:
+
+. Vendor 1 calendar server will send duplicate update when organizer receives responses.
+i.e. the server considers the meeting is changed when responses are received.
+. The cancellation for single occurrence in a series has the wrong date value (always points
+to the first occurrence of the series) in the “When” field and Body text. The iCalendar
+actually has the correct value and it can remove the correct occurrence from calendar.
+
+==== Vendor 3
+
+We did good tests with Vendor 3 this time.
+
+Issues:
+
+. All Vendor 3’s cancellations, including cancellations for single meeting, for series or for
+occurrence in series, are not recognized in Vendor 2.
+.. The root cause is these cancellations do not have “`ATTENDEE`” section in the iCal.
+Vendor 2 requires this for any meeting message.
+. All Vendor 2’s cancellations, includes cancellation for single meeting, recurring series, or
+occurrence in series, are interpreted as “Update” in Vendor 3.
+.. The root cause is Vendor 2 doesn’t have “`STATUS: CANCELLED`” in the
+cancellation message. Notes require this section and the value has to be
+`CANCELLED`.
+. Vendor 3 uses `RDATE` for modified occurrence and in updating series.
+.. Vendor 2 doesn’t support `RDATE`. The only issues happening now is Vendor 2
+couldn’t interpret Vendor 3’s update to series. The original invite to series or
+update to modified occurrence are good.
+. Vendor 2’s update to single occurrence of the series is not recognized correctly in Vendor
+3’s application:
+.. This is because Vendor 2’s initial `SEQ` for such update is from 0. In Vendor 2
+design, the `SEQ` for modified occurrence is calculated separately from Series’
+`SEQ`.
+. Counter messages from Vendor 3 do not have Attendee status set to “Tentative”.
+.. Vendor 2 doesn’t support Counter message. It only changes the Attendee status
+according to the value set in the message. iCalendar generated in Vendor 3’s
+Counter message has “Needs-Action” for this field.
+. Vendor 2’s attachment in meeting messages are not shown up in Vendor 3.
+.. This seems to be a Vendor 3 bug so far.
+
+==== Vendor 8
+
+Issues:
+
+. All Vendor 2’s cancellations, includes cancellation for single meeting, recurring series, or
+occurrence in series, do not work in Vendor 4.
+.. This is because Vendor 4 requires the `SEQ` number increased in the
+Cancellation. Vendor 4 is planning to fix this.
+. Vendor 4’s cancellations for series or for occurrence in series do not work in Vendor 2.
+.. The root cause is these cancellations do not have “`ATTENDEE`” section in the
+iCal. Vendor 2 requires this for any meeting message.
+.. Vendor 4 has a bug here since Cancellation for single meeting does have this
+section. Vendor 4 is going to investigate this.
+. Vendor 4 does not increase sequence number for informational update
+.. This shows an Vendor 2 bug here: Vendor 2 treats all meeting invites/updates
+with `SEQ=0` as new invites, thus it changes the banner for previous
+invites/updates.
+.. Vendor 4 also treats changing “End time” of meeting without changing Start time
+as informational update.
+
+==== Vendor 5
+
+Our testing effort was minimal this time around due to issues involving the subscription method and URL
+we were using to configure the Vendor 1’s client and the Vendor 6 client.
+
+We were able to take this issue back with us to discuss with our engineering team and now have a better
+understanding of the blocker issues and have corrected the problem.
+
+To help continue our testing effort, we are looking to take advantage of the virtual environments available
+and will work toward setting up an environment to share with others in the group.
+
+We are looking forward to the next testing session as we will bring in a more robust servlet for testing.
+
+==== Vendor 6
+
+Here's the result of testing. We were using our home brewed CalDAV client against the following servers:
+
+* Vendor 1 CalDAV Server
+* Vendor 4 CalDAV server
+
+=== Tests Performed
+
+The following tests were done against all the servers:
+
+* authentication using HTTP basic auth
+* `PROPFIND` on principal url
+* creating new non-recurring events
+* modifying non-recurring events (start/end time, summary, description)
+* creating new recurring events
+* creating an exception to recurring events
+
+Vendor 1 and Vendor 4 servers passed all the tests.
+
+=== iCalendar Testing
+
+==== Vendor 3
+
+Overall we were pleased with the amount of testing and with the results of the testing. Vendor 2 and
+Vendor 6 testing had never been done previously and was more successful than would have expected.
+While there was only small progress made since the last test event between Vendor 3 and Vendor 1 and
+Vendor 7, we certainly pinned down some specific problems that we can address in coming releases
+which made this event very valuable.
+
+Notes on specific vendors:
+
+Vendor 3:
+
+* Cancellations to some clients are not honored - likely due to no `ATTENDEE` listed on
+cancellation. Notes to investigate and address.
+* Investigate being lenient of missing `STATUS:CANCELLED` on cancellations coming to us.
+* We will make an attempt to improve user experience around receiving series
+updates/reschedules.
+* We will consider sending out an alternative block even when sending simplified MIME to provide
+richer experience for some clients.
+* Overaggressive name matching caused some response tracking errors
+
+Vendor 7a:
+
+* No major surprises.
+* We do not implement RDATEs on invites/updates/reschedules. Now (incorrectly) says 'not a
+valid iCal file'.
+* Does not handle rich content in description.
+* There was a bug found with counter-proposals of a single instance of a repeat set.
+* Comments ARE shown when they come from iCalendar - This has improved since October.
+* Cancel all somewhat worked accidentally via corruption. This is certainly livable but not ideal.
+* There seems to be a display issue with original time on counter-proposals
+* Name matching problems cause response tracking errors
+
+Vendor 7b:
+
+* Vendor 3 worked largely to the expected extent... no major surprises.
+* Does not implement ``RDATE``s on invites/updates/reschedules. They now (incorrectly) say 'not a
+valid iCal file'.
+* Does not handle rich content in description.
+* Cancellations do not work. Both Vendor 1 and Vendor 7 have plans to address.
+* Counters are not handled correctly by Vendor 3. Investigation needed.
+* Acceptance notice didn't seem to come
+* Decline of a counter-proposal from Vendor 3 was not handled.
+* Name matching problems cause response tracking errors
+* Cosmetic issues:
+** Does not append 'rescheduled' to a rescheduled meeting.
+** There is timezone munge in the body showing incorrect timezone, but it comes through
+fine otherwise.
+
+Vendor 6:
+
+* This testing was very successful even for complicated issues. Good job!
+* Reschedules of a single instance need to increment sequence number. Vendor 6 to address.
+* Questions on why some meetings show plain text and some show rich content – Vendor 6 to
+investigate
+* Responses from Vendor 3 do not show any body – they will address by including an alternative
+block even when simplifying MIME.
+* Does not implement counter-proposals
+
+Vendor 1:
+
+* Still sends ics attachments rather than actual workflow. Some clients (Vendor 4) have hacks to
+treat this like workflow, but it is not valid. MIME edits to make these ics attachments is minimal,
+and Vendor 1 is taking these changes back to see if they can implement, although this might be
+difficult due to limited Mail APIs.
+* Rich text is not handled by Vendor 1 Mail
+* Vendor 1 mail loses attachments from Vendor 3
+* Vendor 3 does not handle Vendor 1's inline or URI attachments – Vendor 1 to investigate
+* Cancellations from Vendor 1 do not show as such in Vendor 3 (`STATUS:CANCELLED` problem).
+Actions by Vendor 3 and Vendor 1 planned.
+* Cancellations from Vendor 3 do not show as such in Vendor 1. This is likely a bug with
+`ATTENDEE` not specified.
+* Vendor 1 was not tested very much beyond this as working with the attachments is difficult.
+
+Vendor 1 CalDAV:
+
+* This is only one way as one cannot invite an Vendor 1 CalDAV user to a meeting (this uses iCal)
+* Cancellations from Vendor 1 do not show as such in Notes (`STATUS:CANCELLED` problem).
+Actions by Vendor 3 and Vendor 1 planned.
+* Attachments from Vendor 1 are not working with Vendor 3 - Vendor 1 to investigate.
+* Vendor 3 and Vendor 1 will meet in a month or so to retest some scenarios as server problems
+stopped testing prematurely and because we have some bugs to fix.
+
+Vendor 2:
+
+* Vendor 2 testing worked fairly well, with most problems encountered inherited from Outlook.
+* Vendor 2 does not implement RDATEs on invites/updates/reschedules and this causes major
+data loss.
+* Vendor 2 does not handle rich content in description.
+* Cancellations from Vendor 2 do not show as such in Vendor 3 (`STATUS:CANCELLED` problem).
+Actions by Vendor 3 and Vendor 2 planned.
+* Cancellations from Vendor 3 do not show as such in Vendor 2. This is likely a bug with
+`ATTENDEE` not specified.
+* Seem to have a problem with Vendor 2 attachments - Vendor 3 to investigate.
+* Counters are not implemented.
+* Updates/Reschedules from Vendor 2 fail. I don’t have the details of this written down but I
+believe that this was a problem where Vendor 2 did not update the sequence number.
+
+==== Vendor 7
+
+Since this was our first real experience with CalConnect, we did not really have specific testing goals, but
+our focus was to get accounted with the people and products that were attending CalConnect. It was a
+real pleasure to meet all the people we got accounted with through the interoperability testing event. It
+was also good to get a better understanding of many of the clients customers will be using to interoperate
+with our application.
+
+We really look forward to ongoing interactions with everyone we worked with through CalConnect. Below
+are notes I took on our interaction with specific vendors:
+
+Vendor 3:
+
+* On single instance items, we are not showing the time zone for the item sent from another time zone. It is
+the correct time, but only shows the local time zone. (known issue)
+* When Vendor 3 changes the time of a meeting, the subject in our client connect through our server
+changes prepends Rescheduled, and the direct pop client does not put anything extra in the subject.
+* Auto Configuring a Vendor 8 profile through our application, connected with POP. It connected as IMAP.
+(investigating)
+* Default setting for meeting processing for Vendor 9 POP is turned off. I need to confirm this is expected
+for POP. (investigating)
+* Default setting on Vendor 8 POP is to decline on propose new time. I need to confirm this is expected for
+POP. (investigating)
+
+Vendor 1:
+
+* Meeting request from Vendor 1 is not recognized as meeting requests and must be processed by opening
+.ics file which may or may not cause some of the other issues below. These cases all need to be
+confirmed with another client or once this issue is fixed.
+* Clicking Accept on ICS attachment for updated informational item does not send acceptance. Since it
+should be informational, we do not send an acceptance, but the buttons should not show up on
+informational update.
+* Informational update does not show as informational.
+* Decline an instance then receive an update for a new time on declined instance, and client does not
+prompt to send an acceptance.
+* Receiving a meeting update with attendee change where someone else is added, I am prompted to
+Accept. I would expect this to be informational.
+* Closing recurring ICS attachment prompts me to save on meeting request in inbox. This does not repro
+for single instance ICS file.
+* On meeting Cancellation, the processing of the cancellation removes the meeting from the calendar
+without clicking the Remove from calendar button.
+* Remove from Calendar on our server account on cancellation from Vendor 1 does not remove any
+instance from my calendar. This also happens when sent from Vendor 1 client. It did the right thing when
+sent from the server, but when sent from Vendor 1 it does not.
+* When our client accepts a Vendor 1 recurring meeting, the acceptance contains an attachment when
+viewed with Vendor 1’s client.
+
+Vendor 2:
+
+* All interoperability cases we tried in the test event worked as expected.
+
+== Summary
+
+This Interop showed continued improvement in iCalendar interoperability. On the CalDAV side of testing,
+several issues regarding Cancellations of calendar events showed up during testing. This should be an
+area of focus at the next Interop session.
+
+Our thanks to all participants and contributors to this document.
+
+Respectfully submitted by Pat Egen, CalConnect Interoperability OP Testing Manager
