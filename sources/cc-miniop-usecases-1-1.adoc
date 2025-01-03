@@ -1,7 +1,6 @@
 = Min-IOP (Minimum Interoperable Subset) Use Cases
 :docnumber: 0601
 :copyright-year: 2006
-:copyright-holder: The Calendaring and Scheduling Consortium
 :language: en
 :doctype: administrative
 :edition: 1.1
@@ -12,11 +11,9 @@
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
-:data-uri-image:
 :fullname: Jeff McCullouch
 :affiliation: UC Berkeley
 :role: editor
-:toclevels: 4
 
 .Foreword
 

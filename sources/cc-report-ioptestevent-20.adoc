@@ -11,7 +11,6 @@
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
-:data-uri-image:
 :fullname: Patricia Egen
 :role: author
 :fullname_2: Nate Barry

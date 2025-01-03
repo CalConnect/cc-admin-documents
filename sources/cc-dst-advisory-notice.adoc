@@ -1,7 +1,6 @@
 = DST Advisory Notice
 :docnumber: 0514
 :copyright-year: 2005
-:copyright-holder: The Calendaring and Scheduling Consortium
 :language: en
 :doctype: advisory
 :edition: 1
@@ -12,7 +11,6 @@
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
-:data-uri-image:
 :imagesdir: images/overview-0508
 
 .Foreword
