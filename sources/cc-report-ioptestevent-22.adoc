@@ -1,0 +1,185 @@
+= October 2009 CalConnect Interoperability Test Report
+:docnumber: 0911
+:copyright-year: 2009
+:language: en
+:doctype: administrative
+:edition: 2
+:status: published
+:revdate: 2009-11-24
+:published-date: 2009-11-24
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Patricia Egen
+:role: author
+:fullname_2: Gordon Connelly
+:role_2: author
+:fullname_3: Cyrus Daboo
+:role_3: author
+:fullname_4: Michael Douglass
+:role_4: author
+:fullname_5: Jon Drummond
+:role_5: author
+:fullname_6: Tomas Hnetila
+:role_6: author
+:fullname_7: Ciny Joy
+:role_7: author
+:fullname_8: Andrew McMillan
+:role_8: author
+:fullname_9: Arnaud Quillaud
+:role_9: author
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+The October 2009 CalConnect interoperability testing event was held at the Apple campus at Cupertino,
+California. Participants of the testing event used predetermined test scenarios. Rather than post the full
+scenarios in this document, they can be found on the CalConnect website at the following URL:
+http://www.calconnect.org/ioptesting.shtml.
+
+The documents used in this testing event were the CalConnect CalDAV Matrix for RFC4791, in particular
+the scheduling section and an iCalendar, iMIP and iTIP testing matrix. Summaries and specific findings
+and issues found are noted in this document.
+
+A small amount of initial CardDAV testing was done this event as well. Not everyone supports this
+protocol yet, but those that did performed some testing.
+
+=== Participants
+
+.Participants
+|===
+| Organization | Participants | Versions Tested
+| Apple | Cyrus Daboo +
+Jon Drummond +
+Morgen Sagen +
+Jeff Cathers | iCal Server and client - OS X 10.6.1 +
+Apple iCal 4.0 (SnowLeopard)
+| DaviCal (observer) | Andrew McMillian | DaviCal CalDAV server
+| Kerio | Tomas Hnetila | Kerio MailServer 6.7.2 & Apple iCal Server
+| RPI | Michael Douglass | Bedework
+| PeopleCube | Kellie Hunter +
+Gordon Connelly | Meetingmaker V8.8
+| Sun | Ciny Joy +
+Arnaud Quillaud | CalDAV Server and CalDAV Mobile Client
+| CalConnect Reps | |
+| Interop Manager + 
+Logistics | Pat Egen +
+Dave Thewlis |
+|===
+
+== General Findings
+
+The following are general observations noted during CalDAV testing. This is a public document; therefore
+references to specific vendors are removed. The purpose of the observations is to show the type of
+errors seen or experienced.
+
+iMip had an issue related to "+" addressing used by one vendor. A vendor fix is required.
+
+Delegate expansion in one application is significantly different from an earlier version of the same
+application and server work is needed to accommodate those differences.
+
+One vendor tested the ability to federate free/busy information from a server and it was successful after
+the vendor added an additional configuration item to allow free/busy information to be accessed without
+authentication. In a normal installation of the vendor’s application, the freebusy URL is authenticated and
+access to a user's freebusy information requires the CalDAV:read-free-busy privilege.
+
+iMIP compatibility testing by one vendor noted REPLY is not send to Reply-To: address but to From:
+address so server doesn't recognize it. Client doesn't see the invitation on server
+
+The CalDAV schedule-inbox-URL and schedule-outbox-URL are being returned incorrectly to one client.
+They appear like this:
+
+* `<c:schedule-inbox-URL>/fullcalendars/iop.test.dummy.com/user7/INBOX</c:schedule-inbox-URL>`
+* `<c:schedule-outbox-URL>/fullcalendars/iop.test.dummy.com/user7/Sent%20Items</c:schedule-outbox-URL>`
+
+But they should actually appear inside HREF tags like:
+
+* `<c:schedule-inbox-URL><d:href>/fullcalendars/iop.test.dummy.com/user7/INBOX</d:href></c:schedule-inbox-URL>`
+* `<c:schedule-outbox-URL><d:href>/fullcalendars/iop.test.dummy.com/user7/Sent%20Items</d:href></c:scheduleoutbox-URL>`
+
+Configuring CardDAV account client results in incorrect server address if username contains ‘`@`’
+character. For example setting the servername to ‘server:port’ and username to ‘`user@domain`’ results in
+requests being sent to: `\http://user@domain@server:port`. Our server uses username format
+`user@domain` in some cases (when more domains are configured). So there is no way to configure client
+CardDAV account manually with our server.
+
+One client uses “`/addressbook/`” as the default collection (e.g.: `/addressbooks/__uids/.../addressbook/`).
+We don’t have a chance to use different collection like “`/addressbooks/__uids/.../contacts/`”. We can
+resolve this on our side but it would be better if the address book behaved as a general CardDAV client
+getting this information from the server.
+
+Areas of particular interest for testing include creating and modifying any and all recurring patterns,
+specifically looking for behavior centered around instances of recurring patterns that fall on a weekend
+when our user sets option to move the weekend instance to the closest Friday or Monday.
+
+Discovered a few errors related to implicit scheduling. Was not getting triggered correctly. At least partially
+fixed. More checking required.
+
+Some problems related to alarms and alarms with recurrence instances.
+
+First problem was due to not saving `VALARM` x-properties. Client got confused and 
+multiplied default alarms.
+
+Second problem appears to be server side only and needs further work. Exception when a (summary)
+change was made to a recurrence instance.
+
+Tests went fine for explicit scheduling. As far as implicit scheduling goes, on testing with one client, bugs
+were found and fixed, inconsistencies in the draft were discussed and explained. Towards the end of the
+interop was able to do basic invitation/reply.
+
+One client does not support `VEVENT` with `METHOD:REPLY` and no `DTSTART` when this is allowed by
+iTIP (but it was easy to fix that on the server side).
+
+One client could not create events because privileges are not correctly reported by a server.
+
+When creating a new meeting recurring every Monday from 10:00 AM to 11:00 AM for 4 weeks one
+server returns 415 error code when a client writes attendees with new `EMAIL` parameter. Hacking the
+client to remove this parameter leads to success.
+
+One server only allows one alarm. Additional alarms are removed
+
+There appears to be intermittent errors when events contain alarms. Performing this step on one server
+caused the entire recurrence to vanish
+
+On one server, meeting changes beyond the initial invite do not seem to make it to attendees
+
+One client does not use calendar-query or vEvent queries.
+
+One server is unable to create overridden instances
+
+There are still a few CalDAV servers that do not support scheduling but this number is diminishing.
+
+On one server, initial scheduling works but subsequent replies or updates do not.
+
+Creating a regular collection in the current user's personal calendar space is not supported on some
+clients.
+
+A mobile client was tested and the following was noted. One server testing failed initially because the
+client could not handle SSL certs and then Digest auth. Though changes were done in the server to get
+around that, the client hung after getting to the home collection. More debugging required on client side to
+solve this.
+
+== Summary
+
+As we continue CalDAV testing, there is more and more evidence of improved functionality. Jon
+Drummond from Apple remarked on how amazed he was that so much was working. This truly shows the
+support and work done by all the vendors to make this protocol a viable and working effort.
+
+CardDAV testing is in the very early stages. A small amount was done to “test the waters.” This will be
+an item on the next event in February.
+
+None of the vendors were ready to do any Timezone server testing at this event. We will poll the waters
+next time to see if anyone is ready to do preliminary testing.
+
+Our thanks to all participants and contributors to this document.
+
+Respectfully submitted by Pat Egen, CalConnect Interop Manager.
