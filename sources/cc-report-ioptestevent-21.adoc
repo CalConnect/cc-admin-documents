@@ -1,0 +1,327 @@
+= June 2009 CalConnect Interoperability Test Report
+:docnumber: 0909
+:copyright-year: 2009
+:language: en
+:doctype: administrative
+:edition: 2
+:status: published
+:revdate: 2009-08-30
+:published-date: 2009-08-30
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+:fullname: Patricia Egen
+:role: author
+:fullname_2: Gordon Connelly
+:role_2: author
+:fullname_3: Cyrus Daboo
+:role_3: author
+:fullname_4: Bernard Desruisseaux
+:role_4: author
+:fullname_5: Michael Douglass
+:role_5: author
+:fullname_6: Jon Drummond
+:role_6: author
+:fullname_7: Firdosh Ghyara
+:role_7: author
+:fullname_8: Helge Heß
+:role_8: author
+:fullname_9: Morgen Sagen
+:role_9: author
+:fullname_10: Matt Shepherd
+:role_10: author
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+The June 2009 CalConnect interoperability testing event was held at the Vendor 2 campus at Redwood
+Shores, California. Participants of the testing event used predetermined test scenarios. Rather than post
+the full scenarios in this document, they can be found on the CalConnect website at the following URL:
+http://www.calconnect.org/ioptesting.shtml.
+
+The documents used in this testing event were the CalConnect CalDAV Matrix for Draft 08, in particular
+the scheduling section and iCalendar, iMIP and iTIP testing matrix. Summaries and specific findings and
+issues found are noted in this document.
+
+=== Participants
+
+[cols=3]
+.Participants
+|===
+| Organization | Participants | Versions Tested
+| Apple | Cyrus Daboo +
+Morgen Sagen +
+Jon Drummond +
+Matt Shepherd | iCal Server and client - OS X 10.5.3 +
+iCal client 4.0
+| Microsoft | Firdosh Ghyara | Exchange 14 Beta
+| Oracle | Bernard Desruisseaux +
+Simon Vaillancourt |
+| RPI | Michael Douglass | Bedework
+| PeopleCube | Kellie Hunter +
+Gordon Connelly | Meetingmaker V8.8
+| Zideone | Helge Heß |
+| CalConnect Reps | |
+| Interop Manager +
+Logistics | Pat Egen +
+Dave Thewlis |
+|===
+
+== Participant Comments and Findings
+
+=== CALDAV Testing
+
+==== Vendor 1
+
+Vendor 2 server worked well with Vendor 1. We had some trouble at first with recurring meetings, but that
+was resolved server-side. The only part of the interop that didn't end in an outright "Pass" was the use of
+the inbox, since the server uses a "virtual" inbox and doesn't actually create and store messages in it.
+Either way, this didn't really have any impact on Vendor 1. The auto-scheduling was working nicely.
+
+Vendor 1 vs. Vendor 5:
+
+We had some initial issues where the server did not adhere to various elements of the WebDAV/CalDAV
+spec, which caused problems with loading the account into Vendor 1. I hacked around that on the client
+side in order to test and reported the issues to Vendor 5, but that will need to be fixed server-side before it
+will work with stock Vendor 1.
+
+Vendor 1 encountered many 500 errors from the server, so testing was limited by that. The server was
+continually setting the organizer's attendee to RSVP=TRUE, which caused display issues in Vendor 1.
+The server also stripped all but display alarms. Free-busy lookups did work well, though.
+
+Vendor 1 vs. VENDOR 3:
+
+500 errors when adding alarms or attendees prevented much of the tests in the matrix.
+
+.Vendor 1 client testing matrix results chart
+[options=header,headerrows=2,cols="a,a,a,a,<,a"]
+|===
+3+| Servers 2+| P = Pass / F = Fail / N = Not supported | Comments
+| Vendor 2 | Vendor 5 | VENDOR 3 3+|
+
+3+| h| 1. | Event creation. |
+
+| P | P | P | 1.1. | Create new single-instance meeting titled "Meeting 1.1" with the location "Durham". | Vendor 5: setting organizer's attendee to `RSVP=TRUE` causes display weirdness in Vendor 1
+| P | P | P | 1.2. | Create new meeting titled "Meeting 1.2" recurring every Monday from 10:00 AM to 11:00 AM for 4 weeks. |
+| P | P | F | 1.3. | Create new single-instance meeting titled "Meeting 1.3" with 2 other attendees. |
+| P | P/F | F | 1.4. | Create new single-instance meeting titled "Meeting 1.4" with an alarm set to trigger 15 minutes prior to the schedule time of the meeting. | Vendor 5: only `DISPLAY` alarms remain, all others are stripped
+3+| h| 2. h| Event modification |
+| P | P/F | P | 2.1. | Modify the title of meeting "Meeting 1.1" to "Meeting 1.1bis". | Vendor 5: sometimes it worked, sometimes it failed.
+| P | P/F | P | 2.2. | Modify the location of the meeting "Meeting 1.1bis" to "Seattle bis". | Vendor 5: see 2.1
+| P | P | P | 2.3. | Reschedule meeting "Meeting 1.1bis" to the next day. |
+| P | P | F | 2.4. | Add an attendee to "Meeting 1.1bis". |
+| P | P | F | 2.5. | Add an alarm to "Meeting 1.1bis". |
+| P | F | P | 2.6. | Modify the title of the 1st instance of the recurring meeting created in 1.2. |
+| P | P | F | 2.7. | Modify the participation status of the 1st attendee in meeting 1.3 to `DECLINED`. | VENDOR 3: cannot add attendees
+| P | P | P | 2.8. | Cancel the 4th instance of the recurring meeting created in 1.2. |
+| P | P | F | 2.9. | One client changes "Meeting 1.1bis" to a different time, second client 'refreshes' its display to see the modification. | VENDOR 3: see 1.3, 2.7
+3+| h| 3. h| Event retrieval |
+| N | N | N | 3.1. | calendar-query `REPORT` | Vendor 1 does not implement calendar-query `REPORT`
+| | | | 3.1.1. | No filtering (match everything) |
+| | | | 3.1.1.1. | Query all components and return all data. (tests <calendar-query> and <filter>) |
+| | | | 3.1.1.2. | Query all components and return ETag WebDAV property and all data. (tests `<calendar-query>+<DAV:prop>` and `<filter>`) |
+| | | | 3.1.1.3. | Query all components and return just entire `VEVENT` components. (tests `<calendar-query>, <filter>+<comp-filter>`) |
+| | | | 3.1.1.4. | Query all components and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<filter>+<comp-filter>`, `<calendar-data>+<comp>+<prop>`) |
+| | | | 3.1.2. | time-range filtering |
+| | | | 3.1.2.1. | Query all components within a one day time-range and return all data. Make sure that there is a recurring event that starts prior to the chosen time-range but has one non-overridden instance within the time-range. (tests `<calendar-query>`, `<filter>+<time-range>`) |
+| | | | 3.1.2.2. | Query all components within a one week time-range and return just entire `VEVENT` components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests `<calendar-query>`, `<filter>+<time-range>`) |
+| | | | 3.1.3. | component based filtering |
+| | | | 3.1.3.1. | Query all components that contain an embedded `VALARM` component. (tests `<calendar-query>`, `<filter>+<comp-filter>`) |
+| | | | 3.1.3.2. | Query all components that contain an embedded `VALARM` component whose trigger falls within a specific time-range. (tests `<calendar-query>`, `<filter>+<comp-filter>+<prop-filter>+<time-range>`) |
+| | | | 3.1.4. | property based filtering |
+| | | | 3.1.4.1. | Query all components that contain any `ORGANIZER` property. (tests `<calendar-query>`, `<filter>+<prop-filter>+<is-defined>`) |
+| | | | 3.1.4.2. | Query all components that contain an `ORGANIZER` property with a specific CUA text value case-insensitively. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<caseless>`) |
+| | | | 3.1.4.3. | Query all components that contain an `ORGANIZER` property with a specific CUA text value case-sensitively. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<caseless>`) |
+| | | | 3.1.5. | parameter based filtering |
+| | | | 3.1.5.1. | Query all components that contain a `DTSTART` property with a `TZID` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>`) |
+| | | | 3.1.5.2. | Query all components that contain an `ATTENDEE` property with `PARTSTAT=NEEDSACTION` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>`) |
+| | | | 3.2. | calendar-multiget `REPORT` |
+| | | | 3.2.1. | Query a specific href and return all data. (tests `<calendar-multiget>`) |
+| | | | 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests `<calendar-multiget>`) |
+| | | | 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) |
+| | | | 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) |
+| | | | 3.2.5. | Query a specific href and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) |
+| | | | 3.2.6. | Query multiple hrefs (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) |
+3+| h| 4. h| Event deletion |
+| P | P | P | 4.1. | Delete a single non-recurring meeting. |
+| P | P | P | 4.2. | Delete a single recurring meeting with no overridden instances. | Vendor 2: 4.2-4.5 originally failed but server changes made during meeting led to success.
+| P | F | P | 4.3. | Delete a single recurring meeting with overridden instances. |
+| P | F | P | 4.4. | Delete a non-overridden instance of a recurring meeting. |
+| P | F | P | 4.5. | Delete an overridden instance of a recurring meeting. |
+3+| h| 5. h| Access Control |
+| *N* | *N* | *N* | 5.1. | View access control details on current user's main calendar. |
+| *N* | *N* | *N* | 5.2. | Change access control details on current user's main calendar to add another user with read-only access. Verify that other user can view the calendar but not change it. |
+| *N* | *N* | *N* | 5.3. | Change access control details on current user's main calendar to add another user with read-write access. Verify that other user can view the calendar and change it. Verify that changes done by one user are seen by the other. |
+| *N* | *N* | *N* | 5.4. | Remove another user's access to the current user's main calendar and verify they can no longer access the calendar. |
+3+| h| 6. h| Calendar Management |
+| P | P | P | 6.1 | Browse the list of calendars on the server, including the current user's personal calendars. |
+| P | F/N | F | 6.2 | Create a new calendar in the current user's personal calendar space. | Vendor 5: does not support this
+| N | N | N | 6.3 | Create a regular collection in the current user's personal calendar space. | Vendor 1 does not implement creation of regular collections.
+| N | N | N | 6.4 | Create a new calendar inside the collection created in 6.3. |
+| P | N | F | 6.5 | Delete the calendar created in 6.2. |
+| N | N | N | 6.6 | Delete the collection created in 6.3. |
+3+| h| 7. h| Free Busy Reports |
+3+| | Setup | Create a new calendar and populate it with the following for one week:
+
+Event on Monday, 9 am - 11 am, recurs every day for five times +
+Event on Monday, 12 pm - 1 pm, status tentative +
+Event on Monday, 2 pm - 3 pm, status cancelled +
+Event on Tuesday, 11 am - 12 pm +
+Event on Tuesday, 2 pm - 4 pm, recurs every day for four times +
+Event on Tuesday, 3 pm - 5 pm +
+Event on Wednesday, 11 am - 12 pm, status tentative +
+Event on Wednesday, 3 pm - 5 pm, status tentative +
+Event on Thursday, 11 am - 12 pm, status cancelled +
+Event on Thursday, 3 pm - 5 pm, status cancelled | NOTE: Vendor 1 does not differentiate between tentative and unavailable in the availability interface UI.
+| P | P | ? | 7.1 | Run a free-busy report for the entire week. | VENDOR 3: unable to test because cannot add attendees
+| P | P | ? | 7.1.1 | Verify two `FREEBUSY` periods for Monday, the second is `BUSY-TENTATIVE`. |
+| P | P | ? | 7.1.2 | Verify two `FREEBUSY` periods for Tuesday. |
+| P | P | ? | 7.1.3 | Verify four `FREEBUSY` periods for Wednesday, second and fourth are `BUSY-TENTATIVE` and one hour long. |
+| P | P | ? | 7.1.4 | Verify two `FREEBUSY` periods for Thursday. |
+| P | P | ? | 7.1.5 | Verify two `FREEBUSY` periods for Friday. | 
+3+| h| 8. h| Scheduling |
+3+| | Setup | Three user accounts user1 (role Organizer), user2 (role Attendee), user3 (role Attendee) provisioned with suitable principal properties for calendar home, inbox, outbox and user addresses. | NOTE: Vendor 2 server uses a virtual inbox, and attendee replies are not relayed back to the organizer. Vendor 5 does not make use of the inbox (events are updates automatically by the server); VENDOR 3: unable to test because cannot add attendees
+| P | N | ? | 8.1 | Organizer (user1) sends nonrecurring message invite for Monday at 9am (1 hour) to each attendee. Verify that each attendee Inbox receives a copy of the invite. |
+| F/N | N | ? | 8.2 | Attendee (user2) accepts invite and sends back reply. Verify that reply is placed in Organizer Inbox. |
+| P/N | N | ? | 8.3 | Organizer (user1) updates invite with user2 accept state and resends invite. Verify that each attendee Inbox receives a copy of the new invite. |
+| F/N | N | ? | 8.4 | Attendee (user3) accepts updated invite and sends back reply. Verify that reply is placed in Organizer Inbox. |
+| P/N | N | ? | 8.5 | Organizer (user1) updates invite with user3 accept state and resends invite. Verify that each attendee Inbox receives a copy of the new invite. | Vendor 2 passes inbox messages only for certain event updates.
+| F/N | N | ? | 8.6 | Organizer (user1) cancels the invite. Verify that each attendee Inbox receives the cancellation. |
+|===
+
+==== Vendor 1 server observations
+
+Primarily interested in testing with Vendor 6. Some bugs found and fixed. Overall seemed to work well.
+We also did some CardDAV testing with Vendor 6. Again bugs found and fixed.
+
+==== VENDOR 3 Observations
+
+VENDOR 3 spent a significant amount of time with Vendor 6 testing the CardDAV server against their
+Outlook plugin. As a first try went fairly well. Vendor 6 was eventually able to create and read CardDAV
+entries.
+
+Following day spent some time with Vendor 2 product testing iSchedule. After some fixing of bugs at both
+ends managed to successfully handle a meeting invitation.
+
+Vendor 1 tried against VENDOR 3 on Monday and ran into a recently introduced bug which was fixed soon
+after. I don't believe they retried any tests.
+
+==== Vendor 5 observations
+
+Vendor 5 servlet vs. Vendor 1
+
+Issues found that resulted in problems loading the account into Vendor 1 client. These issues do not
+occur with the current release version of Vendor 1 Vendor 1 3.x. Additional testing with the Vendor 1
+Vendor 1 4.0 client to understand the changes and tighter adaptation of the CalDAV specification in
+specific areas is required on the Vendor 5 Servlet.
+
+Found that a new draft regarding delegates is in the works and has been adopted by Vendor 1 and others
+already. Vendor 5 will review and make changes as it appears to be a cleaner way to manage and display
+delegates.
+
+Found defects related to recurring patterns and modification of single instance. Additional instances
+added after exceptions are made to the recurring string.
+
+Need additional support in Vendor 5 CalDAV servlet for all notification options.
+
+Need to determine why we are adding RSVP=TRUE value for the organizer of an event after a
+modification. Caused internal error 500 issues and display issues.
+
+Limited clients to test against server this time around.
+
+==== Vendor 6 Observations
+
+In summary the test event was very useful for us. From a CalDAV perspective all products are still in very
+early stages (IMHO). The event showed quite a few serious issues in the CalDAV layer of all products.
+For me this was a reason why we couldn't do that much 'formal' testing. We always ran into issues to be
+solved quite quickly. What I basically did was:
+
+. test against Vendor 2
+** initially the server 'crashed' (500 HTTP error) on some requests sent by us, but Simon was able to
+rather quickly fix this
+** we tested a bit of implicit scheduling, this worked quite well
+. test against the VENDOR 3 LDAP<->CardDAV gateway
+** the VENDOR 3 CardDAV gateway was in its very early stages, so I worked with Mike to improve it
+** at the end of the IOP we could get/edit contacts in the server.
+** also discussed issues with cross-server CalDAV result sets, which VENDOR 3 seems to be using
+and which seems to break many clients (didn't manage to test it). Cyrus suggested to use
+WebDAV Binds instead.
+. test against Vendor 5
+** this server was a bit slow (requiring ~20s to update a record), but was the only one which didn't
+produce 500 errors :-)
+** didn't test that much on it, but the shallow testing I did, was OK
+. test against Vendor 1
+** we found issues in the 'principal discovery', when trying to query the root of the server
+** this seems to be a rather 'generic' issue which produces interop issues
+** We tested implicit scheduling and found a bug in our Vendor 1 code which we fixed on site.
+** Discussed the implementation of WebDAV XMPP.
+** (BTW: Vendor 1 didn't bring its new CardDAV server, but we successfully tested that before)
+
+The table below shows the CALDAV testing matrix items tested by Vendor 6 against the Vendor 1 server.
+
+[%unnumbered,cols=4]
+|===
+| h| 1. h| Event creation. |
+| P | 1.1. | Create new single-instance meeting titled "Meeting 1.1" with the location "Durham". |
+| P | 1.2. | Create new meeting titled "Meeting 1.2" recurring every Monday from 10:00 AM to 11:00 AM for 4 weeks. |
+| P | 1.3. | Create new single-instance meeting titled "Meeting 1.3" with 2 other attendees. |
+| P/N | 1.4. | Create new single-instance meeting titled "Meeting 1.4" with an alarm set to trigger 15 minutes prior to the schedule time of the meeting. | alarm not exported, but stored locally, won’t trigger alarms in secondary folders
+| h| 2. h| Event modification |
+| P | 2.1. | Modify the title of meeting "Meeting 1.1" to "Meeting 1.1bis". |
+| P | 2.2. | Modify the location of the meeting "Meeting 1.1bis" to "Seattle bis". |
+| P | 2.3. | Reschedule meeting "Meeting 1.1bis" to the next day. |
+| P | 2.4. | Add an attendee to "Meeting 1.1bis". | does not prompt to send an email
+| P | 2.5. | Add an alarm to "Meeting 1.1bis". | alarm not exported, but stored locally, won’t trigger alarms in secondary folders
+| N | 2.6. | Modify the title of the 1st instance of the recurring meeting created in 1.2. | recurrence exceptions still unsupported
+| P | 2.7. | Modify the participation status of the 1st attendee in meeting 1.3 to `DECLINED`. | Partstat panel does not show up (hm). Had to press ‘send invitations’ to make it show up. Then it worked for a Vendor 1 server external participant (plain email)
+| N | 2.8. | Cancel the 4th instance of the recurring meeting created in 1.2. | recurrence exceptions still unsupported
+| P | 2.9. | One client changes "Meeting 1.1bis" to a different time, second client 'refreshes' its display to see the modification. | Prompts the user and reminds that the reminder won’t be triggered.
+| h| 3. h| Event retrieval |
+| N | 3.1. | calendar-query `REPORT` | not used in Vendor 6
+| N | 3.1.1. | No filtering (match everything) | not used in Vendor 6
+| N | 3.1.1.1. | Query all components and return all data. (tests `<calendar-query>` and `<filter>`) | not used in Vendor 6
+| N | 3.1.1.2. | Query all components and return ETag WebDAV property and all data. (tests `<calendar-query>+<DAV:prop>` and `<filter>`) | not used in Vendor 6
+| N | 3.1.1.3. | Query all components and return just entire `VEVENT` components. (tests `<calendar-query>`, `<filter>+<comp-filter>`) | not used in Vendor 6
+| N | 3.1.1.4. | Query all components and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<filter>+<comp-filter>`, `<calendar-data>+<comp>+<prop>`) | not used in Vendor 6
+| N | 3.1.2. | time-range filtering | not used in Vendor 6
+| N | 3.1.2.1. | Query all components within a one day time-range and return all data. Make sure that there is a recurring event that starts prior to the chosen time-range but has one non-overridden instance within the time-range. (tests `<calendar-query>`, `<filter>+<time-range>`) | not used in Vendor 6
+| N | 3.1.2.2. | Query all components within a one week time-range and return just entire `VEVENT` components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests `<calendar-query>`, `<filter>+<time-range>`) | not used in Vendor 6
+| N | 3.1.3. | component based filtering | not used in Vendor 6
+| N | 3.1.3.1. | Query all components that contain an embedded `VALARM` component. (tests `<calendar-query>`, `<filter>+<comp-filter>`) | not used in Vendor 6
+| N | 3.1.3.2. | Query all components that contain an embedded `VALARM` component whose trigger falls within a specific time-range. (tests `<calendar-query>`, `<filter>+<comp-filter>+<prop-filter>+<time-range>`) | not used in Vendor 6
+| N | 3.1.4. | property based filtering | not used in Vendor 6
+| N | 3.1.4.1. | Query all components that contain any `ORGANIZER` property. (tests `<calendar-query>`, `<filter>+<prop-filter>+<is-defined>`) | not used in Vendor 6
+| N | 3.1.4.2. | Query all components that contain an `ORGANIZER` property with a specific CUA text value case-insensitively. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<caseless>`) | not used in Vendor 6
+| N | 3.1.4.3. | Query all components that contain an `ORGANIZER` property with a specific CUA text value case-sensitively. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<caseless>`) | not used in Vendor 6
+| N | 3.1.5. | parameter based filtering | not used in Vendor 6
+| N | 3.1.5.1. | Query all components that contain a `DTSTART` property with a `TZID` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>`) | not used in Vendor 6
+| N | 3.1.5.2. | Query all components that contain an `ATTENDEE` property with `PARTSTAT=NEEDS-ACTION` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>`) | not used in Vendor 6
+| P | 3.2. | calendar-multiget `REPORT` | used and works
+| P | 3.2.1. | Query a specific href and return all data. (tests `<calendar-multiget>`) |
+| P | 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests `<calendar-multiget>`) | hard to trigger in the Vendor 6 plugin, but works
+| P | 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) | used and works
+| P | 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) | hard to trigger in the Vendor 6 plugin, but works
+| N | 3.2.5. | Query a specific href and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) | not used in Vendor 6
+| N | 3.2.6. | Query multiple hrefs (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) | not used in Vendor 6
+|===
+
+== Summary
+
+This Interop showed continued improvement in iCalendar and CALDAV interoperability. As is typical, 500
+errors caused difficulties in interoperability with several clients and servers.
+
+We are starting to see a bit of testing with CardDAV and iSchedule. This is still quite early in the
+development cycle of these protocols and no set testing matrix is in place for testing.
+
+Our thanks to all participants and contributors to this document.
+
+Respectfully submitted by Pat Egen, CalConnect Interop Manager.
