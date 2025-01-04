@@ -16,7 +16,7 @@
 appearance (in the mail), Vendor1 can't read it properly/at all. This occurred only with
 Vendor4-products.
 * Vendor1 doesn't send timezone information when dealing with recurring events.
-* "UNTIL" in RRULE isn't set as correct UTC-value
+* "`UNTIL`" in `RRULE` isn't set as correct UTC-value
 * Vendor1 can't deal with ical-attachments
 * Almost all other bugs that occurred are fixed already
 
@@ -37,54 +37,54 @@ of time. So testing was limited to some basics of
 
 We were not able to test as much as in the previous CalConnect, which was more
 productive. We mostly tried creating and replying to events, thus the methods
-that were tested were REQUEST and REPLY.
+that were tested were `REQUEST` and `REPLY`.
 
 [options=header]
 .Event With One Occurrence Created By Vendor4
 |===
 | | Vendor4 | Vendor2 | Vendor1 | Vendor3
-| Able To Process REQUEST | Yes | Yes | Yes | Yes
-| Able To Send REPLY to REQUEST | Yes | Yes | Yes | Yes
-| Able To Process REPLY | Yes | Yes | Yes | Yes
+| Able To Process `REQUEST` | Yes | Yes | Yes | Yes
+| Able To Send `REPLY` to `REQUEST` | Yes | Yes | Yes | Yes
+| Able To Process `REPLY` | Yes | Yes | Yes | Yes
 |===
 
 [options=header]
 .Event With One Occurrence Created By Other Vendor
 |===
 | | Vendor4 | Vendor2 | Vendor1 | Vendor3
-| Vendor4 Able To Process REQUEST | Yes | Yes | Yes | Yes
-| Vendor4 Able To Send REPLY to REQUEST | Yes | Yes | Yes | Yes
-| Vendor Able To Process REPLY | Yes | Yes | Yes | Yes
+| Vendor4 Able To Process `REQUEST` | Yes | Yes | Yes | Yes
+| Vendor4 Able To Send `REPLY` to `REQUEST` | Yes | Yes | Yes | Yes
+| Vendor Able To Process `REPLY` | Yes | Yes | Yes | Yes
 |===
 
 [options=header]
-.Event With an RRULE Created By Vendor4
+.Event With an `RRULE` Created By Vendor4
 |===
 | | Vendor4 | Vendor2 | Vendor1 | Vendor3
-| Able To Process REQUEST | Yes | Yes | No | Yes
-| Able To Send REPLY to REQUEST | Yes | Yes | No | Yes
-| Able To Process REPLY | Yes | Yes | No | Yes
+| Able To Process `REQUEST` | Yes | Yes | No | Yes
+| Able To Send `REPLY` to `REQUEST` | Yes | Yes | No | Yes
+| Able To Process `REPLY` | Yes | Yes | No | Yes
 |===
 
 [options=header]
-.Event With an RRULE Created By Other Vendor
+.Event With an `RRULE` Created By Other Vendor
 |===
 | | Vendor4 | Vendor2 | Vendor1 | Vendor3
-| Vendor4 Able To Process REQUEST | Yes | Yes | No | Yes
-| Vendor4 Able To Send REPLY to REQUEST | Yes | Yes | No | Yes
-| Vendor Able To Process REPLY | Yes | Yes | No | Yes
+| Vendor4 Able To Process `REQUEST` | Yes | Yes | No | Yes
+| Vendor4 Able To Send `REPLY` to `REQUEST` | Yes | Yes | No | Yes
+| Vendor Able To Process `REPLY` | Yes | Yes | No | Yes
 |===
 
 ==== Miscellaneous
 
-* We had some success with CANCEL and updates (REQUEST). However, we do not
-remember with which vendors. Vendor3 had success processing a VEVENT that we sent to it
-that had different character set in it. Some vendors were also able to process a REQUEST we
-sent that had multiple RDATEs.
+* We had some success with `CANCEL` and updates (`REQUEST`). However, we do not
+remember with which vendors. Vendor3 had success processing a `VEVENT` that we sent to it
+that had different character set in it. Some vendors were also able to process a `REQUEST` we
+sent that had multiple ``RDATE``s.
 * Vendor2 had trouble with line folding, multipart/mixed, and they required that attendees have
 a common name ("CN").
-* Vendor1 had trouble with quoted-printable, and had a DTSTART in UTC for events with
-RRULEs. According to iCalendar, when a DTSTART is used with a recurrence rule, it must
+* Vendor1 had trouble with quoted-printable, and had a `DTSTART` in UTC for events with
+``RRULE``s. According to iCalendar, when a `DTSTART` is used with a recurrence rule, it must
 be specified local time.
 
 === Vendor 3 Notes
@@ -123,12 +123,12 @@ render it on our end.
 ==== The Not-so-good News
 
 The testing done was more at an vendor to vendor level than a pure IETF "RFC Conformance"
-test (where we test the explicit MUST/SHOULD/MAY/etc requirements). We need to find a
+test (where we test the explicit `MUST`/`SHOULD`/`MAY`/etc. requirements). We need to find a
 way to identify all of the IETF requirements and map them to vendor to vendor tests that we
 generally do (or provide some matrix of what we must test to satisfy the IETF requirements for
 an interop event).
 
-We did not attempt any VTODO (aka Tasks) or VJOURNAL interop testing. Per IETF rules, if
+We did not attempt any `VTODO` (aka Tasks) or `VJOURNAL` interop testing. Per IETF rules, if
 we do not get any implementations that support them then we must remove them from the
 standard in the future (but no timeframe for this removal is clear).
 
@@ -144,10 +144,10 @@ instance date/time so that's not so good).
 ===== Vendor1
 
 Vendor1 had some small issues with adhering to the RFCs. Guenter was very active in either
-fixing or explaining them. For example, Vendor1 sends back ALL invitees on a REFRESH
-request but RFC 2446 expressly states that only the requestors ATTENDEE info is allowed. As
+fixing or explaining them. For example, Vendor1 sends back ALL invitees on a `REFRESH`
+request but RFC 2446 expressly states that only the requestors `ATTENDEE` info is allowed. As
 a result, we incorrectly identify the "Request for Update" as being from the 1st listed
-ATTENDEE rather than from the actual requestor.
+`ATTENDEE` rather than from the actual requestor.
 
 ===== Vendor2
 
@@ -158,7 +158,7 @@ them against an invitation from VENDOR2 results in an undetermined state or loss
 (at least from the non-VENDOR2 POV).
 We did not receive any Vendor2 originating workflow, they simply responded to the ones we
 sent out. As such, we do not know how well we interoperate with them when they are the
-Organzier of an event or repeating event. I was not able to find out if this was because we did
+Organizer of an event or repeating event. I was not able to find out if this was because we did
 not have enough testing time or if they are unable to originate iCalendar workflow just yet
 
 === Chair Summary
@@ -173,7 +173,7 @@ interop testing. There needs to be some kind of mapping between what the IETF is
 relating to standards acceptance and what we implementors are looking for such as feature C&S
 workflow level interop.
 
-I'm working on making an understandable matrix of the MUST/SHOULD/MAY/etc clauses in
+I'm working on making an understandable matrix of the `MUST`/`SHOULD`/`MAY`/etc. clauses in
 the RFCs and what they mean for testing. Given our pending release schedules I did not have
 time to complete this lately. Hopefully I can get it done after some hard earned time off and
 before we spin up again.
