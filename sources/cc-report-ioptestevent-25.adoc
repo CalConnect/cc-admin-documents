@@ -1,0 +1,95 @@
+= TC MOBILE Interoperability Test Event Report
+:docnumber: 1010
+:copyright-year: 2010
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2010-09-10
+:published-date: 2010-09-10
+:technical-committee: MOBILE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+The Calendaring and Scheduling Consortium's mobile technical committee (TC-Mobile)
+held a mobile interoperability test event in May 2010 at CalConnect's
+roundtable event hosted by Carnegie Mellon University in Pittsburgh, PA, USA. This
+was the third mobile test event that CalConnect has held.
+
+This event was instigated by participants of TC-Mobile who had a strong interest in
+interoperability testing of their products. The event was focused on testing the
+ActiveSync protocol. Previous events focused on general iCalendar interoperability
+and SyncML testing.
+
+TC-Mobile's primary role is to promote calendaring interoperability for mobile
+devices. As part of its efforts, it has developed a
+http://www.calconnect.org/pubdocs/CD0706%20Mobile%20Calendar%20Interoperability%20Test%20Suite.pdf[_Mobile Calendar Interoperability Test Suite_] document
+that contains a large
+number of testing scenarios to use as the basis of interoperability testing. This was
+used during the event reported here.
+
+== Event Summary
+
+Participants in the test event are listed in the table below. We had five server
+products and four client products being tested. Some were released products, others
+were still in development.
+
+[%unnumbered,options=header]
+|===
+| Vendor | Server | Client
+| IceWarp | Yes |
+| Microsoft | Yes | Yes
+| MailSite/AstraSync | Yes | Yes
+| Notify Corp | | Yes
+| Nokia | | Yes
+| Synchronica | Yes |
+| Kerio (remote) | Yes |
+|===
+
+Each participant provided their own systems for testing, either in the room itself, or
+remotely. A testing plan with a listing of client/server pairs was available and used to
+ensure we had full coverage of all relevant combinations. Some participants brought
+their own testing plans for use at the event, and these were shared with other
+participants. Facilities in the room included wired and WiFi internet access, as well
+as good wireless coverage from the major carriers. Servers were mostly hosted
+remotely, clients were running locally.
+
+The biggest issues found involved protocol features that were implemented or
+expected by one side that had not been implemented by the other. The most
+frequent reason was ambiguity in the specifications which we hope to address with
+Microsoft. In other cases, products were simply under development and had not yet
+implemented the feature, however the participants were glad to know that such
+features were going to be important to implement, helping to prioritize on-going
+development.
+
+== Conclusions
+
+The testing event was successful, with all participants being able to run through their
+detailed testing scenarios with the other participants in matched client/server pairs.
+Participants were able to share knowledge about mobile calendaring from both a
+server and client perspective. Participants considered this event valuable, especially
+as no other organization offers a similar event for testing calendaring aspects of
+ActiveSync (and indeed other similar protocols).
+
+== Future Work
+
+Following on from this successful interoperability testing event, CalConnect is
+planning additional mobile testing events for the future. We would like to hear from
+members and non-members interested in participating in a future mobile
+interoperability testing event. In particular who would like to attend and what should
+be tested. In the past we have found that events focused on a specific suite of tests
+or one particular technology have worked the best.
+
+Please contact Dave Thewlis at CalConnect if you are interested +
+(mailto:Dave.Thewlis@calconnect.org , tel:+1-707-840-9391).
