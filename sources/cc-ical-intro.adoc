@@ -213,4 +213,4 @@ each system.
 
 * [[[restful,CC/R 1011]]]
 
-* [[[ical-draft,IETF I-D draft-desruisseaux-ischedule-01]]], 
+* [[[ical-draft,IETF I-D draft-desruisseaux-ischedule-01]]]
