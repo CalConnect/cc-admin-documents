@@ -47,7 +47,7 @@ email testing.
 
 At the last three testing events, the testing done was more at a vendor to vendor level rather than
 at a pure IETF "RFC Conformance" level. By Conformance testing, we mean identifying
-support for and testing explicit MUST/MUST NOT/SHOULD/SHOULD NOT/ and MAY
+support for and testing explicit `MUST`/`MUST NOT`/`SHOULD`/`SHOULD NOT`/ and `MAY`
 requirements.
 
 In preparation for this interop event and to satisfy the requirement for RFC conformance testing,
@@ -74,9 +74,9 @@ items from all drafts without significant ramifications.
 them. This was obvious during testing and is well documented and discussed on the various
 lists. We talked about the differences between recurring and repeating meetings and we look
 to see this discussed further on all the mailing lists.
-* VTODO's are not supported by either vendor and there were problems in past interops. This
+* ``VTODO``'s are not supported by either vendor and there were problems in past interops. This
 may be something that can be removed and added back as another draft that just pertains to
-VTODOs.
+``VTODO``s.
 
 The next page identifies the items that are supported by both vendors and the items not supported
 on the three drafts. Note - there are 201 specific items in RFC 2445, 74 items in RFC 2446, and
@@ -188,7 +188,7 @@ By Vendor, the numbers look like this:
 
 ==== iMIP - RFC 2447 - 8 items out of 14
 
-* 2.3 [RFC-822] Addresses
+* 2.3 RFC 822 Addresses
 * 2.4 Content Type (all)
 * 2.5 Content-Transfer-Encoding
 * 2.6 Content-Disposition
@@ -212,16 +212,16 @@ By Vendor, the numbers look like this:
 
 * 3.1 Common Component Restrictions
 * 3.2.2.6 Forwarding to An Uninvited CU
-* 3.3 Methods For VFREEBUSY Components
-* 3.3.2 VFREEBUSY REQUEST
-* 3.3.3 VFREEBUSY REPLY
-* 3.4.2.4 REQUEST Forwarded To An Uninvited Calendar User
-* 3.4.1 VTODO PUBLISH
-* 3.4.5 VTODO CANCEL
-* 3.4.6 VTODO REFRESH
-* 3.5.1 VJOURNAL PUBLISH
-* 3.5.2 VJOURNAL ADD
-* 3.5.3 VJOURNAL CANCEL
+* 3.3 Methods For `VFREEBUSY` Components
+* 3.3.2 `VFREEBUSY REQUEST`
+* 3.3.3 `VFREEBUSY REPLY`
+* 3.4.2.4 `REQUEST` Forwarded To An Uninvited Calendar User
+* 3.4.1 `VTODO PUBLISH`
+* 3.4.5 `VTODO CANCEL`
+* 3.4.6 `VTODO REFRESH`
+* 3.5.1 `VJOURNAL PUBLISH`
+* 3.5.2 `VJOURNAL ADD`
+* 3.5.3 `VJOURNAL CANCEL`
 * 3.7.2 Attendee Property Considerations
 
 ==== iMIP - RFC 2447 - 6 of 16 items
@@ -235,12 +235,12 @@ By Vendor, the numbers look like this:
 
 <<<
 
-include::cc-report-ioptestevent-1.adoc[]
+include::../cc-report-ioptestevent-1/document.adoc[]
 
 <<<
 
-include::cc-report-ioptestevent-2.adoc[]
+include::../cc-report-ioptestevent-2/document.adoc[]
 
 <<<
 
-include::cc-report-ioptestevent-3.adoc[]
+include::../cc-report-ioptestevent-3/document.adoc[]

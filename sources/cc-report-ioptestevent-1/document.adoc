@@ -1,9 +1,11 @@
 == CalConnect I -- April, 2000
 
+=== Introduction
+
 On April 11 and 12, 2000, CalConnect Spring was held in Boston. It was graciously hosted by
 MIT and chaired by Bob Mahoney.
 
-=== Participants
+==== Participants
 
 The following companies and representatives were in attendance:
 
@@ -18,7 +20,7 @@ The following companies and representatives were in attendance:
 
 Pat Egen sat at home with a broken leg, and assisted (poorly) from the sidelines.
 
-=== Products Tested
+==== Products Tested
 
 The following products and versions were tested:
 
@@ -40,9 +42,9 @@ inconsistent.
 
 Problems found with recurrence included the following:
 
-* one vendor always generates and expects rrules, but cannot handle rdates.
-* two vendors always generate rdates and cannot currently handle rrules.
-* one vendor handles rrules but cannot handle exceptions.
+* one vendor always generates and expects ``RRULE``s, but cannot handle ``RDATE``s.
+* two vendors always generate ``RDATE``s and cannot currently handle ``RRULE``s.
+* one vendor handles ``RRULE``s but cannot handle exceptions.
 
 There was a brief discussion about redesigning recurrence. Some useful alternatives were
 suggested but the developers also seemed to be willing to live with the current specification.
@@ -67,7 +69,7 @@ observed and are in the process of being fixed by the implementors.
 
 No tester has fully implemented Journals. One vendor has the support in the parser but no
 support in the front end, so they cannot be generated or displayed by the product. All of the
-implementors indicate that supporting Journals is intended and that no obstaclesare seen, they are
+implementors indicate that supporting Journals is intended and that no obstacles are seen, they are
 just lower on the priority list so far.
 
 There has been no testing of signed or encrypted objects. This should be a major goal of the next
