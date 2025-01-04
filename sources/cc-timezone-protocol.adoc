@@ -1,0 +1,25 @@
+= Timezone Service Protocol
+:docnumber: 1007
+:copyright-year: 2010
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2010-07-05
+:published-date: 2010-07-05
+:technical-committee: TIMEZONE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+
+
+.Foreword
+
+This proposal was submitted to the IETF as an Internet Draft for the Standards Track as
+of the date shown above, and may be found at the following URL:
+
+https://datatracker.ietf.org/doc/draft-douglass-timezone-service/
+
+This document defines a timezone service protocol that allows reliable, secure and fast
+delivery of timezone information to client systems such as calendaring and scheduling
+applications or operating systems.
