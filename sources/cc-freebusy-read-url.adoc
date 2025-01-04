@@ -604,7 +604,7 @@ Daboo.
 STD 1, October 2006 (PDF).
 
 * [[[I-D.ietf-vcarddavvcardrev,2]]], Perreault, S. and P. Resnick, “vCard Format Specification,” draft-ietf-vcarddav-vcardrev-06 (work in progress), March 2009 (TXT).
-// EDITOR: Auto-fetching `IETF I/D draft-ietf-vcarddav-vcardrev-06` fails. This should now be RFC 6350.
+// EDITOR: Auto-fetching `IETF I-D draft-ietf-vcarddav-vcardrev-06` fails. This should now be RFC 6350.
 
 * [[[RFC2739, RFC 2739]]]
 
