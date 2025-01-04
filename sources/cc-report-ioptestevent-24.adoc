@@ -1,0 +1,194 @@
+= May 2010 CalConnect Interoperability Test Event Report
+:docnumber: 1009
+:copyright-year: 2010
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2010-07-19
+:published-date: 2010-07-19
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:fullname: Patricia Egen
+:role: author
+:fullname_2: Rhonda Chicone
+:role_2: author
+:fullname_3: Cyrus Daboo
+:role_3: author
+:fullname_4: John Davies
+:role_4: author
+:fullname_5: Alexej Eremias
+:role_5: author
+:fullname_6: Tony Groover
+:role_6: author
+:fullname_7: Ben King
+:role_7: author
+:fullname_8: Alvaro Manera
+:role_8: author
+:fullname_9: Andrey Moiseenko
+:role_9: author
+:fullname_10: Filip Navara
+:role_10: author
+:fullname_11: Amit Patel
+:role_11: author
+:fullname_12: Tino Schultze
+:role_12: author
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+The June 2010 CalConnect Interoperability Testing Event was actually two distinct sets of testing. One
+set of vendors tested CalDAV and CardDAV. The second set of vendors tested mobile calendaring
+devices. The first section will detail the CalDAV and CardDAV results. The second section will detail the
+mobile testing results.
+
+=== CalDAV and CardDAV Participants
+
+.Participants
+|===
+| Organization | Participants | Versions Tested
+| Apple | Cyrus Daboo | iCal Server and client - OS X 10.6.1 +
+Apple iCal 4.0 (SnowLeopard)
+| Genentech | Monica Kumar | None (participant observer)
+| Icewarp | Filip Navara | eM Client 2.7.7402
+| Kerio | | (server tested remotely)
+|===
+
+== Findings
+
+During the testing, as usual minor issues were found and fixed. In particular a question arose as to the
+interpretation of text in the WebDAV ACL spec surrounding what clients need to send in an ACL request.
+Follow-up discussion is needed on that topic.
+
+The CalDAV specification has been tested quite extensively over the last several interoperability tests.
+Therefore, recent events had tested either problematic areas or have focused on new portions of the
+specification such as sync reports.
+
+The newer CardDAV specification also was tested. There is only a small subset of tests for the
+specification as it is still evolving.
+
+The following outlines findings and observations found during testing:
+
+The WebDAV ACL RFC is not ambiguous on whether protected ACEs should be sent when the ACL
+HTTP verb is used to change the access control list on a resource. There was discussion on whether or
+not protected ACEs and inherited ACEs should be sent. If a client doesn’t send inherited ACEs, but sends
+protected ones, this results in errors reported by the server. This is the area that requires further
+discussion.
+
+Rountrip of X- properties results in the X- properties being put into `NOTE` property as a text value.
+
+Some implicit scheduling was tested between normal and calendar users and a resource.
+
+``PUT``s of events on URIs that don’t have the resource name in the `<UID>.ics` format result in 302 redirect
+response.
+
+=== vCard fields (`NAME`, `FN`, `X-AIM`, `X-JABBER`)
+
+Testing was performed on the CardDAV server with two clients accessing the address book. The
+interpretation of certain vCard fields differed between the clients.
+
+One client incorrectly used the `FN` and `NAME` properties, where the `FN` value was stored in `NAME`
+property and the other value shouldn’t have been used at all. Some vCard 4 properties (eg. `KIND`) were
+also generated even though the server announced only vCard 3 support.
+
+If custom `X-AIM` and `X-JABBER` properties are used for IM information, client cannot understand and
+resolve them. It is suggested that standard IMPP properties be used instead.
+
+== Mobile Calendar Testing
+
+This was the third Mobile Calendaring Interoperability test event. The primary focus was Activesync and
+the CalConnect Mobile Calendar Interoperability Test suite was used as the basis for testing. A copy of
+the test suite can be found in the resources section of the CalConnect website.
+
+The test suite is quite large. In order to ensure we tested as much as possible during the three days, a
+subset of the test suite was chosen. A testing matrix was used as a guide and to record findings. In
+addition, a matrix of tested components was used to record results. A completed test matrix with the
+results from all testing vendors is included at the end of this report.
+
+The testing included calendar (vEvent), tasks (vTodo) and contacts (vCard). The number of items tested
+was as follows:
+
+[%unnumbered]
+|===
+| Calendar Test Results | # of test cases
+| Easy | 24
+| Medium | 42
+| Hard | 17
+>| Total calendar tests | 83
+| Task Test Results | 14
+| Contact Test Results | 14
+| Total of all tests | 111
+|===
+
+== Participants
+
+The participants in the testing were as follows:
+
+.Mobile Interop Testing Participants
+|===
+| Organization | Contact | What was tested
+| Icewarp | Alexej Eremias | Server
+| MailSite | John Davies +
+Amit Patel
+| Server and Client (AstraSync 4.1.13)
+| Microsoft | Kiran Nallabothula | Server and Client
+| Nokia | Alvaro Manera +
+Andrey Moiseenko | Client
+| Notify Technology | Rhonda Chicone +
+Ben King +
+Tony Groover | Client
+| Synchronica | Tino Schultze | Server
+| CalConnect Reps | |
+| Interop Manager +
+Logistics | Pat Egen +
+Dave Thewlis |
+|===
+
+== Findings
+
+Because Activesync is a specification that has been around for awhile, many items tested worked well.
+Much of what is noted here are the areas where issues were found.
+
+Timezones caused problems on several devices.
+
+The `GETITEMESTIMATE` command was found to not be supported on several servers. This caused an issue
+as several clients required support.
+
+Some servers will report that they support a specific version of ActiveSync but will then send a different
+version data to the device.
+
+Some devices do not send ‘user=’ string with HTTP `POST` command. This is probably caused by different
+interpretations of the ActiveSync spec.
+
+Several devices received an error 400 from various servers. Again, this issue is a different interpretation
+of the specification. It is ambiguous with regards to parameters. Some vendors have interpreted a
+parameter as a `MUST` and others as a `SHOULD`.
+
+``RDATE``s are not supported on many devices and servers.
+
+== General Overall Summary
+
+Activesync is a protocol that has been around a while and is in heavy usage. This was evidenced by the
+fact that much of the testing of normal operations passed.
+
+It was noted that several server had issues with `GETITEMESTIMATE`. This may be due, in part, to
+ambiguities in the specification. This should be added to the “check next time” testing requirements for
+our future mobile interoperability testing.
+
+Across the board, the test items including RRules were either not tested or failed.
+General feedback was the event overall was useful for talking to other vendors in industry and discussing
+common issues. The server/client testing matrix was useful to define some structure to the event without
+being too restrictive.
+
+Our thanks to all participants and contributors to this document.
+
+Respectfully submitted by Pat Egen, CalConnect Interop Manager.
