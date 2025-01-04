@@ -1,0 +1,24 @@
+= Timezone XML Specification
+:docnumber: 1008
+:copyright-year: 2010
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2010-07-05
+:published-date: 2010-07-05
+:technical-committee: TIMEZONE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+
+
+.Foreword
+
+This proposal was submitted to the IETF as an Internet Draft for the Standards Track as
+of the date shown above, and may be found at the following URL:
+
+https://datatracker.ietf.org/doc/draft-douglass-timezone-xml/
+
+This specification describes a format for describing timezone information for software
+and services. systems.
