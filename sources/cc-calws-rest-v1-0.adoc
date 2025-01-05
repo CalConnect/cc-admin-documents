@@ -103,11 +103,11 @@ described in <<rfc2119>>.
 
 * [[[rfc5546, RFC 5546]]]
 
-* [[[xcal,draft-xcal]]]], C. Daboo, M. Douglass, S. Lees, _xCal: The XML format for iCalendar_, https://datatracker.ietf.org/idtracker/draft-daboo-et-al-icalendar-in-xml
+* [[[xcal,IETF I-D draft-daboo-et-al-icalendar-in-xml]]]]
 
-* [[[webl,Web-Linking]]], M. Nottingham, _Web linking_, http://tools.ietf.org/html/draft-nottingham-http-link-header
+* [[[webl,IETF I-D draft-nottingham-http-link-header]]]
 
-* [[[fb,FreeBusy Read URL]]], E York., _Freebusy read URL_, http://www.calconnect.org/pubdocs/CD0903%20Freebusy%20Read%20URL%20V1.0.pdf
+* [[[fb,CC/S 0903]]]
 
 * [[[xrd,XRD-1.0]]], E. Hammer, W. Norris, _Extensible Resource Descriptor (XRD) Version 1.0_, http://docs.oasis-open.org/xri/xrd/v1.0/xrd-1.0.html
 
