@@ -80,7 +80,7 @@ The following outlines findings and observations found during testing:
 
 The WebDAV ACL RFC is not ambiguous on whether protected ACEs should be sent when the ACL
 HTTP verb is used to change the access control list on a resource. There was discussion on whether or
-not protected ACEs and inherited ACEs should be sent. If a client doesn’t send inherited ACEs, but sends
+not protected ACEs and inherited ACEs should be sent. If a client doesn't send inherited ACEs, but sends
 protected ones, this results in errors reported by the server. This is the area that requires further
 discussion.
 
@@ -88,7 +88,7 @@ Rountrip of X- properties results in the X- properties being put into `NOTE` pro
 
 Some implicit scheduling was tested between normal and calendar users and a resource.
 
-``PUT``s of events on URIs that don’t have the resource name in the `<UID>.ics` format result in 302 redirect
+``PUT``s of events on URIs that don't have the resource name in the `<UID>.ics` format result in 302 redirect
 response.
 
 === vCard fields (`NAME`, `FN`, `X-AIM`, `X-JABBER`)
@@ -97,7 +97,7 @@ Testing was performed on the CardDAV server with two clients accessing the addre
 interpretation of certain vCard fields differed between the clients.
 
 One client incorrectly used the `FN` and `NAME` properties, where the `FN` value was stored in `NAME`
-property and the other value shouldn’t have been used at all. Some vCard 4 properties (eg. `KIND`) were
+property and the other value shouldn't have been used at all. Some vCard 4 properties (eg. `KIND`) were
 also generated even though the server announced only vCard 3 support.
 
 If custom `X-AIM` and `X-JABBER` properties are used for IM information, client cannot understand and
@@ -166,7 +166,7 @@ as several clients required support.
 Some servers will report that they support a specific version of ActiveSync but will then send a different
 version data to the device.
 
-Some devices do not send ‘user=’ string with HTTP `POST` command. This is probably caused by different
+Some devices do not send 'user=' string with HTTP `POST` command. This is probably caused by different
 interpretations of the ActiveSync spec.
 
 Several devices received an error 400 from various servers. Again, this issue is a different interpretation
@@ -181,7 +181,7 @@ Activesync is a protocol that has been around a while and is in heavy usage. Thi
 fact that much of the testing of normal operations passed.
 
 It was noted that several server had issues with `GETITEMESTIMATE`. This may be due, in part, to
-ambiguities in the specification. This should be added to the “check next time” testing requirements for
+ambiguities in the specification. This should be added to the "check next time" testing requirements for
 our future mobile interoperability testing.
 
 Across the board, the test items including RRules were either not tested or failed.

@@ -167,7 +167,7 @@ h| Card retrieval |
 | Perform an email lookup for "jamesbrown@aol.com" |
 | Query server for an addressbook report |
 | Create an addressbook query report |
-| Perform a multi-get report for "……." (fill in what we should do here) | use multi-get report for address-book data property
+| Perform a multi-get report for "......." (fill in what we should do here) | use multi-get report for address-book data property
 h| Card deletion |
 | Delete the card for "James D. Brown" |
 |===

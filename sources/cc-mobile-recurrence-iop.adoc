@@ -48,7 +48,7 @@ interoperability.
 One of the main issues is that iCalendar has not been widely adopted within
 certain application spaces. Although adopted by all major time management
 solution vendors, there has been reluctance within the mobile industry to
-migrate from vCalendar (iCalendar’s predecessor) based solutions and to fully
+migrate from vCalendar (iCalendar's predecessor) based solutions and to fully
 embrace iCalendar. To help persuade mobile vendors the Mobile Technical
 Committee (TC-MOBILE) of the Calendaring & Scheduling Consortium
 recently published a white paper titled: The Benefits of iCalendar for the
@@ -73,7 +73,7 @@ client and server vendors.
 
 Although mobile calendar synchronization solutions have matured over the
 past years, providing for the most part reliable mobile-side representations of
-user’s calendar information, severe problems can exist with synchronization of
+user's calendar information, severe problems can exist with synchronization of
 repeating events. Often the calendar on the device does not accurately reflect
 irregular or changing instances of repeating events on the server. This basic
 mismatch can then turn into corruption of the server data if these irregularities
@@ -87,7 +87,7 @@ cases <<vcal>>).
 * Some devices do not support either sending or receiving `RDATE` or
 `EXDATE` although they support `RRULE`.
 * Some devices support one or the other.
-* Some devices don’t support any of the three.
+* Some devices don't support any of the three.
 
 For implementers that insist on continuing to use <<vcal>> rather then <<ical>> there
 is the issue that <<vcal>> does not support the notion of making any changes to
@@ -160,7 +160,7 @@ implementation should comply with one of the 3 levels defined in this paper
 
 [recommendation]
 ====
-The client’s calendar store should have Level 2
+The client's calendar store should have Level 2
 recurrence support to achieve the best interoperability.
 
 Level 0: OMA DS based solutions should not indicate support for any <<ical>>
@@ -181,7 +181,7 @@ support for modified and delete exceptions as well as support for extra dates.
 By adhering to these recommendations server implementations can then
 reliably react to these 3 levels of support as defined in the following section.
 It is strongly encouraged that support for recurrence level 2 is provided in the
-client’s calendar store. This will ensure that the complex recurrences can
+client's calendar store. This will ensure that the complex recurrences can
 received and displayed, even if the mobile user interface restricts the creation
 and modification of events to level 1 recurrences.
 
@@ -204,7 +204,7 @@ should be sent to the mobile device. This should not in any way affect the fact
 that server side the event is considered recurring. The mobile limitation should
 not degrade the level of support provided by the Calendar store.
 
-A full set of test cases designed to assess a server’s ability to deal with a
+A full set of test cases designed to assess a server's ability to deal with a
 mobile device claiming level 0 support can be found in <<testsuite>>.
 
 Level 1: The server should be able to support receiving the <<ical>> `RRULE`
@@ -220,7 +220,7 @@ being sent to the device to remove the repeating event and the newly edited
 event on the server should be expanded and single instance events should be
 sent to the mobile device (as is defined for level 0 support).
 
-A full set of test cases designed to assess a server’s ability to deal with a
+A full set of test cases designed to assess a server's ability to deal with a
 mobile device claiming level 1 support can be found in <<testsuite>>.
 
 Level 2: Support should be as defined for Level 1 except that if a user edits a
@@ -235,7 +235,7 @@ events. The `RDATE` property can be used represent advanced
 recurrence patterns beyond what is defined in level 1 support. This will ensure
 the instances are shown as a single recurrence set on the device.
 
-A full set of test cases designed to assess a server’s ability to deal with a
+A full set of test cases designed to assess a server's ability to deal with a
 mobile device claiming level 2 recurrence support can be found in
 <<testsuite>>.
 ====

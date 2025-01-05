@@ -46,7 +46,7 @@ calendaring and scheduling
 technologies being developed by
 CalConnect.
 
-This serves as a technology “preview”
+This serves as a technology "preview"
 only and does not in any way represent
 final protocols or products.
 
@@ -86,7 +86,7 @@ between vendors and customers.
 Our vision of the future is not only
 interoperable calendaring, but ubiquitous
 interoperable calendaring. Calendaring
-should—and can—be as ubiquitous as
+should--and can--be as ubiquitous as
 electronic mail.
 
 === Why do we need it?
@@ -129,7 +129,7 @@ support
 * Surveys and use cases for calendaring
 events, tasks (``VTODO``s)
 * Calendaring Glossary
-* Calendar Administrator’s mailing list
+* Calendar Administrator's mailing list
 * Thirteen successful IOP test events
 between C&S implementations
 * First Mobile Calendaring IOP test
@@ -199,8 +199,8 @@ How it works:
 * Several users on one CalDAV server
 (any client) schedule with each
 other
-* One user is the “Organizer”, others
-are “Attendees”
+* One user is the "Organizer", others
+are "Attendees"
 
 .One is the Organizer, others are Attendees
 image::img05.png[]
@@ -217,14 +217,14 @@ immediately.
 Invitation replies are sent only after
 users inspect and accept or decline.
 
-Each user has an “Outbox” and an
-“Inbox”.
-The “Outbox” is used to trigger
+Each user has an "Outbox" and an
+"Inbox".
+The "Outbox" is used to trigger
 freebusy lookup.
-The “Inbox” is where invites or replies
+The "Inbox" is where invites or replies
 are delivered.
 Changes to events trigger scheduling.
-Clients monitor the “Inbox” for
+Clients monitor the "Inbox" for
 incoming scheduling messages.
 
 .Sequence of diagrams showing free-busy lookup.
@@ -238,10 +238,10 @@ image::img07.png[]
 
 .Sequence of diagrams showing invitations being sent out, replies returned.
 ====
-.Organizer sends invite request to the server. Server copies the request into each attendees’ Inbox. Attendees see the invites when they next check the server.
+.Organizer sends invite request to the server. Server copies the request into each attendees' Inbox. Attendees see the invites when they next check the server.
 image::img08.png[]
 
-.Attendee replies to the server. Server copies the reply into the organizer’s Inbox. Organizer sees the reply when they next check the server.
+.Attendee replies to the server. Server copies the reply into the organizer's Inbox. Organizer sees the reply when they next check the server.
 image::img09.png[]
 ====
 
@@ -250,7 +250,7 @@ image::img09.png[]
 .Demo Participants
 image::img10.png[]
 
-==== Demonstration #2 -- Simple meeting between multiple people with different clients some CalDAV others using a CalDAV “connector”
+==== Demonstration #2 -- Simple meeting between multiple people with different clients some CalDAV others using a CalDAV "connector"
 
 .Demo Participants
 image::img11.png[]
@@ -263,11 +263,11 @@ image::img11.png[]
 different calendaring systems to
 schedule meetings with each other
 * Instantaneous freebusy lookups
-* Invites, replies sent as “messages”
+* Invites, replies sent as "messages"
 with delivery status immediately
 returned
 
-=== Can’t this be done today?
+=== Can't this be done today?
 
 * But I can do scheduling with my
 colleagues today!
@@ -300,10 +300,10 @@ image::img15.png[]
 
 .Sequence of diagrams showing invites and replies.
 ====
-.Organizer sends invite request to their server. Server sends the invite to each attendee’s server. Attendees see the invites when they next check the server.
+.Organizer sends invite request to their server. Server sends the invite to each attendee's server. Attendees see the invites when they next check the server.
 image::img16.png[]
 
-.Attendees reply to their server. Server sends the reply to the organizer’s server. Organizer sees the reply when they next check the server.
+.Attendees reply to their server. Server sends the reply to the organizer's server. Organizer sees the reply when they next check the server.
 image::img17.png[]
 ====
 
@@ -331,7 +331,7 @@ people
 * Time periods may be marked as
 ** busy
 ** free
-** busy unavailable (“out of office”)
+** busy unavailable ("out of office")
 ** busy-tentative
 
 === Expressing Freebusy time
@@ -386,7 +386,7 @@ range of time.
 
 === How it works
 
-* The “Read URL” is used to get
+* The "Read URL" is used to get
 freebusy data for a user
 +
 --
@@ -395,7 +395,7 @@ http://www.example.com/freebusy/user1@example.com?start=20070901T000000-0800
 http://www.example.com/freebusy/user1@example.com
 --
 * returns VFREEBUSY object
-* The “Publish URL” is used by a client to
+* The "Publish URL" is used by a client to
 upload freebusy data for a user
 +
 --

@@ -80,12 +80,12 @@ The following reflects general items noted during the testing. The subset used d
 comprised of 111 scenarios of which 52 were classified as easy, 42 as medium and 17 as hard.
 During testing, 781 test responses were noted. The breakdown of the tests was as follows:
 
-Easy tests:: 210 passed, 33 failed, 1 was noted as “half pass” and 120 were skipped.
-Medium tests:: 138 passed, 29 failed, 3 “half passed” and 118 were skipped.
-Hard tests:: 31 passed, 17 failed, 1 “half passed” and 70 were skipped.
+Easy tests:: 210 passed, 33 failed, 1 was noted as "half pass" and 120 were skipped.
+Medium tests:: 138 passed, 29 failed, 3 "half passed" and 118 were skipped.
+Hard tests:: 31 passed, 17 failed, 1 "half passed" and 70 were skipped.
 
 Therefore, 49% of the tests passed, 11% failed, 39% were skipped and .06% half-passed.
-Considering the fact that only 27% of the tests performed were deemed “easy”, a 49% pass ratio
+Considering the fact that only 27% of the tests performed were deemed "easy", a 49% pass ratio
 is good, but not as good as the numbers could be.
 
 Lack of support on client or server applications was the primary reason tests failed. There were a
@@ -684,7 +684,7 @@ NOTE: Tests after 6.3 were not performed.
 | 3.43 Modify anniversary | pass |
 | 3.44 Modify occurrences of repeating meeting | pass |
 | 3.45 Delete recurring meeting | pass |
-| 4.1 Create Entry as owner with Attendees from Server | pass | attendee parsing error on client … try again later
+| 4.1 Create Entry as owner with Attendees from Server | pass | attendee parsing error on client ... try again later
 | 4.2 Accept Entry as Invitee from Device | Pass | only via markup in subject
 | 4.3 Create Entry as owner with Attendees from Device | pass |
 | 5.1 Time Zones and Simple Meetings | pass |
@@ -864,7 +864,7 @@ Respectfully submitted by Patricia Egen.
 
 [[appendix-A]]
 [appendix]
-== Testing Scenarios – Subset
+== Testing Scenarios -- Subset
 
 * 1.1 Create an Event with a Reminder
 * 1.2 Access Level and Priority

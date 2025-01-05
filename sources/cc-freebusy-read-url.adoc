@@ -600,10 +600,10 @@ Daboo.
 [bibliography,normative=false]
 === Informative References
 
-* [[[CalConnectGlossary, CC/R 0610]]] CalConnect.org, “CalConnect Calendar Glossary,”
+* [[[CalConnectGlossary, CC/R 0610]]] CalConnect.org, "CalConnect Calendar Glossary,"
 STD 1, October 2006 (PDF).
 
-* [[[I-D.ietf-vcarddavvcardrev,2]]], Perreault, S. and P. Resnick, “vCard Format Specification,” draft-ietf-vcarddav-vcardrev-06 (work in progress), March 2009 (TXT).
+* [[[I-D.ietf-vcarddavvcardrev,2]]], Perreault, S. and P. Resnick, "vCard Format Specification," draft-ietf-vcarddav-vcardrev-06 (work in progress), March 2009 (TXT).
 // EDITOR: Auto-fetching `IETF I-D draft-ietf-vcarddav-vcardrev-06` fails. This should now be RFC 6350.
 
 * [[[RFC2739, RFC 2739]]]
