@@ -1,0 +1,880 @@
+= CalConnect, Calendaring Interoperability and Calendaring Standards
+:docnumber: 0705
+:copyright-year: 2007
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2007-11-11
+:published-date: 2007-11-11
+:technical-committee: FREEBUSY
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:fullname: Dave Thewlis
+:affiliation: The Calendaring and Scheduling Consortium
+:contributor-position: Executive Director
+:imagesdir: images
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks
+and Disclaimer of Warranty for External (Public) Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+[heading=terms and definitions]
+== Definitions
+
+=== Calendar
+A collection of events, tasks, journal entries, etc.
+Examples include a person's or group's schedule,
+resource availability, and event listings.
+
+=== Scheduling
+The exchange of request/invitations and
+responses between organizers and attendees of
+scheduled events, tasks or journal entries.
+
+=== CalConnect
+The Calendaring and Scheduling Consortium,
+consisting of vendors and user groups interested
+in promoting and improving calendaring and
+scheduling [underline]#standards and interoperability#.
+
+== Why CalConnect was established
+
+=== 1995-1999
+
+* 1996 Versit Consortium issued vCalendar
+specification
+* 199x IETF CALSCH working group started
+on iCalendar specification
+* 1998 iCalendar (RFC 2445), iTIP (RFC 2446)
+and iMIP (RFC 2447) became a proposed
+standard
+* 199x Work began on draft for Calendaring
+Access Protocol (CAP)
+* 1998 -- 2000 Some interoperability testing
+
+=== 2000-2004
+
+* Work on CAP -- stopped
+* Interoperability testing -- stopped
+* Work on iCalendar, iTIP and iMIP -- stopped
+* IETF CALSCH working group -- stopped
+* *The draft RFCs were not ready*
+** Too ambiguous
+** Too complex
+** Untested
+* Calendaring and Scheduling Vendors
+continued to use the RFCs as they could
+* Where the RFCs were inadequate vendors
+were forced to develop workarounds or
+unique extensions
+* Work on follow-on or related specifications
+was hampered by being "built on sand"
+* Vendors -- and users -- became more and
+more frustrated by the lack of movement in
+calendaring standards and interoperability
+* Interoperability between calendaring
+systems was mostly still a dream
+* Somewhere around 2004 things started to
+move again
+* Some vendors began moving towards
+alternatives to the base RFCs
+* Interoperability seemed less important than
+progressing products
+* Work was begun on CalDAV as a
+prospective standard for a calendar access
+protocol, recognizing that CAP was a dead
+end
+
+=== Establishment of CalConnect
+
+CalConnect was founded in January of
+2004 to promote interoperable
+Calendaring and Scheduling.
+
+[quote]
+The driving premise behind the Consortium is that
+interoperability between calendaring programs and
+systems is essential to achieving the promise and
+future growth of calendaring.
+
+[quote]
+We believe that our work towards interoperability is a
+major factor driving the future of internet
+calendaring, and are actively working to involve
+significant players (vendors and customers) in the
+calendaring arena.
+
+=== Why a Consortium?
+
+A focused environment to:
+
+* Re-energize Calendaring and Scheduling
+* Provide a forum to discuss the direction for
+standards and implementations
+* Validate the existing standards
+* Provide interoperability testing between
+implementations and against standards
+* Drive requirements for changes to existing
+standards, new and complementary standards
+back into IETF, other bodies
+* Where necessary develop initial specifications and
+submit them to SDOs for progression to standards
+* Promote standards and technologies to the vendor
+and user communities
+
+== Overview of CalConnect
+
+=== What is CalConnect?
+
+A Partnership between Calendaring &
+Scheduling Vendors and Customers
+
+* To provide a general understanding of, promote,
+and provide mechanisms so that Calendaring and
+Scheduling methodologies, tools and applications
+can enter the mainstream of computing
+
+Not a standards development organization
+(SDO)
+
+* Develop use cases, requirements, papers, specs
+* Promote development and adoption of standards
+* Introduce specifications into SDOs for progression
+* Influence SDOs and vendors
+
+=== The Vision
+
+[quote,"Dave Thewlis, CalConnect Executive Director"]
+Our vision of the future is not only
+interoperable calendaring, but ubiquitous
+interoperable calendaring. Calendaring
+should--and can--be as ubiquitous as
+electronic mail.
+
+[quote,"Pamela Taylor, CalConnect Board Member"]
+Being able to schedule meetings with my
+work group is important. But being able to
+schedule an appointment with my
+hairdresser could change the world.
+
+=== CalConnect Members
+
+==== Institutional Members
+
+* Apple Inc.
+* Boeing
+* California State University, Fresno
+* Carnegie Mellon
+* Dartmouth
+* Duke University{blank}footnote:fm[Founding member]
+* Eventful{blank}footnote:fm[]
+* Google
+* IBM
+* Kerio Technology
+* MailSite Software
+* Marware
+* M.I.T.{blank}footnote:fm[]
+* Microsoft
+* Mirapoint
+* Mozilla Foundation{blank}footnote:fm[]
+* New York University
+* Open Connector Groupware
+* Oracle Corporation{blank}footnote:fm[]
+* Open Source Applications Foundation{blank}footnote:fm[]
+* PeopleCube{blank}footnote:fm[]
+* Princeton University OIT
+* Rensselaer Polytechnic Institute (RPI)
+* Scalix
+* Sony Ericsson
+* Stanford University{blank}footnote:fm[]
+* Sun Microsystems
+* Symbian{blank}footnote:fm[]
+* Synchronica
+* Timebridge
+* Trumba Corp
+* University of California, Berkeley{blank}footnote:fm[]
+* University of Chicago
+* University of Michigan
+* University of Pennsylvania
+* University of Washington{blank}footnote:fm[]
+* University of Wisconsin, Madison{blank}footnote:fm[]
+* Yahoo!{blank}footnote:fm[]
+* Zimbra
+
+==== Individual Members
+
+* Patricia R. Egen
+
+=== CalConnect
+
+What we do:
+
+* Promote Calendaring & Scheduling (C&S)
+* Help drive the evolution of open standards for
+Calendaring & Scheduling
+* Conduct interoperability testing
+* Develop a shared vision for C&S community
+
+How we do it:
+
+* All members have same rights & privileges
+* Collegial, consensus environment
+* Completed work products are published
+* Non-member organizations may attend one
+Roundtable as Observers
+* Member may have unlimited participants
+* Any member may propose new TC, provide Chair
+
+=== How CalConnect Works
+
+* All members have same rights & privileges
+* Collegial, consensus environment
+* Completed work products are published
+* Non-member organizations may attend one
+Roundtable as Observers
+* Member may have as many representatives
+involved as it wishes
+
+=== Technical Committees
+
+==== Membership
+
+* TC participants from member organizations
+
+==== Operations
+
+* Determined by TC Chair and TC membership
+* TC Chair provides regular status to Steering Committee
+
+==== Governance
+
+* Any Consortium member may propose new work
+* Charter, scope and deliverables identified in the proposal
+* Chair confirmed by SC
+* Committee terminates when chartered work is complete
+
+==== Operational policies
+
+* In-progress work confidential to Consortium members only
+* Completed work published and freely available on
+Consortium web site
+* No proprietary information discussed
+
+=== TC CHAIRS
+
+* Management committee for TCs
+** Composed of Chairs of all TCs
+* Weekly conference calls
+* Ongoing TC coordination on behalf of
+Steering Committee
+* Approves document publication following
+last call process
+* Chair of TC CHAIRS participates in Steering
+Committee
+
+=== Steering Committee
+
+==== Membership
+
+* Founding Members plus first member from each
+membership category
+
+==== Operations
+
+* Monthly teleconference
+* Meetings at Roundtables or other activities if needed
+
+==== Governance
+
+* Chair chosen by Steering Committee members
+* Chair participates in Board of Directors meetings
+
+==== Activities
+
+* Overall technical direction
+* Management of Technical Committees via TC CHAIRS
+committee
+* Consortium program elements
+* Advice to the Board of Directors
+
+=== Why Get Involved in CalConnect
+
+* Help shape the evolution of calendaring and
+scheduling specifications, standards and
+products
+* Develop real-world use cases and
+requirements
+* Make sure needs are considered
+* Work directly with developers/major
+customers
+* Help drive the calendaring community
+towards interoperability
+* Member may have as many representatives
+as desired in Consortium Activities
+
+=== Membership
+
+==== Eligibility
+
+Any company, institution or individual who:
+
+* supports the goals of the Consortium
+* agrees to abide by its rules
+* submits the proper membership application
+* pays the appropriate membership fee
+
+==== Fees
+
+* Published on the Consortium web site
+* Based on membership category
+* Due annually upon anniversary of joining the
+Consortium
+
+==== Categories
+
+* Commercial Vendor
+** >$100 million annual revenue
+** $10-100 million annual revenue
+** >$10 million annual revenue
+* Customer Organizations/Companies
+* Non-Profit Organizations
+* Open Source Organizations
+* Academic Institutions
+* Standards Setting Organizations
+* Individuals
+
+=== Organizational Structure
+
+.Organizational structure
+image::img01.png[]
+
+=== Events
+
+. Interops (Interoperability Testing)
+** Open to members and non-members
+** Two day event usually co-located with Roundtable
+** Results published to relevant standards development
+organizations
+** Public reports are "sanitized"
+
+. Roundtables
+** "All hands" plenary meeting of membership
+** Three per year, midway between IETF meetings
+** Held in conjunction with Interops
+** Technical committee working meetings
+** Steering Committee meeting
+** Review and status of technical committees
+
+. Workshops
+** Open or invitational depending on goal & topic
+** May involve non-Consortium members and liaisons
+** Co-hosted with Roundtable or independent event
+
+. Calendaring & Scheduling Public Conference
+** *Under evaluation*
+** Would offer technology and product overviews,
+tutorials and classes, demonstrations and vendor
+offerings
+
+=== Current Technical Committees
+
+==== CALDAV
+
+Define problems
+CalConnect wishes to
+solve with extensions to
+WebDAV; assist IETF
+with development of
+CalDAV Specification
+
+==== EVENTPUB
+
+Define event publishing
+& establish differences
+from regular
+calendaring and
+scheduling
+
+==== FREEBUSY
+
+Develop and conduct
+Federated Free/Busy
+Challenge Response;
+review Free/Busy
+related proposals
+
+==== IOPTEST
+
+Support interoperability
+testing for all technical
+committees, develop
+test suites & reference
+implementation, publish
+Interop results
+
+==== MOBILE
+
+Define issues for mobile
+support of standards-based
+Calendaring and
+recommend extensions
+to standards for mobile
+support
+
+==== REALTIME
+
+Clarify issues involved
+with realtime server-to-server
+calendaring and
+scheduling issues &
+provide
+recommendations
+
+==== TIMEZONE
+
+Develop proposals for a
+formal, authoritative
+Timezone Registry and
+a Timezone Service
+Protocol
+
+==== USECASE
+
+Develop sets of real
+world use cases that
+can be used to validate
+identified functionality &
+testing scenarios for
+existing & future C&S
+implementations
+
+== The Current State of Calendaring Standards
+
+=== Calendaring Standards Today
+
+==== [strike]#IETF CALSCH Working Group#
+
+* [strike]#Developed RFCs 2445/6/7#
+* [strike]#Shut down in 2004 at same time as CAP removed from table#
+
+==== [strike]#Original CAP (Calendar Access Protocol)#
+
+* [strike]#Assigned "experimental draft" status by IETF in 2004 (effectively removed from program of work in IETF)#
+
+==== [strike]#vCalendar#
+
+* [strike]#Still in use especially in mobile calendaring, travel industry websites#
+* [strike]#Not fully compatible with iCalendar (e.g. recurrence); encourage move to iCalendar#
+* https://www.calconnect.org/publications/iCalendarforthemobileindustryv1.0.pdf[The Benefits of iCalendar for the Mobile Industry]
+
+==== vCard
+
+* Not precisely "calendaring" -- but contacts/address
+book central to calendaring
+* Current version 3.0 needs work
+* Mobile calendaring mostly obsolete vCard 2.1
+* https://www.calconnect.org/vcardworkshopreport.shtml[CalConnect vCard workshop]
+
+==== IETF "CALSIFY" Working Group
+
+* Simplify (rationalize) RFCs 2445/6/7
+
+==== RFCs 2445/6/7 (iCalendar, iTIP, iMIP)
+
+* Target of initial CalConnect work products
+* All have revised drafts underway
+* Expect publication of revised RFCs in 2008
+* Still require interoperability demonstration to
+progress to Draft Standards (i.e. CalConnect)
+
+==== CalDAV
+
+* "Calendaring Extensions to WebDAV" published as
+Proposed Standard, RFC 4791
+* "Scheduling Extensions to CalDAV" is under
+review for submission
+* Several CalDAV implementations today
+** Apple iCal Server (Darwin Calendar Server)
+** Bedework
+** Evolution
+** Kerio Technologies (Kerio MailServer)
+** Marware (Project X Client)
+** Mozilla Lightning & Sunbird (CalDAV client)
+** Mulberry (Client)
+** Oracle Calendar
+** OSAF Cosmo (Chandler Project)
+** Etc.
+
+==== iCalendar Extensions
+
+* Proposed extensions (additions) to the revised
+iCalendar when it is complete
+* VAVAILABILITY
+** New iCalendar component allowing publication of available
+and unavailable time periods associated with calendar user
+* VVENUE
+** New iCalendar component allowing the specification of
+structured location data for publishing event information
+
+==== EVENTMAP protocol
+
+* Identifies location on website of structured event
+information for use by event publication
+aggregators
+
+== CalConnect Activities and Accomplishments
+
+=== TC CALDAV
+
+==== Charter
+
+* Begin: October 2004
+* Define problems CalConnect wishes to resolve with _CalDAV Extensions to WebDAV_
+* Assist IETF with CalDAV Specifications
+
+==== Projects, Topics
+
+* Act as "real world" input to CalDAV Specification authors
+(two of three are members of TC CALDAV)
+* Develop CalDAV testing matrices for TC IOPTEST
+* Develop VAVAILABILITY with TC FREEBUSY
+* Develop use cases and requirements for CalDAV
+Scheduling
+* *CalDAV scheduling extensions (discovery, auth/auth, etc.)*
+
+==== Products
+
+* CalDAV testing matrices for Interoperability testing
+* CalDAV Use Cases and Requirements
+* CalDAV Scheduling Requirements
+* *VAVAILABILITY extension to iCalendar*
+
+=== TC EVENTPUB
+
+==== Charter
+
+* Begin: March 2005
+* Define Event Publication and distinguish from regular
+calendaring
+* Determine requirements for event publication not met by
+existing specifications and propose remedies
+
+==== Projects, Topics
+
+* Review of possible extensions to iCalendar to support
+event publication and venue information
+* *Develop mechanism for event "crawlers" to find and
+consume event information on websites, analogous to
+"sitemap"*
+
+==== Products
+
+* VVENUE extension to iCalendar
+* *EVENTMAP proposal under development*
+
+=== TC FREEBUSY
+
+==== Charter
+
+* Begin: May 2006
+* Act as CalConnect Liaison with The Open Group for the Federated
+Freebusy Challenge in 2006
+* Inform the work of CALDAV, REALTIME, and other TCs
+* Participate in drafting the final report for The Open Group
+
+==== Projects, topics
+
+* Demo-ed a Federated Freebusy Aggregator at The Open Group
+meeting in July 2006
+* Assist Boeing to "productize" components used in the demo as well
+as those being further developed by Boeing
+* *Addressing "office hours"/"availability" -- joint VAVAILABILITY
+project with TC CALDAV*
+* *Standardize and simplify FREEBUSY URL*
+
+==== References
+
+* http://tools.ietf.org/html/draft-daboo-calendar-availability-00
+* http://calconnect.org/publicity/060724freebusydemorelease.pdf
+* http://calconnect.org/presentations/freebusydemo.pdf
+
+=== TC IOPTEST
+
+==== Charter
+
+* Begin: October 2004
+* Conduct CalConnect Interoperability Test Events and
+publish results
+
+==== Projects, topics
+
+* CalConnect Interoperability Test Events scheduled with
+each Consortium event week (i.e. together with
+Roundtables)
+
+==== Products
+
+* Public and CalConnect-internal IOP test event reports
+
+=== TC MOBILE
+
+==== Charter
+
+* Begin: September 2005
+* Identify issues related to mobile calendaring and
+scheduling and develop recommendations to address
+
+==== Projects, topics
+
+* Determine mobile calendaring issues and problems
+* Survey mobile users about calendaring
+* Evaluate continued reliance on vCalendar and develop
+ways to move vendors forward
+* Develop Mobile Calendaring Interoperability Test Suite
+* *Implement Mobile IOP Test Events (with TC IOPTEST)*
+* *Define Mobile Calendaring issues for CalDAV*
+
+==== Products
+
+* Report on Mobile Calendaring Questionnaires
+* Mobile Calendaring Interoperability Test Suite
+* Benefits of iCalendar for the Mobile Industry
+
+=== TC REALTIME
+
+==== Charter
+
+* Begin: June 2007
+* Identify issues related realtime server-server scheduling
+and make recommendations to address
+
+==== Projects, topics
+
+* Discovery, Authentication and Authorization
+* iTIP evaluation and extensions
+* Work with TC CALDAV, TC FREEBUSY
+
+==== Products
+
+=== TC RECURR
+
+==== Charter
+
+* Begin: October 2004 (completed February 2006)
+* Identify problems with Recurrences in iCalendar
+* Make recommendations to IETF CALSIFY effort (revision of
+RFC 2445 iCalendar)
+
+==== Projects, topics
+
+* Questionnaires to determine problems with recurrence in
+implementations of iCalendar
+* Develop problem statement and recommendations
+
+==== Products
+
+* Results from Recurrence Questionnaire
+* iCalendar Recurrence Problems and Recommendations
+
+=== TC TIMEZONE (Phase 1)
+
+==== Charter
+
+* Begin: October 2004 (completed February 2006)
+* Identify problems with timezone usage in iCalendar and
+timezone support in genera
+
+==== Projects, topics
+
+* Conduct survey on problems with timezone management
+* Develop problem statements and recommendations for
+IETF CALSIFY effort for iCalendar
+
+==== Products
+
+* Timezone Questionnaire
+* Report on Timezone Questionnaire
+* Timezone Problems and Recommendations
+* Timezone Registry and Service Recommendations
+
+=== TC TIMEZONE (Phase 2)
+
+==== Charter
+
+* Begin: May 2007
+* Continue work of TC TIMEZONE by developing formal
+proposals based on Timezone Registry and Service
+Recommendations
+
+==== Projects, topics
+
+* *Develop proposal for formal, authoritative Timezone
+Registry for submission to IETF to be published as an RFC*
+* *Develop requirements for Timezone Registry Service*
+* *Develop proposals for Timezone Registry Service
+implementations using current protocols*
+
+==== Products
+
+=== TC USECASE
+
+==== Charter
+
+* Begin: October 2004
+* Develop use cases for calendaring and scheduling and
+their contextual environments
+* Establish the ways that users actually want to use
+calendaring environments
+* Establish "Minimum Interoperable Subsets" (the minimum
+set of functions which must be interoperable to make an
+implementation useful to a customer)
+
+==== Projects, topics
+
+* *Assessment of access control in existing calendaring
+implementations for TC CALDAV*
+* *Develop Min-IOP use cases for Resources*
+
+==== Products
+
+* Min-IOP Use Cases for iCalendar
+* CalDAV Use Cases (with TC CALDAV)
+* Min-IOP Use Cases for Tasks
+* Calendaring and Scheduling Glossary of Terms
+* *Min-IOP Use Cases for Resources*
+
+=== DST AD HOC
+
+==== Charter
+
+* Begin: June 2005
+* Establish CalConnect position on Extended Daylight Savings Time
+Proposal by U.S. Congress
+* Continue DST Advisory Work
+
+==== Projects, topics
+
+* Develop CalConnect position on EDST and communicate to U.S.
+Congress prior to enactment of law
+* Develop guidance for industry on planning for and implementing
+EDST Changes in March and October
+* Work with TC TIMEZONE on recommendations on future of
+timezone and DST support
+
+==== Products
+
+* Extended Daylight Savings Time Advisory
+* Extended Daylight Savings Time Review and Considerations
+* EDST Links, Advisories and Changes
+* CalConnect Reflections and Recommendations
+
+=== vCard Ad Hoc
+
+==== Charter
+
+* Begin: January 2007
+* Determine interest in and support for revision of vCard
+standard
+
+==== Projects, topics
+
+* vCard Workshop planning and implementation
+* Liaisons with OMA/DS on interest in vCard Revision
+* *Identify products of vCard Technical Committee*
+* *Develop charter for vCard Technical Committee in support of IETF working group on vCard revision*
+* *Recommendation on establishment of vCard TC*
+
+==== Products
+
+* vCard Workshop (September 2007)
+* Draft Charter for vCard Technical Committee
+
+=== XML Ad Hoc
+
+==== Charter
+
+* Begin: May 2007
+* Plan for and explore XML representations of iCalendar
+* Determine need for XML Technical Committee
+
+==== Projects, topics
+
+* Conduct BOFs to determine level of support for roundtrip
+iCalendar/XML
+* Review prior art in this are
+* *Develop charter for XML Technical Committee*
+* *Identify potential products of XML TC*
+* *Recommendation for establishment of XML TC*
+
+==== Products
+
+* *Draft charter for XML Technical Committee*
+
+== Summary: New and Proposed Work
+
+=== New Activities
+
+* Mobile Calendaring Interoperability Test
+Suite
+* Planning for Mobile Calendaring
+Interoperability Test Events
+* Min-IOP Use Cases for Resources
+* Expansion of IOP Testing areas
+** EDST
+** iTIP
+** CalDAV Scheduling
+* Formal Timezone Registry and Timezone
+Registry Service proposals
+* FREE/BUSY URL
+* `VAVAILABILITY` ("Office Hours")
+* `EVENTMAP` protocol
+* Event Sharing between servers
+* Automated Scheduling Updates (CalDAV)
+* External Attachments (CalDAV)
+* vCard Revision
+* XML iCalendar Representations
+* `REALTIME` issues for iTIP and scheduling
+** Addressability
+** Discovery
+** Authentication/Authorization/Access Control
+* Diverse calendaring specifications & tools
+(CalATOM, RSS/SSE, microformats, CalDAV,
+proprietary calendaring systems)
+** Develop and publish guide and comparison
+** Work towards ensuring interoperability and
+synergy between various tools and specs
+
+== More Info
+
+. Website: http://www.calconnect.org
+. Contact us: info@calconnect.org
+. For more information:
++
+--
+Dave Thewlis, Executive Director +
+The Calendaring and Scheduling Consortium +
+4390 Chaffin Lane +
+McKinleyville, CA 95519-8028 +
+Voice: +1 707 840 9391 +
+FAX: +1 415 946 3454 +
+Mobile: +1 707 498 2238 +
+Email: Dave.Thewlis@calconnect.org
+--
+
+[bibliography]
+== References
+
+* [[[ccw, CalConnect Web Site]]], http://www.calconnect.org
+
+* [[[ccpd, CalConnect Published Documents]]], http://www.calconnect.org/aboutproducts.shtml (Questionnaires, Recommendations, Use Cases and Requirements, Mobile Interoperability Test Suite, Calendaring and Scheduling Glossary of Terms, Event Reports, vCard Workshop Report)
+
+* [[[ccs, CalConnect Calendaring Standards]]], http://www.calconnect.org/calendaringstandards.shtml
+
+* [[[ccp, CalConnect Presentations]]], http://www.calconnect.org/presentations.shtml
+
+* [[[ccdst, CalConnect DST Documents]]], http://www.calconnect.org/dstdocs.shtml
