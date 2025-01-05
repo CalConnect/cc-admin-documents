@@ -1,12 +1,12 @@
 = Mobile Recurrence Interoperability Recommendations
 :docnumber: 0805
-:copyright-year: 2007
+:copyright-year: 2008
 :language: en
 :doctype: administrative
 :edition: 1
 :status: published
-:revdate: 2007-09-14
-:published-date: 2007-09-14
+:revdate: 2008-07-29
+:published-date: 2008-07-29
 :technical-committee: MOBILE
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
