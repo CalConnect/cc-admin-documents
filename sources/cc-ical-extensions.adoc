@@ -1,0 +1,23 @@
+= Event Publishing Extensions to iCalendar
+:docnumber: 1101
+:copyright-year: 2011
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2011-02-16
+:published-date: 2011-02-16
+:technical-committee: EVENTPUB
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+
+.Foreword
+
+This proposal was submitted to the IETF as an Internet Draft for the Standards Track as
+of the date shown above, and may be found at the following URL:
+
+https://datatracker.ietf.org/doc/draft-douglass-calendar-extension
+
+This specification introduces a number of new iCalendar properties which are of
+particular use for event publishers and in social networking.
