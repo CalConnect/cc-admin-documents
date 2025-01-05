@@ -45,17 +45,17 @@ developed in conformance with the WS-Calendar specification.
 
 == Introduction
 
-The CalWS SOAP protocol is built upon and makes the same assumptions about structure 
-as the CalDAV protocol defined in <<rfc4791>> and related specifications. It does NOT 
+The CalWS SOAP protocol is built upon and makes the same assumptions about structure
+as the CalDAV protocol defined in <<rfc4791>> and related specifications. It does NOT
 require nor assume the WebDAV nor CalDAV protocol.
 
-Calendar resources, for example events and tasks are stored as named resources 
+Calendar resources, for example events and tasks are stored as named resources
 (files) inside special
 collections (folders) known as "*Calendar Collections*".
 
-This specification can be looked upon as a layer built on top of CalDAV and defines 
+This specification can be looked upon as a layer built on top of CalDAV and defines
 the basic operations
-which allow creation, retrieval, update and deletion. In addition, query and freebusy 
+which allow creation, retrieval, update and deletion. In addition, query and freebusy
 operations are defined
 to allow efficient, partial retrieval of calendar data.
 
@@ -65,7 +65,7 @@ some CalWS services will be built without any CalDAV support.
 
 === Terminology
 
-The keywords "`MUST`", "`MUST NOT`", "`REQUIRED`", "`SHALL`", "`SHALL NOT`", 
+The keywords "`MUST`", "`MUST NOT`", "`REQUIRED`", "`SHALL`", "`SHALL NOT`",
 "`SHOULD`", "`SHOULD NOT`", "`RECOMMENDED`", "`MAY`", and "`OPTIONAL`" in this specification are to be interpreted as described
 in <<rfc2119>>.
 
@@ -269,8 +269,8 @@ The following operations are defined by this specification:
 
 ==== Calendar Object Resources
 
-The same restrictions apply to Calendar Object Resources as specified in CalDAV 
-<<rfc4791,section=4.2>>. An additional constraint for CalWS is that no timezone 
+The same restrictions apply to Calendar Object Resources as specified in CalDAV
+<<rfc4791,section=4.2>>. An additional constraint for CalWS is that no timezone
 specifications are transferred with the data.
 
 ==== Timezone information
@@ -827,13 +827,13 @@ where the resource will be stored;
 value of the CalDAV:min-date-time property value on the calendar collection where the resource
 will be stored;
 * *CalWS:after-max-date-time*: The resource submitted in the request `MUST` have all of its iCalendar
-`DATE` or `DATE-TIME` property values (for each recurring instance) less than the 
+`DATE` or `DATE-TIME` property values (for each recurring instance) less than the
 value of the CalDAV:max-date-time property value on the calendar collection where the resource will be stored;
 * *CalWS:too-many-instances*: The resource submitted in the request `MUST` generate a number of recurring
 instances less than or equal to the value of the CalDAV: max-instances property value on
 the calendar collection where the resource will be stored;
 * *CalWS:too-many-attendees-per-instance*: The resource submitted in the request `MUST` have a
-number of `ATTENDEE` properties on any one instance less than or equal to the value of the 
+number of `ATTENDEE` properties on any one instance less than or equal to the value of the
 CalDAV:max-attendees-per-instance property value on the calendar collection where the resource will
 be stored.
 

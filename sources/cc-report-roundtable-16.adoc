@@ -124,7 +124,7 @@ underway was briefly reviewed.
 === TC XML
 
 TC XML has revised its Charter to accommodate n ew work at the behest of NIST, the
-National Institute of Standards and Technology, in response to the 
+National Institute of Standards and Technology, in response to the
 http://www.nist.gov/smartgrid/[NIST Smart Grid Interoperability Standards Project].
 This work includes an update to the iCalendar-to-XML
 Protocol, and the development of an abstract calendaring API which will allow multiple protocol

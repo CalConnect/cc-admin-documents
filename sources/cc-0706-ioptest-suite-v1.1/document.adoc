@@ -112,7 +112,7 @@ pending event or an overdue to-do.
 
 A collection of events, to-dos, journal entries, etc. A calendar could be the content of
 a person or resource's agenda; it could also be a collection of data serving a more specialized
-need. Calendars are the basic storage containers for calendaring information. 
+need. Calendars are the basic storage containers for calendaring information.
 
 [.source]
 <<rfc3283>>

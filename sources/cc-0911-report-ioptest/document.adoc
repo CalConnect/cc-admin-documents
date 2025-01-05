@@ -70,7 +70,7 @@ Gordon Connelly | Meetingmaker V8.8
 | Sun | Ciny Joy +
 Arnaud Quillaud | CalDAV Server and CalDAV Mobile Client
 | CalConnect Reps | |
-| Interop Manager + 
+| Interop Manager +
 Logistics | Pat Egen +
 Dave Thewlis |
 |===
@@ -125,7 +125,7 @@ fixed. More checking required.
 
 Some problems related to alarms and alarms with recurrence instances.
 
-First problem was due to not saving `VALARM` x-properties. Client got confused and 
+First problem was due to not saving `VALARM` x-properties. Client got confused and
 multiplied default alarms.
 
 Second problem appears to be server side only and needs further work. Exception when a (summary)

@@ -64,7 +64,7 @@ Technical Committee the opportunity to do so.
 Dr. Steven Lee, Professor and Head of the School of Architecture at Carnegie Mellon University,
 gave a talk on his view of calendaring and the current challenges he faces in two roles: as Head of
 a department that schedules many campus events, and as the IT person for a small business, his
-architecture practice. Dr. Lee invited interested participants on a tour of the 
+architecture practice. Dr. Lee invited interested participants on a tour of the
 http://www.cmu.edu/homepage/innovation/2007/spring/intelligent-workplace.shtml[Intelligent Workplace]
 project at CMU on Friday morning.
 

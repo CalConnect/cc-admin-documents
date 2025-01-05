@@ -110,7 +110,7 @@ See {{Calendar}}.
 
 Specifies the participants or non-participants (e.g., room or resources) for an
 event. This property in iCalendar can contain multiple attributes specifying additional
-information, i.e., role, participation status, group membership, delegation, etc. 
+information, i.e., role, participation status, group membership, delegation, etc.
 
 [.source]
 <<rfc5545>>
@@ -416,7 +416,7 @@ See {{Alarm}}.
 === OASIS
 alt:[Organization for the Advancement of Structured Information Standards]
 
-A Standards Development Organization primarily focused on web services standards. OASIS and CalConnect have reciprocal memberships for joint work on WS-Calendar. 
+A Standards Development Organization primarily focused on web services standards. OASIS and CalConnect have reciprocal memberships for joint work on WS-Calendar.
 
 [.source]
 <<oasis>>
@@ -424,7 +424,7 @@ A Standards Development Organization primarily focused on web services standards
 === Organizer
 
 A calendar user who creates a calendar item, requests free/busy information,
-or published free/busy information. It is an Organizer who invites Attendees. 
+or published free/busy information. It is an Organizer who invites Attendees.
 
 [.source]
 <<rfc5545>>
@@ -531,7 +531,7 @@ and best practices in use on the Internet
 === RSVP
 
 Specifies whether there is an expectation of a reply from a specific calendar
-user 
+user
 
 [.source]
 <<rfc5545>>
