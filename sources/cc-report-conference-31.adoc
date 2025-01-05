@@ -284,7 +284,7 @@ January 2015.
 
 * CalConnect XXXII: January 26-30, 2015, Kerio Technologies, San Jose, California
 * CalConnect XXXIII: Spring, 2015, TBD
-* CalConnect XXXIV: Autumn, 2015, Gershon Janssen, Amsterdam, The Netherlands 
+* CalConnect XXXIV: Autumn, 2015, Gershon Janssen, Amsterdam, The Netherlands
 
 The general format of the CalConnect week is:
 

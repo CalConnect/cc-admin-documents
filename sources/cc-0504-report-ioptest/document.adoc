@@ -357,7 +357,7 @@ NOTE: Recurrence between VENDORC and VENDORB is currently non-functional.
 
 NOTE: VENDORC's overriding/exceptions is not working yet.
 
-NOTE: Current VENDORC Lightening VI doesn't support creation other than via 
+NOTE: Current VENDORC Lightening VI doesn't support creation other than via
 drag-to-create and modify
 to change things like title. That will change soon. The backend code supports 1.1-1.3 but not yet 1.4.
 

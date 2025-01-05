@@ -328,7 +328,7 @@ A user wants to respond to a busy time request of another user.
 A user wants to grant/deny to security principals the right to
 create/read/modify/delete calendars on his behalf.
 
-EDITOR: read and modify operations on calendars are limited to attributes of the 
+EDITOR: read and modify operations on calendars are limited to attributes of the
 calendars themselves such as their name, description, creation date, etc.
 
 ==== {blank}

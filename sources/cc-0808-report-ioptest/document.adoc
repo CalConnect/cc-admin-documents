@@ -102,7 +102,7 @@ removed to provide a generic idea of findings.
 |===
 | Test ID | Status | Comments
 
-| 1.1 Create an Event with a Reminder | Pass | 
+| 1.1 Create an Event with a Reminder | Pass |
 | 1.2 Access Level and Priority | Pass | Passed, showing privacy status when syncing from server, then after removal of private and synced back, correct behaviour was seen on server. Could not test priority. Issue in vendor calendar test app with all day events - we believe this is the test app and not the calendar database engine.
 | 1.3 Special Characters From Server | Fail | Generally successful but failed on handling "&" -- was converted to the html entity "&amp;" and then not handled correctly.
 | 1.4 Multi-Byte Characters From Server | Fail | Chinese characters not shown correctly on web client and device
@@ -287,7 +287,7 @@ NOTE: No other testing was done after 3.27.
 | 1.2 Access Level and Priority | Pass | device supported access level but it missing transp property from devinf
 | 1.3 Special Characters From Server | Pass | perhaps skip this test and go right to multibytes
 | 1.4 Multi-Byte Characters From Server | | client interface could display multibytes
-| 1.5 Deletion | Pass | 
+| 1.5 Deletion | Pass |
 | 1.6 Create an Event with a Reminder | Pass |
 | 1.7 Access Level and Priority (can only be done if device supports setting an access level or priority) | Pass |
 | 1.8 Special Characters from Device | Pass |
@@ -372,7 +372,7 @@ NOTE: No other testing was done after 3.27.
 | 6.4 Mark task as completed | Pass |
 | 6.5 Special Characters From Server | Pass |
 | 6.6 Multi-Byte Characters From Server | | cannot view multi-bytes on client test interface
-| 6.7 Deletion | Pass | 
+| 6.7 Deletion | Pass |
 | 6.8 Create task | Pass |
 | 6.9 Task Access Level and Priority | Pass |
 | 6.10 Create task with alarm | Pass |
@@ -577,7 +577,7 @@ NOTE: Tests after 6.3 were not performed.
 | 5.5 Spring Daylight Savings Repeating Entry from Server | | currently only can sending floating
 | 5.6 Autumn Daylight Savings Single Entries from Device | | currently only can sending floating
 | 5.7 Autumn Daylight Savings Recurring Entry from Device | | currently only can sending floating
-| 6.1 Create task | Pass | 
+| 6.1 Create task | Pass |
 | 6.2 Task Access Level and Priority | Pass |
 | 6.3 Create task with alarm | Pass |
 | 6.4 Mark task as completed | Pass |
@@ -676,7 +676,7 @@ NOTE: Tests after 6.3 were not performed.
 | 3.35 Create Yearly Repeat (every year for 5 years, bounded) | pass |
 | 3.36 Create Yearly Repeat (every 4 years, bounded) | pass |
 | 3.37 Create custom repeat (``RDATE``s only) | | device does not support ``RDATE``s or combination
-| 3.38 Create repeat combination | | 
+| 3.38 Create repeat combination | |
 | 3.39 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | |
 | 3.40 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | pass |
 | 3.41 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | |

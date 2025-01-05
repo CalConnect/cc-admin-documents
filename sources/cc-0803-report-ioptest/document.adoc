@@ -108,7 +108,7 @@ END:VCALENDAR
 [source%unnumbered]
 ----
 Exception=vendor.ocs.tm.icalendar.exception.ICalParseException: '=' expected after "XPHONEOWNER"(Parameter=X-PHONEOWNER)(Parameter in comp=VEVENT.prop=ATTENDEE)
-at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseSubComponent(VCalParser.java:232) 
+at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseSubComponent(VCalParser.java:232)
 at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseSubComponent(VCalParser.java:203)
 at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseComponent(VCalParser.java:148)
 at vendor.ocs.protocols.oma.ds.connector.calendar.CalendarUtil.stringToVCalendar(CalendarUtil.java:225)

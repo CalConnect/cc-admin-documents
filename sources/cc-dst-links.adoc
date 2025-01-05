@@ -195,7 +195,7 @@ features in Kerberos as implemented by MIT_
 
 http://support.kerio.com/kb/454[Does KMS Support Daylight Saving Time for 2007]
 
-_Statement of compliance for Kerio Mailserver 6.3.0 and higher; links for underlying 
+_Statement of compliance for Kerio Mailserver 6.3.0 and higher; links for underlying
 OS changes which must be done manually_
 
 === Microsoft

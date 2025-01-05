@@ -186,7 +186,7 @@ Event on Thursday, 3 pm - 5 pm, status cancelled | NOTE: Vendor 1 does not diffe
 | P | P | ? | 7.1.2 | Verify two `FREEBUSY` periods for Tuesday. |
 | P | P | ? | 7.1.3 | Verify four `FREEBUSY` periods for Wednesday, second and fourth are `BUSY-TENTATIVE` and one hour long. |
 | P | P | ? | 7.1.4 | Verify two `FREEBUSY` periods for Thursday. |
-| P | P | ? | 7.1.5 | Verify two `FREEBUSY` periods for Friday. | 
+| P | P | ? | 7.1.5 | Verify two `FREEBUSY` periods for Friday. |
 3+| h| 8. h| Scheduling |
 3+| | Setup | Three user accounts user1 (role Organizer), user2 (role Attendee), user3 (role Attendee) provisioned with suitable principal properties for calendar home, inbox, outbox and user addresses. | NOTE: Vendor 2 server uses a virtual inbox, and attendee replies are not relayed back to the organizer. Vendor 5 does not make use of the inbox (events are updates automatically by the server); VENDOR 3: unable to test because cannot add attendees
 | P | N | ? | 8.1 | Organizer (user1) sends nonrecurring message invite for Monday at 9am (1 hour) to each attendee. Verify that each attendee Inbox receives a copy of the invite. |

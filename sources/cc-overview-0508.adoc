@@ -26,7 +26,7 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 ** Between Calendaring & Scheduling Vendors and Customers
 
 . Mission
-** To provide a general understanding of, promote, and provide mechanisms so that 
+** To provide a general understanding of, promote, and provide mechanisms so that
 Calendaring and Scheduling methodologies, tools and applications
 can enter the mainstream of computing
 

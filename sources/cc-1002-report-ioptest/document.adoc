@@ -118,7 +118,7 @@ consequence of a small change from organizer
 * `PARSTAT=DECLINED;RSVP=TRUE` and new `SUMMARY` - `ATTENDEE ACCEPTS` - `RSVP`
 not removed from `ORG` copy
 
-Some CardDAV testing found that `OPTION` or `PROPFIND` on `/davserver/dav/principals/` 
+Some CardDAV testing found that `OPTION` or `PROPFIND` on `/davserver/dav/principals/`
 returns 404
 
 The following matrices show some observations for CALDAV, CARDDAV and sync reports.

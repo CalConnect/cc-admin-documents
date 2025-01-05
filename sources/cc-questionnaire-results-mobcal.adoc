@@ -861,13 +861,13 @@ Q7.2 Please rank these mobile calendaring use cases in order of importance to yo
 
 . Sharing a calendar with colleague or spouse to identify free and busy time. image:short-dropdown.png[]
 . Book appointments with other people using your mobile device (e.g. scheduling a
-follow-up meeting at the end of a meeting or making an appointment at the physican 
+follow-up meeting at the end of a meeting or making an appointment at the physican
 and the event automatically being added to your mobile calendar). image:short-dropdown.png[]
-. Adding calendar events to your calendar that have been downloaded from a mobile web 
-browser (e.g. adding your favourite team's football matches or a list of public 
+. Adding calendar events to your calendar that have been downloaded from a mobile web
+browser (e.g. adding your favourite team's football matches or a list of public
 holidays to your calendar). image:short-dropdown.png[]
 . Accessing a public transport timetable on your mobile device that is relevant to your
-current location (e.g. automatically downloading a timetable at bus stop or ticket 
+current location (e.g. automatically downloading a timetable at bus stop or ticket
 office). image:short-dropdown.png[]
 . Automatically arranging a meeting at a time convenient for meeting participants
 after they have agreed they want to meet. image:short-dropdown.png[]
