@@ -1,0 +1,584 @@
+= Index to Calendaring and Scheduling Standards
+:docnumber: 1104
+:copyright-year: 2011
+:language: en
+:doctype: administrative
+:edition: 2
+:status: published
+:revdate: 2011-05-18
+:published-date: 2011-05-18
+:technical-committee: CALCONNECT
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+
+.Foreword
+
+This page provides links, titles, and very brief abstracts of Calendaring and 
+Calendaring-related (e.g. WebDAV, vCard) standards, specifications, and guides. The 
+material is divided by category and subdivided in turn to base standards, additions 
+and extensions, and work in progress. Entries are alphabetical by title within 
+section. The material linked is largely but not entirely IETF and CalConnect.
+
+We would appreciate additions and corrections to the list; please send any 
+recommendations to mailto:info@calconnect.org[Standards Recommendations to CalConnect].
+
+== General
+
+=== An Introduction to Internet Calendaring
+
+This CalConnect guide introduces internet calendaring and the major standards and 
+specifications related to calendaring and scheduling.
+
+[.source]
+<<cc1012>>
+
+=== Calendaring and Scheduling Glossary of Terms
+
+A Glossary of Calendaring and Scheduling Terms, developed by CalConnect.
+
+[.source]
+<<cc1102>>
+
+== iCalendar
+
+=== Base Standards
+
+==== Internet Calendaring and Scheduling Core Object Specification (iCalendar) RFC 5545
+
+iCalendar is the core data schema for calendaring information. This is the new version and obsoletes RFC 2445.
+
+[.source]
+<<rfc5545>>
+
+==== iCalendar Transport-Independent Interoperability Protocol (iTIP) - Scheduling  Events, BusyTime, To-dos and Journal Entries RFC 5546
+
+Specifies the mechanisms for calendaring event interchange between calendar servers. 
+This is the new version and obsoletes RFC 2446.
+
+[.source]
+<<rfc5546>>
+
+==== iCalendar Message-Based Interoperability Protocol (iMIP) RFC 6047
+
+Specifies how to exchange calendaring data via e-mail. This is the new version and 
+obsoletes RFC 2447.
+
+[.source]
+<<rfc6047>>
+
+==== xCal: The XML format for iCalendar RFC 6321
+
+This specification defines a format for representing iCalendar data in XML. More 
+specifically, is to define an XML format that allows iCalendar data to be converted 
+to XML, and then back to iCalendar, without losing any semantic meaning in the data. 
+Anyone creating XML calendar data according to this specification will know that 
+their data can be converted to a valid iCalendar representation as well.
+
+[.source]
+<<rfc6321>>
+
+=== Additional and Extensions
+
+==== CalWS RESTful Web Services Protocol for Calendaring
+
+This document, developed by the XML Technical Committee, specifies a RESTful web 
+services Protocol for calendaring operations. This protocol has been contributed to 
+OASIS `WS-CALENDAR` as a component of the `WS-CALENDAR` Specification under development 
+by OASIS.
+
+[.source]
+<<cc1011>>
+
+==== Freebusy Read URL
+
+This proposal, developed by the Freebusy Technical Committee, defines a standardized 
+form of Freebusy Read URL to improve interoperability between client and server 
+implementations, while extending functionality and utility through the use of 
+optional parameters.
+
+[.source]
+<<cc0903>>
+
+==== hCalendar 1.0 microformat
+
+hCalendar is a simple, open, distributed calendaring and events format, using a 1:1 
+representation of standard iCalendar (RFC 2445) `VEVENT` properties and values in 
+semantic HTML or XHTML.
+
+[.source]
+<<hcal>>
+
+==== IANA Registration of Enumservices for Internet Calendaring RFC 5333
+
+This document registers Enumservices for Internet calendaring. Specifically, this 
+document focuses on Enumservices for scheduling with iMIP (iCalendar Message-Based 
+Interoperability Protocol) and for accessing Internet calendaring information with 
+CalDAV (Calendaring Extensions to WebDAV).
+
+[.source]
+<<rfc5333>>
+
+=== Work in Progress
+
+==== Calendar Availability
+
+This document specifies a new iCalendar calendar component VAVAILABILITY that allows 
+the publication of available and unavailable time periods associated with a calendar 
+user. This component can be used in standard iCalendar free-busy lookups, including 
+iTIP free-busy requests, to generate repeating blocks of available or busy time with 
+exceptions as needed.
+
+[.source]
+<<ietf-cala>>
+
+==== Event Publication Extensions to iCalendar
+
+This specification introduces a number of new iCalendar properties which are of 
+particular use for event publishers and in social networking.
+
+[.source]
+<<ietf-douglass>>
+
+==== Internet Calendar Scheduling Protocol (iSchedule)
+
+This document defines the Internet Calendar Scheduling Protocol (iSchedule), which is 
+a binding from the iCalendar Transport- independent Interoperability Protocol (iTIP) 
+to the Hypertext Transfer Protocol (HTTP) to enable interoperability between 
+calendaring and scheduling systems over the Internet.
+
+[.source]
+<<ietf-desruisseaux>>
+
+==== LINK Property Extension to iCalendar
+
+This specification introduces a new iCalendar property LINK to provide ancillary 
+information for iCalendar components.
+
+[.source]
+<<ietf-link>>
+
+==== Masking existing meetings in iCalendar free busy requests
+
+This document defines an extension to the iTIP calendar scheduling protocol to allow 
+an organizer to have a specific event that may exist on an attendee's calendar 
+ignored when the attendee calculates and returns their free-busy information after a 
+request from the organizer.
+
+[.source]
+<<maskuids>>
+
+==== New Properties for iCalendar
+
+This document defines a set of new properties for iCalendar data.
+
+[.source]
+<<ietf-cal>>
+
+==== Schema for representing resources for calendaring and scheduling services
+
+This specification describes a schema for representing resources for calendaring and 
+scheduling. A resource in the scheduling context is any shared entity that can be 
+scheduled by a calendar user, but does not control its own attendance status.
+
+[.source]
+<<ietf-res-schema>>
+
+==== VALARM Extensions for iCalendar
+
+This document defines a set of extensions to the iCalendar VALARM component to 
+enhance use of alarms and improve interoperability between clients and servers.
+
+[.source]
+<<ietf-valarm>>
+
+== CalDAV
+
+=== Base Standards
+
+==== Calendaring Extensions to WebDAV (CalDAV) RFC 4791
+
+This document defines extensions to the Web Distributed Authoring and Versioning 
+(WebDAV) protocol to specify a standard way of accessing, managing, and sharing 
+calendaring and scheduling information based on the iCalendar format. This document 
+defines the "calendar-access" feature of CalDAV.
+
+[.source]
+<<rfc4791>>
+
+=== Additional and Extensions
+
+=== Work in Progress
+
+==== Calendar Collection Entity Tag (CTag) in CalDAV
+
+This specification defines an extension to CalDAV that provides a fast way for a 
+client to determine whether the contents of a calendar collection may have changed.
+
+[.source]
+<<ctag>>
+
+==== Calendar Usery Proxy Functionality in CalDAV
+
+This specification defines an extension to CalDAV that makes it easy for clients to 
+setup and manage calendar user proxies, using the WebDAV Access Control List 
+extension as a basis.
+
+[.source]
+<<proxy>>
+
+==== Locating CalDAV and CardDAV Services
+
+This specification describes how DNS SRV records, DNS TXT records and well-known URIs 
+can be used together or separately to locate Calendaring Extensions to WebDAV 
+(CalDAV) or vCard Extensions to WebDAV (CardDAV) services.
+
+[.source]
+<<srv-caldav>>
+
+==== Scheduling Extensions to CalDAV
+
+This document defines extensions to the Web Distributed Authoring and Versioning 
+(WebDAV) protocol to specify a standard way of exchanging and processing scheduling 
+messages based on the iCalendar Transport-Independent Interoperability Protocol 
+(iTIP). This document defines the "calendar-schedule" feature of CalDAV.
+
+[.source]
+<<caldav-sched>>
+
+Also see <<cc1104>>.
+
+== vCard
+
+=== Base Standards
+
+==== vCard Format Specification RFC 6350
+
+This document defines the vCard data format for representing and exchanging a variety 
+of information about individuals and other entities (e.g., formatted and structured 
+name and delivery addresses, email address, multiple telephone numbers, photograph, 
+logo, audio clips, etc.). This is the new version and obsoletes RFCs 2425, 2426, and 
+4770, and updates RFC 2739.
+
+[.source]
+<<rfc6350>>
+
+==== xCard: vCard XML Representation RFC 6351
+
+This document defines the XML schema of the vCard data format.
+
+[.source]
+<<rfc6351>>
+
+=== Additional and Extensions
+
+==== Calendar Attributes for vCard and LDAP RFC 2739
+
+This memo defines three mechanisms for obtaining a URI to a user's calendar and 
+free/busy time. These include manual transfer of the information, personal data 
+exchange using the vCard format, and directory lookup using the LDAP protocol.
+
+[.source]
+<<rfc2739>>
+
+==== hCard 1.0 microformat
+
+hCard is a simple, open, distributed format for representing people, companies, 
+organizations, and places, using a 1:1 representation of vCard (RFC2426) properties 
+and values in semantic HTML or XHTML.
+
+[.source]
+<<hcard>>
+
+=== Work in Progress
+
+==== vCard Service Type Parameter
+
+This document defines a "Service Type" parameter for use on various vCard properties 
+to help clients distinguish between different types of communication services that 
+may be using the same protocol, yet are distinct.
+
+[.source]
+<<vcard-serv>>
+
+== CardDAV
+
+=== Base Standards
+
+==== CardDAV: vCard Extensions to Web Distributed Authoring and Versioning (WebDAV) RFC 6352
+
+This document defines extensions to the Web Distributed Authoring and Versioning 
+(WebDAV) protocol to specify a standard way of accessing, managing, and sharing 
+contact information based on the vCard format.
+
+[.source]
+<<rfc6352>>
+
+=== Additional and Extensions
+
+=== Work in Progress
+
+==== CardDAV Directory Gateway Extension
+
+This document defines an extension to the vCard Extensions to WebDAV (CardDAV) 
+protocol that allows a server to expose a directory as a read-only address book 
+collection.
+
+[.source]
+<<carddav-dir>>
+
+Also see <<cc1104>>.
+
+== WebDAV
+
+=== Base Standards
+
+==== HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV) RFC 4918
+
+Web Distributed Authoring and Versioning (WebDAV) consists of a set of methods, 
+headers, and content-types ancillary to HTTP/1.1 for the management of resource 
+properties, creation and management of resource collections, URL namespace 
+manipulation, and resource locking (collision avoidance).
+
+[.source]
+<<rfc4918>>
+
+=== Additional and Extensions
+
+==== Binding Extensions to WebDAV RFC 4842
+
+This specification defines bindings, and the BIND method for creating multiple 
+bindings to the same resource. Creating a new binding to a resource causes at least 
+one new URI to be mapped to that resource. Servers are required to ensure the 
+integrity of any bindings that they allow to be created.
+
+[.source]
+<<rfc4842>>
+
+==== Extended MKCOL for Web Distributed Authoring and Versioning (WebDAV) RFC 5689
+
+This specification extends the Web Distributed Authoring and Versioning (WebDAV) 
+MKCOL (Make Collection) method to allow collections of arbitrary resource-type to be 
+created and to allow properties to be set at the same time.
+
+[.source]
+<<rfc5689>>
+
+==== Quota and Size Properties for Distributed Authoring and Versioning (DAV) Collections RFC 4331
+
+This document discusses the properties and minor behaviors needed for clients to 
+interoperate with quota (size) implementations on WebDAV repositories.
+
+[.source]
+<<rfc4331>>
+
+==== Using `POST` to Add Members to WebDAV Collectons RFC 5995
+
+This specification defines a discovery mechanism through which servers can advertise 
+support for POST requests with the aforementioned "add collection member" semantics.
+
+[.source]
+<<rfc5995>>
+
+==== Versioning Extensions to WebDAV RFC 3253
+
+This document specifies a set of methods, headers, and resource types that define the 
+WebDAV (Web Distributed Authoring and Versioning) versioning extensions to the 
+HTTP/1.1 protocol.
+
+[.source]
+<<rfc3253>>
+
+==== Web Distributed Authoring and Versioning (WebDAV) SEARCH RFC 5323
+
+This document specifies a set of methods, headers and properties composing WebDAV 
+`SEARCH`, an application of the HTTP/1.1 protocol to efficiently search for DAV 
+resources based upon a set of client- supplied criteria.
+
+[.source]
+<<rfc5323>>
+
+==== WebDAV Access Control Protocol RFC 3744
+
+This specification extends the Web Distributed Authoring and Versioning (WebDAV) 
+Protocol to support the server-side ordering of collection members.
+
+[.source]
+<<rfc3744>>
+
+==== WebDAV Current Principal Extension RFC 5397
+
+This specification defines a new WebDAV property that allows clients to quickly 
+determine the principal corresponding to the current authenticated user.
+
+[.source]
+<<rfc5397>>
+
+==== WebDAV Ordered Collections Protocol RFC 3648
+
+This specification extends the Web Distributed Authoring and Versioning (WebDAV) 
+Protocol to support the server-side ordering of collection members.
+
+[.source]
+<<rfc3648>>
+
+=== Work in Progress
+
+==== Collection Synchronization for WebDAV
+
+This specification defines an extension to WebDAV that allows efficient 
+synchronization of the contents of a WebDAV collection.
+
+[.source]
+<<webdav-sync>>
+
+== Related
+
+=== Base Standards
+
+==== Date and Time on the Internet: Timestamps RFC 3339
+
+This document defines a date and time format for use in Internet protocols that is a 
+profile of the ISO 8601 standard for representation of dates and times using the 
+Gregorian calendar.
+
+[.source]
+<<rfc3339>>
+
+=== Additional and Extensions
+
+=== Work in Progress
+
+==== Portable Contacts
+
+The Portable Contacts specification is designed to make it easier for developers to 
+give their users a secure way to access the address books and friends lists they have 
+built up all over the web. Specifically, it seeks to create a common access pattern 
+and contact schema that any site can provide, well-specified authentication and 
+access rules, standard libraries that can work with any site, and absolutely minimal 
+complexity, with the lightest possible toolchain requirements for developers.
+
+[.source]
+<<draft-spec>>
+
+==== Timezone Service Protocol
+
+This document defines a timezone service protocol that allows reliable, secure and 
+fast delivery of timezone information to client systems such as calendaring and 
+scheduling applications or operating systems.
+
+[.source]
+<<tz-service>>
+
+==== Timezone XML Specification
+
+This specification describes a format for describing timezone information for 
+software and services.
+
+[.source]
+<<tz-xml>>
+
+==== WS-Calendar
+
+WS-Calendar is an OASIS cross-domain standard for passing schedule and interval 
+information between and within services.
+
+[.source]
+<<ws-cal>>
+
+[bibliography]
+== Bibliography
+
+* [[[rfc2739, RFC 2739]]]
+
+* [[[rfc3253, RFC 3253]]]
+
+* [[[rfc3339, RFC 3339]]]
+
+* [[[rfc3648, RFC 3648]]]
+
+* [[[rfc3744, RFC 3744]]]
+
+* [[[rfc4331, RFC 4331]]]
+
+* [[[rfc4791, RFC 4791]]]
+
+* [[[rfc4842, RFC 4842]]]
+
+* [[[rfc4918, RFC 4918]]]
+
+* [[[rfc5323, RFC 5323]]]
+
+* [[[rfc5333, RFC 5333]]]
+
+* [[[rfc5397, RFC 5397]]]
+
+* [[[rfc5545, RFC 5545]]]
+
+* [[[rfc5546, RFC 5546]]]
+
+* [[[rfc5689, RFC 5689]]]
+
+* [[[rfc5995, RFC 5995]]]
+
+* [[[rfc6047, RFC 6047]]]
+
+* [[[rfc6321, RFC 6321]]]
+
+* [[[rfc6350, RFC 6350]]]
+
+* [[[rfc6351, RFC 6351]]]
+
+* [[[rfc6352, RFC 6352]]]
+
+* [[[ietf-cala, IETF I-D draft-daboo-calendar-availability-05]]]
+
+* [[[ietf-douglass, IETF I-D draft-douglass-calendar-extension-06]]]
+
+* [[[ietf-desruisseaux, IETF I-D draft-desruisseaux-ischedule-05]]]
+
+* [[[ietf-link, IETF I-D draft-douglass-link-extension-01]]]
+
+* [[[maskuids, iCalendar mask UIDs]]], https://svn.macosforge.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/icalendar-maskuids.txt
+
+* [[[ietf-res-schema, IETF I-D draft-cal-resource-schema-06]]]
+
+* [[[ietf-cal, IETF I-D draft-daboo-icalendar-extensions-09]]]
+
+* [[[ietf-valarm, IETF I-D draft-daboo-valarm-extensions-05]]]
+
+* [[[ctag, CalDAV CTag]]], http://trac.calendarserver.org/browser/CalendarServer/trunk/doc/Extensions/caldav-ctag.txt
+
+* [[[proxy, CalDAV Proxy]]], https://svn.macosforge.org/repository/calendarserver/CalendarServer/trunk/doc/Extensions/caldav-proxy.txt
+
+* [[[srv-caldav, IETF I-D draft-daboo-srv-caldav-10]]]
+
+* [[[caldav-sched, IETF I-D draft-desruisseaux-caldav-sched-12]]]
+
+* [[[hcard, hCard]]], http://microformats.org/wiki/hcard
+
+* [[[vcard-serv, IETF I-D draft-daboo-vcard-service-type-00]]]
+
+* [[[carddav-dir, IETF I-D draft-daboo-carddav-directory-gateway-02]]]
+
+* [[[webdav-sync, IETF I-D draft-daboo-webdav-sync-08]]]
+
+* [[[draft-spec, Portable Contacts]]], http://portablecontacts.net/draft-spec.html
+
+* [[[tz-service, IETF I-D draft-douglass-timezone-service-11]]]
+
+* [[[tz-xml, IETF I-D draft-douglass-timezone-xml-00]]]
+
+* [[[ws-cal, WS-Calendar]]], http://docs.oasis-open.org/ws-calendar/ws-calendar/v1.0/ws-calendar-1.0-spec.html
+
+* [[[cc0903, CC/S 0903]]]
+
+* [[[cc1012, CC/R 1012]]]
+
+* [[[cc1011, CC/R 1011]]]
+
+* [[[cc1102, CC/R 1102]]]
+
+* [[[cc1104, CC/R 1104]]]
+
+* [[[hcal, hCalendar]]], https://microformats.org/wiki/hcalendar
