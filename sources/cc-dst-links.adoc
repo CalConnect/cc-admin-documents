@@ -1,0 +1,422 @@
+= Extended Daylight Savings Time Links, Advisories and Changes
+:docnumber: 0709
+:title-main-en: Links to Advisory and Vendor Material on the Daylight Saving Time Changes in 2007 -- A Reference for Users and Systems Administrators
+:copyright-year: 2007
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2007-10-06
+:published-date: 2007-10-06
+:technical-committee: DST ADHOC
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+
+.Foreword
+
+The links below are not exhaustive and may become out of date as vendors update the
+available information. If you have references to official documentation for vendors not listed
+below or notice a problem with one of the links, please send your updates to DST Referrals and
+we will attempt to include them as soon as possible.
+
+[CAUTION,type=disclaimer]
+====
+This document is provided for informational purposes only and does not represent
+an endorsement or statement of support by The Calendaring and Scheduling Consortium for
+any of the products mentioned. The omission of any product or products represents only a lack
+of information rather than any bias against or deprecation of that product or products. The
+Consortium is not responsible for any results or consequences of any sort as a result of
+following any advice or performing any actions recommended in this material.
+====
+
+== Daylight Saving Time Information and History
+
+* http://en.wikipedia.org/wiki/Daylight_saving_time[Daylight Saving Time from Wikipedia, the free encyclopedia.]
+
+* http://webexhibits.org/daylightsaving/index.html[About Daylight Saving Time - History, rationale, laws & dates.]
+
+* http://tf.nist.gov/timefreq/general/dst.htm[How the DST change impacts NIST Time Services, including WWVB radio broadcast and their Internet Time Service]
+
+* CalConnect EDST Reflections and Recommendations:
++
+--
+Reflections on how well the transition to EDST happened on March 11, together with
+recommendations for the transition on November 4 and future years, and longer-term
+recommendations for timezone management in general.
+--
+
+== CalConnect Daylight Saving Time Documents and Resources
+
+The following pages and documents on Daylight Saving Time and Extended DST have
+been published by CalConnect:
+
+* CalConnect EDST Reflections and Recommendations:
++
+--
+Post March 2007 discussion of how well the transition to EDST went; recommendations for
+November 4 and long-term recommendations for timezone management.
+--
+* Extended Daylight Saving Time Review and Considerations:
++
+--
+Introductory discussion of Extended DST and the implications for the software changes and
+patches required.
+--
+* Extended Daylight Saving Time Links, Advisories and Changes:
++
+--
+This document; a compilation of links about DST and EDST, advisory notices, necessary
+changes and patches offered by software vendors and others.
+--
+* Extended Daylight Saving Time Advisory Notice:
++
+--
+The original advisory notice issued by CalConnect in June 2005 in response to the legislation
+creating EDST.
+--
+
+== Vendor Information
+
+In each entry below, the URL of the link is provided, along with the official title of that web page
+as provided by the vendor. Comments by CalConnect providing the context for the material on
+the page are provided in italics immediately after the title of the page.
+
+=== Apache and Tomcat
+
+http://blog.covalent.net/roller/covalent/entry/2[US Daylight Saving Time Change 2007 Effects on Apache and Tomcat]
+
+_Covalent Technologies advisories for users of Apache and Tomcat_
+
+=== Apple
+
+http://docs.info.apple.com/article.html?artnum=305056[About Daylight Saving Time changes in 2007]
+
+_This document itemizes several updates from Apple for the very latest DST changes. Updates
+for Mac OS X 10.3, 10.4, their Java environments, and WebObjects will be offered via Software
+Update or direct download. Information on Classic and Mac OS 9 is also provided in the
+document. Note that the US DST changes were included in Mac OS X 10.4.5 and later, but
+further changes for Alberta, Canada and other parts of the world are included in these updates.
+The unofficial patches for 10.3 are no longer necessary since Apple is now offering them with
+this set of updates._
+
+=== Avaya
+http://support.avaya.com/japple/css/japple?PAGE=OpenPage&temp.template.name=Daylight[2007 Daylight Saving Time Changes]
+
+_Comprehensive listing of fixes for Avaya's IP telephony product line_
+
+=== Bedework
+
+http://www.bedework.org/bedework/update.do?artcenterkey=69[Bedework and the Energy Policy Act of 2005]
+
+_Bedework is an open-source institutional calendar system_
+
+=== Blackberry
+
+http://www.blackberry.com/select/dst2007/[Daylight Saving Time 2007]
+
+_Impact of DST changes on Blackberry devices and BlackBerry Enterprise Server_
+
+http://www.blackberry.com/DST2007/patch/index2.shtml[DST 2007 Patches for BlackBerry Devices]
+
+_This page explains the download process for BlackBerry handhelds_
+
+=== Cisco
+
+http://www.cisco.com/en/US/tech/tk648/tk362/technologies_tech_note09186a00807ca437.shtml[U.S. Daylight Saving Time (DST) Changes for 2007]
+
+_Comprehensive information on actions required for Cisco products_
+
+=== Citrix
+
+http://support.citrix.com/article/CTX111734&searchID=39611352[Daylight-saving Time Changes in 2007]
+
+_Describes the EDST changes and the products that require updates_
+
+=== Debian GNU/Linux
+
+http://www.debian.org/News/2007/20070218[Debian GNU/Linux 3.1 updated]
+
+_The change log for 3.1r5 indicates that the time zone rules were updated to "2006p-1", including
+new rules for the United States and West Australia_
+
+=== Enterasys
+
+http://secure.enterasys.com/services/support/daylight_savings.html[Enterasys Technical Notification Regarding Changes to US Daylight Savings Time Observance]
+
+_Summary of changes to DST, identifies Enterasys products and required actions_
+
+=== Good Technology Inc.
+
+_See <<motorola>>._
+
+=== Google
+
+http://www.google.com/support/calendar/bin/answer.py?answer=61026&topic=8580[Are my events in Google Calendar affected by the Daylight Savings Time change in 2007?]
+
+_Advisory for users of Google Calendar_
+
+http://www.google.com/support/calendar/bin/answer.py?answer=55677[Known Issues & Feature Updates]
+
+_More general issues and feature updates for Google Calendar_
+
+=== Hitachi Data Systems
+
+http://www.hds.com/pdf/hds_dst_impact.pdf[Extended Daylight Saving Time Product Impact Alert]
+
+_Notification of DST impact on hardware and software products from HDS and their partners_
+
+=== HP
+
+http://h10072.www1.hp.com/dst[U.S. 2007 Daylight Saving Time]
+
+_Revised and more complete information on HP systems and related software_
+
+=== IBM
+
+http://www.ibm.com/support/alerts/us/en/daylightsavingstimealert.html[IBM-wide product alerts]
+
+_Update information is organized by categories of products_
+
+=== Juniper
+
+http://kb.juniper.net/KB9358[2007 Daylight Savings Changes and Support for Juniper Products]
+
+_A listing of technical bulletins that address the DST issue in Juniper products_
+
+=== Kerberos from MIT
+
+http://confab.mit.edu/confluence/display/ISDA/Kerberos-2007-DST[Kerberos-2007-DST]
+
+_Comments for KDC administrators regarding the time synchronization requirements and
+features in Kerberos as implemented by MIT_
+
+=== Kerio Technologies
+
+http://support.kerio.com/kb/454[Does KMS Support Daylight Saving Time for 2007]
+
+_Statement of compliance for Kerio Mailserver 6.3.0 and higher; links for underlying 
+OS changes which must be done manually_
+
+=== Microsoft
+
+http://www.microsoft.com/time[Daylight Saving Time Help and Support Center]
+
+_Comprehensive document regarding the DST issue with pointers to other knowledge base
+articles and patches_
+
+http://support.microsoft.com/gp/dst_prodlist[List of Microsoft products affected by daylight saving time and time zone changes]
+
+_Comprehensive index of Microsoft products and links to latest updates for Microsoft Windows
+and other products, including the current version of the Microsoft Office Time Zone Data Update
+Tool_
+
+http://www.windowsmobile.com/daylightsaving/[Daylight Saving Time 2007 Update]
+
+_Updates for handheld devices (PDAs) running Windows
+Mobile. See also <<palm>> if your handheld is made by Palm._
+
+http://blogs.msdn.com/macmojo/archive/2007/01/10/the-times-they-are-a-changin.aspx[The Office for Mac Team Blog entry]
+
+=== Microsoft-Related (Third Party)
+
+http://blogs.technet.com/amir/archive/2007/01/31/dst-2007-changes-entourage-2004-for-mac.aspx[DST 2007 Changes & Entourage 2004 for Mac]
+
+_Not an official support document, but useful information posted on Amir's Exchange Clients Blog_
+
+http://www.intelliadmin.com/blog/2007/01/unofficial-windows-2000-daylight.html[IntelliAdmin: Unofficial Windows 2000 Daylight Saving Time Patch]
+
+_Microsoft is not providing an update to Windows 2000 for extended DST but has outlined a
+multi-step procedure which involves updating the registry. IntelliAdmin created this unofficial
+utility program to automate the procedure recommended by Microsoft._
+
+http://www.sharpebusinesssolutions.com/dst2007.htm[DST Update Tool for Windows from NT4 through Server 2003 and XP]
+
+_A global update solution from Sharpe Business Solutions for most versions of windows from NT
+4 and Win2KPRO through WinXP. This is a product._
+
+http://solprovider.com/articles/win98timezones[Fixing Windows 98 TimeZones for the New 2007 Daylight Saving Time Rules]
+
+_An unofficial fix from SolProvider for extended DST for Windows 98 and a companion way to set
+the system back to the old rules (in case Congress changes its mind because the expected
+benefits from the change don't actually occur)._
+
+http://blogs.technet.com/hied_west_blog/archive/2007/02/20/dst-2007-update-step-by-step-support-webcast-training.aspx[DST 2007 Update: "Step by Step" Support Webcast Training]
+
+_Another Microsoft blog with references to several helpful official and unofficial DST resources_
+
+[[motorola]]
+=== Motorola Good Technology Group
+
+http://www.good.com/faq/17882.html[Daylight Savings Time Adjustment 2007]
+
+_Provides detailed information on addressing DST in Good's products and on other DST-related
+issues_
+
+=== Mulberry
+
+http://www.mulberrymail.com[The Mulberry email and calendar client has recently been updated to a new version v4.0.8 to address the upcoming Extended Daylight Saving Time changes.]
+
+_Mulberry will attempt to automatically upgrade existing timezones to the new rules when run.
+Anyone using the calendaring features of Mulberry should upgrade to this new release right
+away._
+
+=== Nokia
+
+http://europe.nokia.com/A4143002[Product Support and Software - Europe]
+
+_DST updaters are listed in the "Latest Software" for several Nokia phones. This is for European
+customers._
+
+http://www.nokiausa.com/support/software/softwareupdate/1,8838,,00.html[Phone Software Update (USA)]
+
+_Windows software to download updates from Nokia and apply them to a phone. For United
+States customers._
+
+=== Notify Technology Corp
+
+http://notifylink.notify.net/download/DST%202007%20Adjustments.pdf[2007 Daylight Saving Time Changes: Transition for NotifyLink Users]
+
+_Instructions for NotifyLink fixes and suggestions for calendar server and mobile device patches
+to apply_
+
+=== Novell
+
+http://www.novell.com/coolsolutions/feature/18566.html[Daylight Saving Time Change Impacts GroupWise Appointments]
+
+_Automated Tool to Address Daylight Saving Time Impact on GroupWise Appointments_
+
+http://www.novell.com/support/search.do?cmd=displayKC&sliceId=%3Cbr%3ESAL_Public&externalId=3397648[Netware Servers]
+
+_This link was not working on 4 October_
+
+=== Oracle
+
+http://www.oracle.com/support/daylight-savings.html[Daylight Savings Time Alert for Oracle Customers]
+
+_This is an open page and does not require a MetaLink account to access it_
+
+=== Packeteer
+
+http://packeteer.custhelp.com/cgi-bin/packeteer.cfg/php/enduser/std_adp.php?p_faqid=1178&p_created=1169227986&p_sid=1WoDpILi&p_accessibility=0&p_redirect=&p_lva=&p_sp=cF9zcmNoPTEmcF9zb3J0X2J5PSZwX2dyaWRzb3J0PSZwX3Jvd19jbnQ9NDImcF9wcm9kcz0mcF9jYXRzPSZwX3B2PSZwX2N2PSZwX3BhZ2U9MSZwX3NlYXJjaF90ZXh0PWRheWxpZ2h0&p_li=&p_topview=1[Daylight Saving Time Change in 2007]
+
+_Update and configuration instructions for Packeteer products_
+
+[[palm]]
+=== Palm
+
+http://www.palm.com/us/support/downloads/dst.html[Daylight Saving Time Updates]
+
+_Updates for both Palm and Windows Mobile handheld devices from Palm_
+
+=== PeopleCube
+
+http://peoplecube.com/news/20061218.cfm[PeopleCube Announces New Version of Meeting Maker]
+
+_Meeting Maker 8.6 includes support for new DST regulations_
+
+http://www.peoplecube.com/news/20061016.cfm[PeopleCube Announces New Version of Resource Scheduler]
+
+_Resource Scheduler 7.7 includes new DST rules_
+
+=== PeopleSoft
+
+ftp://ftp.peoplesoft.com/incoming/GSC/DST/PeopleTools_DST.pdf[PeopleTools Daylight Saving Time Required Modifications]
+
+_Advisory for PeopleTools Products_
+
+ftp://ftp.peoplesoft.com/incoming/GSC/DST/PeopleTools%20Vendor%20Daylight%20Saving%20Time%20Information.pdf[PeopleTools Vendor Daylight Saving Time Required Modifications]
+
+_Advisory for Third Party (Vendor) Applications_
+
+=== Polycom
+
+http://www.polycom.com/common/documents/support/downloads/network/readimanager_se200_daylight_savings_time_patch_release_notes.pdf[ReadiManager SE200 Patch Release Notes]
+
+_Patch instructions for the ReadiManager SE200 embedded Microsoft OS_
+
+=== Psion Teklogix
+
+http://www.psionteklogix.com/public.aspx?s=us&p=DST[Daylight Savings Time Changes and Support Information]
+
+_Updates for Psion Teklogix industrial mobile devices_
+
+=== Red Hat
+
+http://kbase.redhat.com/faq/FAQ_80_7909.shtm[Red Hat Knowledgebase Article ID 7909]
+
+_DST updates available for Red Hat Enterprise Linux 2, 3, 4, and related links_
+
+=== Snap Server by Adaptec
+
+http://www.snapserver.com/Landing/0702_Daylight/Index.shtml[Ensure Your Snap Server is Ready for Daylight Saving Time]
+
+_Guidance for users of Adaptec's line of Snap Server Network Attached Storage and SAN
+Devices_
+
+=== Sun
+
+http://www.sun.com/bigadmin/hubs/dst/[DST: Daylight Saving Time Changes (2007)]
+
+_A central index of DST change information for Sun products, both software and hardware_
+
+http://java.sun.com/developer/technicalArticles/Intl/USDST/[Overview and Mitigation of the USA2007DST Issue for the Java SE platform and Solaris OS]
+
+_A listing of which Java run time environments have updated DST rules_
+
+http://java.sun.com/developer/technicalArticles/Intl/tzupdatertool.html[Sun Java SE JDK tzupdater Tool]
+
+_A tool for updating time zone data in JDK and JRE version 1.4 and later_
+
+=== Symantec
+
+http://service1.symantec.com/SUPPORT/tsgeninfo.nsf/docid/2007011911191539?Open&src=w[Symantec enterprise products and daylight saving time]
+
+_This page provides links to documents for each Symantec product indicating whether each
+product is affected by the change to daylight saving time, and if so, how._
+
+=== Trumba
+
+http://www.trumba.com/help/trumbafaq.html#dst[Trumba Connect Frequently Asked Questions]
+
+_DST changes will be applied behind the scenes by Trumba_
+
+=== VMWare
+
+http://kb.vmware.com/kb/8695824[2007 U.S. Daylight-Saving Time Extension]
+
+_Updates for ESX Server 2.x and 3.0.x_
+
+=== Xerox
+
+http://www.xerox.com/go/xrx/portal/STServlet?projectID=ST_DST&pageID=DST_Landing&Xcntry=USA&Xlang=en_US[Updating Xerox Products for Daylight Saving Time]
+
+_Links to instructions for updating Xerox products_
+
+== Companion Document
+
+The companion page to this one, Extended Daylight Saving Time Review and Considerations,
+provides a review of the Daylight Saving Time changes and the potential impact of this change
+on computer systems and devices. It is intended as a review and reference for users and in
+particular for systems administrators who may need to make necessary updates to their
+systems.
+
+== Future Documents and Proposals
+
+CalConnect plans to update this page as information becomes available prior to November
+4th. Following November 4 an update to CalConnect EDST Reflections and Recommendations
+may be prepared to take into account additional information from the November transition.
+
+CalConnect has also initiated work in TC TIMEZONE, one of its Technical Committees, on
+proposals for a formal, universal Timezone Registry and a companion Timezone Service
+protocol, intended to make the management of timezones (and related phenomena such as
+DST) substantially easier in the future.
+
+////
+== Copyright Statement
+
+This document is (C)2007, The Calendaring and Scheduling Consortium. Permission is granted to
+viewers to quote or republish this document in whole or in part so long as credit is given to the
+Consortium, a link is provided to the Consortium website, and the quoted or republished
+material is not modified in any way.
+////
