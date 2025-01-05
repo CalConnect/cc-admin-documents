@@ -1,0 +1,685 @@
+= Calendaring and Scheduling Glossary of Terms
+:docnumber: 1102
+:copyright-year: 2011
+:language: en
+:doctype: administrative
+:edition: 2
+:status: published
+:revdate: 2011-02-23
+:published-date: 2011-02-23
+:technical-committee: USECASE
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+The document came about in an effort to compile, in one location, a common set of terminology
+with respect to calendaring and scheduling applications and standards. The
+document incorporates terminology already existing in calendaring standards such as
+<<rfc5545>> (Internet Calendaring and Scheduling Core Object Specification), <<rfc5546>>
+(iCalendar Transport-Independent Interoperability Protocol (iTIP)), <<rfc6047>> (iCalendar
+Message-Based Interoperability Protocol (iMIP)), <<rfc4791>> (Calendaring Extensions to
+WebDAV (CalDAV)) as well as input from members of the Calendaring and Scheduling
+Consortium (CalConnect).
+
+Some glossary terms may not appear in published standards today. These are common
+calendaring terms that are included so that everyone refers to components in the same
+manner.
+
+As new standards evolve, the glossary will serve as a resource for those creating
+documents so that all the standards share a common set of terms.
+
+Calendaring and scheduling implementers will be able to utilize the glossary to assist
+them as they read and decipher calendaring standards. Calendaring and scheduling
+users will be able to use the glossary to help them better understand the terminology
+deployed by applications written using calendaring standards.
+
+[heading=terms and definitions]
+== Terms
+
+=== Access Control
+
+Access control is a system which enables an authority (e.g., user or
+resource administrator) to control access to different entities in a calendar system. Typically
+vendors create Preference/Settings options to instantiate access control. Terminology
+varies considerably across products but broadly speaking access control is usually
+broken into two areas, read access and write access. Vendor terminology used for read
+access includes: 'read', 'reviewer', 'proxy read', 'viewer', 'see all', and 'see only freebusy'.
+Vendor terminology for write access includes: 'write', 'editor', 'proxy write', 'proxy',
+'manager', 'administrator', 'designate', 'read/create/edit', 'make changes', 'manage', and
+'edit'. (Cp. {{Delegate}} and {{Designate}}.)
+
+=== Access Control List
+alt:[ACL]
+
+A list of access control elements that define access control
+to a particular calendar system entity. See
+<<rfc3744>> for its use in a WebDAV context.
+
+=== Accessibility
+
+Information pertaining to access to a resource by the physically disabled.
+This applies to Location Resources.
+
+=== Admittance Info
+
+All information required to gain access to a resource. It applies to
+Location Resources.
+
+=== Agenda
+
+See {{Calendar}}.
+
+=== Alarm
+
+Use of the terms alarm, reminder, alert, and notifications vary by implementation
+and can represent several things. They can represent a setting applied to an event
+by which a user indicates they want a 'notification' to be triggered to 'remind' them about
+some event or action (cp. {{VALARM}} in <<rfc5545>>). They can also be used to designate
+the type of 'alert' that serves as the notification (e.g., email message, audible sound,
+pop-up window).
+
+[.source]
+<<rfc4791>>
+
+[.source]
+<<rfc5545>>
+
+[.source]
+<<rfc5546>>
+
+=== Application/calendar + XML
+
+The MIME content type that indicates an iCalendar object
+expressed in XML.
+
+=== Appointment
+
+See {{Calendar}}.
+
+=== Attendee
+
+Specifies the participants or non-participants (e.g., room or resources) for an
+event. This property in iCalendar can contain multiple attributes specifying additional
+information, i.e., role, participation status, group membership, delegation, etc. 
+
+[.source]
+<<rfc5545>>
+
+=== Auto schedule
+
+Accept scheduling invitations automatically with no human intervention.
+
+=== Booking Window
+
+Defines a window of time a resource can be booked for a particular
+date. That is, what is the earliest and latest opportunity to book a resource for a given
+date and time.
+
+=== CalDAV
+
+A standard protocol to allow calendaring and scheduling via extensions to the
+WebDAV protocol. Defined by two specifications, the first, <<rfc4791>>, specifies a calendar
+access protocol that allows Calendar User Agents to access and manage calendar
+data. The second specification, <<draft-desruisseaux-caldav-sched>>, specifies a standard
+way of performing scheduling transactions with iCalendar-based calendar components.
+This document defines the "calendar-auto-schedule" feature of CalDAV.
+
+[.source]
+<<rfc4791>>
+
+[.source]
+<<draft-desruisseaux-caldav-sched>>
+
+=== Calendar
+
+A collection of events. Examples include a person's or group's schedule, resource
+availability, and event listings. May also include items such as tasks, journal entries,
+etc.
+
+=== Calendar Access Rights
+
+See {{Access Control}}, {{Access Control List}}, {{Delegate}}, and
+{{Designate}}.
+
+=== Calendar Collection
+
+A calendar collection contains calendar object resources (e.g.,
+`VEVENT`, `VTODO`, `VJOURNAL`, `VFREEBUSY`, etc.) that represent calendar components
+within a calendar.
+
+[.source]
+<<rfc4791>>
+
+[.source]
+<<rfc5545>>
+
+=== Calendar Object
+
+A single object that can be any of the constituent components of a
+calendar (cp. {{Component}}).
+
+[.source]
+<<rfc4791>>
+
+=== Calendar Service
+
+A server application that provides calendar user agents access to
+calendar stores.
+
+=== Calendar Store
+alt:[CS]
+
+A data repository that may contain several calendars as well as
+properties and components of those calendars. A local calendar store is on the same
+device as the calendar user agent (CUA). A remote calendar store is not on the
+same machine/device as the calendar user agent.
+
+[.source]
+<<rfc3283>>
+
+=== Calendar User
+alt:[CU]
+
+A person who accesses or modifies calendar information.
+
+=== Calendar User Agent
+alt:[CUA]
+
+. Software with which the calendar user communicates
+with a calendar service or local calendar store to access calendar information.
+. Software that gathers calendar data on the Calendar User's behalf.
+
+=== CalConnect
+
+The Calendaring and Scheduling Consortium is focused on the interoperable
+exchange of calendaring and scheduling information between dissimilar
+programs, platforms, and technologies. The Consortium's mission is to promote general
+understanding of and provide mechanisms to allow interoperable calendaring and
+scheduling methodologies, tools and applications to enter the mainstream of computing.
+
+=== CalWS
+
+CalWS-REST is a CalConnect Proposal and CalWS-SOAP will be a parallel
+CalConnect Proposal which define an API of basic operations which allow creation,
+retrieval, update and deletion of calendar objects. In addition, query and freebusy operations
+are defined to allow efficient, partial retrieval of calendar data.
+
+=== Capacity
+
+Capacity of a resource, expressed as a numerical quantity. This applies to a
+Location Resource.
+
+=== Component
+
+A piece of calendar data such as an event, a task or an alarm. Information
+about components is stored as properties of those components (cp. {{Property}}).
+
+[.source]
+<<rfc4791>>
+
+[.source]
+<<rfc5545>>
+
+=== Counter
+
+A response sent by a Attendee of an event to the event Organizer to propose
+a change to the event or task such as the scheduled date/time, list of participants, etc.
+(cp. "counter offer").
+
+[.source]
+<<rfc5546>>
+
+=== Delegate
+
+In common usage 'delegate' may mean either a person who acts for someone
+else (cp. {{Designate}}) or refer to the act of appointing someone as a representative.
+The term has very specific meaning in the {{iCalendar}} and {{iTIP}} RFCs. In iCalendar,
+delegate means to specify that another individual, rather than oneself, should *attend*
+an event (cp. {{Delegator}} and {{Delegatee}}). In iTIP, delegate means to *assign ownership*
+of a task to another individual.
+
+[.source]
+<<rfc5545>>
+
+[.source]
+<<rfc5546>>
+
+=== Delegatee
+
+The attribute in iCalendar that specifies the calendar user(s) to whom a
+calendar user has delegated participation in an event. The actual attribute name is
+`DELEGATED-TO`.
+
+[.source]
+<<rfc5545>>
+
+=== Delegator
+
+The attribute in iCalendar that specifies the calendar user(s) that have
+delegated their participation in an event to another calendar user. The actual attribute
+name is `DELEGATED-FROM`.
+
+[.source]
+<<rfc5545>>
+
+=== Designate
+
+A calendar user authorized to act on behalf of another calendar user. An
+example of a designate are assistants who schedules meetings for their superior. (Cp.
+{{Access Control}} and {{Access Control List}}.)
+
+[.source]
+<<rfc5546>>
+
+=== `DTEND`
+
+The `DTEND` property for a {{VEVENT}} calendar component specifies the noninclusive
+end of the event.
+
+=== `DTSTART`
+
+The `DTSTART` property for a {{VEVENT}} specifies the inclusive start of the
+event. For {{Recurring,recurring}} events, it also specifies the very first instance in the recurrence set.
+
+=== Event
+
+A calendar object that is commonly used to represent things that mark time or
+use time. Examples include meetings, appointments, anniversaries, start times, arrival
+times, closing times.
+
+=== Freebusy
+
+A list of free and busy periods for a particular calendar user or resource.
+Primarily used for scheduling resources or meetings with other people. Time periods
+may be marked as busy, free, busy-unavailable (sometimes referred to as out of office)
+and busy-tentative.
+
+=== iCal
+
+The name of Apple, Inc's desktop calendar user agent. Often used as an abbreviation
+for the {{iCalendar}} standard.
+
+=== iCalendar
+
+The Internet Calendaring and Scheduling Core Object Specification. An
+IETF standard (<<rfc5545>>) for a text representation of calendar data. Scheduling operations
+are specified in <<rfc5546>>.
+
+=== IETF
+alt:[The Internet Engineering Task Force]
+
+According to <<rfc3935>>, "The IETF
+has traditionally been a community for experimentation with things that are not fully understood,
+standardization of protocols for which some understanding has been reached,
+and publication of (and refinement of) protocols originally specified outside the IETF
+process. . . . The mission of the IETF is to produce high quality, relevant technical and
+engineering documents that influence the way people design, use, and manage the
+Internet in such a way as to make the Internet work better. These documents include
+protocol standards, best current practices, and informational documents of various
+kinds."
+
+=== iMIP
+alt:[iCalendar Message-Based Interoperability Protocol]
+
+An IETF standard (<<rfc6047>>) that describes how iTIP
+messages are exchanged via email.
+
+=== iTIP
+alt:[iCalendar Transport-Independent Interoperability Protocol]
+
+An IETF Standard
+(<<rfc5546>>) that specifies a protocol that uses the iCalendar object specification to provide
+scheduling interoperability between different calendaring systems without reference
+to a specific transport protocol so as to allow multiple methods of communication between
+systems (see {{iMIP}}, {{iSchedule}}).
+
+=== iSchedule
+
+A draft specification that describes how {{iTIP}} messages are exchanged via
+HTTP
+
+[.source]
+<<ischedule>>
+
+=== Instance
+
+A single event of a larger group of events specified as a recurring event (cp.
+{{Recurring}}).
+
+[.source]
+<<rfc4791>>
+
+[.source]
+<<rfc5545>>
+
+=== Inventory Info
+
+All information on other resources available as part of a resource.
+
+=== Invitation/Invite
+
+A general term from common usage to convey a request for an attendee's
+participation in an event. In RFC documents the more specific term is request (cp.
+{{Request}}).
+
+=== Journal entry
+
+From <<rfc5545>>, one or more descriptive text notes associated with a
+particular calendar date. Examples of a journal entry include a daily record of a legislative
+body or a journal entry of individual telephone contacts for the day or an ordered list
+of accomplishments for the day.
+
+=== Maximum Instances
+
+Maximum number of instances of an event a resource can be
+scheduled for from a given point in time.
+
+=== Meeting
+
+See {{Event}}.
+
+=== MIME
+
+An acronym for Multipurpose Internet Mail Extensions, a specification for formatting
+non-ASCII text message content, including iCalendar data, graphics, audio and
+video, so that they can be sent over the Internet. MIME is supported by email clients
+and web browsers (see <<rfc2045>>, <<rfc2046>>, <<rfc2047>>).
+
+=== Mime Type
+
+An Internet media type, sometimes a Content-type after the name of a
+header in several protocols whose value is such a type, is a two-part identifier for file
+formats on the Internet. The identifiers were originally defined in <<rfc2046>> for use in email
+sent through SMTP, but their use has expanded to other protocols such as HTTP,
+RTP and SIP and for other uses (e.g., OS-level file type identification for application/file
+association).
+
+=== Multiple Bookings
+
+Number of simultaneous bookings allowed by a resource, during
+scheduling.
+
+=== Notification
+
+See {{Alarm}}.
+
+=== OASIS
+alt:[Organization for the Advancement of Structured Information Standards]
+
+A Standards Development Organization primarily focused on web services standards. OASIS and CalConnect have reciprocal memberships for joint work on WS-Calendar. 
+
+[.source]
+<<oasis>>
+
+=== Organizer
+
+A calendar user who creates a calendar item, requests free/busy information,
+or published free/busy information. It is an Organizer who invites Attendees. 
+
+[.source]
+<<rfc5545>>
+
+=== Priority
+
+A level of importance and/or urgency calendar users can apply to Tasks and
+Events.
+
+[.source]
+<<rfc5545>>
+
+=== Property
+
+RFCs define the objects and components of their subject which in turn have
+properties which have values (sometimes referred to as 'property parameters' or 'property
+attributes'). These "property parameters" contain meta-information about the property
+or the property value. Property parameters are provided to specify such information
+as the location of an alternate text representation for a property value, the language of a
+text property value, the value type of the property value, and other attributes. Throughout
+this glossary are references to component, property, and attribute following this usage.
+
+[.source]
+<<rfc5545>>
+
+=== Publish
+
+Generally, to make calendar information, such as freebusy time, available to a
+select group or to the public. From the RFC for {{iTIP}}, "The '`PUBLISH`' method in a
+'`VEVENT`' calendar component is an unsolicited posting of an iCalendar object."
+
+=== `RECURRENCE-ID`
+
+This property is used to identify a specific instance of a {{Recurring,recurring}}
+{{VEVENT}}, {{VTODO}}, or {{VJOURNAL}} calendar component.
+
+=== Recurring
+
+An event or task that happens more than once either with a regular interval
+(ex. daily, weekly, monthly) that can be expressed by a rule or with an explicit series of
+dates/times.
+
+=== Request
+
+A broadly used term in multiple RFCs to represent an action. That action may
+be a query for property values from a client to a server (cp. <<rfc4791>>), a query between
+a client and a server that results in object creation, modification, or deletion (cp.
+<<rfc4791;and!rfc5545>>), and it is the name of a method in iTIP that makes "an explicit
+invitation to one or more attendees" (among other things, cp. <<rfc5546>>).
+
+[.source]
+<<rfc4791>>
+
+[.source]
+<<rfc5545>>
+
+[.source]
+<<rfc5546>>
+
+[.source]
+<<ischedule>>
+
+=== Reminder
+
+See {{Alarm}}.
+
+=== Repeating
+
+See {{Recurring}}.
+
+=== Resource
+
+A resource in the scheduling context is any shared entity,that can be
+scheduled by a calendar user, but does not control its own attendance status. Resources
+can be of "Location", "Equipment", or "Role" type.
+
+=== Resource Kind
+
+Specifies the kind of resource object represented. Some of the possible
+values are "Location", "Thing", or "Group". Location is used for any physical location
+resource such as room, building, etc. Thing is used for any physical object that can
+scheduled like projector, printer, etc. Group is used to specify a group of resources with
+a specific skill set. For example: drivers, electricians, etc.
+
+=== Resource Manager Info
+
+Information on the person(s) responsible for the daily upkeep
+of a resource.
+
+=== Response
+
+Acceptance or refusal of a meeting request sent to a meeting proposer.
+
+=== RFC
+alt:[Request for Comments]
+
+The IETF and other standards bodies use RFCs to
+define Internet standards. They document most of the protocols, mechanisms, procedures
+and best practices in use on the Internet
+
+[.source]
+<<ietf>>
+
+=== RSVP
+
+Specifies whether there is an expectation of a reply from a specific calendar
+user 
+
+[.source]
+<<rfc5545>>
+
+=== Scheduling
+
+Briefly the term refers to the process by which organizers and attendees
+plan events or assign tasks. More specifically the term encompasses the exchange of
+request/invitations and responses between organizers and attendees of scheduled
+events, tasks or journal entries.
+
+=== Scheduling Admin Contact Info
+
+An attribute that contains contact information for the
+scheduling approvers, if approval is required.
+
+=== Task
+
+A representation of an item of work assigned to an individual. In <<rfc5545>>, these
+are "`VTODO`" calendar components, which are groupings of component properties and
+possibly "`VALARM`" calendar components that represent an action-item or assignment.
+
+=== Text/calendar
+
+The MIME content type for encoding iCalendar objects. Example usage
+includes: email, web pages.
+
+=== Time Zone
+
+Areas of the Earth that have adopted the same local time. Time zones are
+generally centered on meridians of a longitude, that is a multiple of 15, thus making
+neighboring time zones one hour apart. However, the one hour separation is not universal
+and the shapes of time zones can be quite irregular because they usually follow the
+boundaries of states, countries or other administrative areas. In <<rfc5545>>, time zones
+are represented using "`VTIMEZONE`" calendar components, each with a Time Zone
+Identifier (TZID) that can be used to tie a particular date and time to a specific timezone.
+
+=== Transparency
+
+A property of an event that defines whether it will appear free or busy in
+free/busy time searches.
+
+=== UTC
+alt:[Coordinated Universal Time]
+
+UTC is designated to be at zero longitude. Also
+known as Zulu Time (Nato/military designation). Formerly GMT (Greenwich Mean Time)
+although there is a slight difference. UTC is the basis for all local time offsets. Offsets
+are either positive or negative. An example is UTC-8 (Pacific Standard Time). Some
+iCalendar examples:
+
+[example]
+====
+`DTSTART:19970714T133000 ;Local time` +
+`DTSTART:19970714T173000Z ;UTC time` +
+`DTSTART;TZID=US-Eastern:19970714T133000 ;Local time and time zone reference`
+====
+
+=== `VALARM`
+
+A `VALARM` calendar component is a grouping of component properties that
+is a reminder or alarm for an event or a to-do. For example, it may be used to define a
+reminder for a pending event or an overdue to-do. ``VALARM``s will thus be included within
+{{VEVENT}} and {{VTODO}} components.
+
+=== vCalendar
+
+A text representation of calendar and scheduling data created by the Versit
+consortium (also, the vCalendar specification). The <<rfc5545>> iCalendar specification
+supersedes the work of vCalendar, though `VCALENDAR` remains as a component type
+in the <<rfc5545>> iCalendar specification.
+
+=== `VEVENT`
+
+A `VEVENT` calendar component represents a scheduled amount of time on a
+calendar. For example, it can be an activity; such as a one-hour long, department meeting
+from 8:00 AM to 9:00 AM, tomorrow. Generally, an event will take up time on an individual
+calendar. The `VEVENT` is also the calendar component used to specify an anniversary
+or daily reminder within a calendar.
+
+=== `VFREEBUSY`
+
+A grouping of component properties that represents either a request for
+free or busy time information, a reply to a request for free or busy time information, or a
+published set of busy time information.
+
+=== `VJOURNAL`
+
+A `VJOURNAL` calendar component is a grouping of component properties
+that represent one or more descriptive text notes associated with a particular calendar
+date. The {{DTSTART}} property is used to specify the calendar date with which the journal
+entry is associated. Examples of a journal entry include a daily record of a legislative
+body or a journal entry of individual telephone contacts for the day or an ordered list of
+accomplishments for the day. The `VJOURNAL` calendar component can also be used to
+associate a document with a calendar date.
+
+=== `VTODO`
+
+A `VTODO` calendar component is a grouping of component properties and
+possibly {{VALARM}} calendar components that represent an action-item or assignment.
+For example, it can be used to represent an item of work assigned to an individual; such
+as "turn in travel expense today".
+
+=== WS-Calendar
+
+An OASIS (Organization for the Advancement of Structured Information
+Standards) working group tasked with defining a cross-domain standard for passing
+schedule and interval information between and within services built around CalWS. The
+product of the working group will be a standard also named "WS-Calendar" (from
+http://www.oasis-open.org/committees/workgroup.php?wg_abbrev=ws-calendar). (See
+{{CalWS}}.)
+
+=== xCal
+
+A draft specification that defines an XML representation of iCalendar data.
+
+[.source]
+<<xcal>>
+
+[bibliography]
+== {blank}
+
+* [[[rfc2045, hidden(RFC 2045)]]]
+
+* [[[rfc2046, hidden(RFC 2046)]]]
+
+* [[[rfc2047, hidden(RFC 2047)]]]
+
+* [[[rfc3283, hidden(RFC 3283)]]]
+
+* [[[rfc3744, hidden(RFC 3744)]]]
+
+* [[[rfc3935, hidden(RFC 3935)]]]
+
+* [[[rfc4791, hidden(RFC 4791)]]]
+
+* [[[rfc5545, hidden(RFC 5545)]]]
+
+* [[[rfc5546, hidden(RFC 5546)]]]
+
+* [[[rfc6047, hidden(RFC 6047)]]]
+
+* [[[draft-desruisseaux-caldav-sched,hidden(IETF I-D draft-desruisseaux-caldav-sched)]]]
+
+* [[[xcal,hidden(IETF I-D draft-daboo-et-al-icalendar-in-xml)]]]]
+
+* [[[ischedule, hidden(IETF I-D draft-desruisseaux-ischedule)]]]
+
+* [[[ietf,hidden(ietf.org)]]]
+
+* [[[oasis,hidden(oasis-open.org)]]]
