@@ -85,11 +85,11 @@ described in <<rfc2119>>.
 
 * [[[rfc2616,hidden(RFC 2616)]]]
 
-* [[[xcal,hidden(draft-xcal)]]]], C. Daboo, M. Douglass, S. Lees, _xCal: The XML format for iCalendar_, https://datatracker.ietf.org/idtracker/draft-daboo-et-al-icalendar-in-xml
+* [[[xcal,hidden(IETF I-D draft-daboo-et-al-icalendar-in-xml)]]]]
 
-* [[[webl,hidden(Web-Linking)]]], M. Nottingham, _Web linking_, http://tools.ietf.org/html/draft-nottingham-http-link-header
+* [[[webl,hidden(IETF I-D draft-nottingham-http-link-header)]]]
 
-* [[[fb,hidden(FreeBusy Read URL)]]], E York., _Freebusy read URL_, http://www.calconnect.org/pubdocs/CD0903%20Freebusy%20Read%20URL%20V1.0.pdf
+* [[[fb,hidden(CC/S 0903)]]]
 
 [bibliography,normative=false]
 === Non-normative References
