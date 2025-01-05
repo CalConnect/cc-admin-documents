@@ -113,7 +113,7 @@ incorrect for an update. The other vendor application was unhappy with this stat
 meetings without an `ORGANIZER` at one point and this resulted in the server creating corrupt
 `ORGANIZER` fields in subsequent accesses.
 
-Initial testing yet another vendor showed that the test version of that vendor’s application was not
+Initial testing yet another vendor showed that the test version of that vendor's application was not
 recognizing our Meeting Requests at all. This was subsequently fixed by them.
 
 A lack of iMip support prevented IOP testing with two of the server applications at the event.
@@ -165,7 +165,7 @@ add spam events to calendars, unchecked.
 === A Neutral Observer
 
 It is common for us to have observers to the interop. This time the observer chose to actually do some
-“neutral testing” on their own. These are their comments.
+"neutral testing" on their own. These are their comments.
 
 This organization is interested in implementing a university-wide (and possibly inter-university)
 calendaring service to complement the web, e-mail, and other services (IM also coming), so we are

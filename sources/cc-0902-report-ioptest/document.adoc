@@ -86,15 +86,15 @@ happened.
 ==== Vendor 2
 
 Vendor 2 was happy to test with some new server/clients. We did the basic client to client iCalendar
-testing. We do see some issues with different clients. It is good we’ve discussed with each product
-vendor and we’ve understood all the root causes of the issues.
+testing. We do see some issues with different clients. It is good we've discussed with each product
+vendor and we've understood all the root causes of the issues.
 
 General issues:
 
 . Sequence number: Different design on sequence number in Cancellation or update caused
 the update or cancellation not recognized well.
 . Cancellations are not recognized by different clients due to varied reasons
-. `RDATE` issue. Vendor 2 doesn’t support `RDATE`.
+. `RDATE` issue. Vendor 2 doesn't support `RDATE`.
 
 === Detailed Results
 
@@ -105,7 +105,7 @@ Issues:
 . Vendor 1 calendar server will send duplicate update when organizer receives responses.
 i.e. the server considers the meeting is changed when responses are received.
 . The cancellation for single occurrence in a series has the wrong date value (always points
-to the first occurrence of the series) in the “When” field and Body text. The iCalendar
+to the first occurrence of the series) in the "When" field and Body text. The iCalendar
 actually has the correct value and it can remove the correct occurrence from calendar.
 
 ==== Vendor 3
@@ -114,41 +114,41 @@ We did good tests with Vendor 3 this time.
 
 Issues:
 
-. All Vendor 3’s cancellations, including cancellations for single meeting, for series or for
+. All Vendor 3's cancellations, including cancellations for single meeting, for series or for
 occurrence in series, are not recognized in Vendor 2.
-.. The root cause is these cancellations do not have “`ATTENDEE`” section in the iCal.
+.. The root cause is these cancellations do not have "`ATTENDEE`" section in the iCal.
 Vendor 2 requires this for any meeting message.
-. All Vendor 2’s cancellations, includes cancellation for single meeting, recurring series, or
-occurrence in series, are interpreted as “Update” in Vendor 3.
-.. The root cause is Vendor 2 doesn’t have “`STATUS: CANCELLED`” in the
+. All Vendor 2's cancellations, includes cancellation for single meeting, recurring series, or
+occurrence in series, are interpreted as "Update" in Vendor 3.
+.. The root cause is Vendor 2 doesn't have "`STATUS: CANCELLED`" in the
 cancellation message. Notes require this section and the value has to be
 `CANCELLED`.
 . Vendor 3 uses `RDATE` for modified occurrence and in updating series.
-.. Vendor 2 doesn’t support `RDATE`. The only issues happening now is Vendor 2
-couldn’t interpret Vendor 3’s update to series. The original invite to series or
+.. Vendor 2 doesn't support `RDATE`. The only issues happening now is Vendor 2
+couldn't interpret Vendor 3's update to series. The original invite to series or
 update to modified occurrence are good.
-. Vendor 2’s update to single occurrence of the series is not recognized correctly in Vendor
-3’s application:
-.. This is because Vendor 2’s initial `SEQ` for such update is from 0. In Vendor 2
-design, the `SEQ` for modified occurrence is calculated separately from Series’
+. Vendor 2's update to single occurrence of the series is not recognized correctly in Vendor
+3's application:
+.. This is because Vendor 2's initial `SEQ` for such update is from 0. In Vendor 2
+design, the `SEQ` for modified occurrence is calculated separately from Series'
 `SEQ`.
-. Counter messages from Vendor 3 do not have Attendee status set to “Tentative”.
-.. Vendor 2 doesn’t support Counter message. It only changes the Attendee status
-according to the value set in the message. iCalendar generated in Vendor 3’s
-Counter message has “Needs-Action” for this field.
-. Vendor 2’s attachment in meeting messages are not shown up in Vendor 3.
+. Counter messages from Vendor 3 do not have Attendee status set to "Tentative".
+.. Vendor 2 doesn't support Counter message. It only changes the Attendee status
+according to the value set in the message. iCalendar generated in Vendor 3's
+Counter message has "Needs-Action" for this field.
+. Vendor 2's attachment in meeting messages are not shown up in Vendor 3.
 .. This seems to be a Vendor 3 bug so far.
 
 ==== Vendor 8
 
 Issues:
 
-. All Vendor 2’s cancellations, includes cancellation for single meeting, recurring series, or
+. All Vendor 2's cancellations, includes cancellation for single meeting, recurring series, or
 occurrence in series, do not work in Vendor 4.
 .. This is because Vendor 4 requires the `SEQ` number increased in the
 Cancellation. Vendor 4 is planning to fix this.
-. Vendor 4’s cancellations for series or for occurrence in series do not work in Vendor 2.
-.. The root cause is these cancellations do not have “`ATTENDEE`” section in the
+. Vendor 4's cancellations for series or for occurrence in series do not work in Vendor 2.
+.. The root cause is these cancellations do not have "`ATTENDEE`" section in the
 iCal. Vendor 2 requires this for any meeting message.
 .. Vendor 4 has a bug here since Cancellation for single meeting does have this
 section. Vendor 4 is going to investigate this.
@@ -156,13 +156,13 @@ section. Vendor 4 is going to investigate this.
 .. This shows an Vendor 2 bug here: Vendor 2 treats all meeting invites/updates
 with `SEQ=0` as new invites, thus it changes the banner for previous
 invites/updates.
-.. Vendor 4 also treats changing “End time” of meeting without changing Start time
+.. Vendor 4 also treats changing "End time" of meeting without changing Start time
 as informational update.
 
 ==== Vendor 5
 
 Our testing effort was minimal this time around due to issues involving the subscription method and URL
-we were using to configure the Vendor 1’s client and the Vendor 6 client.
+we were using to configure the Vendor 1's client and the Vendor 6 client.
 
 We were able to take this issue back with us to discuss with our engineering team and now have a better
 understanding of the blocker issues and have corrected the problem.
@@ -247,9 +247,9 @@ Vendor 6:
 
 * This testing was very successful even for complicated issues. Good job!
 * Reschedules of a single instance need to increment sequence number. Vendor 6 to address.
-* Questions on why some meetings show plain text and some show rich content – Vendor 6 to
+* Questions on why some meetings show plain text and some show rich content -- Vendor 6 to
 investigate
-* Responses from Vendor 3 do not show any body – they will address by including an alternative
+* Responses from Vendor 3 do not show any body -- they will address by including an alternative
 block even when simplifying MIME.
 * Does not implement counter-proposals
 
@@ -261,7 +261,7 @@ and Vendor 1 is taking these changes back to see if they can implement, although
 difficult due to limited Mail APIs.
 * Rich text is not handled by Vendor 1 Mail
 * Vendor 1 mail loses attachments from Vendor 3
-* Vendor 3 does not handle Vendor 1's inline or URI attachments – Vendor 1 to investigate
+* Vendor 3 does not handle Vendor 1's inline or URI attachments -- Vendor 1 to investigate
 * Cancellations from Vendor 1 do not show as such in Vendor 3 (`STATUS:CANCELLED` problem).
 Actions by Vendor 3 and Vendor 1 planned.
 * Cancellations from Vendor 3 do not show as such in Vendor 1. This is likely a bug with
@@ -289,7 +289,7 @@ Actions by Vendor 3 and Vendor 2 planned.
 `ATTENDEE` not specified.
 * Seem to have a problem with Vendor 2 attachments - Vendor 3 to investigate.
 * Counters are not implemented.
-* Updates/Reschedules from Vendor 2 fail. I don’t have the details of this written down but I
+* Updates/Reschedules from Vendor 2 fail. I don't have the details of this written down but I
 believe that this was a problem where Vendor 2 did not update the sequence number.
 
 ==== Vendor 7
@@ -337,7 +337,7 @@ without clicking the Remove from calendar button.
 instance from my calendar. This also happens when sent from Vendor 1 client. It did the right thing when
 sent from the server, but when sent from Vendor 1 it does not.
 * When our client accepts a Vendor 1 recurring meeting, the acceptance contains an attachment when
-viewed with Vendor 1’s client.
+viewed with Vendor 1's client.
 
 Vendor 2:
 

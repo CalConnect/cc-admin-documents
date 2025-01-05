@@ -36,7 +36,7 @@ initiative.
 
 == Smart Grid Suppliers and Consumers
 
-Smart grid scenarios involve two main actors – a supplier and a consumer.
+Smart grid scenarios involve two main actors -- a supplier and a consumer.
 
 === Goals
 
@@ -76,7 +76,7 @@ h| Restriction | Supplier | Consumer | Signal consumer to reduce consumption to 
 
 === Publish and query a rate schedule
 
-A utility defines a rate schedule as a collection of “events” which include utility rates for a defined period
+A utility defines a rate schedule as a collection of "events" which include utility rates for a defined period
 of time. For example, different electricity rates can be set for peak and non-peak hours. The utility
 creates events in the rate schedule and makes it available to be queried by devices on the grid.
 
@@ -284,10 +284,10 @@ Uncertainty needs to be expressed with a precision of milliseconds.
 ==== Calendar
 
 A calendar is defined as a set of related events with a common identifier. ICalendar defines events but it
-doesn’t attempt to define calendars. For example, it doesn’t define a name for the calendar or an id
+doesn't attempt to define calendars. For example, it doesn't define a name for the calendar or an id
 that be used to distinguish one calendar from another.
 
-Isn’t there a proposal to add a calendar identifier to iCalendar?
+Isn't there a proposal to add a calendar identifier to iCalendar?
 
 ==== Sequence
 
@@ -316,8 +316,8 @@ scheduling methods.
 Question: Do smart grid use cases between consumers and suppliers really require scheduling methods,
 or just flexible descriptions of time?
 
-Several ITIP methods are involved in interpersonal scheduling – `REQUEST`, `REPLY`, `COUNTER`, `CANCEL`.
-These methods don’t seem suited to the smart grid use cases that would require
+Several ITIP methods are involved in interpersonal scheduling -- `REQUEST`, `REPLY`, `COUNTER`, `CANCEL`.
+These methods don't seem suited to the smart grid use cases that would require
 
 * A set of events to be scheduled on an all-or-nothing basis.
 * One of several alternative recurring patterns to be chosen
@@ -347,7 +347,7 @@ necessary data. In this example, the GetItem method is used:
 ----
 <Body>
   <GetItems>
-    <!—GetItems info>
+    <!--GetItems info>
   </GetItems>
 </Body>
 ----
@@ -355,14 +355,14 @@ necessary data. In this example, the GetItem method is used:
 ==== CalWS Response
 
 The body of the response contains response data for each method called in the request. In this
-example, the GetItem method is used again. Note that each request method has “Response” appended
+example, the GetItem method is used again. Note that each request method has "Response" appended
 to the method name for its corresponding response element:
 
 [source%unnumbered]
 ----
 <Body>
   <GetItemResponse>
-    <!—GetItemResponse info>
+    <!--GetItemResponse info>
   </GetItemResponse>
 <Body>
 ----
@@ -429,8 +429,8 @@ item.
 <CreateItem>
   <Calendar Id="12345"/>
   <Items>
-    <!—Items represented as ICalendar in XML>
-    <icalendar xmlns="urn:ietf:params:xml:ns:icalendar-2.0”>
+    <!--Items represented as ICalendar in XML>
+    <icalendar xmlns="urn:ietf:params:xml:ns:icalendar-2.0">
     <vcalendar>
     <properties>
       <version><text>2.0</text></version>
@@ -516,8 +516,8 @@ will include items where part of the event lies outside the time range.
 <GetItemsInRange>
   <Calendar Id="12345"/>
   <Range>
-    <!—Range (May 17, 2010 8a-5p) represented as ICalendar in XML>
-    <icalendar xmlns="urn:ietf:params:xml:ns:icalendar-2.0”>
+    <!--Range (May 17, 2010 8a-5p) represented as ICalendar in XML>
+    <icalendar xmlns="urn:ietf:params:xml:ns:icalendar-2.0">
     <vcalendar>
     <properties>
       <version><text>2.0</text></version>
@@ -546,7 +546,7 @@ will include items where part of the event lies outside the time range.
 <GetItemsInRangeResponse>
   <Calendar Id="12345"/>
   <Items>
-    <!—Items in range represented as ICalendar in XML>
+    <!--Items in range represented as ICalendar in XML>
   </Items>
 </GetItemsInRangeResponse>
 ----
@@ -579,7 +579,7 @@ Changes from -00:
 
 Changes from -01:
 
-* Introduced “CalWS” as working name to avoid confusion with OASIS document.
+* Introduced "CalWS" as working name to avoid confusion with OASIS document.
 * Updated discussion on precision, uncertainty, sequence
 
 Changes from -02:

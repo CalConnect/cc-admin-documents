@@ -88,7 +88,7 @@ application and server work is needed to accommodate those differences.
 
 One vendor tested the ability to federate free/busy information from a server and it was successful after
 the vendor added an additional configuration item to allow free/busy information to be accessed without
-authentication. In a normal installation of the vendor’s application, the freebusy URL is authenticated and
+authentication. In a normal installation of the vendor's application, the freebusy URL is authenticated and
 access to a user's freebusy information requires the CalDAV:read-free-busy privilege.
 
 iMIP compatibility testing by one vendor noted REPLY is not send to Reply-To: address but to From:
@@ -105,14 +105,14 @@ But they should actually appear inside HREF tags like:
 * `<c:schedule-inbox-URL><d:href>/fullcalendars/iop.test.dummy.com/user7/INBOX</d:href></c:schedule-inbox-URL>`
 * `<c:schedule-outbox-URL><d:href>/fullcalendars/iop.test.dummy.com/user7/Sent%20Items</d:href></c:scheduleoutbox-URL>`
 
-Configuring CardDAV account client results in incorrect server address if username contains ‘`@`’
-character. For example setting the servername to ‘server:port’ and username to ‘`user@domain`’ results in
+Configuring CardDAV account client results in incorrect server address if username contains '`@`'
+character. For example setting the servername to 'server:port' and username to '`user@domain`' results in
 requests being sent to: `\http://user@domain@server:port`. Our server uses username format
 `user@domain` in some cases (when more domains are configured). So there is no way to configure client
 CardDAV account manually with our server.
 
-One client uses “`/addressbook/`” as the default collection (e.g.: `/addressbooks/__uids/.../addressbook/`).
-We don’t have a chance to use different collection like “`/addressbooks/__uids/.../contacts/`”. We can
+One client uses "`/addressbook/`" as the default collection (e.g.: `/addressbooks/__uids/.../addressbook/`).
+We don't have a chance to use different collection like "`/addressbooks/__uids/.../contacts/`". We can
 resolve this on our side but it would be better if the address book behaved as a general CardDAV client
 getting this information from the server.
 
@@ -173,7 +173,7 @@ As we continue CalDAV testing, there is more and more evidence of improved funct
 Drummond from Apple remarked on how amazed he was that so much was working. This truly shows the
 support and work done by all the vendors to make this protocol a viable and working effort.
 
-CardDAV testing is in the very early stages. A small amount was done to “test the waters.” This will be
+CardDAV testing is in the very early stages. A small amount was done to "test the waters." This will be
 an item on the next event in February.
 
 None of the vendors were ready to do any Timezone server testing at this event. We will poll the waters

@@ -81,7 +81,7 @@ Karen Wu +
 Chengchen Zhou +
 Lakshmi Pavithra Pidatala |
 | Yahoo/Zimbra | John Holder | Zimbra Server pre 5.0.7
-| EM Client – Observer | | Comind CalDAV Client
+| EM Client -- Observer | | Comind CalDAV Client
 | CalConnect Reps | |
 | Interop Manager Logistics | Pat Egen +
 Dave Thewlis |
@@ -99,7 +99,7 @@ are:
 * CalDAV Availability
 * CalDAV Delegation.
 
-In addition, two vendors tested their application’s support for iCalendar, iTIP and iMIP. There
+In addition, two vendors tested their application's support for iCalendar, iTIP and iMIP. There
 were several clients who were testing iCalendar, iMIP and iTIP against regular clients as well as
 against several CalDAV servers so the CalDAV servers could test how they handled iMIP
 requests.
@@ -124,7 +124,7 @@ overwrite.
 On the "Query all components and return ETag WebDAV property and all data" test, a CalDAV
 client did a query only for the etag, not the calendar data
 
-When creating a calendar-query REPORT, one server’s Reports are overridden in separate
+When creating a calendar-query REPORT, one server's Reports are overridden in separate
 resources with the same url.
 
 After creating a new calendar in the current user's personal calendar space, one CalDAV server
@@ -157,12 +157,12 @@ Issues found with other clients and servers:
 
 * iMIP: iPhone doesn't recognize meeting invitation from a CalDAV server
 * A CalDAV client modified structure of MIME format on site
-* iMIP: when meeting is accepted in a server’s email, reply is sent to From: header address
+* iMIP: when meeting is accepted in a server's email, reply is sent to From: header address
 instead of Organizer's address.
 
-One CalDAV server noted that all Tomcat versions don’t work with large data amounts with
+One CalDAV server noted that all Tomcat versions don't work with large data amounts with
 CalDAV. They also noted that a client stored user credentials in the browser cache and even if
-the server deleted a calendar account and added it back it didn’t ask them to re-authenticate.
+the server deleted a calendar account and added it back it didn't ask them to re-authenticate.
 Also, upon deletion, we had to clear the browser cache to clear user credentials. This happened
 on Internet Explorer and Firefox.
 
@@ -179,7 +179,7 @@ seconds, we generate a bad recurrence-id for the exception.
 . We were not preserving the value of RSVP in Meeting REQUESTs. i.e. we always
 assumed the value was TRUE.
 . Notes originated meetings were not visible to our CalDAV clients.
-. One server’s iMip Gateway originated messages are not recognized as meeting requests
+. One server's iMip Gateway originated messages are not recognized as meeting requests
 by us. We spotted an original issue that the Content-Type METHOD parameter was not
 being specified but we still had an issue with the final form of Mime structure that they
 intend to use.
@@ -239,7 +239,7 @@ Send an invite with Rich Text
 
 Send an invite with attachments
 
-* Putting inline attachments that can’t be handled
+* Putting inline attachments that can't be handled
 * Attachments show in mail only and not in calendar
 
 Update a meeting invitation
@@ -277,7 +277,7 @@ Create a repeating monthly event from end
 
 Create a repeating yearly
 
-* Not honoring `DTSTART` that doesn’t match `RRULE`. `DTEND` is also wrong (early).
+* Not honoring `DTSTART` that doesn't match `RRULE`. `DTEND` is also wrong (early).
 
 Create a repeating `RDATE` meeting
 
@@ -288,7 +288,7 @@ Repeats with no end date
 
 * Sending a response for all even though it truncates the set to some finite value
 
-Repeat every other…
+Repeat every other...
 
 * Failing for every other year
 
@@ -327,7 +327,7 @@ Cancel a single instance
 
 * Pass but last char of subject is truncated
 * Not interpreted - Does One vendor need to put the `RDATE`?
-* Doesn’t bump sequence
+* Doesn't bump sequence
 * Does not bump sequence number on cancel
 * Only updating subject line - possibly related to a bug
 * Only updating subject line - possibly related to a bug

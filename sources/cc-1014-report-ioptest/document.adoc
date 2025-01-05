@@ -1,0 +1,132 @@
+= October 2010 CalConnect Interoperability Test Event Report
+:docnumber: 1014
+:copyright-year: 2011
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2011-01-11
+:published-date: 2011-01-11
+:technical-committee: CALCONNECT
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:fullname: Patricia Egen
+:role: author
+:fullname_2: Nate Barry
+:role_2: author
+:fullname_3: Cyrus Daboo
+:role_3: author
+:fullname_4: Michael Douglass
+:role_4: author
+:fullname_5: Arnaud Quillaud
+:role_5: author
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Introduction
+
+The October 2010 CalConnect Interoperability Testing Event was actually two distinct sets of testing. One
+set of vendors tested CalDAV and CardDAV. The second set of vendors tested iMIP.
+
+In addition to testing, a BOF (bird of a feather) session was held to discuss recurrence rules and issues
+pertaining to them. A summary of the session is included at the end of this report.
+
+=== Participants
+
+[options=header,cols="a,a,a",headerrows=2]
+.Participants
+|===
+| Organization | Participants | Versions Tested
+3+| CalDAV / CARDDAV /IMIP Testing
+
+| Apple | Cyrus Daboo | iCal Server and client - OS X 10.6.1 +
+Apple iCal 4.0 (SnowLeopard)
+| Sun Server | Arnaud |
+| IBM | Nate Barry | Lotus Notes/Domino 8.5.2
+| RPI | Mike Douglass |
+| Oracle | Simon Vaillancourt |
+| Kerio | Tomas Hnetila +
+Jakub Schwarzmeier |
+|===
+
+== General Testing Notes
+
+The participating vendors continued the ongoing testing of the CalDAV and CardDAV protocols, focusing
+on WebDAV sync, issues surrounding vendor-specific CalDAV extensions which needed more
+clarification, and iMIP recurrence issues.
+
+As usual, participants found and corrected bugs during the course of the interop. This is always beneficial
+because an organization can have a significant testing environment at their location but when they test
+outside of their protected domain, unknown issues can bubble up to the surface and be resolved.
+
+Regarding iMIP, it was found that iMIP representations of the text/calendar section that have Content-
+Disposition: attachment are handled differently by different vendors. If there is Content-Disposition:
+attachment, then some vendors will attach the iCalendar as a file attachment and others will represent as
+a workflow item.
+
+With respect to CardDAV, interoperability testing is just really starting and participants noted that the
+vCard 4 specification in CardDAV was invalid and time was spent discussion and writing changes to the
+actual specification.
+
+This is exactly why face to face interoperability testing is so beneficial. It is possible to not only uncover
+issues but then work in a collegial environment to enhance, correct and improve the specifications being
+tested.
+
+== Summary of recurrence BOF
+
+On Monday, 10/4/10 CalConnect held a BOF session to discuss problems that different implementations
+have in the area of communicating and processing updates to recurring meetings. It was agreed that in
+general updates and reschedules to a single instance of a series works well.
+
+Problematic use cases:
+
+* An instance is updated/rescheduled with `THISANDFUTURE` (with or without prior modification)
+* A series is updated/rescheduled (with no exceptional data)
+* A series is updated/rescheduled and maintains some prior exception data
+* A series is split, with a new UID being sent for a second half of the series: Truncation/Expansion
+(essentially capturing `THISANDFUTURE` behavior)
+
+=== Discussion
+
+There was a lot of discussion around the problematic use cases above and data models that differ and
+are the underlying cause to these. The result of this were a few specific takeaways.
+
+=== Takeaways
+
+. We would like to clarify wording in standard such that when an `RRULE` is modified, the `SEQUENCE`
+number `MUST` be incremented (some implementations reset to 0), specifically Microsoft Exchange. This
+seems that it could probably be changed very easily by Microsoft, and would have little to no risk in
+causing any regressions. Incrementing the `RRULE` allows other implementations to treat the change as
+an update rather than forcing the entire series to be blown away and recreated.
+. We would like to explore the concept of a iCalendar diff format. This would be a single `VEVENT` that
+contains ONLY data that was modified by that update. This probably requires some property level
+sequence tracking to correctly apply notices that arrive out of date. Many implementations already have
+such capabilities but do not share them in a standardized fashion. This would make update/reschedule
+transactions much simpler and much smaller. Additionally, it would conceptually be able to interoperate
+well with varying data models. Follow up is needed as to the specifics of this.
+. We would like to explore the concept of adding a `SERIES` ID to the iCalendar spec so that multiple
+UIDs could still be considered part of the same series. This would help in the implementation of
+`THISANDFUTURE`. Currently, the only ways to truly represent `THISANDFUTURE` changes are:
+
+** Modification of each effected instance as an exception
+** Dynamic processing of data
+** Splitting the meeting into multiple UIDs for each split. At this point, a subsequent
+`THISANDFUTURE` call across the two modified sets becomes problematic and there remains
+problems linking the two separate UIDs as they are actually representing the same meeting.
+. IBM would like to re-add the deprecated `THISANDPRIOR`, as Notes/Domino does utilize this and is
+reliant upon it. It should be added as an addendum to RFC 5545 and remain in consideration as
+implementations handle `THISANDFUTURE` going forward.
+
+== Summary
+
+As usual, all vendors learned a lot from the testing and actually fixed software onsite. These events are
+always useful and continue to ensure the protocol is tested appropriately.
+
+Respectfully submitted by Patricia Egen.

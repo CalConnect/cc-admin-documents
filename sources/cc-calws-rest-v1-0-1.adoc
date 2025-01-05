@@ -1644,7 +1644,7 @@ exchange scheduling messages between users of each system.
 |===
 | Revision | Date | Editor | Changes
 | ws-calendar-wd19 | 19-Mar-2011 | Toby Considine | Originally contributed by Mike Douglass as part of WS-Calendar v1.0 Specification. See full history in that document.
-| WD02 | 13-Feb-2012 | Toby Considine | Ported to separate document. “Promoted” all section headers.
+| WD02 | 13-Feb-2012 | Toby Considine | Ported to separate document. "Promoted" all section headers.
 | WD03 | 15 Feb-2012 | Toby Considine | Added Intro, updated namespaces to meet OASIS standard
 | WD04 | 17 February 2012 | Toby Considine | Additional namespace clean-up in response to Cover comments.
 

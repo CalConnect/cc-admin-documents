@@ -66,18 +66,18 @@ The categories selected for the use case organization reflect a grouping of reso
 type. Each of these categories touches on an area discussed by the Technical Committee over the course of our
 deliberations about resources in calendaring.
 
-. Person – People can properly be thought of as resources, especially given the knowledge and skills they
+. Person -- People can properly be thought of as resources, especially given the knowledge and skills they
 have which may be unique to them or to the position they hold (e.g., project manager for a particular
 project).
-. Location – Rooms and places are a particularly important resource category and are presently found in
+. Location -- Rooms and places are a particularly important resource category and are presently found in
 nearly every major calendaring and scheduling product.
-. Equipment – Things or objects which can be scheduled (e.g., projectors, laptops, vans).
-. Material – Things necessary for a meeting that must be reserved or checked out (e.g., documents,
+. Equipment -- Things or objects which can be scheduled (e.g., projectors, laptops, vans).
+. Material -- Things necessary for a meeting that must be reserved or checked out (e.g., documents,
 personnel files, records).
-. Role – The term 'role' is used to cover attributes common to a collective from among the resource
+. Role -- The term 'role' is used to cover attributes common to a collective from among the resource
 categories which can be used to schedule one or more from among the collective (e.g., fork lifts with a
 particular lifting capacity, waitresses, waiters, front desk clerks).
-. Other – Schedulable 'things' not covered by the other five categories (e.g., a staff in/out calendar).
+. Other -- Schedulable 'things' not covered by the other five categories (e.g., a staff in/out calendar).
 
 == Use Cases
 

@@ -123,7 +123,7 @@ described in <<rfc2119>>.
 [NOTE]
 ====
 The proper format for a citation to an OASIS Technical
-Committee’s work (whether Normative or Non-Normative) is:
+Committee's work (whether Normative or Non-Normative) is:
 
 OASIS +
 Stage (Committee Draft 01, Committee Draft 02, Committee +
@@ -135,8 +135,8 @@ acceptable as the content changes over time)
 
 For example:
 
-[EDXL-HAVE] OASIS Standard, “Emergency Data Exchange Language (EDXL)
-Hospital AVailability Exchange (HAVE) Version 1.0”, November
+[EDXL-HAVE] OASIS Standard, "Emergency Data Exchange Language (EDXL)
+Hospital AVailability Exchange (HAVE) Version 1.0", November
 2008.
 http://docs.oasis-open.org/emergency/edxlhave/os/emergency_edxl_have-1.0-spec-os.doc
 ====

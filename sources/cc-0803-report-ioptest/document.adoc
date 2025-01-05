@@ -41,7 +41,7 @@ are not referenced in this document.
 
 == Server 1 - Test Results with device vendor
 
-*Part I – Calendar Tests*
+*Part I -- Calendar Tests*
 
 === Events - Server to Device
 
@@ -52,7 +52,7 @@ OK except for:
 * Server to client alarm issue: Server created an alarm on device side regardless if server
 event has an alarm. This is the default behavior by design and alarms can be turned off
 by changing server configurations.
-* Truncation issue: On device modify the location only. When sync’d back to server, the
+* Truncation issue: On device modify the location only. When sync'd back to server, the
 location was restored with the long original value. The un-modified title was truncated on
 server. Seems to be a bug on server. Need more investigation.
 
@@ -77,7 +77,7 @@ OK
 `X-PHONEOWNER` issue in device vCalendar:
 
 Device in some cases put `X-PHONEOWNER` as one parameter of the attendee indicating that the
-attendee is the phone owner. `X-PHONEOWNER` doesn’t have a value and this breaks the server parser.
+attendee is the phone owner. `X-PHONEOWNER` doesn't have a value and this breaks the server parser.
 Server should handle this.
 
 [source%unnumbered]
@@ -157,9 +157,9 @@ at vendor.ocs.protocols.oma.ds.connector.calendar.VCalParser.parseParameters(VCa
 
 OK except for:
 
-* Client to Server alarm issue: Server didn’t create an alarm on server side regardless if
+* Client to Server alarm issue: Server didn't create an alarm on server side regardless if
 device event has an alarm. Device did include alarm in the vCalendar, however importing
-the vCalendar to a calendaring client supporting vcalendar didn’t result in an alarm either.
+the vCalendar to a calendaring client supporting vcalendar didn't result in an alarm either.
 Need more investigation. Following is the vCalendar from device.
 
 [source%unnumbered]
@@ -197,7 +197,7 @@ OK
 
 ==== Multi-Byte Characters From Server
 
-* Device can’t display the multi-byte characters (no font, normal). Chars were sent back to server
+* Device can't display the multi-byte characters (no font, normal). Chars were sent back to server
 correctly when modified.
 
 ==== Deletion
@@ -301,7 +301,7 @@ OK except for:
 name@othername.com. Seems to be server bug.
 * Owner email was not first on the attendee list. Need to find out whether it is server or client
 bug.
-* Client doesn’t support attendance status. Server should put the info into the meeting
+* Client doesn't support attendance status. Server should put the info into the meeting
 description as is done for Windows Mobile Smartphone.
 
 == Server 2 and device Testing Comments
