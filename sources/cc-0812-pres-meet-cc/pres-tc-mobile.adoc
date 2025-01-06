@@ -1,0 +1,116 @@
+= CalConnect Technical Committees: TC Mobile
+:docnumber: 0812
+:copyright-year: 2008
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2008-11-07
+:published-date: 2008-11-07
+:technical-committee: CALCONNECT
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:fullname: Chris Dudding
+:affiliation: Symbian
+:contributor-position: Technology Architect
+:imagesdir: images
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks
+and Disclaimer of Warranty for External (Public) Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+[IMPORTANT]
+====
+All documents included in the zip file for Meet CalConnect 2008 are considered part of CD 0812 and the public disclaimer included by reference above applies to all contents of the file.
+====
+
+== What is different about mobile calendaring?
+
+. Capabilities
+** Less memory & processing power
+** Limited battery life
+** Small screen size
+** Lower resolutions
+** Input methods
+
+. Usage
+** Device is mobile
+** User pays for data
+** Calendar usage may be interrupted
+
+. Challenges
+** Software distribution
+** Proprietary platforms
+** Open standards adoption
+
+. Connectivity
+** Bandwidth/Latency
+** Intermittent Connectivity
+
+[%unnumbered]
+image:img08.png[]
+
+== Charter
+
+The goal of the Mobile technical committee is to identify the issues associated with mobile calendaring & scheduling and propose recommendations on how to address any problem areas.
+
+This TC will provide the Consortium with information on the current state of mobile calendaring & scheduling and gather requirements and use cases specific to mobile environments.
+
+The TC will promote adoption of open calendaring standards for mobile devices (e.g. iCalendar and CalDAV) and create best practice documents as needed to assist implementation of these standards.
+
+To achieve these goals, the TC intends to work in concert with organisations and vendors in the mobile industry.
+
+== Milestones to date
+
+[%unnumbered]
+image:img09.png[]
+
+== Mobile Calendaring Questionnaire
+
+Two questionnaires were conducted in 2006 to understand:
+
+* What feature sets were currently supported
+* What features users wanted
+
+[example]
+====
+What would you like to be able to do with your device that you cannot do right now?
+
+"Sync reliably" +
+"Power on quickly :-)" +
+"SyncML! Synchronize the calendar" +
+"Use the calendar better, and sync it with PC apps..." +
+"Handle events in different time zones"
+====
+
+== The Benefits of iCalendar paper
+
+* iCalendar is the standard for interoperable exchange of calendaring information
+** It is widely used and is being actively developed
+** However, it has limited adoption within the mobile industry
+
+* TC Mobile produced a white paper to promote wider adoption of iCalendar on mobile devices. It covers
+** The differences between vCalendar and iCalendar
+** The benefits of using iCalendar
+** Current efforts to improve interoperability
+
+== Mobile Calendar IOP Test Suite
+
+.Examples of known problem areas
+image::img10.png[]
+
+== Future Plans
+
+* CalDAVfor mobile devices white paper
+** It will describe technical requirements, recommendations and future mobile-specific possibilities
+** We hope this will help explain the relevance of CalDAVto mobile devices
+
+* More interoperability testing
+** Regular face to face events and virtual testing
+
+* Mobile Calendaring workshop
+** CalConnect is considering a mobile event in 2009

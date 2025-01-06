@@ -1,0 +1,64 @@
+= Stockholm University -- Membership in CalConnect
+:docnumber: 0812
+:copyright-year: 2008
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2008-11-07
+:published-date: 2008-11-07
+:technical-committee: CALCONNECT
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:fullname: Mattias Amnefelt
+:affiliation: Stockholm University
+:contributor-position: Infrastructure architect
+:email: mattiasa@it.su.se
+:imagesdir: images
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks
+and Disclaimer of Warranty for External (Public) Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+[IMPORTANT]
+====
+All documents included in the zip file for Meet CalConnect 2008 are considered part of CD 0812 and the public disclaimer included by reference above applies to all contents of the file.
+====
+
+== What is Stockholm University?
+
+* Largest Higher-ed institution in Sweden
+** 50,000 Students
+** 5,000 Employees
+* Central IT Department with 110 employees
+* Approx. the same in other departments
+* Very diverse IT-organisation
+* About 110 different mail systems (many with calendar support)
+* Several calendar-enabled systems (10 exchange, 1 FirstClass, 1 Kerio...)
+* We need interoperability!
+
+== Calendars at Stockholm University
+
+Many applications which can produce and consume calendar data
+
+* Class schedules
+* Room and equipment reservations
+* Public website
+* Personal and group calendars
+
+== Why CalConnect?
+
+* Close contact with vendors
+* Get early familiarity with the technology
+* Contact with other orgs with similar problems
+** Many University members
+* Can influence to "get things right" from our perspective
+
+== Questions?
+
+Mattias Amnefelt +
+mattiasa@it.su.se

@@ -1,0 +1,70 @@
+= iSchedule TC
+:docnumber: 0812
+:copyright-year: 2008
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2008-11-07
+:published-date: 2008-11-07
+:technical-committee: CALCONNECT
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:fullname: Mattias Amnefelt
+:affiliation: Stockholm University
+:contributor-position: Infrastructure architect
+:email: mattiasa@it.su.se
+:imagesdir: images
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks
+and Disclaimer of Warranty for External (Public) Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+[IMPORTANT]
+====
+All documents included in the zip file for Meet CalConnect 2008 are considered part of CD 0812 and the public disclaimer included by reference above applies to all contents of the file.
+====
+
+== Who am I?
+
+* Mattias Amnefelt
+* Infrastructure architect at Stockholm University
+* Member of the iSchedule TC of Calconnect
+
+== Introduction
+
+* iSchedule--The Internet Scheduling Protocol
+* Provides the ability for users on different calendaring systems to schedule meetings with each other
+
+== CalDAV!= iSchedule
+
+But I can do scheduling with my colleagues today!
+
+True, but only people on the same server as you, or via some other communication process such as email or telephone.
+
+CalDAV:: Client contacts a server to manipulate a calendar
+iSchedule:: Server contacts another server to schedule on a user's behalf
+
+== iSchedule
+
+.iSchedule
+image::img07.png[]
+
+* Built on core internet technologies
+** HTTP, SSL, iTIP
+* Instantaneous freebusy lookups across systems
+* Invites, replies sent as "messages" with delivery status immediately returned
+* Can be used with any type of calendar store (does not depend on CalDAV)
+
+== Current topics
+
+Discovery:: How to find your server given your calendar address
+Security:: How do I know who you are and what you are allowed to do?
+
+== Standards status
+
+Nothing published yet. Working on the first draft.

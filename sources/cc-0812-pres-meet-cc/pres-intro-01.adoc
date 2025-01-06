@@ -1,0 +1,73 @@
+= An Introduction to The Calendaring and Scheduling Consortium
+:docnumber: 0812
+:copyright-year: 2008
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2008-11-07
+:published-date: 2008-11-07
+:technical-committee: CALCONNECT
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:imagesdir: images
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks
+and Disclaimer of Warranty for External (Public) Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+[IMPORTANT]
+====
+All documents included in the zip file for Meet CalConnect 2008 are considered part of CD 0812 and the public disclaimer included by reference above applies to all contents of the file.
+====
+
+== Agenda
+
+* Introduction to CalConnect
+** Dave Thewlis, Executive Director, CalConnect
+* Interoperability Testing and Standards Development
+** Patricia Egen, Interoperability Test Event Manager
+* CalConnect Technical Committees
+** TC MOBILE -- Chris Dudding, Symbian
+** TC iSCHEDULE -- Mattias Amnefelt, Stockholm University
+* CalConnect and Open Source
+** Gary Schwartz, Rensselaer Polytechnic Institute
+* CalConnect from a Member Perspective
+** Gary Schwartz, Rensselaer Polytechnic Institute
+** Tomáš Hnétila, Kerio Technologies
+** Mattias Amnefelt, Stockholm University
+* General Question & Answer Session
+
+== The Presenters
+
+* Mattias Amnefelt
+** Affiliation: Stockholm University
+** iSchedule Technical Committee
+* Chris Dudding
+** Affiliation: Symbian
+** Chair, Mobile Technical Committee
+* Patricia Egen
+** Affiliation: Patricia Egen Consulting
+** CalConnect Interoperability Test Event Manager
+* Tomáš Hnétila
+** Affiliation: Kerio Technologies
+* Gary Schwartz
+** Affiliation: Rensselaer Polytechnic Institute
+** Chair, Freebusy Technical Committee
+* Dave Thewlis
+** CalConnect Executive Director
+
+== Questions
+
+* You may ask questions at any time
+** During a presentation
+** At the end of a presentation
+** At the General Question and Answer Session
+* The Presenter may ask you to defer your question to later
+* If you have a question we don't answer
+** E-mail it to the appropriate presenter or to Dave Thewlis
+** We'll get you an answer

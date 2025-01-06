@@ -1,0 +1,159 @@
+= Interoperability Testing and Standards Development
+:docnumber: 0812
+:copyright-year: 2008
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2008-11-07
+:published-date: 2008-11-07
+:technical-committee: CALCONNECT
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:fullname: Patricia Egen
+:affiliation: The Calendaring and Scheduling Consortium
+:contributor-position: Interoperability Testing Manager
+:imagesdir: images
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks
+and Disclaimer of Warranty for External (Public) Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+[IMPORTANT]
+====
+All documents included in the zip file for Meet CalConnect 2008 are considered part of CD 0812 and the public disclaimer included by reference above applies to all contents of the file.
+====
+
+== What is Testing outside of CalConnect
+
+* Several organizations do testing for conformance purposes
+* This is usually against a small subset of operations and uses testing tools
+* The goal is to "pass certification"
+* Some groups do very large TEST-FESTs again with the goal of conformance testing
+** Typically limited to very specific test cases
+
+== What is Interoperability Testing at CalConnect?
+
+At CalConnect, we test partner pairs, at face to face functions:
+
+* Specific test cases are outlined and documented
+* Testing typically done by developers
+** In some cases, the developers are the authors of the specifications being tested
+* They are able to find and often times fix existing problems onsite
+* Discussions with other developers are held
+* Even though they are testing a specification, the developers know their products
+* The ultimate goal is better interoperability across vendor implementations
+
+== Testing Timeline
+
+.CalConnect Interoperability Testing
+image::img01.png[]
+
+== Standards Development
+
+As a protocol advances, our testing expands to accommodate the new specifications added to a protocol
+
+* For example, Scheduling was added to CalDAV in the latter part of 2007.
+* In 2008, we started testing vendor implementations of the specification
+* This allows the vendors to see in real time how their applications perform against other products
+** Seeing quickly what works or doesn't work allows the authors of the specification to make changes that will encourage interoperability
+** Case in point --at the October 2008 Interoperability Testing Event, 8 servers and 4 clients held CalDAV testing and two of the clients supported CalDAV Scheduling
+
+== Interoperability Testing Pre-Specification
+
+* iSchedule is new in 2008
+** Still in the discussion mode
+** Not yet defined as a specification
+
+* The CalConnect Community enabled members to work together and actually have interoperability happening prior to a specification creation
+* In October, we tested implementations of the new "specification under development"
+** This is an example of vendors quickly rolling out software using a proposed new specification
+** In this case, it will lead to a specification that has a good chance of acceptance and interoperability
+
+== How Do Organizations Participate
+
+Any member or non-member may participate in a CalConnect Interoperability Test Event
+
+* Submit a registration application
+* Agreement to abide by the rules of the event
+* Payment of the appropriate fee.
+
+Any member or non-member may attend [underline]#a single# CalConnect Interoperability Test Event as an Observer
+
+* The same bullet points as above apply
+
+CalConnect provides the location, Internet connectivity, testing documents, and food
+
+* Typically, a CalConnect member organization hosts the event
+
+== What Happens at an Interoperability Event
+
+* Participants provide details on how to access their servers and clients
+* Test suites and/or Test Matrices are used for testing
+* Partner testing pairs are set up and each pair tests using the testing documents
+* Participants document findings and deliver them to the Interoperability Testing Manager
+* Impromptu meetings are held during the event to allow participants to have adhoc discussions
+** This is often the first time people who have been testing together informally meet for the first time
+** Face to face testing has proven to be invaluable to participants
+
+== Our October 2008 Event --Yahoo Campus
+
+* 8 CalDAV Servers
+* 4 CalDAV Clients
+* IBM / Microsoft iCalendar testing
+
+[%unnumbered]
+image::img02.png[]
+
+[%unnumbered]
+image::img03.png[]
+
+[%unnumbered]
+image::img04.png[]
+
+== What is Produced from the Testing
+
+CalConnect produces two documents several weeks after the Testing is completed
+
+* An [underline]#*members-only internal document*# details in depth who tested what, with whom and what failed or succeeded.
+* A Public document outlines what was tested and general observations but excludes actual references to vendor results
+
+The Public documents are shared with Standards organizations to assist them with modifications and/or enhancements to the tested specifications.
+
+Prior CalConnect Reports available back to July 2004: http://www.calconnect.org/eventreports.shtml
+
+== What is Publicly Available
+
+* Test suites are publicly available on the CalConnect website
+* Past Public reports can be downloaded and reviewed
+* A new Virtual Testing Lab is in Beta now
+** Once complete, external developers can use the Virtual Lab to further test their implementations
+
+== Virtual Test Lab
+
+The site is a series of work areas:
+
+* User id request
+* Logon screen
+* Profile Setup
+* Create a Test or
+* Join a test event in progress
+* Report findings on a Wiki page
+
+.Virtual Test Lab
+image::img05.png[]
+
+== Future Projects
+
+* Complete the Virtual Testing Lab (`VCITE`)
+* We are currently working on an iCalendar validation tool that will reside on our website
+** The goal is that people can paste iCalendar streams into the tool and it will identify issues and validate that the text is structured correctly
+* Continued Interoperability testing on:
+** CalDAV Scheduling
+** CalDAV Security and Roles
+** iSchedule
+** Mobile Calendaring Testing

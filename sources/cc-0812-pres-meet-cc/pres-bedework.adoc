@@ -1,0 +1,354 @@
+= CalConnect and Open Source
+:docnumber: 0812
+:copyright-year: 2008
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2008-11-07
+:published-date: 2008-11-07
+:technical-committee: CALCONNECT
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:fullname: Gary Schwartz
+:affiliation: Communications & Middleware Technologies, Rensselaer Polytechnic Institute
+:contributor-position: Director
+:imagesdir: images
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks
+and Disclaimer of Warranty for External (Public) Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+[IMPORTANT]
+====
+All documents included in the zip file for Meet CalConnect 2008 are considered part of CD 0812 and the public disclaimer included by reference above applies to all contents of the file.
+====
+
+== Please Allow Me to Introduce Myself
+
+Gary Schwartz
+
+** Director, Communications & Middleware Technologies, Rensselaer Polytechnic Institute
+** Bedework Project Leader
+** CalConnect Vice President & Chair of FreebusyTechnical Committee
+
+== What I will be talking about
+
+* Bedework, our open source, Java-based implementation of CalDAV
+* The relationship between CalConnect and the open source movement
+* RPI's reasons for joining CalConnect
+* The benefits which RPI enjoys from active participation in CalConnect, both as
+calendar developers and as a research university
+
+== Rensselaer History
+
+The Rensselaer School was established in Troy, NY, in 1824 by Stephen Van Rensselaer
+"for the purpose of instructing persons ... in the application of science to the
+common purposes of life."
+
+It is
+
+[quote,"Palmer C. Ricketts 2nd ed History of Rensselaer Polytechnic Institute (1914)"]
+____
+...the first school of science and
+school of civil engineering, which has had
+a continuous existence, to be established
+in any English-speaking country.
+____
+
+.RPI Back in the Day
+image::img11.png[]
+
+.Rensselaer Today
+====
+[%unnumbered]
+image::img12.png[]
+
+[%unnumbered]
+image::img13.png[]
+
+[%unnumbered]
+image::img14.png[]
+
+[%unnumbered]
+image::img15.png[]
+====
+
+== Overview of Bedework
+
+[%unnumbered]
+image::img16.png[]
+
+=== What Is Bedework?
+
+Bedework is
+
+* a comprehensive calendaring and events system
+* open source
+* platform independent (Java)
+* modular & extensible
+* intended for higher education
+* and... *STANDARDS COMPLIANT*
+
+=== Calendaring Standards
+
+* iCal : RFC 2445 (2446, 2447)
+** http://www.ietf.org/rfc/rfc2445.txt
+* CalDAV : RFC 4791
+** http://www.ietf.org/rfc/rfc4791.txt
+* CalDAV Scheduling (in draft)
+* Vavailability (in draft)
+
+Why? ...interoperability!
+
+=== Agnosticisms of Bedework
+
+* Database -Hibernate
+* Application server
+* Authentication
+* Internationalization / localization
+* Portal -- JSR168
+* Presentation
+* Standards compliance
+* Scalability
+
+=== Bedework Features
+
+Features:
+
+* Distributed, fine grained administration
+** Administrative groups
+** Location and contacts management
+* Access control & sharing
+* Stand-alone & portlet implementations
+* Highly customizable look and feel
+* *Interoperable with CalDAV desktop clients* -- currently Mozilla Lightning and Apple's iCal
+
+=== Who's Using Bedework?
+
+In production:
+
+* Bennington College (US)
+* Bishop's University (Canada)
+* Cornerstone University (US)
+* Dalhousie University (Canada)
+* Duke University (US)
+* Montana State University (US)
+* Public University of Navarra(Spain)
+* Queens University (Canada)
+* Rensselaer Polytechnic Institute (US)
+* University of British Columbia (Canada)
+* University of Maine, Fort Kent (US)
+* University of Maryland (US)
+* University of Chicago (US)
+* University of Washington (US)
+
+In development:
+
+* Brown University (US)
+* Cornell University (US)
+* Rutherford Appleton Lab (UK)
+* Stockholm University (Sweden)
+* Yale University (US)
+* Others...
+
+=== The Many faces of Bedework
+
+.The Many faces of Bedework
+====
+[%unnumbered]
+image::img17.png[]
+
+[%unnumbered]
+image::img18.png[]
+
+[%unnumbered]
+image::img19.png[]
+
+[%unnumbered]
+image::img20.png[]
+====
+
+.Another face of Bedework
+image::img21.png[]
+
+[bibliography]
+== References
+
+* [[[bedework,Bedework]]], bedework.org
+
+== Open Source
+
+=== I'm a programmer
+
+* not a bricklayer
+* not a psychiatrist
+* not an escalator
+* not a mechanic
+* not an engineer
+* not a coal miner
+
+Or
+
+An open source theorist
+
+[%unnumbered]
+image::img22.png[]
+
+=== Open Source -- What do we mean?
+
+* http://www.opensource.org/docs/osd[Open Source Initiative]
+** The 'open source' label was invented February 3rd, 1998 in Palo Alto, California
+** Wanted an alternative to "free software"
+** 'Open source' coined by Chris Peterson
+** Open source doesn't just mean access to the source code. The distribution terms of
+open-source software must comply with the 10 enumerated criteria
+
+=== Open source is a continuum
+
+* Product provenance
+* Licensing terms
+* Support
+* Governance
+* Sometimes east meets west -like when Georgia Tech integrated Zimbra (proprietary
+version) into Sakai (open source) using CalDav, facilitating future integrations,
+open source or otherwise.
+
+=== OSS and the marketplace
+
+* Open source is inherently neither better nor worse than other software development
+or distribution models
+* Open source provides another option, representing a different value proposition
+
+== Bedework The Open Source Project
+
+=== RPI and OSS
+
+[quote]
+____
+[underline]#Whereas many university people enjoy a spiritual affinity for open source
+software, our interest is more pragmatic.# As a campus-wide development group,
+technologies and products with no license or usage fees are critical to providing
+solutions which can be deployed with impunity. Our web foundation is largely built
+atop products and technologies which have no usage fees, allowing us to deploy as
+many instances, servers, CPU's, etc as necessary.
+____
+
+[quote]
+____
+[underline]#RPI relies heavily on and benefits from open source# software but seldom
+contributes to open source. We believe this contribution will enhance Rensselaer's
+reputation in the area of software development.
+____
+
+=== Interoperability
+
+* Bedework's preoccupation with standards and interoperability is in large part
+recognition that in many organizations, *Bedework is unlikely to be the only
+calendaring product in an enterprise.*
+* The ability to share and exchange data with other calendaring products and
+environments is an important key to Bedework's future well-being as a product and a
+project.
+
+=== Standards compliance -- the double-edged sword
+
+* Standards compliance is the key to Bedework's success -but
+** potentially useful features that are not standards compliant impede interoperability.
+** We could be more ingenious but sometimes no way to have our standards cake and eat it too.
+** The heart wants what it wants.
+
+== CalConnect And Open Source
+
+=== OSS and CalConnect
+
+* CalConnect vendor members
+** Proprietary only
+** Open source only -- Bedework, Mozilla, OSAF
+** Dual mode -- Apple, Zimbra
+** Mixed -- Google, IBM, Oracle, Sun, Symbian/Nokia, Microsoft
+
+=== CalConnect and OSS organizations
+
+* The world is flat - open source,
+proprietary source, no source --
+everyone is equal partner
+* Sometimes open source organizations have more flexibility and agility and fewer
+constraints to participate, to speak publicly
+
+=== Ron Abel -- 4 postulates
+
+. Open source reference implementations are
+extremely critical in achieving adoption of open
+standards for software interoperability.
+. Standards organizations are the only way to get a
+level playing field w.r.t new open source
+applications for learning -- that won't happen
+unless the open source projects/communities
+participate.
+
+http://blog.worldcampus.psu.edu/index.php/2007/09/19/open-source-and-open-standards/
+
+=== OSS vendors -- why join CalConnect?
+
+* Join CalConnect to add adopters? Unlikely. More likely to find collaboration
+partners than customers
+* CalConnect members generally get "it" when "it"= "open source".
+* CalConnect vendor members generally get "it" where "it"= good products benefit from
+interoperability, becoming stronger, more marketable products.
+
+=== CalConnect as an open source entity
+
+In Dreaming in Code", Scott Rosenberg referring to Eric Raymond's "The Cathedral and the Bazaar" said,
+
+[quote,"Scott Rosenberg"]
+____
+Raymond identified 2 key prerequisites ...the *rise of a cooperative ethos* built
+around a leadership style like Torvald's that *encouraged newcomers* and *welcomed
+contributions*, and *strove to maximize the number of qualified participants*
+____
+
+== Why We Joined CalConnect
+
+* We have history of collaborative (but not OSS) software development -- MTS
+* We have a history of working with high quality people -- MTS
+* We saw first-rate people doing exciting work and we wanted to be part of it.
+
+[%unnumbered]
+image::img23.png[]
+
+=== Why we really joined
+
+We were showing off as observers at a CalConnect Roundtable, and had to join to save face.
+
+=== What RPI gets from participation in CalConnect, both as calendar developers and as a research university
+
+Like the Beatles said:
+
+[quote, Beatles]
+____
+And, in the end, the love you take/ Is equal to the love you make
+____
+
+
+* *Active participation* in CalConnect
+** Chair FREEBUSY Technical Committee
+** Chair Timezone Technical Committee
+** iSchedule, CalDAV Technical Committees
+** Publicity Committee
+** Steering Committee
+** Board of Directors
+
+=== CalConnect -- the benefits
+
+* CalConnect has many research university members. Getting together with like
+institutions to discuss C&S and other topics of mutual interest.
+* Interoperability Test Events are invaluable
+* Influencing/informing standards is useful, and a responsibility
+
+== The bottom line
+
+We believe in interoperability and open standards -- CalConnect promotes both
