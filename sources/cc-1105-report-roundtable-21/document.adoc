@@ -1,0 +1,106 @@
+= Report on Roundtable XXI, May 25-27, 2011
+:docnumber: 1105
+:copyright-year: 2011
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2011-06-20
+:published-date: 2011-06-20
+:technical-committee: CALCONNECT
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+Roundtable XXI took place on May 25-27, 2011, hosted by NASA Ames at Moffett Field,
+Mountain View, California. The event was attended by 26 people from 16 organizations. The
+CalConnect Interoperability Test Event was held immediately prior to the Roundtable on May 23-
+25. Ten people from three organizations were present onsite. plus two more remotely A
+Workshohp on Tasks was held Wednesday afternoon as part of the Roundtable; in addition to the
+Roundtable participants, several others were present just for the workshop or attended remotely.
+
+The Roundtable was dedicated to technical committee sessions, and informal discussions and
+networking, with an all-hands Plenary meeting as the last item on Friday afternoon. The Technical
+Committee sessions were as usual organized sequentially, without competing parallel sessions, as
+is our standard practice to allow all attendees who wished to be involved in the discussions of each
+Technical Committee the opportunity to do so.
+
+== Special Events
+
+A Workshop on Tasks (VTODOs) was held Wednesday afternoon with the goal of determining
+what needs to be added to iCalendar and related specifications to improve and encourage the use
+of the standards for task and project management, as well as personal information management.
+
+The host presentation was given by Charlie xxxx, Assistant Project Manager of the Kepler
+Mission, focused on the secheduling and resource optimization issues (especially concerning the
+Deep Space Network) encountered with the mission. See https://www.calconnect.org/presentations/Kepler%20Mission%20Operations%20Scheduling.pdf[Kepler Mission Operations Schedulilng].
+
+Friday afternoon we were offered a tour of two simulation facilities, the Future Flight Center and
+the Crew-Vehicle systems Research Facility.
+
+== Documents Published or Updated since Last Roundtable
+
+=== Published Documents
+
+* Event Publishing Extensions to iCalendar
+* Calendaring and Scheduling Glossary of Terms Version 2.0
+* Index to Calendaring and Scheduling Standards Version 2.0
+
+CalConnect has replaced the internal Interoperability Test Event Report with an internal wiki.
+
+CalConnect has replaced the public Interoperability Test Report with a section on the Test Event in
+the CalConnect _Minutes_ newsletter publised after each event.
+
+=== Updated IETF Drafts Related to CalConnect (includes updates to published CalConnect documents)
+
+* http://tools.ietf.org/html/draft-daboo-webdav-sync
+* http://tools.ietf.org/html/draft-cal-resource-schema
+* http://tools.ietf.org/html/draft-daboo-et-al-icalendar-in-xml
+* http://tools.ietf.org/html/draft-daboo-calendar-availability
+* http://tools.ietf.org/html/draft-douglass-link-extension
+
+== Update on Technical Committee Work and Initiatives
+
+Roundtable session summaries and activities may be found at
+http://calconnect.org/minutes/CalConnect%20Minutes%20May2011.pdf.
+
+== Future Events
+
+* CalConnect XXII: October 3-7, 2011, Kerio Technologies, Czech Republic
+* CalConnect XXIII: January 30 - February 3, 2012, TBD
+* CalConnect XXIV: May 21-25, Patricia Egen Consulting, Chattanooga, TN
+
+The general format of the CalConnect week is:
+
+* Monday morning through Wednesday noon, CalConnect Interoperability Test Event
+* Wednesday noon through Friday afternoon, CalConnect Roundtable (presentations, TC sessions,
+BOFs, networking, Plenary)

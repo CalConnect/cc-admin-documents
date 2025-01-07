@@ -1,0 +1,278 @@
+= The Open Group Federated Freebusy Challenge Demo
+:docnumber: 0608
+:copyright-year: 2006
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2006-07-17
+:published-date: 2006-07-17
+:technical-committee: FREEBUSY
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:fullname: Wen Fang
+:affiliation: Boeing
+:fullname_2: Mike Douglass
+:affiliation_2: RPI
+:fullname_3: Gary Schwartz
+:affiliation_3: RPI
+:imagesdir: images
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights, Appropriate Usage, Trademarks
+and Disclaimer of Warranty for External (Public) Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+== Why We are here
+
+"Increasingly in business, there is a need to
+schedule meetings with people (within or
+outside of the company) using different
+calendaring systems without multiple
+interactions and iterations, which prove to
+be time consuming and inefficient. What is
+needed is a simple mechanism to see when
+a group of people would be available for a
+meeting."
+
+== Open Group Vendor Challenges
+
+A vendor challenge is a very practical way to address
+the blockages that prevent deployment of a new
+technology, and in the context of work within The
+Open Group, this means the deployment of a new
+standards-based technology.
+
+The whole project is completed within the context of
+a very specific problem reported by one or more IT
+user organizations. This is important because it
+demonstrates to product vendors that there is a
+ready market for a solution to the problem, and
+encourages their active participation.
+
+== Who We Are
+
+=== The Open Group
+
+The Open Group is a vendor- and technology-neutral
+consortium, whose vision of Boundaryless
+Information Flow(TM) will enable access to integrated
+information within and between enterprises based on
+open standards and global interoperability.
+
+In accordance with its vision and mission, The Open
+Group works towards enabling access to integrated
+information within and between enterprises based on
+open standards and global interoperability.
+
+=== CalConnect - The Calendaring and Scheduling Consortium
+
+The Consortium is focused on the interoperable
+exchange of calendaring and scheduling information
+between dissimilar programs, platforms, and
+technologies.
+
+The Consortium's mission is to promote general
+understanding of and provide mechanisms to allow
+interoperable calendaring and scheduling
+methodologies, tools and applications to enter the
+mainstream of computing.
+
+=== The Presenters
+
+* Wen Fang +
+Sr. System Analyst +
+The Boeing Company
+
+* Mike Douglass +
+Sr. Systems Programmer +
+Lead architect of Bedework +
+RPI
+
+* Gary Schwartz +
+Director, Communications & Middleware Technologies +
+RPI
+
+* Drew Garcia +
+Director, Product Management +
+Timebridge
+
+== Chronology
+
+* 2005/Q1 Brought to the Messaging Forum by The Boeing
+Company and Noventum Consulting
+* 2006/Q1 Messaging Forum issued Federated Free/Busy
+Challenge
+* 2006/Q1 Representatives of Open Group brought
+FREEBUSY Challenge to CalConnect
+* 2006/Q2 proof of concept solution sketched out at
+Quarterly Meeting in Washington, D.C. to be promoted as a
+joint project between The Open Group and the Calendaring
+& Scheduling Consortium
+* 2006/Q3 Demo of Proof of Concept Solution at Quarterly
+Meeting in Miami
+* 2006/Q4 The Challenge final report to be published
+
+== What We Will be Showing You
+
+* Requests to multiple calendar servers in
+multiple locations from multiple vendors for
+FREEBUSY information for multiple users
+* Management of these requests and
+aggregation of requested information from
+web-based applications
+* An interim solution which (adroitly)
+sidesteps some issues that will be need to
+addressed at some point.
+
+== Why this is Significant
+
+* Major groupware applications already do
+this, but not in a heterogeneous calendaring
+environment which spans administrative and
+geographical domains.
+* It is the first step towards solving a problem
+which needs to be solved.
+
+== The Requirements
+
+* Uses open standard protocols
+* Can be implemented today
+* Crosses timezones, cultures, calendaring
+systems, corporate and network boundaries
+
+== Relaxed Constraints
+
+* For a constrained list of named attendees
+* For a constrained list of times.
+* Restricted to organizations that have server
+based calendaring systems
+* No provision for confirmation that times are
+acceptable or for updating calendars
+* Can initially exclude provision for recurring
+meetings
+
+== Architectural overview
+
+An organizer, aggregator, "avatar" program (or controller)
+providing the user interface, having knowledge of attendee
+lists and groups, perhaps embed local business logic, and
+some useful level of functionality aggregating and
+displaying results from the FREEBUSY queries.
+
+A CalDAV-compliant free/busy interface (CC-FBI) layer (or
+"proxy" which would field CalDAV free/busy queries from,
+and return results to, the organizer program. This interface
+would only have to support enough CalDAV to support
+free/busy queries.
+
+A number of "connector" servers or services, at the edge of
+the network, to interface to systems which do not support
+CalDAV.
+
+.Architectural Overview -- "From the Clouds"
+image::img01.png[width=120%]
+
+.Architectural View -- "From the Clouds"
+image::img02.png[]
+
+== How we did it
+
+* Coordinated in the CalConnect FREEBUSY
+technical committee
+* Modified code from the open source
+Bedework calendar
+* "Connector" code contributed by IBM,
+Boeing, and TimeBridge
+* Cooperative and collegial development and
+testing among calendar developers
+
+== The Secret of Our Success - CalDAV
+
+CalDAV is designed for implementation by any
+collaborative software, client or server that needs to
+maintain, access, or share collections of events. It is being
+developed as an open standard to foster interoperability.
+
+CalDAV builds upon extant standards (RFC 2445, WebDAV)
+while anticipating and allowing changes in the future such
+as XML representations of calendaring formats.
+
+Mozilla, Oracle, Open Software Applications Foundation,
+Novell, Bedework have publicly announced plans to support
+CalDAV.
+
+CalDAV provides enterprises the promise of
+comprehensive, interoperable, global calendaring solution.
+
+== What We Learned
+
+* Enlightened self interest and open standards are a
+powerful combination
+* Even calendar developers who claim they use "open
+calendar standards" may have non-conforming
+implementations.
+* Open APIs are good. Widely adopted open standards
+are better.
+* Open standards need to be unambiguous ensure
+implementations will interpret those standards in
+interoperable way.
+
+== What remains to be done?
+
+* Adroitly solve the problems we are presently
+adroitly sidestepping:
+** Discovery
+** Authentication and access control
+** Enfranchising additional calendaring systems
+* Migrate this solution to use the richer
+functionality of the still developing "Scheduling
+Extensions to CalDAV" specifications.
+* Encourage wider participation among calendar
+developers and calendar users
+
+[appendix,obligation=informative]
+== Open Group Demo -- July 18, 2006
+
+Accessed FREEBUSY information from:
+
+* Bedework Calendar (native CalDAV)
+* Oracle Collaboration Suite Calendar (native CalDAV)
+* OSAF Cosmo (native CalDAV)
+* Google Calendar (RPI-supplied connector)
+* IBM Lotus Domino/Notes (IBM-supplied connector)
+* Microsoft Outlook (TimeBridge-supplied connector)
+* Microsoft Exchange (Boeing-supplied connector)
+
+.Aggregator Main Screen
+image::img03.png[]
+
+.Aggregator FREEBUSY Display
+image::img04.png[]
+
+.Chandler Calendar Screen Shot
+image::img05.png[]
+
+.Bedework Calendar Screen Shot
+image::img06.png[]
+
+.Boeing Exchange Calendar Screen Shot
+image::img07.png[]
+
+[bibliography]
+== Resources & References
+
+* [[[og,1]]], http://www.opengroup.org/
+
+* [[[cc,2]]], http://www.calconnect.org/
+
+* [[[bw,3]]], http://www.bedework.org/
+
+* [[[tb,4]]], http://www.timebridge.org/
+
+* [[[og-challenges,5]]], http://www.opengroup.org/messaging/challenges/
+
+* [[[ietf,6]]], http://ietf.osafoundation.org/caldav/index.html
