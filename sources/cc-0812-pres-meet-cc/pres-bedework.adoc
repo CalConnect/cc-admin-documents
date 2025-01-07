@@ -32,9 +32,9 @@ All documents included in the zip file for Meet CalConnect 2008 are considered p
 
 Gary Schwartz
 
-** Director, Communications & Middleware Technologies, Rensselaer Polytechnic Institute
-** Bedework Project Leader
-** CalConnect Vice President & Chair of FreebusyTechnical Committee
+* Director, Communications & Middleware Technologies, Rensselaer Polytechnic Institute
+* Bedework Project Leader
+* CalConnect Vice President & Chair of FreebusyTechnical Committee
 
 == What I will be talking about
 
