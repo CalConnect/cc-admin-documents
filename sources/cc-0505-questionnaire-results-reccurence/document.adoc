@@ -1,0 +1,362 @@
+= Results from First Recurrence Questionnaire
+:docnumber: 0505
+:copyright-year: 2005
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2005-07-21
+:published-date: 2005-07-21
+:technical-committee: RECURR
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:imagesdir: images
+
+.Foreword
+
+This document incorporates by reference the CalConnect Intellectual Property Rights,
+Appropriate Usage, Trademarks and Disclaimer of Warranty for External (Public)
+Documents as located at
+
+http://www.calconnect.org/documents/disclaimerpublic.pdf.
+
+The Recurrence Technical Committee of CalConnect (The Calendaring and Scheduling
+Consortium) has collected specific
+information on how C&S implementations have, or have not, implemented the Recurrence
+Rules of RFCs 2445 and 2446, iCalendar
+and iTIP. This document is part of the committee's work to compile actual usage
+information and interoperability issues.
+
+The Recurrence Committee recently collected information in the form of a Recurrence
+Questionnaire, which allowed vendors and
+other producers and consumers of iCalendar recurrences to list the features of
+iCalendar that they implemented. The questionnaire
+also contained space for comments about each line item in the RFCs and also overall
+issues with recurrences. The Recurrence
+Technical Committee has since analyzed the results of the questionnaire into this
+document.
+
+The Committee and the Consortium would like to thank all those who took part in this
+effort by filling out the Recurrence
+Questionnaire.
+
+This document is generally available to all who responded to the questionnaire in
+evaluating their implementation against others, and to
+all organizations and implementors working with Calendaring and Scheduling
+implementations. The Recurrence Technical
+Committee of Calconnect would appreciate feedback on the value and relevance of this
+material from those who make use of it.
+Feedback and comments may be sent to the Executive Director of the Consortium via
+Dave.Thewlis@calconnect.org.
+
+== Aggregate of Results for 19 Respondents
+
+[%unnumbered,cols=8,options=header]
+|===
+| | Yes | No | Othr | N/A | Total | Percent | Summary Comments
+
+h| iCalendar Elements 5+| | 54% |
+| 4.3.10.a Recurrence Rule | 15 | 0 | 2 | 2 | 19 | 79% | Only use first instance. No errors for incorrect data
+| 4.3.10.b Recurrence Rule | 15 | 0 | 2 | 2 | 19 | 79% | No errors for incorrect data. Some do not support '`SECONDLY`' / '`MINUTELY`' / '`HOURLY`' frequences
+| 4.3.10.c Recurrence Rule | 8 | 5 | 4 | 2 | 19 | 42% | Issues related to use of timezones in `UNTIL`: some only handle UTC. One does `DATE` only not `DATETIME` in `UNTIL`. One does not export `UNTIL` any longer due to legacy and server compatibility issues, but attempts to read `UNTIL` as best it can.
+| 4.3.10.d Recurrence Rule | 12 | 3 | 2 | 2 | 19 | 63% | `BYSETPOS` not fully supported. No errors for incorrect data.
+| 4.6.1.a Event Component | 15 | 0 | 1 | 2 | 18 | 83% | Some `PROPS` not stored, Only last value used if specified more than once. One vendor does not export geo and url.
+| 4.6.1.b Event Component | 12 | 0 | 4 | 2 | 18 | 67% | Some do not support `EXRULE`, RDATE etc. Some ``PROP``s not stored. Only first instance of `PROP` used. One does not export comment, exrule, rstatus, and related. Some only support zero or one `RRULE`, and no exrules.
+| 4.6.2.a To-do Component | 11 | 3 | 2 | 2 | 18 | 61% | Some do not support `TODO`. Some PROPS not stored.
+| 4.6.2.b To-do Component | 9 | 3 | 4 | 2 | 18 | 50% | Some do not support `EXRULE`, `RDATE` etc. Some do not support `TODO`. Some ``PROP``s not stored. Only first instance of `PROP` used. Some do not support `RRULE` and `EXRULE` for `VTODO`.
+| 4.6.3.a Journal Component | 4 | 7 | 5 | 2 | 18 | 22% | Most do not generate `VJOURNAL`. Some consume it. Some ignore it.
+| 4.6.3.b Journal Component | 3 | 9 | 3 | 2 | 17 | 18% | Most do not generate `VJOURNAL`. Some consume it. Some ignore it.
+| 4.6.4.a Free/Busy Component | 10 | 4 | 2 | 2 | 18 | 56% | Some do not support `VFREEBUSY`. Some issues with timezones. One only imports and exports with the Internet Free Busy feature. Some ignore it.
+| 4.6.5.a Time Zone Component | 10 | 5 | 1 | 2 | 18 | 56% | Some only use UTC.
+| 4.6.5.b Time Zone Component | 10 | 5 | 1 | 2 | 18 | 56% | Some only use UTC. One always exports UTC or Floating time if possible, but can import iCals which use this area of the spec.
+| 4.6.5.c Time Zone Component | 9 | 4 | 2 | 2 | 17 | 53% | Some only use UTC.
+| 4.6.6.a Alarm Component | 9 | 6 | 1 | 2 | 18 | 50% | Some do not support `VALARM`. Some do not support repeating alarms. Some support sending alarm components.
+| 4.6.6.b Alarm Component | 7 | 7 | 2 | 2 | 18 | 39% | Some do not support `VALARM`. Some do not support repeating alarms.
+| 4.6.6.c Alarm Component | 6 | 5 | 4 | 2 | 17 | 35% | Some do not support `VALARM`. Some do not support repeating alarms.
+| 4.8.4.4.a Recurrence ID | 11 | 2 | 2 | 2 | 17 | 65% | Some do not implement. Some produce just the date portion for `RECURRRENCE-ID`; no Time and do not set `DATE` parameter.
+| 4.8.4.4.b Recurrence ID | 10 | 2 | 3 | 2 | 17 | 59% | Some do not implement. Some do not handle more than one R-ID. Some do not import/export `DATE-TIME` or rangeparam.
+| 4.8.4.4.c Recurrence ID | 6 | 4 | 5 | 2 | 17 | 35% | Some do not support `XPARAMS`. One only reads first `XPARAM`.
+| 4.8.5.1.a Exception Date/Times | 11 | 1 | 2 | 2 | 16 | 69% | One changes start date of instance.
+| 4.8.5.1.b Exception Date/Times | 11 | 2 | 1 | 2 | 16 | 69% | Some do not implement. One does not export `DATE-TIME` since that's implicit.
+| 4.8.5.1.c Exception Date/Times | 5 | 6 | 4 | 2 | 17 | 29% | Some ignore ``XPARAM``s on `EXDATE`.
+| 4.8.5.3.a Recurrence Date/Times | 9 | 3 | 2 | 2 | 16 | 56% | One does not implement `RDATE` only `RRULE`. Some do not support `VALUE=PERIOD` for ``EXDATE``s or ``RDATE``s.
+| 4.8.5.3.b Recurrence Date/Times | 6 | 5 | 4 | 2 | 17 | 35% | One does not implement `RDATE` only `RRULE`. Some do not support ``XPARAM``s
+| 4.8.5.4.a Recurrence Rule | 9 | 3 | 4 | 2 | 18 | 50% | Some do not support `RDATE`. Some generate new components if component changed. Some use `EXDATE` to detach instances. Some do not support `PERIOD` in ``RDATE``s.
+| 4.8.7.4.a Sequence Number | 7 | 3 | 5 | 2 | 17 | 41% | One changes `SEQUENCE` when other ``PROP``s change. Some require new event for change. Some do not increment sequence of instance when start or end of instance is changed.
+h| iTIP Elements 5+| | 18% |
+| 3.2.4.a `VEVENT` `CANCEL` | 9 | 4 | 2 | 2 | 17 | 53% | Some do not support. One generates OK, but does not consume it OK.
+| 3.2.4.b `VEVENT` `CANCEL` | 6 | 7 | 2 | 2 | 17 | 35% | Some do not support. One generates OK, but does not consume it OK. Some use EXDATE for cancellations.
+| 3.2.4.c `VEVENT` `CANCEL` | 2 | 8 | 5 | 2 | 17 | 12% | Some do not support. One generates OK, but does not consume it OK. Some use `EXDATE` for cancellations. Some only handle single instance or the entire set. Some do not support `RANGE` in `RECURRENCE-ID`.
+| 3.4.5.a `VTODO` `CANCEL` | 3 | 9 | 3 | 2 | 17 | 18% | Some do not support. Some do not support `iTIP` + `VTODO`. One generates OK, but does not consume it OK.
+| 3.4.5.b `VTODO` `CANCEL` | 3 | 9 | 3 | 2 | 17 | 18% | Some do not support. Some do not support `iTIP` + `VTODO`. One generates OK, but does not consume it OK.
+| 3.4.6.a `VTODO` `REFRESH` | 1 | 10 | 3 | 2 | 16 | 6% | Some do not support. Some do not support `iTIP` + `VTODO`. One generates OK, but does not consume it OK.
+| 3.5.3.a `VJOURNAL` `CANCEL` | 1 | 10 | 3 | 2 | 16 | 6% | Some do not support. Some do not support `iTIP` + `VJOURNAL`.
+| 3.5.3.b `VJOURNAL` `CANCEL` | 0 | 11 | 3 | 2 | 16 | 0% | Some do not support. Some do not support `iTIP` + `VJOURNAL`.
+h| Part 3 7+|
+| See <<part3>> tab 7+|
+h| Part 4 7+|
+| See <<part4>> tab 7+|
+|===
+
+[%landscape]
+<<<
+
+[%unnumbered]
+image::img01.png[]
+
+[%portrait]
+<<<
+
+[%unnumbered]
+image::img02.png[]
+
+[[part3]]
+== Part 3
+
+=== iTIP
+
+==== Reschedules
+
+Additionally we have issues with other vendors who send a new rule on
+reschedule of recurring meeting. Reschedules are problematic for us with
+interop with other vendors. THe other vendors want to remove the old set
+and replace it with the new set, but we don't allow that. We preserve the
+original set and try to move it to the new dates.times, but that isn't
+always possible if the new set that's sent has fewer/more instances than
+the original one.
+
+Removing an invitee (not strictly specific to recurring):
+For removing an invitee (which was bundled in with `CANCEL`), we do not
+increment sequence number on the instance (recurring or single actually) so
+that we can add that user back into the meeting later. If we increment the
+sequence number on removal, then when we try to see who is coming to our
+meeting, the sequence #'s will no longer match up - that data is stale now.
+The responses will be off by 1 (from the removal). Remove should be a
+separate workflow event, not requiring a bump of sequence number, be it
+repeating or single.
+
+==== Broken up recurrance sets
+
+For meetings that have shifted, as in a 5 day daily repeating meeting:
+Monday, Tuesday, Wedsnesday, Thursday, Friday all from 10-11am. If we
+reschedule each of these individually to be of different times, say Monday
+(9-10), Tuesday(8-9), Wedsnesday(7-8), Thursday(12-1), Friday(1-2) and then
+reschedule the entire set to be from 3-4pm, does that mean that the user
+wants each day to be from 3-4pm?
+
+Additionally with the same scenario, if I change Monday's body item (or
+just 1 other field, like Subject) and then apply that to the entire set,
+should all of the data on Monday be deposited into the rest of the set?
+What if I had booked a different Room for Thursday? What if all I expected
+was the body to be updated (since that's all I changed) and now the
+Subject, location, etc. - all the fields have changed (one vendor's
+implementation). That's not what I expected - I expected to know that I
+only wanted to update just the body field, but ical does not give us the
+information to know that we only intended to change body for just this
+instance.
+
+Vendor has a bit of iTIP implementation, enough to accept/reject invitations, but that's it.
+
+=== Rules and Rdates
+
+`RDATE` is not supported at all (WHY?)
+
+The iCalendar Recurrence rule section is very elaborate. I'm not aware of any product that
+conforms to it fully. Specifically, most products recognize only one `RRULE` and the others are ignored.
+
+There is more than one way to specify recurrences. For example, we can specify a daily event as a
+`FREQ=WEEKLY` event with weekday = su, mo...sa or as a `FREQ=DAILY`. It is relatively easy to
+implement a recurrence engine to generate events using the rules, but we find it hard to recognize
+it as a daily event to be displayed in User Interface.
+
+What is the acceptability of interpreting one rule as another (e.g. reinterpret yearly as every 12 months repeat)?
+
+No support for multiple ``RRULE``s.
+
+No support for ``EXRULE``s.
+
+Cannot modify the `RRULE` attribute (But ``RDATE``s and ``EXDATE``s can be added).
+
+No support/limited support for these attributes: `INFINITE`, `SECONDLY`.
+
+Vendor supports a special recurrence option for monthly meetings where an instance
+that falls on a weekend
+can be shifted to a weekday, either the preceding Friday, the following Monday, or
+whichever is closer.
+There is no way to sufficiently represent this in iCalendar. Hypothetically, a
+complex series of RRULES can
+come close, but in cases where the adjustment would cross a month boundary there is
+no recourse.
+
+Vendor is using a lot the `RECURRENCE-ID` / `UID` identification in data model to
+represent "detached" events,
+specialization for a given occurrence in a recurrence. This is apparently a much
+debated point in the
+interpretation of the specification. Vendor would like to stress the fact that iTIP
+support is great for invitation
+interoperability, but the first level should be even before invitations handling,
+just representation of a given
+calendar ("`PUBLISH`" support) so entire calendars can be published, stored, subscribed
+and imported.
+
+Some other problematic points with recurrences, as seen by Vendor:
+
+* the exact semantic of date-based triggers for alarms set on a recurring event
+* the lack of a standard, commonly accepted vtimezone definitions is a major
+roadblock to correctly interpret recurrences.
+
+=== Date handling
+
+`DTEND` property was not well defined. For example, if we have event with
+`DTSTART=20040404T100000` and `DURATION=PT2H`, it is not clear if the
+`DTEND` should be 120000 or 115900. We have seen iCalendars with both the conventions.
+
+All times are written in UTC (even when the event/todo has an `RRULE`) - (WHY?)
+
+=== Timezones
+
+Though not directly linked to recurrences, the timezone is one of most difficult part to implement
+and least useful for majority of users. Many users just use one timezone.
+
+The big piece of hard functionality from 2445 that vendor hasn't implemented is timezones.
+
+Standard C library APIs deal well with only two timezones: UTC, and the local
+timezone (whatever that is).
+So, vendor's library works well in these two cases, including with ``RRULE``s that cross
+DST shifts. Vendor
+needs to implement a date-time abstraction that uses timezones as specified by
+`VTIMEZONE`. Vendor
+Vendor hasn't had the time yet. Suspects that the widespread lack of good APIs to
+deal with timezones
+will be the biggest interop headache for many implementations. But, vendor feels that
+we can't take
+timezones out of the spec, they are critical to how time is measured/used, and we
+need a protocol that
+will work properly between CUAs in various timezones. This is hard, but necessary.
+
+Vendor confused by 4.6.5.c and posted two possible answers:
+
+. We never export invalid time zone information, and we never reference undeclared time zones.
+. A recurring appointment which gets shifted by a time zone (e.g. Daily from 1pm to
+2pm PST) *can* have an exception which is all day long (floating).
+
+=== CPL
+
+Vendor implements a subset of RFC 2445, primarily `RRULE` reoccurrence to do time
+handling as specified in CPL
+in CPL (RFC 3880) - which in turn refers to RFC 2445 for it's implementation. CPL is
+a script language which
+allows for the declaration of complex call forwarding behaviors, in IP telephony systems.
+
+=== Sequence Number
+
+Vendor has not seen any product that uses the sequence number field correctly.
+
+=== vTo Dos and vJournal
+
+Partial support for ``VTODO``s (Intending on improving it).
+
+Support for ``VJOURNAL``s in our internal API but not in iCalendar.
+
+Vendor does not support `VJOURNAL` (little customer interest)
+
+=== General Comments
+
+It's not clear if the questions are for reading or for writing
+Vendor's product really doesn't implement an iCalendar protocol.
+
+Vendor licenses its operating system as a platform for handset manufacturers to build their
+products with. The answers to the questionnaire describe what conformance is enabled by the PIM
+data stores provided in a particular version of the vendor's operating system
+Other versions do not provide iCalendar parsing/generation or RFC 2446 implementation - this
+functionality will be provided by handset manufacturers.
+
+Vendor has created a toolkit, which at its lowest level is built on an RFC 2425
+encoder/decoder,
+so it's possible to encode ANYTHING. An app built on this toolkit may encode
+according to the
+`MUST` rules, or may not, so many of the questions don't really apply. You can do it
+right, or you can do
+it wrong, and on decoding, vendor tries and be liberal in what is accepted. So, most
+of answers are either
+`OTHER` or `NO`. Despite this, vendor feels compliance is pretty good (in the things
+implemented), it's just
+that it's very hard to write a flexible toolkit that makes it impossible to generate
+calendars that break the rules.
+
+Lots of stuff vendor hasn't done are easy, just haven't had the time or need for them yet.
+
+In general, vendor does not always return errors for incorrect data input. However,
+they consume correct
+data properly, and produce right data in most of the above cases.
+
+Vendor has always considered it unusual that monthly recurrence rules that might fall
+outside the range of
+shorter months result in the instance being skipped. Vendor actually forbids such a
+meeting, but if iCalendar
+is to allow such a recurrence rule, it should follow the lead of many other
+applications and pull the instance
+back to the last day of the month. Currently, it's just a little silly. If a
+company's employees get paid on the
+15th and 30th of every month, shouldn't my iCalendar-compliant accounting application
+be capable of doing "the right thing" in February?
+
+Vendor's resource scheduler product does not accept iCal documents, only generates
+them. Currently does not create recurrence data.
+
+Vendor's library provides applications with support for recurrences mainly in three areas:
+
+* translating RFC2445-style recurrences into an internal structure;
+* creating recurrences (and exceptions) with a procedural API;
+* iterating over instances.
+
+Everything else is expected to be handled by the application.
+
+More tests are needed. This is a direct consequence of the extreme complexity of the
+specification and the many corner cases that need to be tested. +
+(What are the complex areas and what corner cases need to be flushed out?)
+
+[[part4]]
+== Part 4
+
+. Would you like to see a similar questionnaire for all of RFCs 2445 and 2446 (knowing that it would be quite large).
++
+--
+Vendor would like to see similar questionnaire for all of RFCs 2445 and especially 2446.
+
+Vendor would like to see a similar questionnaire for RFC2445 and 2446.
+--
+
+. Was it worthwhile for you to fill this out in the sense that it allows you to compare your implementation to the proposed standards?
++
+--
+Yes
+
+It was useful to fill out the questionnaire.
+--
+
+. Can you offer us any additional comments to help us do better in the future?
++
+--
+To be accurate, the question "Does your product conform the specification" should be
+split into (a) Does your product access
+iCalendar objects conforming to the specification and (b) Does your product generate
+iCalendar objects conforming to the specification.
+I've answered the second question because most of the time, we were reading iCalendar
+objects generated by us.
+
+_[ We will answer this part in the second questionnaire by asking those exact questions ]_
+
+Another vendor commented about the use of yes/no instead of producing/consuming.
+
+Vendor thought It would be very helpful when all the replies would be open for
+reading by everyone, so that we can compare our implementations.
+
+Vendor felt that to assist completion of future questionnaires, examples for complex
+areas would be useful.
+--
+
+<<<
+
+embed::questionnaire-reccurence.adoc[]

@@ -1,0 +1,26 @@
+= xCal - The XML Format for iCalendar
+:docnumber: 0904
+:copyright-year: 2009
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2009-06-04
+:published-date: 2009-06-04
+:technical-committee: XML
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+
+.Foreword
+
+This proposal was submitted to the IETF as an Internet Draft for the Standards Track on
+4 June 2009, and was published by the IETF as RFC 6321 on 8 August 2011. It may be
+found at the following URL:
+
+http://tools.ietf.org/html/rfc6321
+
+The purpose of this specification is to define an XML format that allows iCalendar data
+to be converted to XML, and then back to iCalendar, without losing any semantic meaning
+in the data. Anyone creating XML calendar data according to this specification will
+know that their data can be converted to a valid iCalendar representation as well.

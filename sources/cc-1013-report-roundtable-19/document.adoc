@@ -1,0 +1,177 @@
+= Report on Roundtable XIX, October 6-8, 2010
+:docnumber: 1013
+:copyright-year: 2010
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2010-10-20
+:published-date: 2010-10-20
+:technical-committee: CALCONNECT
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+
+.Foreword
+The Calendaring and Scheduling Consortium ("`CalConnect`") is a global non-profit
+organization with the aim to facilitate interoperability of technologies across
+user-centric systems and applications.
+
+CalConnect works closely with liaison partners including international
+organizations such as ISO, OASIS and M3AAWG.
+
+The procedures used to develop this document and those intended for its further
+maintenance are described in the CalConnect Directives.
+
+In particular the different approval criteria needed for the different types of
+ISO documents should be noted. This document was drafted in accordance with the
+editorial rules of the CalConnect Directives.
+
+Attention is drawn to the possibility that some of the elements of this
+document may be the subject of patent rights. CalConnect shall not be held responsible
+for identifying any or all such patent rights. Details of any patent rights
+identified during the development of the document will be in the Introduction
+and/or on the CalConnect list of patent declarations received (see
+www.calconnect.com/patents).
+
+Any trade name used in this document is information given for the convenience
+of users and does not constitute an endorsement.
+
+This document was prepared by Technical Committee _{technical-committee}_.
+
+== Introduction
+
+Roundtable XIX took place on October 6-8 2010, hosted by IBM/Lotus in Littleton,
+Massachusetts. The event was attended by 26 people from 15 organizations, including one
+observer. The CalConnect Interoperability Test Event was held immediately prior to the
+Roundtable on October 4-6. Five members and 10 people were present onsite for the IOP Test
+Event, and two members and 2 people partipated remotely.
+
+The Roundtable was dedicated to technical committee sessions, and informal discussions and
+networking, with an all-hands Plenary meeting as the last item on Friday afternoon. The Technical
+Committee sessions were as usual organized sequentially, without competing parallel sessions, as
+is our standard practice to allow all attendees who wished to be involved in the discussions of each
+Technical Committee the opportunity to do so.
+
+== Special Events
+
+IBM/Lotus provided an overview and demo of their calendaring products, followed by a Q&A
+session with members of the IBM/Lotus engineering team.
+
+== Documents Published since Last Roundtable
+
+=== Published Documents
+
+* TC EVENTPUB - https://www.calconnect.org/CD1006%20LINK%20Property.shtml[Link Property Extensions to iCalendar]
+* TC IOPTEST - https://www.calconnect.org/pubdocs/CD1009%20May%202010%20CalConnect%20Interoperability%20Test%20Event%20Report.pdf[public] and https://www.calconnect.org/membersonly/internaldocs/I1003%20May%202010%20CalConnect%20Interoperability%20Test%20Event%20Internal%20Report.pdf[internal] IOP Test Event Reports for CalConnect XVIII
+* TC MOBILE - https://www.calconnect.org/pubdocs/CD1010%20TC%20MOBILE%20Interoperability%20Test%20Event%20Report.pdf[TC MOBILE Interoperability Test Event Report]
+* TC TIMEZONE - https://www.calconnect.org/CD1007%20Timezone%20Service.shtml[TIMEZONE Service Protocol] and https://www.calconnect.org/CD1008%20Timezone%20XML.shtml[TIMEZONE XML Specification]
+* TC XML - https://www.calconnect.org/CD1012_Intro_Calendaring.shtml[CalWS Restful Web Services Protocol for Calendaring]
+* CalConnect - https://www.calconnect.org/CD1012_Intro_Calendaring.shtml[An Introduction to Internet Calendaring]
+
+=== Updated IETF Drafts (related to CalConnect)
+
+* http://tools.ietf.org/html/draft-daboo-srv-caldav-10
+* http://tools.ietf.org/html/draft-daboo-webdav-sync-04
+* http://tools.ietf.org/html/draft-cal-resource-schema-02
+* http://tools.ietf.org/html/draft-daboo-et-al-icalendar-in-xml-07
+
+== Update on Technical Committee Work and Initiatives
+
+=== TC DSI
+
+The new TC DSI reviewed work to date on the icon design, and discussed
+internationalization issues; discussed subscribe vs. download models of accepting calendar data.
+
+=== TC CALDAV
+
+TC CALDAV discussed how to deploy a multiple-server CalDAV system and what
+requirements would be for clients; discussed managing attachments on a CalDAV server, coming
+up with a new approach using a "workspace" collection; Apple presented their CalDAV-based
+calendar sharing extensions, including a demo of some of the features.
+
+=== TC EVENTPUB
+
+TC EVENTPUB reviewed, its Link Property Extensions draft, and discussed
+whether the required properties should be established via the Link specification, or as extensions
+to iCalendar. The TC decided on the latter approach - extensions to iCalendar, and will be working
+on this following the Roundtable.
+
+=== TC FREEBUSY
+
+TC FREEBUSY presented its work on the VPOLL extension to iCalendar,
+which could be used with iTIP to implement consensus scheduled. Next step would be trial
+implementations, including at least one client (to see how the mechanism would be presented in a
+UI).
+
+=== TC IOPTEST
+
+TC IOPTEST conducted a "regular" IOP Test Event with participation from five
+organizations and two remote participants, focusing on iMIP, CalDAV, and CardDAV testing.
+
+=== TC iSCHEDULE
+
+TC iSCHEDULE presented an overview of the current state of iSchedule
+related standards, and an in depth view of the DKIM protocol and how it would be applied to
+iSchedule. The scheduled time for the TC calls was adjusted to accommodate new participants.
+
+=== TC MOBILE
+
+TC MOBILE discussed its Mobile Interoperability Test Event Report from May,
+the upcoming Mobile Calendaring IOP Test Event in February, and the development of a best
+practices or "how to" document for calendaring on mobile devices, in particular mobile CalDAV
+clients. The scheduled date and time for TC calls was adjusted to accommodate new participants.
+
+=== TC RESOURCE
+
+TC RESOURCE discussed "discovery" of resources and whether that could be
+standardized; presented the "Principal search" mechanism used by Apple; and touched upon other
+resource scheduling related tasks that could be discussed and standardized.
+
+=== TC TIMEZONE
+
+TC TIMEZONE discussed the current state of the Timezone Service Protocol
+and Timezone XML specifications, and the negotiations between IANA and the timezone
+community on providing a new home for timezone data. Also discussed were the implications of a
+timezone service on protocols such as CalDAV, which use etags to implement synchronization,
+and decided to carry out some research on clients to see in what ways they use timezone data
+currently.
+
+=== TC USECASE
+
+TC USECASE held initial conversations about iSchedule's need for input from
+the User and SysAdmin/Engineer's perspectives, especially concerning cross-domain scheduling.
+The session concluded with an overview of the v2 Draft Glossary
+
+=== TC XML
+
+TC XML discussed he progress of iCalendar in XML through the IETF. The bulk of
+the presentation was on the status of the recently released Cal-WS specification and the related
+OASIS WS-Calendar specification. We also talked about the next steps for Cal-WS. Briefly noted
+were questions of how we deal with the need for a new calendar query language, and a
+standardized JSON representation.
+
+=== Digital Calendaring Outreach
+
+The CalEco Task Force presented a proposal for a CalEco
+website implementation, which was discussed later by the Steering Committee. Some alternatives
+were proposed to the Task Force.
+
+== CalConnect Interoperability Test Event
+
+Participants in the "regular" IOP test event included Apple, IBM, Kerio Technologies, Oracle
+Corporation, and Rensselaer Polytechnic Institute (Bedework). Andrew McMillan (DaviCal) and
+emClient (Icewarp) participated remotely. Results from the events will be posted at Past IOP
+Reports as soon as they are collated and prepared.
+
+== Future Events
+
+* CalConnect XX: February 7-11, 2011, University of California, Berkeley, Berkeley, CA
+* CalConnect XXI: May 23-27, 2011, NASA Ames, Mountain View, CA
+* CalConnect XXII: October 3-7, 2011, Kerio Technologies, Plzen, Czech Republic
+
+The format of the CalConnect week is:
+
+* Monday morning through Wednesday noon, C.I.T.E. (CalConnect Interoperability Test Event)
+* Wednesday noon through Friday afternoon, Roundtable (presentations, TC sessions, BOFs,
+networking, Plenary).

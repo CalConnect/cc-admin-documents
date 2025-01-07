@@ -110,7 +110,7 @@ Not every client supports RFC 2446 or 2447. These are the scheduling and email t
 protocols. In general, it seemed that the majority of clients did not have much support for
 attendees, and as such, a vast portion of the testing scenarios were not applicable.
 
-Vendor one noted they lack implementations of some of the more complex RRULE (like
+Vendor one noted they lack implementations of some of the more complex `RRULE` (like
 BySETPOS), and struggled with overridden instances of recurring events. Publishing and
 subscribing seemed to work quite well with all clients. Their CalDAV support is rather limited
 at this stage, but they were able to do basic event adding/deleting with all servers except for one.
@@ -123,16 +123,16 @@ Vendor two reported the following items:
 clients to publish and subscribe to calendars via Webdav.
 * Calendar objects from Vendor three were successfully published and subscribed to their
 calendars via Webdav. Webdav connectivity worked quite well.
-* They noted that they were not able to map Vendor one's TZID's to their timezones.
+* They noted that they were not able to map Vendor one's ``TZID``s to their timezones.
 * In this case, timezones were interpreted in UTC.
 * Their floating dates and all day events imported correctly into another vendor's product.
 * They also successfully mapped the other vendor's timezones to their internal timezones.
-* Their application did not correctly import private event status (CLASS:PRIVATE). This
+* Their application did not correctly import private event status (`CLASS:PRIVATE`). This
 has since been fixed.
 * Vendor four noted that importing their ics object into Vendor two's application worked
 well. Currently Vendor four does not support recurrence or timezones.
 * Importing one time event ics objects from Vendor five worked correctly. The sample
-recurring event instance provided from Vendor five included multiple DTSTART
+recurring event instance provided from Vendor five included multiple `DTSTART`
 properties which is not valid and could not be imported. Importing their recurring events
 into Vendor five's application worked for the most part. Import of a rescheduled
 occurrence of a recurring event left the original date in addition to the new date/time in
@@ -141,39 +141,39 @@ Vendor five's application.
 timezones. They had to implement enhanced mapping logic. Imported recurrence
 samples worked very well with all rescheduled events importing properly. Export of
 Vendor six's client recurring event did not import correctly. The master event included
-only RDATE objects to specify recurrence set and did not include an RRULE which is
+only `RDATE` objects to specify recurrence set and did not include an `RRULE` which is
 not currently supported by Vendor two.
 * Vendor seven provided four sample ics files which all successfully imported. Examples
 included multiple timezones, all day events and recurrence. Vendor two exports include
-a custom attribute in the VTIMEZONE component which caused issues when importing
+a custom attribute in the `VTIMEZONE` component which caused issues when importing
 into Vendor seven's application. These should be ignored.
 
 Vendor seven reported the following items:
 
-* A couple of bugs relating to Vendor eight's handling of recurring events and EXDATEs.
-* An issue where they were PROPPATCH'ing calendar collections (to set their display
+* A couple of bugs relating to Vendor eight's handling of recurring events and ``EXDATE``s.
+* An issue where they were ``PROPPATCH``'ing calendar collections (to set their display
 names). However, not all servers support this, and they need to ignore returned errors in
 this case.
 * A couple of Vendor five problems that were fixed, allowing tests to proceed.
 * A issue where they do not correctly interpret an empty multistatus response to a
-PROPFIND (Vendor five does this, and it's allowed by the WebDAV spec), leading to a
+`PROPFIND` (Vendor five does this, and it's allowed by the WebDAV spec), leading to a
 failure in creating calendar collections.
 * Updating events on Vendor six is broken right now, apparently because of a known issue
 with Vendor seven not preserving X-properties.
 * They are unable to parse .ics files from Vendor two - (a bug in the way we parse
-VTIMEZONE).
+`VTIMEZONE`).
 * Some of the other vendors noticed that they are exporting events in UTC timezone
 incorrectly.
 * A couple of bugs in their subscription to http: ics URLs were uncovered.
 * There were initially some problems with Vendor five's client that turned out to be a result
 of client and server having implemented different versions of the CalDAV spec.
-* Vendor five updated their calendar-query REPORTs to match the latest spec, but was
+* Vendor five updated their calendar-query ``REPORT``s to match the latest spec, but was
 unable to retrieve events from our application. This was tracked down to being an
 indexing issue, and was fixed. Subsequently, the testing ran OK.
 * After the above fix, Vendor three had similar behavior retrieving events. It turned out
-this was a result of PUT-ing illegal ICalendar data (an empty STATUS value in a
-VEVENT). Vendor three worked around the problem, and was able to proceed. However,
-our application should have rejected the initial PUT request: This problem is being
+this was a result of ``PUT``-ing illegal iCalendar data (an empty `STATUS` value in a
+`VEVENT`). Vendor three worked around the problem, and was able to proceed. However,
+our application should have rejected the initial `PUT` request: This problem is being
 investigated.
 
 Vendor five reported the following items:
@@ -186,7 +186,7 @@ ICS file attachments that were then imported. Therefore there was not a lot of A
 Decline testing done. Delegate, Counter and Reschedule was not tested with any vendors.
 * They felt it was very helpful and they are busy working on the problems they found.
 * They noted that their CALDAV implementation has problems with "@" in URLs. It also
-isn't happy with PUT not returning an ETAG.
+isn't happy with `PUT` not returning an `ETAG`.
 * Their CALDAV application had problems with Vendor six's Auto-added organizer.
 * Vendor eight doesn't add a "calendar-access" DAV header.
 
@@ -371,36 +371,36 @@ h| 2. h| Event modification
 | 2.4. | Add an attendee to "Meeting 1.1bis".
 | 2.5. | Add an alarm to "Meeting 1.1bis".
 | 2.6. | Modify the title of the 1st instance of the recurring meeting created in 1.2.
-| 2.7. | Modify the participation status of the 1st attendee in meeting 1.3 to DECLINED.
+| 2.7. | Modify the participation status of the 1st attendee in meeting 1.3 to `DECLINED`.
 | 2.8. | Cancel the 4th instance of the recurring meeting created in 1.2.
 | 2.9. | One client changes "Meeting 1.1bis" to a different time, second client 'refreshes' its display to see the modification.
 h| 3. h| Event retrieval
-| 3.1. | calendar-query REPORT
+| 3.1. | calendar-query `REPORT`
 | 3.1.1. | No filtering (match everything)
 | 3.1.1.1. | Query all components and return all data. (tests <calendar-query> and <filter>)
 | 3.1.1.2. | Query all components and return ETag WebDAV property and all data. (tests <calendar-query>+ <DAV:prop> and <filter>)
-| 3.1.1.3. | Query all components and return just entire VEVENT components. (tests <calendar-query>, <filter>+<comp-filter>)
-| 3.1.1.4. | Query all components and return VEVENT components with only DTSTART, DTEND/DURATION, SUMMARY, UID, SEQUENCE, RRULE, RDATE, EXRULE, EXDATE, RECURRENCE-ID. (tests <calendar-query>, <filter>+<comp-filter>, <calendar-data>+<comp>+<prop>)
+| 3.1.1.3. | Query all components and return just entire `VEVENT` components. (tests <calendar-query>, <filter>+<comp-filter>)
+| 3.1.1.4. | Query all components and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests <calendar-query>, <filter>+<comp-filter>, <calendar-data>+<comp>+<prop>)
 | 3.1.2. | time-range filtering
 | 3.1.2.1. | Query all components within a one day time-range and return all data. Make sure that there is a recurring event that starts prior to the chosen time-range but has one non-overridden instance within the time-range. (tests <calendar-query> , <filter>+<time-range>)
-| 3.1.2.2. | Query all components within a one week time-range and return just entire VEVENT components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests <calendar-query>, <filter>+<time-range>)
+| 3.1.2.2. | Query all components within a one week time-range and return just entire `VEVENT` components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests <calendar-query>, <filter>+<time-range>)
 | 3.1.3. | component based filtering
-| 3.1.3.1. | Query all components that contain an embedded VALARM component. (tests <calendar-query> , <filter>+<comp-filter>)
-| 3.1.3.2. | Query all components that contain an embedded VALARM component whose trigger falls within a specific time-range. (tests <calendar-query>, <filter>+<comp-filter>+<prop-filter>+<time-range>)
+| 3.1.3.1. | Query all components that contain an embedded `VALARM` component. (tests <calendar-query> , <filter>+<comp-filter>)
+| 3.1.3.2. | Query all components that contain an embedded `VALARM` component whose trigger falls within a specific time-range. (tests <calendar-query>, <filter>+<comp-filter>+<prop-filter>+<time-range>)
 | 3.1.4. | property based filtering
-| 3.1.4.1. | Query all components that contain any ORGANIZER property. (tests <calendar-query>, <filter>+<prop-filter>+<is-defined>)
-| 3.1.4.2. | Query all components that contain an ORGANIZER property with a specific CUA text value case-insensitively. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<caseless>)
-| 3.1.4.3. | Query all components that contain an ORGANIZER property with a specific CUA text value case-senstively. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<caseless>)
+| 3.1.4.1. | Query all components that contain any `ORGANIZER` property. (tests <calendar-query>, <filter>+<prop-filter>+<is-defined>)
+| 3.1.4.2. | Query all components that contain an `ORGANIZER` property with a specific CUA text value case-insensitively. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<caseless>)
+| 3.1.4.3. | Query all components that contain an `ORGANIZER` property with a specific CUA text value case-senstively. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<caseless>)
 | 3.1.5. | parameter based filtering
-| 3.1.5.1. | Query all components that contain a DTSTART property with a TZID parameter. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>)
-| 3.1.5.2. | Query all components that contain an ATTENDEE property with PARTSTAT=NEEDS-ACTION parameter. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>)
-| 3.2. | calendar-multiget REPORT
+| 3.1.5.1. | Query all components that contain a `DTSTART` property with a `TZID` parameter. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>)
+| 3.1.5.2. | Query all components that contain an `ATTENDEE` property with `PARTSTAT=NEEDS-ACTION` parameter. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>)
+| 3.2. | calendar-multiget `REPORT`
 | 3.2.1. | Query a specific href and return all data. (tests <calendar-multiget >)
 | 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests <calendar-multiget>)
 | 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests <calendar-multiget>+<DAV:prop>)
 | 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests <calendar-multiget>+<DAV:prop>)
-| 3.2.5. | Query a specific href and return VEVENT components with only DTSTART, DTEND/DURATION, SUMMARY, UID, SEQUENCE, RRULE, RDATE, EXRULE, EXDATE, RECURRENCE-ID. (tests <calendar-query>, <calendardata>+<comp>+<prop>)
-| 3.2.6. | Query multiple hrefs (some of which do not exist) and return VEVENT components with only DTSTART, DTEND/DURATION, SUMMARY, UID, SEQUENCE, RRULE, RDATE, EXRULE, EXDATE, RECURRENCE-ID. (tests <calendar-query>, <calendar-data>+<comp>+<prop>)
+| 3.2.5. | Query a specific href and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests <calendar-query>, <calendardata>+<comp>+<prop>)
+| 3.2.6. | Query multiple hrefs (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests <calendar-query>, <calendar-data>+<comp>+<prop>)
 h| 4. h| Event deletion
 | 4.1. | Delete a single non-recurring meeting.
 | 4.2. | Delete a single recurring meeting with no overridden instances.

@@ -1,0 +1,321 @@
+= Questionnaire on Implementation of Recurrence
+:docnumber: 0505
+:copyright-year: 2005
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2005-07-21
+:published-date: 2005-07-21
+:technical-committee: RECURR
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+
+== Questionnaire on Implementation of Recurrence
+
+////
+EDITOR: Document attributes are not available for this document.
+////
+
+The Recurrence Technical Committee of the Consortium is collecting specific
+information on how calendaring and scheduling
+implementations have implemented or not implemented the recurrence rules of iCalendar
+as part of its work to compile actual usage
+information and develop recommendations to CalSIFY and other efforts.
+
+This questionnaire is *NOT* limited to Consortium members; we need information from
+as many different implementations as possible.
+We appreciate your responding to this questionnaire with as much information about
+your implementation as you can. If you do not
+know whether the response to an individual rule instance is "Yes" or "No" please
+leave the response blank. We welcome as much
+information as you are able and willing to supply. If we have questions or are
+unclear about your responses we will contact you via the
+e-mail address you supply.
+
+Our goal is to obtain a broad perspective on how recurrence has been dealt with in
+existing implementations. The final report which the
+Consortium will make public will not identify any particular product or
+implementation, nor will it present the results in a way which
+will allow such inferences to be made.
+
+=== Part 1. Product/Implementation being reported
+
+Please specify the product or implementation name, your name, and your e-mail
+address. We will contact you via e-mail if we have any questions or are
+unclear about any of your responses.
+
+Product/Implementation Name::
+Name of Person Reporting::
+E-Mail Address:: &nbsp;
+
+=== Part 2. Specific Implementation Information
+
+This table contains elements for specific rules from RFC 2445. For each one, please
+indicate whether the implementation does (Yes) or does not (No)
+conform to the stated rule. If you have comments, issues or questions about this rule
+please enter in the Comment line under the rule.
+
+NOTE: The ``MUST``s, ``MUST NOT``s, etc. in the specs refer to both consumption and
+production of the relevant items. To be compliant you have to do both
+correctly. So for the purposes of the questionnaire please answer YES only if you
+both produce and consume the item correctly (or if your
+implementation only does one thing - i.e. just consumes - then answer YES to that if
+it conforms). Ignore any behavior for non-compliant data being
+consumed.
+
+NOTE: If you cannot reasonably answer either Yes or No to a question, please respond
+"Other" and explain the problem or situation in the comment line
+(or, if the statement is too long for the comment line, in the comment area at the
+end of the form.
+
+[%unnumbered,cols="3a,1a,5a"]
+|===
+3+h| RFC 2445 - iCalendar elements
+
+| 4.3.10.a Recurrence Rule
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| Individual rule parts MUST only be specified once.
+
+| 4.3.10.b Recurrence Rule
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| The `FREQ` rule part identifies the type of recurrence rule. This rule part `MUST` be specified in the recurrence rule.
+
+| 4.3.10.c Recurrence Rule
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| If `UNTIL` is specified as a date-time value, then it `MUST` be specified in a UTC time format.
+
+| 4.3.10.d Recurrence Rule
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| `BYSETPOS` `MUST` only be used in conjunction with another `BYxxx` rule part.
+
+| 4.6.1.a Event Component
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST NOT`
+| The following are optional but `MUST NOT` occur more than once: class / created / description / dtstart / geo / last-mod / location / organizer / priority / dstamp / seq / status / summary / transp / uid / url / recurid.
+
+| 4.6.1.b Event Component
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MAY`
+| The following are optional and `MAY` occur more than once: attach / attendee / categories / comment / contact / exdate / exrule / rstatus / related / resources / rdate / rrule / x-pro.
+
+| 4.6.2.a To-do Component
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST NOT`
+| The following are optional, but `MUST NOT` occur more than once: class / completed / created / description / dstamp / dtstart / geo / last-mod / location / organizer / percent / priority / recurid / seq / status / summary / uid / ur.
+
+| 4.6.2.b To-do Component
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MAY`
+| The following are optional, and `MAY` occur more than once: attach / attendee / categories / comment / contact / exdate / exrule / rstatus / related / resources / rdate / rrule / x-pro.
+
+| 4.6.3.a Journal Component
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST NOT`
+| The following are optional, but `MUST NOT` occur more than once: class / created / description / dtstart / dstamp / last-mod / organizer / recurid / seq / status / summary / uid / url.
+
+| 4.6.3.b Journal Component
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MAY`
+| The following are optional, and `MAY` occur more than once: attach / attendee / categories / comment / contact / exdate / exrule / related / rdate / rrule / rstatus / x-pro.
+
+| 4.6.4.a Free/Busy Component
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST NOT`
+| The recurrence properties ('`RRULE`','`EXRULE`','`RDATE`','`EXDATE`') are not permitted within a '`VFREEBUSY`' calendar component. Any recurring events are resolved into their individual busy time periods using the '`FREEBUSY`' property.
+
+| 4.6.5.a Time Zone Component
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| The '`VTIMEZONE`' calendar component `MUST` be present if the iCalendar object contains an `RRULE` that generates dates on both sides of a time zone shift.
+
+| 4.6.5.b Time Zone Component
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MAY`
+| A '`VTIMEZONE`' calendar component `MAY` be present if the iCalendar object does not contain an `RRULE` that generates dates on both sides of a time zone shift.
+
+| 4.6.5.c Time Zone Component
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| If an `RRULE` that generates dates on both sides of a time zone shift is present, there `MUST` be valid time zone information for all recurrence instances.
+
+| 4.6.6.a Alarm Component
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST NOT`
+| '`DURATION`' and '`REPEAT`' are both optional, and `MUST NOT` occur more than once each, but if one occurs, so `MUST` the other.
+
+| 4.6.6.b Alarm Component
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| A definition of an alarm with a repeating trigger `MUST` include both the '`DURATION`' and '`REPEAT`' properties.
+
+| 4.6.6.c Alarm Component
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| Both '`DURATION`' and '`REPEAT`' properties `MUST` be present in order to specify a repeating alarm. If one of these two properties is absent, then the alarm will not repeat beyond the initial trigger.
+
+| 4.8.4.4.a Recurrence ID
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| If the value of the '`DTSTART`' property is a '`DATE`' type value, then the value `MUST` be the calendar date for the recurrence instance.
+
+| 4.8.4.4.b Recurrence ID
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST NOT`
+| The following are optional, but `MUST NOT` occur more than once: "`VALUE`" "=" ("`DATE-TIME`" / "`DATE`"), tzidparam, rangeparam.
+
+| 4.8.4.4.c Recurrence ID
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MAY`
+| The following are optional, and `MAY` occur more than once: xparam.
+
+| 4.8.5.1.a Exception Date/Times
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| The "`EXDATE`" property can be used to exclude the value specified in "`DTSTART`". However, in such cases the original "`DTSTART`" date `MUST` still be maintained by the calendaring and scheduling system because the original "`DTSTART`" value has inherent usage dependencies by other properties such as the "`RECURRENCE-ID`".
+
+| 4.8.5.1.b Exception Date/Times
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST NOT`
+| The following are optional, but MUST NOT occur more than once: "`VALUE`" "=" ("`DATE-TIME`" / "`DATE`"), tzidparam.
+
+| 4.8.5.1.c Exception Date/Times
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MAY`
+| The following is optional, and `MAY` occur more than once: xparam.
+
+| 4.8.5.3.a Recurrence Date/Times
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST NOT`
+| The following are optional, but `MUST NOT` occur more than once: "`VALUE`" "=" ("`DATE-TIME`" / "`DATE`" / "`PERIOD`"), tzidparam.
+
+| 4.8.5.3.b Recurrence Date/Times
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MAY`
+| The following is optional, and `MAY` occur more than once: xparam.
+
+| 4.8.5.4.a Recurrence Rule
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| Any duration associated with the iCalendar object applies to all members of the generated recurrence set. Any modified duration for specific recurrences `MUST` be explicitly specified using the "`RDATE`" property.
+
+| 4.8.7.4.a Sequence Number
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| When the "Organizer" makes changes to one of the following properties, the sequence number `MUST` be incremented: "`DTSTART`", "`DTEND`", "`DUE`", "`RDATE`", "`RRULE`", "`EXDATE`", "`EXRULE`", "`STATUS`".
+
+3+h| RFC 2446 - iTIP elements
+
+| 3.2.4.a `VEVENT CANCEL`
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| To cancel the complete range of a recurring event, the "`UID`" property value for the event `MUST` be specified and a "`RECURRENCE-ID`" `MUST NOT` be specified in the "`CANCEL`" method.
+
+| 3.2.4.b `VEVENT CANCEL`
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| In order to cancel an individual instance of the event, the "`RECURRENCE-ID`" property value for the event `MUST` be specified in the "`CANCEL`" method.
+
+| 3.2.4.c `VEVENT CANCEL`
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| Cancelling multiple `VEVENT` instances `MUST` be done with either "`RECURRENCE-ID`" and "`RANGE`" `OR` multiple "`RECURRENCE-ID`" values.
+
+| 3.4.5.a `VTODO CANCEL`
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| To cancel the complete range of a recurring "`VTODO`" calendar component, the "`UID`" property value for the "`VTODO`" calendar component `MUST` be specified and a "`RECURRENCE-ID`" `MUST NOT` be specified in the "`CANCEL`" method.
+
+| 3.4.5.b `VTODO CANCEL`
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| In order to cancel an individual instance of a recurring "`VTODO`" calendar component, the "`RECURRENCE-ID`" property value for the "`VTODO`" calendar component MUST be specified in the "`CANCEL`" method.
+
+| 3.4.6.a `VTODO REFRESH`
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| A refresh of a recurrence instance of a "`VTODO`" calendar component may be requested by specifying the "`RECURRENCE-ID`" property corresponding to the associated "`VTODO`" calendar component. The "Organizer" responds with the latest description and rendition of the "`VTODO`" calendar component. In most cases this will be a `REQUEST` unless the "`VTODO`" has been cancelled, in which case the `ORGANIZER` must send a "`CANCEL`". This method is intended to facilitate machine processing of requests for updates to a "`VTODO`" calendar component.
+
+| 3.5.3.a `VJOURNAL CANCEL`
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| To cancel the complete range of a recurring journal entry, the "`UID`" property value for the journal entry `MUST` be specified and a "`RECURRENCE-ID`" property `MUST NOT` be specified in the "`CANCEL`" method.
+
+| 3.5.3.b `VJOURNAL CANCEL`
+
+&#9675; Yes &#9675; No &#9675; Other
+| `MUST`
+| In order to cancel an individual instance of the journal entry, the "`RECURRENCE-ID`" property value for the journal entry `MUST` be specified in the "`CANCEL`" method.
+|===
+
+=== Part 3. Additional Comments or Issues with Recurrences
+
+Please use the following area{blank}footnote:[If your comments are likely to be long,
+please send them by e-mail to Dave.Thewlis@calconnect.org and reference the
+questionnaire response to which they belong.] to provide any additional comments or
+issues with recurrences that may not be addressed above; known interop issues with
+a particular other implementation that might conflict with your implementation; etc.
+
+=== Part 4. Feedback on Value of this Questionnaire
+
+We would appreciate your feedback on this questionnaire. Specifically, (1) Would you
+like to see a similar questionnaire for all of RFCs 2445 and 2446
+(knowing that it would be quite large). (2) Was it worthwhile for you to fill this
+out in the sense that it allows you to compare your implementation to the
+proposed standards? (3) Can you offer us any additional comments to help us do better
+in the future?
+
+=== Part 5. Completion and Submission
+
+Please review your completed questionnaire carefully. You may use the "CLEAR" button
+below to clear the entire form and re-enter all information. Use
+the "SEND" button to transmit the completed questionnaire to us.
+
+[%unnumbered,align=center]
+|===
+| Send | Clear form & start over
+|===
+
+[align=center]
+This site uses frames. +
+If you do not see the navigation sidebar on the left, please click Restore to
+establish the full site.
