@@ -70,7 +70,7 @@ the IETF meeting in July.
 *TC-CALDAV* is working on requirements for CalDAV Scheduling as input to the development of
 the scheduling draft for CalDAV.
 
-*TC-EVENTPUB* has developed a proposal for a VVENUE extension to iCalendar to support
+*TC-EVENTPUB* has developed a proposal for a `VVENUE` extension to iCalendar to support
 event publication with expanded information, and plans to submit it as an individual draft to the
 IETF.
 

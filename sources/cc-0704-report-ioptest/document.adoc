@@ -79,15 +79,15 @@ Examples of issues found are:
 * Serialization of all requests
 * Handling of Mkcalendar
 * Products not showing first instances
-* Not handling EXDATE=a,b,c
-* Fetching etags on non-existing resources when adding items
+* Not handling `EXDATE=a,b,c`
+* Fetching ETags on non-existing resources when adding items
 * Error reporting
 * Weekly recurring event 4 times - Queries "in between" weeks return no results
 * Deleting recurring event with multiple overridden instances
 * UI handling of switching between recurring event with count (1.2) that do not update the recurrence field
 * Deleting some instances, then changing the whole event into an all-day daily recurring one failed (err
 500)
-* A server that seems to filter out a VALARM and doesn't write it.
+* A server that seems to filter out a `VALARM` and doesn't write it.
 
 == Summary
 

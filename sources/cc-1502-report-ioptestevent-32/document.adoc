@@ -77,9 +77,9 @@ was increased interest in testing CardDAV. The topics tested included
 * server test suite
 * iTip and iMip
 * extended-mkcol support
-* VAVAILABILITY
-* RSCALE - enable recurrences in different calendar scales
-* VPOLL
+* `VAVAILABILITY`
+* `RSCALE` - enable recurrences in different calendar scales
+* `VPOLL`
 * TZdist - the timezone distribution protocol
 * Timezones by reference
 * iSchedule
@@ -89,7 +89,7 @@ was increased interest in testing CardDAV. The topics tested included
 A number of server implementors worked on getting the CalDAV Tester test suite running. This
 suite tests most of the features of CalDAV and CardDAV.
 
-Three of the attendees tested implementations of VPOLL, a new standard for consensus
+Three of the attendees tested implementations of `VPOLL`, a new standard for consensus
 scheduling, both clients and servers and were later able to demonstrate three servers and clients
 interacting through iSchedule. All three clients use javascript CalDAV implementations and the
 jCal (iCalendar in JSON) format.

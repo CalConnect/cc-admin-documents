@@ -337,7 +337,7 @@ people
 === Expressing Freebusy time
 
 * Most commonly as a RFC 2445
-VFREEBUSY object
+`VFREEBUSY` object
 ** a request for freebusy time,
 ** a response to a request, or
 ** a published set of busy time
@@ -347,15 +347,15 @@ VFREEBUSY object
 * CalDAV Scheduling
 * iTIP/iMIP (email)
 * iCalendar .ics file
-* Freebusy URL (FBURL)
+* Freebusy URL (`FBURL`)
 
-=== Why FBURL?
+=== Why `FBURL`?
 
 * Freebusy is LCD scheduling
-* FBURL is LCD Freebusy (or could be)
+* `FBURL` is LCD Freebusy (or could be)
 * Easy
-* Outlook supports a form of FBURL
-* The market says FBURL is desirable
+* Outlook supports a form of `FBURL`
+* The market says `FBURL` is desirable
 and useful
 ** tungle.com, timebridge.com,
 timetomeet.info, doodle.ch
@@ -379,7 +379,7 @@ authenticated service
 ** Discovery
 ** Authentication
 ** Provisioning
-** VAVAILABILITY
+** `VAVAILABILITY`
 *** provide a grouping of available
 time information over a specific
 range of time.
@@ -394,7 +394,7 @@ http://www.example.com/freebusy/user1@example.com?start=20070901T000000-0800
 
 http://www.example.com/freebusy/user1@example.com
 --
-* returns VFREEBUSY object
+* returns `VFREEBUSY` object
 * The "Publish URL" is used by a client to
 upload freebusy data for a user
 +
@@ -406,7 +406,7 @@ http://www.example.com/freebusy?user=user1@example.com&token=xcsfdgetdh
 
 === What we will show you
 
-* Basic form FBURL
+* Basic form `FBURL`
 ** lookups - no publishing
 ** Accessing multiple servers from the
 same clients
@@ -453,7 +453,7 @@ heavily testing that
 processing
 * Key elements of iSchedule still need to be
 developed:
-** Discovery (use SRV records in DNS)
+** Discovery (use `SRV` records in DNS)
 ** Security - need input from security
 experts as to what model(s) to use
 * Hope to complete this by mid 2009
@@ -466,4 +466,4 @@ experts as to what model(s) to use
 want
 * But...Free/Busy is very, very useful
 * CalConnect will continue to develop
-FBURL
+`FBURL`

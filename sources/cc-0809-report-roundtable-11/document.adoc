@@ -82,9 +82,9 @@ in this area to clarify specific elements of implicit scheduling for the Technic
 
 === TC EVENTPUB
 
-TC EVENTPUB reviewed the current state of the VVENUE proposal and
-initiated a discussion on whether the approach was correct, or whether we should be encuraging
-the appropriate extensions to vCARD now that the IETF has undertaken a Working Group to
+TC EVENTPUB reviewed the current state of the `VVENUE` proposal and
+initiated a discussion on whether the approach was correct, or whether we should be encouraging
+the appropriate extensions to vCard now that the IETF has undertaken a Working Group to
 revise the vCard RFC.
 
 === TC FREEBUSY
@@ -111,7 +111,7 @@ having the next Mobile Interoperability Test Event in Europe, possibly in the au
 
 === TC REALTIME
 
-TC REALTIME presented and discussed its work on the REALTIME
+TC REALTIME presented and discussed its work on the `REALTIME`
 messaging protocol, Discovery, and Authentication and Authorization, and in particular needs for
 additional expertise in security within CalConnect to inform this work.
 

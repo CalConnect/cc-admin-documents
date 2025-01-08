@@ -100,8 +100,8 @@ Draft update in progress
 
 === TC CALENDAR
 
-VPATCH and VINSTANCE are mature enough to begin implementation and testing. Work continues on the
-VALARM Extensions draft.
+`VPATCH` and `VINSTANCE` are mature enough to begin implementation and testing. Work continues on the
+`VALARM` Extensions draft.
 
 === TC DEVGUIDE
 
@@ -145,8 +145,8 @@ affected. Also discussed whether it is possible or desirable to establish a liai
 
 TC API: Create initial version of draft for standard, follow up on tasks
 
-TC CALENDAR: Convert Managed Attachments to informational RFC, reshape VALARM extensions, finish
-calendar Relations, look at Task Extensions, continue VPATCH work
+TC CALENDAR: Convert Managed Attachments to informational RFC, reshape `VALARM` extensions, finish
+calendar Relations, look at Task Extensions, continue `VPATCH` work
 
 TC DEVGUIDE: Feedback button, new content, wikipedia updates
 

@@ -189,7 +189,7 @@ The following is a summary of Vendor B's testing.
 
 Issues found:
 
-* vendor deletes meeting response from various clients, because there isn't a correct SEQUENCE
+* vendor deletes meeting response from various clients, because there isn't a correct `SEQUENCE`
 number
 * One vendor doesn't recognize meeting requests caused by TIMEZONE definition -- see example:
 +
@@ -225,14 +225,14 @@ END:VTIMEZONE
 ----
 ====
 --
-* Meeting request from one vendor is silently deleted from CalDAV scheduling INBOX by another
+* Meeting request from one vendor is silently deleted from CalDAV scheduling `INBOX` by another
 vendor probably caused by a bug in that vendors application
-* iMIP meeting request from one client is not visible in CalDAV INBOX
+* iMIP meeting request from one client is not visible in CalDAV `INBOX`
 * One client Error message "Request error - Calendar not found" appears when user creates new
 calendar
 * Calendar is successfully created on the server, but the error message appears
 * One client's provides incorrect free/busy (organizer and attendee are swapped)
-* Free/Busy - Problem with case sensitive MAILTO - FIXED
+* Free/Busy - Problem with case sensitive `MAILTO` - FIXED
 
 Test result:
 
@@ -265,7 +265,7 @@ other app reports - "Request error - Calendar not found".
 * 6.6 N/A - app doesn't support it
 * 7.* Not tested
 * 8.1 Ok
-* 8.2 Mostly Ok, problem with replies from several apps because incorrect SEQUENCE in reply
+* 8.2 Mostly Ok, problem with replies from several apps because incorrect `SEQUENCE` in reply
 * 8.3 Ok
 * 8.4 Ok
 * 8.5 Mostly Ok, the same problem as 8.2
@@ -275,15 +275,15 @@ other app reports - "Request error - Calendar not found".
 
 Issues:
 
-* Why app asks for non-existing URL PROPFIND /calendars/iopmit.
-test.nnnnn.com/user2/Calendar/null ?
+* Why app asks for non-existing URL `PROPFIND` `/calendars/iopmit`.
+`test.nnnnn.com/user2/Calendar/null ?`
 * One CalDAV server returns HTTP/1.1 401 Unauthorized instead of HTTP/1.1 404 Not found for
 non-existing URL. - FIXED
 * Although one app doesn't support CalDAV Free/Busy it shows Free/Busy dialog. It may be
 confusing for users.
 * Creating event by dragging in calendar and Editing event by double-click don't work correctly.
 ** A message "Item Changed on server" appears.
-** New event appears not only as event but also as TODO in one app
+** New event appears not only as event but also as `TODO` in one app
 *** `REPORT` filter doesn't work correctly
 
 Test result:
@@ -503,18 +503,18 @@ Below are notes from items found during the testing.
 
 * Giant Attendee list has very poor performance (300 attendees)
 * CalDAV Todo oddities 396116
-* XPROPs in the alarms when you click on `DISMISS` and when you click on `SNOOZE`.
+* ``XPROP``s in the alarms when you click on `DISMISS` and when you click on `SNOOZE`.
 
 ==== Vendor 3 CalDAV testing
 
 * Edit by drag does not send the update to the server if you type in a new title - same issue as
 another server? Another vendor works with this
 * Sending a `<url>\null` when talking to the CalDAV provider. Why are we doing this? Are we trying
-to construct a URI and hitting a null javascript object?
-* With one server, once we hit this editing wierdness, we continually get the "Submit Change" or
+to construct a URI and hitting a null JavaScript object?
+* With one server, once we hit this editing weirdness, we continually get the "Submit Change" or
 "Discard Changes" dialog popping up.
 ** If you click "Submit changes" you get nowhere - you stay in the same state.
-** If you click "Discard Changes" the changes are resubitted and the change goes through.
+** If you click "Discard Changes" the changes are resubmitted and the change goes through.
 ** Could those buttons be miswired? - not verified that this is not the case, but we are not
 updating the UI with the new result, and are not really updating the UI if the "submit
 anyway" fails.
@@ -542,7 +542,7 @@ and indented lines have another extra space).
 | Item # | Srv1 | Srv2 | Srv3 | Srv4 | Srv5 |
 
 | 1.1. | P | P | P | P | P |
-| 1.2. | P | P | | P | P | Creating calendar with one server, the URL must be properly cased. If it is incorrectly cased, we fail to create the calendar claiming that the resource is `DAV` but not CalDAV
+| 1.2. | P | P | | P | P | Creating calendar with one server, the URL must be properly cased. If it is incorrectly cased, we fail to create the calendar claiming that the resource is DAV but not CalDAV
 | 1.3. | P | P | P | P | P |
 | 1.4. | P | P | P | P | P |
 | 2.1. | P & F | P | P | P | P & F | Issues with editing inline on two servers, but editing with opened dialog is ok. One server update failed due to problematic `DURATION` handling on client side.
@@ -614,7 +614,7 @@ put extra effort put into inviting more CalDAV client implementors in the upcomi
 
 === Vendor G Testing
 
-Several clients and servers were tested. Some do not support floating time or do not fall back to TZ on
+Several clients and servers were tested. Some do not support floating time or do not fall back to `TZ` on
 calendar collection.
 
 Another server doesn't support "setting" properties on new collections, no inbox?

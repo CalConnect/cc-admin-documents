@@ -143,12 +143,12 @@ response header - currently If-Not-Server-Info-Token request header
 If-Not-Server-Info-Token request header as in current draft?
 Should we include "features" that are currently only discoverable via DAV properties, e.g.
 sync-collection, add-member, current-user-principal
-** Should we include a Link header with server-info-href and newly defined reltype in OPTIONS
+** Should we include a Link header with server-info-href and newly defined reltype in `OPTIONS`
 responses? Some investigation into
-a small number of clients yields that clients typically do a PROPFIND on .well-known before ever
-doing an OPTIONS, so a client
-could fetch server-info-href property in initial PROPFIND and potentially bypass OPTIONS completely
-** Should server-info-href be available on ALL resources or limited to just a sub-set of resources
+a small number of clients yields that clients typically do a `PROPFIND` on .well-known before ever
+doing an `OPTIONS`, so a client
+could fetch server-info-href property in initial `PROPFIND` and potentially bypass OPTIONS completely
+** Should server-info-href be available on `ALL` resources or limited to just a sub-set of resources
 (e.g. .well-known, calendar-homeset, user principals)
 
 Work for next 4 months:
@@ -166,15 +166,15 @@ alternative publication means such as github will be evaluated.
 
 === TC EVENTPUB
 
-The TC became active to work on using QRCODE and data-uris to distribute events without the need
+The TC became active to work on using `QRCODE` and data-uris to distribute events without the need
 for network connections. An initial draft
-was created for discussion. Over the next four months the TC will continue with the QRCODE work
+was created for discussion. Over the next four months the TC will continue with the `QRCODE` work
 and clarify the use case for embedded
 data. Additionally a decision must be made as to whether a new URI scheme is the best way forward.
 
 === TC FREEBUSY
 
-The TC has been working on the VPOLL specification:
+The TC has been working on the `VPOLL` specification:
 https://tools.ietf.org/html/draft-york-vpoll-00[VPOLL: Consensus Scheduling Component for iCalendar]. The basic specification is
 mostly complete and the TC started work on other poll-modes such as task assignment and signup
 mode. Task assignment would be
@@ -204,11 +204,11 @@ Reports once completed. The TC will now begin planning for the testing at CalCon
 
 === TC ISCHEDULE
 
-TC ISCHEDULE discussed the relationship to TC FSC and whether the DKIM model used in iSchedule
-migth be applicable to TC FSC, or
-whether a different security model could be used for both FSC and iSchedule. Over the nexgt four
+TC ISCHEDULE discussed the relationship to TC FSC and whether the `DKIM` model used in iSchedule
+might be applicable to TC FSC, or
+whether a different security model could be used for both FSC and iSchedule. Over the next four
 months, the TC will wait for the IETF
-TZDIST working group to conclude, then update the iSchedule draft to use the scheduleto: URI
+`TZDIST` working group to conclude, then update the iSchedule draft to use the `scheduleto:` URI
 scheme and start encouraging the IETF to
 initiate a working group to take the iSchedule draft forward.
 

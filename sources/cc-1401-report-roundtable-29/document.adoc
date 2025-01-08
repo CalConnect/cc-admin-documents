@@ -136,8 +136,8 @@ IETF.
 
 === TC CALDAV
 
-The TC described the latest changes in the VALARM Extensions draft and introduced a new
-recurrence splitting topic which led to discussion on support for RANGE and on invitations
+The TC described the latest changes in the `VALARM` Extensions draft and introduced a new
+recurrence splitting topic which led to discussion on support for `RANGE` and on invitations
 growing to unreasonable size. Additionally the latest changes to the managed attachments
 specification were reviewed, and a discussion initiated on rich capabilities: there seems to be
 enough interest to move forward with a spec.
@@ -155,7 +155,7 @@ the new properties at the next interoperability test event.
 
 The TC reviewed
 https://tools.ietf.org/html/draft-york-vpoll-00[VPOLL: Consensus Scheduling Component for iCalendar] and had a demo of a
-prototype web client supporting VPOLL.
+prototype web client supporting `VPOLL`.
 
 === TC IOPTEST
 
@@ -189,7 +189,7 @@ property pointing to related CardDAV.
 === TC TASKS
 
 TC TASKS reviewed the work since CalConnect XXVII on relationships and the relationships
-draft, extensions related to RELTYPE and defined formal versions to be registered, abd ab the ad
+draft, extensions related to `RELTYPE` and defined formal versions to be registered, abd ab the ad
 hoc approach for namespace tokens for specific applications. Also looked at the Task Architecture
 V0.4 diagram worked on since the last conference
 

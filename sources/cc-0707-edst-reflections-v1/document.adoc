@@ -92,7 +92,7 @@ Considerations", and created the "Extended Daylight Saving Time Links, Advisorie
 Changes" web page to assist system administrators in tracking vendor updates and DST-related
 news and information.
 
-In August 2007, CalConnect reactivated its TIMZONE Technical Committee, which was
+In August 2007, CalConnect reactivated its `TIMZONE` Technical Committee, which was
 originally convened in June 2005.
 
 CalConnect's "Extended Daylight Saving Time Review and Considerations" promised a future
@@ -255,7 +255,7 @@ but do not always exist, nor do they necessarily materialize in a timely fashion
 
 CalConnect's role as a promoter of calendaring and scheduling standards put the consortium in a
 unique position. By publishing web pages with both informational articles and links to resources
-on publically-accessible websites, the consortium was able to act as a clearinghouse of DSTrelated
+on publicly-accessible websites, the consortium was able to act as a clearinghouse of DST-related
 resources. The consortium also put out informational press releases to both industry and
 general news providers.
 

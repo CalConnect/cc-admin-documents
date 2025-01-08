@@ -76,12 +76,12 @@ FastMail with the Cyrus server worked on subscription upgrade with dmfs and succ
 tested with WebCal-Sync. It should be noted how recurrence overrides are handled. Some
 additional points on subscription upgrade:
 
-* Prefer=minimal will cause VTIMEZONEs to NOT be returned in subscription
-upgrade. It can be overridden by using CalDAV-Timezones:T
+* Prefer=minimal will cause ``VTIMEZONE``s to NOT be returned in subscription
+upgrade. It can be overridden by using `CalDAV-Timezones:T`
 
-* Realized that CalDAV-Timezones SHOULD/MUST be included in Vary header
+* Realized that CalDAV-Timezones `SHOULD`/`MUST` be included in Vary header
 when server supports TZ-by-ref and subscription upgrade
-There was some work done switching DEVGUIDE from old to new infrastructure. This
+There was some work done switching `DEVGUIDE` from old to new infrastructure. This
 required a DNS change and bugfixing redirects.
 
 There was a lot of work around the CalDAV tester. Apple is no longer maintaining this tool so we

@@ -105,7 +105,7 @@ No session was held for the CALSCALE Ad Hoc as the draft is now pending progress
 IETF. The draft was updated following CalConnect XXIX:
 https://tools.ietf.org/html/draft-daboo-icalendar-rscale/[Non-Gregorian Recurrence Rules in iCalendar].
 The Ad Hoc continues to explore ways of better explaining and documenting proper
-RRULE RSCALE expansions for different non-Gregorian calendars.
+`RRULE` `RSCALE` expansions for different non-Gregorian calendars.
 
 === CONTACTS Provisional Committee
 
@@ -180,7 +180,7 @@ FREEBUSY.
 TC EVENTPUB has not been active since shortly after the last Conference. We summarized the
 state of the internet drafts (below) and are waiting for the first batch to progress. Some minor
 modifications to the drafts may be required to handle issues raised in other TCs, especially
-handling of referenced vCard data. The CONFERENCE property removed from one of the drafts
+handling of referenced vCard data. The `CONFERENCE` property removed from one of the drafts
 is now becoming of interest so we will have one or more EVENTPUB calls in the near future to
 discuss adding it again. The current EVENTPUB drafts referenced above are
 https://tools.ietf.org/html/draft-douglass-calendar-extension/[Event Publication Extensions to iCalendar]
@@ -200,7 +200,7 @@ TC going forward is to assemble use cases and develop alternative poll modes.
 
 The TC conducted a busy interoperability test event, with many basic CalDAV access issues
 uncovered, and some fixed. Three servers tested and eventually demonstrated a combination of
-VPOLL and iSCHEDULE (see the TC FREEBUSY entry above). The complete VPOLL and
+`VPOLL` and `iSCHEDULE` (see the TC FREEBUSY entry above). The complete `VPOLL` and
 subsequent meeting request sequence worked; there are still some issues with freebusy lookup.
 Also conducted some testing go CalDAV scheduling and CardDAV sharing. The event report may
 be found at
@@ -212,7 +212,7 @@ TC ISCHEDULE offered a brief overview of the iSchedule protocol followed by a di
 what we have termed the "identify crisis" problem and the proposed solution that the TC has been
 working on. (The "identify crisis" is how to determine the actual calendar user address of an
 invitee when the invitation is being managed via iSchedule.) The proposed solution involve three
-new pieces (as far as iSchedule is concerned): Webfinger, a "scheduleto" URI and a SCHEDULEADDRESS
+new pieces (as far as iSchedule is concerned): Webfinger, a "scheduleto" URI and a `SCHEDULE-ADDRESS`
 parameter. Following up on this the TC will review the current proposal and work on
 moving the iSchedule work into the IETF as soon as possible to that we can get feedback on the
 identity issues from other technical areas and experts within the IETF.

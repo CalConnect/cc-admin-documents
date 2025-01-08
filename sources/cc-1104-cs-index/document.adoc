@@ -123,7 +123,7 @@ CalDAV (Calendaring Extensions to WebDAV).
 
 ==== Calendar Availability
 
-This document specifies a new iCalendar calendar component VAVAILABILITY that allows
+This document specifies a new iCalendar calendar component `VAVAILABILITY` that allows
 the publication of available and unavailable time periods associated with a calendar
 user. This component can be used in standard iCalendar free-busy lookups, including
 iTIP free-busy requests, to generate repeating blocks of available or busy time with
@@ -150,9 +150,9 @@ calendaring and scheduling systems over the Internet.
 [.source]
 <<ietf-desruisseaux>>
 
-==== LINK Property Extension to iCalendar
+==== `LINK` Property Extension to iCalendar
 
-This specification introduces a new iCalendar property LINK to provide ancillary
+This specification introduces a new iCalendar property `LINK` to provide ancillary
 information for iCalendar components.
 
 [.source]
@@ -184,9 +184,9 @@ scheduled by a calendar user, but does not control its own attendance status.
 [.source]
 <<ietf-res-schema>>
 
-==== VALARM Extensions for iCalendar
+==== `VALARM` Extensions for iCalendar
 
-This document defines a set of extensions to the iCalendar VALARM component to
+This document defines a set of extensions to the iCalendar `VALARM` component to
 enhance use of alarms and improve interoperability between clients and servers.
 
 [.source]
@@ -347,7 +347,7 @@ manipulation, and resource locking (collision avoidance).
 
 ==== Binding Extensions to WebDAV RFC 4842
 
-This specification defines bindings, and the BIND method for creating multiple
+This specification defines bindings, and the `BIND` method for creating multiple
 bindings to the same resource. Creating a new binding to a resource causes at least
 one new URI to be mapped to that resource. Servers are required to ensure the
 integrity of any bindings that they allow to be created.
@@ -355,10 +355,10 @@ integrity of any bindings that they allow to be created.
 [.source]
 <<rfc4842>>
 
-==== Extended MKCOL for Web Distributed Authoring and Versioning (WebDAV) RFC 5689
+==== Extended `MKCOL` for Web Distributed Authoring and Versioning (WebDAV) RFC 5689
 
 This specification extends the Web Distributed Authoring and Versioning (WebDAV)
-MKCOL (Make Collection) method to allow collections of arbitrary resource-type to be
+`MKCOL` (Make Collection) method to allow collections of arbitrary resource-type to be
 created and to allow properties to be set at the same time.
 
 [.source]
@@ -375,7 +375,7 @@ interoperate with quota (size) implementations on WebDAV repositories.
 ==== Using `POST` to Add Members to WebDAV Collectons RFC 5995
 
 This specification defines a discovery mechanism through which servers can advertise
-support for POST requests with the aforementioned "add collection member" semantics.
+support for `POST` requests with the aforementioned "add collection member" semantics.
 
 [.source]
 <<rfc5995>>

@@ -62,11 +62,11 @@ used for special symposia and BOFs:
 * Calendaring futures and CalConnect directions
 * Internationalization/Localization for calendaring data
 * Best practices for publishing iCalendar data to ensure optimum interoperability
-* BOF on VTODOs
+* BOF on ``VTODO``s
 * BOF on Consensus Scheduling
 
-Following the BOF on VTODOs, a VTODO Ad Hoc Committee was formed to examine requirements and
-ongooing work on VTODOs and recommend future activity in this area to CalConnect. The Ad Hoc
+Following the BOF on ``VTODO``s, a `VTODO` Ad Hoc Committee was formed to examine requirements and
+ongooing work on ``VTODO``s and recommend future activity in this area to CalConnect. The Ad Hoc
 committee will report out at Roundtable XXVI.
 
 The host session was presented by Fabian Schlup of Google and focused on various aspects of Google

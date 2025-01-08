@@ -334,7 +334,7 @@ NOTE: No other testing was done after 3.27.
 | 3.21 Modify occurrences of repeating meeting | |
 | 3.22 Modify exceptions of repeating meeting | |
 | 3.23 Delete recurring meeting | |
-| 3.24 Create Daily Repeat (every day, bounded) | Pass | client note: for better recurrence support put until value as UTC as TZ and `DATETIME` are optional properties in vCal 1
+| 3.24 Create Daily Repeat (every day, bounded) | Pass | client note: for better recurrence support put until value as UTC as `TZ` and `DATETIME` are optional properties in vCal 1
 | 3.25 Create Daily Repeat (every other day, unbounded) | Pass | NOTE: we combined 3.24 to 3.36 into one big test
 | 3.26 Create Daily Repeat (every 7 days, unbounded) | Pass |
 | 3.27 Create Weekly Repeat (every Wed, unbounded) | Pass |
@@ -418,9 +418,9 @@ NOTE: No other testing was done after 3.27.
 | 2.6 Create a Single Instance Holiday with Reminder | | n/a, both sides don't have special "holiday" entry type
 | 2.7 Update an all-day event on server and synchronize back to mobile device in same time zone | Pass |
 | 2.8 Update an all-day event on server and synchronize back to a device in different time zone | Pass |
-| 2.9 Create a Single Instance Multi-day Day Event | Pass | but definition of what an ALL-DAY event actually IS is different in the device (binds day to current device zone) and server (considers all-day floating, i.e. not moving when TZ changes)
+| 2.9 Create a Single Instance Multi-day Day Event | Pass | but definition of what an `ALL-DAY` event actually `IS` is different in the device (binds day to current device zone) and server (considers all-day floating, i.e. not moving when `TZ` changes)
 | 2.10 Remove Single Instance Meeting, Day Event, and Holiday | Pass |
-| 2.11 Create an all-day event and synchronize to a server in same time zone | Pass | but device fixes start and end in time (see comment fo 2.9)
+| 2.11 Create an all-day event and synchronize to a server in same time zone | Pass | but device fixes start and end in time (see comment for 2.9)
 | 2.12 Create an all-day event and synchronize to a server in different time zone | Fail | see comment in 2.9 (comes out fixed in UTC-5 time, which is not all-day in GMT server time)
 | 2.13 Create a Single Instance All Day Event with Reminder | Pass |
 | 2.14 Create an anniversary all-day event | Pass | Anniversaries are in fact floating time, which is IMHO what all-day events should be as well
@@ -771,7 +771,7 @@ NOTE: Tests after 6.3 were not performed.
 | 3.12 Create Yearly Repeat (every year for 5 years, bounded) | Fail | Server sends YM1 4 1 #5 instead of Y1#5
 | 3.13 Create Yearly Repeat (every 4 years, bounded) | - | only possible with more than one entry
 | 3.14 Create custom repeat (``RDATE``s only) | - | only possible with more than one entry
-| 3.15 Create repeat combination | FAIL | Client and Server do not support this
+| 3.15 Create repeat combination | Fail | Client and Server do not support this
 | 3.16 Create repeating event plus custom repeat (`RRULE` + `RDATE`) | Fail | Server can't support ``EXDATE``s with 1.1
 | 3.17 Create a repeating event with exceptions (`RRULE` + `EXDATE`, bounded) | Fail  | Server can't support ``EXDATE``s with 1.1
 | 3.18 Create a custom repeat with exceptions (`RDATE` + `EXDATE`, bounded) | Fail | Server can't support ``EXDATE``s with 1.1
@@ -788,7 +788,7 @@ NOTE: Tests after 6.3 were not performed.
 | 3.29 Create Fortnightly Repeat (unbounded) | Pass |
 | 3.30 Create Monthly By Date Repeat (unbounded) | Pass |
 | 3.31 Create Monthly By Day Repeat (first occurrence, bounded) | Pass |
-| 3.32 Create Monthly By Day Repeat (nth occurrences, bounded) | FAIL | Client and Server do not support this
+| 3.32 Create Monthly By Day Repeat (nth occurrences, bounded) | Fail | Client and Server do not support this
 | 3.33 Create Monthly By Day Repeat (last occurrence, bounded) | Fail | Server can't recognize -1FR correctly
 | 3.34 Create Yearly Repeat (every year, unbounded) | Pass |
 | 3.35 Create Yearly Repeat (every year for 5 years, bounded) | Pass |
@@ -805,13 +805,13 @@ NOTE: Tests after 6.3 were not performed.
 | 4.1 Create Entry as owner with Attendees from Server | Pass | Mix between 2.0 and 1.1 format workaround at client
 | 4.2 Accept Entry as Invitee from Device | Fail | Attendees ok, but Server does not accept status this way
 | 4.3 Create Entry as owner with Attendees from Device | Fail | Attendees ok, but Server does not accept status this way
-| 5.1 Time Zones and Simple Meetings | Fail | TZ recognition not appropriate
-| 5.2 Time Zones and Repeating Meetings | Fail | TZ recognition not appropriate
-| 5.3 Time Zones and All-Day Events | Fail | TZ recognition not appropriate
-| 5.4 Spring Daylight Savings Single Entries from Server | Fail | TZ recognition not appropriate
-| 5.5 Spring Daylight Savings Repeating Entry from Server | Fail | TZ recognition not appropriate
-| 5.6 Autumn Daylight Savings Single Entries from Device | Fail | TZ recognition not appropriate
-| 5.7 Autumn Daylight Savings Recurring Entry from Device | Fail | TZ recognition not appropriate
+| 5.1 Time Zones and Simple Meetings | Fail | `TZ` recognition not appropriate
+| 5.2 Time Zones and Repeating Meetings | Fail | `TZ` recognition not appropriate
+| 5.3 Time Zones and All-Day Events | Fail | `TZ` recognition not appropriate
+| 5.4 Spring Daylight Savings Single Entries from Server | Fail | `TZ` recognition not appropriate
+| 5.5 Spring Daylight Savings Repeating Entry from Server | Fail | `TZ` recognition not appropriate
+| 5.6 Autumn Daylight Savings Single Entries from Device | Fail | `TZ` recognition not appropriate
+| 5.7 Autumn Daylight Savings Recurring Entry from Device | Fail | `TZ` recognition not appropriate
 | 6.1 Create task | Fail | Tasks not supported on server side
 | 6.2 Task Access Level and Priority | Fail | Tasks not supported on server side
 | 6.3 Create task with alarm | Fail | Tasks not supported on server side

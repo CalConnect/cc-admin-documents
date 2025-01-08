@@ -49,8 +49,8 @@ This document makes use of the following terms:
 
 === Free Busy request
 
-A VFREEBUSY object included in an HTTP
-POST request, targeting one or more calendar users for their
+A `VFREEBUSY` object included in an HTTP
+`POST` request, targeting one or more calendar users for their
 Free/Busy information, given a time range.
 
 === Scheduling message
@@ -226,7 +226,7 @@ present the free-busy information or error status on a per-user basis.
 --
 This may require additional human interaction to know what an external
 group is, and to be able to specify it in the request -- or an understanding
-that external groups have an email address too. A separate VFREEBUSY
+that external groups have an email address too. A separate `VFREEBUSY`
 component should be returned per group member. The protocol should
 support group names as an element for the request AND error codes for
 the following cases:
@@ -400,7 +400,7 @@ of why they were left out.
 [specification]
 --
 This requirement has been left out since it is already addressed by the
-CALDAV:free-busy-query report defined in CalDAV calendar-access.
+`CALDAV:free-busy-query` report defined in CalDAV calendar-access.
 --
 ====
 
@@ -410,7 +410,7 @@ CALDAV:free-busy-query report defined in CalDAV calendar-access.
 [specification]
 --
 This requirement was left out because iTIP doesn't provide a way to
-specify such a limit/restriction in a VFREEBUSY request.
+specify such a limit/restriction in a `VFREEBUSY` request.
 
 While a server could take advantage of this limit to reduce its load when
 free busy information is requested for a single user, the same isn't true
@@ -418,46 +418,46 @@ when free busy information is requested for multiple users.
 --
 ====
 
-.It must be possible to get a separate VFREEBUSY component per queried calendar user or an aggregated VFREEBUSY for all the queried calendar users, or both in a response to a free busy request.
+.It must be possible to get a separate `VFREEBUSY` component per queried calendar user or an aggregated `VFREEBUSY` for all the queried calendar users, or both in a response to a free busy request.
 [requirement]
 ====
 [specification]
 --
 This requirement was left out because iTIP doesn't provide a way to
-specify such a limit/restriction in a VFREEBUSY request.
+specify such a limit/restriction in a `VFREEBUSY` request.
 
-Aggregated VFREEBUSY could only be returned if all the individual
-VFREEBUSY had successfully been retrieved.
+Aggregated `VFREEBUSY` could only be returned if all the individual
+`VFREEBUSY` had successfully been retrieved.
 --
 ====
 
-.It must be possible for a user to specify that only free time periods (i.e., FBTYPE=FREE) should be returned in a response to a free busy query.
+.It must be possible for a user to specify that only free time periods (i.e., `FBTYPE=FREE`) should be returned in a response to a free busy query.
 [requirement]
 ====
 [specification]
 --
 This requirement was left out because iTIP doesn't provide a way to
-specify such a limit/restriction in a VFREEBUSY request.
+specify such a limit/restriction in a `VFREEBUSY` request.
 --
 ====
 
-.It must be possible for a user to specify that only free time periods (i.e., FBTYPE=FREE) with a minimum duration should be returned in a response to a free busy query.
+.It must be possible for a user to specify that only free time periods (i.e., `FBTYPE=FREE`) with a minimum duration should be returned in a response to a free busy query.
 [requirement]
 ====
 [specification]
 --
 This requirement was left out because iTIP doesn't provide a way to
-specify such a limit/restriction in a VFREEBUSY request.
+specify such a limit/restriction in a `VFREEBUSY` request.
 --
 ====
 
-.It must be possible for a user to specify a list of recurrence instances (i.e., UID and RECURRENCE-ID) that should be ignored during the computation of free busy information.
+.It must be possible for a user to specify a list of recurrence instances (i.e., `UID` and `RECURRENCE-ID`) that should be ignored during the computation of free busy information.
 [requirement]
 ====
 [specification]
 --
 This requirement was left out because iTIP doesn't provide a way to
-specify such a limit/restriction in a VFREEBUSY request.
+specify such a limit/restriction in a `VFREEBUSY` request.
 
 In the process of rescheduling a specific recurrence instance, it would be
 useful to obtain the free busy information, of the attendees, that doesn't
@@ -707,7 +707,7 @@ scheduling requirements, or they were otherwise out of scope. However, the
 Technical Committee felt it was useful to include these here with an explanation
 of why they were left out.
 
-.Ability to ask the server to strip the ATTENDEE and/or BCC list...
+.Ability to ask the server to strip the `ATTENDEE` and/or BCC list...
 [requirement]
 ====
 [specification]

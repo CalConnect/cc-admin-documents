@@ -1,6 +1,7 @@
 = January 2005 CalConnect Interoperability Test Report
 :docnumber: 0502
 :copyright-year: 2005
+:title-main-en: Interoperability Testing of RFC 2445 and the current CALDAV draft
 :language: en
 :doctype: administrative
 :edition: 1
@@ -11,7 +12,6 @@
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
-
 
 .Foreword
 
@@ -193,7 +193,7 @@ S2 | Test Scenario
 | 3.3. Retrieve all the components and properties of the meetings scheduled for the current month.
 
 | F | | N/A | N/A | Y | N/A
-| 3.4. Retrieve only the SUMMARY, DTSTART and DTEND (or DURATION) properties of meetings scheduled for current week.
+| 3.4. Retrieve only the `SUMMARY`, `DTSTART` and `DTEND` (or `DURATION`) properties of meetings scheduled for current week.
 
 6+| | 4. Event deletion
 
@@ -205,3 +205,8 @@ S2 | Test Scenario
 
 7+| *draft-dusseault-caldav-04
 |===
+
+[bibliography]
+== Bibliography
+
+* [[[caldav-draft,IETF I-D draft-dusseault-caldav-04]]]

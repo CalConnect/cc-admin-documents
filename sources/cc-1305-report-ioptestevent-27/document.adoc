@@ -68,10 +68,10 @@ on the system and notifications provide a mechanism for informing clients of cha
 collections and invitations to share collections.
 
 VPOLL is a new calendaring specification which standardizes data for consensus scheduling
-(voting on alternatives) - the type of service provided by Doodle and others. VPOLL will allow
+(voting on alternatives) - the type of service provided by Doodle and others. `VPOLL` will allow
 these external services to interact with calendaring systems in a more standardized manner and
 also enables the support of such services within existing systems. So far there are implementations
-working on CalDAV servers which distribute the VPOLL component to voters and handle the
+working on CalDAV servers which distribute the `VPOLL` component to voters and handle the
 responses.
 
 Some of the participants worked on getting the Apple test suite (which tests mostly CalDAV
@@ -113,7 +113,7 @@ In future events we hope to be testing at least the following:
 * Calendar sharing
 * Notifications
 * Managed attachments
-* VPOLL
+* `VPOLL`
 * Basic iCalendar/iTIIP/iMIP as needed
 
 Mike Douglass, CalConnect Interoperability Test Manager

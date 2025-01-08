@@ -78,7 +78,7 @@ reviewing event publication use cases and how to deal with non-standard data, an
 consensus on the previously-proposed "Reference" property; an RFC will be developed and
 submitted before the next Roundtable. The TC also discussed "dirty" (i.e. non-iCalendarcompliant)
 data and how to deal with it, and raised the issue of a Certification program and multilanguage
-support in VEVENTS.
+support in ``VEVENT``s.
 
 === TC FREEBUSY
 

@@ -106,27 +106,27 @@ based on iCalendar
 == What is iCalendar?
 
 iCalendar provides a more precise specification of the calendar components
-defined in the vCalendar 1.0 specification (VEVENT, VTODO) and defines
-new calendar components for a journal entry (VJOURNAL), free and busy
-time information (VFREEBUSY), time zone specification (VTIMEZONE), and
-alarm definition (VALARM).
+defined in the vCalendar 1.0 specification (`VEVENT`, `VTODO`) and defines
+new calendar components for a journal entry (`VJOURNAL`), free and busy
+time information (`VFREEBUSY`), time zone specification (`VTIMEZONE`), and
+alarm definition (`VALARM`).
 
-The VJOURNAL component allows descriptive notes to be recorded for a
+The `VJOURNAL` component allows descriptive notes to be recorded for a
 particular calendar date. Only a few products implement this component
 currently.
 
-The grouping of properties in the VFREEBUSY component "describe either a
+The grouping of properties in the `VFREEBUSY` component "describe either a
 request for free/busy time, describe a response to a request for free/busy time
 or describe a published set of busy time" (from RFC2445).
 
-The timezone specification provided by the VTIMEZONE component provides
-a more comprehensive replacement for the DAYLIGHT and TZ properties in
+The timezone specification provided by the `VTIMEZONE` component provides
+a more comprehensive replacement for the `DAYLIGHT` and `TZ` properties in
 vCalendar 1.0. It enables date and time information to be communicated in an
 unambiguous format.
 
-The definition of alarms is provided by the VALARM component. This
-component provides equivalent functionality to the AALARM, DALARM,
-MALARM, and PALARM vCalendar 1.0 properties.
+The definition of alarms is provided by the `VALARM` component. This
+component provides equivalent functionality to the `AALARM`, `DALARM`,
+`MALARM`, and `PALARM` vCalendar 1.0 properties.
 
 == What are the differences between vCalendar and iCalendar?
 
@@ -280,25 +280,25 @@ Consortium, please visit http://www.calconnect.org/.
 .New properties defined in iCalendar
 |===
 | Property Name | Section in RFC 2445
-| ACTION | 4.8.6.1
-| CALSCALE | 4.7.1
-| COMMENT | 4.8.1.4
-| CONTACT | 4.8.4.2
-| DTSTAMP | 4.8.7.2
-| DURATION | 4.8.2.5
-| FREEBUSY | 4.8.2.6
-| METHOD | 4.7.2
-| ORGANISER | 4.8.4.3
-| PERCENT-COMPLETE | 4.8.1.8
-| RECURRENCE-ID | 4.8.4.4
-| REPEAT | 4.8.6.2
-| REQUEST-STATUS | 4.8.8.2
-| TRIGGER | 4.8.6.3
-| TZID | 4.8.3.1
-| TZNAME | 4.8.3.2
-| TZOFFSETFROM | 4.8.3.3
-| TZOFFSETTO | 4.8.3.4
-| TZURL | 4.8.3.5
+| `ACTION` | 4.8.6.1
+| `CALSCALE` | 4.7.1
+| `COMMENT` | 4.8.1.4
+| `CONTACT` | 4.8.4.2
+| `DTSTAMP` | 4.8.7.2
+| `DURATION` | 4.8.2.5
+| `FREEBUSY` | 4.8.2.6
+| `METHOD` | 4.7.2
+| `ORGANISER` | 4.8.4.3
+| `PERCENT-COMPLETE` | 4.8.1.8
+| `RECURRENCE-ID` | 4.8.4.4
+| `REPEAT` | 4.8.6.2
+| `REQUEST-STATUS` | 4.8.8.2
+| `TRIGGER` | 4.8.6.3
+| `TZID` | 4.8.3.1
+| `TZNAME` | 4.8.3.2
+| `TZOFFSETFROM` | 4.8.3.3
+| `TZOFFSETTO` | 4.8.3.4
+| `TZURL` | 4.8.3.5
 |===
 
 [options=header]
@@ -321,64 +321,64 @@ Consortium, please visit http://www.calconnect.org/.
 .New property parameters defined in iCalendar
 |===
 | Property Parameter Name | Section in RFC 2445
-| ALTREP | 4.2.1
-| CN | 4.2.2
-| CUTYPE | 4.2.3
-| DELEGATED-FROM | 4.2.4
-| DELEGATED-TO | 4.2.5
-| DIR | 4.2.6
-| FMTTYPE | 4.2.8
-| FBTYPE | 4.2.9
-| MEMBER | 4.2.11
-| PARTSTAT | 4.2.12
-| RANGE | 4.2.13
-| RELATED | 4.2.14
-| RELTYPE | 4.2.15
-| RSVP | 4.2.17
-| SENT-BY | 4.2.18
-| TZID | 4.2.19
+| `ALTREP` | 4.2.1
+| `CN` | 4.2.2
+| `CUTYPE` | 4.2.3
+| `DELEGATED-FROM` | 4.2.4
+| `DELEGATED-TO` | 4.2.5
+| `DIR` | 4.2.6
+| `FMTTYPE` | 4.2.8
+| `FBTYPE` | 4.2.9
+| `MEMBER` | 4.2.11
+| `PARTSTAT` | 4.2.12
+| `RANGE` | 4.2.13
+| `RELATED` | 4.2.14
+| `RELTYPE` | 4.2.15
+| `RSVP` | 4.2.17
+| `SENT-BY` | 4.2.18
+| `TZID` | 4.2.19
 |===
 
 [options=header]
 .Mapping between vCalendar and iCalendar properties
 |===
 | vCalendar property name | iCalendar property name | Section in RFC2445
-| DAYLIGHT | Replaced by VTIMEZONE component | 4.6.5
-| GEO | GEO | 4.8.1.6
-| PRODID | PRODID | 4.7.3
-| TZ | Replaced by VTIMEZONE component | 4.6.5
-| VERSION | VERSION | 4.7.4
-| ATTACH | ATTACH | 4.8.1.1
-| ATTENDEE | ATTENDEE | 4.8.4.1
-| AALARM | Replaced by VALARM component | 4.6.6
-| CATEGORIES | CATEGORIES | 4.8.1.2
-| CLASS | CLASS | 4.8.1.3
-| DCREATED | CREATED | 4.8.7.1
-| COMPLETED | COMPLETED | 4.8.2.1
-| DESCRIPTION | DESCRIPTION | 4.8.1.5
-| DALARM | Replaced by VALARM component | 4.6.6
-| DUE | DUE | 4.8.2.3
-| DTEND | DTEND | 4.8.2.2
-| EXDATE | EXDATE | 4.8.5.1
-| EXRULE | EXRULE | 4.8.5.2
-| LAST-MODIFIED | LAST-MODIFIED | 4.8.7.3
-| LOCATION | LOCATION | 4.8.1.7
-| MALARM | Replaced by VALARM component | 4.6.6
-| RNUM | No equivalent property, iCalendar RECUR property value type allows the number of occurrences to be specified |
-| PRIORITY | PRIORITY | 4.8.1.9
-| PALARM | Replaced by VALARM component | 4.6.6
-| RELATED-TO | RELATED-TO | 4.8.4.5
-| RDATE | RDATE | 4.8.5.3
-| RRULE | RRULE | 4.8.5.4
-| RESOURCES | RESOURCES | 4.8.1.10
-| SEQUENCE | SEQUENCE | 4.8.7.4
-| DTSTART | DTSTART | 4.8.2.4
-| STATUS | STATUS | 4.8.1.11
-| SUMMARY | SUMMARY | 4.8.1.12
-| TRANSP | TRANSP | 4.8.2.7
-| URL | URL | 4.8.4.6
-| UID | UID | 4.8.4.7
-| X- | X- | 4.8.8.1
+| `DAYLIGHT` | Replaced by `VTIMEZONE` component | 4.6.5
+| `GEO` | `GEO` | 4.8.1.6
+| `PRODID` | `PRODID` | 4.7.3
+| `TZ` | Replaced by `VTIMEZONE` component | 4.6.5
+| `VERSION` | `VERSION` | 4.7.4
+| `ATTACH` | `ATTACH` | 4.8.1.1
+| `ATTENDEE` | `ATTENDEE` | 4.8.4.1
+| `AALARM` | Replaced by `VALARM` component | 4.6.6
+| `CATEGORIES` | `CATEGORIES` | 4.8.1.2
+| `CLASS` | `CLASS` | 4.8.1.3
+| `DCREATED` | `CREATED` | 4.8.7.1
+| `COMPLETED` | `COMPLETED` | 4.8.2.1
+| `DESCRIPTION` | `DESCRIPTION` | 4.8.1.5
+| `DALARM` | Replaced by `VALARM` component | 4.6.6
+| `DUE` | `DUE` | 4.8.2.3
+| `DTEND` | `DTEND` | 4.8.2.2
+| `EXDATE` | `EXDATE` | 4.8.5.1
+| `EXRULE` | `EXRULE` | 4.8.5.2
+| `LAST-MODIFIED` | `LAST-MODIFIED` | 4.8.7.3
+| `LOCATION` | `LOCATION` | 4.8.1.7
+| `MALARM` | Replaced by `VALARM` component | 4.6.6
+| `RNUM` | No equivalent property, iCalendar `RECUR` property value type allows the number of occurrences to be specified |
+| `PRIORITY` | `PRIORITY` | 4.8.1.9
+| `PALARM` | Replaced by `VALARM` component | 4.6.6
+| `RELATED-TO` | `RELATED-TO` | 4.8.4.5
+| `RDATE` | `RDATE` | 4.8.5.3
+| `RRULE` | `RRULE` | 4.8.5.4
+| `RESOURCES` | `RESOURCES` | 4.8.1.10
+| `SEQUENCE` | `SEQUENCE` | 4.8.7.4
+| `DTSTART` | `DTSTART` | 4.8.2.4
+| `STATUS` | `STATUS` | 4.8.1.11
+| `SUMMARY` | `SUMMARY` | 4.8.1.12
+| `TRANSP` | `TRANSP` | 4.8.2.7
+| `URL` | `URL` | 4.8.4.6
+| `UID` | `UID` | 4.8.4.7
+| `X-` | `X-` | 4.8.8.1
 |===
 
 [heading=bibliography]

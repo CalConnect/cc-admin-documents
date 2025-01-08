@@ -134,22 +134,22 @@ folders) and resources (corresponding to file-system files). It applies some fur
 that structure, certain collections are defined as calendar-collections and these can only contain
 calendar resources, events, tasks etc.
 
-Resources and collections are targeted by a path structure allowing simple http GET and PUT operations
+Resources and collections are targeted by a path structure allowing simple HTTP `GET` and `PUT` operations
 to access those resources.
 
 === CalDAV CRUD
 
-The basic CRUD operations in CalDAV are provided by the http PUT, GET and DELETE methods. The
-semantics are essentially the same as those for the basic http methods.
+The basic CRUD operations in CalDAV are provided by the HTTP `PUT`, `GET` and `DELETE` methods. The
+semantics are essentially the same as those for the basic HTTP methods.
 
 === CalDAV Collection operations
 
-CalDAV collections are created by the WebDAV MKCOL method which now allows the addition of a body
-to provide properties for the new collection. They are deleted by using the DELETE method. Any
+CalDAV collections are created by the WebDAV `MKCOL` method which now allows the addition of a body
+to provide properties for the new collection. They are deleted by using the `DELETE` method. Any
 contained resources and collections are deleted along with the collection.
 
-WebDAV and CalDAV do not define the semantics of GET on a collection. Some CalDAV servers will
-deliver a complete iCalendar VCALENDAR component containing all resources, others will return html
+WebDAV and CalDAV do not define the semantics of `GET` on a collection. Some CalDAV servers will
+deliver a complete iCalendar `VCALENDAR` component containing all resources, others will return html
 allowing browsing of the structure.
 
 === CalDAV reports
@@ -163,8 +163,8 @@ Reports can take some different forms:
 * Multi-get
 ** Specifies a number of target objects to return
 * Freebusy report
-** This returns freebusy information for the targetted resource. In general it is NOT the
-same as the freebusy for a principal.
+** This returns Freebusy information for the targeted resource. In general it is NOT the
+same as the Freebusy for a principal.
 
 === CalDav Scheduling
 
@@ -178,13 +178,13 @@ that something has changed.
 
 The messages sent conform in all cases to the iTip specification - RFC5546.
 
-==== Scheduling freebusy queries.
+==== Scheduling Freebusy Queries
 
-These are obtained through a POST to the targeted principals outbox. The response is an iTip
-representation of the principals freebusy status wrapped up in an xml body which also contains status
+These are obtained through a `POST` to the targeted principals outbox. The response is an iTip
+representation of the principals Freebusy status wrapped up in an xml body which also contains status
 information.
 
-Note that this freebusy request is NOT targeted at any specific resource but rather at the recipient. The
+Note that this Freebusy request is NOT targeted at any specific resource but rather at the recipient. The
 server is free to use any information that is appropriate to build a response, including workday
 information, external resources and so on.
 
@@ -196,7 +196,7 @@ number of scheduling rights.
 
 === CalDAV synchronization
 
-The support for synchronization capabilities is a work in progress. WebDAV relies on Etags which have
+The support for synchronization capabilities is a work in progress. WebDAV relies on ETags which have
 proved inadequate. A ctag has been defined as a vendor extension, supported by most servers, which
 allows clients to determine that a collection has been changed. Work is in progress on further DAV
 extensions to help synchronization.
@@ -259,9 +259,9 @@ Precision is defined as the number of significant digits used to express date ti
 Issue: The minimum precision required for smart grid datetimes must be milliseconds, while ICalendar
 currently only supports seconds.
 
-There is no way to extend the iCalendar value type DATE-TIME without breaking compatibility.
+There is no way to extend the iCalendar value type `DATE-TIME` without breaking compatibility.
 
-Proposed: Use a TimeFraction Perhaps a FLOAT value specified in xCal for properties with date time or
+Proposed: Use a TimeFraction Perhaps a `FLOAT` value specified in xCal for properties with date time or
 duration values:
 
 `<x-TimeFraction>0.1245</x-TimeFraction>`
@@ -293,8 +293,8 @@ Isn't there a proposal to add a calendar identifier to iCalendar?
 An ordered set of durations with specified offsets without a definite start time. Example: Profile of
 power usage in 30 minute intervals.
 
-Proposed: Use of a set of related VTODOs to specify a sequence of durations. Introduce a new reltype
-param to indicate the relation of the VTODOs to each other.
+Proposed: Use of a set of related ``VTODO``s to specify a sequence of durations. Introduce a new reltype
+param to indicate the relation of the ``VTODO``s to each other.
 
 ==== Response time
 
@@ -309,13 +309,13 @@ power supplied sometime between midnight and 8 a.m.
 
 === Scheduling Protocol and Methods
 
-Assumption: If smart grid scenarios require scheduling, ITIP will be taken as the starting point for CalWS
+Assumption: If smart grid scenarios require scheduling, iTIP will be taken as the starting point for CalWS
 scheduling methods.
 
 Question: Do smart grid use cases between consumers and suppliers really require scheduling methods,
 or just flexible descriptions of time?
 
-Several ITIP methods are involved in interpersonal scheduling -- `REQUEST`, `REPLY`, `COUNTER`, `CANCEL`.
+Several iTIP methods are involved in interpersonal scheduling -- `REQUEST`, `REPLY`, `COUNTER`, `CANCEL`.
 These methods don't seem suited to the smart grid use cases that would require
 
 * A set of events to be scheduled on an all-or-nothing basis.

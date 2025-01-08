@@ -177,7 +177,7 @@ image::img01.png[]
 
 TC started to support Calsify effort in IETF to develop
 revisions of iCalendar and related specifications and
-progress to standards. Function taken over by TCChairs
+progress to standards. Function taken over by TC Chairs
 now that Calsify working group established
 within IETF.
 
@@ -267,7 +267,7 @@ time zones and their associated rules in
 order to avoid the following common
 problems:
 ** Consuming unknown time zones.
-** Consuming known time zones with identical TZIDs
+** Consuming known time zones with identical ``TZID``s
 but different rule.
 * Calendar applications need to have means
 of updating time zones and all affected data
@@ -288,7 +288,7 @@ it (Operating systems, java...).
 
 What do we want (or not) in a time zone registry?
 
-* TZID and Rules should both be in a registry.
+* `TZID` and Rules should both be in a registry.
 * Re-use what's already there (TZ Database).
 * Versioning is not necessary, since time zone
 changes occur in the future; existing events
@@ -305,14 +305,14 @@ Who should publish?
 
 What do we want (or not) in a time zone service?
 
-* The time zones should be in a VTIMEZONE
+* The time zones should be in a `VTIMEZONE`
 format as defined in RFC 2445.
 * The time zone service should be built on top
 of a known platform such as: HTTP, CalDAV,
 DNS, or ITIP.
 * The time zone service should be able to return
 a time zone based on a supplied TZID and/or
-VTIMEZONE object (Closest match).
+`VTIMEZONE` object (Closest match).
 
 Who should host such services?
 

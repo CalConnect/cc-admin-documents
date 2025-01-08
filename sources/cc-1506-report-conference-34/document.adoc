@@ -128,13 +128,13 @@ layout, and X-properties descriptions.
 
 === TC EVENTPUB
 
-The TC completed work on the QRCODE/Data URI proposal and a draft specification is being
+The TC completed work on the `QRCODE`/Data URI proposal and a draft specification is being
 developed, to be submitted to the IETF when ready.
 
 === TC FREEBUSY
 
-Mostly on hold as we try to get other specifications through the IETF. VAVAILABILITY is ready and
-VPOLL needs more work but is
+Mostly on hold as we try to get other specifications through the IETF. `VAVAILABILITY` is ready and
+`VPOLL` needs more work but is
 implementable, much interest from the SmartGrid and from LegalXML. Had some discussions on other
 poll modes, in particular signup (for social calendaring). Task assignment is also on the list.
 

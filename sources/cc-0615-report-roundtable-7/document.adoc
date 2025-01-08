@@ -72,7 +72,7 @@ that was needed.
 development of the scheduling draft for CalDAV, and will be focusing after this Roundtable on the
 areas of availability, scheduled event updates, and external attachments.
 
-*TC-EVENTPUB* has developed use cases and requirements for the VVENUE iCalendar
+*TC-EVENTPUB* has developed use cases and requirements for the `VVENUE` iCalendar
 extension, which will be submitted to the IETF shortly after Roundtable VII as an individual
 submission by its authors, and will focus on event sharing and event server synchronization after
 this Roundtable.

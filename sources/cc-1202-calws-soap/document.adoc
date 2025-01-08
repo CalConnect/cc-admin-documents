@@ -1578,37 +1578,37 @@ the client. A query takes the parts
 
 === Calendar Query common types
 
-The UTCTimeRangeType is used in a number of places to define a time range within which components
+The `UTCTimeRangeType` is used in a number of places to define a time range within which components
 must appear or property values must lie. The values are UTC time-date, the start is inclusive and the end
 is exclusive.
 
 [[tab42]]
-.UTCTimeRangeType elements
+.`UTCTimeRangeType` elements
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| start | UTC date-time | 1 | Y | UTC inclusive start
-| end | UTC date-time | 1 | Y | UTC exclusive end
+| `start` | UTC date-time | 1 | Y | UTC inclusive start
+| `end` | UTC date-time | 1 | Y | UTC exclusive end
 |===
 
-The TextMatchType is used to match text values in properties and parameters. The collation attribute
+The `TextMatchType` is used to match text values in properties and parameters. The collation attribute
 species a collation as defined in Error: Reference source not found.
 
-Servers are REQUIRED to support the "i;ascii-casemap" and "i;octet" collations which provide a basic
+Servers are `REQUIRED` to support the "`i;ascii-casemap`" and "`i;octet`" collations which provide a basic
 case insensitive and case sensitive match respectively.
 
 Elements of this type take a string value which is matched according to the attributes.
 
 [[tab43]]
-.TextMatchType attributes
+.`TextMatchType` attributes
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| #collation | String | 0..1 | N | Collation name from Error: Reference source not found. "
-| #negate-condition | boolean | 0..1 | N | if "true" negates the condition
+| `#collation` | String | 0..1 | N | Collation name from Error: Reference source not found. "
+| `#negate-condition` | boolean | 0..1 | N | if "true" negates the condition
 |===
 
-=== CompFilterType
+=== `CompFilterType`
 
 This type defines a search query for the calendar query operation. It specifies the component types to return,
 absence tests or basic matching operations on properties and time ranges.
@@ -1622,28 +1622,28 @@ Only logical conjunctions are supported, that is, all elements of a comp-filter 
 to match.
 
 [[tab44]]
-.CompFilterType elements
+.`CompFilterType` elements
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| anyComp | AnyCompType | 0..1 | C a| One of anyComp, vCalendar or a BaseComponentType must be supplied.
+| `anyComp` | `AnyCompType` | 0..1 | C a| One of `anyComp`, vCalendar or a `BaseComponentType` must be supplied.
 
-anyComp indicates that any component will match.
-| xcal:vcalendar | xcal:VcalendarType | 0..1 | C | Matches vCalendar at the top level. Must be provided
-| xcal:baseComponent | xcal:BaseComponentType | 0..1 | C | May be vEvent or vtodo for example.
-| #test | String | 0..1 | N a| "anyof" is a logical `OR` of the child elements.
+`anyComp` indicates that any component will match.
+| `xcal:vcalendar` | `xcal:VcalendarType` | 0..1 | C | Matches vCalendar at the top level. Must be provided
+| `xcal:baseComponent` | `xcal:BaseComponentType` | 0..1 | C | May be vEvent or vTODO for example.
+| `#test` | String | 0..1 | N a| "anyof" is a logical `OR` of the child elements.
 
 "allof" is a logical `AND` of the child elements.
-| is-not-defined | empty | 0..1 | N | Only this element or one or more of time-range, prop-filter or comp-filter may be present
-| time-range | UTCTimeRangeType | 0..1 | N |
-| comp-filter | CompFilterType | 1 | Y | Match against contained components
-| prop-filter | PropFilterType | 0..n | N | Match against component properties
+| `is-not-defined` | empty | 0..1 | N | Only this element or one or more of time-range, prop-filter or comp-filter may be present
+| `time-range` | `UTCTimeRangeType` | 0..1 | N |
+| `comp-filter` | `CompFilterType` | 1 | Y | Match against contained components
+| `prop-filter` | `PropFilterType` | 0..n | N | Match against component properties
 |===
 
-=== PropFilterType
+=== `PropFilterType`
 
 The prop-filter element may test for the absence of a property or match values or specify zero or more
-ParamFilterType elements to match against parameters.
+`ParamFilterType` elements to match against parameters.
 
 Only logical conjunctions are supported, that is, all elements must match for the full expression to match.
 
@@ -1652,68 +1652,68 @@ Only logical conjunctions are supported, that is, all elements must match for th
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| xcal:baseProperty | xcal:BasePropertyType | 1 | Y | Specifies the property to be matched.
-| #test | String | 0..1 | N a| "anyof" is a logical `OR` of the child elements.
+| `xcal:baseProperty` | `xcal:BasePropertyType` | 1 | Y | Specifies the property to be matched.
+| `#test` | String | 0..1 | N a| "anyof" is a logical `OR` of the child elements.
 
 "allof" is a logical `AND` of the child elements.
-| is-not-defined | empty | 0..1 | N | Only this element or optionally one of time-range or text-match followed by param-filter
-| time-range | UTCTimeRangeType | 0..1 | N |
-| text-match | TextMatchtype | 0..1 | N |
-| param-filter | ParamFilterType | 0..n | N | Match against property parameters
+| `is-not-defined` | empty | 0..1 | N | Only this element or optionally one of time-range or text-match followed by param-filter
+| `time-range` | `UTCTimeRangeType` | 0..1 | N |
+| `text-match` | `TextMatchtype` | 0..1 | N |
+| `param-filter` | `ParamFilterType` | 0..n | N | Match against property parameters
 |===
 
-=== ParamFilterType
+=== `ParamFilterType`
 
-The ParamFilterType element may test for the absence of a parameter or match a value.
+The `ParamFilterType` element may test for the absence of a parameter or match a value.
 
 [[tab46]]
 .ParamFilterType elements
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| xcal:baseParameter | xcal:BaseParameterType | 1 | Y | Specifies the parameter to be matched.
-| is-not-defined | empty | 0..1 | N | Only this element or text-match
-| text-match | TextMatchtype | 0..1 | N |
+| `xcal:baseParameter` | `xcal:BaseParameterType` | 1 | Y | Specifies the parameter to be matched.
+| `is-not-defined` | empty | 0..1 | N | Only this element or text-match
+| `text-match` | `TextMatchtype` | 0..1 | N |
 |===
 
-=== CalendarQueryType elements
+=== `CalendarQueryType` elements
 
 [[tab47]]
-.CalendarQueryType elements
+.`CalendarQueryType` elements
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| href | string | 1 | Y | Identify the target of the request. "/" for the service.
-| allprop | empty | 0..1 | N a| If present specifies all properties should be returned.
+| `href` | string | 1 | Y | Identify the target of the request. "`/`" for the service.
+| `allprop` | empty | 0..1 | N a| If present specifies all properties should be returned.
 
-One or none of allprop or iCalendar.
-| xcal:icalendar | xcal:IcalendarType | 0..1 | N | If present is a valueless iCalendar skeleton entity defining which components and properties should be returned. If present allprop must `NOT` be present.
-| expand | ExpandType | 0..1 | N a| A subclass of UTCTimeRangeType.
+One or none of `allprop` or iCalendar.
+| `xcal:icalendar` | `xcal:IcalendarType` | 0..1 | N | If present is a valueless iCalendar skeleton entity defining which components and properties should be returned. If present `allprop` `MUST NOT` be present.
+| `expand` | `ExpandType` | 0..1 | N a| A subclass of `UTCTimeRangeType`.
 
-Either expand or limitRecurrenceSet may be specified but not both.
+Either expand or `limitRecurrenceSet` may be specified but not both.
 
 If specified recurring events are expanded and limited to the supplied time-range.
 All events times are converted to UTC.
 
 This option allows for simplified event handling for certain classes of client.
-| limitRecurrenceSet | LimitRecurrenceSetType | 0..1 | N a| A subclass of UTCTimeRangeType.
+| `limitRecurrenceSet` | `LimitRecurrenceSetType` | 0..1 | N a| A subclass of `UTCTimeRangeType`.
 
-Either expand or limitRecurrenceSet may be specified but not both.
+Either expand or `limitRecurrenceSet` may be specified but not both.
 
 If specified only overrides that fall within the specified time-range are returned.
 
 This helps to limit the size of the result-set when there are many overrides.
-| depth | String | 0..1 | N | Species depth for query. "1" => just targeted collection, "infinity" => query targeted and all sub-collections.
-| filter | FilterType | 1 | Y | Defines the search filter
-| /comp-filter | CompFilterType | 1 | Y | Defines the top-level component
+| `depth` | String | 0..1 | N | Species depth for query. "1" => just targeted collection, "infinity" => query targeted and all sub-collections.
+| `filter` | `FilterType` | 1 | Y | Defines the search filter
+| `/comp-filter` | `CompFilterType` | 1 | Y | Defines the top-level component
 |===
 
 === Specifying data to be returned
 
 This is achieved by specifying one of the following
 
-* allprop: return all properties and calendar data. (some properties are specified as not being part
-of the allprop set so are not returned)
+* `allprop`: return all properties and calendar data. (some properties are specified as not being part
+of the `allprop` set so are not returned)
 * Set the iCalendar element. This is an iCalendar valueless pattern entity which provides a map of
 the components and properties to be returned. Neither the pattern nor the returned result need to
 be valid iCalendar entities in that required properties may be absent if unselected.
@@ -1920,8 +1920,8 @@ Freebusy queries are used to obtain freebusy information for a principal. The re
 only for events to which the current principal has sufficient access and may be affected by components
 and rules available only to the server (for instance office hours availability).
 
-These queries are carried out by using a CalWS-SOAP freebusyReport request with an href specifying a
-principal. The freebusyReport request is not valid when the href specifies any entity other than a principal.
+These queries are carried out by using a CalWS-SOAP freebusyReport request with an `href` specifying a
+principal. The freebusyReport request is not valid when the `href` specifies any entity other than a principal.
 The query follows the specification defined in <<fb>> with certain limitations. As an authenticated
 user to the CalWS service scheduling read-freebusy privileges must have been granted. As an
 unauthenticated user equivalent access must have been granted to unauthenticated users.
@@ -1936,10 +1936,10 @@ component to a user. A server `MUST` only return a single vfreebusy component.
 
 === Element values
 
-Three values are provided: href; start; end. Only the href is required. The start and end are in XML UTC
+Three values are provided: `href`; `start`; `end`. Only the `href` is required. The start and end are in XML UTC
 date/time format and are interpreted as follows:
 
-==== start
+==== `start`
 
 Default:: If omitted the default value is left up to the server. It may be the current day, start of the current
 month, etc.
@@ -1955,7 +1955,7 @@ Format:: An XML UTC date-time
 NOTE: Specifying only a start date/time without specifying an end-date/time or period should be interpreted
 as in <<rfc5545>>. The effective period should cover the remainder of that day.
 
-==== end
+==== `end`
 
 Default:: Same as start
 Description:: Specifies the end date for the Freebusy data. The server is free to ignore this value.
@@ -2111,27 +2111,27 @@ have the need to update an interconnected set of entities so that we maintain th
 This requires an atomic operation which can successfully update all the entities or roll back the operation
 on failure.
 
-The MultiOpType operation provides such a feature. It is essentially a wrapper around any of the other
+The `MultiOpType` operation provides such a feature. It is essentially a wrapper around any of the other
 operations which guarantees the success of the entire set or a roll back. Using the id attribute for requests,
 each individual response can be located in the result.
-The MultiOpType request takes the following elements
+The `MultiOpType` request takes the following elements
 
 [[tab48]]
-.MultiOpType elements
+.`MultiOpType` elements
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| operations | Sequence of BaseOperationType | 1 | Y | Contains one or more operations
+| `operations` | Sequence of `BaseOperationType` | 1 | Y | Contains one or more operations
 |===
 
 The response type is also simple containing a single element containing all the responses.
 
 [[tab49]]
-.MultiOpResponseType elements
+.`MultiOpResponseType` elements
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| responses | Sequence of BaseResponseType | 1 | Y | Contains zero or more responses
+| `responses` | Sequence of `BaseResponseType` | 1 | Y | Contains zero or more responses
 |===
 
 == Conformance

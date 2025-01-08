@@ -68,16 +68,16 @@ would work successfully with caching servers. There was some discussion on how t
 flag a deleted event.The eventual consensus was to define a new "Deleted" status. We
 also felt it was important to define a time-range query as that is probably a very
 frequent use of subscriptions - e.g. what events happen this week? The consensus was
-that we should use a HEAD request to discover the possible upgrades rather than an
-OPTIONS request.
+that we should use a `HEAD` request to discover the possible upgrades rather than an
+`OPTIONS` request.
 
-We spent some time discussing various aspects of VCARD. There was a lot to be
+We spent some time discussing various aspects of `VCARD`. There was a lot to be
 discussed around the exact meaning of the UID. The wording of the specifications
 suggest that it is associated with the actual entity -- i.e. a human or a resource.
 Many of us thought that it should really be tied to a particular representation of
 that entity. Associated with that was the issue of who or what should merge cards
 that appear to represent the same entity. A number of us felt that no merge should be
 attempted - it is up to the consumer to decide if two vCards represent the same
-person. Perhaps UIs should consider adding the ability to explicitly link VCARDs
+person. Perhaps UIs should consider adding the ability to explicitly link ``VCARD``s
 representing the same person. There is probably further discussion to be had on this
 issue.

@@ -270,9 +270,9 @@ offsets. Offsets are either positive or negative. An example is UTC-8 (Pacific S
 
 Some iCalendar examples:
 
-* DTSTART:19970714T133000 ;Local time
-* DTSTART:19970714T173000Z ;UTC time
-* DTSTART;TZID=US-Eastern:19970714T133000 ;Local time and time zone reference
+* `DTSTART:19970714T133000 ;Local time`
+* `DTSTART:19970714T173000Z ;UTC time`
+* `DTSTART;TZID=US-Eastern:19970714T133000 ;Local time and time zone reference`
 
 === vCalendar
 A text representation of calendar and scheduling data created by the Versit consortium. The

@@ -66,7 +66,7 @@ Server, and iPhone Calendar teams was extremely collegial and frank.
 === TC CALDAV
 
 TC CALDAV acknowledged the publication of RFC 5545 (iCalendar) and RFC
-5689 (Extended MKCOL) and provided a status update on different Internet Drafts relevant to
+5689 (Extended `MKCOL`) and provided a status update on different Internet Drafts relevant to
 CalDAV. Open discussions were held on CalDAV Extensions including calendar alarms, calendar
 attachments, calendar push notifications, shared calendars, and WebDAV synchronization.
 

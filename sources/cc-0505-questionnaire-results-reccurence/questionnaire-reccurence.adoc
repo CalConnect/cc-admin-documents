@@ -78,7 +78,7 @@ end of the form.
 
 &#9675; Yes &#9675; No &#9675; Other
 | `MUST`
-| Individual rule parts MUST only be specified once.
+| Individual rule parts `MUST` only be specified once.
 
 | 4.3.10.b Recurrence Rule
 
@@ -204,7 +204,7 @@ end of the form.
 
 &#9675; Yes &#9675; No &#9675; Other
 | `MUST NOT`
-| The following are optional, but MUST NOT occur more than once: "`VALUE`" "=" ("`DATE-TIME`" / "`DATE`"), tzidparam.
+| The following are optional, but `MUST NOT` occur more than once: "`VALUE`" "=" ("`DATE-TIME`" / "`DATE`"), tzidparam.
 
 | 4.8.5.1.c Exception Date/Times
 
@@ -266,7 +266,7 @@ end of the form.
 
 &#9675; Yes &#9675; No &#9675; Other
 | `MUST`
-| In order to cancel an individual instance of a recurring "`VTODO`" calendar component, the "`RECURRENCE-ID`" property value for the "`VTODO`" calendar component MUST be specified in the "`CANCEL`" method.
+| In order to cancel an individual instance of a recurring "`VTODO`" calendar component, the "`RECURRENCE-ID`" property value for the "`VTODO`" calendar component `MUST` be specified in the "`CANCEL`" method.
 
 | 3.4.6.a `VTODO REFRESH`
 

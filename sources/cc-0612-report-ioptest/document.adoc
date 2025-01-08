@@ -156,7 +156,7 @@ locate a user's calendar collections. The developer added support to their appli
 principals (section 4 of the ACL spec).
 +
 --
-One application had problems renaming calendars. This operation uses WEBDAV MOVE underneath. It
+One application had problems renaming calendars. This operation uses WEBDAV `MOVE` underneath. It
 turns out that the application was sending a relative URI in the Destination header which RFC 2518
 specifies must contain an absolute URI. The developer beefed up the code to handle both forms and I
 believe the folks changed to absolute, so all was well after that.
@@ -164,9 +164,9 @@ believe the folks changed to absolute, so all was well after that.
 . One vendor did some amount of testing with their application, but the developer wasn't directly involved
 and they never communicated any issues to him.
 . Another vendor ran the CALDAV test suite from their calendar server and found an issue when
-DELETEing a null resource.
+``DELETE``ing a null resource.
 . An unknown party exposed a bug wherein a vendor application errored when receiving any CALDAV
-REPORT against a regular (non-calendar) collection.
+`REPORT` against a regular (non-calendar) collection.
 
 The developer fixed all of these issues yesterday and then waited to hear about anything else that came
 up the next day. Nothing was reported.
@@ -184,12 +184,12 @@ With regards to the specific items tested, they noted the following:
 . While verifying two free busy periods, they actually got three free-busy periods noted. So far as they
 could tell, both forms are valid (i.e. servers & clients are free to coalesce free-busy as they see fit).
 . While testing against one vendor application they noted the following:
-.. The server deleted VALARMs stored with events
+.. The server deleted ``VALARM``s stored with events
 .. Modifications to recurring events caused an internal server error (500 HTTP response)
 .. The server never changes ETags, so a second client isn't able to sync properly, since it
 thinks events haven't changed since previous sync.
-.. The HTTP DELETE request succeeded, but the collection stayed on the server.
-.. The server returned an empty (HTTP 204) response to a valid free-busy-request REPORT.
+.. The HTTP `DELETE` request succeeded, but the collection stayed on the server.
+.. The server returned an empty (HTTP 204) response to a valid free-busy-request `REPORT`.
 
 === Fifth Set of Comments
 
@@ -257,36 +257,36 @@ h| 1.2. a| Create new meeting titled "Meeting 1.2" recurring every Monday from 1
 | 2.4. | Add an attendee to "Meeting 1.1bis". | P | P | N | P | P | | | | N | | N | N
 | 2.5. | Add an alarm to "Meeting 1.1bis". | P | P | P | P | P | | | | F | | N | P
 | 2.6. | Modify the title of the 1st instance of the recurring meeting created in 1.2. | P | P | P | P | P | | | | F | | N | F
-h| 2.7. | Modify the participation status of the 1st attendee in meeting 1.3 to DECLINED. | P | P | N | P | N | | | | P | | N | N
+h| 2.7. | Modify the participation status of the 1st attendee in meeting 1.3 to `DECLINED`. | P | P | N | P | N | | | | P | | N | N
 | 2.8. | Cancel the 4th instance of the recurring meeting created in 1.2. | P | P | P | P | P | | | | V | | N | N
 | 2.9. | One client changes "Meeting 1.1bis" to a different time, second client 'refreshes' its display to see the modification. | P | P | P | P | P | | | | F | | N | P
 | 3. h| Event retrieval | | | | | | | | | | | |
-| 3.1. | calendar-query REPORT | | N | N | | N | | | | N 2+| N |
+| 3.1. | calendar-query `REPORT` | | N | N | | N | | | | N 2+| N |
 | 3.1.1. | No filtering (match everything) | | N | N | | N | | | | N 2+| N |
-| 3.1.1.1. | Query all components and return all data. (tests <calendar-query> and <filter>) | | N | N | | N | | | | N 2+| N |
-| 3.1.1.2. | Query all components and return ETag WebDAV property and all data. (tests <calendar-query>+<DAV:prop> and <filter>) | | N | N | | N | | | | N 2+| N |
-| 3.1.1.3. | Query all components and return just entire VEVENT components. (tests <calendar-query>, <filter>+<comp-filter>) | | N | N | | N | | | | N 2+| N |
-| 3.1.1.4. | Query all components and return VEVENT components with only DTSTART, DTEND/DURATION, SUMMARY, UID, SEQUENCE, RRULE, RDATE, EXRULE, EXDATE, RECURRENCE-ID. (tests <calendar-query>, <filter>+<comp-filter>, <calendar-data>+<comp>+<prop>) | | N | N | | N | | | | N 2+| N |
+| 3.1.1.1. | Query all components and return all data. (tests `<calendar-query>` and `<filter>`) | | N | N | | N | | | | N 2+| N |
+| 3.1.1.2. | Query all components and return ETag WebDAV property and all data. (tests `<calendar-query>+<DAV:prop>` and `<filter>`) | | N | N | | N | | | | N 2+| N |
+| 3.1.1.3. | Query all components and return just entire `VEVENT` components. (tests `<calendar-query>`, `<filter>+<comp-filter>`) | | N | N | | N | | | | N 2+| N |
+| 3.1.1.4. | Query all components and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<filter>+<comp-filter>`, `<calendar-data>+<comp>+<prop>`) | | N | N | | N | | | | N 2+| N |
 | 3.1.2. | time-range filtering | | N | N | | N | | | | N 2+| N |
-| 3.1.2.1. | Query all components within a one day time-range and return all data. Make sure that there is a recurring event that starts prior to the chosen time-range but has one non-overridden instance within the time-range. (tests <calendar-query>, <filter>+<time-range>) | | N | N | | N | | | | N 2+| N |
-| 3.1.2.2. | Query all components within a one week time-range and return just entire VEVENT components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests <calendar-query>, <filter>+<time-range>) | | N | N | | N | | | | N | | N |
+| 3.1.2.1. | Query all components within a one day time-range and return all data. Make sure that there is a recurring event that starts prior to the chosen time-range but has one non-overridden instance within the time-range. (tests `<calendar-query>`, `<filter>+<time-range>`) | | N | N | | N | | | | N 2+| N |
+| 3.1.2.2. | Query all components within a one week time-range and return just entire `VEVENT` components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests `<calendar-query>`, `<filter>+<time-range>`) | | N | N | | N | | | | N | | N |
 | 3.1.3. | component based filtering | | N | N | | N | | | | N 2+| N |
-| 3.1.3.1. | Query all components that contain an embedded VALARM component. (tests <calendar-query>, <filter>+<comp-filter>) | | N | N | | N | | | | N 2+| N |
-| 3.1.3.2. | Query all components that contain  an embedded VALARM component whose trigger falls within a specific time-range. (tests <calendar-query>, <filter>+<comp-filter>+<prop-filter>+<time-range>) | | N | N | | N | | | | N 2+| N |
+| 3.1.3.1. | Query all components that contain an embedded `VALARM` component. (tests `<calendar-query>`, `<filter>+<comp-filter>`) | | N | N | | N | | | | N 2+| N |
+| 3.1.3.2. | Query all components that contain  an embedded `VALARM` component whose trigger falls within a specific time-range. (tests `<calendar-query>`, `<filter>+<comp-filter>+<prop-filter>+<time-range>`) | | N | N | | N | | | | N 2+| N |
 | 3.1.4. | property based filtering | | N | N | | N | | | | N 2+| N |
-| 3.1.4.1. | Query all components that contain any ORGANIZER property. (tests <calendar-query>, <filter>+<prop-filter>+<is-defined>) | | N | N | | N | | | | N 2+| N |
-| 3.1.4.2. | Query all components that contain an ORGANIZER property with a specific CUA text value case-insensitively. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<caseless>) | | N | N | | N | | | | N 2+| N |
-| 3.1.4.3. | Query all components that contain an ORGANIZER property with a specific CUA text value case-senstively. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<caseless>) | | N | N | | N | | | | N 2+| N |
+| 3.1.4.1. | Query all components that contain any `ORGANIZER` property. (tests `<calendar-query>`, `<filter>+<prop-filter>+<is-defined>`) | | N | N | | N | | | | N 2+| N |
+| 3.1.4.2. | Query all components that contain an `ORGANIZER` property with a specific CUA text value case-insensitively. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<caseless>`) | | N | N | | N | | | | N 2+| N |
+| 3.1.4.3. | Query all components that contain an `ORGANIZER` property with a specific CUA text value case-sensitively. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<caseless>`) | | N | N | | N | | | | N 2+| N |
 | 3.1.5. | parameter based filtering | | N | N | | N | | | | N 2+| N |
-| 3.1.5.1. | Query all components that contain a DTSTART property with a TZID parameter. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>) | | N | N | | N | | | | N 2+| N |
-| 3.1.5.2. | Query all components that contain an ATTENDEE property with PARTSTAT=NEEDS-ACTION parameter. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>) | | N | N | | N | | | | N 2+| N |
-| 3.2. | calendar-multiget REPORT | | N | N | | N | | | | N 2+| N |
-| 3.2.1. | Query a specific href and return all data. (tests <calendar-multiget>) | | N | N | | N | | | | N 2+| N |
-| 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests <calendar-multiget>) | | N | N | | N | | | | N 2+| N |
-| 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests <calendar-multiget>+<DAV:prop>) | | N | N | | N | | | | N 2+| N |
-h| 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests <calendar-multiget>+<DAV:prop>) | | N | N | | N | | | | N 2+| N |
-| 3.2.5. | Query a specific href and return VEVENT components with only DTSTART, DTEND/DURATION, SUMMARY, UID, SEQUENCE, RRULE, RDATE, EXRULE, EXDATE, RECURRENCE-ID. (tests <calendar-query>, <calendar-data>+<comp>+<prop>) | | N | N | | N | | | | N 2+| N |
-| 3.2.6. | Query multiple hrefs (some of which do not exist) and return VEVENT components with only DTSTART, DTEND/DURATION, SUMMARY, UID, SEQUENCE, RRULE, RDATE, EXRULE, EXDATE, RECURRENCE-ID. (tests <calendar-query>, <calendar-data>+<comp>+<prop>) | | N | N | | N | | | | N 2+| N |
+| 3.1.5.1. | Query all components that contain a `DTSTART` property with a `TZID` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>`) | | N | N | | N | | | | N 2+| N |
+| 3.1.5.2. | Query all components that contain an `ATTENDEE` property with `PARTSTAT=NEEDS-ACTION` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>`) | | N | N | | N | | | | N 2+| N |
+| 3.2. | calendar-multiget `REPORT` | | N | N | | N | | | | N 2+| N |
+| 3.2.1. | Query a specific href and return all data. (tests `<calendar-multiget>`) | | N | N | | N | | | | N 2+| N |
+| 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests `<calendar-multiget>`) | | N | N | | N | | | | N 2+| N |
+| 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) | | N | N | | N | | | | N 2+| N |
+h| 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) | | N | N | | N | | | | N 2+| N |
+| 3.2.5. | Query a specific href and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) | | N | N | | N | | | | N 2+| N |
+| 3.2.6. | Query multiple hrefs (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) | | N | N | | N | | | | N 2+| N |
 | 4. h| Event deletion | | | | | | | | | | | |
 | 4.1. | Delete a single non-recurring meeting. | P | | P | | P | | | | P | | N | P
 | 4.2. | Delete a single recurring meeting with no overridden instances. | P | | P | | P | | | | P | | N | P
@@ -319,15 +319,15 @@ Event on Wednesday, 3 pm - 5 pm, status tentative +
 Event on Thursday, 11 am - 12 pm, status cancelled +
 Event on Thursday, 3 pm - 5 pm, status cancelled | N | N | | N | N | | | | | | N | P
 | 7.1 | Run a free-busy report for the entire week. | N | N | P | N | N | | | | F | | N | P
-| 7.1.1 | Verify two FREEBUSY periods for Monday, the second is BUSY-TENTATIVE. | N | N | P | N | N | | | | F | | N | P
-| 7.1.2 | Verify two FREEBUSY periods for Tuesday. | N | N | P | N | N | | | | F | | N | P
-| 7.1.3 | Verify four FREEBUSY periods for Wednesday, second and fourth are BUSY-TENTATIVE and one hour long. | N | N | P | N | N | | | | F | | N | P
-| 7.1.4 | Verify two FREEBUSY periods for Thursday. | N | N | P | N | N | | | | | | N | P
+| 7.1.1 | Verify two `FREEBUSY` periods for Monday, the second is `BUSY-TENTATIVE`. | N | N | P | N | N | | | | F | | N | P
+| 7.1.2 | Verify two `FREEBUSY` periods for Tuesday. | N | N | P | N | N | | | | F | | N | P
+| 7.1.3 | Verify four `FREEBUSY` periods for Wednesday, second and fourth are `BUSY-TENTATIVE` and one hour long. | N | N | P | N | N | | | | F | | N | P
+| 7.1.4 | Verify two `FREEBUSY` periods for Thursday. | N | N | P | N | N | | | | | | N | P
 | 7.1.5 | | N | N | P | N | N | | | | F | | N | P
 | | | N | N | | N | N | | | | | | N | P
 | | | N | N | | N | N | | | | | | N | P
 | | | N | N | | N | N | | | | | | N | P
-| 7.1.5 | Verify two FREEBUSY periods for Friday. | N | N | P | N | N | | | | | | N | P
+| 7.1.5 | Verify two `FREEBUSY` periods for Friday. | N | N | P | N | N | | | | | | N | P
 | 8 h| Scheduling | | | | | | | | | | | |
 | Setup | Three user accounts user1 (role Organizer), user2 (role Attendee), user3 (role Attendee) provisioned with suitable principal properties for calendar home, inbox, outbox and user addresses. | N | P | N | N | N | | | | | | N |
 | 8.1 | Organizer (user1) sends non-recurring message invite for Monday at 9am (1 hour) to each attendee. Verify that each attendee Inbox receives a copy of the invite. | N | P | N | N | N | | | | | | N |

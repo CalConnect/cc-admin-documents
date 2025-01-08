@@ -107,10 +107,10 @@ information and discovery issues.
 
 == Conventions Used in This Document
 
-The key words "MUST", "MUST NOT", "REQUIRED",
-"SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT",
-"RECOMMENDED", "NOT RECOMMENDED", "MAY", and
-"OPTIONAL" in this document are to be interpreted as
+The key words "`MUST`", "`MUST NOT`", "`REQUIRED`",
+"`SHALL`", "`SHALL NOT`", "`SHOULD`", "`SHOULD NOT`",
+"`RECOMMENDED`", "`NOT RECOMMENDED`", "`MAY`", and
+"`OPTIONAL`" in this document are to be interpreted as
 described in <<RFC2119>>.
 
 === Glossary of terms
@@ -124,7 +124,7 @@ The read URL is used to get Freebusy information for a
 single user. (Note this document does not define a
 read URL to get the Freebusy information for a group.)
 A client or user could use this URL by putting it into an
-`FBURL` property of a VCARD as defined in
+`FBURL` property of a `VCARD` as defined in
 <<RFC2739,section=2.3.1>>, or it could be published in a `calFBURL`
 attribute of an LDAP directory record for a user as
 defined in <<RFC2739,section=2.4.4.2>>.
@@ -144,16 +144,16 @@ iCalendar components, as defined by <<RFC2445>>. Such
 a `VFREEBUSY` iCalendar component is not meant to
 conform to the requirements of `VFREEBUSY`
 components in <<RFC2446>>. The `VFREEBUSY`
-component SHOULD conform to section "4.6.4
+component `SHOULD` conform to section "4.6.4
 Free/Busy Component" of <<RFC2445>>. The
-`VFREEBUSY` component SHOULD NOT have a METHOD
-property, a client MUST ignore the METHOD property,
-if one is present. The `VFREEBUSY` component MAY
+`VFREEBUSY` component `SHOULD NOT` have a `METHOD`
+property, a client MUST ignore the `METHOD` property,
+if one is present. The `VFREEBUSY` component `MAY`
 follow the publish setting in regards to the `ORGANIZER`
-field. A client SHOULD ignore the `ORGANIZER` field.
+field. A client `SHOULD` ignore the `ORGANIZER` field.
 Since a Freebusy URL can only refer to a single user, a
 client will already know how to match the requested
-`VFREEBUSY` component to a user. A server MUST only
+`VFREEBUSY` component to a user. A server `MUST` only
 return a single `VFREEBUSY` component.
 
 == URL Query Parameters
@@ -185,7 +185,7 @@ range.
 
 Format:: A profile of an <<RFC3339>> Date/Time.
 Fractional time is not supported. The server
-MUST support the expanded version e.g.
+`MUST` support the expanded version e.g.
 2007-01-02T13:00:00-08:00
 It is up to the server to interpret local
 date/times.
@@ -264,7 +264,7 @@ The server is free to ignore the start, end and period
 parameters. It is recommended that the server return
 at least 6 weeks of data from the current day.
 
-A client MUST check the time range in the `VFREEBUSY`
+A client `MUST` check the time range in the `VFREEBUSY`
 response as a server may return a different time range
 than the requested range.
 
@@ -272,7 +272,7 @@ than the requested range.
 
 These are the recognized parameters for the Freebusy
 read URL which deal with the identity of the requestor
-and the user for whom freebusy data is being
+and the user for whom Freebusy data is being
 requested and the security of the transaction. These
 parameters may be encoded in a URL or as query
 parameters as defined in <<section8>>
@@ -318,18 +318,18 @@ token.)
 
 == HTTP Operations
 
-The server SHOULD return an Etag response header
-for a successful GET request targeting a Freebusy read
-URL. Clients MAY use the Etag response header value
-to do subsequent "conditional" GET requests that will
+The server `SHOULD` return an Etag response header
+for a successful `GET` request targeting a Freebusy read
+URL. Clients `MAY` use the ETag response header value
+to do subsequent "conditional" `GET` requests that will
 avoid re-sending the Freebusy data again if it has not
 changed.
 The read URL is only valid when used with an HTTP
-GET <<RFC2616>>.
+`GET` <<RFC2616>>.
 
 === Response Codes
 
-Below are the typical status codes returned by a GET
+Below are the typical status codes returned by a `GET`
 request targeting a Freebusy URL. Note that other
 HTTP status codes not listed here might also be
 returned by a server.
@@ -527,28 +527,28 @@ token approach isn't perfect security; a token could
 become more widely distributed than intended or
 anticipated.
 
-Servers SHOULD provide a means for token values to
+Servers `SHOULD` provide a means for token values to
 be automatically or manually expired.
-Services SHOULD consider obfuscating the userid in a
-Freebusy URL. A service SHOULD prevent a client from
+Services `SHOULD` consider obfuscating the userid in a
+Freebusy URL. A service `SHOULD` prevent a client from
 probing for vaild userids which might reveal private
-infomation about users such as their email address. A
-server MAY return an HTTP 404 error rather than an
+information about users such as their email address. A
+server `MAY` return an HTTP 404 error rather than an
 HTTP 403 error when the requester does not have
 permission to view the Freebusy information of the
 requested user.
 
-Servers MAY support HTTP Authentication <<RFC2616>>
+Servers `MAY` support HTTP Authentication <<RFC2616>>
 for access to the Freebusy URL content.
 
 HTTP protocol transactions are sent in the clear over
 the network unless protection from snooping is
 negotiated. This can be accomplished by use of TLS, as
 defined in <<RFC2818>>. In particular, HTTP Basic
-authentication, as defined in <<RFC2616>>, MUST NOT
+authentication, as defined in <<RFC2616>>, `MUST NOT`
 be used unless TLS is in effect.
 
-Servers MUST take adequate precautions to ensure
+Servers `MUST` take adequate precautions to ensure
 that clients cannot consume excessive server
 resources (CPU, memory, disk, etc.) through
 intentionally malicious requests. For example, a
@@ -570,7 +570,7 @@ when they are the same type. Security considerations
 described in iCalendar <<RFC2445>> and iTIP
 <<RFC2446>> are also applicable.
 
-== Acknowledgements
+== Acknowledgments
 
 The author would like to thank the members of the
 Calendaring and Scheduling Consortium Freebusy

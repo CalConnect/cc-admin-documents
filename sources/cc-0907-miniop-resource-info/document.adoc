@@ -125,7 +125,7 @@ The congruence between vCard and iCalendar, and the loci that provide the possib
 recommendation is based, are found in the attributes of the `ATTENDEE` iCalendar property (see
 Appendix for the relevant sections of the Calsify and vCard drafts):
 
-* We observe that an attribute of the `ATTENDEE` property is DIR. DIR is similar to vCard's
+* We observe that an attribute of the `ATTENDEE` property is `DIR`. `DIR` is similar to vCard's
 `SOURCE` attribute in that both store a URI value that points to a directory entry.
 * We observe also that iCalendar `CUTYPE` and vCard `KIND` play similar roles, being the
 classification of records in order to differentiate standard users from other types (e.g. group,
@@ -312,7 +312,7 @@ directory entry reference property parameters can be specified on this property.
 
 ...
 
-Description:: This property MUST only be specified within calendar components to specify participants,
+Description:: This property `MUST` only be specified within calendar components to specify participants,
 non-participants and the chair of a group scheduled calendar entity. The property is specified within an
 "`EMAIL`" category of the "`VALARM`" calendar component to specify an email address that is to receive
 the email type of iCalendar alarm.
@@ -329,7 +329,7 @@ Format Definition:: This property parameter is defined by the following notation
 
 Description:: This parameter can be specified on properties with a `CAL-ADDRESS` value type. The
 parameter specifies a reference to the directory entry associated with the calendar user specified by the
-property. The parameter value is a URI. The URI parameter value MUST be specified in a quoted-string.
+property. The parameter value is a URI. The URI parameter value `MUST` be specified in a quoted-string.
 
 [example]
 ====
@@ -380,7 +380,7 @@ ATTENDEE;CUTYPE=GROUP:mailto:ietf-calsch@example.org
 [appendix]
 == draft-ietf-vcarddav-vcardrev-03
 
-7.1.3. SOURCE
+7.1.3. `SOURCE`
 
 Purpose:: To identify the source of directory information contained in the content type.
 
@@ -409,7 +409,7 @@ Purpose:: To specify the kind of object the vCard represents.
 Value type:: A single text value.
 
 Special notes:: The value may be one of: "individual" for a single person, "group" for a group of people,
-"org" for an organization, an x-name or an iana-token. If this property is absent, "individual" MUST be
+"org" for an organization, an x-name or an iana-token. If this property is absent, "individual" `MUST` be
 assumed as default.
 
 [example]

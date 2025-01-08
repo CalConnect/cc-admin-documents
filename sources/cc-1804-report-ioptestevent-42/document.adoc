@@ -67,7 +67,7 @@ recurrences.
 
 The new server side subscriptions specification was discussed and the Open-Xchange
 members carried out a preliminary implementation of the specification. This
-specification allows DAV clients to POST subscription requests to the server which
+specification allows DAV clients to `POST` subscription requests to the server which
 then manages the synchronization of the data. Open-Xchange proposed some additions be
 added: a "refresh now" option for clients and persisting and signaling account errors
 to clients. These most likely will be added to the final specification.
