@@ -1,11 +1,23 @@
-== CalConnect II -- April, 2001
+= CalConnect II -- April, 2001
+:docnumber: 0101
+:copyright-year: 2001
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2001-04-13
+:published-date: 2001-04-13
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
 
-=== Introduction
+== Introduction
 
 IETF CALSCH Working Group Interoperability Testing . Held Wed. April 11, 2001 - Fri. April
 13, 2001 - 8:30 a.m. - 6:00 p.m.
 
-This second interop test was held at Stanford University in Palo Alto, CA . Stanford gratiously
+This second interop test was held at Stanford University in Palo Alto, CA. Stanford gratiously
 donated the use of their facilities and network in order to help further the movement of our
 standards. This interop focused on iCalendar, iTIP and iMIP. The testing matrix can be found
 on www.calsch.org.
@@ -14,7 +26,7 @@ The first day Pat Egen, IETF CALSCH working group co-chair introduced everyone a
 established the ground rules as well as let everyone know the network logistics within Stanford
 and to her server at www.egenconsulting.com.
 
-==== Participants
+=== Participants
 
 The participants were:
 
@@ -26,31 +38,31 @@ The participants were:
 * Malika Parekh, Netscape: malika@netscape.com
 * Pat Egen pregen@egenconsulting.com
 
-==== Products and Releases Tested
+=== Products and Releases Tested
 
-===== Steltor
+==== Steltor
 
 * CorporateTime Server 6.0 Alpha
 * CorporateTime Outlook Connector 3.0
 * CorporateTime Native Client 6.0 Alpha
 * CorporateTime iMIP/iTIP Alpha Helper Application
 
-===== Lotus/Iris
+==== Lotus/Iris
 
 * Lotus Domino and Notes Release RNext
 
-===== iPlanet
+==== iPlanet
 
 * Calendar Server Version 5.next
 
-=== General Summary
+== General Summary
 
 These notes are "homogenized" - in other words, names of vendors have been removed so you
 can't tell who is who. Once the draft moves forward, we will post which vendor supports which
 component. For purposes of this document, I will call them Vendor 1, Vendor 2 and Vendor 3. I
 have also included a section with general notes as related by each vendor.
 
-==== Vendor 1 notes/results
+=== Vendor 1 notes/results
 
 Overall there was good interoperability. In general the vendors were able to interoperate. They
 were able to invite, reply, reschedule, and cancel to single instance meetings. There was some
@@ -85,7 +97,7 @@ some interoperability was done with Outlook.
 NOTE: "no" indicates that a vendor was unable to support a feature due to not implementing it,
 bugs, or due to misinterpretation of the RFCs
 
-===== Other Things That Worked
+==== Other Things That Worked
 
 * Vendor1 was able to invite using recurrence rules
 * Vendor2 was able to delegate
@@ -95,14 +107,14 @@ What did not work:
 
 * Vendor 2 was unable to support more than one instance on the same day
 * No one supported sending floating time events
-* Vendor 2 did not support event durations less than fifteen minutes
+* Vendor 2 did not support event duration less than fifteen minutes
 * Vendor 3 did not support slash format in ``RDATE``s
-* Vendor 2 was unable to send a response if RSVP was false (point for future discussion about
+* Vendor 2 was unable to send a response if `RSVP` was false (point for future discussion about
 meaning of RSVP)
 * Vendor 3 did not escape any of their special characters
 * Some of Vendor 2's lines were longer than permitted in iCalendar
 
-==== Vendor 2 notes/results
+=== Vendor 2 notes/results
 
 [%unnumbered,options=header]
 |===
@@ -218,9 +230,9 @@ meaning of RSVP)
 | `RRULE` repeating no exceptions | yes | |
 | `RRULE` with `EXRULE` | will not create | |
 | `RRULE` with ``EXDATE``s | will not create | |
-| RDATE repeating no exceptions | yes | |
-| RDATES with `EXRULE` | will not create | |
-| RDATES with ``EXDATE``s | will not create | |
+| `RDATE` repeating no exceptions | yes | |
+| ``RDATE``s with `EXRULE` | will not create | |
+| ``RDATE``s with ``EXDATE``s | will not create | |
 | Reschedule | - | - | -
 | Non repeating | yes | |
 | Repeating all | yes | |
@@ -270,7 +282,7 @@ The only other interesting problem was distinguishing between removing a person 
 From my point of view we did not end up doing a lot of testing. I am including a table of what
 we support and what we tested. The table is not completed except for `EVENTS`
 
-Other Issues encountered while doing ICAL testing at CalConnect2.
+Other Issues encountered while doing iCAL testing at CalConnect2.
 
 . Sent to a Bcc user via Location Doc: "Through xxxx Server/MIME format"; Person Doc:
 "Prefers MIME". The Bcc user receives an invitation with all of the Typical Workflow
@@ -285,18 +297,18 @@ it it will recreate the entry.
 . Custom repeats from Vendor 3 (``RDATE``s) only display the first date in the "Repeat Options"
 dialog in invitee's Calendar entry.
 
-==== Vendor 3 Results
+=== Vendor 3 Results
 
 Comments from Vendor 3.
 
 . Vendor 2 and Vendor 1 can retrieve `EVENT REQUEST` messages from Vendor 3
 Server - But they would prefer that the Vendor 3 IMIP messages come in the
 "multipart/mixed" MIME format. We have included this item in our bug list.
-. We tried to import a REPLY from the other vendors. We were able to import Vendor 2's
-REPLY . However, we could not import Vendor 1's `REPLY` messages. This was
+. We tried to import a `REPLY` from the other vendors. We were able to import Vendor 2's
+`REPLY`. However, we could not import Vendor 1's `REPLY` messages. This was
 because they were inserting the Recurrence-ID in the event `REPLY` message even
-though it was a non-recurring `VEVENT`. Also, we had a bug in handling RSVP. We
-were saving the change in the RSVP value of the attendee, which caused a UI bug. (In
+though it was a non-recurring `VEVENT`. Also, we had a bug in handling `RSVP`. We
+were saving the change in the `RSVP` value of the attendee, which caused a UI bug. (In
 our User Interface, the attendee was moved to an `INFORM`)
 . Vendor 1 and 2 can receive our recurring `EVENT REQUEST` invitations.
 . We can import Vendor 1 and 2's recurring `REPLY` messages. However, we get the same
@@ -317,7 +329,7 @@ What about others:
 The Vendor 3 team is working on fixing CalConnect-related bugs and will include the fixes in
 future releases.
 
-==== Chair Comments
+=== Chair Comments
 
 This interop compared to the first one was a world of difference. Many many more things
 worked and we were able to spend more time testing elements.
