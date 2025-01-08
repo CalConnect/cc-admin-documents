@@ -62,8 +62,8 @@ h| iCalendar Elements 5+| | 54% |
 | 4.3.10.c Recurrence Rule | 8 | 5 | 4 | 2 | 19 | 42% | Issues related to use of timezones in `UNTIL`: some only handle UTC. One does `DATE` only not `DATETIME` in `UNTIL`. One does not export `UNTIL` any longer due to legacy and server compatibility issues, but attempts to read `UNTIL` as best it can.
 | 4.3.10.d Recurrence Rule | 12 | 3 | 2 | 2 | 19 | 63% | `BYSETPOS` not fully supported. No errors for incorrect data.
 | 4.6.1.a Event Component | 15 | 0 | 1 | 2 | 18 | 83% | Some `PROPS` not stored, Only last value used if specified more than once. One vendor does not export geo and url.
-| 4.6.1.b Event Component | 12 | 0 | 4 | 2 | 18 | 67% | Some do not support `EXRULE`, RDATE etc. Some ``PROP``s not stored. Only first instance of `PROP` used. One does not export comment, exrule, rstatus, and related. Some only support zero or one `RRULE`, and no exrules.
-| 4.6.2.a To-do Component | 11 | 3 | 2 | 2 | 18 | 61% | Some do not support `TODO`. Some PROPS not stored.
+| 4.6.1.b Event Component | 12 | 0 | 4 | 2 | 18 | 67% | Some do not support `EXRULE`, `RDATE` etc. Some ``PROP``s not stored. Only first instance of `PROP` used. One does not export comment, exrule, rstatus, and related. Some only support zero or one `RRULE`, and no exrules.
+| 4.6.2.a To-do Component | 11 | 3 | 2 | 2 | 18 | 61% | Some do not support `TODO`. Some `PROPS` not stored.
 | 4.6.2.b To-do Component | 9 | 3 | 4 | 2 | 18 | 50% | Some do not support `EXRULE`, `RDATE` etc. Some do not support `TODO`. Some ``PROP``s not stored. Only first instance of `PROP` used. Some do not support `RRULE` and `EXRULE` for `VTODO`.
 | 4.6.3.a Journal Component | 4 | 7 | 5 | 2 | 18 | 22% | Most do not generate `VJOURNAL`. Some consume it. Some ignore it.
 | 4.6.3.b Journal Component | 3 | 9 | 3 | 2 | 17 | 18% | Most do not generate `VJOURNAL`. Some consume it. Some ignore it.
@@ -86,7 +86,7 @@ h| iCalendar Elements 5+| | 54% |
 | 4.8.7.4.a Sequence Number | 7 | 3 | 5 | 2 | 17 | 41% | One changes `SEQUENCE` when other ``PROP``s change. Some require new event for change. Some do not increment sequence of instance when start or end of instance is changed.
 h| iTIP Elements 5+| | 18% |
 | 3.2.4.a `VEVENT` `CANCEL` | 9 | 4 | 2 | 2 | 17 | 53% | Some do not support. One generates OK, but does not consume it OK.
-| 3.2.4.b `VEVENT` `CANCEL` | 6 | 7 | 2 | 2 | 17 | 35% | Some do not support. One generates OK, but does not consume it OK. Some use EXDATE for cancellations.
+| 3.2.4.b `VEVENT` `CANCEL` | 6 | 7 | 2 | 2 | 17 | 35% | Some do not support. One generates OK, but does not consume it OK. Some use `EXDATE` for cancellations.
 | 3.2.4.c `VEVENT` `CANCEL` | 2 | 8 | 5 | 2 | 17 | 12% | Some do not support. One generates OK, but does not consume it OK. Some use `EXDATE` for cancellations. Some only handle single instance or the entire set. Some do not support `RANGE` in `RECURRENCE-ID`.
 | 3.4.5.a `VTODO` `CANCEL` | 3 | 9 | 3 | 2 | 17 | 18% | Some do not support. Some do not support `iTIP` + `VTODO`. One generates OK, but does not consume it OK.
 | 3.4.5.b `VTODO` `CANCEL` | 3 | 9 | 3 | 2 | 17 | 18% | Some do not support. Some do not support `iTIP` + `VTODO`. One generates OK, but does not consume it OK.
@@ -185,7 +185,7 @@ that falls on a weekend
 can be shifted to a weekday, either the preceding Friday, the following Monday, or
 whichever is closer.
 There is no way to sufficiently represent this in iCalendar. Hypothetically, a
-complex series of RRULES can
+complex series of ``RRULE``s can
 come close, but in cases where the adjustment would cross a month boundary there is
 no recourse.
 
@@ -274,7 +274,7 @@ functionality will be provided by handset manufacturers.
 
 Vendor has created a toolkit, which at its lowest level is built on an RFC 2425
 encoder/decoder,
-so it's possible to encode ANYTHING. An app built on this toolkit may encode
+so it's possible to encode `ANYTHING`. An app built on this toolkit may encode
 according to the
 `MUST` rules, or may not, so many of the questions don't really apply. You can do it
 right, or you can do

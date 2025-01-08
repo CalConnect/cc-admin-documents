@@ -218,7 +218,7 @@ richer experience for some clients.
 Vendor 7a:
 
 * No major surprises.
-* We do not implement RDATEs on invites/updates/reschedules. Now (incorrectly) says 'not a
+* We do not implement ``RDATE``s on invites/updates/reschedules. Now (incorrectly) says 'not a
 valid iCal file'.
 * Does not handle rich content in description.
 * There was a bug found with counter-proposals of a single instance of a repeat set.
@@ -280,7 +280,7 @@ stopped testing prematurely and because we have some bugs to fix.
 Vendor 2:
 
 * Vendor 2 testing worked fairly well, with most problems encountered inherited from Outlook.
-* Vendor 2 does not implement RDATEs on invites/updates/reschedules and this causes major
+* Vendor 2 does not implement ``RDATE``s on invites/updates/reschedules and this causes major
 data loss.
 * Vendor 2 does not handle rich content in description.
 * Cancellations from Vendor 2 do not show as such in Vendor 3 (`STATUS:CANCELLED` problem).

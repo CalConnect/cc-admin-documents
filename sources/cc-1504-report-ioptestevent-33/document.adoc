@@ -75,15 +75,15 @@ testing against those services. In particular they were carrying out final testi
 CalDAV link which is now working well with fruux, iCloud and 1&1. Additionally:
 
 * They improved their detection of the primary calendar status through CalDAV and are now
-filtering out non-VEVENT calendar collections properly
+filtering out non-`VEVENT` calendar collections properly
 * They fixed a number of URL illegal character bugs and worked with fruux to signal their
 fruux interface
-* They tuned the PROPFIND calls for 1&1 and identified a missing slash issue
+* They tuned the `PROPFIND` calls for 1&1 and identified a missing slash issue
 * They built a new link through to iCloud and logged a bug to do with descriptions on
-MKCALENDAR calls
+`MKCALENDAR` calls
 
 The other big step forward for YouCanBook.me was talking to everyone about the main status
-property at the VEVENT level - in particular for "tentative" status. This is something they hope to
+property at the `VEVENT` level - in particular for "tentative" status. This is something they hope to
 use, but need more support from clients. They expect to file bug reports or feature requests on this
 topic in the coming months. This, of course, is a feature which will be of use to many others.
 

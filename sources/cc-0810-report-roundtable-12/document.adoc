@@ -70,8 +70,8 @@ that may relate to CalDAV.
 === TC FREEBUSY
 
 TC FREEBUSY reviewed its work on Freebusy URL. Key issues related to
-whether FBURL would be used to publish information, as well as meeting events and interactions
-with CalDAV. Going forward the TC will focus on developing a formal FBURL specification.
+whether `FBURL` would be used to publish information, as well as meeting events and interactions
+with CalDAV. Going forward the TC will focus on developing a formal `FBURL` specification.
 
 === TC IOPTEST
 

@@ -139,7 +139,7 @@ the summer unless there is some need to keep it available.
 
 Although it is too early to identify specific areas for collaboration and work, it is clear that CalConnect's
 work in scheduling, in particular the applicability of some of the protocols we are developing such as
-VPOLL and VAVAILABILITY to such needs as machine-to-machine scheduling, are extremely pertinent,
+`VPOLL` and `VAVAILABILITY` to such needs as machine-to-machine scheduling, are extremely pertinent,
 and as our understanding increases we look forward to making these tools more usable and available to
 the Health Care community. Of course, involvement by interested members of the Health Care community
 in this work will be essential both for understanding and resources and we invite members of that Health

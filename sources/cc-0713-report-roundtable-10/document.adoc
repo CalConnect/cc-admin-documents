@@ -87,8 +87,8 @@ Control, Alarm Management and other scheduling extensions.
 
 === TC EVENTPUB
 
-TC EVENTPUB reviewed the current state of the VVENUE proposal,
-generating a great deal of discussion concerning possible intersections between VVENUE and the
+TC EVENTPUB reviewed the current state of the `VVENUE` proposal,
+generating a great deal of discussion concerning possible intersections between `VVENUE` and the
 potential work on vCard. The TC also reviewed the current status of work on the "eventmap"
 event sharing proposal.
 
@@ -116,8 +116,8 @@ reflected in the Mobile IOP test suite.
 === TC REALTIME
 
 TC REALTIME has been reactivated since Roundtable IX, and has been
-meeting alternately with TC FREEBUSY to work on the VAVAILABILITY proposal and the
-Technology Previews at this Roundtable. Going forward the TC will work on the REALTIME
+meeting alternately with TC FREEBUSY to work on the `VAVAILABILITY` proposal and the
+Technology Previews at this Roundtable. Going forward the TC will work on the `REALTIME`
 messaging protocol, Discovery, and Authentication and Authorization.
 
 === TC TIMEZONE
@@ -149,7 +149,7 @@ collated and prepared.
 
 === BOFS
 
-BOF topics included XML for iCalendar representation, VVENUE and VALARM follow
+BOF topics included XML for iCalendar representation, `VVENUE` and `VALARM` follow
 
 === New Initiatives
 

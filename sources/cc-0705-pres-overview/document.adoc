@@ -514,10 +514,10 @@ review for submission
 
 * Proposed extensions (additions) to the revised
 iCalendar when it is complete
-* VAVAILABILITY
+* `VAVAILABILITY`
 ** New iCalendar component allowing publication of available
 and unavailable time periods associated with calendar user
-* VVENUE
+* `VVENUE`
 ** New iCalendar component allowing the specification of
 structured location data for publishing event information
 
@@ -542,7 +542,7 @@ aggregators
 * Act as "real world" input to CalDAV Specification authors
 (two of three are members of TC CALDAV)
 * Develop CalDAV testing matrices for TC IOPTEST
-* Develop VAVAILABILITY with TC FREEBUSY
+* Develop `VAVAILABILITY` with TC FREEBUSY
 * Develop use cases and requirements for CalDAV
 Scheduling
 * *CalDAV scheduling extensions (discovery, auth/auth, etc.)*
@@ -552,7 +552,7 @@ Scheduling
 * CalDAV testing matrices for Interoperability testing
 * CalDAV Use Cases and Requirements
 * CalDAV Scheduling Requirements
-* *VAVAILABILITY extension to iCalendar*
+* *`VAVAILABILITY` extension to iCalendar*
 
 === TC EVENTPUB
 
@@ -574,8 +574,8 @@ consume event information on websites, analogous to
 
 ==== Products
 
-* VVENUE extension to iCalendar
-* *EVENTMAP proposal under development*
+* `VVENUE` extension to iCalendar
+* *`EVENTMAP` proposal under development*
 
 === TC FREEBUSY
 
@@ -593,7 +593,7 @@ Freebusy Challenge in 2006
 meeting in July 2006
 * Assist Boeing to "productize" components used in the demo as well
 as those being further developed by Boeing
-* *Addressing "office hours"/"availability" -- joint VAVAILABILITY
+* *Addressing "office hours"/"availability" -- joint `VAVAILABILITY`
 project with TC CALDAV*
 * *Standardize and simplify FREEBUSY URL*
 

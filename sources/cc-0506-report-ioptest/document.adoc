@@ -65,7 +65,7 @@ They also found the following testing the script prior to the interop. They trie
 to run the scripts against and ran into another problem. The guid is supposed to be globally unique but
 isn't. As a first pass he tried changing line 104 to:
 
-T_UIDPREFIX="CalConnectCalDAVTest.${T_USERNAME1}."
+`T_UIDPREFIX="CalConnectCalDAVTest.${T_USERNAME1}."`
 
 We should probably add a timestamp or something.
 
@@ -81,8 +81,8 @@ The cleanup doesn't have an .ics suffix on the names. Is this to test the server
 in calendaring and scheduling information may be suffixed by ".ics", Does the ".ics" form part of the
 name.
 
-The tester's iCalendar parser is failing with the MAIL_TO value. All the RFC examples show mailto
-and rfc1738 only mentions mailto. This was fixed and the script updated.
+The tester's iCalendar parser is failing with the `MAIL_TO` value. All the RFC examples show mailto
+and RFC1738 only mentions mailto. This was fixed and the script updated.
 
 A new matrix was provided that has all the Musts/Shoulds/Mays and Must Nots/Should Nots listed for
 the CALDAV draft. Several of the participating vendors filled out this sheet and the results are
@@ -106,9 +106,9 @@ the test scenarios.
 
 The following are some key notes from the CALDAV and iCalendar, iMIP and iTIP .
 
-During testing of the icalendar scenarios, one vendor was able to:
+During testing of the iCalendar scenarios, one vendor was able to:
 
-* PUBLISH and process an event to/from all vendors
+* `PUBLISH` and process an event to/from all vendors
 * send/receive from all vendors a single without attachments.
 * send all vendors a single with one attachment (bmp).
 * send all vendors a single with two attachments (txt and bmp).
@@ -122,18 +122,18 @@ During testing of the icalendar scenarios, one vendor was able to:
 * send to GROUP of vendors.
 * send all vendors a single Invite with an RnR.
 * send a single Invite with Chair role to all vendors.
-* send a single Invite with REQ-PARTICIPANT role to all vendors.
-* send a single Invite with OPT-PARTICIPANT role to all vendors.
-* send a single Invite with NEEDS-ACTION.
-* send an ACCEPTED out.
-* send a DECLINED out.
-* send a TENTATIVE out.
+* send a single Invite with `REQ-PARTICIPANT` role to all vendors.
+* send a single Invite with `OPT-PARTICIPANT` role to all vendors.
+* send a single Invite with `NEEDS-ACTION`.
+* send an `ACCEPTED` out.
+* send a `DECLINED` out.
+* send a `TENTATIVE` out.
 * delegate an invite.
-* send with RSVP=TRUE
-* send with RSVP=FALSE
-* send out with DELEGATED-TO
-* send out with DELEGATED-FROM
-* send a single event with SENT-BY to all vendors
+* send with `RSVP=TRUE`
+* send with `RSVP=FALSE`
+* send out with `DELEGATED-TO`
+* send out with `DELEGATED-FROM`
+* send a single event with `SENT-BY` to all vendors
 * send with a CN.
 
 During testing of accepting and declining invitations, they sent a vendor a single event. The vendor
@@ -148,59 +148,59 @@ items where they were successful in sending were:
 * Display only and email only alarms on Non-repeating events
 * Under Partstat they can handle Needs-Action, Accept, Decline and Tentative with two vendors.
 * They can send accept an invitation and reschedule of a meeting.
-* They can RSVP to one vendor but not to another.
+* They can `RSVP` to one vendor but not to another.
 * They can send and receive chair, req-participant, opt-participant and non-participant on Roles.
 
 Specific issues we came across in testing one client:
 
 * URL quoting was badly broken (Having '@' in some of the calendar paths was very useful!).
-* ICALENDAR interoperability issues within the context of ical4j
-* Some code that tries to tell whether a resource exists on the server via HTTP OPTIONS. After
+* iCALENDAR interoperability issues within the context of ical4j
+* Some code that tries to tell whether a resource exists on the server via HTTP ``OPTION``s. After
 twiddling it to try to get it to work on 5 different servers (and some non-CalDAV servers elsewhere),
-the tester decided to re-factor it to use PROPFIND where possible.
+the tester decided to re-factor it to use `PROPFIND` where possible.
 * Finally, running through some CalDAV tests helped isolate display issues in vendor apps. This has
 nothing to do with interoperability per se, but it's a serendipitous side-effect!
 
 Some problems found (in all products):
 
-* ICAL: Escaping of some characters was not done properly. One vendor did not escape all CR in a
+* iCAL: Escaping of some characters was not done properly. One vendor did not escape all CR in a
 description property.
-* ICAL: Some recurring meetings created by some products did not specify a time zone which is
-required by RFC2445. According to the draft, when used with a recurrence rule, the "DTSTART" and
-"DTEND" properties MUST be specified in local time and the appropriate set of "VTIMEZONE"
-calendar components MUST be included. For detail on the usage of the "VTIMEZONE" calendar
-component, see the "VTIMEZONE" calendar component definition. About local time - the date with
+* iCAL: Some recurring meetings created by some products did not specify a time zone which is
+required by RFC2445. According to the draft, when used with a recurrence rule, the "`DTSTART`" and
+"`DTEND`" properties `MUST` be specified in local time and the appropriate set of "`VTIMEZONE`"
+calendar components `MUST` be included. For detail on the usage of the "`VTIMEZONE`" calendar
+component, see the "`VTIMEZONE`" calendar component definition. About local time - the date with
 local time form is simply a date-time value that does not contain the UTC designator nor does it
 reference a time zone.
-* CalDAV: If-None-Match and if-match precondition bugs. This is a bug on a caldav server where ifnone-
-match=* was not handled properly and a bug on a caldav client where if-none-mach=* was set
+* CalDAV: If-None-Match and if-match precondition bugs. This is a bug on a caldav server where
+`if-none-match=*` was not handled properly and a bug on a caldav client where `if-none-mach=*` was set
 when modifying an event.
 * CalDAV: Interop problems with one vendor's WebDAV interface making it unable to create events
 on "strict" CalDAV servers. Their WebDAV interface does a lot of things when creating a file, the
-most problematic being the PUT of an empty file before doing the actual put of the real file. A
+most problematic being the `PUT` of an empty file before doing the actual put of the real file. A
 CalDAV server enforcing the validity of the ics files being created will never accept that an empty ics
-file be created. Also it seems to be attempting to create some ".<filename>" hidden files without
+file be created. Also it seems to be attempting to create some "`.<filename>`" hidden files without
 changing the file extension.
-* ICAL: EXDATE handling problems - Some vendors were not removing occurrences cancelled with
+* iCAL: `EXDATE` handling problems - Some vendors were not removing occurrences cancelled with
 exdate
-* ICAL: Handling problems with meetings without endtime or duration specified. Some vendors
-always expected to have either a DURATION or a DTEND in a VEVENT component. RFC2445
-clearly specifies that these are valid events. From the RFC, the description is: "Within the "VEVENT"
+* iCAL: Handling problems with meetings without endtime or duration specified. Some vendors
+always expected to have either a `DURATION` or a `DTEND` in a `VEVENT` component. RFC2445
+clearly specifies that these are valid events. From the RFC, the description is: "Within the "`VEVENT`"
 calendar component, this property defines the start date and time for the event. The property is
-REQUIRED in "VEVENT" calendar components. Events can have a start date/time but no end
+`REQUIRED` in "`VEVENT`" calendar components. Events can have a start date/time but no end
 date/time. In that case, the event does not take up any time."
-* ICAL: Handling problems when VTIMEZONE defined after VEVENT components. A vendor
-couldn't import events where the VTIMEZONE component was defined after the VEVENT
-component which is a valid vcalendar object.
-* ICAL: Matching of recurrence-id to RDATEs problems. A vendor was not doing a proper "union"
-with rdates matching dates of a rule (The occurrences would appear as 2 occurrences instead of one.
+* iCAL: Handling problems when `VTIMEZONE` defined after `VEVENT` components. A vendor
+couldn't import events where the `VTIMEZONE` component was defined after the `VEVENT`
+component which is a valid `VCALENDAR` object.
+* iCAL: Matching of recurrence-id to ``RDATE``s problems. A vendor was not doing a proper "union"
+with ``RDATE``s matching dates of a rule (The occurrences would appear as 2 occurrences instead of one.
 
-One vendor can receive our ical correctly, but they can't do a REPLY. This vendor sends us ical
-stream, but we never receive any ical stream. This is because they sent us a multi-event ical (an initial
-rule event plus an update event for same uid within single icalendar stream), which we don't
+One vendor can receive our iCal correctly, but they can't do a REPLY. This vendor sends us iCal
+stream, but we never receive any iCal stream. This is because they sent us a multi-event iCal (an initial
+rule event plus an update event for same uid within single iCalendar stream), which we don't
 understand and we don't handle it completely.
 
-One vendor sent an ical stream with no DTEND. We can parse it, but our client can't handle an event
+One vendor sent an iCal stream with no `DTEND`. We can parse it, but our client can't handle an event
 without enddatetime. This is in the schedule to enhance this issue for our next release.
 
 We can't handle EXDATEs correctly. In the schedule to fix for next release.
@@ -212,27 +212,27 @@ One vendor was busy with CalDAV and roundtable, so we couldn't do much interops 
 Another thing that we've run into in the Interop is that it's not entirely clear from at least cursory
 readings whether RRULEs are permitted to be in Zulu time.
 
-Events were created and modified with attendees not in one vendor's calendar server, using mailto:<email
-address>. One vendor's calendar server sent iTip messages to the attendees.
+Events were created and modified with attendees not in one vendor's calendar server, using
+`mailto:<email address>`. One vendor's calendar server sent iTip messages to the attendees.
 
 Similarly users on other calendar servers invited another vendor's calendar server Users or published
-events to the calendar server users by sending e-mail and ical data. The data received was imported.
+events to the calendar server users by sending e-mail and iCal data. The data received was imported.
 After importing the requested events, replies to events were sent from the Calendar Server via iTip
 messages to the organizer in appropriate cases.
 
 The main problem area for us was detected to be timezone and recurrence related. All other
-implemented feature testing went fine. We do not send VTIMEZONE information or timezone tags in
-a form specified by the standards in our iTip, making it hard for the consumers to interpret our rrules or
-recurrenceids right.
+implemented feature testing went fine. We do not send `VTIMEZONE` information or timezone tags in
+a form specified by the standards in our iTip, making it hard for the consumers to interpret our ``RRULE``s or
+``RECURRENCEID``s right.
 
 Similarly we do not parse the timezone information provided in iTips we receive right, making
-consumption of others' iTips correctly, hard. We do not do a proper union of rdates and the dates got
-by expansion of rrule resulting in multiple instances of really the same instance at times.
+consumption of others' iTips correctly, hard. We do not do a proper union of ``RDATE``s and the dates got
+by expansion of `RRULE` resulting in multiple instances of really the same instance at times.
 
 We do not interpret the iTip methods during import which results in attendee copy overwriting the
 organizer copy on an import.
 
-We do not send extra rdates if any when sending out iTip. That is, we send only the rrule.
+We do not send extra ``RDATE``s if any when sending out iTip. That is, we send only the `RRULE`.
 
 === Participant General Comments
 

@@ -213,8 +213,8 @@ This section defines properties, messages and operations sufficient to provide b
 on a calendar store. These are sufficient to store, retrieve and update calendaring entities and to obtain
 various reports on the current state of the store.
 
-Any service supporting this protocol `MUST` return a calendarAccessFeature element in the supportedFeatures
-property in the getPropertiesResponse message as specified in supportedFeatures
+Any service supporting this protocol `MUST` return a `calendarAccessFeature` element in the `supportedFeatures`
+property in the `getPropertiesResponse` message as specified in `supportedFeatures`.
 
 === Overview of the CalWS protocol
 
@@ -339,253 +339,253 @@ Prefixed with # to indicate an attribute
 The following tables define the base types for requests and responses. All CalWS-SOAP messages and
 responses are based on these types.
 
-All requests must include an href which specifies the target for the request. There is also an id attribute
+All requests must include an `href` which specifies the target for the request. There is also an `id` attribute
 which will be copied into the response to help identify it.
 
 [[tab2]]
-.BaseRequestType elements
+.`BaseRequestType` elements
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| href | string | 1 | Y | Required in each request to identify the target of
+| `href` | string | 1 | Y | Required in each request to identify the target of
 the message.
-| #id | int | 1 | N | Useful for tying responses to requests.
+| `#id` | int | 1 | N | Useful for tying responses to requests.
 |===
 
-A response may include an error response element of type ErrorResponseType. This element will be returned
+A response may include an error response element of type `ErrorResponseType`. This element will be returned
 in response messages when some form of processing error occurs and provides further information
 on the error beyond the basic status code.
 
 [[tab3]]
-.ErrorResponseType elements
+.`ErrorResponseType` elements
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| ? | ErrorCodeType | 1 | Y | One of the error code elements defined below
-| description | string | 0..1 | N | Optional descriptive message
+| `?` | `ErrorCodeType` | 1 | Y | One of the error code elements defined below
+| `description` | string | 0..1 | N | Optional descriptive message
 |===
 
-===== ErrorCodeType
+===== `ErrorCodeType`
 
-The following table defines the error codes that may be returned as an element of ErrorCodeType.
+The following table defines the error codes that may be returned as an element of `ErrorCodeType`.
 
 [[tab4]]
-.ErrorCodeType definitions
+.`ErrorCodeType` definitions
 [cols="a,a,a",options=header]
 |===
 | Field | Type | Description
-| forbidden | ForbiddenType | Attempted to carry out a forbidden operation.
-| targetExists | TargetExistsType |
-| targetDoesNotExist | TargetDoesNotExistType | The supplied href does not reference an existing resource.
-| targetNotEntity | TargetNotEntityType | The supplied href does not target an entity. For example a fetch item was attempted against a collection.
-| notCalendarData | NotCalendarDataType | The supplied entity is not calendar data.
-| invalidCalendarData | InvalidCalendarDataType | The supplied entity does not represent valid calendar data.
-| invalidCalendarObjectResource | InvalidCalendarObjectResourceType | The supplied entity does not represent valid calendar data.
-| unsupportedCalendarComponent | UnsupportedCalendarComponentType | Indicates that the calendar collection does not accept components of the type the client is attempting to store. The accepted component types can be determined by examining the calendar collection properties.
-| invalidCalendarCollectionLocation | InvalidCalendarCollectionLocationType | Error indicating at least one of two conditions:
+| `forbidden` | `ForbiddenType` | Attempted to carry out a forbidden operation.
+| `targetExists` | `TargetExistsType` |
+| `targetDoesNotExist` | `TargetDoesNotExistType` | The supplied `href` does not reference an existing resource.
+| `targetNotEntity` | `TargetNotEntityType` | The supplied `href` does not target an entity. For example a fetch item was attempted against a collection.
+| `notCalendarData` | `NotCalendarDataType` | The supplied entity is not calendar data.
+| `invalidCalendarData` | `InvalidCalendarDataType` | The supplied entity does not represent valid calendar data.
+| `invalidCalendarObjectResource` | `InvalidCalendarObjectResourceType` | The supplied entity does not represent valid calendar data.
+| `unsupportedCalendarComponent` | `UnsupportedCalendarComponentType` | Indicates that the calendar collection does not accept components of the type the client is attempting to store. The accepted component types can be determined by examining the calendar collection properties.
+| `invalidCalendarCollectionLocation` | `InvalidCalendarCollectionLocationType` | Error indicating at least one of two conditions:
 
 . The server does not allow the creation of calendar collections at the given location in its namespace, or
 . The parent collection of the Request-URI exists but cannot accept members
-| exceedsMaxResourceSize | ExceedsMaxResourceSizeType | Error indicating that the total size of the event or task is too large. The maximum size is set by the target system and can be determined from the properties.
-| beforeMinDateTime | BeforeMinDateTimeType | Error indicating that the start or end of an event or task is too far into the past.
+| `exceedsMaxResourceSize` | `ExceedsMaxResourceSizeType` | Error indicating that the total size of the event or task is too large. The maximum size is set by the target system and can be determined from the properties.
+| `beforeMinDateTime` | `BeforeMinDateTimeType` | Error indicating that the start or end of an event or task is too far into the past.
 
 The minimum date is set by the target system and can be determined from the properties.
-| afterMaxDateTime | AfterMaxDateTimeType | Error indicating that the start or end of an event or task is too far into the future.
+| `afterMaxDateTime` | `AfterMaxDateTimeType` | Error indicating that the start or end of an event or task is too far into the future.
 
 The maximum date is set by the target system and can be determined from the properties.
-| tooManyInstances | TooManyInstancesType | Error indicating that a recurring event has too many instances.
+| `tooManyInstances` | `TooManyInstancesType` | Error indicating that a recurring event has too many instances.
 
 The maximum number is set by the target system and can be determined from the properties.
-| tooManyAttendeesPerInstance | TooManyAttendeesPerInstanceType | Error indicating that a scheduling message has too many attendees.
+| `tooManyAttendeesPerInstance` | `TooManyAttendeesPerInstanceType` | Error indicating that a scheduling message has too many attendees.
 
 The maximum number is set by the target system and can be determined from the properties.
-| partialSuccess | PartialSuccessType | Indicates that a MultiOpType operation was partially successful. Returned when the operation is marked as non-atomic and one or more sub-operations failed. The entire response needs to be examined to determine failing operations.
-| missingChangeToken | MissingChangeTokenType | An operation was attempted which required a change token but none was supplied.
+| `partialSuccess` | `PartialSuccessType` | Indicates that a `MultiOpType` operation was partially successful. Returned when the operation is marked as non-atomic and one or more sub-operations failed. The entire response needs to be examined to determine failing operations.
+| `missingChangeToken` | `MissingChangeTokenType` | An operation was attempted which required a change token but none was supplied.
 
 Note that it appears that the marshalling or demarshalling should handle this as the token is required. It doesn't.
-| mismatchedChangeToken | MismatchedChangeTokenType | An update operation was attempted with a change token value which does not match that held by the service. The client must refetch the entity to refresh its cached value and token.
+| `mismatchedChangeToken` | `MismatchedChangeTokenType` | An update operation was attempted with a change token value which does not match that held by the service. The client must refetch the entity to refresh its cached value and token.
 
 Note that matching of tokens is a server responsibility. The token is opaque to the client but probably structured to the server. Certain non-conflicting updates may be allowed even if the token has changed.
-| invalidFilter | InvalidFilterType |
-| uidConflict | UidConflictType | An attempt was made to store an entity which would result in more than one entity having equal uids. The entity uid must be unique within a collection. Recurring event or task overrides have the same uid and are considered part of a single entity.
+| `invalidFilter` | `InvalidFilterType` |
+| `uidConflict` | `UidConflictType` | An attempt was made to store an entity which would result in more than one entity having equal ``uid``s. The entity `uid` must be unique within a collection. Recurring event or task overrides have the same uid and are considered part of a single entity.
 |===
 
-===== BaseResponseType
+===== `BaseResponseType`
 
 [[tab5]]
-.BaseResponseType elements
+.`BaseResponseType` elements
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| #id | int | 1 | N | Copied over from the request
-| status | StatusType | 1 | Y | Give the overall status of the response
-| message | string | 0..1 | N | Optional explanatory message
-| errorResponse | ErrorCodeType | 0..1 | N | Required for a status of Error.
+| `#id` | int | 1 | N | Copied over from the request
+| `status` | `StatusType` | 1 | Y | Give the overall status of the response
+| `message` | string | 0..1 | N | Optional explanatory message
+| `errorResponse` | `ErrorCodeType` | 0..1 | N | Required for a status of Error.
 |===
 
 === Properties
 
-The getPropertiesResponse message contains 0 or more properties defined below. Some properties apply
+The `getPropertiesResponse` message contains 0 or more properties defined below. Some properties apply
 to the service as a whole while others apply only to the targeted resource. The targeted resource may
 have property values which override those for the service. For example, the timezone identifier for a particular
 collection may differ from the default timezone identifier for the system.
 
-Each property is an XML complex type based on the GetPropertiesBasePropertyType.
+Each property is an XML complex type based on the `GetPropertiesBasePropertyType`.
 
-==== childCollection
+==== `childCollection`
 
 Provides information about a child collections for the target.
 
 [[tab6]]
-.ChildCollectionType fields
+.`ChildCollectionType` fields
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| href | string | 1 | Y | The URI of the collection.
-| collection | CollectionType | 1 | Y | This is a collection
-| calendarCollection | CalendarCollectionType | 0..1 | C | If present this is a calendar collection
+| `href` | `string` | 1 | Y | The URI of the collection.
+| `collection` | `CollectionType` | 1 | Y | This is a collection
+| `calendarCollection` | `CalendarCollectionType` | 0..1 | C | If present this is a calendar collection
 |===
 
-See <<sec-resourceType>> for descriptions of CollectionType and Calendar CollectionType.
+See <<sec-resourceType>> for descriptions of `CollectionType` and `CalendarCollectionType`.
 
-==== creationDateTime
+==== `creationDateTime`
 
 This property `MAY` be returned for the service and `SHOULD` be returned for any targeted resource.
 
 [[tab7]]
-.CreationDateTimeType fields
+.`CreationDateTimeType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| dateTime | dateTime | 1 | Y | Creation date/time of the resource
+| `dateTime` | `dateTime` | 1 | Y | Creation date/time of the resource
 |===
 
-==== displayName
+==== `displayName`
 
 This property `SHOULD` be returned for any targeted resource.
 
 [[tab8]]
-.DisplayNameType fields
+.`DisplayNameType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
 | string | string | 1 | Y | The displayable name.
 |===
 
-==== lastModifiedDateTime
+==== `lastModifiedDateTime`
 
-This property `MAY` be returned for the service and SHOULD be returned for any targeted resource.
+This property `MAY` be returned for the service and `SHOULD` be returned for any targeted resource.
 
 [[tab9]]
-.LastModifiedDateTimeType fields
+.`LastModifiedDateTimeType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| dateTime | dateTime | 1 | Y | Last modified date/time of the resource
+| `dateTime` | `dateTime` | 1 | Y | Last modified date/time of the resource
 |===
 
-==== maxAttendeesPerInstance
+==== `maxAttendeesPerInstance`
 
-This property `SHOULD` be returned for the service and MAY be returned for any targeted collection resource.
+This property `SHOULD` be returned for the service and `MAY` be returned for any targeted collection resource.
 
 [[tab10]]
-.MaxAttendeesPerInstanceType fields
+.`MaxAttendeesPerInstanceType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
 | integer | integer | 1 | Y | The maximum number of attendees allowed per event or task instance.
 |===
 
-==== maxDateTime
+==== `maxDateTime`
 
 This property `SHOULD` be returned for the service and `MAY` be returned for any targeted collection resource.
 
 [[tab11]]
-.MaxDateTimeType fields
+.`MaxDateTimeType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| dateTime | dateTime | 1 | Y | The maximum date and time for an event.
+| `dateTime` | `dateTime` | 1 | Y | The maximum date and time for an event.
 |===
 
-==== maxInstances
+==== `maxInstances`
 
 This property `SHOULD` be returned for the service and `MAY` be returned for any targeted collection resource.
 
 [[tab12]]
-.MaxInstancesType fields
+.`MaxInstancesType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
 | integer | integer | 1 | Y | The maximum number of instances for a recurring event.
 |===
 
-==== maxResourceSize
+==== `maxResourceSize`
 
 This property `SHOULD` be returned for the service and `MAY` be returned for any targeted collection resource.
 
 [[tab13]]
-.MaxResourceSizeType fields
+.`MaxResourceSizeType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
 | integer | integer | 1 | Y | An integer value defining the maximum size of a resource in octets that the server is willing to accept when a calendar object resource is stored in a calendar collection.
 |===
 
-==== minDateTime
+==== `minDateTime`
 
 This property `SHOULD` be returned for the service and `MAY` be returned for any targeted collection resource.
 
 [[tab14]]
-.MinDateTimeType fields
+.`MinDateTimeType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| dateTime | dateTime | 1 | Y | The minimum date and time for an event.
+| `dateTime` | `dateTime` | 1 | Y | The minimum date and time for an event.
 |===
 
-==== principalHome
+==== `principalHome`
 
 This property `SHOULD` be returned for the service and `MAY` be returned for any targeted collection resource.
 
 [[tab15]]
-.PrincipalHomeType fields
+.`PrincipalHomeType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
 | string | string | 1 | Y | The home path of the currently authenticated user.
 |===
 
-==== resourceDescription
+==== `resourceDescription`
 
 Provides some descriptive text for the targeted collection.
 
 [[tab16]]
-.ResourceDescriptionType fields
+.`ResourceDescriptionType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
 | string | string | 1 | Y | The descriptive text.
 |===
 
-==== resourceOwner
+==== `resourceOwner`
 
 This property `SHOULD` be returned for any targeted resource.
 
 [[tab17]]
-.ResourceownerType fields
+.`ResourceownerType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
 | string | string | 1 | Y | The principal URL of the resource owner.
 |===
 
-==== resourceTimezoneId
+==== `resourceTimezoneId`
 
 This property `SHOULD` be returned for the service and `MAY` be returned for any targeted collection resource.
 
 [[tab18]]
-.ResourceTimezoneIdType fields
+.`ResourceTimezoneIdType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
@@ -593,67 +593,67 @@ This property `SHOULD` be returned for the service and `MAY` be returned for any
 |===
 
 [[sec-resourceType]]
-==== resourceType
+==== `resourceType`
 
 Provides information about a targeted resource.
 
 [[tab19]]
-.ResourceTypeType fields
+.`ResourceTypeType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| href | string | 1 | Y | The URI of the collection.
-| collection | CollectionType | 0..1 | C | If present this is a collection
-| calendarCollection | CalendarCollectionType | 0..1 | C | If present this is a calendar collection
-| inbox | InboxType | 0..1 | C | If present this is a scheduling inbox
-| outbox | OutboxType | 0..1 | C | If present this is a scheduling outbox
-| inbox | InboxType | 0..1 | C | If present this is a scheduling inbox
-| xresource | XresourceType | 0..1 | C | If present provides further type information.
+| `href` | string | 1 | Y | The URI of the collection.
+| `collection` | `CollectionType` | 0..1 | C | If present this is a collection
+| `calendarCollection` | `CalendarCollectionType` | 0..1 | C | If present this is a calendar collection
+| `inbox` | `InboxType` | 0..1 | C | If present this is a scheduling inbox
+| `outbox` | `OutboxType` | 0..1 | C | If present this is a scheduling outbox
+| `inbox` | `InboxType` | 0..1 | C | If present this is a scheduling inbox
+| `xresource` | `XresourceType` | 0..1 | C | If present provides further type information.
 |===
 
-All the child types are empty elements with the exception of XresourceType.
+All the child types are empty elements with the exception of `XresourceType`.
 
 [[tab20]]
-.XresourceType fields
+.`XresourceType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
 | string | string | 1 | Y | Extra information.
 |===
 
-==== supportedCalendarComponentSet
+==== `supportedCalendarComponentSet`
 
 This property identifies which component types the service is prepared to store. The allowable components
 may be different for different targets on the same service.
 
 [[tab21]]
-.SupportedCalendarComponentSetType fields
+.`SupportedCalendarComponentSetType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| Any valid iCalendar component name | xcal:BaseComponentType | 0..n | C | One or more empty iCalendar components.
+| Any valid iCalendar component name | `xcal:BaseComponentType` | 0..n | C | One or more empty iCalendar components.
 |===
 
-==== supportedFeatures
+==== `supportedFeatures`
 
 This property `SHOULD` be returned for the service and `MAY` be returned for any targeted collection resource.
 
 The property shows what protocol features are supported by the server.
 
 [[tab22]]
-.SupportedFeaturesType fields
+.`SupportedFeaturesType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| calendarAccessFeature | CalendarAccessFeatureType | 1 | Y | Indicates the service supports this protocol.
+| `calendarAccessFeature` | `CalendarAccessFeatureType` | 1 | Y | Indicates the service supports this protocol.
 |===
 
-==== timezoneServer
+==== `timezoneServer`
 
 This property `SHOULD` be returned for the service and `MAY` be returned for any targeted collection resource.
 
 [[tab23]]
-.TimezoneServerType fields
+.`TimezoneServerType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
@@ -689,7 +689,7 @@ Each privilege element defines a privilege or access right. The following set is
 [[sec-7]]
 === Retrieving Collection and Service Properties
 
-The CalWS-SOAP getProperties request is used to fetch properties. The href can target the service with a
+The CalWS-SOAP getProperties request is used to fetch properties. The `href` can target the service with a
 path of "/" or any entity within the service.
 
 The service properties define the global limits and defaults. Any properties defined on collections within
@@ -697,20 +697,20 @@ the service hierarchy override those service defaults. The service may choose to
 of defaults and limits when appropriate. The tables below show the fields for request and response.
 
 [[tab24]]
-.GetPropertiesType fields
+.`GetPropertiesType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| href | string | 1 | Y | Identify the target of the request. "/" for the service.
+| `href` | string | 1 | Y | Identify the target of the request. "/" for the service.
 |===
 
 [[tab25]]
-.GetPropertiesResponseType fields
+.`GetPropertiesResponseType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| href | string | 1 | Y | Identify the target of the request. "/" for the service.
-| ? | GetPropertiesBasePropertyType | 0..n | C | 0 or more properties of the targeted resource
+| `href` | string | 1 | Y | Identify the target of the request. "/" for the service.
+| `?` | `GetPropertiesBasePropertyType` | 0..n | C | 0 or more properties of the targeted resource
 |===
 
 ==== Example - retrieving server properties
@@ -769,49 +769,49 @@ of defaults and limits when appropriate. The tables below show the fields for re
 === Creating Calendar Object Resources
 
 Creating calendar object resources is carried out by using a CalWS-SOAP addItem request targeted at
-the parent collection and containing the resource to be created. The response will contain the href of the
+the parent collection and containing the resource to be created. The response will contain the `href` of the
 newly created object.
 
 The iCalendar entity in the request `MUST` contain only a single calendaring entity with any related overrides.
 
 [[tab26]]
-.AddItemType fields
+.`AddItemType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| href | string | 1 | Y | Identify the target of the request.
-| icalendar | xcal:IcalendarType | 1 | Y | The entity to be created
+| `href` | string | 1 | Y | Identify the target of the request.
+| `icalendar` | `xcal:IcalendarType` | 1 | Y | The entity to be created
 |===
 
-The service will respond with an AddItemResponseType giving either the href and change token of the
+The service will respond with an `AddItemResponseType` giving either the `href` and change token of the
 new entity or an error response.
 
 [[tab27]]
-.AddItemResponseType additional fields
+.`AddItemResponseType` additional fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| href | string | 0..1 | N | Href of the new entity for a successful request.
-| changeToken | string | 0..1 | N | Change token for the new entity
+| `href` | string | 0..1 | N | `Href` of the new entity for a successful request.
+| `changeToken` | string | 0..1 | N | Change token for the new entity
 |===
 
 ==== Preconditions for Calendar Object Creation
 
-* *CalWS:target-exists*: The entity already exists.
-* *CalWS:not-calendar-data*: The resource submitted `MUST` be a supported media type (i.e., iCalendar)
+* *`CalWS:target-exists`*: The entity already exists.
+* *`CalWS:not-calendar-data`*: The resource submitted `MUST` be a supported media type (i.e., iCalendar)
 for calendar object resources;
-* *CalWS:invalid-calendar-data*: The resource submitted `MUST` be valid data for the media type being
+* *`CalWS:invalid-calendar-data`*: The resource submitted `MUST` be valid data for the media type being
 specified (i.e., `MUST` contain valid iCalendar data);
-* *CalWS:invalid-calendar-object-resource*: The resource submitted in the request `MUST` obey all restrictions
+* *`CalWS:invalid-calendar-object-resource`*: The resource submitted in the request `MUST` obey all restrictions
 specified in Calendar Object Resources (e.g., calendar object resources `MUST NOT` contain
 more than one type of calendar component, calendar object resources `MUST NOT` specify the
 iCalendar `METHOD` property, etc.);
-* *CalWS:unsupported-calendar-component*: The resource submitted in the request `MUST` contain a
+* *`CalWS:unsupported-calendar-component`*: The resource submitted in the request `MUST` contain a
 type of calendar component that is supported in the targeted calendar collection;
-* *CalWS:uid-conflict*: The resource submitted in the request `MUST NOT` specify an iCalendar UID
+* *`CalWS:uid-conflict`*: The resource submitted in the request `MUST NOT` specify an iCalendar UID
 property value already in use in the targeted calendar collection or overwrite an existing calendar
 object resource with one that has a different UID property value. Servers `SHOULD` report the URL
-of the resource that is already making use of the same UID property value in the CalWS:href element
+of the resource that is already making use of the same UID property value in the `CalWS:href` element
 +
 --
 [source%unnumbered]
@@ -819,25 +819,25 @@ of the resource that is already making use of the same UID property value in the
 <!ELEMENT uid-conflict (CalWS:href)>
 ----
 --
-* *CalWS:exceeds-max-resource-size*: The resource submitted in the request `MUST` have an octet size
-less than or equal to the value of the CalDAV:max-resource-size property value on the calendar collection
+* *`CalWS:exceeds-max-resource-size`*: The resource submitted in the request `MUST` have an octet size
+less than or equal to the value of the `CalDAV:max-resource-size` property value on the calendar collection
 where the resource will be stored;
-* *CalWS:before-min-date-time*: The resource submitted in the request `MUST` have all of its iCalendar
+* *`CalWS:before-min-date-time`*: The resource submitted in the request `MUST` have all of its iCalendar
 `DATE` or `DATE-TIME` property values (for each recurring instance) greater than or equal to the
-value of the CalDAV:min-date-time property value on the calendar collection where the resource
+value of the `CalDAV:min-date-time` property value on the calendar collection where the resource
 will be stored;
-* *CalWS:after-max-date-time*: The resource submitted in the request `MUST` have all of its iCalendar
+* *`CalWS:after-max-date-time`*: The resource submitted in the request `MUST` have all of its iCalendar
 `DATE` or `DATE-TIME` property values (for each recurring instance) less than the
-value of the CalDAV:max-date-time property value on the calendar collection where the resource will be stored;
-* *CalWS:too-many-instances*: The resource submitted in the request `MUST` generate a number of recurring
-instances less than or equal to the value of the CalDAV: max-instances property value on
+value of the `CalDAV:max-date-time` property value on the calendar collection where the resource will be stored;
+* *`CalWS:too-many-instances`*: The resource submitted in the request `MUST` generate a number of recurring
+instances less than or equal to the value of the `CalDAV: max-instances` property value on
 the calendar collection where the resource will be stored;
-* *CalWS:too-many-attendees-per-instance*: The resource submitted in the request `MUST` have a
+* *`CalWS:too-many-attendees-per-instance`*: The resource submitted in the request `MUST` have a
 number of `ATTENDEE` properties on any one instance less than or equal to the value of the
-CalDAV:max-attendees-per-instance property value on the calendar collection where the resource will
+`CalDAV:max-attendees-per-instance` property value on the calendar collection where the resource will
 be stored.
 
-==== Example - successful addItem
+==== Example - successful `addItem`
 
 [source%unnumbered]
 ----
@@ -894,31 +894,31 @@ be stored.
 
 === Retrieving resources
 
-Fetching calendar object resources is carried out by using a CalWS-SOAP fetchItem request with an href
+Fetching calendar object resources is carried out by using a CalWS-SOAP fetchItem request with an `href`
 specifying the entity to be fetched. The response will contain the calendaring entity with any related overrides.
 
 [[tab28]]
-.FetchItemType fields
+.`FetchItemType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| href | string | 1 | Y | Identify the target of the request.
+| `href` | string | 1 | Y | Identify the target of the request.
 |===
 
-The service will respond with a FetchItemResponseType containing either the change token, its href and
+The service will respond with a FetchItemResponseType containing either the change token, its `href` and
 the entity or an error response.
 
 [[tab29]]
-.FetchItemResponseType additional fields
+.`FetchItemResponseType` additional fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| changeToken | string | 0..1 | N | The change token for the fetched entity
-| href | string | 1 | Y | Identify the entity.
-| icalendar | xcal:IcalendarType | 0..1 | N | The fetched entity
+| `changeToken` | string | 0..1 | N | The change token for the fetched entity
+| `href` | string | 1 | Y | Identify the entity.
+| `icalendar` | `xcal:IcalendarType` | 0..1 | N | The fetched entity
 |===
 
-==== Example - successful fetchItem
+==== Example - successful `fetchItem`
 
 [source%unnumbered]
 ----
@@ -990,7 +990,7 @@ the entity or an error response.
 </SOAP-ENV:Envelope>
 ----
 
-==== Example - unsuccessful fetchItem
+==== Example - unsuccessful `fetchItem`
 
 [source%unnumbered]
 ----
@@ -1065,7 +1065,7 @@ Thus we have a nested structure which does recurse to a limited extent and looks
 The update approach described here only allows for updating a single calendar entity, though that entity
 may consist of more than one component, for example an override to a repeating event.
 
-Resources are updated with the CalWS-SOAP updateItem request. The request contains the href of the
+Resources are updated with the CalWS-SOAP updateItem request. The request contains the `href` of the
 entity to be updated, the current change token for that entity and the updates. The updates take the form
 of nested selections of an element from the current level in the data. The outermost selection is always for
 a vCalendar element - we ignore the iCalendar element. Nested within that outer selection is one for the
@@ -1081,90 +1081,90 @@ Removals `MUST` be processed ahead of additions.
 
 Preconditions as specified in Preconditions for Calendar Object Creation are applicable. The response
 will indicate success or failure of the update. If the change token value does not match that held by the
-service a mismatchedChangeToken error status will be returned. The client should re-fetch the entity to
+service a `mismatchedChangeToken` error status will be returned. The client should re-fetch the entity to
 refresh its cache and then retry the update based on the new entity values and change token.
 
 [[tab30]]
-.UpdateItemType fields
+.`UpdateItemType` fields
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| href | string | 1 | Y | Identify the target of the request.
-| changeToken | string | 1 | Y | The change token held by the client for that entity
-| select | ComponentSelectionType | 1..* | Y | Must select vCalendar
+| `href` | string | 1 | Y | Identify the target of the request.
+| `changeToken` | string | 1 | Y | The change token held by the client for that entity
+| `select` | `ComponentSelectionType` | 1..* | Y | Must select vCalendar
 |===
 
-The ComponentsSelectionType contains three repeating child elements. The first allows for selection of
+The `ComponentsSelectionType` contains three repeating child elements. The first allows for selection of
 nested components which can then be updated. The next allows addition of entire components and the
 last allows for the removal of components.
 
 [[tab31]]
-.ComponentsSelectionType fields
+.`ComponentsSelectionType` fields
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| component | ComponentSelectionType | 0..1 | N | Used to match against a component in the target
-| remove | ComponentReferenceType | 0..1 | N | Supplies components to remove
-| add | ComponentReferenceType | 0..1 | N | Species components to add
+| `component` | `ComponentSelectionType` | 0..1 | N | Used to match against a component in the target
+| `remove` | `ComponentReferenceType` | 0..1 | N | Supplies components to remove
+| `add` | `ComponentReferenceType` | 0..1 | N | Species components to add
 |===
 
-The PropertiesSelectionType follows the same pattern, selecting properties to update, add or remove.
+The `PropertiesSelectionType` follows the same pattern, selecting properties to update, add or remove.
 
 [[tab32]]
-.PropertiesSelectionType fields
+.`PropertiesSelectionType` fields
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| property | PropertySelectionType | 0..1 | N | Used to match against a property in the target
-| remove | PropertyReferenceType | 0..1 | N | Supplies properties to remove
-| add | PropertyReferenceType | 0..1 | N | Species properties to add
+| `property` | `PropertySelectionType` | 0..1 | N | Used to match against a property in the target
+| `remove` | `PropertyReferenceType` | 0..1 | N | Supplies properties to remove
+| `add` | `PropertyReferenceType` | 0..1 | N | Species properties to add
 |===
 
-To complete that pattern there is also a ParametersSelectionType used to select property parameters for
+To complete that pattern there is also a `ParametersSelectionType` used to select property parameters for
 update or removal and to supply new parameters.
 
 [[tab33]]
-.ParametersSelectionType fields
+.`ParametersSelectionType` fields
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| parameter | ParameterSelectionType | 0..1 | N | Used to match against a parameter in the target
-| remove | ParameterReferenceType | 0..1 | N | Supplies parameters to remove
-| add | ParameterReferenceType | 0..1 | N | Species parameters to add
+| `parameter` | `ParameterSelectionType` | 0..1 | N | Used to match against a parameter in the target
+| `remove` | `ParameterReferenceType` | 0..1 | N | Supplies parameters to remove
+| `add` | `ParameterReferenceType` | 0..1 | N | Species parameters to add
 |===
 
 Each of these refers to a reference type. These either provide a complete entity for addition or identify the
 entity for removal. The three reference types are:
 
 [[tab34]]
-.ComponentReferenceType fields
+.`ComponentReferenceType` fields
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| Any valid iCalendar component name | xcal:BaseComponentType | 1 | Y | Either a complete component or sufficient to identify it.
+| Any valid iCalendar component name | `xcal:BaseComponentType` | 1 | Y | Either a complete component or sufficient to identify it.
 |===
 
 [[tab35]]
-.PropertyReferenceType fields
+.`PropertyReferenceType` fields
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| Any valid iCalendar property name | xcal:BasePropertyType | 1 | Y | Either a complete property or sufficient to identify it or provide a new value, depending on usage.
+| Any valid iCalendar property name | `xcal:BasePropertyType` | 1 | Y | Either a complete property or sufficient to identify it or provide a new value, depending on usage.
 |===
 
 [[tab36]]
-.ParameterReferenceType fields
+.`ParameterReferenceType` fields
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| Any valid iCalendar parameter name | xcal:BaseParameterType | 1 | Y | Either a complete parameter or sufficient to identify it or provide a new value, depending on usage.
+| Any valid iCalendar parameter name | `xcal:BaseParameterType` | 1 | Y | Either a complete parameter or sufficient to identify it or provide a new value, depending on usage.
 |===
 
 To complete the picture we have three selection types for component, property and parameter. Each of
 these identifies the entity to be updated, possible selections of the sub-elements and a possible change
 to values.
 
-ComponentSelectionType contains three child elements. The first is any valid iCalendar component element
+`ComponentSelectionType` contains three child elements. The first is any valid iCalendar component element
 which is to be matched at the current level.
 
 The optional properties selection allows selection and possible updates to the properties of the component.
@@ -1176,17 +1176,17 @@ element of the component. An iCalendar components element cannot take a value so
 possible are addition and removal of components. Nested components may be selected for updates.
 
 [[tab37]]
-.ComponentSelectionType fields
+.`ComponentSelectionType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| Any valid iCalendar component name | xcal:VcalendarType +
-xcal:BaseComponentType | 1 | Y | Used to match against an element in the target
-| properties | PropertiesSelectionType | 0..1 | N | To match the properties element
-| components | ComponentsSelectionType | 0..1 | N | To match the components element
+| Any valid iCalendar component name | `xcal:VcalendarType` +
+`xcal:BaseComponentType` | 1 | Y | Used to match against an element in the target
+| `properties` | `PropertiesSelectionType` | 0..1 | N | To match the properties element
+| `components` | `ComponentsSelectionType` | 0..1 | N | To match the components element
 |===
 
-PropertySelectionType contains three child elements. The first is any valid iCalendar property element
+`PropertySelectionType` contains three child elements. The first is any valid iCalendar property element
 which is to be matched at the current level.
 
 The optional parameters selection allows selection and possible updates to the parameters of the property.
@@ -1194,38 +1194,38 @@ The optional change element allows a change to the value of the property. The ne
 supplying an iCalendar property with the desired value(s). Any parameters will be ignored.
 
 [[tab38]]
-.PropertySelectionType fields
+.`PropertySelectionType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| Any valid iCalendar property name | xcal:BasePropertyType | 1 | Y | Used to match against an element in the target
-| parameters | ParametersSelectionType | 0..1 | N | To match the parameters element
-| change | PropertyReferenceType | 0..1 | N | To provide a new value
+| Any valid iCalendar property name | `xcal:BasePropertyType` | 1 | Y | Used to match against an element in the target
+| `parameters` | `ParametersSelectionType` | 0..1 | N | To match the parameters element
+| `change` | `PropertyReferenceType` | 0..1 | N | To provide a new value
 |===
 
-Lastly, there is the ParameterSelectionType which contains two child elements. The first is any valid iCalendar
+Lastly, there is the `ParameterSelectionType` which contains two child elements. The first is any valid iCalendar
 parameter element which is to be matched at the current level.
 The optional change element allows a change to the value of the parameter. The new value is specified
 by supplying an iCalendar parameter with the desired value(s).
 
 [[tab39]]
-.ParameterSelectionType fields
+.`ParameterSelectionType` fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| Any valid iCalendar parameter name | xcal:BaseParameterType | 1 | Y | Used to match against an element in the target
-| change | ParameterReferenceType | 0..1 | N | To provide a new value
+| Any valid iCalendar parameter name | `xcal:BaseParameterType` | 1 | Y | Used to match against an element in the target
+| `change` | `ParameterReferenceType` | 0..1 | N | To provide a new value
 |===
 
-For a successful update the service will respond with a UpdateItemResponseType containing the status
+For a successful update the service will respond with a `UpdateItemResponseType` containing the status
 and the new change token.
 
 [[tab40]]
-.UpdateItemResponseType additional fields
+.`UpdateItemResponseType` additional fields
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| changeToken | string | 0..1 | N | The new change token for the updated entity
+| `changeToken` | string | 0..1 | N | The new change token for the updated entity
 |===
 
 The change token value should be used to replace the value held by the client.
@@ -1277,10 +1277,10 @@ The event to be updated is represented by the following XML.
 In the following example we make the following changes to the above event:
 
 * Change the summary
-* Change the dtstart - add a tzid and change the value to local time
+* Change the `dtstart` - add a `tzid` and change the value to local time
 * Add some categories
 
-We first select an event by specifying the uid value and then, from that event, we select the properties,
+We first select an event by specifying the `uid` value and then, from that event, we select the properties,
 then select and change the appropriate properties.
 
 [source%unnumbered]
@@ -1373,9 +1373,9 @@ Based on the example above we present some XML fragments for different kinds of 
 * Removal of parameters from properties
 * Changing parameter values.
 
-The examples all start with the selection of the vevent properties element. First we have the XML for the
-addition of a tzid to the start date/time. Here we select the dtstart, then the parameters element then add
-a tzid parameter and change the value of the date and time
+The examples all start with the selection of the `vevent` properties element. First we have the XML for the
+addition of a `tzid` to the start date/time. Here we select the `dtstart`, then the parameters element then add
+a `tzid` parameter and change the value of the date and time
 
 [source%unnumbered]
 ----
@@ -1418,7 +1418,7 @@ In this example we add two categories to the event.
 </ns2:properties>
 ----
 
-In this example we add a duration and remove the dtend.
+In this example we add a `duration` and remove the `dtend`.
 
 [source%unnumbered]
 ----
@@ -1436,7 +1436,7 @@ In this example we add a duration and remove the dtend.
 </ns2:properties>
 ----
 
-In this example we change the dtstart timezone identifier.
+In this example we change the `dtstart` timezone identifier.
 
 [source%unnumbered]
 ----
@@ -1481,10 +1481,10 @@ and when updating them we produce a change which treats each value as a single p
 
 These properties are:
 
-* categories
-* exdate
-* freebusy
-* rdate
+* `categories`
+* `exdate`
+* `freebusy`
+* `rdate`
 
 This normalization can take place before comparison.
 
@@ -1498,20 +1498,20 @@ parameters. Ordering all properties appropriately allows for relatively simple c
 === Deletion of resources
 
 Deletion of calendar object resources is carried out by using a CalWS-SOAP deleteItem request with an
-href specifying the entity to be deleted. The deleteItem request is not valid when the href specifies a collection.
+`href` specifying the entity to be deleted. The `deleteItem` request is not valid when the `href` specifies a collection.
 
 [[tab41]]
-.DeleteItemType fields
+.`DeleteItemType` fields
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| href | string | 1 | Y | Identify the target of the request.
+| `href` | string | 1 | Y | Identify the target of the request.
 |===
 
-The service will respond with a DeleteItemResponseType containing the status and a possible error response.
+The service will respond with a `DeleteItemResponseType` containing the status and a possible error response.
 There are no additional elements.
 
-==== Example - successful deleteItem
+==== Example - successful `deleteItem`
 
 [source%unnumbered]
 ----
@@ -1542,7 +1542,7 @@ There are no additional elements.
 </SOAP-ENV:Envelope>
 ----
 
-==== Example - unsuccessful deleteItem
+==== Example - unsuccessful `deleteItem`
 
 [source%unnumbered]
 ----
@@ -1588,37 +1588,37 @@ the client. A query takes the parts
 
 ==== Calendar Query common types
 
-The UTCTimeRangeType is used in a number of places to define a time range within which components
+The `UTCTimeRangeType` is used in a number of places to define a time range within which components
 must appear or property values must lie. The values are UTC time-date, the start is inclusive and the end
 is exclusive.
 
 [[tab42]]
-.UTCTimeRangeType elements
+.`UTCTimeRangeType` elements
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| start | UTC date-time | 1 | Y | UTC inclusive start
-| end | UTC date-time | 1 | Y | UTC exclusive end
+| `start` | UTC date-time | 1 | Y | UTC inclusive start
+| `end` | UTC date-time | 1 | Y | UTC exclusive end
 |===
 
-The TextMatchType is used to match text values in properties and parameters. The collation attribute
+The `TextMatchType` is used to match text values in properties and parameters. The collation attribute
 species a collation as defined in <<rfc4790>>.
 
-Servers are `REQUIRED` to support the "i;ascii-casemap" and "i;octet" collations which provide a basic
+Servers are `REQUIRED` to support the "`i;ascii-casemap`" and "`i;octet`" collations which provide a basic
 case insensitive and case sensitive match respectively.
 
 Elements of this type take a string value which is matched according to the attributes.
 
 [[tab43]]
-.TextMatchType attributes
+.`TextMatchType` attributes
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| #collation | String | 0..1 | N | Collation name from <<rfc4790>>.
-| #negate-condition | boolean | 0..1 | N | if "true" negates the condition
+| `#collation` | string | 0..1 | N | Collation name from <<rfc4790>>.
+| `#negate-condition` | boolean | 0..1 | N | if "true" negates the condition
 |===
 
-==== CompFilterType
+==== `CompFilterType`
 
 This type defines a search query for the calendar query operation. It specifies the component types to return,
 absence tests or basic matching operations on properties and time ranges.
@@ -1632,25 +1632,25 @@ Only logical conjunctions are supported, that is, all elements of a comp-filter 
 to match.
 
 [[tab44]]
-.CompFilterType elements
+.`CompFilterType` elements
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| anyComp | AnyCompType | 0..1 | C a| One of anyComp, vCalendar or a BaseComponentType must be supplied.
+| `anyComp` | `AnyCompType` | 0..1 | C a| One of `anyComp`, vCalendar or a `BaseComponentType` must be supplied.
 
-anyComp indicates that any component will match.
-| xcal:vcalendar | xcal:VcalendarType | 0..1 | C | Matches vCalendar at the top level. Must be provided
-| xcal:baseComponent | xcal:BaseComponentType | 0..1 | C | May be vEvent or vtodo for example.
-| #test | String | 0..1 | N a| "anyof" is a logical `OR` of the child elements.
+`anyComp` indicates that any component will match.
+| `xcal:vcalendar` | `xcal:VcalendarType` | 0..1 | C | Matches vCalendar at the top level. Must be provided
+| `xcal:baseComponent` | `xcal:BaseComponentType` | 0..1 | C | May be vEvent or vTODO for example.
+| `#test` | string | 0..1 | N a| "anyof" is a logical `OR` of the child elements.
 
 "allof" is a logical `AND` of the child elements.
-| is-not-defined | empty | 0..1 | N | Only this element or one or more of time-range, prop-filter or comp-filter may be present
-| time-range | UTCTimeRangeType | 0..1 | N |
-| comp-filter | CompFilterType | 1 | Y | Match against contained components
-| prop-filter | PropFilterType | 0..n | N | Match against component properties
+| `is-not-defined` | empty | 0..1 | N | Only this element or one or more of time-range, prop-filter or comp-filter may be present
+| `time-range` | `UTCTimeRangeType` | 0..1 | N |
+| `comp-filter` | `CompFilterType` | 1 | Y | Match against contained components
+| `prop-filter` | `PropFilterType` | 0..n | N | Match against component properties
 |===
 
-==== PropFilterType
+==== `PropFilterType`
 
 The prop-filter element may test for the absence of a property or match values or specify zero or more
 ParamFilterType elements to match against parameters.
@@ -1658,72 +1658,72 @@ ParamFilterType elements to match against parameters.
 Only logical conjunctions are supported, that is, all elements must match for the full expression to match.
 
 [[tab45]]
-.PropFilterType elements
+.`PropFilterType` elements
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| xcal:baseProperty | xcal:BasePropertyType | 1 | Y | Specifies the property to be matched.
-| #test | String | 0..1 | N a| "anyof" is a logical `OR` of the child elements.
+| `xcal:baseProperty` | `xcal:BasePropertyType` | 1 | Y | Specifies the property to be matched.
+| `#test` | string | 0..1 | N a| "anyof" is a logical `OR` of the child elements.
 
 "allof" is a logical `AND` of the child elements.
-| is-not-defined | empty | 0..1 | N | Only this element or optionally one of time-range or text-match followed by param-filter
-| time-range | UTCTimeRangeType | 0..1 | N |
-| text-match | TextMatchtype | 0..1 | N |
-| param-filter | ParamFilterType | 0..n | N | Match against property parameters
+| `is-not-defined` | empty | 0..1 | N | Only this element or optionally one of time-range or text-match followed by param-filter
+| `time-range` | `UTCTimeRangeType` | 0..1 | N |
+| `text-match` | `TextMatchtype` | 0..1 | N |
+| `param-filter` | `ParamFilterType` | 0..n | N | Match against property parameters
 |===
 
-==== ParamFilterType
+==== `ParamFilterType`
 
-The ParamFilterType element may test for the absence of a parameter or match a value.
+The `ParamFilterType` element may test for the absence of a parameter or match a value.
 
 [[tab46]]
-.ParamFilterType elements
+.`ParamFilterType` elements
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| xcal:baseParameter | xcal:BaseParameterType | 1 | Y | Specifies the parameter to be matched.
-| is-not-defined | empty | 0..1 | N | Only this element or text-match
-| text-match | TextMatchtype | 0..1 | N |
+| `xcal:baseParameter` | `xcal:BaseParameterType` | 1 | Y | Specifies the parameter to be matched.
+| `is-not-defined` | empty | 0..1 | N | Only this element or text-match
+| `text-match` | `TextMatchtype` | 0..1 | N |
 |===
 
-==== CalendarQueryType elements
+==== `CalendarQueryType` elements
 
 [[tab47]]
-.CalendarQueryType elements
+.`CalendarQueryType` elements
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| href | string | 1 | Y | Identify the target of the request. "/" for the service.
-| allprop | empty | 0..1 | N a| If present specifies all properties should be returned.
+| `href` | string | 1 | Y | Identify the target of the request. "/" for the service.
+| `allprop` | empty | 0..1 | N a| If present specifies all properties should be returned.
 
-One or none of allprop or iCalendar.
-| xcal:icalendar | xcal:IcalendarType | 0..1 | N | If present is a valueless iCalendar skeleton entity defining which components and properties should be returned. If present allprop must `NOT` be present.
-| expand | ExpandType | 0..1 | N a| A subclass of UTCTimeRangeType.
+One or none of `allprop` or iCalendar.
+| `xcal:icalendar` | `xcal:IcalendarType` | 0..1 | N | If present is a valueless iCalendar skeleton entity defining which components and properties should be returned. If present `allprop` must `NOT` be present.
+| `expand` | `ExpandType` | 0..1 | N a| A subclass of `UTCTimeRangeType`.
 
-Either expand or limitRecurrenceSet may be specified but not both.
+Either expand or `limitRecurrenceSet` may be specified but not both.
 
 If specified recurring events are expanded and limited to the supplied time-range.
 All events times are converted to UTC.
 
 This option allows for simplified event handling for certain classes of client.
-| limitRecurrenceSet | LimitRecurrenceSetType | 0..1 | N a| A subclass of UTCTimeRangeType.
+| `limitRecurrenceSet` | `LimitRecurrenceSetType` | 0..1 | N a| A subclass of `UTCTimeRangeType`.
 
-Either expand or limitRecurrenceSet may be specified but not both.
+Either expand or `limitRecurrenceSet` may be specified but not both.
 
 If specified only overrides that fall within the specified time-range are returned.
 
 This helps to limit the size of the result-set when there are many overrides.
-| depth | String | 0..1 | N | Species depth for query. "1" => just targeted collection, "infinity" => query targeted and all sub-collections.
-| filter | FilterType | 1 | Y | Defines the search filter
-| /comp-filter | CompFilterType | 1 | Y | Defines the top-level component
+| `depth` | string | 0..1 | N | Species depth for query. "1" => just targeted collection, "infinity" => query targeted and all sub-collections.
+| `filter` | `FilterType` | 1 | Y | Defines the search filter
+| `/comp-filter` | `CompFilterType` | 1 | Y | Defines the top-level component
 |===
 
 ==== Specifying data to be returned
 
 This is achieved by specifying one of the following
 
-* allprop: return all properties and calendar data. (some properties are specified as not being part
-of the allprop set so are not returned)
+* `allprop`: return all properties and calendar data. (some properties are specified as not being part
+of the `allprop` set so are not returned)
 * Set the iCalendar element. This is an iCalendar valueless pattern entity which provides a map of
 the components and properties to be returned. Neither the pattern nor the returned result need to
 be valid iCalendar entities in that required properties may be absent if unselected.
@@ -1930,26 +1930,26 @@ Freebusy queries are used to obtain freebusy information for a principal. The re
 only for events to which the current principal has sufficient access and may be affected by components
 and rules available only to the server (for instance office hours availability).
 
-These queries are carried out by using a CalWS-SOAP freebusyReport request with an href specifying a
-principal. The freebusyReport request is not valid when the href specifies any entity other than a principal.
+These queries are carried out by using a CalWS-SOAP `freebusyReport` request with an `href` specifying a
+principal. The `freebusyReport` request is not valid when the `href` specifies any entity other than a principal.
 The query follows the specification defined in <<fb>> with certain limitations. As an authenticated
 user to the CalWS service scheduling read-freebusy privileges must have been granted. As an
 unauthenticated user equivalent access must have been granted to unauthenticated users.
 
-Freebusy information is returned by default as xcalendar vfreebusy components, as defined by
+Freebusy information is returned by default as `xcalendar` `vfreebusy` components, as defined by
 <<rfc6321>>. Such a component is not meant to conform to the requirements of `VFREEBUSY` components in
 <<rfc5546>>. The `VFREEBUSY` component `SHOULD` conform to section <<rfc5545,section=4.6.4>>.
 A client `SHOULD` ignore the `ORGANIZER` field.
 
 Since a Freebusy query can only refer to a single user, a client will already know how to match the result
-component to a user. A server `MUST` only return a single vfreebusy component.
+component to a user. A server `MUST` only return a single `vfreebusy` component.
 
 ==== Element values
 
-Three values are provided: href; start; end. Only the href is required. The start and end are in XML UTC
+Three values are provided: `href`; `start`; `end`. Only the `href` is required. The start and end are in XML UTC
 date/time format and are interpreted as follows:
 
-===== start
+===== `start`
 
 Default:: If omitted the default value is left up to the server. It may be the current day, start of the current
 month, etc.
@@ -1965,7 +1965,7 @@ Format:: An XML UTC date-time
 NOTE: Specifying only a start date/time without specifying an end-date/time or period should be interpreted
 as in <<rfc5545>>. The effective period should cover the remainder of that day.
 
-===== end
+===== `end`
 
 Default:: Same as start
 Description:: Specifies the end date for the Freebusy data. The server is free to ignore this value.
@@ -2121,27 +2121,27 @@ have the need to update an interconnected set of entities so that we maintain th
 This requires an atomic operation which can successfully update all the entities or roll back the operation
 on failure.
 
-The MultiOpType operation provides such a feature. It is essentially a wrapper around any of the other
+The `MultiOpType` operation provides such a feature. It is essentially a wrapper around any of the other
 operations which guarantees the success of the entire set or a roll back. Using the id attribute for requests,
 each individual response can be located in the result.
-The MultiOpType request takes the following elements
+The `MultiOpType` request takes the following elements
 
 [[tab48]]
-.MultiOpType elements
+.`MultiOpType` elements
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| operations | Sequence of BaseOperationType | 1 | Y | Contains one or more operations
+| `operations` | Sequence of `BaseOperationType` | 1 | Y | Contains one or more operations
 |===
 
 The response type is also simple containing a single element containing all the responses.
 
 [[tab49]]
-.MultiOpResponseType elements
+.`MultiOpResponseType` elements
 [cols=5,options=header]
 |===
 | Field | Type | # | ? | Description
-| responses | Sequence of BaseResponseType | 1 | Y | Contains zero or more responses
+| `responses` | Sequence of `BaseResponseType` | 1 | Y | Contains zero or more responses
 |===
 
 == Conformance

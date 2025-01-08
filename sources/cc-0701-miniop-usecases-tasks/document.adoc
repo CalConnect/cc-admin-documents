@@ -49,7 +49,7 @@ calendaring and scheduling applications.
 
 A word about the use of 'task' versus 'todo'. In discussion it was determined that while RFC
 2445 uses only 'todo' and RFC 3283 uses task (once), and in fact RFC 2445 defines the
-VTODO component of an iCalendar object, common usage by vendors and users turns more to
+`VTODO` component of an iCalendar object, common usage by vendors and users turns more to
 the term 'task' than 'todo' (cp. for example the entry in Wikipedia, in which the entry for todo
 refers to the entry for Time Management, which uses the term 'task'). This document defers to
 that common usage in the interest of clarity and, hopefully, usability.
@@ -168,7 +168,7 @@ busy. Used when scheduling calendar events.
 === iCalendar
 
 The Internet Calendaring and Scheduling Core Object Specification. An IETF
-standard (RFC 2445) for a text representation of calendar data (VEVENT, VTODO, VALARM,
+standard (RFC 2445) for a text representation of calendar data (`VEVENT`, `VTODO`, `VALARM`,
 etc.).
 
 === Instance
@@ -252,18 +252,18 @@ See {{Task}}.
 
 == Properties Used
 
-We're using the following properties of a Task in this draft (iCalendar VTODO specification
+We're using the following properties of a Task in this draft (iCalendar `VTODO` specification
 property name is in square brackets []):
 
-. Title [SUMMARY]
-. Priority [PRIORITY: iCalendar supports values 1-9]
-. Due/End Date [DTEND]
-. Access/Privacy [CLASS]
-. Notes/Details/Desc [DESCRIPTION]
-. Category [CATEGORIES]
-. Start Date [DTSTART]
-. Percent Completed [COMPLETED: iCalendar support values 0-100%]
-. Alarm/Reminder [VALARM]
+. Title [`SUMMARY`]
+. Priority [`PRIORITY`: iCalendar supports values 1-9]
+. Due/End Date [`DTEND`]
+. Access/Privacy [`CLASS`]
+. Notes/Details/Desc [`DESCRIPTION`]
+. Category [`CATEGORIES`]
+. Start Date [`DTSTART`]
+. Percent Completed [`COMPLETED`: iCalendar support values 0-100%]
+. Alarm/Reminder [`VALARM`]
 
 In the examples below, the Task property (as listed above) are indicated in square brackets []:
 
@@ -290,11 +290,11 @@ Clean desk off.
 ==== Task requires more description [1,5]
 
 [example]
-Pick up roast from Jacobsens [DESC - Brennans not the Jacobsens on Raymond
+Pick up roast from Jacobsens [`DESC` - Brennans not the Jacobsens on Raymond
 Road].
 
 [example]
-Pick up mail from post office box [DESC - combination is AB - F - IJ].
+Pick up mail from post office box [`DESC` - combination is AB - F - IJ].
 
 ==== Task indicates that it was completed, (percentage 0-100%), NOTE: this is not a date string) [1,8]
 
@@ -447,11 +447,11 @@ Task 3 - Consulting: respond to client's question
 NOTE: Alarms are tied to the Due/End Date/Start Date attributes as one would expect.
 
 [example]
-Take the garbage to the curb on Mondays, start time of 8am, with alarm (VALARM:
+Take the garbage to the curb on Mondays, start time of 8am, with alarm (`VALARM`:
 Audio prompt, with a trigger of one hour before the start time) [1,3,7,9].
 
 [example]
-Give dog heartworm medicine on the 9th of the month, with alarm (VALARM: Email
+Give dog heartworm medicine on the 9th of the month, with alarm (`VALARM`: Email
 prompt, with a trigger of one day before due date) [1,3,7,9].
 
 [bibliography]

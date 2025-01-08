@@ -161,7 +161,7 @@ An organizer, aggregator, "avatar" program (or controller)
 providing the user interface, having knowledge of attendee
 lists and groups, perhaps embed local business logic, and
 some useful level of functionality aggregating and
-displaying results from the FREEBUSY queries.
+displaying results from the `FREEBUSY` queries.
 
 A CalDAV-compliant free/busy interface (CC-FBI) layer (or
 "proxy" which would field CalDAV free/busy queries from,
@@ -181,7 +181,7 @@ image::img02.png[]
 
 == How we did it
 
-* Coordinated in the CalConnect FREEBUSY
+* Coordinated in the CalConnect `FREEBUSY`
 technical committee
 * Modified code from the open source
 Bedework calendar
@@ -237,7 +237,7 @@ developers and calendar users
 [appendix,obligation=informative]
 == Open Group Demo -- July 18, 2006
 
-Accessed FREEBUSY information from:
+Accessed `FREEBUSY` information from:
 
 * Bedework Calendar (native CalDAV)
 * Oracle Collaboration Suite Calendar (native CalDAV)
@@ -250,7 +250,7 @@ Accessed FREEBUSY information from:
 .Aggregator Main Screen
 image::img03.png[]
 
-.Aggregator FREEBUSY Display
+.Aggregator `FREEBUSY` Display
 image::img04.png[]
 
 .Chandler Calendar Screen Shot

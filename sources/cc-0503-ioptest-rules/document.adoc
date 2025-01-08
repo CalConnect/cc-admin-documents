@@ -37,36 +37,36 @@ h| 2. h| Event modification
 | 2.4. | Add an attendee to "Meeting 1.1bis".
 | 2.5. | Add an alarm to "Meeting 1.1bis".
 | 2.6. | Modify the title of the 1st instance of the recurring meeting created in 1.2.
-| 2.7. | Modify the participation status of 1st instance to DECLINED.
+| 2.7. | Modify the participation status of 1st instance to `DECLINED`.
 | 2.8. | Cancel the 4th instance of the recurring meeting created in 1.2.
 | 2.9. | One client changes "Meeting 1.1bis" to a different time, second client 'refreshes' its display to see the modification.
 h| 3. h| Event retrieval
-| 3.1. | calendar-query REPORT
+| 3.1. | calendar-query `REPORT`
 | 3.1.1. | No filtering (match everything)
-| 3.1.1.1. | Query all components and return all data. (tests <calendar-query> and <filter>)
-| 3.1.1.2. | Query all components and return ETag WebDAV property and all data. (tests <calendarquery>+<DAV:prop> and <filter>)
-| 3.1.1.3. | Query all components and return just entire VEVENT components. (tests <calendarquery>, <filter>+<comp-filter>)
-| 3.1.1.4. | Query all components and return VEVENT components with only DTSTART, DTEND/DURATION, SUMMARY, UID, SEQUENCE, RRULE, RDATE, EXRULE, EXDATE, RECURRENCE-ID. (tests <calendar-query> , <filter>+<comp-filter>, <calendar-data>+<comp>+<prop>)
+| 3.1.1.1. | Query all components and return all data. (tests `<calendar-query>` and `<filter>`)
+| 3.1.1.2. | Query all components and return ETag WebDAV property and all data. (tests `<calendar-query>+<DAV:prop>` and `<filter>`)
+| 3.1.1.3. | Query all components and return just entire `VEVENT` components. (tests `<calendar-query>`, `<filter>+<comp-filter>`)
+| 3.1.1.4. | Query all components and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<filter>+<comp-filter>`, `<calendar-data>+<comp>+<prop>`)
 | 3.1.2. | time-range filtering
-| 3.1.2.1. | Query all components within a one day time-range and return all data. Make sure that there is a recurring event that starts prior to the chosen time-range but has one non-overridden instance within the time-range. (tests <calendar-query> , <filter>+<time-range>)
-| 3.1.2.2. | Query all components within a one week time-range and return just entire VEVENT components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests <calendar-query>, <filter>+<time-range>)
+| 3.1.2.1. | Query all components within a one day time-range and return all data. Make sure that there is a recurring event that starts prior to the chosen time-range but has one non-overridden instance within the time-range. (tests `<calendar-query>`, `<filter>+<time-range>`)
+| 3.1.2.2. | Query all components within a one week time-range and return just entire `VEVENT` components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests `<calendar-query>`, `<filter>+<time-range>`)
 | 3.1.3. | component based filtering
-| 3.1.3.1. | Query all components that contain an embedded VALARM component. (tests <calendar-query>, <filter>+<comp-filter>)
-| 3.1.3.2. | Query all components that contain an embedded VALARM component whose trigger falls within a specific time-range. (tests <calendar-query>, <filter>+<comp-filter>+<prop-filter>+<time-range>)
+| 3.1.3.1. | Query all components that contain an embedded `VALARM` component. (tests `<calendar-query>`, `<filter>+<comp-filter>`)
+| 3.1.3.2. | Query all components that contain an embedded `VALARM` component whose trigger falls within a specific time-range. (tests `<calendar-query>`, `<filter>+<comp-filter>+<prop-filter>+<time-range>`)
 | 3.1.4. | property based filtering
-| 3.1.4.1. | Query all components that contain any ORGANIZER property. (tests <calendar-query>, <filter>+<prop-filter>+<is-defined>)
-| 3.1.4.2. | Query all components that contain an ORGANIZER property with a specific CUA text value case-insensitively. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<caseless>)
-| 3.1.4.3. | Query all components that contain an ORGANIZER property with a specific CUA text value case-sensitively. (tests <calendar-query>, <filter>+<prop-filter>+<textmatch>+<caseless>)
+| 3.1.4.1. | Query all components that contain any `ORGANIZER` property. (tests `<calendar-query>`, `<filter>+<prop-filter>+<is-defined>`)
+| 3.1.4.2. | Query all components that contain an `ORGANIZER` property with a specific CUA text value case-insensitively. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<caseless>`)
+| 3.1.4.3. | Query all components that contain an `ORGANIZER` property with a specific CUA text value case-sensitively. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<caseless>`)
 | 3.1.5. | parameter based filtering
-| 3.1.5.1. | Query all components that contain a DTSTART property with a TZID parameter. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>)
-| 3.1.5.2. | Query all components that contain an ATTENDEE property with PARTSTAT=NEEDSACTION parameter. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>)
-| 3.2. | calendar-multiget REPORT
-| 3.2.1. | Query a specific href and return all data. (tests <calendar-multiget>)
-| 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests <calendar-multiget>)
-| 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests <calendar-multiget>+<DAV:prop>)
-| 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests <calendar-multiget>+<DAV:prop>)
-| 3.2.5. | Query a specific href and return VEVENT components with only DTSTART, DTEND/DURATION, SUMMARY, UID, SEQUENCE, RRULE, RDATE, EXRULE, EXDATE, RECURRENCE-ID. (tests <calendar-query>, <calendar-data>+<comp>+<prop>)
-| 3.2.6. | Query multiple hrefs (some of which do not exist) and return VEVENT components with only DTSTART, DTEND/DURATION, SUMMARY, UID, SEQUENCE, RRULE, RDATE, EXRULE, EXDATE, RECURRENCE-ID. (tests <calendar-query >, <calendar-data>+<comp>+<prop>)
+| 3.1.5.1. | Query all components that contain a `DTSTART` property with a `TZID` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>`)
+| 3.1.5.2. | Query all components that contain an `ATTENDEE` property with `PARTSTAT=NEEDSACTION` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>`)
+| 3.2. | calendar-multiget `REPORT`
+| 3.2.1. | Query a specific href and return all data. (tests `<calendar-multiget>`)
+| 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests `<calendar-multiget>`)
+| 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
+| 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
+| 3.2.5. | Query a specific href and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
+| 3.2.6. | Query multiple hrefs (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
 h| 4. h| Event deletion
 | 4.1. | Delete a single non-recurring meeting.
 | 4.2. | Delete a single recurring meeting with no overridden instances.

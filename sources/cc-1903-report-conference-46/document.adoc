@@ -112,7 +112,7 @@ calendar abuse (TC CALSPAM)
 
 ==== Pending Assignment to CALEXT WG
 
-* VPOLL: Consensus Scheduling Component for iCalendar
+* `VPOLL`: Consensus Scheduling Component for iCalendar
 * Support for Series in iCalendar
 
 == CalConnect Liaisons as of October 2019
@@ -159,11 +159,11 @@ acts on behalf of the principal associated with that instance of the calendar
 
 JMAP Calendars: Several edits to be made based on discussions.
 
-VPOLL: Update draft using PARTICIPANT component rather than VVOTER component.
-Split BASIC mode specific bits into their own section describing BASIC mode. Publish
+`VPOLL`: Update draft using `PARTICIPANT` component rather than `VVOTER` component.
+Split `BASIC` mode specific bits into their own section describing `BASIC` mode. Publish
 this draft ASAP unless we think we can add new poll mode(s) quickly.
 
-Second poll mode would be SIGNUP mode where a bunch of tasks need to be
+Second poll mode would be `SIGNUP` mode where a bunch of tasks need to be
 handled and voters choose 1 or more that they are willing to complete (e.g. preparing
 for and/or bringing items for a dinner party)
 
@@ -172,7 +172,7 @@ garage) for available time slots for a procedure
 
 Server-side subscriptions: Compare/contrast current draft with Apple telemetry.
 
-VALARM Extensions: Add RELATED-TO back in. Add text on security considerations
+`VALARM` Extensions: Add `RELATED-TO` back in. Add text on security considerations
 of proximity alarms.
 
 === TC-DATETIME
@@ -220,7 +220,7 @@ Document models: Lightweight document model for Markdown, AsciiDoc, RTF as
 interchangeable rich text'
 
 Location vCard: Metadata for a location. vCard already contains "kind: location", and
-defined STRUCTURED-LOCATION in resource vCard work.
+defined `STRUCTURED-LOCATION` in resource vCard work.
 
 TC VCARD agreed to take over the joint work of OGC, ECCMA, W3C and ISO's work
 on POI (point of interest) and develop with them as partners

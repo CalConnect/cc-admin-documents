@@ -156,19 +156,19 @@ without automatic scheduling operations being performed by the server until the
 organizer "commits" the draft as ready for scheduling. The
 current design is as follows:
 ** Drafts are stored as resources in calendar collections using a specific
-DAV:resourcetype value (NOT in a single "drafts" collection)
-** To create a draft: POST /;add-member - server returns location of created draft
-** To "commit" a draft: POST //?action=create - server deletes the draft and adds a
+`DAV:resourcetype` value (NOT in a single "drafts" collection)
+** To create a `draft: POST /;add-member` - server returns location of created draft
+** To "commit" a `draft: POST //?action=create` - server deletes the draft and adds a
 new non-draft resource (it may use the same URI/UID
 or a different one - location is returned)
-** Open issue on how to specify draft DAV:resourcetype at creation time - three
+** Open issue on how to specify draft `DAV:resourcetype` at creation time - three
 possibilities:
-... Use a query parameter on the POST URL, e.g. ?resourcetype=calendar-draft
-... Use a header field in the POST request, e.g. DAV-resourcetype: calendar-draft
-... Use a multipart media type for the POST body that combines PUT+PROPPATCH to do
+... Use a query parameter on the `POST` URL, e.g. `?resourcetype=calendar-draft`
+... Use a header field in the `POST` request, e.g. `DAV-resourcetype: calendar-draft`
+... Use a multipart media type for the `POST` body that combines `PUT+PROPPATCH` to do
 atomic setting of WebDAV properties and
 resource body all in one go, e.g. "multipart/webdav-resource" with the first part
-being application/xml (WebDAV PROPPATCH
+being application/xml (WebDAV `PROPPATCH`
 body) and the second part being the data for the resource body.
 ** A mechanism for creating drafts from existing events was discussed and tabled as
 future work
@@ -206,17 +206,17 @@ clear. The current EVENTPUB drafts referenced above are
 http://tools.ietf.org/html/draft-douglass-calendar-extension/[Event Publication Extensions to iCalendar]
 and https://datatracker.ietf.org/doc/html/draft-daboo-icalendar-extensions[New Properties for iCalendar].
 Over the next few months the TC will be reactivated to consider
-and develop a proposal to add QRCODES to Calendar URIs.
+and develop a proposal to add `QRCODES` to Calendar URIs.
 
 === TC FREEBUSY
 
-The TC has been working on the VPOLL specification:
+The TC has been working on the `VPOLL` specification:
 https://tools.ietf.org/html/draft-york-vpoll-00[VPOLL: Consensus Scheduling Component for iCalendar]. The major change was the
-introduction of a VVOTER component to carry more complex information about voters and
+introduction of a `VVOTER` component to carry more complex information about voters and
 their choices, driven by the need to provide more
 information for task assignment - e.g. cost, expected time, possible start times etc.
 Over the next few months the TC will plan for
-interoperability testing on how non-aware VPOLL clients handle VPOLL in a collection
+interoperability testing on how non-aware `VPOLL` clients handle `VPOLL` in a collection
 
 === TC FSC
 
@@ -228,7 +228,7 @@ and sharing is handled in different circumstances.
 
 === TC IOPTEST
 
-Conducted general CalDAV and CardDAV testing. Some testing started of CalDAV PUSH and
+Conducted general CalDAV and CardDAV testing. Some testing started of CalDAV `PUSH` and
 sharing. Much iMIP testing as Microsoft
 participated in the test event. During the Interop, breakout sessions were held on
 iMIP, PUSH, and QRCOCDES and the URI. A new
@@ -290,7 +290,7 @@ Over the last four months the TC completed work on two specifications. The Tasks
 Extensions draft was submitted to the IETF as an Internet
 Draft; iCalendar Relationships was updated at the IETF to reflect the work of the TC.
 The Task Extensions draft defines the actual
-enhancements to VTODOs that are the primary goal of the TC.
+enhancements to ``VTODO``s that are the primary goal of the TC.
 
 * https://datatracker.ietf.org/doc/draft-apthorp-ical-tasks/[Task Extensions to iCalendar]
 * https://datatracker.ietf.org/doc/draft-douglass-ical-relations/[Improved Support for iCalendar Relations]

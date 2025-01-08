@@ -114,8 +114,8 @@ managing large number of calendars.
 
 === TC EVENTPUB
 
-We briefly covered the state of the new properties defined for event publishing, STRUCTURED-LOCATION, PARTICIPANT,
-STRUCTURE-RESOURCE and STYLED-DESCRIPTION. These have been described and discussed at previous Roundtables so
+We briefly covered the state of the new properties defined for event publishing, `STRUCTURED-LOCATION`, `PARTICIPANT`,
+`STRUCTURE-RESOURCE` and `STYLED-DESCRIPTION`. These have been described and discussed at previous Roundtables so
 this was largely a status report. The
 https://tools.ietf.org/html/draft-douglass-calendar-extension-02[internet draft has been refreshed]
 and there are a number of comments to be circulated to the
@@ -138,17 +138,17 @@ https://tools.ietf.org/html/draft-york-vpoll-00[VPOLL].
 The workshop started with a detailed overview of
 what consensus scheduling is, why people use it, and why standards - currently lacking - would enhance the process. This was
 followed by overviews of various products that do some form of consensus scheduling or booking. We then had a detailed
-overview of the VPOLL specification, covering the key elements and recent changes made by the TC. This included a description
-of how the POLL-MODE property will be used to define various modes and levels of complexity for polls. Initially there will be a
+overview of the `VPOLL` specification, covering the key elements and recent changes made by the TC. This included a description
+of how the `POLL-MODE` property will be used to define various modes and levels of complexity for polls. Initially there will be a
 simple "basic" mode that will be used as the basis for initial interoperability testing and will be used to encourage implementors to
-develop products. Going forward the TC will work on refinements to the VPOLL specification based on feedback from
-implementors. We plan on VPOLL testing at the next Interoperability Test Event event.
+develop products. Going forward the TC will work on refinements to the `VPOLL` specification based on feedback from
+implementors. We plan on `VPOLL` testing at the next Interoperability Test Event event.
 
 === TC IOPTEST
 
 The interoperability testing sessions were fairly busy and featured both new and established testers. There was a significant
 amount of work testing many of the basic CalDAV functions and beyond that to testing implicit scheduling. Some of us spent
-most of our time working on iSchedule, testing the new DKIM canonicalization. This was a successful test with events and
+most of our time working on iSchedule, testing the new `DKIM` canonicalization. This was a successful test with events and
 freebusy being transferred. Most problems related to the non-standard disposition of the services. There was some work in getting
 the CalDAV test and performance suites running. In addition there was some timezone service testing with the new JSON format
 and a certain amount of iMIP.
@@ -170,7 +170,7 @@ IETF status:
 
 * Trying to get a working group started, most likely via DOSETA. We reviewed the process required to do so.
 * CalConnect members need to show interest in order to justify working group in the IETF
-* Some IPR issues with DKIM; the IETF working group will have to deal with it before we can proceed.
+* Some IPR issues with `DKIM`; the IETF working group will have to deal with it before we can proceed.
 
 === TC RESOURCE
 
@@ -189,7 +189,7 @@ This approach is more in line with the expected use by web developers. The main 
 inactive timezones. While there appear to be about 80 timezones currently in use there are over 400 in the Olson database. We
 discussed timezones by reference: that is, servers don't send timezone data and clients use their own cached copy. This is largely
 in line with current practice though not in line with the specifications. We talked about a registry for timezone related information
-and how we should proceed. Finally the issue of allowing a TZID for DATE values was mentioned - RFC5545 disallows it, but
+and how we should proceed. Finally the issue of allowing a `TZID` for `DATE` values was mentioned - RFC5545 disallows it, but
 users want it.
 
 === TC USECASE

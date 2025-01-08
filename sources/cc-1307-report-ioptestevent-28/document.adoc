@@ -85,14 +85,14 @@ servers. We did this as part of testing the new CalDAV extensions which allow cl
 to indicate whether or not they need or will send the timezone. The tests were mostly successful in
 that there was no apparent differences in behavior. There was one case of a validation error.
 
-There was some VPOLL testing which included testing of a javascript client for consensus
+There was some `VPOLL` testing which included testing of a javascript client for consensus
 scheduling. This client revealed some issues in the use of cross-domain requests with CalDAV and
 may result in some renewed interest in a RESTful API.
 
 As usual, we had a certain amount of testing of basic calendaring including CalDAV and iMIP.
 There was some further testing of the PREFER header and alarms. Some long standing issues with
 working with Google were resolved for one of the attendees and turned out to be a stray CR/LF in
-RRULEs.
+``RRULE``s.
 
 As usual there was a significant amount of discussion taking place reinforcing the view that these
 events are not just for testing but for reaching a better understanding of protocols and their

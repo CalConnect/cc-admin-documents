@@ -115,7 +115,7 @@ Review of DMOZ directory service as source of categorization and event types.
 
 === TC FREEBUSY
 
-Dormant, current work item VPOLL waiting at IETF to be adopted into Working Group.
+Dormant, current work item `VPOLL` waiting at IETF to be adopted into Working Group.
 
 === TC FSC
 

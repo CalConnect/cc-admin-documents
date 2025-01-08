@@ -146,16 +146,15 @@ pushed out on events that have multiple attendees.
 ==== Issues Found
 
 . Creating a New Calendar, the event will throw 500
-** Error: dav - error handling method PUT com.xxxx.xx.dav.DavException: cannot create
+** `Error: dav - error handling method PUT com.xxxx.xx.dav.DavException: cannot create`
 ** Summary: When creating a new collection, the server may not return the correct collection type.
 . When Adding an Attendee to an Event on another Domain, `PERM_DENIED`
-** Error: calendar - Unable to process iCalendar attachment
-com.xxxxxxx.common.service.ServiceException: permission denied: calendar invite not allowed
-from (Sender)
+** `Error: calendar - Unable to process iCalendar attachment`
+`com.xxxxxxx.common.service.ServiceException: permission denied: calendar invite not allowed from (Sender)`
 ** Summary: When creating an event via CalDAV, and adding an attendee that is not part of the
 domain, the server will throw this error. No impact on delivery/event.
 . MultiGet Problem with Calendars that have encoding\Characters that have encoding are escaped twice
-** Error: <status>HTTP/1.1 404 Not Found</status>
+** `Error: <status>HTTP/1.1 404 Not Found</status>`
 ** Summary: When using multiget clients and/or if user's have calendars that have names that have
 characters that must be encoded, the calendar isn't visible.
 . Validation of incoming iMIP messages and calendar `SPAM`
@@ -177,7 +176,7 @@ protocols?
 . If so, we are (or should be) willing to contribute to the evolution of such standards, to the best of our
 ability.
 
-Generally, the IOP event was a rewarding exercise, stressing our own test environment (ical server) as
+Generally, the IOP event was a rewarding exercise, stressing our own test environment (iCal server) as
 well as different vendors' servers and taking part in the discussions that followed. As discussed with the
 Executive Director previously, we will consider joining either as an individual university.
 
@@ -218,7 +217,7 @@ Respectfully submitted by Pat Egen, CalConnect Interop Manager.
 | p | | p | p | p | 2.4. | Add an attendee to "Meeting 1.1bis". |
 | p | | p | p | p | 2.5. | Add an alarm to "Meeting 1.1bis". |
 | p | | p | p | p | 2.6. | Modify the title of the 1st instance of the recurring meeting created in 1.2. |
-| p | | p** | p | p | 2.7. | Modify the participation status of the 1st attendee in meeting 1.3 to DECLINED. | &#42;&#42; iMIP broken on test server.
+| p | | p** | p | p | 2.7. | Modify the participation status of the 1st attendee in meeting 1.3 to `DECLINED`. | &#42;&#42; iMIP broken on test server.
 | p | | p | p | p | 2.8. | Cancel the 4th instance of the recurring meeting created in 1.2. |
 | p | | p | p | p | 2.9. | One client changes "Meeting 1.1bis" to a different time, second client 'refreshes' its display to see the modification. |
 | | | | | h| 4. h| Event deletion |

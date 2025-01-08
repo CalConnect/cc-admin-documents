@@ -76,7 +76,7 @@ It does not attempt to go beyond this scope, so it does not include tests for su
 * Correct protocol usage (e.g. support for OMA DS Server Alerted Notification or
 Suspend/Resume)
 * Stress tests for a large volume of calendar events
-* Stress tests for calendar event content, such as very long DESCRIPTION properties (e.g.
+* Stress tests for calendar event content, such as very long `DESCRIPTION` properties (e.g.
 copying full text of an email into the calendar description)
 * Effects experienced when multiple synchronization technologies are used in parallel (e.g.
 duplicate entry problems reported when using Palm(R) HotSync(R) or BlackBerry(R) clients
@@ -696,7 +696,7 @@ In particular
 * Repeating calendar events can be modified (exceptions added/removed)
 * Repeating calendar events can be deleted
 
-NOTE: The level of REPEATING/RECURRING meeting support will vary depending on the
+NOTE: The level of `REPEATING`/`RECURRING` meeting support will vary depending on the
 server. See <<appendix-A>> for explanation on possible levels of support.
 
 NOTE: All tests should be performed in succession.
@@ -2663,7 +2663,7 @@ and tasks.
 
 [example]
 A user creates a task in their mobile device calendar with a priority of 'Normal'
-(iCalendar created by device uses a PRIORITY value of 2). The user sends this task via
+(iCalendar created by device uses a `PRIORITY` value of 2). The user sends this task via
 Bluetooth to their desktop and imports the task to their desktop Calendar application. The desktop
 calendar application displays the task as 'Medium'.
 
@@ -2766,14 +2766,14 @@ The OMA data synchronisation group has published a Minimum Interoperability Prof
 which aims to provide guidance on how to interpret some ambiguous areas of the vCalendar 1.0
 specification.
 
-It recommends that all-day events should be represented using the same date for DTSTART and
-DTEND, with a time of 00:00:00 for DTSTART and 24:00:00 for DTEND. 24 hour events that
-begin at midnight should be represented using DTSTART and DTEND time of 00:00:00 and
-DTEND set to one day after the event. However, a time value of 24:00:00 is illegal syntax in
+It recommends that all-day events should be represented using the same date for `DTSTART` and
+`DTEND`, with a time of 00:00:00 for `DTSTART` and 24:00:00 for `DTEND`. 24 hour events that
+begin at midnight should be represented using `DTSTART` and `DTEND` time of 00:00:00 and
+`DTEND` set to one day after the event. However, a time value of 24:00:00 is illegal syntax in
 iCalendar; the valid range for the hour value is 0 through 23.
 
-The iCalendar specification states that the DTEND property is exclusive (i.e. the date specified in
-the DTEND is not included in the event duration). An event that lasts all day on June 19^th^ 2007
+The iCalendar specification states that the `DTEND` property is exclusive (i.e. the date specified in
+the `DTEND` is not included in the event duration). An event that lasts all day on June 19^th^ 2007
 should be represented as:
 
 [source%unnumbered]
@@ -2841,7 +2841,7 @@ on Sunday. Which is right?
 The reality is that some systems support one way or the other or in some cases both then add
 into the mix a mobile device that itself does its own thing and you have a dreadful mess.
 
-[underline]#_BOF Topic_#: _What form of ICALENDAR should be passed back and forth to ensure these
+[underline]#_BOF Topic_#: _What form of iCALENDAR should be passed back and forth to ensure these
 concepts are correctly handled?_
 
 ==== Multi-Day Day Events
@@ -2954,9 +2954,9 @@ broken.
 
 How should a task (to-do) be marked as completed?
 
-iCalendar defines three properties to indicate that a task is completed. STATUS describes the
-overall status for the task, PERCENT-COMPLETE allows a delegate to communicate the
-percentage completion of the task to the organizer and COMPLETED indicates the date/time that
+iCalendar defines three properties to indicate that a task is completed. `STATUS` describes the
+overall status for the task, `PERCENT-COMPLETE` allows a delegate to communicate the
+percentage completion of the task to the organizer and `COMPLETED` indicates the date/time that
 the to-do was actually completed. An example of how a completed task can be expressed using
 these properties is shown below:
 
@@ -3047,8 +3047,8 @@ all-day events. For example, should all-day events block time (free/busy handlin
 meaning preserved between device & server? A consensus within the industry needs to
 be reached before these tests can be considered complete.
 . Recurrence tests are not considered complete: Frequencies less than a day (secondly,
-minutely, hourly), various until/count/interval combinations, various BYXXX repeat
-patterns, WKST, limited coverage of combinations of repeat patterns, limited coverage of
+minutely, hourly), various until/count/interval combinations, various `BYXXX` repeat
+patterns, `WKST`, limited coverage of combinations of repeat patterns, limited coverage of
 exception combinations and repeat modification/deletion. If iCalendar test data is
 supplied, verify that recurrence property parameters can be specified in any order. A
 consensus within the industry on what the minimal level of support should be on a mobile

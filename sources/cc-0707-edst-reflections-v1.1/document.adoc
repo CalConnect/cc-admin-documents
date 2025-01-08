@@ -255,7 +255,7 @@ but do not always exist, nor do they necessarily materialize in a timely fashion
 
 CalConnect's role as a promoter of calendaring and scheduling standards put the consortium in a
 unique position. By publishing web pages with both informational articles and links to resources
-on publically-accessible websites, the consortium was able to act as a clearinghouse of DSTrelated
+on publicly-accessible websites, the consortium was able to act as a clearinghouse of DST-related
 resources. The consortium also put out informational press releases to both industry and
 general news providers.
 

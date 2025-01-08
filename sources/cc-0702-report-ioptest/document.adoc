@@ -88,36 +88,36 @@ h| 2. h| Event modification
 | 2.4. | Add an attendee to "Meeting 1.1bis".
 | 2.5. | Add an alarm to "Meeting 1.1bis".
 | 2.6. | Modify the title of the 1st instance of the recurring meeting created in 1.2.
-| 2.7. | Modify the participation status of the 1st attendee in meeting 1.3 to DECLINED.
+| 2.7. | Modify the participation status of the 1st attendee in meeting 1.3 to `DECLINED`.
 | 2.8. | Cancel the 4th instance of the recurring meeting created in 1.2.
 | 2.9. | One client changes "Meeting 1.1bis" to a different time, second client 'refreshes' its display to see the modification.
 h| 3. h| Event retrieval
-| 3.1. | calendar-query REPORT
+| 3.1. | calendar-query `REPORT`
 | 3.1.1. | No filtering (match everything)
-| 3.1.1.1. | Query all components and return all data. (tests <calendar-query> and <filter>)
-| 3.1.1.2. | Query all components and return ETag WebDAV property and all data. (tests <calendar-query>+<DAV:prop> and <filter>)
-| 3.1.1.3. | Query all components and return just entire VEVENT components. (tests <calendar-query>, <filter>+<comp-filter>)
-| 3.1.1.4. | Query all components and return VEVENT components with only DTSTART, DTEND/DURATION, SUMMARY, UID, SEQUENCE, RRULE, RDATE, EXRULE, EXDATE, RECURRENCE-ID. (tests <calendar-query>, <filter>+<comp-filter>, <calendar-data>+<comp>+<prop>)
+| 3.1.1.1. | Query all components and return all data. (tests `<calendar-query>` and `<filter>`)
+| 3.1.1.2. | Query all components and return ETag WebDAV property and all data. (tests `<calendar-query>+<DAV:prop>` and `<filter>`)
+| 3.1.1.3. | Query all components and return just entire `VEVENT` components. (tests `<calendar-query>`, `<filter>+<comp-filter>`)
+| 3.1.1.4. | Query all components and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<filter>+<comp-filter>`, `<calendar-data>+<comp>+<prop>`)
 | 3.1.2. | time-range filtering
-| 3.1.2.1. | Query all components within a one day time-range and return all data. Make sure that there is a recurring event that starts prior to the chosen time-range but has one non-overridden instance within the time-range. (tests <calendar-query>, <filter>+<time-range>)
-| 3.1.2.2. | Query all components within a one week time-range and return just entire VEVENT components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests <calendar-query>, <filter>+<time-range>)
+| 3.1.2.1. | Query all components within a one day time-range and return all data. Make sure that there is a recurring event that starts prior to the chosen time-range but has one non-overridden instance within the time-range. (tests `<calendar-query>`, `<filter>+<time-range>`)
+| 3.1.2.2. | Query all components within a one week time-range and return just entire `VEVENT` components. Make sure that there is a recurring event that starts prior to the chosen time-range but has one overridden instance within the time-range. (tests `<calendar-query>`, `<filter>+<time-range>`)
 | 3.1.3. | component based filtering
-| 3.1.3.1. | Query all components that contain an embedded VALARM component. (tests <calendar-query>, <filter>+<comp-filter>)
-| 3.1.3.2. | Query all components that contain an embedded VALARM component whose trigger falls within a specific time-range. (tests <calendar-query>, <filter>+<comp-filter>+<prop-filter>+<time-range>)
+| 3.1.3.1. | Query all components that contain an embedded `VALARM` component. (tests `<calendar-query>`, `<filter>+<comp-filter>`)
+| 3.1.3.2. | Query all components that contain an embedded `VALARM` component whose trigger falls within a specific time-range. (tests `<calendar-query>`, `<filter>+<comp-filter>+<prop-filter>+<time-range>`)
 | 3.1.4. | property based filtering
-| 3.1.4.1. | Query all components that contain any ORGANIZER property. (tests <calendar-query>, <filter>+<prop-filter>+<is-defined>)
-| 3.1.4.2. | Query all components that contain an ORGANIZER property with a specific CUA text value case-insensitively. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<caseless>)
-| 3.1.4.3. | Query all components that contain an ORGANIZER property with a specific CUA text value case-senstively. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<caseless>)
+| 3.1.4.1. | Query all components that contain any `ORGANIZER` property. (tests `<calendar-query>`, `<filter>+<prop-filter>+<is-defined>`)
+| 3.1.4.2. | Query all components that contain an `ORGANIZER` property with a specific CUA text value case-insensitively. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<caseless>`)
+| 3.1.4.3. | Query all components that contain an `ORGANIZER` property with a specific CUA text value case-sensitively. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<caseless>`)
 | 3.1.5. | parameter based filtering
-| 3.1.5.1. | Query all components that contain a DTSTART property with a TZID parameter. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>)
-| 3.1.5.2. | Query all components that contain an ATTENDEE property with PARTSTAT=NEEDS-ACTION parameter. (tests <calendar-query>, <filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>)
-| 3.2. | calendar-multiget REPORT
-| 3.2.1. | Query a specific href and return all data. (tests <calendar-multiget>)
-| 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests <calendar-multiget>)
-| 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests <calendar-multiget>+<DAV:prop>)
-| 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests <calendar-multiget>+ <DAV:prop>)
-| 3.2.5. | Query a specific href and return VEVENT components with only DTSTART, DTEND/DURATION, SUMMARY, UID, SEQUENCE, RRULE, RDATE, EXRULE, EXDATE, RECURRENCE-ID. (tests <calendar-query>, <calendar-data>+<comp>+<prop>)
-| 3.2.6. | Query multiple hrefs (some of which do not exist) and return VEVENT components with only DTSTART, DTEND/DURATION, SUMMARY, UID, SEQUENCE, RRULE, RDATE, EXRULE, EXDATE, RECURRENCE-ID. (tests <calendar-query>, <calendar-data>+<comp>+<prop>)
+| 3.1.5.1. | Query all components that contain a `DTSTART` property with a `TZID` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>`)
+| 3.1.5.2. | Query all components that contain an `ATTENDEE` property with `PARTSTAT=NEEDS-ACTION` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>`)
+| 3.2. | calendar-multiget `REPORT`
+| 3.2.1. | Query a specific href and return all data. (tests `<calendar-multiget>`)
+| 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests `<calendar-multiget>`)
+| 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
+| 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
+| 3.2.5. | Query a specific href and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
+| 3.2.6. | Query multiple hrefs (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
 h| 4. h| Event deletion
 | 4.1. | Delete a single non-recurring meeting.
 | 4.2. | Delete a single recurring meeting with no overridden instances.
@@ -150,11 +150,11 @@ Event on Wednesday, 3 pm - 5 pm, status tentative +
 Event on Thursday, 11 am - 12 pm, status cancelled +
 Event on Thursday, 3 pm - 5 pm, status cancelled
 | 7.1 | Run a free-busy report for the entire week.
-| 7.1.1 | Verify two FREEBUSY periods for Monday, the second is BUSY-TENTATIVE.
-| 7.1.2 | Verify two FREEBUSY periods for Tuesday.
-| 7.1.3 | Verify four FREEBUSY periods for Wednesday, second and fourth are BUSY-TENTATIVE and one hour long.
-| 7.1.4 | Verify two FREEBUSY periods for Thursday.
-| 7.1.5 | Verify two FREEBUSY periods for Friday.
+| 7.1.1 | Verify two `FREEBUSY` periods for Monday, the second is `BUSY-TENTATIVE`.
+| 7.1.2 | Verify two `FREEBUSY` periods for Tuesday.
+| 7.1.3 | Verify four `FREEBUSY` periods for Wednesday, second and fourth are `BUSY-TENTATIVE` and one hour long.
+| 7.1.4 | Verify two `FREEBUSY` periods for Thursday.
+| 7.1.5 | Verify two `FREEBUSY` periods for Friday.
 h| 8 h| Scheduling
 | Setup | Three user accounts user1 (role Organizer), user2 (role Attendee), user3 (role Attendee) provisioned with suitable principal properties for calendar home, inbox, outbox and user addresses.
 | 8.1 | Organizer (user1) sends non-recurring message invite for Monday at 9am (1 hour) to each attendee. Verify that each attendee Inbox receives a copy of the invite.
@@ -185,13 +185,13 @@ problems occurring on all sides. Some server problems were fixed and re-tested a
 * Calendar-query report not matching any event occurrences in some cases
 * COPY to the same location should not be allowed
 * HTTP Error 409 Conflict returned when overwrite HTTP header is false, should be 401 or 403
-* VFREEBUSY component should always contain GMT times
+* `VFREEBUSY` component should always contain GMT times
 * Publishing only a project calendar using CALDAV.
 * Not deleting events from CALDAV server during next publishing.
 * Needing to publish more information about tasks in event Descriptions
 * Not properly handling all-day meeting invitation generated by another vendor's product.
-* Using incorrect Content-Class:urn:content-classes:calendar-message instead of Content-Class:urn:content-classes:task when sending tasks.
-* client expecting an etag on collections
+* Using incorrect `Content-Class:urn:content-classes:calendar-message` instead of `Content-Class:urn:content-classes:task` when sending tasks.
+* client expecting an ETag on collections
 * One vendor adds an Organizer to the events they created.
 * bugs were associated with setting of calendar properties.
 * problems with user principals
@@ -199,11 +199,11 @@ problems occurring on all sides. Some server problems were fixed and re-tested a
 
 ==== Example of things tested
 
-* Ability to connect and publish VEVENT's and VTODO's to a CALDAV server
+* Ability to connect and publish ``VEVENT``'s and ``VTODO``'s to a CALDAV server
 * Adding a configuration pane to the Application to support changing server connections.
 * Summaries and descriptions to each task.
 * Subprojects as all day events.
-* TODO support and MKCalendar support
+* `TODO` support and MKCalendar support
 * absorb and completely ignore a vvenue component.
 
 Cyrus Daboo of Apple created a test tool which was run against several servers at the event. A brief
@@ -221,7 +221,7 @@ exceptions.
 Examples of things found during iCalendar testing
 
 * Task interoperability issues that stem from a simple IMIP component tag missing.
-* Not handling TENTATIVE status and broken Cancel.
+* Not handling `TENTATIVE` status and broken Cancel.
 * All day appointment expectations where there is no time (unlike Microsoft).
 * And of course, the odds and ends little bugs that are always found.
 * A lot is working today with most of the attendees.
@@ -252,13 +252,13 @@ products tested and their results are shown in the following chart:
 |===
 | CALDAVTester Test Script | Vendor1 | Vendor2 | Vendor3 | Vendor4
 
-| acl | Not supported by server | Does not support perevent ACLs. | VTODO put fails; | Not supported by server.
+| acl | Not supported by server | Does not support prevent ACLs. | `VTODO PUT` fails; | Not supported by server.
 
 | acldisabled | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
 | aclreports | Not supported by server | Not supported by server. | Gave back 400 response in some cases where a 403 or multi-status should have been returned; supported-report-set does not list all ACL reports; | Not supported by server.
 
-| attachments | Failed all - server reports error with last line of ATTACHMENT property | Passed all. | ATTACHMENT property not returned after being PUT |
+| attachments | Failed all - server reports error with last line of `ATTACHMENT` property | Passed all. | `ATTACHMENT` property not returned after being `PUT` |
 
 | availability | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
@@ -266,41 +266,41 @@ products tested and their results are shown in the following chart:
 
 | calendaruserproxy | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| copymove | COPY/MOVE not supported by server | Failed: allowed copy of event back to same calendar; return 409 instead of 412 for Overwrite:F | MKCALENDAR fails during start up | 500 errors for nearly all.
+| copymove | `COPY`/`MOVE` not supported by server | Failed: allowed copy of event back to same calendar; return 409 instead of 412 for Overwrite:F | `MKCALENDAR` fails during start up | 500 errors for nearly all.
 
-| delete | Passed all. | Passed all. | VTODO PUT failed, VEVENT OK. | Failed during startup: Cannot put VTODO.
+| delete | Passed all. | Passed all. | `VTODO PUT` failed, `VEVENT` OK. | Failed during startup: Cannot put `VTODO`.
 
-| depthreports | | Whole bunch of multiget problems; no results coming back for calendar-query; fb property value periods not in iCalendar format -0500 offset in period values | Failed during startup: could not create calendar within new regular collection. | Failed during startup: cannot put VFREEBUSY (looks like same error as VTODO).
+| depthreports | | Whole bunch of multiget problems; no results coming back for calendar-query; fb property value periods not in iCalendar format -0500 offset in period values | Failed during startup: could not create calendar within new regular collection. | Failed during startup: cannot put `VFREEBUSY` (looks like same error as `VTODO`).
 
 | depthreportsacl | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
 | dropbox | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| encodedURIs | MKCALENDAR with calendar%202 fails with 400 | Location header was present in a PUT response. | Creates a calendar instead of a collection. | COPYs fail.
+| encodedURIs | `MKCALENDAR` with calendar%202 fails with 400 | Location header was present in a `PUT` response. | Creates a calendar instead of a collection. | ``COPY``s fail.
 
-| errors | | Won't allow resource in calendar home. | Failed during startup: initial PUT fails. | No DAV:error's returned.
+| errors | | Won't allow resource in calendar home. | Failed during startup: initial `PUT` fails. | No ``DAV:error``'s returned.
 
-| floating | MKCALENDAR failed in startup | All fail. | Failed during startup: cannot create subcalendar. | Failure that causes calendar to no longer open or be deleted.
+| floating | `MKCALENDAR` failed in startup | All fail. | Failed during startup: cannot create subcalendar. | Failure that causes calendar to no longer open or be deleted.
 
-| get | Duplicate DTSTAMP in VEVENT response; could not write resource in calendar home | Failed but that was due to normal server restrictions. | 500 for store of .ics in calendar home; does directory listing rather than returning whole calendar | Failures - but OK due to some event rewriting and directory listing.
+| get | Duplicate `DTSTAMP` in `VEVENT` response; could not write resource in calendar home | Failed but that was due to normal server restrictions. | 500 for store of .ics in calendar home; does directory listing rather than returning whole calendar | Failures - but OK due to some event rewriting and directory listing.
 
-| mkcalendar | MKCALENDAR without body fails; with body does not generate proper DAV:error reponse | Bad request properties were returned as 403 response, but should have been 403 propstatus codes in a 207. | 400 when no body; no DAV:error for precondition failures | No DAV:error's returned.
+| mkcalendar | `MKCALENDAR` without body fails; with body does not generate proper `DAV:error` response | Bad request properties were returned as 403 response, but should have been 403 propstatus codes in a 207. | 400 when no body; no `DAV:error` for precondition failures | No ``DAV:error``'s returned.
 
 | notifications | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| propfind | DAV:getcontentlength not returned on a calendar collection; did not reject invalid XML; unknown XML element generated a 500 | Passed all. | Accepted invalid XML. | Invalid XML accepted.
+| propfind | `DAV:getcontentlength` not returned on a calendar collection; did not reject invalid XML; unknown XML element generated a 500 | Passed all. | Accepted invalid XML. | Invalid XML accepted.
 
-| proppatch | Does not recognise non-standard DAV elements. | Unknown DAV: properties were ignored. | Got a <#test> XML element in output, plus other failures. | 500 errors; xml:lang on property is lost.
+| proppatch | Does not recognise non-standard DAV elements. | Unknown `DAV:` properties were ignored. | Got a `<#test>` XML element in output, plus other failures. | 500 errors; `xml:lang` on property is lost.
 
 | proxyauthz | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| put | VTODO's failed - duplicate DTSTAMP | Some failures - probably due to server re-writing data content. | VTODOs fail; unbounded daily events hang the server | 500 errors for VTODOs.
+| put | VTODO's failed - duplicate `DTSTAMP` | Some failures - probably due to server re-writing data content. | ``VTODO``s fail; unbounded daily events hang the server | 500 errors for ``VTODO``s.
 
 | quota | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| recurrenceput | java.lang.NullPointerException on some recurring vtodos; vevents were OK | Passed all. | VTODOs all fail; VEVENTs OK. | VTODOs all fail; VEVENTs OK.
+| recurrenceput | java.lang.NullPointerException on some recurring vtodos; vevents were OK | Passed all. | ``VTODO``s all fail; ``VEVENT``s OK. | ``VTODO``s all fail; ``VEVENT``s OK.
 
-| reports | Failed during startup whilst trying to put an alarm | Various failures as per depthreports. | | Failed during startup: cannot put VFREEBUSY (looks like same error as VTODO).
+| reports | Failed during startup whilst trying to put an alarm | Various failures as per depthreports. | | Failed during startup: cannot put `VFREEBUSY` (looks like same error as `VTODO`).
 
 | schedulepost | | Not supported by server. | Not supported by server. | Not supported by server.
 

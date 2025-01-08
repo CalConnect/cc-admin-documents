@@ -99,7 +99,7 @@ on this following the Roundtable.
 
 === TC FREEBUSY
 
-TC FREEBUSY presented its work on the VPOLL extension to iCalendar,
+TC FREEBUSY presented its work on the `VPOLL` extension to iCalendar,
 which could be used with iTIP to implement consensus scheduled. Next step would be trial
 implementations, including at least one client (to see how the mechanism would be presented in a
 UI).
@@ -112,7 +112,7 @@ organizations and two remote participants, focusing on iMIP, CalDAV, and CardDAV
 === TC iSCHEDULE
 
 TC iSCHEDULE presented an overview of the current state of iSchedule
-related standards, and an in depth view of the DKIM protocol and how it would be applied to
+related standards, and an in depth view of the `DKIM` protocol and how it would be applied to
 iSchedule. The scheduled time for the TC calls was adjusted to accommodate new participants.
 
 === TC MOBILE

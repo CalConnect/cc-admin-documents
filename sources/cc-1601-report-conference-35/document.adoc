@@ -100,11 +100,11 @@ Dormant pending progression of documents
 
 === TC CALDAV
 
-* Move forward with iCalendar patch, focusing on "VPATCH" format rather than pathbased
+* Move forward with iCalendar patch, focusing on "`VPATCH`" format rather than path-based
 format. Want to be able to use same format for all of patch/diff/compact use
 cases.
-* Write an I-D for new STRUCTURED-DATA iCalendar property
-* Take direction from TC-API on how to implement multiple ORGANIZERs in iCalendar
+* Write an I-D for new `STRUCTURED-DATA` iCalendar property
+* Take direction from TC-API on how to implement multiple ``ORGANIZER``s in iCalendar
 * Work on private/protected/public properties
 
 === TC DEVGUIDE

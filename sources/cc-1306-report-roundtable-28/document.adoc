@@ -114,9 +114,9 @@ https://tools.ietf.org/html/draft-daboo-icalendar-rscale-01[Non-Gregorian Recurr
 There have been no changes to the presentation since Roundtable XXVII in June; the
 presentation was repeated unchanged for those who were not at the June event. The draft
 specification is at the IETF and we are working to generate additional and broader interest in it.
-Libraries such as iCal4j have been updated to ensure that they will properly ignore the RSCALE
-parameter on RRULE when encountered. Google hopes to be able to conduct interoperability
-testing at CalConnect XXIX next February of their initial implementation of RSCALE.
+Libraries such as iCal4j have been updated to ensure that they will properly ignore the `RSCALE`
+parameter on `RRULE` when encountered. Google hopes to be able to conduct interoperability
+testing at CalConnect XXIX next February of their initial implementation of `RSCALE`.
 
 === TC AUTODISCOVERY
 
@@ -148,21 +148,21 @@ https://tools.ietf.org/html/draft-douglass-calendar-extension/[Event
 Publication Extensions to iCalendar] and
 https://tools.ietf.org/html/draft-daboo-icalendar-extensions[New Properties for iCalendar].
 The first specification adds
-STYLED-DESCRIPTION, ASSOCIATE, STRUCTURED-LOCATION and STRUCTUREDRESOURCE.
-We discussed the GROUP parameter (which probably has to be renamed). This
-allows different properties to be associated with each other - e.g. DESCRIPTION with a
-STYLED-DESCRIPTION.
+`STYLED-DESCRIPTION`, `ASSOCIATE`, `STRUCTURED-LOCATION` and `STRUCTURED-RESOURCE`.
+We discussed the `GROUP` parameter (which probably has to be renamed). This
+allows different properties to be associated with each other - e.g. `DESCRIPTION` with a
+`STYLED-DESCRIPTION`.
 
-The second specification allows many more properties on the VCALENDAR component and adds
-the COLOR and IMAGE properties. It also defines the DISPLAY parameter - indicating how an
-image hould be used,and the EMAIL parameter for attendees and organizers. There was some
+The second specification allows many more properties on the `VCALENDAR` component and adds
+the `COLOR` and `IMAGE` properties. It also defines the `DISPLAY` parameter - indicating how an
+image should be used,and the `EMAIL` parameter for attendees and organizers. There was some
 discussion on the use of CSS3 names for color ending in general (if not complete) agreement. The
-issue of tzid on DATE was raised and discussed again - perhaps with less discernable consensus.
+issue of `tzid` on `DATE` was raised and discussed again - perhaps with less discernable consensus.
 
 === TC FREEBUSY
 
-We presentated an overview of the VPOLL specification, which has not changed much since last
-time. We then saw a protoype VPOLL client demo illustrating the advantages of integrating a
+We presented an overview of the `VPOLL` specification, which has not changed much since last
+time. We then saw a prototype `VPOLL` client demo illustrating the advantages of integrating a
 polling system directly with an existing calendaring and scheduling system such as CalDAV.
 
 === TC IOPTEST
@@ -170,9 +170,9 @@ polling system directly with an existing calendaring and scheduling system such 
 A successful session testing some new features and as ever testing some of the more mature parts
 of the protocol with new clients and servers. Tested jcal support for clients and servers. This
 appears to be working very well. Timezones by reference was tested together with the associated
-CalDAV extensions. Mostly sucessful with some minor issues to be resolved. Suggests we could
+CalDAV extensions. Mostly successful with some minor issues to be resolved. Suggests we could
 move ahead after the resolution of those issues. Some testing was done on the prefer header for
-WebDAV and on managed attachments. We also tested VPOLL support including VPOLL in
+WebDAV and on managed attachments. We also tested `VPOLL` support including `VPOLL` in
 JSON. Cyrus presented the CalDAV test suite (again) and provided further assistance in getting it
 running.
 
@@ -196,8 +196,8 @@ TC-TASKs has made good progress against the original scope and has now prepared 
 * Task-extensions - early draft
 
 Further discussion is required in the areas of task assignment and deadlines / escalations, which
-will continue to the next Roundtable (XXIX). From the work done to date GAP, SUBSTATE and
-the PREPARE status need to be revisited based on Roundtable feedback. In addition to this the
+will continue to the next Roundtable (XXIX). From the work done to date `GAP`, `SUBSTATE` and
+the `PREPARE` status need to be revisited based on Roundtable feedback. In addition to this the
 publication and maintenance of domain specific data (e.g. namespaced reason codes, substates,
 related-ids etc) to support client customization is to be included in scope. Task time planning (e.g.
 allocated time, estimated time) will be investigated as extension of scope beyond the current work

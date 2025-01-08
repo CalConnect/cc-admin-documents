@@ -46,7 +46,7 @@ This section contains emails gathered on various mailing lists (e.g.:
 ietfcalsify@osafoundation.org, tc-timezone-l@calconnect.org...) and a summary of
 discussions between Calendaring and Scheduling Consortium members.
 
-=== Why should time zone information be preserved in a VCALENDAR object rather than converting to UTC?
+=== Why should time zone information be preserved in a `VCALENDAR` object rather than converting to UTC?
 
 ==== {blank}
 Recurring events that occur on both sides of a daylight savings time change need the
@@ -76,18 +76,18 @@ A meeting occurring every first Monday of the month at 0:30 CEST would be
 just before the first Monday of the month, converting that event to UTC would not expand
 that rule correctly.
 
-=== Should a VCALENDAR object contain whole VTIMEZONE objects or reference to a time zone?
+=== Should a `VCALENDAR` object contain whole `VTIMEZONE` objects or reference to a time zone?
 
-Here are some arguments for having a whole VTIMEZONE object inside a
-VCALENDAR object instead of just a reference to an external time zone definition:
+Here are some arguments for having a whole `VTIMEZONE` object inside a
+`VCALENDAR` object instead of just a reference to an external time zone definition:
 
 ==== {blank}
-Including the VTIMEZONE data in the VCALENDAR object makes the entity self
+Including the `VTIMEZONE` data in the `VCALENDAR` object makes the entity self
 contained and very portable.
 
 ==== {blank}
 An application with only offline viewing capabilities does not have to worry about keeping
-a time zone database if all the VCALENDAR objects contain the necessary time zone
+a time zone database if all the `VCALENDAR` objects contain the necessary time zone
 information.
 
 == Identified implementation problems and recommendations
@@ -126,16 +126,16 @@ zone list.
 
 ==== {blank}
 How should a client / server handle a time zone fork? (For example: if DST changes in
-the US only and not in Canada and meetings were created using an EST5EDT time
-zone). This could create two new time zones EST5EDT_CA for Canada and
-EST5EDT_US for the US (and deprecating EST5EDT).
+the US only and not in Canada and meetings were created using an `EST5EDT` time
+zone). This could create two new time zones `EST5EDT_CA` for Canada and
+`EST5EDT_US` for the US (and deprecating `EST5EDT`).
 
 ===== {blank}
-The GEO property might be used to detect which of the new time zones
+The `GEO` property might be used to detect which of the new time zones
 every meeting belongs in.
 
 ===== {blank}
-The LOCATION property can also be used to detect the appropriate time
+The `LOCATION` property can also be used to detect the appropriate time
 zone for the meetings.
 
 ===== {blank}
@@ -152,7 +152,7 @@ registry, and when a meeting is created with a time zone, the application will:
 can be accomplished by using any of these techniques:
 ** Have an algorithm pick an internal time zone with the closest corresponding
 set of rules to the supplied one.
-** Try to match the TZID with its internal counterpart.
+** Try to match the `TZID` with its internal counterpart.
 . If no match can be found the application will do one of these:
 ** Return an error.
 ** Add the new time zone to its internal time zone list.
@@ -168,8 +168,8 @@ The meeting could be converted to UTC using the provided time zone, take
 note that this solution is less than ideal since time zone information is lost.
 
 ==== {blank}
-If the application has in its internal list a TZID "America/New_York", and receives a
-VTIMEZONE with a TZID "America/New_York" with a different definition than its internal
+If the application has in its internal list a `TZID` "America/New_York", and receives a
+`VTIMEZONE` with a `TZID` "America/New_York" with a different definition than its internal
 one, the server may react unpredictably.
 
 ===== {blank}
@@ -178,9 +178,9 @@ the one used.
 
 ===== {blank}
 If using an internal time zone list that can be changed, a versioning of the
-TZID could be used allowing different versions of the same TZIDs to be kept.
+`TZID` could be used allowing different versions of the same ``TZID``s to be kept.
 This would allow applications to have events using different time zones with
-the same TZID. Take note however that consuming and preserving all time
+the same `TZID`. Take note however that consuming and preserving all time
 zones can become quite problematic:
 
 * Since time zone ids are often shown to users, the time zone list could
@@ -194,14 +194,14 @@ occur will most likely need to be updated with the new time zone rule.
 ==== How should client applications present a choice of time zones to users?
 
 ===== {blank}
-Use TZDATA database (a.k.a. Olson Database, "America/New_York")
+Use `TZDATA` database (a.k.a. Olson Database, "America/New_York")
 names.
 
 ===== {blank}
 Use a GMT Offset scheme ("GMT+2, Cairo"...).
 
 ===== {blank}
-Use common name presentation (EST5EDT, PST8PDT...).
+Use common name presentation (`EST5EDT`, `PST8PDT`...).
 
 ===== {blank}
 Additionally, a "clickable" world map is often used.
@@ -209,7 +209,7 @@ Additionally, a "clickable" world map is often used.
 ==== Where should a client application get its supported time zone list?
 
 ===== {blank}
-Use TZDATA database (a.k.a. Olson Database).
+Use `TZDATA` database (a.k.a. Olson Database).
 
 ===== {blank}
 Use standardized registry.
@@ -234,7 +234,7 @@ By doing periodic checks on the server.
 
 ===== {blank}
 Using a push mechanism notifying the client that a time zone has been
-updated. Possibly by adding a new ITIP method.
+updated. Possibly by adding a new iTIP method.
 
 === Time zone registry and service issues
 
@@ -274,7 +274,7 @@ naming scheme.
 
 ===== {blank}
 By defining a standardized way to retrieve the IANA registered time zones
-(i.e.: VTIMEZONE objects accessible through an extension of CalDAV, DNS,
+(i.e.: `VTIMEZONE` objects accessible through an extension of CalDAV, DNS,
 HTTP....).
 
 ==== Who should be responsible for updating it, how can it be trusted?

@@ -148,7 +148,7 @@ follow up on discussion.
 
 === TC CALENDAR
 
-* Discussion about DTSTART being part first instance of a recurrence but not part of the RRULE,
+* Discussion about `DTSTART` being part first instance of a recurrence but not part of the `RRULE`,
 file erratum on the RFC
 
 * Interest in party-crashing draft, will encourage Google to write the drat and perhaps implement
@@ -171,7 +171,7 @@ draft.
 
 * Continue Move page content from Drupal to Devguide where appropriate
 
-* Looking into GitHub pages (layout first, CNAME second)
+* Looking into GitHub pages (layout first, `CNAME` second)
 
 * Relocated the DevGuide to a Google offering in support of future requirements
 

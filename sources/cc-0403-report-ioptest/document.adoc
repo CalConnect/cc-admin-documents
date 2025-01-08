@@ -12,7 +12,6 @@
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
 
-
 .Foreword
 
 This document incorporates by reference the CalConnect Intellectual Property Rights,
@@ -68,7 +67,7 @@ items noted is attached to this report. The spreadsheet shows what is and is not
 two participants. Based on past interops, and discussions held at this meeting we have
 ascertained the following:
 
-* Most vendors are not doing Journals. It appears we can probably remove any VJOURNAL
+* Most vendors are not doing Journals. It appears we can probably remove any `VJOURNAL`
 items from all drafts without significant ramifications.
 * Recurring and repeating meetings still have a bit of mystery and ambiguity associated with
 them. This was obvious during testing and is well documented and discussed on the various
@@ -86,7 +85,7 @@ vendors during this interoperability event supports that item.
 I created a table that counts the number of items supported and not supported by both vendors as
 well as a breakdown of how many of each item each vendor does or does not support. I also
 created a table that shows the specific items supported by both vendors and a table showing the
-specific items NOT supported by both vendors.
+specific items `NOT` supported by both vendors.
 
 In summary, we are farther along than we were during the first interop. But we have a ways to
 go. There was discussion at this interop about opening a new mailing list to work on
@@ -176,12 +175,12 @@ By Vendor, the numbers look like this:
 ==== iTIP - RFC 2446 - 15 items out of 74
 
 * 3.1 Common Component Restrictions
-* 3.2.2 VEVENT REQUEST
+* 3.2.2 `VEVENT REQUEST`
 * 3.2.2.1 Rescheduling an Event
 * 3.2.2.2 Updating or Reconfirmation of an Event
-* 3.2.3 VEVENT REPLY
-* 3.2.4 VEVENT ADD
-* 3.2.4 VEVENT CANCEL
+* 3.2.3 `VEVENT REPLY`
+* 3.2.4 `VEVENT ADD`
+* 3.2.4 `VEVENT CANCEL`
 * 3.6 Status Replies
 * 3.7.2 Attendee Property Considerations
 * 5 Application Protocol Fallbacks
@@ -228,19 +227,11 @@ By Vendor, the numbers look like this:
 
 * Section 3 - security considerations
 
-<<<
+[bibliography]
+== Bibliography
 
-[align=center]
-*Previous interop results*
+* [[[report-1,1]]], CalConnect I -- April, 2000
 
-<<<
+* [[[report-2,2]]], CalConnect II -- April, 2001
 
-include::../cc-report-ioptestevent-1/document.adoc[]
-
-<<<
-
-include::../cc-report-ioptestevent-2/document.adoc[]
-
-<<<
-
-include::../cc-report-ioptestevent-3/document.adoc[]
+* [[[report-3,3]]], CalConnect III -- Virtual interop, September, 2002

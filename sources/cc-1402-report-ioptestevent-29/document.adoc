@@ -89,9 +89,9 @@ medium to large sets of data which revealed problems in a number of server imple
 The tests revealed many issues relating to the parsing and delivering of iCalendar data which are
 difficult to spot in production systems, such as:
 
-* Incorrect escaping of GEO values causing server exceptions
+* Incorrect escaping of `GEO` values causing server exceptions
 * Clients generating invalid end dates and server not handling them correctly
-* Events with attendees but no ORGANIZER
+* Events with attendees but no `ORGANIZER`
 * Failures during calendar creation due to unsupported properties
 
 The testing and resulting fixes generally result in more robust systems that react better to invalid

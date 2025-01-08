@@ -27,7 +27,7 @@ Why are standardized time zones needed?
 time zones and their associated rules in order to avoid the following common
 problems:
 ** Consuming unknown time zones.
-** Consuming known time zones with identical TZIDs but different rule.
+** Consuming known time zones with identical ``TZID``s but different rule.
 * Calendar applications need to have means of updating time zones and all affected
 data (i.e.: Previously created recurring meetings.) in an efficient and correct manner.
 * Having standardized time zones would open the door to using time zones by
@@ -99,7 +99,7 @@ appointed/elected committee/individual who approves updates to the list.
 ====
 [specification]
 --
-The time zone should be in a VTIMEZONE format as defined in RFC 2445.
+The time zone should be in a `VTIMEZONE` format as defined in RFC 2445.
 --
 ====
 
@@ -117,7 +117,7 @@ CalDAV, DNS, or ITIP.
 [specification]
 --
 The time zone service should be able to return only modified time zones; given the last
-time the time zone were fetched from the service and/or a list of TZID-TimeStamp, return
+time the time zone were fetched from the service and/or a list of ``TZID``-TimeStamp, return
 the time zones that have changed.
 --
 ====
@@ -127,9 +127,9 @@ the time zones that have changed.
 [specification]
 --
 The time zone service should be able to return a time zone based on a supplied alias;
-given an OS based time zone name, return the corresponding VTIMEZONE object. For
+given an OS based time zone name, return the corresponding `VTIMEZONE` object. For
 example: The windows time zone name:"(GMT -05:00) Eastern Time (US & Canada)"
-would return the VTIMEZONE Object with the TZID: "/IANA/America/New_York".
+would return the `VTIMEZONE` Object with the `TZID: "/IANA/America/New_York"`.
 --
 ====
 
@@ -137,7 +137,7 @@ would return the VTIMEZONE Object with the TZID: "/IANA/America/New_York".
 ====
 [specification]
 --
-The time zone service should be able to return a time zone based on a supplied TZID.
+The time zone service should be able to return a time zone based on a supplied `TZID`.
 --
 ====
 
@@ -145,7 +145,7 @@ The time zone service should be able to return a time zone based on a supplied T
 ====
 [specification]
 --
-The time zone service should be able to return a time zone based on a VTIMEZONE
+The time zone service should be able to return a time zone based on a `VTIMEZONE`
 object (Closest match). The "closest match" feature would be useful for consuming
 iCalendar objects originating from applications that don't have any time zone service
 knowledge.
@@ -164,7 +164,7 @@ exists. This is just describing how it could be done and is by no means set in s
 ====
 [specification]
 --
-A group (Let's call it the TZ Group) agrees to generate a VTIMEZONE object file every
+A group (Let's call it the TZ Group) agrees to generate a `VTIMEZONE` object file every
 time a new TZDB (Olson database) file is released we'll cal that file the "TZ registry file".
 --
 ====

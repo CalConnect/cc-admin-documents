@@ -95,7 +95,7 @@ Will be reactivated to consider authorization issues.
 
 === TC CALDAV
 
-* Created initial draft of STRUCTURED-DATA iCalendar property - allows schema-based
+* Created initial draft of `STRUCTURED-DATA` iCalendar property - allows schema-based
 data to be included with an event/task
 
 * Created rough draft for scoped attendee parameters - allows control of which

@@ -344,7 +344,7 @@ in daylight savings time, while others may not.
 
 [example]
 A product manager wants to schedule several video conferences for 9am
-GMT0BST in a multi-national corporation across 10 time zones. One
+`GMT0BST` in a multi-national corporation across 10 time zones. One
 participant is in Chatham, New Zealand which has 12 hours, 45 minutes
 time zone offset from UTC.
 
@@ -675,7 +675,7 @@ time of one of the meetings.
 [example]
 ====
 A product manager wants to schedule several video conferences for 9am
-GMT0BST on Tuesdays in a multi-national corporation across 10 time
+`GMT0BST` on Tuesdays in a multi-national corporation across 10 time
 zones. One participant is in Chatham, New Zealand which has 12 hours,
 45 minutes time zone offset from UTC. The third in the series needs to be
 changed to Wednesday to accommodate two of the participants.

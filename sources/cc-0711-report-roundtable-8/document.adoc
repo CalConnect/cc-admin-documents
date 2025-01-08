@@ -66,7 +66,7 @@ Mobile Industry_.
 === TC CALDAV
 
 TC CALDAV and TC FREEBUSY jointly worked on the availability discussions
-which contributed to the VAVAILABILITY specification recently submitted to the IETF by its
+which contributed to the `VAVAILABILITY` specification recently submitted to the IETF by its
 authors. The TC is in the final stages of work on the _CalDAV Scheduling Requirements_ paper
 which should be published in February. Following completion of the paper, the TC plans work on
 several topics including client metadata, external attachments, scheduled event updates,
@@ -76,16 +76,16 @@ reactivated.
 
 === TC EVENTPUB
 
-TC EVENTPUB developed use cases and requirements for the VVENUE
+TC EVENTPUB developed use cases and requirements for the `VVENUE`
 iCalendar extension, which has been submitted to the IETF as an individual submission by its
 authors. The TC is about to begin work on two new initiatives, event sharing and a possible event
-sharing protocol for event servers, and localization and a possible VLOCALIZE iCalendar
+sharing protocol for event servers, and localization and a possible `VLOCALIZE` iCalendar
 extension.
 
 === TC FREEBUSY
 
 The TC has completed its original scope of work with the completion of the
-report to The Open Group. Following the Roundtable it will begin work on FREEBUSY URLs
+report to The Open Group. Following the Roundtable it will begin work on `FREEBUSY` URLs
 and is exploring another initiative.
 
 === TC IOPTEST
@@ -149,7 +149,7 @@ not interested in the BOFS.
 === New Initiatives
 
 Work will be undertaken in existing TCS on new initiatives including
-localization, the FREEBUSY URL proposal, event sharing, and other possible items which could
+localization, the `FREEBUSY` URL proposal, event sharing, and other possible items which could
 result in the establishment of new TCs once the subjects have been fleshed out and the work
 scoped.
 

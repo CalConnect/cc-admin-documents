@@ -27,7 +27,7 @@ WS-Calendar publication of CalWS-SOAP as V1.0 for public review and contains
 the same content.
 
 This document is copyright (C)2012 by The Calendaring and Scheduling
-Consortium and is licensed under the Creative Commons 3.0 Unported LIcense:
+Consortium and is licensed under the Creative Commons 3.0 Unported License:
 
 http://creativecommons.org/licenses/by/3.0/.
 
@@ -154,7 +154,7 @@ specification will not attempt to address the issues of sharing or ACLs.
 === Provisioning
 
 The protocol will not provide any explicit provisioning operations. If it is possible to authenticate or
-address a principals calendar resources then they MUST be automatically created if necessary or
+address a principals calendar resources then they `MUST` be automatically created if necessary or
 appropriate
 
 === Copy/Move
@@ -221,7 +221,7 @@ followed by a response containing status information.
 
 The following methods are specified in the protocol description, `PUT`, `POST`, `GET`, `DELETE`. To avoid
 various issues with certain methods being blocked clients may use the `X-HTTP-Method-Override:` header
-to specify the intended operation. Servers SHOULD behave as if the named method was used.
+to specify the intended operation. Servers `SHOULD` behave as if the named method was used.
 
 [source%unnumbered]
 ----
@@ -653,10 +653,10 @@ iCalendar data);
 by a `COPY` or `MOVE` request, `MUST` obey all restrictions specified in Calendar Object Resources
 (e.g., calendar object resources `MUST NOT` contain more than one type of calendar component,
 calendar object resources `MUST NOT` specify the iCalendar `METHOD` property, etc.);
-* *CalWS:unsupported-calendar-component*: The resource submitted in the PUT request, or
+* *CalWS:unsupported-calendar-component*: The resource submitted in the `PUT` request, or
 targeted by a `COPY` or `MOVE` request, `MUST` contain a type of calendar component that is
 supported in the targeted calendar collection;
-* *CalWS:uid-conflict*: The resource submitted in the PUT request, or targeted by a `COPY` or `MOVE`
+* *CalWS:uid-conflict*: The resource submitted in the `PUT` request, or targeted by a `COPY` or `MOVE`
 request, `MUST NOT` specify an iCalendar UID property value already in use in the targeted
 calendar collection or overwrite an existing calendar object resource with one that has a different
 UID property value. Servers `SHOULD` report the URL of the resource that is already making use of
@@ -692,7 +692,7 @@ targeted by a `COPY` or `MOVE` request, `MUST` have a number of `ATTENDEE` prope
 instance less than or equal to the value of the CalDAV:max-attendees-per-instance property value
 on the calendar collection where the resource will be stored;
 
-=== Example - successful POST
+=== Example - successful `POST`
 
 [source%unnumbered]
 ----
@@ -716,7 +716,7 @@ HTTP/1.1 201 Created
 Location: http://example.com/user/fred/calendar/event1.ics
 ----
 
-=== Example - unsuccessful POST
+=== Example - unsuccessful `POST`
 
 [source%unnumbered]
 ----

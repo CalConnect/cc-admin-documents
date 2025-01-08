@@ -55,7 +55,7 @@ Technical Committee the opportunity to do so.
 
 == Special Events
 
-Two "implementation" BOFS were held during the Interoperability Test Event on Monday and
+Two "implementation" BOFs were held during the Interoperability Test Event on Monday and
 Tuesday afternoons:
 
 * Update versus replacement of calendar and contact data

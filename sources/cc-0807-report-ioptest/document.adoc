@@ -124,7 +124,7 @@ overwrite.
 On the "Query all components and return ETag WebDAV property and all data" test, a CalDAV
 client did a query only for the etag, not the calendar data
 
-When creating a calendar-query REPORT, one server's Reports are overridden in separate
+When creating a calendar-query `REPORT`, one server's Reports are overridden in separate
 resources with the same url.
 
 After creating a new calendar in the current user's personal calendar space, one CalDAV server
@@ -147,8 +147,8 @@ clients. They noted incorrect server responses that caused problems with another
 
 A CalDAV server noted the following issues within their own application:
 
-* a problem with xmlns:D="DAV:"
-* another problem with DAV: in iSchedule response
+* a problem with `xmlns:D="DAV:"`
+* another problem with `DAV:` in iSchedule response
 * Originator and Recipient address are swapped when a meeting reply was sent from a
 server over iSchedule
 * finally it works.
@@ -176,15 +176,15 @@ friendly response would be desirable.
 third instance, you lose sight of the fourth instance too.
 . If you have a recurrence with an exception where the start of the recurrence specifies
 seconds, we generate a bad recurrence-id for the exception.
-. We were not preserving the value of RSVP in Meeting REQUESTs. i.e. we always
-assumed the value was TRUE.
+. We were not preserving the value of `RSVP` in Meeting ``REQUEST``s. i.e. we always
+assumed the value was `TRUE`.
 . Notes originated meetings were not visible to our CalDAV clients.
 . One server's iMip Gateway originated messages are not recognized as meeting requests
-by us. We spotted an original issue that the Content-Type METHOD parameter was not
+by us. We spotted an original issue that the Content-Type `METHOD` parameter was not
 being specified but we still had an issue with the final form of Mime structure that they
 intend to use.
-. Notes originated requests end up with blank DESCRIPTION in the iCalendar object and
-invalid ATTACH properties.
+. Notes originated requests end up with blank `DESCRIPTION` in the iCalendar object and
+invalid `ATTACH` properties.
 
 Another server observed the following during testing of iSchedule.
 
@@ -227,15 +227,15 @@ bugs)
 Cancel a Meeting Invitation
 
 * Not bumping the sequence on cancel
-* One vendor will consider not requiring SEQUENCE to be bumped
+* One vendor will consider not requiring `SEQUENCE` to be bumped
 * Updating the subject only - possibly related to sequence bump (retest)
 * Viewing the cancel causing duplicates
 
 Send an invite with Rich Text
 
-* Not honoring ALTREP or sending any rich text.
+* Not honoring `ALTREP` or sending any rich text.
 * Displaying rich text in invite, not in calendar.
-* Putting HTML directly in description rather than in an ALTREP.
+* Putting HTML directly in description rather than in an `ALTREP`.
 
 Send an invite with attachments
 
@@ -252,7 +252,7 @@ Reschedule the original meeting invitation
 
 Decline a meeting invitation
 
-* Not sending RSVP thus causing lost responses
+* Not sending `RSVP` thus causing lost responses
 
 Create a meeting with required and optional Participants
 

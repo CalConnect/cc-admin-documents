@@ -95,15 +95,15 @@ the Calendar Alarm Extensions for CalDAV, a Internet Draft on which the TC has b
 
 === TC EVENTPUB
 
-TC EVENTPUB has been working on its LINK (formerly Reference) property
+TC EVENTPUB has been working on its `LINK` (formerly Reference) property
 extension to iCalendar, and expects to publish and submit it as an Internet Draft by the end of
 June.
 
 === TC FREEBUSY
 
 TC FREEBUSY is continuing to work on consensus or poll scheduling, and is
-developing a specification extending iCalendar and iTIP for VPOLL. CalDAV and iSchedule
-implications and how VPOLL items would be stored on a server were also discussed.
+developing a specification extending iCalendar and iTIP for `VPOLL`. CalDAV and iSchedule
+implications and how `VPOLL` items would be stored on a server were also discussed.
 
 === TC IOPTEST
 

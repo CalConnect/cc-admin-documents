@@ -65,7 +65,7 @@ tester will promote interoperability. Of late there has been an increased intere
 other issues such as iMIP and there was some work on interchanging iMIP messages.
 
 There was a significant amount of work on versions of ical4j to incorporate changes
-to support VPOLL. There was some discussion on how to merge the many different forks
+to support `VPOLL`. There was some discussion on how to merge the many different forks
 of that library and this may lead to some future calls.
 
 The new JSON format being developed by TC-API was discussed. There were a number of

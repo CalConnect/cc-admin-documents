@@ -92,7 +92,7 @@ these vCards just fine.
 
 Missing implementation of ACL reports required by the standard
 
-Overall the servers seemed to lack support for various ACL REPORTs or properties. The specific set
+Overall the servers seemed to lack support for various ACL ``REPORT``s or properties. The specific set
 varied from server to server. This could be attributed to the lack of support for these features from the
 clients and the fact that most servers support only subset of the WebDAV ACL specification that is
 required for interoperability with the Apple iCal client.
@@ -181,13 +181,13 @@ N:: Not supported
 .Sync Collection Matrix
 |===
 | Synchronize existing collection containing an event | P | P | P
-| Resynchronize the same collection if no changes occured | P | P | P
+| Resynchronize the same collection if no changes occurred | P | P | P
 | Create an event in the collection, resynchronize | P | P | P
 | - server responded with sync-response element containing "201 Created" status for the item that was created by the client (draft -02) | * | * | *
 | - server responded with response element without a status (draft -03) | | |
 | Create an event in the collection from other client, resynchronize | P | | P
 | Create an event in the collection, delete it from other client, resynchronize | P | | P
-| - the server MUST respond with 404 status for the item that was deleted from the other client | | |
+| - the server `MUST` respond with 404 status for the item that was deleted from the other client | | |
 | Create a collection with several events, delete it and recreate it from other client, resynchronize | P | | P
 | - server responded by sending multistatus response with 404 statuses for all previously existing resources | | | *
 | - server invalidated the synchronization token and refused the resynchronization request with 4xx error and valid-sync-token precondition | * | |

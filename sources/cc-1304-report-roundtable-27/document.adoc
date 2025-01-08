@@ -94,13 +94,13 @@ CalConnect itself.
 
 Presented a problem statement and our proposed approach. The draft is now at the IETF:
 https://datatracker.ietf.org/doc/draft-daboo-icalendar-rscale/[Non-Gregorian Recurrence Rules in iCalendar].
-There was a discussion on RPATTERN vs RRULE, "L"
-suffix vs BYLEAPMONTH. The outcomes were:
+There was a discussion on `RPATTERN` vs `RRULE`, "L"
+suffix vs `BYLEAPMONTH`. The outcomes were:
 
 . Give a call to all calendar services and clients to fail if they encounter unfamiliar term in
-RRULE
-. Verify that no major client interprets RSCALE as a wrong recurrence (in Gregorian)
-. Try to stick with RRULE and "L" suffix, pending discussion @IETF
+`RRULE`
+. Verify that no major client interprets `RSCALE` as a wrong recurrence (in Gregorian)
+. Try to stick with `RRULE` and "L" suffix, pending discussion @IETF
 . Keep discussion on calsify@ietf
 . Have a one-off call after the Roundtable to determine further courses of action
 
@@ -122,11 +122,11 @@ sharing and calendar searching.
 === TC EVENTPUB
 
 The first part of the session was a review of the extensions specification and the properties and
-parameters defined there. Since the last round table we've defined a new GROUP parameter to
+parameters defined there. Since the last round table we've defined a new `GROUP` parameter to
 allow grouping of related properties. This has expected uses outside of event publication - in
-particular tasks. The PARTICIPANT property has now been renamed to ASSOCIATE. There were
-suggestions about the role of ASSOCIATE and how it relates to ATTENDEE. There are no iTIP
-semantics for ASSOCIATE so no broadcasting of data to potentially very large numbers of users.
+particular tasks. The `PARTICIPANT` property has now been renamed to `ASSOCIATE`. There were
+suggestions about the role of `ASSOCIATE` and how it relates to `ATTENDEE`. There are no iTIP
+semantics for `ASSOCIATE` so no broadcasting of data to potentially very large numbers of users.
 The specification was resubmitted at the beginning of the week and needs some review and then
 trying to move it on to the next stage in the IETF.
 
@@ -138,9 +138,9 @@ events appear.
 
 === TC FREEBUSY
 
-We reviewed the current work of the committee and the VPOLL specification, and additionally
-discussed "office hours" and "reverse scheduling" as examples of ways that VPOLL (and
-VAVAILABILITY) may be used for innovative ways of scheduling.
+We reviewed the current work of the committee and the `VPOLL` specification, and additionally
+discussed "office hours" and "reverse scheduling" as examples of ways that `VPOLL` (and
+`VAVAILABILITY`) may be used for innovative ways of scheduling.
 
 === TC IOPTEST
 
@@ -174,18 +174,18 @@ easy search for scheduling based on certain user-provided criteria, not limited 
 
 Good progress since last roundtable in areas of:
 
-* STATUS / PARTSTAT with new status values and parameters
-* ORGANIZATION and other roles
+* `STATUS` / `PARTSTAT` with new status values and parameters
+* `ORGANIZATION` and other roles
 * Task Definitions -- identification of the task type
-* Task Relationships with recommendations for new RELTYPE values and a new parameter
+* Task Relationships with recommendations for new `RELTYPE` values and a new parameter
 (GAP)
 
 After the roundtable report the key discussion points were on:
 
 * Requirements for notifications in relation to calendar sharing
 * Relationships
-* The use of a RELATED-ID for identifying projects
-* Clarification on project management RELTYPES and DEPENDS-ON as a back pointer
+* The use of a `RELATED-ID` for identifying projects
+* Clarification on project management `RELTYPES` and `DEPENDS-ON` as a back pointer
 
 Next steps will focus on consolidating what we have so far in to drafts and developing the other
 areas in scope for the TC:

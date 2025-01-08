@@ -81,8 +81,8 @@ Retrieve all the components and properties of the meetings scheduled for the cur
 Retrieve all the components and properties of the meetings scheduled for the current month.
 
 ==== {blank}
-Retrieve only the SUMMARY, DTSTART and DTEND
-(or DURATION) properties of the meetings scheduled for the current week.
+Retrieve only the `SUMMARY`, `DTSTART` and `DTEND`
+(or `DURATION`) properties of the meetings scheduled for the current week.
 
 === Event deletion
 

@@ -232,7 +232,7 @@ added after exceptions are made to the recurring string.
 
 Need additional support in Vendor 5 CalDAV servlet for all notification options.
 
-Need to determine why we are adding RSVP=TRUE value for the organizer of an event after a
+Need to determine why we are adding `RSVP=TRUE` value for the organizer of an event after a
 modification. Caused internal error 500 issues and display issues.
 
 Limited clients to test against server this time around.
@@ -248,7 +248,7 @@ solved quite quickly. What I basically did was:
 ** initially the server 'crashed' (500 HTTP error) on some requests sent by us, but Simon was able to
 rather quickly fix this
 ** we tested a bit of implicit scheduling, this worked quite well
-. test against the VENDOR 3 LDAP<->CardDAV gateway
+. test against the VENDOR 3 `LDAP<->CardDAV` gateway
 ** the VENDOR 3 CardDAV gateway was in its very early stages, so I worked with Mike to improve it
 ** at the end of the IOP we could get/edit contacts in the server.
 ** also discussed issues with cross-server CalDAV result sets, which VENDOR 3 seems to be using
@@ -262,7 +262,7 @@ produce 500 errors :-)
 ** we found issues in the 'principal discovery', when trying to query the root of the server
 ** this seems to be a rather 'generic' issue which produces interop issues
 ** We tested implicit scheduling and found a bug in our Vendor 1 code which we fixed on site.
-** Discussed the implementation of WebDAV XMPP.
+** Discussed the implementation of WebDAV `XMPP`.
 ** (BTW: Vendor 1 didn't bring its new CardDAV server, but we successfully tested that before)
 
 The table below shows the CALDAV testing matrix items tested by Vendor 6 against the Vendor 1 server.

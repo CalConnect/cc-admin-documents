@@ -65,17 +65,17 @@ implementations of CalDAV implicit scheduling. A number of errors were found and
 some cases discussions resolved misunderstandings of the protocols.
 
 Three of the server implementations attempted to set up a demonstration of a combination of
-VPOLL, iSchedule and jCal between them. Ultimately this wasn't achieved - mostly due to the
-problems of setting up remore servers with certificates and getting DKIM to work correctly. There
+`VPOLL`, iSchedule and jCal between them. Ultimately this wasn't achieved - mostly due to the
+problems of setting up remore servers with certificates and getting `DKIM` to work correctly. There
 were changes to all servers as a result and there was a local demonstration of the current state of
-the Bedework VPOLL client during the TC FREEBUSY session. We hope to have a full working
+the Bedework `VPOLL` client during the TC FREEBUSY session. We hope to have a full working
 demonstration with multiple servers by CalConnect XXXII.
 
 The testing was fairly intensive after the initial pairing off. Testers were busy throughout the
 event.
 
 Once again we had some BOF sessions -- this time we discussed the issues around task assignment
-in VPOLL and providing server information to clients as a fetchable document. These discussions,
+in `VPOLL` and providing server information to clients as a fetchable document. These discussions,
 usually at the developer and implementor level, have become a valuable part of the experience.
 
 Many thanks to Youcanbookme for hosting this event. The configuration of the room and
