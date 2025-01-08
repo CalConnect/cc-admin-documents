@@ -1,6 +1,18 @@
-== CalConnect III -- Virtual interop, September, 2002
+= CalConnect III -- Virtual interop, September, 2002
+:docnumber: 0201
+:copyright-year: 2002
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2002-09-01
+:published-date: 2002-09-01
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
 
-=== Vendors and Products
+== Vendors and Products
 
 * Oracle Collaboration Suite - Calendar Server 9.0.4 Alpha
 * Oracle Outlook Connector 3.3
@@ -10,9 +22,9 @@
 * Lotus Notes/Domino - Ver 6.0
 * Novell NIMS
 
-=== Vendor1 Notes
+== Vendor1 Notes
 
-* If the ical-attachment is send MIME-encoded, in a form that affects it's plain-text
+* If the iCal-attachment is send MIME-encoded, in a form that affects it's plain-text
 appearance (in the mail), Vendor1 can't read it properly/at all. This occurred only with
 Vendor4-products.
 * Vendor1 doesn't send timezone information when dealing with recurring events.
@@ -20,20 +32,20 @@ Vendor4-products.
 * Vendor1 can't deal with ical-attachments
 * Almost all other bugs that occurred are fixed already
 
-==== Other Problems
+=== Other Problems
 
-* Vendor2's Client didn't send "Organizer"-information in their REPLY-messages as
+* Vendor2's Client didn't send "Organizer"-information in their ``REPLY``-messages as
 requested in RFC 2445 3.2.3 some more I can't remember, and which may be fixed already
 * Communication with Vendor3 had no problems.
-* Communication with Vendor2 had only the one above mentioned REPLY-problem.
+* Communication with Vendor2 had only the one above mentioned ``REPLY``-problem.
 * Communication with Vendor4 is very limited (see MIME-problem).
 
-==== Personal note
+=== Personal note
 
 It's unlucky, that we had some technical problems, that handicapped communication,and stole a lot
 of time. So testing was limited to some basics of
 
-==== Results
+=== Results
 
 We were not able to test as much as in the previous CalConnect, which was more
 productive. We mostly tried creating and replying to events, thus the methods
@@ -75,7 +87,7 @@ that were tested were `REQUEST` and `REPLY`.
 | Vendor Able To Process `REPLY` | Yes | Yes | No | Yes
 |===
 
-==== Miscellaneous
+=== Miscellaneous
 
 * We had some success with `CANCEL` and updates (`REQUEST`). However, we do not
 remember with which vendors. Vendor3 had success processing a `VEVENT` that we sent to it
@@ -87,13 +99,13 @@ a common name ("CN").
 ``RRULE``s. According to iCalendar, when a `DTSTART` is used with a recurrence rule, it must
 be specified local time.
 
-=== Vendor 3 Notes
+== Vendor 3 Notes
 
 Microsoft and 2 others were scheduled to participate but did not show up. Unfortunately we had
 some technical issues testing w/Vendor4 folks and there were some server uptime issues inhouse
 that increased the testing lag on our end.
 
-==== The Good News
+=== The Good News
 
 We were successfully able to do non-repeating and repeating meeting testing with all
 implementations. We were able to both send and receive invitations to single instance and
@@ -101,26 +113,26 @@ repeating meetings just fine. We were also able to send attachments along with e
 invitation and they were at least received correctly by the other testers (although some did not
 know how to deal with multipart MIME data yet for assorted reasons).
 
-==== Particular notes relating to specific implementations
+=== Particular notes relating to specific implementations
 
-===== Vendor4
+==== Vendor4
 
 Vendor4 did not send us any tests with attachments so we were not able to fully test that feature
 inbound to Notes.
 
-===== Vendor 1
+==== Vendor 1
 
 Vendor 1 is not multipart MIME savy given how it is wired into the mail client (via scripting).
 As such it has limitations on it that prevented it from dealing with any attachments we sent. This
 is not a failure of the test but a restriction of the receiving client.
 
-===== Vendor2
+==== Vendor2
 
 Vendor2 was able to send back multiple responses to both the single and repeating instances; to
 Accept, Decline and Tentatively Accept. We were able to properly detect this status change and
 render it on our end.
 
-==== The Not-so-good News
+=== The Not-so-good News
 
 The testing done was more at an vendor to vendor level than a pure IETF "RFC Conformance"
 test (where we test the explicit `MUST`/`SHOULD`/`MAY`/etc. requirements). We need to find a
@@ -132,16 +144,16 @@ We did not attempt any `VTODO` (aka Tasks) or `VJOURNAL` interop testing. Per IE
 we do not get any implementations that support them then we must remove them from the
 standard in the future (but no timeframe for this removal is clear).
 
-==== Particular notes relating to specific implementations
+=== Particular notes relating to specific implementations
 
-===== Vendor4
+==== Vendor4
 
 Vendor4 attempted to invite a Vendor3 user to a single instance of a repeating set by sending the
 correct iCalendar message that uniquely identified the single instance. We misconverted it to be
 a single instance meeting that repeated at the original date/time (which was before the actual
 instance date/time so that's not so good).
 
-===== Vendor1
+==== Vendor1
 
 Vendor1 had some small issues with adhering to the RFCs. Guenter was very active in either
 fixing or explaining them. For example, Vendor1 sends back ALL invitees on a `REFRESH`
@@ -149,7 +161,7 @@ request but RFC 2446 expressly states that only the requestors `ATTENDEE` info i
 a result, we incorrectly identify the "Request for Update" as being from the 1st listed
 `ATTENDEE` rather than from the actual requestor.
 
-===== Vendor2
+==== Vendor2
 
 Vendor2 does not have full featured workflow support in yet. They do not support delegation,
 counter proposals or anything associated with them. While they do support the basic accept,
@@ -161,10 +173,10 @@ sent out. As such, we do not know how well we interoperate with them when they a
 Organizer of an event or repeating event. I was not able to find out if this was because we did
 not have enough testing time or if they are unable to originate iCalendar workflow just yet
 
-=== Chair Summary
+== Chair Summary
 
 Multipart support/formatting seems to be a source of confusion still given the discussions held
-during the interop and on the chats. This should NOT be a repeat issue but since its come up
+during the interop and on the chats. This should `NOT` be a repeat issue but since its come up
 again we need to draft some guidelines for the 'proper' multipart bundling of iCalendar above and
 beyond the flat ASCII messages.
 

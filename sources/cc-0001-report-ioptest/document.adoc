@@ -1,11 +1,23 @@
-== CalConnect I -- April, 2000
+= CalConnect I -- April, 2000
+:docnumber: 0001
+:copyright-year: 2000
+:language: en
+:doctype: administrative
+:edition: 1
+:status: published
+:revdate: 2000-04-12
+:published-date: 2000-04-12
+:technical-committee: IOPTEST
+:mn-document-class: cc
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
 
-=== Introduction
+== Introduction
 
 On April 11 and 12, 2000, CalConnect Spring was held in Boston. It was graciously hosted by
 MIT and chaired by Bob Mahoney.
 
-==== Participants
+=== Participants
 
 The following companies and representatives were in attendance:
 
@@ -20,7 +32,7 @@ The following companies and representatives were in attendance:
 
 Pat Egen sat at home with a broken leg, and assisted (poorly) from the sidelines.
 
-==== Products Tested
+=== Products Tested
 
 The following products and versions were tested:
 
@@ -29,7 +41,7 @@ The following products and versions were tested:
 * iPlanet - internal unreleased alpha version iCS 5.0, server and client (Netscape)
 * Organizer (Lotus)
 
-=== General Summary
+== General Summary
 
 First off, thanks to everyone for their efforts. There was consensus that all participants have a
 lot of work to do, and that another testing event should be held in the fall. A west coast location
