@@ -111,4 +111,4 @@ provides.)
 
 * [[[rfc2447,RFC 2447]]]
 
-* [[[rfc2026,hidden(RFC 2026)]]]
+* [[[rfc2026,RFC 2026]]]

@@ -79,17 +79,17 @@ described in <<rfc2119>>.
 
 * [[[xrd,XRD-1.0]]], E. Hammer, W. Norris, _Extensible Resource Descriptor (XRD) Version 1.0_, http://docs.oasis-open.org/xri/xrd/v1.0/xrd-1.0.html
 
-* [[[rfc4918,hidden(RFC 4918)]]]
+* [[[rfc4918,RFC 4918]]]
 
-* [[[rfc3339,hidden(RFC 3339)]]]
+* [[[rfc3339,RFC 3339]]]
 
-* [[[rfc2616,hidden(RFC 2616)]]]
+* [[[rfc2616,RFC 2616]]]
 
-* [[[xcal,hidden(IETF I-D draft-daboo-et-al-icalendar-in-xml)]]]]
+* [[[xcal,IETF I-D draft-daboo-et-al-icalendar-in-xml]]]]
 
-* [[[webl,hidden(IETF I-D draft-nottingham-http-link-header)]]]
+* [[[webl,IETF I-D draft-nottingham-http-link-header]]]
 
-* [[[fb,hidden(CC/S 0903)]]]
+* [[[fb,CC/S 0903]]]
 
 [bibliography,normative=false]
 === Non-normative References

@@ -27,21 +27,21 @@
 This document was created by the CalDAV Technical
 Committee of the Calendaring and Scheduling Consortium. It
 presents a list of features in the form of requirements for the
-scheduling extensions to CalDAV [RFC 4791], that is, the
+scheduling extensions to CalDAV <<rfc4791>>, that is, the
 extensions to the Web Distributed Authoring and Versioning
-(WebDAV) [RFC 2518] protocol to specify a standard way of
+(WebDAV) <<rfc2518>> protocol to specify a standard way of
 exchanging and processing scheduling messages based on the
 iCalendar Transport-Independent Interoperability Protocol
-(iTIP) [RFC 2446].
+(iTIP) <<rfc2446>>.
 
 == Introduction
 
 This document presents a list of features in the form of requirements for
-the scheduling extensions to CalDAV [RFC 4791], that is, the extensions to
-the Web Distributed Authoring and Versioning (WebDAV) [RFC 2518]
+the scheduling extensions to CalDAV <<rfc4791>>, that is, the extensions to
+the Web Distributed Authoring and Versioning (WebDAV) <<rfc2518>>
 protocol to specify a standard way of exchanging and processing
 scheduling messages based on the iCalendar Transport-Independent
-Interoperability Protocol (iTIP) [RFC 2446].
+Interoperability Protocol (iTIP) <<rfc2446>>.
 
 == Terminology
 
@@ -742,3 +742,12 @@ server needs to be able to store these statuses-- via message sequencing,
 etc. This requirement is out of scope for the scheduling protocol.
 --
 ====
+
+[bibliography]
+== Bibliography
+
+* [[[rfc2446, RFC 2446]]]
+
+* [[[rfc2518, RFC 2518]]]
+
+* [[[rfc4791, RFC 4791]]]
