@@ -336,16 +336,16 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 |===
 
 [bibliography]
-== {blank}
+== Bibliography
 
-* [[[rfc1738,hidden(RFC 1738)]]]
+* [[[rfc1738,RFC 1738]]]
 
-* [[[rfc822,hidden(RFC 822)]]]
+* [[[rfc822,RFC 822]]]
 
-* [[[rfc1847,hidden(RFC 1847)]]]
+* [[[rfc1847,RFC 1847]]]
 
-* [[[rfc2045,hidden(RFC 2045)]]]
+* [[[rfc2045,RFC 2045]]]
 
-* [[[rfc2046,hidden(RFC 2046)]]]
+* [[[rfc2046,RFC 2046]]]
 
-* [[[iso9070,hidden(ISO 9070)]]]
+* [[[iso9070,ISO 9070]]]

@@ -463,4 +463,4 @@ prompt, with a trigger of one day before due date) [1,3,7,9].
 
 * [[[cc-glossary, CC/R 0610]]]
 
-* [[[wiki,hidden(Wikipedia)]]], https://www.wikipedia.org/
+* [[[wiki,Wikipedia]]], https://www.wikipedia.org/

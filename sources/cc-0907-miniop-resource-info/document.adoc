@@ -441,6 +441,6 @@ END:VCARD
 ====
 
 [bibliography]
-== {blank}
+== Bibliography
 
-* [[[rfc3986, hidden(RFC 3986)]]]
+* [[[rfc3986, RFC 3986]]]

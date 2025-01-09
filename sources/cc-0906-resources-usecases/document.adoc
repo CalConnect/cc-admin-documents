@@ -239,8 +239,8 @@ The MIME content type for encoding iCalendar objects. Example usage includes: em
 pages.
 
 [bibliography]
-== {blank}
+== Bibliography
 
-* [[[rfc3283, hidden(RFC 3283)]]]
+* [[[rfc3283, RFC 3283]]]
 
-* [[[glossary, hidden(CC/R 0610)]]]
+* [[[glossary, CC/R 0610]]]

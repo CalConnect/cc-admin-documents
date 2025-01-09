@@ -681,8 +681,8 @@ format
 ====
 
 [bibliography]
-== {blank}
+== Bibliography
 
-* [[[rfc3283,hidden(RFC 3283)]]]
+* [[[rfc3283,RFC 3283]]]
 
-* [[[wiki,hidden(Wikipedia)]]], https://www.wikipedia.org/
+* [[[wiki,Wikipedia]]], https://www.wikipedia.org/

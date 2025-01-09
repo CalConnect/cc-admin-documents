@@ -291,4 +291,4 @@ standard. There is no current standard.
 
 * [[[rfc,3]]], RFCs - http://www.ietf.org/rfc.html
 
-* [[[rfc3283,hidden(RFC 3283)]]]
+* [[[rfc3283,RFC 3283]]]
