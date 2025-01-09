@@ -2,7 +2,7 @@
 :docnumber: 1004
 :copyright-year: 2010
 :language: en
-:doctype: administrative
+:doctype: specification
 :edition: 0.3
 :status: draft
 :revdate: 2010-05-19

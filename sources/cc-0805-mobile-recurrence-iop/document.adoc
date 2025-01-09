@@ -2,7 +2,7 @@
 :docnumber: 0805
 :copyright-year: 2008
 :language: en
-:doctype: administrative
+:doctype: report
 :edition: 1
 :status: published
 :revdate: 2008-07-29

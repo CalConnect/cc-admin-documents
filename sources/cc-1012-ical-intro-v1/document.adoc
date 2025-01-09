@@ -2,7 +2,7 @@
 :docnumber: 1012
 :copyright-year: 2010
 :language: en
-:doctype: administrative
+:doctype: report
 :edition: 1
 :status: published
 :revdate: 2010-10-14

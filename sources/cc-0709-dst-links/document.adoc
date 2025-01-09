@@ -3,7 +3,7 @@
 :title-main-en: Links to Advisory and Vendor Material on the Daylight Saving Time Changes in 2007 -- A Reference for Users and Systems Administrators
 :copyright-year: 2007
 :language: en
-:doctype: administrative
+:doctype: advisory
 :edition: 1
 :status: published
 :revdate: 2007-10-06
