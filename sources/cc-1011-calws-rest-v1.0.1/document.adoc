@@ -2,7 +2,7 @@
 :docnumber: 1011
 :copyright-year: 2012
 :language: en
-:doctype: administrative
+:doctype: report
 :edition: 1.0.1
 :status: draft
 :revdate: 2012-02-22

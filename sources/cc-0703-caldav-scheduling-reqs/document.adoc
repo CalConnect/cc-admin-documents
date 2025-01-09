@@ -2,7 +2,7 @@
 :docnumber: 0703
 :copyright-year: 2007
 :language: en
-:doctype: administrative
+:doctype: standard
 :edition: 1.1
 :status: published
 :revdate: 2007-07-11

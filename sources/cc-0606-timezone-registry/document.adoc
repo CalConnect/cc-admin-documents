@@ -2,7 +2,7 @@
 :docnumber: 0606
 :copyright-year: 2006
 :language: en
-:doctype: administrative
+:doctype: standard
 :edition: 1
 :status: published
 :revdate: 2006-04-17

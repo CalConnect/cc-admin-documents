@@ -3,7 +3,7 @@
 :title-main-en: A Review of the Potential Impact of Daylight Saving Time Changes in 2007 -- A Reference for Users and Systems Administrators
 :copyright-year: 2007
 :language: en
-:doctype: administrative
+:doctype: report
 :edition: 1
 :status: published
 :revdate: 2007-02-15

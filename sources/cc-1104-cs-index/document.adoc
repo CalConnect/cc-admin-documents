@@ -2,7 +2,7 @@
 :docnumber: 1104
 :copyright-year: 2011
 :language: en
-:doctype: administrative
+:doctype: report
 :edition: 2
 :status: published
 :revdate: 2011-05-18

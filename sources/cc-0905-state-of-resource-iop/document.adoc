@@ -2,7 +2,7 @@
 :docnumber: 0905
 :copyright-year: 2009
 :language: en
-:doctype: administrative
+:doctype: report
 :edition: 1
 :status: published
 :revdate: 2009-06-10
