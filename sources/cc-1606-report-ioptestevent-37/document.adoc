@@ -74,17 +74,17 @@ ready to move forward with an implementable specification. Additionally a tool f
 converting between iCalendar and the new JSON format developed by FastMail was made
 available. This allowed us to see how events would look in the new representation.
 
-We talked about the latest draft of the icalendar patch document. This allows changes
+We talked about the latest draft of the iCalendar patch document. This allows changes
 to iCalendar objects to be expressed as a patch which may be much smaller than
 sending the entire entity. We spent some time discussing issues around selecting
-components, especially for icalendar streams and ultimately felt that we were ready
+components, especially for iCalendar streams and ultimately felt that we were ready
 to move forward with implementations.
 
-We also took a look at the new VINSTANCE component which allows for a much more
+We also took a look at the new `VINSTANCE` component which allows for a much more
 compact representation of overrides - essentially only showing the difference between
 the generated instance and the overridden form. This again should be much more
 compact than the current approach. This proposal led to a further proposal - that we
-bump the iCalendar version number which has been at 2.0 since RFC2445. VINSTANCE
+bump the iCalendar version number which has been at 2.0 since RFC2445. `VINSTANCE`
 introduces a change which may cause clients and servers to lose overrides if they
 don't support it. Incrementing the version number - along with a possible use of
 feature negotiation - would allow us to ensure that new features are supported.

@@ -262,7 +262,7 @@ The following specifications are referenced in this document
 * [[[vobj,vObject]]], OMA vObject Minimum Interoperability Profile Version 1.0, Open Mobile Alliance, 18 January 2005
 http://www.openmobilealliance.org/release_program/vObject_v10.html
 
-* [[[wiki,Wikipedia]]], https://www.wikipedia.org/
+* [[[wiki,hidden(Wikipedia)]]], https://www.wikipedia.org/
 
 == Part I -- Calendar Tests
 
