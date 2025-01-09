@@ -652,7 +652,7 @@ A draft specification that defines an XML representation of iCalendar data.
 <<xcal>>
 
 [bibliography]
-== {blank}
+== Bibliography
 
 * [[[rfc2045, RFC 2045]]]
 
