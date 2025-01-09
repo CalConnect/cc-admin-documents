@@ -570,6 +570,7 @@ when they are the same type. Security considerations
 described in iCalendar <<RFC2445>> and iTIP
 <<RFC2446>> are also applicable.
 
+[acknowledgments]
 == Acknowledgments
 
 The author would like to thank the members of the

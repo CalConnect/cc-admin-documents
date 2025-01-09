@@ -31,34 +31,20 @@ Consortium and is licensed under the Creative Commons 3.0 Unported License:
 
 http://creativecommons.org/licenses/by/3.0/.
 
+Chair(s):: Michael A Douglass, Paul Tischhauser
+
+Related work::
++
+--
+This specification is related to:
+
+* https://datatracker.ietf.org/idtracker/draft-daboo-et-al-icalendar-in-xml
+--
+
 [abstract]
 == Abstract
 
 This document describes a RESTful web service for calendar access and update.
-
-[.preface]
-== Chair(s)
-
-Michael A Douglass, Paul Tischhauser
-
-[.preface]
-== Related work
-
-This specification is related to:
-
-* https://datatracker.ietf.org/idtracker/draft-daboo-et-al-icalendar-in-xml
-
-[.preface]
-== Declared XML Namespace(s)
-
-http://docs.oasis-open.org/ns/wscal/calws
-
-[.preface]
-== Declared Properties and Relations Namespaces
-
-Properties and extended relation types are prefixed with the URL
-
-http://docs.oasis-open.org/ns/wscal/calwsrel
 
 == Introduction
 
@@ -84,10 +70,15 @@ The keywords "`MUST`", "`MUST NOT`", "`REQUIRED`", "`SHALL`", "`SHALL NOT`", "`S
 "`RECOMMENDED`", "`MAY`", and "`OPTIONAL`" in this specification are to be interpreted as
 described in <<rfc2119>>.
 
-== References
+=== Namespace
+
+Declared XML Namespace(s):: http://docs.oasis-open.org/ns/wscal/calws
+
+Declared Properties and Relations Namespaces:: Properties and extended relation
+types are prefixed with the URL http://docs.oasis-open.org/ns/wscal/calwsrel
 
 [bibliography]
-=== Normative references
+== Normative references
 
 * [[[rfc2119, RFC 2119]]]
 
@@ -110,36 +101,6 @@ described in <<rfc2119>>.
 * [[[fb,CC/S 0903]]]
 
 * [[[xrd,XRD-1.0]]], E. Hammer, W. Norris, _Extensible Resource Descriptor (XRD) Version 1.0_, http://docs.oasis-open.org/xri/xrd/v1.0/xrd-1.0.html
-
-=== Non-normative References
-
-[example]
-====
-`[Reference] [reference citation]`
-
-`[Reference] [reference citation]`
-====
-
-[NOTE]
-====
-The proper format for a citation to an OASIS Technical
-Committee's work (whether Normative or Non-Normative) is:
-
-OASIS +
-Stage (Committee Draft 01, Committee Draft 02, Committee +
-Specification 01, etc. or Standard) +
-Title (italicized or in quotation marks) +
-Approval Date (Month YYYY) +
-URI of the actual Authoritative Specification (namespace is not
-acceptable as the content changes over time)
-
-For example:
-
-[EDXL-HAVE] OASIS Standard, "Emergency Data Exchange Language (EDXL)
-Hospital AVailability Exchange (HAVE) Version 1.0", November
-2008.
-http://docs.oasis-open.org/emergency/edxlhave/os/emergency_edxl_have-1.0-spec-os.doc
-====
 
 == Issues not addressed by this specification
 
@@ -1692,7 +1653,7 @@ Purpose:: Specifies read access
 <!ELEMENT write NONE>
 ----
 
-[appendix]
+[acknowledgments]
 == Acknowledgments
 
 The following individuals have participated in the creation of this specification and are gratefully
@@ -1705,26 +1666,74 @@ Participants:
 The authors would also like to thank the Calendaring and Scheduling Consortium and the TC-XML
 committee for help with this specification.
 
-[appendix]
-== Revision History
+[.preface]
+= metanorma-extension
 
-[%unnumbered]
-|===
-| Revision | Date | Editor | Changes
-| Draft | 01 Sept 13 2010 | M. Douglass a| Section 6 - Fix namespaces in examples
+== document history
 
-Section 6 - Move most properties into xrd level out of child-collection link relation
+[source,yaml]
+----
+- date:
+  - type: updated
+    value:  2010-09-13
+  edition: 1.0
+  contributor:
+  - person:
+      name:
+        completename: M. Douglass
+  amend:
+    - description: |
+        Section 6 - Fix namespaces in examples
 
-Section 6 - Add the following xrd properties
+        Section 6 - Move most properties into xrd level out of child-collection link relation
 
-* max-attendees-per-instance
-* max-date-time
-* max-instances
-* max-resource-size
-* min-date-time
-* description
+        Section 6 - Add the following xrd properties
 
-Require absolute/path-absolute URL as per RFC 4918
-| Initial | 08/31/10 | M. Douglass | Initial publication
-|===
+        * max-attendees-per-instance
+        * max-date-time
+        * max-instances
+        * max-resource-size
+        * min-date-time
+        * description
 
+        Require absolute/path-absolute URL as per RFC 4918
+- date:
+  - type: published
+    value:  2010-08-31
+  edition: 0.0
+  contributor:
+  - person:
+      name:
+        completename: M. Douglass
+----
+
+[appendix,obligation=informative]
+== Non-normative References
+
+[example]
+====
+`[Reference] [reference citation]`
+
+`[Reference] [reference citation]`
+====
+
+[NOTE]
+====
+The proper format for a citation to an OASIS Technical
+Committee's work (whether Normative or Non-Normative) is:
+
+OASIS +
+Stage (Committee Draft 01, Committee Draft 02, Committee +
+Specification 01, etc. or Standard) +
+Title (italicized or in quotation marks) +
+Approval Date (Month YYYY) +
+URI of the actual Authoritative Specification (namespace is not
+acceptable as the content changes over time)
+
+For example:
+
+[EDXL-HAVE] OASIS Standard, "Emergency Data Exchange Language (EDXL)
+Hospital AVailability Exchange (HAVE) Version 1.0", November
+2008.
+http://docs.oasis-open.org/emergency/edxlhave/os/emergency_edxl_have-1.0-spec-os.doc
+====

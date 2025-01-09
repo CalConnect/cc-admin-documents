@@ -26,14 +26,17 @@ Consortium and is licensed under the Creative Commons 3.0 Unported License:
 
 http://creativecommons.org/licenses/by/3.0/.
 
-[preface]
-== Related work
+Chair(s):: Michael Douglass
 
+Related work::
++
+--
 This specification is related to:
 
 * RFC 6321 -- xCal: iCalendar in XML. http://www.ietf.org/rfc/rfc6321.txt
 * WS-Calendar Version 1.0. Latest version.
 http://docs.oasis-open.org/ws-calendar/ws-calendar/v1.0/ws-calendar-1.0-spec.html
+--
 
 [abstract]
 == Abstract
@@ -69,8 +72,20 @@ The key words "`MUST`", "`MUST NOT`", "`REQUIRED`", "`SHALL`", "`SHALL NOT`",
 "`SHOULD`", "`SHOULD NOT`", "`RECOMMENDED`", "`MAY`", and "`OPTIONAL`" in this document are to be interpreted as described
 in <<rfc2119>>.
 
+=== Namespace
+
+XML namespaces and prefixes used in this standard:
+
+[options=header]
+.XML Namespaces in this standard
+|===
+| Prefix | Namespace
+| xcal | urn:ietf:params:xml:ns:icalendar-2.0
+| CalWS | http://docs.oasis-open.org/ws-calendar/ns/soap
+|===
+
 [bibliography]
-=== Normative References
+== Normative References
 
 * [[[rfc2119, RFC 2119]]]
 
@@ -97,31 +112,6 @@ http://www.w3.org/TR/2001/NOTE-wsdl-20010315
 * [[[wscal,WS-Calendar]]], WS-Calendar Version 1.0. 19 January 2011. OASIS Committee Specification
 http://docs.oasis-open.org/ws-calendar/ws-calendar-spec/v1.0/cs01/ws-calendarspec-v1.0-cs01.pdf.
 
-[bibliography,normative=false]
-=== Non-Normative References
-
-* [[[webl, IETF I-D draft-nottingham-http-link-header]]]
-
-* [[[wsa,WS-Addr]]], W3C Recommendation,Web Services Addressing 1.0 - Core, and Web Services Addressing 1.0 - SOAP Binding, 9 May 2006
-http://www.w3.org/2002/ws/addr/
-
-* [[[wti,WT-I-Basic]]], Basic Profile Version 1.1, 10 April 2006
-http://www.ws-i.org/Profiles/BasicProfile-1.1-2006-04-10.html
-
-* [[[wsib,WS-I-Bind]]], Web Services-Interoperability Organization (WS-I) Simple SOAP Binding Profile Version 1.0, 24 August 2004
-http://www.ws-i.org/Profiles/SimpleSoapBindingProfile-1.0-2004-08-24.html
-
-=== Namespace
-
-XML namespaces and prefixes used in this standard:
-
-[options=header]
-.XML Namespaces in this standard
-|===
-| Prefix | Namespace
-| xcal | urn:ietf:params:xml:ns:icalendar-2.0
-| CalWS | http://docs.oasis-open.org/ws-calendar/ns/soap
-|===
 
 == Issues not addressed by this specification
 
@@ -159,7 +149,7 @@ This operation is currently undefined.
 These operations are not defined in this version of the specification. In the future it will be possible to define
 or set the properties for the service or resources within the service.
 
-[heading=terms and definitions]
+[heading=terms and definitions,keeptitle=true]
 == CalWS Glossary
 
 === Calendar Object Resource
@@ -2142,7 +2132,7 @@ Clauses go here.
 NOTE: Remove the "#" marker and the text in the two sentences before this bracketed
 material, and the brackets, and the text inside the brackets.
 
-[appendix]
+[acknowledgments]
 == Acknowledgments
 
 The following individuals have participated in the creation of this specification and are gratefully acknowledged:
@@ -2181,7 +2171,7 @@ and cooperation as well. Contributors to TC XML include:
 * Steven Lees, Microsoft
 * Tong Li, IBM
 
-[appendix]
+[appendix,obligation=informative]
 == Revision History
 
 [%unnumbered,options=header,cols=4]
@@ -2205,3 +2195,17 @@ Fixed example, broken references. +
 Added namespace declaration. +
 Added Summary.
 |===
+
+[bibliography,normative=false]
+== Non-Normative References
+
+* [[[webl, IETF I-D draft-nottingham-http-link-header]]]
+
+* [[[wsa,WS-Addr]]], W3C Recommendation,Web Services Addressing 1.0 - Core, and Web Services Addressing 1.0 - SOAP Binding, 9 May 2006
+http://www.w3.org/2002/ws/addr/
+
+* [[[wti,WT-I-Basic]]], Basic Profile Version 1.1, 10 April 2006
+http://www.ws-i.org/Profiles/BasicProfile-1.1-2006-04-10.html
+
+* [[[wsib,WS-I-Bind]]], Web Services-Interoperability Organization (WS-I) Simple SOAP Binding Profile Version 1.0, 24 August 2004
+http://www.ws-i.org/Profiles/SimpleSoapBindingProfile-1.0-2004-08-24.html

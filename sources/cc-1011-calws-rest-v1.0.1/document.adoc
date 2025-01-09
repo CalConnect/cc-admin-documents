@@ -27,23 +27,21 @@ Consortium and is licensed under the Creative Commons 3.0 Unported License:
 
 http://creativecommons.org/licenses/by/3.0/.
 
-[abstract]
-== Abstract
+Chair(s):: Michael Douglass
 
-TODO: Summary of the technical purpose of the document.
-
-[.preface]
-== Chair
-
-Michael Douglass
-
-[.preface]
-== Related work
-
+Related work::
++
+--
 This specification is related to:
 
 * _WS-Calendar Version 1.0_. Latest version. +
 http://docs.oasis-open.org/ws-calendar/ws-calendar/v1.0/ws-calendar-1.0-spec.html
+--
+
+[abstract]
+== Abstract
+
+TODO: Summary of the technical purpose of the document.
 
 == Introduction
 
@@ -68,8 +66,20 @@ The keywords "`MUST`", "`MUST NOT`", "`REQUIRED`", "`SHALL`", "`SHALL NOT`", "`S
 "`SHOULD NOT`", "`RECOMMENDED`", "`MAY`", and "`OPTIONAL`" in this document are to be interpreted as
 described in <<rfc2119>>.
 
+=== Namespace
+
+XML namespaces and prefixes used in this standard:
+
+.XML Namespaces in this standard
+|===
+| Prefix | Namespace
+| xcal | urn:ietf:params:xml:ns:icalendar-2.0
+| calWS | http://docs.oasis-open.org/ws-calendar/ns/REST
+| xrd | http://docs.oasis-open.org/ns/xri/xrd-1.0
+|===
+
 [bibliography]
-=== Normative references
+== Normative references
 
 * [[[rfc2119, RFC 2119]]]
 
@@ -90,23 +100,6 @@ described in <<rfc2119>>.
 * [[[webl,IETF I-D draft-nottingham-http-link-header]]]
 
 * [[[fb,CC/S 0903]]]
-
-[bibliography,normative=false]
-=== Non-normative References
-
-* [[[rest, REST]]], T Fielding, Architectural Styles and the Design of Network-based Software Architectures, http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm.
-
-=== Namespace
-
-XML namespaces and prefixes used in this standard:
-
-.XML Namespaces in this standard
-|===
-| Prefix | Namespace
-| xcal | urn:ietf:params:xml:ns:icalendar-2.0
-| calWS | http://docs.oasis-open.org/ws-calendar/ns/REST
-| xrd | http://docs.oasis-open.org/ns/xri/xrd-1.0
-|===
 
 == Calendar Services
 
@@ -1426,7 +1419,7 @@ HTTP/1.1 404 No data
 The last numbered section in the specification must be the Conformance section. Conformance
 Statements/Clauses go here.
 
-[appendix]
+[acknowledgments]
 == Acknowledgments
 
 The following individuals have participated in the creation of this specification and are gratefully
@@ -1466,7 +1459,7 @@ assistance and cooperation as well. Contributors to TC XML include:
 * Steven Lees, Microsoft
 * Tong Li, IBM
 
-[appendix]
+[appendix,obligation=informative]
 == An Introduction to Internet Calendaring
 
 _The WS-Calendar Technical Committee thanks CalConnect for contributing this overview of iCalendar
@@ -1622,8 +1615,27 @@ systems to exchange scheduling messages with each other, and also allows a singl
 multiple calendar systems (for example due to mergers, or different departmental requirements) to
 exchange scheduling messages between users of each system.
 
+[appendix,obligation=informative]
+== Revision History
+
+[%unnumbered,cols="a,a,a,a"]
+|===
+| Revision | Date | Editor | Changes
+| ws-calendar-wd19 | 19-Mar-2011 | Toby Considine | Originally contributed by Mike Douglass as part of WS-Calendar v1.0 Specification. See full history in that document.
+| WD02 | 13-Feb-2012 | Toby Considine | Ported to separate document. "Promoted" all section headers.
+| WD03 | 15 Feb-2012 | Toby Considine | Added Intro, updated namespaces to meet OASIS standard
+| WD04 | 17 February 2012 | Toby Considine | Additional namespace clean-up in response to Cover comments.
+
+Consistent capitalization of calWS when used as a namespace identifier
+
+Clean-up of CalWS discussion in appendix
+| WD05 | 17 February 2012 | Toby Considine | Types, capitalization, missing XRD reference
+|===
+
 [bibliography]
-=== References
+== Non-normative References
+
+* [[[rest, REST]]], T Fielding, Architectural Styles and the Design of Network-based Software Architectures, http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm.
 
 * [[[rfc2445, RFC 2445]]]
 
@@ -1636,20 +1648,3 @@ exchange scheduling messages between users of each system.
 * [[[rfc5546, RFC 5546]]]
 
 * [[[draft,IETF I-D draft-daboo-et-al-icalendar-in-xml]]]
-
-[appendix]
-== Revision History
-
-[%unnumbered,cols="a,a,a,a"]
-|===
-| Revision | Date | Editor | Changes
-| ws-calendar-wd19 | 19-Mar-2011 | Toby Considine | Originally contributed by Mike Douglass as part of WS-Calendar v1.0 Specification. See full history in that document.
-| WD02 | 13-Feb-2012 | Toby Considine | Ported to separate document. "Promoted" all section headers.
-| WD03 | 15 Feb-2012 | Toby Considine | Added Intro, updated namespaces to meet OASIS standard
-| WD04 | 17 February 2012 | Toby Considine | Additional namespace clean-up in response to Cover comments.
-
-Consisten capitalization of calWS when used as a namespace identifier
-
-Clean-up of CalWS discussion in appendix
-| WD05 | 17 February 2012 | Toby Considine | Types, capitalization, missing XRD reference
-|===
