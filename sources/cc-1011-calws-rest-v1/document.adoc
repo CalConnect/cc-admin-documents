@@ -46,6 +46,49 @@ This specification is related to:
 
 This document describes a RESTful web service for calendar access and update.
 
+[.preface]
+== metanorma-extension
+
+=== document history
+
+[source,yaml]
+----
+- date:
+  - type: updated
+    value:  2010-09-13
+  edition: 1.0
+  contributor:
+  - person:
+      name:
+        completename: M. Douglass
+  amend:
+    - description: |
+        Section 6 - Fix namespaces in examples
+
+        Section 6 - Move most properties into xrd level out of child-collection link relation
+
+        Section 6 - Add the following xrd properties
+
+        * max-attendees-per-instance
+        * max-date-time
+        * max-instances
+        * max-resource-size
+        * min-date-time
+        * description
+
+        Require absolute/path-absolute URL as per RFC 4918
+      location:
+        - clause=6
+- date:
+  - type: published
+    value:  2010-08-31
+  edition: 0.0
+  contributor:
+  - person:
+      name:
+        completename: M. Douglass
+----
+
 == Introduction
 
 The CalWS protocol is built upon and makes the same assumptions about structure as the CalDAV
@@ -1665,47 +1708,6 @@ Participants:
 
 The authors would also like to thank the Calendaring and Scheduling Consortium and the TC-XML
 committee for help with this specification.
-
-[.preface]
-= metanorma-extension
-
-== document history
-
-[source,yaml]
-----
-- date:
-  - type: updated
-    value:  2010-09-13
-  edition: 1.0
-  contributor:
-  - person:
-      name:
-        completename: M. Douglass
-  amend:
-    - description: |
-        Section 6 - Fix namespaces in examples
-
-        Section 6 - Move most properties into xrd level out of child-collection link relation
-
-        Section 6 - Add the following xrd properties
-
-        * max-attendees-per-instance
-        * max-date-time
-        * max-instances
-        * max-resource-size
-        * min-date-time
-        * description
-
-        Require absolute/path-absolute URL as per RFC 4918
-- date:
-  - type: published
-    value:  2010-08-31
-  edition: 0.0
-  contributor:
-  - person:
-      name:
-        completename: M. Douglass
-----
 
 [appendix,obligation=informative]
 == Non-normative References

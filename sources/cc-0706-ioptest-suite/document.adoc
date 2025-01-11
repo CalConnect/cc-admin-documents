@@ -60,7 +60,7 @@ changes.
 The test cases assume that the underlying data exchange formats used will be <<rfc2445,iCalendar>> and
 <<rfc2426,vCard 3.0>>.
 
-It is possible to use these test cases with implementations that use <<vcal,vCalendar>>, <<vcard-21,vCard 2.1>>, or
+It is possible to use these test cases with implementations that use <<vcal>>, <<vcard21>>, or
 some other proprietary format. Arguments supporting the importance of iCalendar to the Mobile
 Industry are discussed in the Consortium white paper on
 <<ical,The Benefits of iCalendar for the Mobile Industry>>.
@@ -233,36 +233,6 @@ OMA:: DS Open Mobile Alliance Data Synchronization (formerly SyncML)
 PIM:: Personal Information Management
 URL:: Uniform Resource Locator
 UTC:: Universal Time Coordinated
-
-[bibliography]
-== References
-
-The following specifications are referenced in this document
-
-* [[[rfc4791,RFC 4791]]]
-
-* [[[calgloss,CC/R 1102]]]
-
-* [[[rfc2445, RFC 2445]]]
-
-* [[[oma,OMA DS]]], Open Mobile Alliance Data Synchronization V1.1.2, Open Mobile Alliance, 10 July 2006 http://www.openmobilealliance.org/release_program/ds_v12.html
-
-* [[[miniop, CC/S 0601]]]
-
-* [[[rfc3283, RFC 3283]]]
-
-* [[[ical, CC/Adv 0611]]]
-
-* [[[vcal,vCalendar 1.0]]] vCalendar The Electronic Calendaring and Scheduling Exchange Format Version 1.0, Versit Consortium, September 18 1996 http://www.imc.org/pdi/vcal-10.txt
-
-* [[[vcard21,vCard 2.1]]] vCard The Electronic Business Card Version 2.1, Versit Consortium, September 18 1996 http://www.imc.org/pdi/vcard-21.txt
-
-* [[[rfc2426,RFC 2426]]]
-
-* [[[vobj,vObject]]], OMA vObject Minimum Interoperability Profile Version 1.0, Open Mobile Alliance, 18 January 2005
-http://www.openmobilealliance.org/release_program/vObject_v10.html
-
-* [[[wiki,hidden(Wikipedia)]]], https://www.wikipedia.org/
 
 == Part I -- Calendar Tests
 
@@ -2225,7 +2195,7 @@ are also very common provided in Calendar & Scheduling products.
 
 ==== Representation of All-Day Events in vCalendar/iCalendar
 
-The <<vcal-10,vCalendar 1.0>> specification, which is widely adopted on mobile devices, does not describe a
+The <<vcal>> specification, which is widely adopted on mobile devices, does not describe a
 standard representation of all day events.
 
 The OMA data synchronisation group has published a Minimum Interoperability Profile <<vobj,vObject>>
@@ -2529,3 +2499,31 @@ more widespread on mobile devices additional test cases should be added.
 . Character Encoding IOP issues. For example: Shift JIS support & confusion with
 encoding Yen symbol/backslash characters, base64/quoted printable encodings, line
 folding, UTF-8 support
+
+[bibliography]
+== References
+
+* [[[rfc4791,RFC 4791]]]
+
+* [[[calgloss,CC/R 1102]]]
+
+* [[[rfc2445, RFC 2445]]]
+
+* [[[oma,OMA DS]]], Open Mobile Alliance Data Synchronization V1.1.2, Open Mobile Alliance, 10 July 2006 http://www.openmobilealliance.org/release_program/ds_v12.html
+
+* [[[miniop, CC/S 0601]]]
+
+* [[[rfc3283, RFC 3283]]]
+
+* [[[ical, CC/Adv 0611]]]
+
+* [[[vcal,vCalendar 1.0]]], vCalendar The Electronic Calendaring and Scheduling Exchange Format Version 1.0, Versit Consortium, September 18 1996 http://www.imc.org/pdi/vcal-10.txt
+
+* [[[vcard21,vCard 2.1]]], vCard The Electronic Business Card Version 2.1, Versit Consortium, September 18 1996 http://www.imc.org/pdi/vcard-21.txt
+
+* [[[rfc2426,RFC 2426]]]
+
+* [[[vobj,vObject]]], OMA vObject Minimum Interoperability Profile Version 1.0, Open Mobile Alliance, 18 January 2005
+http://www.openmobilealliance.org/release_program/vObject_v10.html
+
+* [[[wiki,hidden(Wikipedia)]]], https://www.wikipedia.org/

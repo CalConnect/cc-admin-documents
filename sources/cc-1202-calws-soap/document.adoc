@@ -46,6 +46,151 @@ system that hosts calendar-based information using SOAP. Hosted information can 
 traditional personal and enterprise calendar information or services that support XML payloads
 developed in conformance with the WS-Calendar specification.
 
+[.preface]
+== metanorma-extension
+
+=== document history
+
+[source,yaml]
+----
+- date:
+  - type: published
+    value:  2011-03-15
+  edition: 0.0
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Initial publication - a first pass at a rewrite from CalWS-REST
+- date:
+  - type: updated
+    value:  2011-07-15
+  edition: 0.1
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: |
+        Added etoken to ensure consistent updates.
+
+        Added a multi op which allows the atomic processing of multiple operations in one request. Added an id attribute to requests and responses.
+- date:
+  - type: updated
+    value:  2011
+  edition: 0.2
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Added href to fetch response. Change propstat to be extension of BaseResponseType
+- date:
+  - type: updated
+    value:  2011-09-07
+  edition: 0.3
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Add test attribute to calendar query elements.
+- date:
+  - type: updated
+    value:  2011-11-11
+  edition: 0.4
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Updated calendar query to use xcal types instead of names. Assumes a later version of the xcalendar schema to make this possible. Change references to "etoken" to "changeToken", Update the error codes with descriptions and a type per error. Added some new errors.
+- date:
+  - type: updated
+    value:  2011-12-15
+  edition: 0.5
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Change example from CalDAV to CalWS
+- date:
+  - type: updated
+    value:  2012-01-03
+  edition: 0.6
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Remove all references to XRD. Define CalWS properties in their place.
+- date:
+  - type: updated
+    value:  2012-02-07
+  edition: 0.7
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: |
+        Align more closely with the OASIS template.
+
+        Correct one or two minor spelling errors.
+- date:
+  - type: updated
+    value:  2012-02-13
+  edition: 0.8
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - organization:
+      name: CalConnect
+  amend:
+    - description: Initial hand-off from CalConnect to OASIS
+- date:
+  - type: updated
+    value:  2012-02-14
+  edition: 0.9
+  contributor:
+  - person:
+      name:
+        completename: Michael Douglass
+  - person:
+      name:
+        completename: Toby Considine
+  - organization:
+      name: CalConnect
+  amend:
+    - description: |
+        Change namespace to http://docs.oasisopen.org/ws-calendar/ns/soap.
+
+        Fixed example, broken references.
+
+        Added namespace declaration.
+
+        Added Summary.
+----
+
 == Introduction
 
 The CalWS SOAP protocol is built upon and makes the same assumptions about structure
@@ -2170,31 +2315,6 @@ and cooperation as well. Contributors to TC XML include:
 * Mike Douglass, Rensselaer Polytechnic Institute
 * Steven Lees, Microsoft
 * Tong Li, IBM
-
-[appendix,obligation=informative]
-== Revision History
-
-[%unnumbered,options=header,cols=4]
-|===
-| Revision | Date | Editor | Changes Made
-
-| Initial | Mar 15 2011 | M. Douglass (CALCONNECT) | Initial publication - a first pass at a rewrite from CalWS-REST
-| WD01 | July 15 2011 | M. Douglass (CALCONNECT) a| Added etoken to ensure consistent updates. +
-Added a multi op which allows the atomic processing of multiple operations in one request. Added an id attribute to requests and responses.
-| WD02 | | M. Douglass (CALCONNECT) | Added href to fetch response. Change propstat to be extension of BaseResponseType
-| WD03 | September 7 2011 | M. Douglass (CALCONNECT) | Add test attribute to calendar query elements.
-| WD04 | November 11 2011 | M. Douglass (CALCONNECT) | Updated calendar query to use xcal types instead of names. Assumes a later version of the xcalendar schema to make this possible. Change references to "etoken" to "changeToken", Update the error codes with descriptions and a type per error. Added some new errors.
-| WD05 | December 15 2011| M. Douglass (CALCONNECT) | Change example from CalDAV to CalWS
-| WD06 | January 3 2012 | M. Douglass (CALCONNECT) | Remove all references to XRD. Define CalWS properties in their place.
-| WD07 | February 7 2012 | M. Douglass (CALCONNECT) a| Align more closely with the OASIS template. +
-Correct one or two minor spelling errors.
-| WD08 | 02/13/12 | M. Douglass | Initial hand-off from CalConnect to OASIS
-| WD09 | February 14 2012 | M. Douglass +
-T Considine a| Change namespace to http://docs.oasisopen.org/ws-calendar/ns/soap. +
-Fixed example, broken references. +
-Added namespace declaration. +
-Added Summary.
-|===
 
 [bibliography,normative=false]
 == Non-Normative References
