@@ -27,6 +27,41 @@ list and to subscribe please see
 
 http://www.calconnect.org/publicreviewdocuments.shtml.
 
+[.preface]
+== metanorma-extension
+
+=== document history
+
+[source,yaml]
+----
+- date:
+  - type: updated
+    value: 2010
+  edition: 0.1
+  amend:
+    description: |
+      Changed datetime format in examples to match xCal.
+
+      Added schema reference to xCal in examples.
+
+      Updated section on requirements for extensions to xCal.
+- date:
+  - type: updated
+    value: 2010
+  edition: 0.2
+  amend:
+    description: |
+      Introduced "CalWS" as working name to avoid confusion with OASIS document.
+
+      Updated discussion on precision, uncertainty, sequence
+- date:
+  - type: updated
+    value: 2010
+  edition: 0.3
+  amend:
+    description: Added "Other Protocols" section.
+----
+
 == Introduction
 
 Define a web service that allows basic CRUD (create, read, update, delete) operations, query, and
@@ -567,20 +602,3 @@ Description: Updates calendar items (identified by unique ids) on a specific cal
 * [[[oasis,2]]], OASIS Working Draft -- WS Calendar 1.0, http://www.oasis-open.org/apps/org/workgroup/ws-calendar/download.php/37135/WS-Calendar-1%200-spec-wd-02.pdf
 
 * [[[eis,3]]], EIS Alliance Customer Use Cases, https://www.eisalliance.org/forums/forumdisplay.php?7-EIS-Alliance-Public-Review-Use-Case-Version-2
-
-== Revisions
-
-Changes from -00:
-
-* Changed datetime format in examples to match xCal.
-* Added schema reference to xCal in examples.
-* Updated section on requirements for extensions to xCal.
-
-Changes from -01:
-
-* Introduced "CalWS" as working name to avoid confusion with OASIS document.
-* Updated discussion on precision, uncertainty, sequence
-
-Changes from -02:
-
-* Added "Other Protocols" section.

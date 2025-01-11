@@ -43,6 +43,70 @@ http://docs.oasis-open.org/ws-calendar/ws-calendar/v1.0/ws-calendar-1.0-spec.htm
 
 TODO: Summary of the technical purpose of the document.
 
+[.preface]
+== metanorma-extension
+
+=== document history
+
+[source,yaml]
+----
+- date:
+  - type: published
+    value:  2011-03-19
+  edition: 0.1
+  contributor:
+  - person:
+      name:
+        completename: Toby Considine
+  amend:
+    - description: ws-calendar-wd19 -- Originally contributed by Mike Douglass as part of WS-Calendar v1.0 Specification. See full history in that document.
+- date:
+  - type: updated
+    value:  2012-02-13
+  edition: 0.2
+  contributor:
+  - person:
+      name:
+        completename: Toby Considine
+  amend:
+    - description: Ported to separate document. "Promoted" all section headers.
+- date:
+  - type: updated
+    value:  2012-02-15
+  edition: 0.3
+  contributor:
+  - person:
+      name:
+        completename: Toby Considine
+  amend:
+    - description: Added Intro, updated namespaces to meet OASIS standard
+- date:
+  - type: updated
+    value:  2012-02-17
+  edition: 0.4
+  contributor:
+  - person:
+      name:
+        completename: Toby Considine
+  amend:
+    - description: |
+        Additional namespace clean-up in response to Cover comments.
+
+        Consistent capitalization of calWS when used as a namespace identifier
+
+        Clean-up of CalWS discussion in appendix
+- date:
+  - type: updated
+    value:  2012-02-17
+  edition: 0.5
+  contributor:
+  - person:
+      name:
+        completename: Toby Considine
+  amend:
+    - description: Types, capitalization, missing XRD reference
+----
+
 == Introduction
 
 The CalWS REST protocol is built upon and makes the same assumptions about structure as the CalDAV
@@ -1614,23 +1678,6 @@ that it is compatible with many different systems. This allows organizations wit
 systems to exchange scheduling messages with each other, and also allows a single organization with
 multiple calendar systems (for example due to mergers, or different departmental requirements) to
 exchange scheduling messages between users of each system.
-
-[appendix,obligation=informative]
-== Revision History
-
-[%unnumbered,cols="a,a,a,a"]
-|===
-| Revision | Date | Editor | Changes
-| ws-calendar-wd19 | 19-Mar-2011 | Toby Considine | Originally contributed by Mike Douglass as part of WS-Calendar v1.0 Specification. See full history in that document.
-| WD02 | 13-Feb-2012 | Toby Considine | Ported to separate document. "Promoted" all section headers.
-| WD03 | 15 Feb-2012 | Toby Considine | Added Intro, updated namespaces to meet OASIS standard
-| WD04 | 17 February 2012 | Toby Considine | Additional namespace clean-up in response to Cover comments.
-
-Consistent capitalization of calWS when used as a namespace identifier
-
-Clean-up of CalWS discussion in appendix
-| WD05 | 17 February 2012 | Toby Considine | Types, capitalization, missing XRD reference
-|===
 
 [bibliography]
 == Non-normative References
