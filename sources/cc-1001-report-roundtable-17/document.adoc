@@ -161,7 +161,7 @@ CalConnect week.
 CalConnect has implemented the Calendar Developer mailing list as announced in October. The
 list now has several dozen subscribers and is beginning to see activity.
 
-CalConnect has established an internal Jabber service requiring a userid on the CalConnect
+CalConnect has established an internal Jabber service requiring a `userid` on the CalConnect
 system, as a secure tool for remote IOP testing, TC meetings, etc.
 
 == Future Events

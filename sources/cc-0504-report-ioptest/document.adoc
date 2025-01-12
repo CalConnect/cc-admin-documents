@@ -84,7 +84,7 @@ RPI:
 
 At the beginning of the interoperability event, we held a general discussion with each of the
 participants. They in turn discussed what would be tested, and the current status of their
-implementations. We also agreed upon userids, server names and IP addresses to access
+implementations. We also agreed upon ``userid``s, server names and IP addresses to access
 the servers.
 
 VendorA, B and C provided URL's for connection to their servers. Two were situated locally
@@ -172,7 +172,7 @@ EDITOR: It seems a part of the text is missing here.
 [cols=5,options=header,headerrows=2]
 .VendorA Desktop Client
 |===
-3+| VENDORA Desktop Client 2.2+| P = Pass / F = Fail / N = Not supported
+3+| VENDORA Desktop Client 2.2+|
 | VENDORA | VENDORB | VENDORD
 
 | | | h| 1. h| Event creation.
@@ -211,12 +211,12 @@ EDITOR: It seems a part of the text is missing here.
 | N | N | N | 3.1.5.1. | Query all components that contain a `DTSTART` property with a `TZID` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>`)
 | N | N | N | 3.1.5.2. | Query all components that contain an `ATTENDEE` property with `PARTSTAT=NEEDS-ACTION` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>`)
 | | | h| 3.2. h| calendar-multiget `REPORT`
-| N | N | N | 3.2.1. | Query a specific href and return all data. (tests `<calendar-multiget>`)
-| P | P | P | 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests `<calendar-multiget>`)
-| N | N | N | 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
-| P | P | P | 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
-| N | N | N | 3.2.5. | Query a specific href and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
-| N | N | N | 3.2.6. | Query multiple hrefs (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
+| N | N | N | 3.2.1. | Query a specific `href` and return all data. (tests `<calendar-multiget>`)
+| P | P | P | 3.2.2. | Query multiple ``href``s (some of which do not exist) and return all data. (tests `<calendar-multiget>`)
+| N | N | N | 3.2.3. | Query a specific `href` and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
+| P | P | P | 3.2.4. | Query multiple ``href``s (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
+| N | N | N | 3.2.5. | Query a specific `href` and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
+| N | N | N | 3.2.6. | Query multiple ``href``s (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
 | | | h| 4. h| Event deletion
 | P | P | P | 4.1. | Delete a single non-recurring meeting.
 | P | P | N | 4.2. | Delete a single recurring meeting with no overridden instances.
@@ -230,10 +230,15 @@ EDITOR: It seems a part of the text is missing here.
 | P | N | N | 5.4. | Remove another user's access to the current user's main calendar and verify they can no longer access the calendar.
 |===
 
+[%key]
+P:: Pass
+F:: Fail
+N:: Not supported
+
 [cols=5,options=header,headerrows=2]
 .VendorA Mobile Client
 |===
-3+| VENDORA Mobile Client 2.2+| P = Pass / F = Fail / N = Not supported
+3+| VENDORA Mobile Client 2.2+|
 | VENDORA | VENDORB | VENDORD
 
 | | | h| 1. h| Event creation.
@@ -272,12 +277,12 @@ EDITOR: It seems a part of the text is missing here.
 | N | N | N | 3.1.5.1. | Query all components that contain a `DTSTART` property with a `TZID` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>`)
 | N | N | N | 3.1.5.2. | Query all components that contain an `ATTENDEE` property with `PARTSTAT=NEEDS-ACTION` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>`)
 | | | h| 3.2. h| calendar-multiget `REPORT`
-| N | N | N | 3.2.1. | Query a specific href and return all data. (tests `<calendar-multiget>`)
-| N | N | N | 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests `<calendar-multiget>`)
-| N | N | N | 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
-| N | N | N | 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
-| N | N | N | 3.2.5. | Query a specific href and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
-| N | N | N | 3.2.6. | Query multiple hrefs (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
+| N | N | N | 3.2.1. | Query a specific `href` and return all data. (tests `<calendar-multiget>`)
+| N | N | N | 3.2.2. | Query multiple ``href``s (some of which do not exist) and return all data. (tests `<calendar-multiget>`)
+| N | N | N | 3.2.3. | Query a specific `href` and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
+| N | N | N | 3.2.4. | Query multiple ``href``s (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
+| N | N | N | 3.2.5. | Query a specific `href` and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
+| N | N | N | 3.2.6. | Query multiple ``href``s (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
 | | | h| 4. h| Event deletion
 | N | N | N | 4.1. | Delete a single non-recurring meeting.
 | N | N | N | 4.2. | Delete a single recurring meeting with no overridden instances.
@@ -291,10 +296,15 @@ EDITOR: It seems a part of the text is missing here.
 | N | N | N | 5.4. | Remove another user's access to the current user's main calendar and verify they can no longer access the calendar.
 |===
 
+[%key]
+P:: Pass
+F:: Fail
+N:: Not supported
+
 [cols=5,options=header,headerrows=2]
 .VendorC Client
 |===
-3+| VENDORC Client 2.2+| P = Pass / F = Fail / N = Not supported
+3+| VENDORC Client 2.2+|
 | VENDORA | VENDORB | VENDORD
 
 | | | h| 1. h| Event creation.
@@ -333,12 +343,12 @@ EDITOR: It seems a part of the text is missing here.
 | N | N | N | 3.1.5.1. | Query all components that contain a `DTSTART` property with a `TZID` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>`)
 | N | N | N | 3.1.5.2. | Query all components that contain an `ATTENDEE` property with `PARTSTAT=NEEDS-ACTION` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>`)
 | | | h| 3.2. h| calendar-multiget `REPORT`
-| N | N | N | 3.2.1. | Query a specific href and return all data. (tests `<calendar-multiget>`)
-| N | N | N | 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests `<calendar-multiget>`)
-| N | N | N | 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
-| N | N | N | 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
-| N | N | N | 3.2.5. | Query a specific href and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
-| N | N | N | 3.2.6. | Query multiple hrefs (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
+| N | N | N | 3.2.1. | Query a specific `href` and return all data. (tests `<calendar-multiget>`)
+| N | N | N | 3.2.2. | Query multiple ``href``s (some of which do not exist) and return all data. (tests `<calendar-multiget>`)
+| N | N | N | 3.2.3. | Query a specific `href` and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
+| N | N | N | 3.2.4. | Query multiple ``href``s (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
+| N | N | N | 3.2.5. | Query a specific `href` and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
+| N | N | N | 3.2.6. | Query multiple ``href``s (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
 | | | h| 4. h| Event deletion
 | P | P | P | 4.1. | Delete a single non-recurring meeting.
 | P | N | N | 4.2. | Delete a single recurring meeting with no overridden instances.
@@ -351,6 +361,11 @@ EDITOR: It seems a part of the text is missing here.
 | N | N | N | 5.3. | Change access control details on current user's main calendar to add another user with read-write access. Verify that other user can view the calendar and change it. Verify that changes done by one user are seen by the other.
 | N | N | N | 5.4. | Remove another user's access to the current user's main calendar and verify they can no longer access the calendar.
 |===
+
+[%key]
+P:: Pass
+F:: Fail
+N:: Not supported
 
 NOTE: Recurrence between VENDORC and VENDORB is currently non-functional.
 
@@ -365,7 +380,7 @@ NOTE: VENDORC used their Lightening product for testing.
 [cols=5,options=header,headerrows=2]
 .Server Support
 |===
-3+| Server - Support 2.2+| P = Pass / F = Fail / N = Not supported
+3+| Server - Support 2.2+|
 | VENDORA | VENDORB | VENDORD
 
 | | | h| 1. h| Event creation.
@@ -404,12 +419,12 @@ NOTE: VENDORC used their Lightening product for testing.
 | P | P | N | 3.1.5.1. | Query all components that contain a `DTSTART` property with a `TZID` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>`)
 | P | P | N | 3.1.5.2. | Query all components that contain an `ATTENDEE` property with `PARTSTAT=NEEDS-ACTION` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>`)
 | | | h| 3.2. h| calendar-multiget `REPORT`
-| P | P | P | 3.2.1. | Query a specific href and return all data. (tests `<calendar-multiget>`)
-| P | P | P | 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests `<calendar-multiget>`)
-| P | P | P | 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
-| P | P | P | 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
-| P | P | P | 3.2.5. | Query a specific href and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
-| P | P | P | 3.2.6. | Query multiple hrefs (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
+| P | P | P | 3.2.1. | Query a specific `href` and return all data. (tests `<calendar-multiget>`)
+| P | P | P | 3.2.2. | Query multiple ``href``s (some of which do not exist) and return all data. (tests `<calendar-multiget>`)
+| P | P | P | 3.2.3. | Query a specific `href` and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
+| P | P | P | 3.2.4. | Query multiple ``href``s (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`)
+| P | P | P | 3.2.5. | Query a specific `href` and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
+| P | P | P | 3.2.6. | Query multiple ``href``s (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`)
 | | | h| 4. h| Event deletion
 | P | P | P | 4.1. | Delete a single non-recurring meeting.
 | P | P | N | 4.2. | Delete a single recurring meeting with no overridden instances.
@@ -423,3 +438,8 @@ NOTE: VENDORC used their Lightening product for testing.
 | N | N | N | 5.4. | Remove another user's access to the current user's main
 calendar and verify they can no longer access the calendar.
 |===
+
+[%key]
+P:: Pass
+F:: Fail
+N:: Not supported
