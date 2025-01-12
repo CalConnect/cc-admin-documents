@@ -2140,10 +2140,10 @@ as in <<rfc5545>>. The effective period should cover the remainder of that day.
 
 ===== `end`
 
-Default:: Same as start
+Default:: Same as `start`
 Description:: Specifies the end date for the Freebusy data. The server is free to ignore this value.
-Format:: Same as start
-Example:: Same as start
+Format:: Same as `start`
+Example:: Same as `start`
 
 The server is free to ignore the start, end and period parameters. It is recommended that the server return
 at least 6 weeks of data from the current day.

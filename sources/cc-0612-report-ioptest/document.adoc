@@ -244,7 +244,7 @@ Respectfully submitted, Pat Egen. Interoperability Event Manager
 [options=header,headerrows=2,cols="^,<,^,^,^,^,^,^,^,^,^,^,^,^"]
 .6^th^ CalDAV Interop Testing Event -- September 2006
 |===
-| .2+| P = Pass / F = Fail / N = Not supported 3+| Server 1 3+| Server 2 3+| Server 3 3+| Server 4
+| .2+| 3+| Server 1 3+| Server 2 3+| Server 3 3+| Server 4
 | | A | B | C | A | B | C | A | B | C | A | B | C
 
 | 1. h| Event creation. | | | | | | | | | | | |
@@ -283,12 +283,12 @@ h| 2.7. | Modify the participation status of the 1st attendee in meeting 1.3 to 
 | 3.1.5.1. | Query all components that contain a `DTSTART` property with a `TZID` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>`) | | N | N | | N | | | | N 2+| N |
 | 3.1.5.2. | Query all components that contain an `ATTENDEE` property with `PARTSTAT=NEEDS-ACTION` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>`) | | N | N | | N | | | | N 2+| N |
 | 3.2. | calendar-multiget `REPORT` | | N | N | | N | | | | N 2+| N |
-| 3.2.1. | Query a specific href and return all data. (tests `<calendar-multiget>`) | | N | N | | N | | | | N 2+| N |
-| 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests `<calendar-multiget>`) | | N | N | | N | | | | N 2+| N |
-| 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) | | N | N | | N | | | | N 2+| N |
-h| 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) | | N | N | | N | | | | N 2+| N |
-| 3.2.5. | Query a specific href and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) | | N | N | | N | | | | N 2+| N |
-| 3.2.6. | Query multiple hrefs (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) | | N | N | | N | | | | N 2+| N |
+| 3.2.1. | Query a specific `href` and return all data. (tests `<calendar-multiget>`) | | N | N | | N | | | | N 2+| N |
+| 3.2.2. | Query multiple ``href``s (some of which do not exist) and return all data. (tests `<calendar-multiget>`) | | N | N | | N | | | | N 2+| N |
+| 3.2.3. | Query a specific `href` and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) | | N | N | | N | | | | N 2+| N |
+h| 3.2.4. | Query multiple ``href``s (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) | | N | N | | N | | | | N 2+| N |
+| 3.2.5. | Query a specific `href` and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) | | N | N | | N | | | | N 2+| N |
+| 3.2.6. | Query multiple ``href``s (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND`/`DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) | | N | N | | N | | | | N 2+| N |
 | 4. h| Event deletion | | | | | | | | | | | |
 | 4.1. | Delete a single non-recurring meeting. | P | | P | | P | | | | P | | N | P
 | 4.2. | Delete a single recurring meeting with no overridden instances. | P | | P | | P | | | | P | | N | P
@@ -342,3 +342,6 @@ Event on Thursday, 3 pm - 5 pm, status cancelled | N | N | | N | N | | | | | | N
 
 [%key]
 A, B, C:: Client implementations
+P:: Pass
+F:: Fail
+N:: Not supported

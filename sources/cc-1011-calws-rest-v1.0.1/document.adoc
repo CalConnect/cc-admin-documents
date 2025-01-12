@@ -1224,7 +1224,7 @@ ACCEPT: application/xml+calendar
 None of these parameters are required except for the conditions noted below. Appropriate defaults will be
 supplied by the server.
 
-==== start
+==== `start`
 
 Default:: The default value is left up to the server. It may be the current day, start of the current
 month, etc.
@@ -1252,17 +1252,17 @@ interpreted as in <<rfc5545>>. The effective period should cover the remainder o
 Date-only values are disallowed as the server cannot determine the correct start of the day. Only
 UTC or date/time with offset values are permitted.
 
-==== end
+==== `end`
 
-Default:: Same as start
+Default:: Same as `start`
 
 Description:: Specifies the end date for the Freebusy data. The server is free to ignore this value.
 
-Format:: Same as start
+Format:: Same as `start`
 
-Example:: Same as start
+Example:: Same as `start`
 
-==== period
+==== `period`
 
 Default:: The default value is left up to the server. The recommended value is "P42D".
 
@@ -1274,7 +1274,7 @@ Format:: A duration as defined in <<rfc5545,section=4.3.6>>
 [example]
 `P42D`
 
-==== account
+==== `account`
 
 Default:: none
 

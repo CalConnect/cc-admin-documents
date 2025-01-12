@@ -171,7 +171,7 @@ i.e. a date/time value without a time component (e.g.
 20080101), are not supported because time zone
 support would be required.
 
-=== start
+=== `start`
 
 Default:: The default value is left up to the server. It
 may be the current day, start of the current
@@ -207,19 +207,18 @@ cannot determine the correct start of the
 day. Only UTC or date/time with offset
 values are permitted.
 
-=== end
+=== `end`
 
-Default:: Same as start
+Default:: Same as `start`
 
 Description:: Specifies the end date for the Freebusy data.
 The server is free to ignore this value.
 
-Format:: Same as start
+Format:: Same as `start`
 
-[example]
-Same as start
+Example:: Same as `start`
 
-=== period
+=== `period`
 
 Default:: The default value is left up to the server. The
 recommended value is "P42D".
@@ -235,7 +234,7 @@ Format:: An RFC 2445 Duration as defined in section
 [example]
 P42D
 
-=== format
+=== `format`
 
 Default:: "text/calendar"
 
@@ -281,7 +280,7 @@ Some services may require the presence of a token
 and/or the user parameter as a form of low-level
 security.
 
-=== token
+=== `token`
 
 Default:: None
 
@@ -294,13 +293,13 @@ Format:: A URL encoded string.
 [example]
 XfHG65hsjF43
 
-=== user
+=== `user`
 
 Default:: None
 
 Description:: A token representing the target user of this
 Freebusy request. This token may also be
-referred to as a "userid". It is expected that
+referred to as a "`userid`". It is expected that
 some services will use a token which appears
 to be an email address.
 
@@ -312,7 +311,7 @@ user1@example.com
 
 user%201@example.com
 
-jdhdyerhdk (a userid may be an opaque
+jdhdyerhdk (a `userid` may be an opaque
 token.)
 ====
 
@@ -342,9 +341,9 @@ returned by a server.
 | 400 | Start parameter could not be understood / End parameter could not be understood / Period parameter could not be understood
 | 401 | Unauthorized
 | 403 | Forbidden
-| 404 | The data for the requested userid is not currently available, but may be available later.
+| 404 | The data for the requested `userid` is not currently available, but may be available later.
 | 406 | The requested format in the Format parameter is not supported.
-| 410 | The data for the requested userid is no longer available
+| 410 | The data for the requested `userid` is no longer available
 | 500 | General server error
 |===
 
@@ -369,7 +368,7 @@ http://www.example.com/freebusy?user=user%201@example.com&start=2008-01-01T00:00
 ====
 
 The following are examples of URLs used to retrieve
-Freebusy data for a user where the userid has been
+Freebusy data for a user where the `userid` has been
 obfuscated:
 
 [example]
@@ -507,10 +506,10 @@ template.
 [%unnumbered,cols=2,options=header]
 |===
 | Template Key | Meaning
-| userid | The full userid such as "user1@example.com"
-| user | A userid without a domain, such as "user1"
-| domain | The domain part of a userid, such as "example.com"
-| token | An auth token that identifies the requesting user.
+| `userid` | The full `userid` such as "user1@example.com"
+| `user` | A `userid` without a domain, such as "user1"
+| `domain` | The domain part of a `userid`, such as "example.com"
+| `token` | An auth token that identifies the requesting user.
 |===
 
 == IANA Considerations
@@ -529,9 +528,9 @@ anticipated.
 
 Servers `SHOULD` provide a means for token values to
 be automatically or manually expired.
-Services `SHOULD` consider obfuscating the userid in a
+Services `SHOULD` consider obfuscating the `userid` in a
 Freebusy URL. A service `SHOULD` prevent a client from
-probing for vaild userids which might reveal private
+probing for valid ``userid``s which might reveal private
 information about users such as their email address. A
 server `MAY` return an HTTP 404 error rather than an
 HTTP 403 error when the requester does not have

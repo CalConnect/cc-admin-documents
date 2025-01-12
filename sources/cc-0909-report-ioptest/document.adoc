@@ -104,7 +104,7 @@ Vendor 1 vs. VENDOR 3:
 .Vendor 1 client testing matrix results chart
 [options=header,headerrows=2,cols="a,a,a,a,<,a"]
 |===
-3+| Servers 2+| P = Pass / F = Fail / N = Not supported | Comments
+3+| Servers 2+| | Comments
 | Vendor 2 | Vendor 5 | VENDOR 3 3+|
 
 3+| h| 1. | Event creation. |
@@ -144,12 +144,12 @@ Vendor 1 vs. VENDOR 3:
 | | | | 3.1.5.1. | Query all components that contain a `DTSTART` property with a `TZID` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>`) |
 | | | | 3.1.5.2. | Query all components that contain an `ATTENDEE` property with `PARTSTAT=NEEDSACTION` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>`) |
 | | | | 3.2. | calendar-multiget `REPORT` |
-| | | | 3.2.1. | Query a specific href and return all data. (tests `<calendar-multiget>`) |
-| | | | 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests `<calendar-multiget>`) |
-| | | | 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) |
-| | | | 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) |
-| | | | 3.2.5. | Query a specific href and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) |
-| | | | 3.2.6. | Query multiple hrefs (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) |
+| | | | 3.2.1. | Query a specific `href` and return all data. (tests `<calendar-multiget>`) |
+| | | | 3.2.2. | Query multiple ``href``s (some of which do not exist) and return all data. (tests `<calendar-multiget>`) |
+| | | | 3.2.3. | Query a specific `href` and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) |
+| | | | 3.2.4. | Query multiple ``href``s (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) |
+| | | | 3.2.5. | Query a specific `href` and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) |
+| | | | 3.2.6. | Query multiple ``href``s (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) |
 3+| h| 4. h| Event deletion |
 | P | P | P | 4.1. | Delete a single non-recurring meeting. |
 | P | P | P | 4.2. | Delete a single recurring meeting with no overridden instances. | Vendor 2: 4.2-4.5 originally failed but server changes made during meeting led to success.
@@ -196,6 +196,11 @@ Event on Thursday, 3 pm - 5 pm, status cancelled | NOTE: Vendor 1 does not diffe
 | P/N | N | ? | 8.5 | Organizer (user1) updates invite with user3 accept state and resends invite. Verify that each attendee Inbox receives a copy of the new invite. | Vendor 2 passes inbox messages only for certain event updates.
 | F/N | N | ? | 8.6 | Organizer (user1) cancels the invite. Verify that each attendee Inbox receives the cancellation. |
 |===
+
+[%key]
+P:: Pass
+F:: Fail
+N:: Not supported
 
 ==== Vendor 1 server observations
 
@@ -305,13 +310,18 @@ The table below shows the CALDAV testing matrix items tested by Vendor 6 against
 | N | 3.1.5.1. | Query all components that contain a `DTSTART` property with a `TZID` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<is-defined>`) | not used in Vendor 6
 | N | 3.1.5.2. | Query all components that contain an `ATTENDEE` property with `PARTSTAT=NEEDS-ACTION` parameter. (tests `<calendar-query>`, `<filter>+<prop-filter>+<text-match>+<param-filter>+<text-match>`) | not used in Vendor 6
 | P | 3.2. | calendar-multiget `REPORT` | used and works
-| P | 3.2.1. | Query a specific href and return all data. (tests `<calendar-multiget>`) |
-| P | 3.2.2. | Query multiple hrefs (some of which do not exist) and return all data. (tests `<calendar-multiget>`) | hard to trigger in the Vendor 6 plugin, but works
-| P | 3.2.3. | Query a specific href and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) | used and works
-| P | 3.2.4. | Query multiple hrefs (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) | hard to trigger in the Vendor 6 plugin, but works
-| N | 3.2.5. | Query a specific href and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) | not used in Vendor 6
-| N | 3.2.6. | Query multiple hrefs (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) | not used in Vendor 6
+| P | 3.2.1. | Query a specific `href` and return all data. (tests `<calendar-multiget>`) |
+| P | 3.2.2. | Query multiple ``href``s (some of which do not exist) and return all data. (tests `<calendar-multiget>`) | hard to trigger in the Vendor 6 plugin, but works
+| P | 3.2.3. | Query a specific `href` and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) | used and works
+| P | 3.2.4. | Query multiple ``href``s (some of which do not exist) and return ETag WebDAV property and all data. (tests `<calendar-multiget>+<DAV:prop>`) | hard to trigger in the Vendor 6 plugin, but works
+| N | 3.2.5. | Query a specific `href` and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) | not used in Vendor 6
+| N | 3.2.6. | Query multiple ``href``s (some of which do not exist) and return `VEVENT` components with only `DTSTART`, `DTEND/DURATION`, `SUMMARY`, `UID`, `SEQUENCE`, `RRULE`, `RDATE`, `EXRULE`, `EXDATE`, `RECURRENCE-ID`. (tests `<calendar-query>`, `<calendar-data>+<comp>+<prop>`) | not used in Vendor 6
 |===
+
+[%key]
+P:: Pass
+F:: Fail
+N:: Not supported
 
 == Summary
 
