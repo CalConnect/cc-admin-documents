@@ -1,0 +1,11 @@
+---
+metanorma:
+  source:
+    files:
+      - pres-intro-01.adoc
+      - pres-intro-02.adoc
+      - pres-iop-testing.adoc
+      - pres-ischedule.adoc
+      - pres-tc-mobile.adoc
+      - pres-bedework.adoc
+      - pres-stockholm.adoc
