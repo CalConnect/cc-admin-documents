@@ -228,9 +228,6 @@ image::img_1892-61.jpg[]
 image::img_1919-63.jpg[]
 | [%unnumbered]
 image::img_1930-65.jpg[]
-| [%unnumbered]
+2+| [%unnumbered]
 image::img_7653-57.jpg[]
-| [%unnumbered]
-image::IMG_7980-29.jpg[]
-
 |===
