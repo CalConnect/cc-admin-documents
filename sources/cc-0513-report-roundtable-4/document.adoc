@@ -69,7 +69,7 @@ issues and determine whether specific work needs to be undertaken in the area.
 *External Communications*: The Consortium will be announcing an RSS feed for Calendaring
 issues and announcements in the next several weeks.
 
-== Calconnect Interoperability Event
+== CalConnect Interoperability Event
 
 Participants in the CalConnect Interoperability Event included EVDB, IBM, Isamet, Mozilla,
 Novell, Oracle, OSAF, RPI (Rensselaer Polytechnic Institute) and Sun Microsystems. Results
@@ -78,7 +78,7 @@ Reports.
 
 == Technical Committees
 
-All Calconnect Technical Committees met during the course of the Roundtable to review their
+All CalConnect Technical Committees met during the course of the Roundtable to review their
 status and work to date with the entire set of attendees and to progress their work with the large
 input from the Roundtable. Of particular note:
 

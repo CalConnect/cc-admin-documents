@@ -45,7 +45,7 @@ This document is generally available to all who responded to the questionnaire i
 evaluating their implementation against others, and to
 all organizations and implementors working with Calendaring and Scheduling
 implementations. The Recurrence Technical
-Committee of Calconnect would appreciate feedback on the value and relevance of this
+Committee of CalConnect would appreciate feedback on the value and relevance of this
 material from those who make use of it.
 Feedback and comments may be sent to the Executive Director of the Consortium via
 Dave.Thewlis@calconnect.org.

@@ -155,7 +155,7 @@ to verify when they are fixed in the updated specifications.
 The technical committee will produce a recommendations document to the IETF describing
 the suggested fixes and enhancements felt necessary.
 
-The technical committee will work with other Calconnect technical committees to
+The technical committee will work with other CalConnect technical committees to
 accomplish this work (e.g., TC-Mobile, TC-XML (proposed), TC-Eventpub (VVENUE
 overlap), TC-Ioptest (interoperability testing).
 

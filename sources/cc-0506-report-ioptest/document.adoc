@@ -51,7 +51,7 @@ interop testing.
 === CALDAV Testing
 
 Anyone testing CALDAV had a test script to run through. During the pre-testing, some items were
-found in the script that were corrected and put back on the Calconnect web server.
+found in the script that were corrected and put back on the CalConnect web server.
 
 As noted before, the CALDAV script was available for pre-testing as "Homework". Some things that
 were found and fixed were the following:'

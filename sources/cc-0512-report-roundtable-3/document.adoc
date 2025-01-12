@@ -76,7 +76,7 @@ areas:
 * Cross domain security and access control
 * Todos for project management
 
-== Calconnect Interoperability Event
+== CalConnect Interoperability Event
 
 Participants in the CalConnect Interoperability Event included Isamet, Mozilla, Novell, Oracle,
 and Rensselaer Politechnic Institute. The CalConnect Interoperability Event was focused on
@@ -86,7 +86,7 @@ the Consortium website and delivered to the IETF.
 
 == Technical Committees
 
-All Calconnect Technical Committees met during the course of the Roundtable to review their
+All CalConnect Technical Committees met during the course of the Roundtable to review their
 status and work to date with the entire set of attendees and to progress their work with the large
 input from the Roundtable. Of particular note:
 

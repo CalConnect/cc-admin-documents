@@ -402,4 +402,4 @@ applications during our onsite testing events.
 Thank you to all the participants and their willingness to take time out of busy schedules to help
 CalConnect forward the usage of calendaring standards.
 
-Respectfully submitted by Pat Egen, Calconnect Interop Manager.
+Respectfully submitted by Pat Egen, CalConnect Interop Manager.

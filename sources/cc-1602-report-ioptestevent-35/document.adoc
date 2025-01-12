@@ -42,7 +42,7 @@ This document was prepared by Technical Committee _{technical-committee}_.
 
 == Report
 
-The Calconnect interoperability event was hosted by AOL at their Palo Alto site on
+The CalConnect interoperability event was hosted by AOL at their Palo Alto site on
 January 11th through the morning of the 13th.
 
 While it was a smaller than usual event much valuable work took place. There was the

@@ -849,7 +849,7 @@ Therefore, this time we tested only a subset of the scenarios and this proved to
 to do. Participants were able to get through all the scenarios and provide commentary. It was
 found that there were some things tested that appeared to be redundant. Gregory Pekofsky put
 together a document that provides suggestions on how to streamline the limited subset so we can
-better utilize our valuable testing time. His suggested are noted in Appendix B at the end of this
+better utilize our valuable testing time. His suggested are noted in <<appendix-B>> at the end of this
 document.
 
 As usual, participants found that sitting in a room together and doing live testing was extremely

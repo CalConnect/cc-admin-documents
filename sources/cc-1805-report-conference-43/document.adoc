@@ -90,7 +90,7 @@ public or private areas.
 
 * The Time Zone Data Distribution Service (TZDIST) Geolocate Extension
 
-== Calconnect Liaisons
+== CalConnect Liaisons
 
 CalConnect has formal reciprocal membership liaisons with M3AAWG and OASIS and a strong working
 relationship with the IETF.
@@ -213,7 +213,7 @@ England.
 * Possible interest by FastMail in hosting CalConnect XLVI in Autumn 2019 in
 Philadelphia.
 
-== Pictures from Calconnect XLIII
+== Pictures from CalConnect XLIII
 
 Pictures courtesy of Thomas Schäfer, 1&1
 

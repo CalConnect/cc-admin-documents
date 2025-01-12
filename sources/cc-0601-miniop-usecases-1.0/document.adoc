@@ -84,7 +84,7 @@ information.
 An application domain that covers systems that allow the
 interchange, access and management of calendar data.
 
-=== Calconnect
+=== CalConnect
 
 The Calendaring and Scheduling Consortium consisting of
 vendors and user groups interested in promoting and improving calendaring and

@@ -42,7 +42,7 @@ This document was prepared by Technical Committee _{technical-committee}_.
 
 == Report
 
-The Calconnect interoperability event was hosted by Ribose and OGCIO at Cyberport in
+The CalConnect interoperability event was hosted by Ribose and OGCIO at Cyberport in
 Hong Kong on April 18 and 19, 2016.
 
 The event at HongKong continued our move to a more forum like approach, combining

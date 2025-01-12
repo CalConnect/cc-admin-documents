@@ -42,7 +42,7 @@ This document was prepared by Technical Committee _{technical-committee}_.
 
 == Report
 
-The interoperability test event at Calconnect XXVII, hosted by The University of Wisconsin,
+The interoperability test event at CalConnect XXVII, hosted by The University of Wisconsin,
 Madison, Wisconsin took place on Monday June 3rd through Wednesday morning June 5th.
 
 There were 6 organizations participating and 1 observing represented by 13 attendees. Those

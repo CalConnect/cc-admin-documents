@@ -30,7 +30,7 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
 == Introduction
 
-This was the first Mobile Calendar Interoperability testing event held by Calconnect. There was a
+This was the first Mobile Calendar Interoperability testing event held by CalConnect. There was a
 predetermined set of objects to test. It was determined early one that the testing document was quite
 comprehensive and would never be completed in the two days we had for interop testing. Therefore, the
 testing parties elected to choose several items from each testing group for interoperability testing. You

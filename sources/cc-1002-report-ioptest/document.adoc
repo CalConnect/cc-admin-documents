@@ -36,7 +36,7 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
 The February CalConnect interoperability testing event was held at the UC Irvine campus in Orange
 County, California. Participants of the testing event used predetermined test scenarios. The EMClient
-group participated remotely from the Czech Republic. We utilized our Calconnect Jabber room and Wiki
+group participated remotely from the Czech Republic. We utilized our CalConnect Jabber room and Wiki
 to enable the remote participation.
 
 The documents used in this testing event were the testing matrix for RFC4791 and in addition sync

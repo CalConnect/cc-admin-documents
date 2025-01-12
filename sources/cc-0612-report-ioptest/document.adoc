@@ -138,7 +138,7 @@ up correctly the receiving application.
 
 === Second set of comments
 
-Our server team was pleased to participate in this Calconnect IOP. We had the absolute latest version of
+Our server team was pleased to participate in this CalConnect IOP. We had the absolute latest version of
 our CalDAV server available for testing on two machines.
 
 All clients were tested against the server during the course of the event. No major problems were found in
