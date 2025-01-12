@@ -29,20 +29,20 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
-[abstract]
-== Abstract
-
-This document is a recommendation from the CalConnect USECASE Technical Committee regarding the
-minimum interoperability of resources in the calendaring and scheduling domain.
-
-[.preface]
-== Disclaimer
-
+[CAUTION,type=disclaimer]
+====
 This document is by The Calendaring and Scheduling Consortium. Permission is granted to potential
 members to reproduce and distribute this presentation within the member organization so long as the
 presentation is not altered in any way and the Consortium is acknowledged as the originator.
 
 Please send any changes or corrections to the document editor(s).
+====
+
+[abstract]
+== Abstract
+
+This document is a recommendation from the CalConnect USECASE Technical Committee regarding the
+minimum interoperability of resources in the calendaring and scheduling domain.
 
 == Introduction
 

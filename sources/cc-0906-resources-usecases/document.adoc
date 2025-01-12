@@ -32,19 +32,19 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
-[abstract]
-== Abstract
-
-This document lists use cases that utilize resources within the calendaring and scheduling application domain.
-
-[.preface]
-== Statements and Disclaimer
-
+[CAUTION,type=disclaimer]
+====
 This document is by The Calendaring and Scheduling Consortium. Permission is granted to potential members to
 reproduce and distribute this presentation within the member organization so long as the presentation is not
 altered in any way and the Consortium is acknowledged as the originator.
 
 Please send any changes or corrections to the document editors.
+====
+
+[abstract]
+== Abstract
+
+This document lists use cases that utilize resources within the calendaring and scheduling application domain.
 
 == Introduction
 
