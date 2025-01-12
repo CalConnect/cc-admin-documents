@@ -77,7 +77,7 @@ updated as a result of the testing.
 A group of participants spent most of their time working on iSchedule. This protocol allows
 scheduling of meetings across domains and includes service discovery and a security model based
 on DKIM. This time there was a new DKIM canonicalization to test. The test was successful with
-events and freebusy being transferred in both directions. Most problems encountered were related
+events and `freebusy` being transferred in both directions. Most problems encountered were related
 to the non-standard disposition of the servers and self-signed certificates. There are now at least
 four implementations up to the latest draft which are capable of working with each other.
 

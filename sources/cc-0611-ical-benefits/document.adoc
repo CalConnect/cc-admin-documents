@@ -32,6 +32,8 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+Chair(s):: Chris Dudding
+
 == Executive Summary
 
 The ability to share calendar information among different applications and

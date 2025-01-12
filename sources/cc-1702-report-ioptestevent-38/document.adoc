@@ -59,7 +59,7 @@ There were a number of areas some or all of us were interested in pursuing. Thes
 included:
 
 * For the Java people bringing ourselves up to date with the latest ical4j
-* Coming up with a way of handling updates to the caldav tester suite.
+* Coming up with a way of handling updates to the CalDAV tester suite.
 * Discussions on developer guide directions
 
 There were the usual crop of issues that attendees wanted to address. iMIP has been a

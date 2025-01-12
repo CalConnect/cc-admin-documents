@@ -117,7 +117,7 @@ Calendar resources, for example events and tasks are stored as named resources (
 collections (folders) known as "**Calendar Collections**".
 
 This specification can be looked upon as a layer built on top of CalDAV and defines the basic operations
-which allow creation, retrieval, update and deletion. In addition, query and freebusy operations are
+which allow creation, retrieval, update and deletion. In addition, query and `freebusy` operations are
 defined to allow efficient, partial retrieval of calendar data.
 
 This does not mean that a CalWS service must be built on CalDAV, merely that a degree of conformity is
@@ -268,7 +268,7 @@ define or set the properties for the service or resources within the service.
 
 ===== Hrefs
 
-An href is a URI reference to a resource, for example
+An `href` is a URI reference to a resource, for example
 
 [source%unnumbered]
 ----
@@ -295,7 +295,7 @@ Scheduling events placed in such a collection will trigger implicit scheduling a
 ===== Principal Home
 
 The collection under which all the resources for a given principal are stored. For example, for principal
-"fred" the principal home might be "/user/fred/"
+"`fred`" the principal home might be "`/user/fred/`"
 
 == Error conditions
 
@@ -354,7 +354,7 @@ CalDAV:supported-calendar-data
 In addition to those CalDAV properties, the CalWS specification defines a number of other properties and
 link relations with the URI prefix of http://docs.oasis-open.org/ws-calendar/ns/REST.
 
-=== supported-features property.
+=== `supported-features` property
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/supported-features
 
@@ -362,7 +362,7 @@ This property defines the features supported by the target. All resources contai
 service should return this property. The value is a comma separated list containing one or more of the
 following
 
-* calendar-access - the service supports all `MUST` requirements in this specification
+* `calendar-access` - the service supports all `MUST` requirements in this specification
 +
 --
 [source%unnumbered]
@@ -371,45 +371,45 @@ following
 ----
 --
 
-=== max-attendees-per-instance
+=== `max-attendees-per-instance`
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/max-attendees-per-instance
 
 Defines the maximum number of attendees allowed per event or task.
 
-=== max-date-time
+=== `max-date-time`
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/max-date-time
 
 Defines the maximum date/time allowed on an event or task
 
-=== max-instances
+=== `max-instances`
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/max-instances
 
 Defines the maximum number of instances allowed per event or task
 
-=== max-resource-size
+=== `max-resource-size`
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/max-resource-size
 
 Provides a numeric value indicating the maximum size of a resource in octets that the server is willing to
 accept when a calendar object resource is stored in a calendar collection.
 
-=== min-date-time
+=== `min-date-time`
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/min-date-time
 
 Provides a `DATE-TIME` value indicating the earliest date and time (in UTC) that the server is willing to
 accept for any `DATE` or `DATE-TIME` value in a calendar object resource stored in a calendar collection.
 
-=== description
+=== `description`
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/description
 
 Provides some descriptive text for the targeted collection.
 
-=== timezone-service relation
+=== `timezone-service` relation
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/timezone-service
 
@@ -423,7 +423,7 @@ timezone service.
            href="http://example.com/tz" />
 ----
 
-=== principal-home relation
+=== `principal-home` relation
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/principal-home
 
@@ -435,11 +435,11 @@ Provides the URL to the user home for the currently authenticated principal.
            href="http://example.com/user/fred" />
 ----
 
-=== current-principal-freebusy relation
+=== `current-principal-freebusy` relation
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/current-principal-freebusy
 
-Provides the URL to use as a target for freebusy requests for the current authenticated principal.
+Provides the URL to use as a target for `freebusy` requests for the current authenticated principal.
 
 [source%unnumbered]
 ----
@@ -447,11 +447,11 @@ Provides the URL to use as a target for freebusy requests for the current authen
            href="http://example.com/freebusy/user/fred" />
 ----
 
-=== principal-freebusy relation
+=== `principal-freebusy` relation
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/principal-freebusy
 
-Provides the URL to use as a target for freebusy requests for a different principal.
+Provides the URL to use as a target for `freebusy` requests for a different principal.
 
 [source%unnumbered]
 ----
@@ -459,11 +459,11 @@ Provides the URL to use as a target for freebusy requests for a different princi
            href="http://example.com/freebusy" />
 ----
 
-=== child-collection relation
+=== `child-collection` relation
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/child-collection
 
-Provides information about a child collections for the target. The href attribute gives the URI of the
+Provides information about a child collections for the target. The `href` attribute gives the URI of the
 collection. The element should only have CalWS child elements giving the type of the collection, that is
 the `calWS:collection` link property and the CalWS-calendar-collection link property. This allows clients to
 determine the structure of a hierarchical system by targeting each of the child collections in turn.
@@ -482,7 +482,7 @@ The `xrd:title` child element of the link element provides a description for the
 </Link>
 ----
 
-=== created link property
+=== `created` link property
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/created
 
@@ -494,7 +494,7 @@ Appears within a link relation describing collections or entities. The value is 
 <Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/created">1985-04-12T23:20:50.52Z</Property>
 ----
 
-=== last-modified property
+=== `last-modified` property
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/last-modified
 
@@ -506,7 +506,7 @@ appear in the Last-Modified header and is defined in <<rfc2616,section=3.3.1>>
 <Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/last-modified">Mon, 12 Jan 1998 09:25:56 GMT</Property>
 ----
 
-=== displayname property
+=== `displayname` property
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/displayname
 
@@ -518,7 +518,7 @@ or collection.
 <Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/displayname">My Calendar</Property>
 ----
 
-=== timezone property
+=== `timezone` property
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/timezone
 
@@ -529,18 +529,18 @@ Appears within an `xrd` object describing collections. The value is a text timez
 <Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/timezone">America/New_York</Property>
 ----
 
-=== owner property
+=== `owner` property
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/owner
 
-Appears within an `xrd` object describing collections or entities. The value is a server specific uri.
+Appears within an `xrd` object describing collections or entities. The value is a server specific URI.
 
 [source%unnumbered]
 ----
 <Property type="http://docs.oasis-open.org/ws-calendar/ns/REST/owner">/principals/users/mike</Property>
 ----
 
-=== collection link property
+=== `collection` link property
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/collection
 
@@ -553,7 +553,7 @@ that this child element is a collection.
           xsi:nil="true" />
 ----
 
-=== calendar-collection link property
+=== `calendar-collection` link property
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/calendar-collection
 
@@ -566,7 +566,7 @@ that this child element is a calendar collection.
           xsi:nil="true" />
 ----
 
-=== calWS:privilege-set XML element
+=== `calWS:privilege-set` XML element
 
 http://docs.oasis-open.org/ws-calendar/ns/REST/calws:privilege-set
 
@@ -679,21 +679,21 @@ request will contain the resource being created. The request parameter "action=c
 [[sec-preconditions]]
 === Preconditions for Calendar Object Creation
 
-* *calWS:target-exists*: The target of a `PUT` must exist. Use `POST` to create entities and `PUT` to
+* *`calWS:target-exists`*: The target of a `PUT` must exist. Use `POST` to create entities and `PUT` to
 update them.
-* *calWS:not-calendar-data*: The resource submitted in the `PUT` request, or targeted by a `COPY` or
+* *`calWS:not-calendar-data`*: The resource submitted in the `PUT` request, or targeted by a `COPY` or
 `MOVE` request, `MUST` be a supported media type (i.e., iCalendar) for calendar object resources;
-* *calWS:invalid-calendar-data*: The resource submitted in the `PUT` request, or targeted by a `COPY`
+* *`calWS:invalid-calendar-data`*: The resource submitted in the `PUT` request, or targeted by a `COPY`
 or `MOVE` request, `MUST` be valid data for the media type being specified (i.e., `MUST` contain valid
 iCalendar data);
-* *calWS:invalid-calendar-object-resource*: The resource submitted in the `PUT` request, or targeted
+* *`calWS:invalid-calendar-object-resource`*: The resource submitted in the `PUT` request, or targeted
 by a `COPY` or `MOVE` request, `MUST` obey all restrictions specified in Calendar Object Resources
 (e.g., calendar object resources `MUST NOT` contain more than one type of calendar component,
 calendar object resources `MUST NOT` specify the iCalendar `METHOD` property, etc.);
-* *calWS:unsupported-calendar-component*: The resource submitted in the `PUT` request, or
+* *`calWS:unsupported-calendar-component`*: The resource submitted in the `PUT` request, or
 targeted by a `COPY` or `MOVE` request, `MUST` contain a type of calendar component that is
 supported in the targeted calendar collection;
-* *calWS:uid-conflict*: The resource submitted in the `PUT` request, or targeted by a `COPY` or `MOVE`
+* *`calWS:uid-conflict`*: The resource submitted in the `PUT` request, or targeted by a `COPY` or `MOVE`
 request, `MUST NOT` specify an iCalendar `UID` property value already in use in the targeted
 calendar collection or overwrite an existing calendar object resource with one that has a different
 UID property value. Servers `SHOULD` report the URL of the resource that is already making use of
@@ -705,28 +705,28 @@ the same UID property value in the `calWS:href` element
 <!ELEMENT uid-conflict (calWS:href)>
 ----
 --
-* *calWS:invalid-calendar-collection-location*: In a `COPY` or `MOVE` request, when the Request-
+* *`calWS:invalid-calendar-collection-location`*: In a `COPY` or `MOVE` request, when the Request-
 URI is a calendar collection, the Destination-URI `MUST` identify a location where a calendar
 collection can be created;
-* *calWS:exceeds-max-resource-size*: The resource submitted in the `PUT` request, or targeted by a
+* *`calWS:exceeds-max-resource-size`*: The resource submitted in the `PUT` request, or targeted by a
 `COPY` or `MOVE` request, `MUST` have an octet size less than or equal to the value of the
-CalDAV:max-resource-size property value on the calendar collection where the resource will be
+`CalDAV:max-resource-size` property value on the calendar collection where the resource will be
 stored;
-* *calWS:before-min-date-time*: The resource submitted in the `PUT` request, or targeted by a `COPY`
+* *`calWS:before-min-date-time`*: The resource submitted in the `PUT` request, or targeted by a `COPY`
 or `MOVE` request, `MUST` have all of its iCalendar `DATE` or `DATE-TIME` property values (for each
-recurring instance) greater than or equal to the value of the CalDAV:min-date-time property value
+recurring instance) greater than or equal to the value of the `CalDAV:min-date-time` property value
 on the calendar collection where the resource will be stored;
-* *calWS:after-max-date-time*: The resource submitted in the `PUT` request, or targeted by a `COPY`
+* *`calWS:after-max-date-time`*: The resource submitted in the `PUT` request, or targeted by a `COPY`
 or `MOVE` request, `MUST` have all of its iCalendar `DATE` or `DATE-TIME` property values (for each
-recurring instance) less than the value of the CalDAV:max-date-time property value on the calendar
+recurring instance) less than the value of the `CalDAV:max-date-time` property value on the calendar
 collection where the resource will be stored;
-* *calWS:too-many-instances*: The resource submitted in the `PUT` request, or targeted by a `COPY`
+* *`calWS:too-many-instances`*: The resource submitted in the `PUT` request, or targeted by a `COPY`
 or `MOVE` request, `MUST` generate a number of recurring instances less than or equal to the value
-of the CalDAV:max-instances property value on the calendar collection where the resource will be
+of the `CalDAV:max-instances` property value on the calendar collection where the resource will be
 stored;
-* *calWS:too-many-attendees-per-instance*: The resource submitted in the `PUT` request, or
+* *`calWS:too-many-attendees-per-instance`*: The resource submitted in the `PUT` request, or
 targeted by a `COPY` or `MOVE` request, `MUST` have a number of `ATTENDEE` properties on any one
-instance less than or equal to the value of the CalDAV:max-attendees-per-instance property value
+instance less than or equal to the value of the `CalDAV:max-attendees-per-instance` property value
 on the calendar collection where the resource will be stored;
 
 === Example - successful `POST`
@@ -833,7 +833,7 @@ HTTP/1.1 404 Not found
 
 == Updating resources
 
-Resources are updated with the `PUT` method targeted at the resource href. The body of the request
+Resources are updated with the `PUT` method targeted at the resource `href`. The body of the request
 contains a complete new resource which effectively replaces the targeted resource. To allow for
 optimistic locking of the resource use the if-match header.
 
@@ -936,13 +936,13 @@ to the client. A query takes the parts
 * Selection of the data
 * Optional timezone id for floating time calculations.
 
-The current specification uses CalDAV multiget and calendar-query XML bodies as specified in
+The current specification uses CalDAV `multiget` and `calendar-query` XML bodies as specified in
 <<rfc4791>> with certain limitations and differences.
 
 . The `POST` method is used for all requests, the action being identified by the outer element.
 . While CalDAV servers generally only support <<rfc5545>> and assume that as the default, the
 delivery format for CalWS will, by default, be <<xcal>>.
-. The CalDAV query allows the specification of a number of DAV properties. Specification of these
+. The CalDAV query allows the specification of a number of `DAV` properties. Specification of these
 properties, with the exception of `DAV:getetag`, is considered an error in CalWS.
 . The `CalDAV:propnames` element is invalid
 
@@ -1184,24 +1184,24 @@ Content-Length: xxxx
 
 == Free-busy queries
 
-Freebusy queries are used to obtain freebusy information for a calendar-collection or principals. The
+Freebusy queries are used to obtain `freebusy` information for a calendar-collection or principals. The
 result contains information only for events to which the current principal has sufficient access.
 
 When targeted at a calendar collection the result is based only on the calendaring entities contained in
-that collection. When targeted at a principal freebusy URL the result will be based on all information
-which affect the principals freebusy status, for example availability.
+that collection. When targeted at a principal `freebusy` URL the result will be based on all information
+which affect the principals `freebusy` status, for example availability.
 
 The possible targets are:
 
 * A calendar collection URL
-* The XRD link with relation CalWS/current-principal-freebusy
-* The XRD link with relation CalWS/principal-freebusy with a principal given in the request.
+* The XRD link with relation `CalWS/current-principal-freebusy`
+* The XRD link with relation `CalWS/principal-freebusy` with a principal given in the request.
 
 The query follows the specification defined in <<fb>> with certain limitations. As an
-authenticated user to the CalWS service scheduling read-freebusy privileges must have been granted. As
+authenticated user to the CalWS service scheduling `read-freebusy` privileges must have been granted. As
 an unauthenticated user equivalent access must have been granted to unauthenticated access.
 
-Freebusy information is returned by default as xcalendar `VFREEBUSY` components, as defined by <<xcal>>.
+Freebusy information is returned by default as `xcalendar` `VFREEBUSY` components, as defined by <<xcal>>.
 Such a component is not meant to conform to the requirements of `VFREEBUSY` components in
 <<rfc5546>>. The `VFREEBUSY` component `SHOULD` conform to section "4.6.4 Free/Busy Component" of
 <<rfc5545>>. A client `SHOULD` ignore the `ORGANIZER` field.

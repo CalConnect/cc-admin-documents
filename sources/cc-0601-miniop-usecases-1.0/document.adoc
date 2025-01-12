@@ -165,7 +165,7 @@ attendee.
 
 === Publish
 
-Make known publicly calendar information such as freebusy times.
+Make known publicly calendar information such as `freebusy` times.
 
 === Recurring
 

@@ -149,7 +149,7 @@ implementors. We plan on `VPOLL` testing at the next Interoperability Test Event
 The interoperability testing sessions were fairly busy and featured both new and established testers. There was a significant
 amount of work testing many of the basic CalDAV functions and beyond that to testing implicit scheduling. Some of us spent
 most of our time working on iSchedule, testing the new `DKIM` canonicalization. This was a successful test with events and
-freebusy being transferred. Most problems related to the non-standard disposition of the services. There was some work in getting
+`freebusy` being transferred. Most problems related to the non-standard disposition of the services. There was some work in getting
 the CalDAV test and performance suites running. In addition there was some timezone service testing with the new JSON format
 and a certain amount of iMIP.
 

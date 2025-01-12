@@ -117,8 +117,8 @@ didn't work on Vendor1 with the way their server serializes them. Vendor 1 will 
 that. It was noted while testing their version that sub collections are not supported by Vendor1
 and Vendor 3. Therefore, they had to do some work on read write capabilities. By the next
 Interop they will do current user privilege sets. This is needed for Access Control. Generally
-speaking, freebusy works. Vendor 2 suggests that next time we should test infinite depth, or
-"rollup", freebusy reports, if anybody other than Vendor 2 supports them.
+speaking, `freebusy` works. Vendor 2 suggests that next time we should test infinite depth, or
+"rollup", `freebusy` reports, if anybody other than Vendor 2 supports them.
 
 == Summary
 

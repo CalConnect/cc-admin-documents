@@ -110,12 +110,12 @@ The TC will be reactivated following the completion of the work in TC
 CALDAV, which will free up some necessary resources; the Consortium's intent is to reactivate at
 the May 2007 Roundtable. The TC anticipates focusing on three major discussion areas:
 addressing, discovery, and authentication/authorization/access control, all of which are needed to
-enable general server-server freebusy lookup and event scheduling.
+enable general server-server `freebusy` lookup and event scheduling.
 
 === TC USECASE
 
 The TC has published the Calendaring and Scheduling Glossary of Terms and has
-begun work on a paper defining usecases for the minimum interoperable subset for tasks (vtodos).
+begun work on a paper defining usecases for the minimum interoperable subset for tasks (``VTODO``s).
 The TC has also undertaken a study of recurrence features in mobile device support for TC
 MOBILE, and is considering a work item on usecases for resource management.
 
@@ -142,7 +142,7 @@ Polytechnic Institute). Results from the event will be posted at Past IOP Report
 === BOFS
 
 For the first time, the Roundtable was able to provide time for BOFS, and three were held,
-on localization, the freebusy url, and DST conversions. The Consortium plans to continue to
+on localization, the `freebusy` URL, and DST conversions. The Consortium plans to continue to
 provide schedule time for BOFS in the future, together with informal networking amongst those
 not interested in the BOFS.
 

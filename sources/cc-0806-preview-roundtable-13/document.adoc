@@ -172,8 +172,8 @@ Asia after)
 * Today we will demonstrate:
 ** CalDAV Scheduling
 ** iSchedule
-** Internet freebusy lookups using
-freebusy URLs
+** Internet `freebusy` lookups using
+`freebusy` URLs
 * Each presentation will consist of:
 ** Introductory slides
 ** Live demonstration
@@ -220,7 +220,7 @@ users inspect and accept or decline.
 Each user has an "Outbox" and an
 "Inbox".
 The "Outbox" is used to trigger
-freebusy lookup.
+`freebusy` lookup.
 The "Inbox" is where invites or replies
 are delivered.
 Changes to events trigger scheduling.
@@ -229,10 +229,10 @@ incoming scheduling messages.
 
 .Sequence of diagrams showing free-busy lookup.
 ====
-.Organizer sends freebusy request to the server. Server calculates and returns freebusy data for attendees.
+.Organizer sends `freebusy` request to the server. Server calculates and returns `freebusy` data for attendees.
 image::img06.png[]
 
-.Organizer sees freebusy for everyone. Adjusts for free time for everyone.
+.Organizer sees `freebusy` for everyone. Adjusts for free time for everyone.
 image::img07.png[]
 ====
 
@@ -262,7 +262,7 @@ image::img11.png[]
 * Provides the ability for users on
 different calendaring systems to
 schedule meetings with each other
-* Instantaneous freebusy lookups
+* Instantaneous `freebusy` lookups
 * Invites, replies sent as "messages"
 with delivery status immediately
 returned
@@ -289,12 +289,12 @@ image::img12.png[]
 .Organizer and Attendees on different systems
 image::img13.png[]
 
-.Sequence of diagrams showing freebusy.
+.Sequence of diagrams showing `freebusy`.
 ====
-.Freebusy response comes back immediately
+.`Freebusy` response comes back immediately
 image::img14.png[]
 
-.Organizer sees freebusy for everyone. Adjusts for free time for everyone.
+.Organizer sees `freebusy` for everyone. Adjusts for free time for everyone.
 image::img15.png[]
 ====
 
@@ -338,7 +338,7 @@ people
 
 * Most commonly as a RFC 2445
 `VFREEBUSY` object
-** a request for freebusy time,
+** a request for `freebusy` time,
 ** a response to a request, or
 ** a published set of busy time
 
@@ -396,7 +396,7 @@ http://www.example.com/freebusy/user1@example.com
 --
 * returns `VFREEBUSY` object
 * The "Publish URL" is used by a client to
-upload freebusy data for a user
+upload `freebusy` data for a user
 +
 --
 http://www.example.com/freebusy/user1@example.com
@@ -415,7 +415,7 @@ lookups
 
 === Freebusy URL Demonstration
 
-==== Several clients retrieving freebusy information
+==== Several clients retrieving `freebusy` information
 
 .Freebusy Demo #1 Setup
 image::img20.png[]

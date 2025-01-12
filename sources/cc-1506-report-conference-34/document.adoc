@@ -117,7 +117,7 @@ Ken has uploaded his server capabilities spreadsheet for our GitHub repository a
 for accumulating this info from our
 members/vendors. During the next months the server-info document will be finalized. The TC will
 work on the server/client features matrix
-and integration with DEVGUIDE. The icalendar-patch draft will be reviewed.
+and integration with DEVGUIDE. The iCalendar-patch draft will be reviewed.
 
 === TC DEVGUIDE
 

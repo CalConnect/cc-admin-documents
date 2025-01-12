@@ -644,7 +644,7 @@ between three CalDAV server.
 
 Some of the problems we ran into were mostly in the form of data returned.
 
-One plugin is unable to process some forms of valid freebusy.
+One plugin is unable to process some forms of valid `freebusy`.
 
 There was very little time for testing against any other clients.
 

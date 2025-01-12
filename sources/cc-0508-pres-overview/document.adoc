@@ -20,6 +20,10 @@ and Disclaimer of Warranty for External (Public) Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+Permission is granted to existing and potential members of the Consortium to reproduce and distribute this
+presentation within their organizations so long as the presentation is not altered in any way and the Consortium
+is acknowledged as the originator.
+
 == What is CalConnect?
 
 . A Partnership

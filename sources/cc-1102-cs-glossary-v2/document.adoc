@@ -53,7 +53,7 @@ resource administrator) to control access to different entities in a calendar sy
 vendors create Preference/Settings options to instantiate access control. Terminology
 varies considerably across products but broadly speaking access control is usually
 broken into two areas, read access and write access. Vendor terminology used for read
-access includes: 'read', 'reviewer', 'proxy read', 'viewer', 'see all', and 'see only freebusy'.
+access includes: 'read', 'reviewer', 'proxy read', 'viewer', 'see all', and 'see only `freebusy`'.
 Vendor terminology for write access includes: 'write', 'editor', 'proxy write', 'proxy',
 'manager', 'administrator', 'designate', 'read/create/edit', 'make changes', 'manage', and
 'edit'. (Cp. {{Delegate}} and {{Designate}}.)
@@ -211,7 +211,7 @@ scheduling methodologies, tools and applications to enter the mainstream of comp
 
 CalWS-REST is a CalConnect Proposal and CalWS-SOAP will be a parallel
 CalConnect Proposal which define an API of basic operations which allow creation,
-retrieval, update and deletion of calendar objects. In addition, query and freebusy operations
+retrieval, update and deletion of calendar objects. In addition, query and `freebusy` operations
 are defined to allow efficient, partial retrieval of calendar data.
 
 === Capacity
@@ -452,7 +452,7 @@ this glossary are references to component, property, and attribute following thi
 
 === Publish
 
-Generally, to make calendar information, such as freebusy time, available to a
+Generally, to make calendar information, such as `freebusy` time, available to a
 select group or to the public. From the RFC for {{iTIP}}, "The '`PUBLISH`' method in a
 '`VEVENT`' calendar component is an unsolicited posting of an iCalendar object."
 

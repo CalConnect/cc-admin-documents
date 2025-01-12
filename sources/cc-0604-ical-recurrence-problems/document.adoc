@@ -189,14 +189,14 @@ The instance needs to be dropped as specified in <<rfc2445,page=44>>.
 === How do we create a rule that excludes weekends and holidays?
 
 ==== {blank}
-Use `BYDAY` without specifying Saturday and Sunday and use `EXDATEs` to remove holidays.
+Use `BYDAY` without specifying Saturday and Sunday and use ``EXDATE``s to remove holidays.
 
 === Implementations without `RRULE` support
 
 ==== {blank}
 A new iTIP response could be created indicating to a sender that the
-recipient does not support `RRULEs`, the sender could then decide to
-"explode" the calendar object into `RDATEs` and send that `RRULE`-less
+recipient does not support ``RRULE``s, the sender could then decide to
+"explode" the calendar object into ``RDATE``s and send that `RRULE`-less
 calendar object. A link to `RRULE` processing reference table and `FREQ`
 example streams can be found at the end of this document.
 
@@ -222,7 +222,7 @@ use cases they were made for:
 
 ===== {blank}
 `EXRULE` -- This recurrence property is cumbersome to use and the
-equivalent can be generated with a list of `EXDATEs`. This property
+equivalent can be generated with a list of ``EXDATE``s. This property
 could be removed for better interoperability.
 
 ===== {blank}
@@ -239,18 +239,18 @@ might have pushed the time into the next hour or day.
 ===== {blank}
 `BYSETPOS` - This `RRULE` property is useful in that it has the
 "payday" use case, ie. last workday of the month, but can be
-complicated to implement. The sender could use `RDATEs` as well but
+complicated to implement. The sender could use ``RDATE``s as well but
 could be a lengthy list if this goes on yearly, etc. It is better to send a
-list of `RDATEs` with exceptions already taken into account, and
+list of ``RDATE``s with exceptions already taken into account, and
 refresh this at appropriate intervals to extend the set. If that is
 recommended in the RFC, then this property could be removed.
 Recommend going to the `CALSIFY` list to see if this is deemed a
 workable solution.
 
 ===== {blank}
-Multiple `EXRULEs` and `RRULEs` -- These properties combined are
+Multiple ``EXRULE``s and ``RRULE``s -- These properties combined are
 complicated to implement, are not supported by many implementers,
-so support for multiple `EXRULEs` and `RRULEs` should be removed
+so support for multiple ``EXRULE``s and ``RRULE``s should be removed
 from the iCalendar RFC and related memos.
 
 == Best Practices
@@ -362,7 +362,7 @@ product, and would be deemed require functionality to the end user. Additional
 modifications that could be discussed for the new drafts are:
 
 . Are multiple ``RRULE``s and ``EXRULE``s really useful, could we do without them?
-. Are `EXRULEs` really useful, could we do without them?
+. Are ``EXRULE``s really useful, could we do without them?
 . Removal of `THISANDPRIOR`, since `THISANDPRIOR` always refers to a finite
 number of occurrences it could be done with exceptions.
 

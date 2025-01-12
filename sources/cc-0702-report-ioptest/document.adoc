@@ -53,8 +53,8 @@ The chart below shows the attendees, their organization and the products they we
 | Cyrus Daboo | Apple | Apple server and client
 | Wilfredo Sanchez | Apple | Apple server
 | Simon Vaillancourt | Oracle | Oracle CALDAV
-| Tomas Hnetila | Kerio | CALDAV server, icalendar
-| Stepan Potys | Kerio | CALDAV server, icalendar
+| Tomas Hnetila | Kerio | CALDAV server, iCalendar
+| Stepan Potys | Kerio | CALDAV server, iCalendar
 | Tony Becker | Marware | Project X CALDAV client, iCalendar
 | Dave Nutall | Novell | Groupwise
 | Rand Babcock | Novell | Groupwise, CALDAV server
@@ -252,63 +252,63 @@ products tested and their results are shown in the following chart:
 |===
 | CALDAVTester Test Script | Vendor1 | Vendor2 | Vendor3 | Vendor4
 
-| acl | Not supported by server | Does not support prevent ACLs. | `VTODO PUT` fails; | Not supported by server.
+| `acl` | Not supported by server | Does not support prevent ACLs. | `VTODO PUT` fails; | Not supported by server.
 
-| acldisabled | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
+| `acldisabled` | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| aclreports | Not supported by server | Not supported by server. | Gave back 400 response in some cases where a 403 or multi-status should have been returned; supported-report-set does not list all ACL reports; | Not supported by server.
+| `aclreports` | Not supported by server | Not supported by server. | Gave back 400 response in some cases where a 403 or multi-status should have been returned; supported-report-set does not list all ACL reports; | Not supported by server.
 
-| attachments | Failed all - server reports error with last line of `ATTACHMENT` property | Passed all. | `ATTACHMENT` property not returned after being `PUT` |
+| `attachments` | Failed all - server reports error with last line of `ATTACHMENT` property | Passed all. | `ATTACHMENT` property not returned after being `PUT` |
 
-| availability | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
+| `availability` | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| CALDAVIOP | Pased all | Passed all. | | Passed all.
+| `CALDAVIOP` | Pased all | Passed all. | | Passed all.
 
-| calendaruserproxy | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
+| `calendaruserproxy` | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| copymove | `COPY`/`MOVE` not supported by server | Failed: allowed copy of event back to same calendar; return 409 instead of 412 for Overwrite:F | `MKCALENDAR` fails during start up | 500 errors for nearly all.
+| `copymove` | `COPY`/`MOVE` not supported by server | Failed: allowed copy of event back to same calendar; return 409 instead of 412 for Overwrite:F | `MKCALENDAR` fails during start up | 500 errors for nearly all.
 
-| delete | Passed all. | Passed all. | `VTODO PUT` failed, `VEVENT` OK. | Failed during startup: Cannot put `VTODO`.
+| `delete` | Passed all. | Passed all. | `VTODO PUT` failed, `VEVENT` OK. | Failed during startup: Cannot put `VTODO`.
 
-| depthreports | | Whole bunch of multiget problems; no results coming back for calendar-query; fb property value periods not in iCalendar format -0500 offset in period values | Failed during startup: could not create calendar within new regular collection. | Failed during startup: cannot put `VFREEBUSY` (looks like same error as `VTODO`).
+| `depthreports` | | Whole bunch of multiget problems; no results coming back for `calendar-query`; `fb` property value periods not in iCalendar format -0500 offset in period values | Failed during startup: could not create calendar within new regular collection. | Failed during startup: cannot put `VFREEBUSY` (looks like same error as `VTODO`).
 
-| depthreportsacl | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
+| `depthreportsacl` | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| dropbox | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
+| `dropbox` | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| encodedURIs | `MKCALENDAR` with calendar%202 fails with 400 | Location header was present in a `PUT` response. | Creates a calendar instead of a collection. | ``COPY``s fail.
+| `encodedURIs` | `MKCALENDAR` with calendar%202 fails with 400 | Location header was present in a `PUT` response. | Creates a calendar instead of a collection. | ``COPY``s fail.
 
-| errors | | Won't allow resource in calendar home. | Failed during startup: initial `PUT` fails. | No ``DAV:error``'s returned.
+| `errors` | | Won't allow resource in calendar home. | Failed during startup: initial `PUT` fails. | No ``DAV:error``'s returned.
 
-| floating | `MKCALENDAR` failed in startup | All fail. | Failed during startup: cannot create subcalendar. | Failure that causes calendar to no longer open or be deleted.
+| `floating` | `MKCALENDAR` failed in startup | All fail. | Failed during startup: cannot create subcalendar. | Failure that causes calendar to no longer open or be deleted.
 
-| get | Duplicate `DTSTAMP` in `VEVENT` response; could not write resource in calendar home | Failed but that was due to normal server restrictions. | 500 for store of .ics in calendar home; does directory listing rather than returning whole calendar | Failures - but OK due to some event rewriting and directory listing.
+| `get` | Duplicate `DTSTAMP` in `VEVENT` response; could not write resource in calendar home | Failed but that was due to normal server restrictions. | 500 for store of .ics in calendar home; does directory listing rather than returning whole calendar | Failures - but OK due to some event rewriting and directory listing.
 
-| mkcalendar | `MKCALENDAR` without body fails; with body does not generate proper `DAV:error` response | Bad request properties were returned as 403 response, but should have been 403 propstatus codes in a 207. | 400 when no body; no `DAV:error` for precondition failures | No ``DAV:error``'s returned.
+| `mkcalendar` | `MKCALENDAR` without body fails; with body does not generate proper `DAV:error` response | Bad request properties were returned as 403 response, but should have been 403 propstatus codes in a 207. | 400 when no body; no `DAV:error` for precondition failures | No ``DAV:error``'s returned.
 
-| notifications | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
+| `notifications` | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| propfind | `DAV:getcontentlength` not returned on a calendar collection; did not reject invalid XML; unknown XML element generated a 500 | Passed all. | Accepted invalid XML. | Invalid XML accepted.
+| `propfind` | `DAV:getcontentlength` not returned on a calendar collection; did not reject invalid XML; unknown XML element generated a 500 | Passed all. | Accepted invalid XML. | Invalid XML accepted.
 
-| proppatch | Does not recognise non-standard DAV elements. | Unknown `DAV:` properties were ignored. | Got a `<#test>` XML element in output, plus other failures. | 500 errors; `xml:lang` on property is lost.
+| `proppatch` | Does not recognise non-standard DAV elements. | Unknown `DAV:` properties were ignored. | Got a `<#test>` XML element in output, plus other failures. | 500 errors; `xml:lang` on property is lost.
 
-| proxyauthz | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
+| `proxyauthz` | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| put | VTODO's failed - duplicate `DTSTAMP` | Some failures - probably due to server re-writing data content. | ``VTODO``s fail; unbounded daily events hang the server | 500 errors for ``VTODO``s.
+| `put` | ``VTODO``'s failed - duplicate `DTSTAMP` | Some failures - probably due to server re-writing data content. | ``VTODO``s fail; unbounded daily events hang the server | 500 errors for ``VTODO``s.
 
-| quota | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
+| `quota` | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| recurrenceput | java.lang.NullPointerException on some recurring vtodos; vevents were OK | Passed all. | ``VTODO``s all fail; ``VEVENT``s OK. | ``VTODO``s all fail; ``VEVENT``s OK.
+| `recurrenceput` | `java.lang.NullPointerException` on some recurring ``VTODO``s; ``VEVENT``s were OK | Passed all. | ``VTODO``s all fail; ``VEVENT``s OK. | ``VTODO``s all fail; ``VEVENT``s OK.
 
-| reports | Failed during startup whilst trying to put an alarm | Various failures as per depthreports. | | Failed during startup: cannot put `VFREEBUSY` (looks like same error as `VTODO`).
+| `reports` | Failed during startup whilst trying to put an alarm | Various failures as per `depthreports`. | | Failed during startup: cannot put `VFREEBUSY` (looks like same error as `VTODO`).
 
-| schedulepost | | Not supported by server. | Not supported by server. | Not supported by server.
+| `schedulepost` | | Not supported by server. | Not supported by server. | Not supported by server.
 
-| schedulepostacl | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
+| `schedulepostacl` | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| schedulepostauto | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
+| `schedulepostauto` | Not supported by server | Not supported by server. | Not supported by server. | Not supported by server.
 
-| schedulepostnormal | | Not supported by server. | Not supported by server. | Not supported by server.
+| `schedulepostnormal` | | Not supported by server. | Not supported by server. | Not supported by server.
 
-| scheduleprops | Passed - but actually wrong: returned hrefs had "null" for user name | Not supported by server. | Not supported by server. | Not supported by server.
+| `scheduleprops` | Passed - but actually wrong: returned ``href``s had "null" for user name | Not supported by server. | Not supported by server. | Not supported by server.
 |===

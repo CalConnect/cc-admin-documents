@@ -52,7 +52,7 @@ On the testing front there was:
 
 * Work on the server-info document
 * CalDav Tester
-* Ralph Beckers caldav tester scripts
+* Ralph Beckers CalDAV tester scripts
 * General CalDAV
 
 The server-info document is a new specification being developed to provide cacheable

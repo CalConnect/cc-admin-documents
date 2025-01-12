@@ -88,13 +88,13 @@ application and server work is needed to accommodate those differences.
 
 One vendor tested the ability to federate free/busy information from a server and it was successful after
 the vendor added an additional configuration item to allow free/busy information to be accessed without
-authentication. In a normal installation of the vendor's application, the freebusy URL is authenticated and
-access to a user's freebusy information requires the CalDAV:read-free-busy privilege.
+authentication. In a normal installation of the vendor's application, the `freebusy` URL is authenticated and
+access to a user's `freebusy` information requires the `CalDAV:read-free-busy` privilege.
 
 iMIP compatibility testing by one vendor noted `REPLY` is not send to Reply-To: address but to From:
 address so server doesn't recognize it. Client doesn't see the invitation on server
 
-The CalDAV schedule-inbox-URL and schedule-outbox-URL are being returned incorrectly to one client.
+The CalDAV `schedule-inbox-URL` and `schedule-outbox-URL` are being returned incorrectly to one client.
 They appear like this:
 
 * `<c:schedule-inbox-URL>/fullcalendars/iop.test.dummy.com/user7/INBOX</c:schedule-inbox-URL>`

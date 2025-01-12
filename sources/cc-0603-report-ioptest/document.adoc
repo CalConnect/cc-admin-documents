@@ -206,7 +206,7 @@ the Calsify efforts to handle them. Xprops are what need to be enhanced/fixed/re
 
 For the next interop, items to add to interop testing include:
 
-* how many people use the language property on icalendar objects
+* how many people use the language property on iCalendar objects
 * how many can support daily savings time changes that will happen in 2007
 * Free busy testing within CALDAV
 * Tasks testing

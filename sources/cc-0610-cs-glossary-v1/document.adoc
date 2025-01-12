@@ -200,7 +200,7 @@ A description of some element of a component, such as a start time, title or loc
 can have parameters associated with them to modify or add to their meaning.
 
 === Publish
-To make calendar information, such as freebusy time, available to a select group or
+To make calendar information, such as `freebusy` time, available to a select group or
 to the public.
 
 === Recurring
