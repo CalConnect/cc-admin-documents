@@ -199,7 +199,7 @@ Open-Xchange work on IMAP WebPush.
 
 === TC-USECASE
 
-Define 'client' early in charter. Deal with interoperability issues - more work on caldav
+Define 'client' early in charter. Deal with interoperability issues - more work on CalDAV
 tester. Links to client libraries..
 
 There was some discussion on incentives (reduced participant fee) for Open Source

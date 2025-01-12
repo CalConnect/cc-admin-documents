@@ -29,6 +29,11 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 All documents included in the zip file for Meet CalConnect 2008 are considered part of CD 0812 and the public disclaimer included by reference above applies to all contents of the file.
 ====
 
+Presentation locations:
+
+* November 7:: Prague, Czech Republic
+* November 10:: London, United Kingdom
+
 == Who am I?
 
 * Mattias Amnefelt
@@ -56,7 +61,7 @@ image::img07.png[]
 
 * Built on core internet technologies
 ** HTTP, SSL, iTIP
-* Instantaneous freebusy lookups across systems
+* Instantaneous `freebusy` lookups across systems
 * Invites, replies sent as "messages" with delivery status immediately returned
 * Can be used with any type of calendar store (does not depend on CalDAV)
 

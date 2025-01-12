@@ -201,7 +201,7 @@ TC going forward is to assemble use cases and develop alternative poll modes.
 The TC conducted a busy interoperability test event, with many basic CalDAV access issues
 uncovered, and some fixed. Three servers tested and eventually demonstrated a combination of
 `VPOLL` and `iSCHEDULE` (see the TC FREEBUSY entry above). The complete `VPOLL` and
-subsequent meeting request sequence worked; there are still some issues with freebusy lookup.
+subsequent meeting request sequence worked; there are still some issues with `freebusy` lookup.
 Also conducted some testing go CalDAV scheduling and CardDAV sharing. The event report may
 be found at
 https://www.calconnect.org/events/event-reports#ioptestevents[CalConnect Interoperability Test Event Reports].

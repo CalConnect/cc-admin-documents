@@ -92,7 +92,7 @@ CalDAV-sched was also working well after some bugs were fixed at the interop. Th
 thoroughly with another vendor offering but was able to send invitations successfully with two other
 servers as well; they did not test those for `REPLY` creation or handling.
 
-CalDAV-sched (including freebusy) is not yet working with one of the vendors present. The tester felt the
+CalDAV-sched (including `freebusy`) is not yet working with one of the vendors present. The tester felt the
 chance to meet and interact with the other developers as well as their code was invaluable and has
 continued to be a benefit since the event. The only ways they can think of to improve it would be to
 increase some parameters: length of event, number of participants, and frequency of occurrence.

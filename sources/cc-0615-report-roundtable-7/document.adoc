@@ -97,7 +97,7 @@ Roundtable.
 
 *TC-USECASE* has completed the Calendaring Glossary document which will be published
 shortly after the Roundtable, has begun work on the minimum interoperable subset for tasks
-(vtodos), and will undertake a study of recurrence features in mobile device support for TC
+(``VTODO``s), and will undertake a study of recurrence features in mobile device support for TC
 MOBILE.
 
 *vCard Ad Hoc Group*: One of the OMA/DS delegates presented a paper on vCard and on contact

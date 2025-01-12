@@ -77,20 +77,20 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 | 4.3.12 Time | `MUST NOT` | The `TZID` property parameter `MUST NOT` be applied to `TIME` properties whose time values are specified in UTC | Y | Y
 | 4.3.14 UTC Offset | `MUST` | The `PLUS SIGN` character `MUST` be specified for positive UTC offsets (i.e., ahead of UTC). | Y | Y
 | 4.4 iCalendar Object | `MUST` | The first line and last line of the iCalendar object `MUST` contain a pair of iCalendar object delimiter strings | Y | Y
-| 4.6 Calendar Components | `MUST` | An iCalendar object `MUST` include the "PRODID" and "VERSION" calendar properties. | Y | Y
-| 4.6 Calendar Components | `MUST NOT` | 'calscale' and 'method' are optional, but `MUST NOT` occur more than once | Y | Y
+| 4.6 Calendar Components | `MUST` | An iCalendar object `MUST` include the "`PRODID`" and "`VERSION`" calendar properties. | Y | Y
+| 4.6 Calendar Components | `MUST NOT` | '`calscale`' and '`method`' are optional, but `MUST NOT` occur more than once | Y | Y
 | 4.6 Calendar Components | `MUST` | An iCalendar object `MUST` include at least one calendar component. | Y | Y?
-| 4.6.1 Event Component | `MUST NOT` | the following are optional, but `MUST NOT` occur more than once class / created / description / dtstart / geo / last-mod / location / organizer / priority / dtstamp / seq / status / summary / transp / uid / url / recurid | Y | Y
-| 4.6.1 Event Component | `MUST NOT` | either 'dtend' or 'duration' may appear in a 'eventprop', but 'dtend' and 'duration' `MUST NOT` occur in the same 'eventprop | Y | Y
-| 4.6.1 Event Component | `MAY` | the following are optional, and `MAY` occur more than once: attach / attendee / categories / comment / contact / exdate / exrule / rstatus / related / resources / rdate / rrule / x-pro | Y | Y
-| 4.6.2 To-do Component | `MUST NOT` | the following are optional, but `MUST NOT` occur more than once: class / completed / created / description / dtstamp / dtstart / geo / last-mod / location / organizer / percent / priority / recurid / seq / status / summary / uid / ur | Y | Y
+| 4.6.1 Event Component | `MUST NOT` | the following are optional, but `MUST NOT` occur more than once: `class` / `created` / `description` / `dtstart` / `geo` / `last-mod` / `location` / `organizer` / `priority` / `dtstamp` / `seq` / `status` / `summary` / `transp` / `uid` / `url` / `recurid` | Y | Y
+| 4.6.1 Event Component | `MUST NOT` | either '`dtend`' or '`duration`' may appear in a '`eventprop`', but '`dtend`' and '`duration`' `MUST NOT` occur in the same '`eventprop`' | Y | Y
+| 4.6.1 Event Component | `MAY` | the following are optional, and `MAY` occur more than once: `attach` / `attendee` / `categories` / `comment` / `contact` / `exdate` / `exrule` / `rstatus` / `related` / `resources` / `rdate` / `rrule` / `x-pro` | Y | Y
+| 4.6.2 To-do Component | `MUST NOT` | the following are optional, but `MUST NOT` occur more than once: `class` / `completed` / `created` / `description` / `dtstamp` / `dtstart` / `geo` / `last-mod` / `location` / `organizer` / `percent` / `priority` / `recurid` / `seq` / `status` / `summary` / `uid` / `ur` | Y | Y
 | 4.6.2 To-do Component | `MUST NOT` | either 'due' or 'duration' may appear in a 'todoprop', but 'due' and 'duration' `MUST NOT` occur in the same 'todoprop' | Y | Y
-| 4.6.2 To-do Component | `MAY` | the following are optional, and `MAY` occur more than once: attach / attendee / categories / comment / contact / exdate / exrule / rstatus / related / resources / rdate / rrule / x-pro | Y | Y
-| 4.6.3 Journal Component | `MUST NOT` | the following are optional, but `MUST NOT` occur more than once: class / created / description / dtstart / dtstamp / last-mod / organizer / recurid / seq / status / summary / uid / url | N | N
-| 4.6.3 Journal Component | `MAY` | the following are optional, and `MAY` occur more than once: attach / attendee / categories / comment / contact / exdate / exrule / related / rdate / rrule / rstatus / x-pro | N | N
-| 4.6.3 Journal Component | `MUST NOT` | The "VJOURNAL" calendar component cannot be nested within another calendar component | N | N
-| 4.6.4 Free/Busy Component | `MUST NOT` | the following are optional, but `MUST NOT` occur more than once: contact / dtstart / dtend / duration / dtstamp / organizer / uid / url / | N | Y
-| 4.6.4 Free/Busy Component | `MAY` | the following are optional, and `MAY` occur more than once: attendee / comment / freebusy / rstatus / x-prop | N | Y
+| 4.6.2 To-do Component | `MAY` | the following are optional, and `MAY` occur more than once: `attach` / `attendee` / `categories` / `comment` / `contact` / `exdate` / `exrule` / `rstatus` / `related` / `resources` / `rdate` / `rrule` / `x-pro` | Y | Y
+| 4.6.3 Journal Component | `MUST NOT` | the following are optional, but `MUST NOT` occur more than once: `class` / `created` / `description` / `dtstart` / `dtstamp` / `last-mod` / `organizer` / `recurid` / `seq` / `status` / `summary` / `uid` / `url` | N | N
+| 4.6.3 Journal Component | `MAY` | the following are optional, and `MAY` occur more than once: `attach` / `attendee` / `categories` / `comment` / `contact` / `exdate` / `exrule` / `related` / `rdate` / `rrule` / `rstatus` / `x-pro` | N | N
+| 4.6.3 Journal Component | `MUST NOT` | The "`VJOURNAL`" calendar component cannot be nested within another calendar component | N | N
+| 4.6.4 Free/Busy Component | `MUST NOT` | the following are optional, but `MUST NOT` occur more than once: `contact` / `dtstart` / `dtend` / `duration` / `dtstamp` / `organizer` / `uid` / `url` | N | Y
+| 4.6.4 Free/Busy Component | `MAY` | the following are optional, and `MAY` occur more than once: `attendee` / `comment` / `freebusy` / `rstatus` / `x-prop` | N | Y
 | 4.6.4 Free/Busy Component | `MUST NOT` | The recurrence properties ("`RRULE`", "`EXRULE`", "`RDATE`", "`EXDATE`") are not permitted within a "`VFREEBUSY`" calendar component. Any recurring events are resolved into their individual busy time periods using the "`FREEBUSY`" property | N | Y
 | 4.6.5 Time Zone Component | `MUST NOT` | 'tzid' is required, but `MUST NOT` occur more than once | Y | Y
 | 4.6.5 Time Zone Component | `MUST NOT` | 'last-mod' and 'tzurl' are optional, but `MUST NOT` occur more than once | Y | Y
@@ -110,14 +110,14 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 | 4.6.6 Alarm Component | `MUST NOT` | 'duration' and 'repeat' are both optional, and `MUST NOT` occur more than once each, but if one occurs, so `MUST` the other | N | N
 | 4.6.6 Alarm Component | `MUST` NOT|  the following is optional, but `MUST NOT` occur more than once: attach | N | N
 | 4.6.6 Alarm Component | `MAY` | the following is optional, and `MAY` occur more than once: x-prop | N | N
-| 4.6.6 Alarm Component | `REQUIRED` | the following are all `REQUIRED`, but `MUST NOT` occur more than once: action / description / trigger / | N | N
+| 4.6.6 Alarm Component | `REQUIRED` | the following are all `REQUIRED`, but `MUST NOT` occur more than once: `action` / `description` / `trigger` | N | N
 | 4.6.6 Alarm Component | `MUST NOT` | 'duration' and 'repeat' are both optional, and `MUST NOT` occur more than once each, but if one occurs, so `MUST` the other | N | N
 | 4.6.6 Alarm Component | `MAY` | the following is optional, and `MAY` occur more than once: x-prop | N | N
-| 4.6.6 Alarm Component | `REQUIRED` | the following are all `REQUIRED`, but `MUST NOT` occur more than once: action / description / trigger / summary  | N | N
+| 4.6.6 Alarm Component | `REQUIRED` | the following are all `REQUIRED`, but `MUST NOT` occur more than once: `action` / `description` / `trigger` / `summary` | N | N
 | 4.6.6 Alarm Component | `REQUIRED` | the following is `REQUIRED`, and `MAY` occur more than once: attendee | N | N
 | 4.6.6 Alarm Component | `MUST NOT` | 'duration' and 'repeat' are both optional, and `MUST NOT` occur more than once each, but if one occurs, so `MUST` the other | N | N
-| 4.6.6 Alarm Component | `MAY` | the following are optional, and `MAY` occur more than once: attach / x-prop | N | N
-| 4.6.6 Alarm Component | `REQUIRED` | the following are all `REQUIRED`, but `MUST NOT` occur more than once: action / attach / trigger / | N | N
+| 4.6.6 Alarm Component | `MAY` | the following are optional, and `MAY` occur more than once: `attach` / `x-prop` | N | N
+| 4.6.6 Alarm Component | `REQUIRED` | the following are all `REQUIRED`, but `MUST NOT` occur more than once: `action` / `attach` / `trigger` | N | N
 | 4.6.6 Alarm Component | `MUST NOT` | 'duration' and 'repeat' are both optional, and `MUST NOT` occur more than once each, but if one occurs, so `MUST` the other | N | N
 | 4.6.6 Alarm Component | `MUST NOT` | 'description' is optional, and `MUST NOT` occur more than once | N | N
 | 4.6.6 Alarm Component | `MAY` | the following is optional, and `MAY` occur more than once: x-prop | N | N

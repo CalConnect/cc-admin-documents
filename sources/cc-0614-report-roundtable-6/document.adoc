@@ -92,7 +92,7 @@ communication.
 
 *TC-USECASE* has completed work on the Calendaring Glossary document, which will go to Last
 Call in the Consortium shortly, and has begun work on the minimum interoperable subset for tasks
-(vtodos).
+(``VTODO``s).
 
 *CalATOM Ad Hoc Group*: A discussion mailing list on CalATOM and associated issues such as
 RSS was formed at this Roundtable. The discussion list is open to interested individuals whether

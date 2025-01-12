@@ -223,7 +223,7 @@ have parameters associated with them to modify or add to their meaning.
 
 === Publish
 
-Make known publicly calendar information such as freebusy times.
+Make known publicly calendar information such as `freebusy` times.
 
 === Reminders
 

@@ -35,6 +35,8 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+Chair(s):: Pat Egen
+
 == Introduction
 
 This document contains notes and results from the September 2006 calendar interoperability event held

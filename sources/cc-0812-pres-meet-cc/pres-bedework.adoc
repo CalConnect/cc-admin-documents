@@ -23,6 +23,8 @@ and Disclaimer of Warranty for External (Public) Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+Presentation location:: Prague, Czech Republic
+
 [IMPORTANT]
 ====
 All documents included in the zip file for Meet CalConnect 2008 are considered part of CD 0812 and the public disclaimer included by reference above applies to all contents of the file.

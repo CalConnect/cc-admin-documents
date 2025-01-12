@@ -143,7 +143,7 @@ Event on Tuesday, 3 pm - 5 pm +
 Event on Wednesday, 11 am - 12 pm, status tentative +
 Event on Wednesday, 3 pm - 5 pm, status tentative +
 Event on Thursday, 11 am - 12 pm, status cancelled +
-Event on Thursday, 3 pm - 5 pm, status cancelled | Freebusy only through freebusy URLs at the moment
+Event on Thursday, 3 pm - 5 pm, status cancelled | Freebusy only through `freebusy` URLs at the moment
 |===
 
 [%key]

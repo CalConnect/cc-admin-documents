@@ -172,8 +172,8 @@ calendar components `MUST` be included. For detail on the usage of the "`VTIMEZO
 component, see the "`VTIMEZONE`" calendar component definition. About local time - the date with
 local time form is simply a date-time value that does not contain the UTC designator nor does it
 reference a time zone.
-* CalDAV: If-None-Match and if-match precondition bugs. This is a bug on a caldav server where
-`if-none-match=*` was not handled properly and a bug on a caldav client where `if-none-mach=*` was set
+* CalDAV: If-None-Match and if-match precondition bugs. This is a bug on a CalDAV server where
+`if-none-match=*` was not handled properly and a bug on a CalDAV client where `if-none-mach=*` was set
 when modifying an event.
 * CalDAV: Interop problems with one vendor's WebDAV interface making it unable to create events
 on "strict" CalDAV servers. Their WebDAV interface does a lot of things when creating a file, the

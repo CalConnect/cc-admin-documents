@@ -150,7 +150,7 @@ Dormant pending draft progression at IETF
 
 === TC SHARING
 
-* Determine what to do about scheduling/sharing interaction for caldav sharing
+* Determine what to do about scheduling/sharing interaction for CalDAV sharing
 * Write a doc explaining differences between new sharing and Apple sharing and how to
 be compatible with both
 * Look again at contacts sharing

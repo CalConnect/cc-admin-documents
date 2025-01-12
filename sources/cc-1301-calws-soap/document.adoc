@@ -240,7 +240,7 @@ collections (folders) known as "*Calendar Collections*".
 
 This specification can be looked upon as a layer built on top of CalDAV and defines
 the basic operations
-which allow creation, retrieval, update and deletion. In addition, query and freebusy
+which allow creation, retrieval, update and deletion. In addition, query and `freebusy`
 operations are defined
 to allow efficient, partial retrieval of calendar data.
 
@@ -2099,14 +2099,14 @@ event and one a simple non-recurring event.
 
 ==== Free-busy queries
 
-Freebusy queries are used to obtain freebusy information for a principal. The result contains information
+Freebusy queries are used to obtain `freebusy` information for a principal. The result contains information
 only for events to which the current principal has sufficient access and may be affected by components
 and rules available only to the server (for instance office hours availability).
 
 These queries are carried out by using a CalWS-SOAP `freebusyReport` request with an `href` specifying a
 principal. The `freebusyReport` request is not valid when the `href` specifies any entity other than a principal.
 The query follows the specification defined in <<fb>> with certain limitations. As an authenticated
-user to the CalWS service scheduling read-freebusy privileges must have been granted. As an
+user to the CalWS service scheduling `read-freebusy` privileges must have been granted. As an
 unauthenticated user equivalent access must have been granted to unauthenticated users.
 
 Freebusy information is returned by default as `xcalendar` `vfreebusy` components, as defined by

@@ -7,7 +7,7 @@
 :status: published
 :revdate: 2008-11-07
 :published-date: 2008-11-07
-:technical-committee: CALCONNECT
+:technical-committee: MOBILE
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
 :local-cache-only:
@@ -27,6 +27,8 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 ====
 All documents included in the zip file for Meet CalConnect 2008 are considered part of CD 0812 and the public disclaimer included by reference above applies to all contents of the file.
 ====
+
+Chair(s):: Chris Dudding
 
 == What is different about mobile calendaring?
 

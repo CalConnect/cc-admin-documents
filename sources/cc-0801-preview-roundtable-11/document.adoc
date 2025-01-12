@@ -64,8 +64,8 @@ Today we will demonstrate:
 
 * CalDAV Scheduling
 * Realtime Internet Scheduling
-* Internet freebusy lookups using
-freebusy URLs
+* Internet `freebusy` lookups using
+`freebusy` URLs
 
 Each presentation will consist of:
 
@@ -101,11 +101,11 @@ are still to do (TC-REALTIME)
 Freebusy URL:
 
 * This is a way to do simple exchange
-and publishing of freebusy
+and publishing of `freebusy`
 information
 * TC-FREEBUSY is working on a
 specification
-* It uses simple HTTP GET/PUT
+* It uses simple HTTP `GET`/`PUT`
 operations with discoverability
 
 == CalDAV Scheduling
@@ -138,7 +138,7 @@ users inspect and accept or decline.
 Each user has an "Outbox" and an
 "Inbox".
 The "Outbox" is used to trigger
-freebusy lookup or send invites or
+`freebusy` lookup or send invites or
 replies.
 The "Inbox" is where invites or replies
 are delivered.
@@ -151,15 +151,15 @@ incoming scheduling messages.
 image::img02.png[]
 
 [%key]
-1:: Organizer sends freebusy request to server
-2:: Server calculates freebusy data for attendees
-3:: Server returns aggregated freebusy data to organizer
+1:: Organizer sends `freebusy` request to server
+2:: Server calculates `freebusy` data for attendees
+3:: Server returns aggregated `freebusy` data to organizer
 
 [%unnumbered]
 image::img03.png[]
 
 [%key]
-1:: Organizer sees freebusy for everyone
+1:: Organizer sees `freebusy` for everyone
 2:: Can adjust meeting time to avoid conflicts
 ====
 
@@ -201,7 +201,7 @@ image::img07.png[]
 * Provides the ability for users on
 different calendaring systems to
 schedule meetings with each other
-* Instantaneous freebusy lookups
+* Instantaneous `freebusy` lookups
 * Invites, replies sent as "messages"
 with delivery status immediately
 returned
@@ -219,22 +219,22 @@ server as you, or via some other
 communication process such as email
 or telephone.
 
-.Sequence of diagrams showing freebusy
+.Sequence of diagrams showing `freebusy`
 ====
 [%unnumbered]
 image::img09.png[]
 
 [%key]
-1:: Organizer sends freebusy request to server
+1:: Organizer sends `freebusy` request to server
 2:: Server forwards request to other attendee's servers
-3:: Attendees' servers return freebusy
-4:: Server returns aggregated freebusy data to organizer
+3:: Attendees' servers return `freebusy`
+4:: Server returns aggregated `freebusy` data to organizer
 
 [%unnumbered]
 image::img10.png[]
 
 [%key]
-1:: Organizer sees freebusy for everyone
+1:: Organizer sees `freebusy` for everyone
 2:: Can adjust meeting time to avoid conflicts
 ====
 
@@ -287,7 +287,7 @@ Time periods may be marked as
 
 * Most commonly as a RFC 2445
 `VFREEBUSY` object
-** a request for freebusy time,
+** a request for `freebusy` time,
 ** a response to a request, or
 ** a published set of busy time
 
@@ -337,7 +337,7 @@ range of time.
 
 === How it works
 
-* The "Read URL" is used to get freebusy
+* The "Read URL" is used to get `freebusy`
 data for a user
 +
 --
@@ -347,7 +347,7 @@ http://www.example.com/freebusy/user1@example.com
 --
 * returns `VFREEBUSY` object
 * The "Publish URL" is used by a client to
-upload freebusy data for a user
+upload `freebusy` data for a user
 +
 --
 http://www.example.com/freebusy/user1@example.com
@@ -364,12 +364,12 @@ same clients
 ** Comparison with server-server
 lookups
 
-=== Demonstration #1 -- Several clients retrieving freebusy information
+=== Demonstration #1 -- Several clients retrieving `freebusy` information
 
 .Freebusy Demo #1 Setup
 image::img14.png[]
 
-=== Demonstration #2 -- Project management aided by freebusy information
+=== Demonstration #2 -- Project management aided by `freebusy` information
 
 .Freebusy Demo #2 Setup
 image::img15.png[]
