@@ -90,7 +90,7 @@ internet draft submissions to the IETF and ultimately be progressed to become RF
 
 === TC API
 
-Work for Calconnect XXXVI includes an overall event object model and a new
+Work for CalConnect XXXVI includes an overall event object model and a new
 "participant" model. Locations and alarms will be reviewed again. The goal is a public
 release of the event model at CalConnect XXXVI.
 

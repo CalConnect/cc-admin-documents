@@ -61,7 +61,7 @@ proposal as to how best to move this forward.
 *TC-EVENTPUB* was formed based on work being done at UC Berkeley and elsewhere to
 develop a precise understanding of event publishing and how it differs from general scheduling
 problems, with the goal of attracting efforts being done in several academic institutions and
-elsewhere to combine into a single work project and Technical Committee within Calconnect.
+elsewhere to combine into a single work project and Technical Committee within CalConnect.
 
 *TC-CALSIFY* was re chartered with an expanded scope to support and help drive the CALSIFY
 effort in the IETF via a Working Group to consider the potential revision of RFC 2445.
@@ -69,7 +69,7 @@ effort in the IETF via a Working Group to consider the potential revision of RFC
 *Glossary Project*: The work done in the USECASE Technical Committee has shown the need for
 a taxonomy document for common vocabulary and glossary for calendaring and scheduling. Ms.
 Egan volunteered to act as Project Editor to compile a first draft document for circulation by mid-
-February. The Glossary, once complete, will be posted and publicly available on the Calconnect
+February. The Glossary, once complete, will be posted and publicly available on the CalConnect
 website.
 
 *External Communications*: The Consortium has chartered an ad hoc group to develop proposals
@@ -78,7 +78,7 @@ and scheduling, such as an RSS Feed for the C&S space, speaking appearances at t
 conferences and trade shows, and an expanded website presence including links to sites offering
 calendaring functionality.
 
-== Calconnect Interoperability Event
+== CalConnect Interoperability Event
 
 Participants in the CalConnect Interoperability Event included Isamet, Mozilla, Oracle, and the
 University of Washington. The major part of the CalConnect Interoperability Event was CalDAV
@@ -101,7 +101,7 @@ involved in developing this matrix and determining how well the matrix maps to w
 minimum actually is.
 
 The CALDAV Technical Committee will produce scenarios for additional CalDAV testing for the
-next Calconnect Interoperability Event, then turn to assisting CalDAV authors in submitting the
+next CalConnect Interoperability Event, then turn to assisting CalDAV authors in submitting the
 CalDAV draft to the IETF. They expect to use the use cases from the USECASE TC and anticipate
 contributing additional use cases. CALDAV is very interested in being able to conduct virtual
 Interops on a monthly basis and will work with IOP/TEST and the IOP Manager to accomplish

@@ -150,19 +150,19 @@ types such as 'Calendar User Address' to improve interoperability. iCalendar
 supports a more comprehensive set of property parameters to enable
 delegation of requests, alternative representations of data, and participant
 status. A full list of new property value data types and property value
-parameters is provided in the Appendix.
+parameters is provided in <<appendix-A>>.
 
 iCalendar defines eighteen new properties to support specification of time
 zones, calendaring and scheduling operations such as a canceling a meeting,
 non-Gregorian calendar scales, and other calendar attributes. A full list is
-provided in the Appendix.
+provided in <<appendix-A>>.
 
 iCalendar provides support for meeting requests/group scheduling with the
-new METHOD property. The scheduling protocol is a logical extension of
+new `METHOD` property. The scheduling protocol is a logical extension of
 iCalendar and is defined by RFC 2446 the iCalendar Transport-independent
 Interoperability Protocol (iTIP). There is no equivalent for vCalendar data.
 
-The new RECURRENCE-ID property allows individual calendar instances to
+The new `RECURRENCE-ID` property allows individual calendar instances to
 be linked together and enables powerful recurrence/exception handling.
 
 iCalendar has proper support for time zones and can accurately represent
@@ -190,7 +190,7 @@ The widespread adoption of iCalendar in all application spaces will result in a
 larger range of Calendar content available to consumers over the Internet.
 Further extensions to iCalendar will enable exchange of an even richer set of
 data. The consortium's Event Publication Technical Committee (TCEVENTPUB)
-has developed the VVENUE proposal for representing venue
+has developed the `VVENUE` proposal for representing venue
 related information (e.g. concert listings, museum admission prices, and
 driving directions). iCalendar-based solutions combined with ITIP (RFC 2446)
 will enable full fledged scheduling for consumers.
@@ -273,6 +273,7 @@ iCalendar.
 For more information on the efforts of the Calendaring & Scheduling
 Consortium, please visit http://www.calconnect.org/.
 
+[[appendix-A]]
 [appendix]
 == {blank}
 
@@ -435,6 +436,6 @@ http://www.ietf.org/html.charters/calsify-charter.html.
 * [[[cc-recurrence,CC/R 0604]]]
 
 [bibliography,normative=false]
-=== Calconnect Mobile Calendaring Questionnaire
+=== CalConnect Mobile Calendaring Questionnaire
 
 * [[[cc-mob-calendaring,CC/R 0609]]]

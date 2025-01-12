@@ -33,7 +33,7 @@ All documents included in the zip file for Meet CalConnect 2008 are considered p
 
 * Mattias Amnefelt
 * Infrastructure architect at Stockholm University
-* Member of the iSchedule TC of Calconnect
+* Member of the iSchedule TC of CalConnect
 
 == Introduction
 

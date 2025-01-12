@@ -44,7 +44,7 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
 == Introduction
 
-The thirteenth Calconnect interoperability event was held at the Yahoo campus at Sunnyvale,
+The thirteenth CalConnect interoperability event was held at the Yahoo campus at Sunnyvale,
 California. Participants of the testing event used predetermined test scenarios. Rather than post
 the full test scenarios in this document, they can be found on the CalConnect website at the
 following URL: http://www.calconnect.org/ioptesting.shtml.

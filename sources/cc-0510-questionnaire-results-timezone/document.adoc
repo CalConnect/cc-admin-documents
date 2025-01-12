@@ -165,7 +165,7 @@ task of writing a codec for the data structures. Everything I need to know is in
 RFCs. If there was a description of how to implement `VTIMEZONE`, I would have done
 it.
 
-I strongly suggest that the calconnect group go to greater effort to offer
+I strongly suggest that the CalConnect group go to greater effort to offer
 implementation guidance to further interop. This could include pseudo-code processing
 models, warnings about problems and corner cases to look out for, and should
 particularly involve test suites. `RRULE`, for example, would be unimplementable
