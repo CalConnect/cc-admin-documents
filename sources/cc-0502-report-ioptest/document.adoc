@@ -203,10 +203,9 @@ S2 | Test Scenario
 | N | | Y | N/A | Y | N/A
 | 4.2. Delete the meeting titles "Meeting 1.2"
 
-7+| *draft-dusseault-caldav-04
 |===
 
 [bibliography]
 == Bibliography
 
-* [[[caldav-draft,IETF I-D draft-dusseault-caldav-04]]]
+* [[[caldav-draft,IETF I-D draft-dusseault-caldav-04]]], Calendaring and Scheduling Extensions to WebDAV (CalDAV) draft-dusseault-caldav-04
