@@ -269,23 +269,23 @@ XML namespaces and prefixes used in this standard:
 [bibliography]
 == Normative References
 
-* [[[rfc2119, RFC 2119]]]
+* [[[rfc2119,IETF RFC 2119]]]
 
-* [[[rfc2616, RFC 2616]]]
+* [[[rfc2616,IETF RFC 2616]]]
 
-* [[[rfc4791, RFC 4791]]]
+* [[[rfc4791,IETF RFC 4791]]]
 
-* [[[rfc6638, RFC 6638]]]
+* [[[rfc6638,IETF RFC 6638]]]
 
-* [[[rfc5545, RFC 5545]]]
+* [[[rfc5545,IETF RFC 5545]]]
 
-* [[[rfc5546, RFC 5546]]]
+* [[[rfc5546,IETF RFC 5546]]]
 
-* [[[rfc6321, RFC 6321]]]
+* [[[rfc6321,IETF RFC 6321]]]
 
-* [[[rfc4790, RFC 4790]]]
+* [[[rfc4790,IETF RFC 4790]]]
 
-* [[[tz-service, IETF I-D draft-douglass-timezone-service]]]
+* [[[tz-service,IETF I-D draft-douglass-timezone-service]]]
 
 * [[[fb, CC/S 0903]]]
 

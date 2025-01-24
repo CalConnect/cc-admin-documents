@@ -654,31 +654,31 @@ A draft specification that defines an XML representation of iCalendar data.
 [bibliography]
 == Bibliography
 
-* [[[rfc2045, RFC 2045]]]
+* [[[rfc2045,IETF RFC 2045]]]
 
-* [[[rfc2046, RFC 2046]]]
+* [[[rfc2046,IETF RFC 2046]]]
 
-* [[[rfc2047, RFC 2047]]]
+* [[[rfc2047,IETF RFC 2047]]]
 
-* [[[rfc3283, RFC 3283]]]
+* [[[rfc3283,IETF RFC 3283]]]
 
-* [[[rfc3744, RFC 3744]]]
+* [[[rfc3744,IETF RFC 3744]]]
 
-* [[[rfc3935, RFC 3935]]]
+* [[[rfc3935,IETF RFC 3935]]]
 
-* [[[rfc4791, RFC 4791]]]
+* [[[rfc4791,IETF RFC 4791]]]
 
-* [[[rfc5545, RFC 5545]]]
+* [[[rfc5545,IETF RFC 5545]]]
 
-* [[[rfc5546, RFC 5546]]]
+* [[[rfc5546,IETF RFC 5546]]]
 
-* [[[rfc6047, RFC 6047]]]
+* [[[rfc6047,IETF RFC 6047]]]
 
 * [[[draft-desruisseaux-caldav-sched,IETF I-D draft-desruisseaux-caldav-sched]]]
 
 * [[[xcal,IETF I-D draft-daboo-et-al-icalendar-in-xml]]]]
 
-* [[[ischedule, IETF I-D draft-desruisseaux-ischedule]]]
+* [[[ischedule,IETF I-D draft-desruisseaux-ischedule]]]
 
 * [[[ietf,IETF]]], ietf.org
 

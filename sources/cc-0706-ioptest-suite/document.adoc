@@ -2507,13 +2507,13 @@ folding, UTF-8 support
 
 * [[[calgloss,CC/R 1102]]]
 
-* [[[rfc2445, RFC 2445]]]
+* [[[rfc2445,IETF RFC 2445]]]
 
 * [[[oma,OMA DS]]], Open Mobile Alliance Data Synchronization V1.1.2, Open Mobile Alliance, 10 July 2006 http://www.openmobilealliance.org/release_program/ds_v12.html
 
 * [[[miniop, CC/S 0601]]]
 
-* [[[rfc3283, RFC 3283]]]
+* [[[rfc3283,IETF RFC 3283]]]
 
 * [[[ical, CC/Adv 0611]]]
 

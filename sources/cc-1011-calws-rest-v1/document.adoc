@@ -123,19 +123,19 @@ types are prefixed with the URL http://docs.oasis-open.org/ns/wscal/calwsrel
 [bibliography]
 == Normative references
 
-* [[[rfc2119, RFC 2119]]]
+* [[[rfc2119,IETF RFC 2119]]]
 
-* [[[rfc2616, RFC 2616]]]
+* [[[rfc2616,IETF RFC 2616]]]
 
-* [[[rfc3339, RFC 3339]]]
+* [[[rfc3339,IETF RFC 3339]]]
 
-* [[[rfc4791, RFC 4791]]]
+* [[[rfc4791,IETF RFC 4791]]]
 
-* [[[rfc4918, RFC 4918]]]
+* [[[rfc4918,IETF RFC 4918]]]
 
-* [[[rfc5545, RFC 5545]]]
+* [[[rfc5545,IETF RFC 5545]]]
 
-* [[[rfc5546, RFC 5546]]]
+* [[[rfc5546,IETF RFC 5546]]]
 
 * [[[xcal,IETF I-D draft-daboo-et-al-icalendar-in-xml]]]]
 

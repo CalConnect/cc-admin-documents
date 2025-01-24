@@ -448,4 +448,4 @@ END:VCARD
 [bibliography]
 == Bibliography
 
-* [[[rfc3986, RFC 3986]]]
+* [[[rfc3986,IETF RFC 3986]]]

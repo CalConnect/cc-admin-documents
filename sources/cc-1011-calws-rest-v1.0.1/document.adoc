@@ -145,9 +145,9 @@ XML namespaces and prefixes used in this standard:
 [bibliography]
 == Normative references
 
-* [[[rfc2119, RFC 2119]]]
+* [[[rfc2119,IETF RFC 2119]]]
 
-* [[[rfc4791, RFC 4791]]]
+* [[[rfc4791,IETF RFC 4791]]]
 
 * [[[wscal, WS-Calendar]]], _WS-Calendar Version 1.0_. 19 January 2011. OASIS Committee Specification, http://docs.oasis-open.org/ws-calendar/ws-calendar-spec/v1.0/cs01/ws-calendar24spec-v1.0-cs01.pdf.
 
@@ -1684,14 +1684,14 @@ exchange scheduling messages between users of each system.
 
 * [[[rest, REST]]], T Fielding, Architectural Styles and the Design of Network-based Software Architectures, http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm.
 
-* [[[rfc2445, RFC 2445]]]
+* [[[rfc2445,IETF RFC 2445]]]
 
-* [[[rfc2446, RFC 2446]]]
+* [[[rfc2446,IETF RFC 2446]]]
 
-* [[[rfc6047, RFC 6047]]]
+* [[[rfc6047,IETF RFC 6047]]]
 
-* [[[rfc5545, RFC 5545]]]
+* [[[rfc5545,IETF RFC 5545]]]
 
-* [[[rfc5546, RFC 5546]]]
+* [[[rfc5546,IETF RFC 5546]]]
 
 * [[[draft,IETF I-D draft-daboo-et-al-icalendar-in-xml]]]

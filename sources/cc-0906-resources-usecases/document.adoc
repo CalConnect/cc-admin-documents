@@ -241,6 +241,6 @@ pages.
 [bibliography]
 == Bibliography
 
-* [[[rfc3283, RFC 3283]]]
+* [[[rfc3283,IETF RFC 3283]]]
 
 * [[[glossary, CC/R 0610]]]
