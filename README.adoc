@@ -1,48 +1,90 @@
-= CalConnect Conference and IOP Testing Reports
+= CalConnect administrative documents
 
-This repository contains CSD sources, and gets rendered into a Relaton collection mini-site.
+This repository contains CalConnect administrative document sources.
 
-image:https://travis-ci.com/CalConnect/csd-admin-documents.svg?branch=master["Build Status", link="https://travis-ci.com/CalConnect/csd-admin-documents"]
+image:https://github.com/CalConnect/cc-admin-documents/workflows/docker/badge.svg["Docker Build Status", link="https://github.com/CalConnect/cc-admin-documents/actions/workflows/docker.yml"]
 
-== Access
+Published documents are available here:
 
-Documents in this repository are available through the deployed mini-site:
-
-* https://calconnect.github.io/csd-admin-documents/[CalConnect Conference and IOP Testing Reports]
+* https://calconnect.github.io/cc-admin-documents/[CalConnect Conference and IOP Testing Reports]
 
 
-== Fetching the documents
+== Purpose
+
+This repository holds the Metanorma source markup for CalConnect
+administrative documents.
+
+These documents include:
+
+* CalConnect Conference Reports (and associated documents)
+* CalConnect IOP Testing Reports
+* CalConnect Advisory Notices
+
+NOTE: These administrative documents, prior to 2024, were published in PDF
+format only. This repository contains the re-encoded documents in the Metanorma
+format in order to facilitate future updates and publication in multiple
+formats.
+
+
+== Structure
+
+The repository is structured as follows:
+
+`metanorma.yml`:: Metanorma site manifest that lists the documents to be
+included in the site.
+
+`sources/`:: Source documents in Metanorma format.
+
+`sources/cc-{docnumber}-{title}`:: Directory for each document, named by
+document number and a shorthand title.
+
+`sources/cc-{docnumber}-{title}/document.adoc`:: Metanorma root document for
+the document.
+
+
+== Fetching the document
 
 [source,sh]
 ----
-git clone https://github.com/CalConnect/csd-admin-documents
+git clone https://github.com/CalConnect/cc-admin-documents/
 ----
 
-== Install Build Tools
 
-See https://www.metanorma.com/[Metanorma setup].
+== Installing build tools
+
+See https://www.metanorma.org/install/
 
 
-== Build
+== Building the documents
+
+=== Full set
+
+Run the following command to build the full collection of the documents.
 
 [source,sh]
 ----
-make clean all
+$ bundle exec metanorma site generate --agree-to-terms
 ----
 
-== Open the generated HTML index
+=== Single document
 
+Run the following command to build a single document.
+
+.Compile a single document
 [source,sh]
 ----
-open documents.html
+$ bundle exec metanorma sources/cc-1903-report-conference-46/document.adoc
 ----
 
-== Publish
+=== Outputs
 
-[source,sh]
-----
-make publish
-----
+The following outputs will be built:
 
-The generated HTML site will be prepared in `published/`.
+Index of all documents:: `_site/index.html`
 
+Individual document outputs:: `_site/documents/` (HTML, PDF, MN XML)
+
+
+== License
+
+Copyright CalConnect.
