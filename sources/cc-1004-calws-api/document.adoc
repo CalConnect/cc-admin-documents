@@ -6,7 +6,7 @@
 :edition: 0.3
 :status: proposal
 :revdate: 2010-05-19
-:published-date:
+:published-date: 2010-05-19
 :technical-committee: XML
 :mn-document-class: cc
 :mn-output-extensions: xml,html,pdf,rxl
