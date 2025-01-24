@@ -583,19 +583,19 @@ Daboo.
 [bibliography,normative=true]
 === Normative References
 
-* [[[RFC2119, RFC 2119]]]
+* [[[RFC2119,IETF RFC 2119]]]
 
-* [[[RFC2445, RFC 2445]]]
+* [[[RFC2445,IETF RFC 2445]]]
 
-* [[[RFC2446, RFC 2446]]]
+* [[[RFC2446,IETF RFC 2446]]]
 
-* [[[RFC2447, RFC 2447]]]
+* [[[RFC2447,IETF RFC 2447]]]
 
-* [[[RFC2616, RFC 2616]]]
+* [[[RFC2616,IETF RFC 2616]]]
 
-* [[[RFC2818, RFC 2818]]]
+* [[[RFC2818,IETF RFC 2818]]]
 
-* [[[RFC3339, RFC 3339]]]
+* [[[RFC3339,IETF RFC 3339]]]
 
 [bibliography,normative=false]
 === Informative References
@@ -606,6 +606,6 @@ STD 1, October 2006 (PDF).
 * [[[I-D.ietf-vcarddavvcardrev,2]]], Perreault, S. and P. Resnick, "vCard Format Specification," draft-ietf-vcarddav-vcardrev-06 (work in progress), March 2009 (TXT).
 // EDITOR: Auto-fetching `IETF I-D draft-ietf-vcarddav-vcardrev-06` fails. This should now be RFC 6350.
 
-* [[[RFC2739, RFC 2739]]]
+* [[[RFC2739,IETF RFC 2739]]]
 
-* [[[RFC4791, RFC 4791]]]
+* [[[RFC4791,IETF RFC 4791]]]

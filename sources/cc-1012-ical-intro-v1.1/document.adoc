@@ -208,19 +208,19 @@ format.
 [bibliography]
 == References
 
-* [[[rfc2445, RFC 2445]]]
+* [[[rfc2445,IETF RFC 2445]]]
 
-* [[[rfc2446, RFC 2446]]]
+* [[[rfc2446,IETF RFC 2446]]]
 
-* [[[rfc2447, RFC 2447]]]
+* [[[rfc2447,IETF RFC 2447]]]
 
-* [[[rfc5545, RFC 5545]]]
+* [[[rfc5545,IETF RFC 5545]]]
 
-* [[[rfc5546, RFC 5546]]]
+* [[[rfc5546,IETF RFC 5546]]]
 
-* [[[rfc4791, RFC 4791]]]
+* [[[rfc4791,IETF RFC 4791]]]
 
-* [[[rfc6321, RFC 6321]]]
+* [[[rfc6321,IETF RFC 6321]]]
 
 * [[[ActiveSync,ActiveSync]]], http://msdn.microsoft.com/en-us/library/aa913903.aspx
 
@@ -230,7 +230,7 @@ format.
 
 * [[[ical-draft,IETF I-D draft-desruisseaux-ischedule-01]]]
 
-* [[[rfc6047, RFC 6047]]]
+* [[[rfc6047,IETF RFC 6047]]]
 
 * [[[ws-cal, OASIS WS-Calendar 1.0]]], http://docs.oasis-open.org/ws-calendar/ws-calendar-spec/v1.0/cs01/ws-calendar-spec-v1.0-cs01.html
 

@@ -746,8 +746,8 @@ etc. This requirement is out of scope for the scheduling protocol.
 [bibliography]
 == Bibliography
 
-* [[[rfc2446, RFC 2446]]]
+* [[[rfc2446,IETF RFC 2446]]]
 
-* [[[rfc2518, RFC 2518]]]
+* [[[rfc2518,IETF RFC 2518]]]
 
-* [[[rfc4791, RFC 4791]]]
+* [[[rfc4791,IETF RFC 4791]]]

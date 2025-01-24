@@ -193,17 +193,17 @@ each system.
 [bibliography]
 == References
 
-* [[[rfc2445, RFC 2445]]]
+* [[[rfc2445,IETF RFC 2445]]]
 
-* [[[rfc2446, RFC 2446]]]
+* [[[rfc2446,IETF RFC 2446]]]
 
-* [[[rfc2447, RFC 2447]]]
+* [[[rfc2447,IETF RFC 2447]]]
 
-* [[[rfc5545, RFC 5545]]]
+* [[[rfc5545,IETF RFC 5545]]]
 
-* [[[rfc5546, RFC 5546]]]
+* [[[rfc5546,IETF RFC 5546]]]
 
-* [[[rfc4791, RFC 4791]]]
+* [[[rfc4791,IETF RFC 4791]]]
 
 * [[[draft,IETF I-D draft-daboo-et-al-icalendar-in-xml]]]
 

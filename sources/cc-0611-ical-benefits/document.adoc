@@ -390,13 +390,13 @@ Consortium, please visit http://www.calconnect.org/.
 [bibliography,normative=false]
 === iCalendar Specifications
 
-* [[[rfc2445, RFC 2445]]]
+* [[[rfc2445,IETF RFC 2445]]]
 
-* [[[rfc2446, RFC 2446]]]
+* [[[rfc2446,IETF RFC 2446]]]
 
-* [[[rfc2447, RFC 2447]]]
+* [[[rfc2447,IETF RFC 2447]]]
 
-* [[[rfc3283, RFC 3283]]]
+* [[[rfc3283,IETF RFC 3283]]]
 
 [bibliography,normative=false]
 === CalDAV Specifications

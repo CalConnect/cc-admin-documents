@@ -232,19 +232,19 @@ XML namespaces and prefixes used in this standard:
 [bibliography]
 == Normative References
 
-* [[[rfc2119, RFC 2119]]]
+* [[[rfc2119,IETF RFC 2119]]]
 
-* [[[rfc2616, RFC 2616]]]
+* [[[rfc2616,IETF RFC 2616]]]
 
-* [[[rfc4791, RFC 4791]]]
+* [[[rfc4791,IETF RFC 4791]]]
 
-* [[[caldav-sched, IETF I-D draft-desruisseaux-caldav-sched-08]]]
+* [[[caldav-sched,IETF I-D draft-desruisseaux-caldav-sched-08]]]
 
-* [[[rfc5545, RFC 5545]]]
+* [[[rfc5545,IETF RFC 5545]]]
 
-* [[[rfc6321, RFC 6321]]]
+* [[[rfc6321,IETF RFC 6321]]]
 
-* [[[tz-service, IETF I-D draft-douglass-timezone-service]]]
+* [[[tz-service,IETF I-D draft-douglass-timezone-service]]]
 
 * [[[fb, CC/S 0903]]]
 
@@ -2319,7 +2319,7 @@ and cooperation as well. Contributors to TC XML include:
 [bibliography,normative=false]
 == Non-Normative References
 
-* [[[webl, IETF I-D draft-nottingham-http-link-header]]]
+* [[[webl,IETF I-D draft-nottingham-http-link-header]]]
 
 * [[[wsa,WS-Addr]]], W3C Recommendation,Web Services Addressing 1.0 - Core, and Web Services Addressing 1.0 - SOAP Binding, 9 May 2006
 http://www.w3.org/2002/ws/addr/
