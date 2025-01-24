@@ -359,4 +359,4 @@ areas would be useful.
 
 <<<
 
-embed::questionnaire-reccurence.adoc[]
+embed::questionnaire-recurrence.adoc[]
