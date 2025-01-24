@@ -13,7 +13,7 @@ metanorma:
     - sources/cc-0502-report-ioptest/document.adoc
     - sources/cc-0503-ioptest-rules/document.adoc
     - sources/cc-0504-report-ioptest/document.adoc
-    - sources/cc-0505-questionnaire-results-reccurence/document.adoc
+    - sources/cc-0505-questionnaire-results-recurrence/document.adoc
     - sources/cc-0506-report-ioptest/document.adoc
     - sources/cc-0507-caldav-use-cases/document.adoc
     - sources/cc-0508-pres-overview/document.adoc
