@@ -1,0 +1,45 @@
+---
+directives:
+- documents-inline
+
+bibdata:
+  title:
+  - language: en
+    content: CalConnect 0812
+  type: standard
+
+  docid:
+    type: cc
+    id: CC 0812
+  edition: 12
+  copyright:
+    owner:
+      name: CalConnect
+      abbreviation: CalConnect
+    from: '2008'
+format:
+  - html
+  - xml
+  - pdf
+  - presentation
+
+manifest:
+  level: collection
+  title: CalConnect 0812
+
+  docref:
+
+    - file: pres-intro-01.adoc
+    - file: pres-intro-02.adoc
+    - file: pres-iop-testing.adoc
+    - file: pres-ischedule.adoc
+    - file: pres-tc-mobile.adoc
+    - file: pres-bedework.adoc
+    - file: pres-stockholm.adoc
+
+prefatory-content:
+|
+
+
+final-content:
+|

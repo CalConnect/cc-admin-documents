@@ -1,5 +1,5 @@
 = An Introduction to The Calendaring and Scheduling Consortium
-:docnumber: 0812
+:docnumber: 0812-1
 :copyright-year: 2008
 :language: en
 :doctype: administrative

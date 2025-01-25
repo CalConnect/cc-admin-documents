@@ -1,5 +1,5 @@
 = Stockholm University -- Membership in CalConnect
-:docnumber: 0812
+:docnumber: 0812-7
 :copyright-year: 2008
 :language: en
 :doctype: administrative

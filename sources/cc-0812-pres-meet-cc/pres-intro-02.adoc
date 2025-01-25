@@ -1,5 +1,5 @@
 = Introduction to CalConnect: The Calendaring and Scheduling Consortium
-:docnumber: 0812
+:docnumber: 0812-2
 :copyright-year: 2008
 :language: en
 :doctype: administrative
