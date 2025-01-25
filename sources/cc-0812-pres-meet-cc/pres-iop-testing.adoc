@@ -1,5 +1,5 @@
 = Interoperability Testing and Standards Development
-:docnumber: 0812
+:docnumber: 0812-3
 :copyright-year: 2008
 :language: en
 :doctype: administrative

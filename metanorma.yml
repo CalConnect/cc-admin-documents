@@ -67,7 +67,7 @@ metanorma:
     - sources/cc-0810-report-roundtable-12/document.adoc
     - sources/cc-0811-report-roundtable-13/document.adoc
 
-    - sources/cc-0812-pres-meet-cc/collection.yml
+    # - sources/cc-0812-pres-meet-cc/collection.yml
     - sources/cc-0812-pres-meet-cc/pres-intro-01.adoc
     - sources/cc-0812-pres-meet-cc/pres-intro-02.adoc
     - sources/cc-0812-pres-meet-cc/pres-iop-testing.adoc
