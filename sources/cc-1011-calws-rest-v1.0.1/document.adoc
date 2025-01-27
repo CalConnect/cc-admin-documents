@@ -41,7 +41,7 @@ http://docs.oasis-open.org/ws-calendar/ws-calendar/v1.0/ws-calendar-1.0-spec.htm
 [abstract]
 == Abstract
 
-TODO: Summary of the technical purpose of the document.
+This document describes a RESTful web service for calendar access and update.
 
 [.preface]
 == metanorma-extension
@@ -316,7 +316,7 @@ CalWS XML namespace.
 [source%unnumbered]
 ----
 <?xml version="1.0" encoding="utf-8"
-  xmlns:CW="Error! Reference source not found.""
+  xmlns:CW="http://docs.oasis-open.org/ns/wscal/calws"
   xmlns:C="http://docs.oasis-open.org/ws-calendar/ns/REST" ?>
 <CW:error>
   <C:supported-filter>
@@ -487,7 +487,7 @@ The `xrd:title` child element of the link element provides a description for the
 http://docs.oasis-open.org/ws-calendar/ns/REST/created
 
 Appears within a link relation describing collections or entities. The value is a date-time as defined in
-<<wscal,section=5.6>>.
+<<rfc3339,section=5.6>>.
 
 [source%unnumbered]
 ----
