@@ -236,6 +236,8 @@ XML namespaces and prefixes used in this standard:
 
 * [[[rfc2616,IETF RFC 2616]]]
 
+* [[[rfc4790,IETF RFC 4790]]]
+
 * [[[rfc4791,IETF RFC 4791]]]
 
 * [[[caldav-sched,IETF I-D draft-desruisseaux-caldav-sched-08]]]
@@ -581,8 +583,7 @@ This property `MAY` be returned for the service and `SHOULD` be returned for any
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| dateTime | dateTime | 1 | Y | A date-time as defined in Error: Reference
-source not found Section 5.6.
+| dateTime | dateTime | 1 | Y | A date-time as defined in <<wscal>>
 |===
 
 === displayName
@@ -1727,7 +1728,7 @@ is exclusive.
 |===
 
 The `TextMatchType` is used to match text values in properties and parameters. The collation attribute
-species a collation as defined in Error: Reference source not found.
+species a collation as defined in <<rfc4790>>.
 
 Servers are `REQUIRED` to support the "`i;ascii-casemap`" and "`i;octet`" collations which provide a basic
 case insensitive and case sensitive match respectively.
@@ -1739,7 +1740,7 @@ Elements of this type take a string value which is matched according to the attr
 [options=header,cols=5]
 |===
 | Field | Type | # | ? | Description
-| `#collation` | String | 0..1 | N | Collation name from Error: Reference source not found. "
+| `#collation` | String | 0..1 | N | Collation name from <<rfc4790>>.
 | `#negate-condition` | boolean | 0..1 | N | if "true" negates the condition
 |===
 
@@ -2063,7 +2064,7 @@ unauthenticated user equivalent access must have been granted to unauthenticated
 
 Freebusy information is returned by default as `xcalendar` `vfreebusy` components, as defined by
 <<rfc6321>>. Such a component is not meant to conform to the requirements of `VFREEBUSY` components in
-Error: Reference source not found. The `VFREEBUSY` component `SHOULD` conform to
+<<rfc5546>>. The `VFREEBUSY` component `SHOULD` conform to
 <<rfc5545,section=4.6.4>>. A client `SHOULD` ignore the `ORGANIZER` field.
 
 Since a Freebusy query can only refer to a single user, a client will already know how to match the result

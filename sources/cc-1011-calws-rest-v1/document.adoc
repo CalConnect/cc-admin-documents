@@ -283,7 +283,7 @@ CalWS XML namespace.
 [source%unnumbered]
 ----
 <?xml version="1.0" encoding="utf-8"
-  xmlns:CW="http://docs.oasis-open.org/ns/wscal/calws""
+  xmlns:CW="http://docs.oasis-open.org/ns/wscal/calws"
   xmlns:C="urn:ietf:params:xml:ns:caldav" ?>
 <CW:error>
   <C:supported-filter>
