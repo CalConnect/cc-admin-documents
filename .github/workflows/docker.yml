@@ -29,12 +29,73 @@ jobs:
       - name: Bundler install
         uses: metanorma/ci/docker-gem-install@main
 
-      - name: Metanorma generate site
+      - name: Print Metanorma version
+        run: metanorma --version
+
+      - name: Generate Metanorma XML
         uses: actions-mn/build-and-publish@v2
         with:
-          destination: gh-pages
+          destination: artifact
+          artifact-name: mn
           agree-to-terms: true
-          use-bundler: true
+
+  fl-build:
+    runs-on: ubuntu-latest
+    needs: build
+    name: Build Firelight version
+
+    steps:
+      - name: Download Metanorma artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: mn
+
+      - name: "Firelight: create temporary Git repo"
+        run: |
+          git config --global user.email "57123902+metanorma-ci@users.noreply.github.com"
+          git config --global user.name "Metanorma CI"
+          git config --global init.defaultBranch main
+          git init .
+
+      - name: "Firelight: commit"
+        run: |
+          git add documents/_site/documents.xml
+          git commit -m "Commit MN XML"
+
+      - name: "Firelight: prepare config"
+        run: |
+          cat <<'EOF' >> anafero-config.json
+          {
+            "version": "0.1",
+            "entryPoint": "file:_site/documents.xml",
+            "storeAdapters": [
+              "git+https://github.com/metanorma/firelight#collection-support/packages/relaton-collection-xml-store",
+              "git+https://github.com/metanorma/firelight#collection-support/packages/metanorma-xml-store"
+            ],
+            "contentAdapters": [
+              "git+https://github.com/metanorma/firelight#collection-support/packages/metanorma-site-content"
+            ],
+            "resourceLayouts": [
+              "git+https://github.com/metanorma/firelight#collection-support/packages/plateau-layout"
+            ]
+          }
+          EOF
+          git add anafero-config.json
+          git commit -m "Add build config"
+
+      - name: "Firelight: generate HTML"
+        run: |
+          npx --node-options='--experimental-vm-modules' \
+            -y @riboseinc/anafero-cli@0.0.42 \
+            --target-dir _site \
+            --path-prefix /cc-admin-documents \
+            --current-rev main
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fl
+          path: _site
+          if-no-files-found: error
 
   deploy:
     if: ${{ github.ref_name == github.event.repository.default_branch }}
@@ -42,8 +103,28 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: fl-build
     steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Make dist dir
+        run: mkdir dist
+
+      - name: Download HTML artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: fl
+          path: dist
+
+      - name: List files in dist
+        run: ls -l dist
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
