@@ -59,7 +59,7 @@ jobs:
 
       - name: "Firelight: commit"
         run: |
-          ls -Al documents
+          ls -Al documents/cc-0001-report-ioptest
           git add documents.xml
           git add **/*.pdf
           git add **/*.xml
