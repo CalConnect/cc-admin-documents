@@ -59,6 +59,7 @@ jobs:
 
       - name: "Firelight: commit"
         run: |
+          ls -Al
           git add _site/documents.xml
           git commit -m "Commit MN XML"
 
