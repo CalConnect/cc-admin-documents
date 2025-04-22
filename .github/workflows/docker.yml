@@ -70,7 +70,7 @@ jobs:
           cat <<'EOF' >> anafero-config.json
           {
             "version": "0.1",
-            "entryPoint": "file:_site/documents.xml",
+            "entryPoint": "file:documents.xml",
             "storeAdapters": [
               "git+https://github.com/metanorma/firelight#collection-support/packages/relaton-collection-xml-store",
               "git+https://github.com/metanorma/firelight#collection-support/packages/metanorma-xml-store"
