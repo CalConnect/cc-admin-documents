@@ -60,8 +60,10 @@ jobs:
       - name: "Firelight: commit"
         run: |
           ls -Al
-          git add _site/documents.xml
-          git commit -m "Commit MN XML"
+          git add documents.xml
+          git add **/*.pdf
+          git add **/*.xml
+          git commit -m "Commit MN XML & PDF artifacts"
 
       - name: "Firelight: prepare config"
         run: |
