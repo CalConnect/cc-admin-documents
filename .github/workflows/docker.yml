@@ -59,7 +59,7 @@ jobs:
 
       - name: "Firelight: commit"
         run: |
-          ls -Al
+          ls -Al documents
           git add documents.xml
           git add **/*.pdf
           git add **/*.xml
