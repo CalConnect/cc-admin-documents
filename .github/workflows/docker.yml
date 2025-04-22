@@ -38,6 +38,7 @@ jobs:
           destination: artifact
           artifact-name: mn
           agree-to-terms: true
+          cache-site-for-manifest: metanorma.yml
 
   fl-build:
     runs-on: ubuntu-latest
