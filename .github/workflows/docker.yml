@@ -136,7 +136,8 @@ jobs:
             -y @riboseinc/anafero-cli@0.0.44 \
             --target-dir dist \
             --path-prefix /cc-admin-documents \
-            --current-rev main
+            --current-rev main \
+            --debug
 
       - uses: actions/upload-artifact@v4
         with:
