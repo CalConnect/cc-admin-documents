@@ -133,7 +133,7 @@ jobs:
       - name: "Firelight: generate HTML"
         run: |
           npx --node-options='--experimental-vm-modules' \
-            -y @riboseinc/anafero-cli@0.0.46 \
+            -y @riboseinc/anafero-cli@0.0.47 \
             --target-dir dist \
             --path-prefix /cc-admin-documents \
             --current-rev main \
