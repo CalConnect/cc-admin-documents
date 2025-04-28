@@ -93,7 +93,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: mn
-          path: _site
 
       - name: "Firelight: create temporary Git repo"
         run: |
@@ -104,10 +103,10 @@ jobs:
 
       - name: "Firelight: commit"
         run: |
-          ls -Al _site/documents/cc-0001-report-ioptest
-          git add _site/documents.xml
-          git add _site/**/*.pdf
-          git add _site/**/*.xml
+          ls -Al documents/cc-0001-report-ioptest
+          git add documents.xml
+          git add **/*.pdf
+          git add **/*.xml
           git commit -m "Commit MN XML & PDF artifacts"
 
       - name: "Firelight: prepare config"
@@ -115,7 +114,7 @@ jobs:
           cat <<'EOF' >> anafero-config.json
           {
             "version": "0.1",
-            "entryPoint": "file:_site/documents.xml",
+            "entryPoint": "file:documents.xml",
             "storeAdapters": [
               "git+https://github.com/metanorma/firelight#collection-support/packages/relaton-collection-xml-store",
               "git+https://github.com/metanorma/firelight#collection-support/packages/metanorma-xml-store"
