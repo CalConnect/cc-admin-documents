@@ -1,5 +1,5 @@
 = CalConnect EDST Reflections and Recommendations
-:docnumber: 0707
+:docnumber: 0707.1
 :copyright-year: 2007
 :language: en
 :doctype: advisory
