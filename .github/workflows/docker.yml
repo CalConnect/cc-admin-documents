@@ -116,14 +116,14 @@ jobs:
             "version": "0.1",
             "entryPoint": "file:documents.xml",
             "storeAdapters": [
-              "git+https://github.com/metanorma/firelight#collection-support/packages/relaton-collection-xml-store",
-              "git+https://github.com/metanorma/firelight#collection-support/packages/metanorma-xml-store"
+              "git+https://github.com/metanorma/firelight#main/packages/relaton-collection-xml-store",
+              "git+https://github.com/metanorma/firelight#main/packages/metanorma-xml-store"
             ],
             "contentAdapters": [
-              "git+https://github.com/metanorma/firelight#collection-support/packages/metanorma-site-content"
+              "git+https://github.com/metanorma/firelight#main/packages/metanorma-site-content"
             ],
             "resourceLayouts": [
-              "git+https://github.com/metanorma/firelight#collection-support/packages/plateau-layout"
+              "git+https://github.com/metanorma/firelight#main/packages/plateau-layout"
             ]
           }
           EOF
