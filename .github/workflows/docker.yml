@@ -54,7 +54,7 @@ jobs:
           # alternatively, if we really want to always use whatever MN version
           # is latest, we could detect that version and include it
           # as part of this key.
-          key: ${{ runner.os }}-mn-${{ env.cache-name }}-${{ hashFiles('sources/00*-v5/**', 'sources/xmi/**', 'sources/liquid_templates/**', 'sources/guidance/**') }}
+          key: ${{ runner.os }}-mn-${{ env.cache-name }}-${{ hashFiles('sources/**', 'Gemfile.lock') }}
 
           # We can fuzzy-match latest available cache,
           # instead of precise hash.
