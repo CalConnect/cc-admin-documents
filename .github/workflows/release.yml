@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+    paths: ['sources/**', 'metanorma.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    container: docker://metanorma/metanorma
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions-mn/site-gen@v1
+        with:
+          agree-to-terms: 'true'
+          install-fonts: 'true'
+          continue-without-fonts: 'true'
+
+      - uses: actions-mn/release@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
