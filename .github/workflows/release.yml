@@ -3,8 +3,18 @@ name: Release
 on:
   push:
     branches: [main]
-    paths: ['sources/**', 'metanorma.yml']
+    paths: ['sources/**', 'metanorma.yml', 'metanorma.release.yml']
   workflow_dispatch:
+    inputs:
+      include-pattern:
+        description: 'Glob pattern to filter documents for release (e.g. cc-1903*)'
+        required: false
+        default: '*'
+      force:
+        description: 'Force release even if content is unchanged'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -25,3 +35,5 @@ jobs:
       - uses: actions-mn/release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          include-pattern: ${{ github.event.inputs.include-pattern || '*' }}
+          force: ${{ github.event.inputs.force || 'false' }}
