@@ -25,14 +25,15 @@ jobs:
         with:
           submodules: true
 
-      - uses: actions-mn/cache@v1
-        id: mn-cache
+      - name: Restore cached Metanorma XML
+        id: cache-mn-xml
+        uses: actions/cache@v4
         with:
-          cache-site-for-manifest: metanorma.yml
-          cache-site-path: _site
+          path: _site
+          key: ${{ runner.os }}-mn-site-${{ hashFiles('sources/**') }}
 
       - uses: actions-mn/site-gen@v1
-        if: steps.mn-cache.outputs.cache-site-cache-hit != 'true'
+        if: steps.cache-mn-xml.outputs.cache-hit != 'true'
         with:
           agree-to-terms: true
 
