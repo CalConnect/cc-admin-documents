@@ -1,6 +1,28 @@
+
+!sources/**/*.xml
+# Deploy key
+*.abort
+*.doc
+*.err
+*.html
+*.pdf
+*.rxl
+*.swp
+*.tmp.xml
+*.xml
+*_files/
+*_images/
 .DS_Store
+.bundle/
+.idea/
 .swp
 .tmp.xml
-
-# Deploy key
+.vscode/
+Gemfile.lock
+_site/
 deploy_key
+deploy_key.enc
+deploy_key.pub
+documents/
+published/
+relaton/
