@@ -1,0 +1,31 @@
+# metanorma.release.yml — CalConnect Administrative Documents
+#
+# Pattern-based channel assignment. Documents not matching any pattern
+# are NOT released (safe-by-default: no defaults section).
+#
+# Document ID convention:
+#   cc-s-*   → Standards     → public/standards
+#   cc-r-*   → Reports       → public/reports
+#   cc-a-*   → Admin docs    → public/admin
+#   cc-adv-* → Advisories    → public/advisories
+#
+# Authors: add your document source. If the compiled document ID follows
+# the convention above, it will be automatically released to the correct
+# channel. No manifest update needed.
+
+documents:
+  # ── Standards ────────────────────────────────────────────────
+  - pattern: "cc-s-*"
+    channels: [public/standards]
+
+  # ── Reports ──────────────────────────────────────────────────
+  - pattern: "cc-r-*"
+    channels: [public/reports]
+
+  # ── Administrative documents ─────────────────────────────────
+  - pattern: "cc-a-*"
+    channels: [public/admin]
+
+  # ── Advisories ───────────────────────────────────────────────
+  - pattern: "cc-adv-*"
+    channels: [public/advisories]

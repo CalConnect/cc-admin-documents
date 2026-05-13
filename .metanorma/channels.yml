@@ -1,0 +1,14 @@
+# .metanorma/channels.yml — CalConnect Administrative Documents
+#
+# Declares channels published by this repo for efficient discovery
+# by actions-mn/aggregate.
+
+channels:
+  - name: public/standards
+    description: "Published CalConnect Standards"
+  - name: public/reports
+    description: "Conference, roundtable, and IOP test reports"
+  - name: public/admin
+    description: "Administrative documents (conference minutes, agendas)"
+  - name: public/advisories
+    description: "CalConnect advisories"

@@ -21,19 +21,9 @@ permissions:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
-    container: docker://metanorma/metanorma
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions-mn/site-gen@v1
-        with:
-          agree-to-terms: 'true'
-          install-fonts: 'true'
-          continue-without-fonts: 'true'
-
-      - uses: actions-mn/release@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          include-pattern: ${{ github.event.inputs.include-pattern || '*' }}
-          force: ${{ github.event.inputs.force || 'false' }}
+    uses: actions-mn/.github/.github/workflows/metanorma-release.yml@main
+    with:
+      default-visibility: private
+      include-pattern: ${{ github.event.inputs.include-pattern || '*' }}
+      force: ${{ github.event.inputs.force || 'false' }}
+    secrets: inherit
