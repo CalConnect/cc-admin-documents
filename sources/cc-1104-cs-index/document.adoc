@@ -23,6 +23,12 @@ section. The material linked is largely but not entirely IETF and CalConnect.
 We would appreciate additions and corrections to the list; please send any
 recommendations to mailto:info@calconnect.org[Standards Recommendations to CalConnect].
 
+[abstract]
+== Abstract
+
+Index to Calendaring and Scheduling Standards.
+
+
 == General
 
 === An Introduction to Internet Calendaring

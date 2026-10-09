@@ -40,6 +40,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on CalConnect Conference XXXIX, June 14-16, 2017.
+
+
 == Introduction
 
 CalConnect XXXIX took place on June 12-16, 2017, hosted by Tandem in Seattle, Washington. The

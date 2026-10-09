@@ -41,6 +41,12 @@ This document was prepared by Technical Committee _{technical-committee}_.
 
 
 [.preface]
+[abstract]
+== Abstract
+
+Report on CalConnect Conference XLVI, October 7-10 2019.
+
+
 == Introduction
 
 CalConnect XLVI took place October 7-10, 2019, hosted by Fastmail in Philadelphia,

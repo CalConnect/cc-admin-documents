@@ -40,6 +40,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+November 2008 CalConnect Mobile Interoperability Test.
+
+
 == Introduction
 
 The second CalConnect Mobile Calendaring interoperability event was held at the Kerio campus

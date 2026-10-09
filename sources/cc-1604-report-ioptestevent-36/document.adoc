@@ -40,6 +40,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on CalConnect Interoperability Test Event XXXVI, April 18-19, 2016.
+
+
 == Report
 
 The CalConnect interoperability event was hosted by Ribose and OGCIO at Cyberport in

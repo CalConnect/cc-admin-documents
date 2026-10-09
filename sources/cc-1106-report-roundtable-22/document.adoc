@@ -39,6 +39,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on Roundtable XXII, October 5-7, 2011.
+
+
 == Introduction
 
 Roundtable XXII took place on October 5-7, 2011, hosted by Kerio Technologies in Prague,

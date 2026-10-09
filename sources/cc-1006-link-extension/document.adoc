@@ -19,3 +19,8 @@ This proposal was submitted to the IETF as an Internet Draft for the Standards T
 https://datatracker.ietf.org/doc/draft-douglass-link-extension/
 
 This specification introduces a new iCalendar property `LINK` to provide ancillary information for iCalendar components.
+
+[abstract]
+== Abstract
+
+LINK Property Extension to iCalendar.

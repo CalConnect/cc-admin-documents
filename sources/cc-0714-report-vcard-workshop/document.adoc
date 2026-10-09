@@ -39,6 +39,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on CalConnect vCard Workshop, September 18 2007.
+
+
 == Introduction
 
 NOTE: Update 13-Nov-2007: The Draft Charter for the CalConnect vCard Technical Committee

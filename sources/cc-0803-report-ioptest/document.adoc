@@ -28,6 +28,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+February 2008 CalConnect Mobile Interoperability Test Report.
+
+
 == Introduction
 
 This was the first Mobile Calendar Interoperability testing event held by CalConnect. There was a

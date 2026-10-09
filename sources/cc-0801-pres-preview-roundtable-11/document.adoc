@@ -20,6 +20,12 @@ and Disclaimer of Warranty for External (Public) Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+CalConnect Technical Preview - Roundtable XI.
+
+
 == Note Well
 
 * This presentation is derived from the

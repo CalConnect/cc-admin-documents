@@ -20,6 +20,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+July 2004 CalConnect Interoperability Test Rules and Test Scenarios.
+
+
 == Introduction
 
 The purpose of this testing is to move the iCalendar, iMIP and iTIP proposed standards to the next level, Draft Standard. The following text describes what

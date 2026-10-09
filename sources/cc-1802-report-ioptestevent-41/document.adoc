@@ -40,6 +40,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on CalConnect Test Event and Developers Forum XLI, January 29-31, 2018.
+
+
 == Report
 
 The event was hosted by Oath in Sunnyvale, California, January 29-31, 2018

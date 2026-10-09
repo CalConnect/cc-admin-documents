@@ -36,6 +36,12 @@ support in iCalendar products. Other questionnaire summary
 documents will cover different areas of calendaring and
 scheduling, and will be made available by the Consortium.
 
+[abstract]
+== Abstract
+
+Report on TIMEZONE Questionnaire Results.
+
+
 == Report on Timezone Questionnaire Results
 
 === Introduction

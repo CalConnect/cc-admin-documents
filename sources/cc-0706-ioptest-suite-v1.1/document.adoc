@@ -33,6 +33,12 @@ test suite to assess a mobile device's capability to synchronize
 calendar data with a calendar store.
 
 [.preface]
+[abstract]
+== Abstract
+
+Mobile Calendar Interoperability Test Suite.
+
+
 == metanorma-extension
 
 === document history

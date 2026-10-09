@@ -39,6 +39,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on Roundtable XII, June 4-6 2008.
+
+
 == Introduction
 
 Roundtable XII took place June 4-6, 2008, hosted by the University of Wisconsin in Madison,

@@ -42,6 +42,12 @@ This document was prepared by Technical Committee _{technical-committee}_.
 
 
 [.preface]
+[abstract]
+== Abstract
+
+Report on CalConnect Conference XLIV, February 5 - February 8, 2019.
+
+
 == Introduction
 
 CalConnect XLIV took place February 5-8, 2019, hosted by Google in

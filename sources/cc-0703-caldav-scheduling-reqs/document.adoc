@@ -34,6 +34,12 @@ exchanging and processing scheduling messages based on the
 iCalendar Transport-Independent Interoperability Protocol
 (iTIP) <<rfc2446>>.
 
+[abstract]
+== Abstract
+
+CalDav Scheduling Requirements.
+
+
 == Introduction
 
 This document presents a list of features in the form of requirements for

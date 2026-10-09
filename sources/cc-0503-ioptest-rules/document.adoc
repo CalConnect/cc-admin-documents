@@ -21,6 +21,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+June 2005 CalConnect Interoperability Test Scenarios.
+
+
 == Test Scenarios
 
 [%unnumbered,cols=2]

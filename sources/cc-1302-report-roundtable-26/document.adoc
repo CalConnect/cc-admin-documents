@@ -40,6 +40,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on Roundtable XXVI, January 30 - February 1, 2013.
+
+
 == Introduction
 
 NOTE: Incorporates material formerly distributed via the CalConnect _Minutes_ newsletter, now discontinued.

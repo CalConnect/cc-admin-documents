@@ -24,6 +24,12 @@ Permission is granted to existing and potential members of the Consortium to rep
 presentation within their organizations so long as the presentation is not altered in any way and the Consortium
 is acknowledged as the originator.
 
+[abstract]
+== Abstract
+
+Overview of The Calendaring and Scheduling Consortium.
+
+
 == What is CalConnect?
 
 . A Partnership

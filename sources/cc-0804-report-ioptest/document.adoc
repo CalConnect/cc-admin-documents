@@ -38,6 +38,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+June 2008 CalConnect Mobile Interoperability Test Report.
+
+
 == Participants
 
 .Participants

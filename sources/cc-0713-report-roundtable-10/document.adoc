@@ -39,6 +39,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on Roundtable X, September 19-21 2007.
+
+
 == Introduction
 
 Roundtable X and the accompanying IOP Test Event took place September 17-21, hosted by The

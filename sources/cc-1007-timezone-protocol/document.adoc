@@ -22,3 +22,8 @@ https://datatracker.ietf.org/doc/draft-douglass-timezone-service/
 This document defines a timezone service protocol that allows reliable, secure and fast
 delivery of timezone information to client systems such as calendaring and scheduling
 applications or operating systems.
+
+[abstract]
+== Abstract
+
+Timezone Service Protocol.

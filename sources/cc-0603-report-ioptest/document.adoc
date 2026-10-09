@@ -40,6 +40,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+January 2006 CalConnect Interoperability Test Report.
+
+
 == Introduction
 
 The following document contains notes and results from the January 2006 calendar

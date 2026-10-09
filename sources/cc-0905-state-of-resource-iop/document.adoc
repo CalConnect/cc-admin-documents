@@ -29,6 +29,12 @@ altered in any way and the Consortium is acknowledged as the originator.
 
 Please send any changes or corrections to the document editor.
 
+[abstract]
+== Abstract
+
+State of Resource Interoperability for Calendaring, Groupware, and Project Management.
+
+
 == Introduction
 
 This document was created by the USECASE Technical Committee of the Calendaring and Scheduling

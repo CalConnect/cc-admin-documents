@@ -27,6 +27,12 @@ acknowledged as the originator
 
 OMA DS Face-to-Face location:: Vancouver, British Colombia
 
+[abstract]
+== Abstract
+
+OMA-DS CalConnect Liaison Briefing.
+
+
 == What is CalConnect?
 
 === What is the Consortium

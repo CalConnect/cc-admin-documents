@@ -30,6 +30,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+October 2010 CalConnect Interoperability Test Event Report.
+
+
 == Introduction
 
 The October 2010 CalConnect Interoperability Testing Event was actually two distinct sets of testing. One

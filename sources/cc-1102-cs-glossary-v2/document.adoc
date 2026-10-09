@@ -20,6 +20,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+Calendaring and Scheduling Glossary of Terms.
+
+
 == Introduction
 
 The document came about in an effort to compile, in one location, a common set of terminology

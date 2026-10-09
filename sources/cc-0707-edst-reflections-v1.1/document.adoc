@@ -63,6 +63,12 @@ This document is a follow-on to the advisories and compendium
 of fixes which CalConnect collected and published prior to
 March 11, 2007.
 
+[abstract]
+== Abstract
+
+CalConnect EDST Reflections and Recommendations.
+
+
 == Introduction
 
 The U.S. Energy Policy Act of 2005 (EPACT 2005), signed by President Bush on August 8,

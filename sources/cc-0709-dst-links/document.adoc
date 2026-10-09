@@ -30,6 +30,12 @@ Consortium is not responsible for any results or consequences of any sort as a r
 following any advice or performing any actions recommended in this material.
 ====
 
+[abstract]
+== Abstract
+
+Extended Daylight Savings Time Links, Advisories and Changes.
+
+
 == Daylight Saving Time Information and History
 
 * http://en.wikipedia.org/wiki/Daylight_saving_time[Daylight Saving Time from Wikipedia, the free encyclopedia.]
