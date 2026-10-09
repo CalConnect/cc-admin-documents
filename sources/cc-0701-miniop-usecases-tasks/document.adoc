@@ -38,6 +38,12 @@ experience tells us is necessary to have a useful system. We
 realize that in some cases it may be more than is currently
 offered by "basic" calendaring and scheduling applications.
 
+[abstract]
+== Abstract
+
+Min-IOP (Minimum Interoperable Subset) Use Cases for Tasks (VTODO).
+
+
 == Introduction
 
 This document was created by the USECASE Technical Committee of the Calendaring and

@@ -344,3 +344,8 @@ Everyone wants to do the next interop within the next 6-9 months. We don't want 
 long now that we have momentum.
 
 By Patricia Egen
+
+[abstract]
+== Abstract
+
+Records of CalConnect II -- April, 2001.

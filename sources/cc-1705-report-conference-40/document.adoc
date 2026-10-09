@@ -40,6 +40,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on CalConnect Conference XL, September 27-29, 2017.
+
+
 == Introduction
 
 CalConnect XL took place September 27-29, 2017, hosted by Open-Xchange in

@@ -40,6 +40,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on CalConnect Conference XXXIV, September 30 - October 2, 2015.
+
+
 == Introduction
 
 CalConnect Conference XXXIV took place on September 30 - October 2, 2015, hosted by Gershon

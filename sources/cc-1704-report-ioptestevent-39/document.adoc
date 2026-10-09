@@ -40,6 +40,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on Test Event and Developers Forum XXXIX, June 12-14, 2017.
+
+
 == Report
 
 The event was hosted by Tandem in Seattle, Washington on June 12-14, 2017

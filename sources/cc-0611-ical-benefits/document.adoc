@@ -34,6 +34,12 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
 Chair(s):: Chris Dudding
 
+[abstract]
+== Abstract
+
+The Benefits of iCalendar for the Mobile Industry.
+
+
 == Executive Summary
 
 The ability to share calendar information among different applications and

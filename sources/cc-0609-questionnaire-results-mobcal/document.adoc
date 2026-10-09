@@ -24,6 +24,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+Report on Mobile Calendaring Questionnaire V2 Results.
+
+
 == Introduction
 
 The Mobile Technical Committee of the Calendaring & Scheduling Consortium

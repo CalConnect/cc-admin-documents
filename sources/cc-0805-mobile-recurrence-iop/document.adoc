@@ -30,6 +30,12 @@ This document describes interoperability problems observed in the
 implementation of recurring events in mobile devices and provides
 recommendations for how these issues can be avoided.
 
+[abstract]
+== Abstract
+
+Mobile Recurrence Interoperability Recommendations.
+
+
 == Executive Summary
 
 The ability to share calendar information among different applications and

@@ -19,6 +19,12 @@ and Disclaimer of Warranty for External (Public) Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+EDUCAUSE 2005 Overview of The Calendaring and Scheduling Consortium.
+
+
 == Goals of the Consortium
 
 . Promote Calendaring & Scheduling via a

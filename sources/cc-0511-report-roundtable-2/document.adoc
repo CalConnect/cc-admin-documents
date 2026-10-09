@@ -39,6 +39,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on Roundtable II, 11-13 January 2005.
+
+
 == Introduction
 
 The first post-launch event of The Calendaring and Scheduling Consortium took place on 11-13

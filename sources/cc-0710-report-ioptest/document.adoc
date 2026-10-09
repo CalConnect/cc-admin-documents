@@ -36,6 +36,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+September 2007 CalConnect Interoperability Test Report.
+
+
 == Introduction
 
 This document contains notes and results from the September 2007 calendar interoperability event,

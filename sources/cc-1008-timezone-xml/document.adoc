@@ -21,3 +21,8 @@ https://datatracker.ietf.org/doc/draft-douglass-timezone-xml/
 
 This specification describes a format for describing timezone information for software
 and services. systems.
+
+[abstract]
+== Abstract
+
+Timezone XML Specification.

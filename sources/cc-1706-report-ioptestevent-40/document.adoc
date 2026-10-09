@@ -40,6 +40,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on Test Event and Developers Forum XL, September 25-27 2017.
+
+
 == Report
 
 The event was hosted by Open-Xchange in Cologne, Germany on September 25-27,

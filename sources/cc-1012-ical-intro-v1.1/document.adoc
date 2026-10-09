@@ -20,6 +20,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+An Introduction to Internet Calendaring and Scheduling.
+
+
 == iCalendar
 
 === History

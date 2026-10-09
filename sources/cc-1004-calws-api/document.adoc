@@ -28,6 +28,12 @@ list and to subscribe please see
 http://www.calconnect.org/publicreviewdocuments.shtml.
 
 [.preface]
+[abstract]
+== Abstract
+
+Cal-WS Web Services API for Calendaring and Scheduling.
+
+
 == metanorma-extension
 
 === document history

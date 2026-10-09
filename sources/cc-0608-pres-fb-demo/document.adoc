@@ -28,6 +28,12 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
 The Open Group Quarterly Meeting location: Coral Gables, Florida
 
+[abstract]
+== Abstract
+
+The Open Group Federated Freebusy Challenge Demo.
+
+
 == Why We are here
 
 "Increasingly in business, there is a need to

@@ -24,6 +24,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+iCalendar Recurrence Problems and Recommendations.
+
+
 == Introduction
 
 This document contains information about recurrence implementation issues and

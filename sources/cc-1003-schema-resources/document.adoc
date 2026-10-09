@@ -19,3 +19,8 @@ This proposal was submitted to the IETF as an Internet Draft for the Standards T
 https://datatracker.ietf.org/doc/draft-cal-resource-schema/
 
 This specification describes a schema for representing resources for calendaring and scheduling. A resource in the scheduling context is any shared entity that can be scheduled by a calendar user, but does not control its own attendance status.
+
+[abstract]
+== Abstract
+
+Schema for representing resources for calendaring and scheduling services.

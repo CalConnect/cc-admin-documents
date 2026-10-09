@@ -21,6 +21,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+January 2005 CalConnect Interoperability Test Scenarios.
+
+
 == Basic Calendar Access Test Scenarios
 
 === Event creation

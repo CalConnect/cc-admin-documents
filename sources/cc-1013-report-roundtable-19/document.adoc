@@ -39,6 +39,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on Roundtable XIX, October 6-8, 2010.
+
+
 == Introduction
 
 Roundtable XIX took place on October 6-8 2010, hosted by IBM/Lotus in Littleton,

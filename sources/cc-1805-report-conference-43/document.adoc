@@ -40,6 +40,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on CalConnect Conference XLIII, September 24 - September 27, 2018.
+
+
 == Introduction
 
 CalConnect XLIII took place September 24-27, 2018, hosted by 1&1 in Karlsruhe, Germany. The

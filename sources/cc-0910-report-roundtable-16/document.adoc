@@ -39,6 +39,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on Roundtable XVI, October 7-9 2009.
+
+
 == Introduction
 
 Roundtable XVI took place on October 7-9 2009, hosted by Apple in Cupertino, California. The

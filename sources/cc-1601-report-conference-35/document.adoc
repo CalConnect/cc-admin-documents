@@ -40,6 +40,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on CalConnect Conference XXXV, January 11-15, 2016.
+
+
 == Introduction
 
 CalConnect Conference XXXV took place on January 13-15, 2016, hosted by AOL in

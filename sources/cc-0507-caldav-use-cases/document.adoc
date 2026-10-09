@@ -30,6 +30,12 @@ cases should apply to any calendar access protocol. It is expected that this doc
 will be used as a basis to further develop technical requirements for a calendar
 access protocol such as CalDAV.
 
+[abstract]
+== Abstract
+
+CalDav Use Cases.
+
+
 == Introduction
 
 This document provides a list of use cases that the members of the Calendaring and

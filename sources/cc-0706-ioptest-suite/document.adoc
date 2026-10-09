@@ -31,6 +31,12 @@ Scheduling Consortium created this document. It describes a
 test suite to assess a mobile device's capability to synchronize
 calendar data with a calendar store.
 
+[abstract]
+== Abstract
+
+Mobile Calendar Interoperability Test Suite.
+
+
 == Introduction
 
 This document describes the test steps required to assess a mobile device's capability to

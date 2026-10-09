@@ -39,6 +39,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on Roundtable VIII, 29 January - 2 February 2007.
+
+
 == Introduction
 
 Roundtable VIII took place January 29 to February 2, 2007, hosted by Novell in Provo, Utah. The

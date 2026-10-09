@@ -24,6 +24,12 @@ and Disclaimer of Warranty for External (Public) Documents as located at
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
 [heading=terms and definitions]
+[abstract]
+== Abstract
+
+CalConnect, Calendaring Interoperability and Calendaring Standards.
+
+
 == Definitions
 
 === Calendar

@@ -21,3 +21,8 @@ https://datatracker.ietf.org/doc/draft-douglass-calendar-extension
 
 This specification introduces a number of new iCalendar properties which are of
 particular use for event publishers and in social networking.
+
+[abstract]
+== Abstract
+
+Event Publishing Extensions to iCalendar.

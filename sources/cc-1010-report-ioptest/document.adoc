@@ -20,6 +20,12 @@ Documents as located at
 
 http://www.calconnect.org/documents/disclaimerpublic.pdf.
 
+[abstract]
+== Abstract
+
+TC MOBILE Interoperability Test Event Report.
+
+
 == Introduction
 
 The Calendaring and Scheduling Consortium's mobile technical committee (TC-Mobile)

@@ -39,6 +39,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on CalConnect Conference XXX, May 21-23, 2014.
+
+
 == Introduction
 
 NOTE: Following CalConnect XXIX in February, the term "Roundtable" was replaced by "Conference"

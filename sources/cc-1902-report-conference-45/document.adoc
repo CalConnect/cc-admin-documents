@@ -40,6 +40,12 @@ of users and does not constitute an endorsement.
 
 This document was prepared by Technical Committee _{technical-committee}_.
 
+[abstract]
+== Abstract
+
+Report on CalConnect Conference XLV, June 3 - June 7, 2019.
+
+
 == Introduction
 
 CalConnect XLV took place June 3-6, 2019, hosted by You Can Book Me in Bedford, United Kingdom.

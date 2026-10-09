@@ -247,3 +247,8 @@ Another RFC is created to define and setup the IANA time zone registry.
 RFC 2445 http://www.ietf.org/rfc/rfc2445.txt
 
 * [[[tz-problems,5]]], Time zone problems and recommendations document http://www.calconnect.org/publications/icalendartimezoneproblemsandrecommendationsv1.0.pdf
+
+[abstract]
+== Abstract
+
+Timezone Registry and Service Recommendations.

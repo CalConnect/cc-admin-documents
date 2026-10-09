@@ -32,6 +32,12 @@ problems, and then offer some guidelines and recommendations.
 Take note that the listed recommendations often describe what
 vendors are currently doing to solve the problems.
 
+[abstract]
+== Abstract
+
+iCalendar Timezone Problems and Recommendations.
+
+
 == Introduction
 
 This document contains information about common time zone implementation issues and
