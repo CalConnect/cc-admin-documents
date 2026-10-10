@@ -30,6 +30,12 @@ All documents included in the zip file for Meet CalConnect 2008 are considered p
 
 Chair(s):: Chris Dudding
 
+[abstract]
+== Abstract
+
+A presentation on the CalConnect TC Mobile technical committee and its work on mobile calendaring, given at the CalConnect December 2008 meeting.
+
+
 == What is different about mobile calendaring?
 
 . Capabilities

@@ -29,6 +29,12 @@ All documents included in the zip file for Meet CalConnect 2008 are considered p
 ====
 
 [heading=terms and definitions]
+[abstract]
+== Abstract
+
+An introduction to CalConnect, the Calendaring and Scheduling Consortium, and its work on calendaring and scheduling interoperability, presented at the CalConnect December 2008 meeting.
+
+
 == Definitions
 
 === Calendar

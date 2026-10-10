@@ -29,6 +29,12 @@ http://www.calconnect.org/documents/disclaimerpublic.pdf.
 All documents included in the zip file for Meet CalConnect 2008 are considered part of CD 0812 and the public disclaimer included by reference above applies to all contents of the file.
 ====
 
+[abstract]
+== Abstract
+
+A presentation on Stockholm University and membership in CalConnect, given at the CalConnect December 2008 meeting.
+
+
 == What is Stockholm University?
 
 * Largest Higher-ed institution in Sweden

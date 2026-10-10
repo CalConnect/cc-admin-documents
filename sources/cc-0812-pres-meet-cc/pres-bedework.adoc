@@ -30,6 +30,12 @@ All documents included in the zip file for Meet CalConnect 2008 are considered p
 
 Presentation location:: Prague, Czech Republic
 
+[abstract]
+== Abstract
+
+A presentation on CalConnect and open source, covering the Bedework calendar system, given at the CalConnect December 2008 meeting.
+
+
 == Please Allow Me to Introduce Myself
 
 Gary Schwartz

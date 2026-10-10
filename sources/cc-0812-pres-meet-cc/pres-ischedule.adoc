@@ -34,6 +34,12 @@ Presentation locations:
 * November 7: Prague, Czech Republic
 * November 10: London, United Kingdom
 
+[abstract]
+== Abstract
+
+A presentation on the CalConnect iSchedule Technical Committee and its work on scheduling protocol interoperability, given at the CalConnect December 2008 meeting.
+
+
 == Who am I?
 
 * Mattias Amnefelt
