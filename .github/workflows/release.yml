@@ -25,5 +25,5 @@ jobs:
     with:
       default-visibility: private
       include-pattern: ${{ github.event.inputs.include-pattern || '*' }}
-      force: ${{ github.event.inputs.force || 'false' }}
+      force: ${{ github.event.inputs.force == 'true' }}
     secrets: inherit
