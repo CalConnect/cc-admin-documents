@@ -30,6 +30,12 @@ Presentation locations:
 * November 7: Prague, Czech Republic
 * November 10: London, United Kingdom
 
+[abstract]
+== Abstract
+
+An introduction to the Calendaring and Scheduling Consortium (CalConnect): its purpose, organization and activities, presented at the CalConnect December 2008 meeting.
+
+
 == Agenda
 
 * Introduction to CalConnect
